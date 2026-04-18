@@ -1,42 +1,28 @@
-const products = [
-  {
-    title: "Workflow Intelligence",
-    description:
-      "Automation blueprints that connect people, data, and AI assistance across recurring business processes."
-  },
-  {
-    title: "Knowledge Assistants",
-    description:
-      "Search and answer experiences grounded in your documents, policies, and operational knowledge."
-  },
-  {
-    title: "Decision Dashboards",
-    description:
-      "Lightweight tools that surface signals, recommendations, and next actions for busy teams."
+import type { Metadata } from "next";
+
+import CTA from "@/components/CTA";
+import PageHeader from "@/components/PageHeader";
+import Products from "@/components/Products";
+
+export const metadata: Metadata = {
+  title: "Products",
+  description:
+    "Explore DocBooking and Expreality, AI-powered product directions from Risonai Tech for healthcare booking and luxury real estate intelligence.",
+  alternates: {
+    canonical: "/products"
   }
-];
+};
 
 export default function ProductsPage() {
   return (
     <>
-      <section className="page-hero">
-        <p className="eyebrow">Products</p>
-        <h1>Starter product concepts for AI-enabled teams.</h1>
-        <p>
-          These product directions can be tailored into internal tools,
-          customer-facing experiences, or operational platforms.
-        </p>
-      </section>
-      <section className="page-content">
-        <div className="grid">
-          {products.map((product) => (
-            <article className="card" key={product.title}>
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <PageHeader
+        description="DocBooking and Expreality show how Risonai Tech thinks about vertical AI, workflow intelligence, and premium SaaS product direction."
+        eyebrow="Products"
+        title="AI product systems with category focus."
+      />
+      <Products compact />
+      <CTA />
     </>
   );
 }
