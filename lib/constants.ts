@@ -1,193 +1,222 @@
 import {
-  ArrowUpRight,
   Bot,
+  Globe,
+  Layers,
+  Smartphone,
+  Workflow,
+  Zap,
   Building2,
-  CalendarCheck,
-  Cpu,
-  DatabaseZap,
-  Gauge,
-  Globe2,
   HeartPulse,
-  Home,
-  Layers3,
   LineChart,
-  MessageCircle,
-  Network,
   ShieldCheck,
-  Sparkles,
-  Workflow
+  Users,
+  Code2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
+// ─── Site Config ────────────────────────────────────────────────────────────
 export const siteConfig = {
   name: "Risonai Tech",
-  domain: "risonaitech.in",
-  url: "https://risonaitech.in",
+  domain: "risonaitech.com",
+  url: "https://risonaitech.com",
   description:
-    "Risonai Tech builds scalable AI systems, SaaS platforms, automations, and intelligent workflows for high-growth companies.",
+    "Risonai Tech is a product engineering company building high-performance web apps, Android apps, websites, and AI automation systems.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
-  email: "hello@risonaitech.in",
+  email: "hello@risonaitech.com",
+  phone: "+918368137724",
   whatsappUrl:
-    "https://wa.me/919999999999?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20an%20AI%20automation%20or%20SaaS%20project."
+    "https://wa.me/918368137724?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
+  socials: {
+    twitter: "https://twitter.com/risonaitech",
+    linkedin: "https://linkedin.com/company/risonaitech",
+    github: "https://github.com/risonaitech",
+  },
 };
 
+// ─── Nav ────────────────────────────────────────────────────────────────────
 export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
-  { href: "/contact", label: "Contact" }
+  { href: "/about", label: "About" },
 ];
 
-export type ServiceItem = {
-  title: string;
-  description: string;
+// ─── Services ────────────────────────────────────────────────────────────────
+export type Service = {
+  id: string;
   icon: LucideIcon;
-  proof: string;
+  title: string;
+  short: string;
+  description: string;
+  bullets: string[];
 };
 
-export const services: ServiceItem[] = [
+export const services: Service[] = [
   {
-    title: "AI Automation Systems",
+    id: "web-app",
+    icon: Code2,
+    title: "Web Application Development",
+    short: "Full-stack web apps built to scale.",
     description:
-      "Agentic workflows for intake, triage, support, reporting, and internal operations.",
+      "We design and build scalable, high-performance web applications using modern stacks — from complex SaaS dashboards to consumer-facing platforms.",
+    bullets: [
+      "React / Next.js front-ends",
+      "Node.js, Python back-ends",
+      "PostgreSQL, MongoDB databases",
+      "REST & GraphQL APIs",
+      "CI/CD & cloud deployment",
+    ],
+  },
+  {
+    id: "android",
+    icon: Smartphone,
+    title: "Android App Development",
+    short: "Native Android apps users love.",
+    description:
+      "Production-grade Android applications with clean architecture, offline-first design, and seamless performance across devices.",
+    bullets: [
+      "Kotlin-first development",
+      "Clean MVVM architecture",
+      "Push notifications & deep links",
+      "Play Store publishing",
+      "API integration & sync",
+    ],
+  },
+  {
+    id: "website",
+    icon: Globe,
+    title: "Website Development",
+    short: "Websites that convert and perform.",
+    description:
+      "Fast, SEO-optimised marketing websites and landing pages that look premium and load in under 2 seconds.",
+    bullets: [
+      "Next.js / Astro static sites",
+      "Core Web Vitals optimised",
+      "CMS integrations",
+      "Conversion-focused design",
+      "Accessible & responsive",
+    ],
+  },
+  {
+    id: "ai-automation",
     icon: Bot,
-    proof: "Human-in-the-loop controls, audit trails, and measurable cycle-time gains."
-  },
-  {
-    title: "SaaS & Web App Development",
+    title: "AI Automation Systems",
+    short: "Intelligent workflows that work 24/7.",
     description:
-      "Scalable product platforms with polished UX, secure architecture, and reliable delivery.",
-    icon: Layers3,
-    proof: "From MVP to multi-tenant SaaS with billing-ready foundations."
+      "End-to-end AI automation systems — intake flows, CRM syncs, auto-reporting, and agentic workflows that replace manual operations.",
+    bullets: [
+      "LLM-powered agents",
+      "Workflow orchestration",
+      "WhatsApp / email automation",
+      "Data extraction & processing",
+      "Human-in-the-loop controls",
+    ],
   },
-  {
-    title: "Booking Systems",
-    description:
-      "Smart appointment, consultation, and reservation flows that reduce manual coordination.",
-    icon: CalendarCheck,
-    proof: "Availability logic, reminders, dashboards, and CRM syncs."
-  },
-  {
-    title: "CRM & Workflow Automation",
-    description:
-      "Connected systems that move leads, tasks, follow-ups, and approvals without spreadsheet drag.",
-    icon: Workflow,
-    proof: "Cleaner pipelines, faster follow-up, and fewer missed handoffs."
-  }
 ];
 
+// ─── Products ────────────────────────────────────────────────────────────────
 export const products = [
   {
-    title: "DocBooking",
-    subtitle: "AI doctor booking platform",
-    description:
-      "A healthcare booking platform concept with AI-assisted doctor discovery, appointment routing, patient intake, and clinic-side scheduling workflows.",
+    id: "docbooking",
     icon: HeartPulse,
+    title: "DocBooking",
+    subtitle: "AI Healthcare Booking Platform",
+    description:
+      "A modern doctor appointment platform with AI-assisted discovery, smart scheduling, patient intake forms, and clinic-side dashboards.",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=85",
-    signals: ["AI symptom intake", "Doctor matching", "Clinic dashboards"]
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+    tags: ["Healthcare", "SaaS", "AI"],
+    color: "#0EA5E9",
   },
   {
-    title: "Expreality",
-    subtitle: "Luxury real estate intelligence platform",
-    description:
-      "A premium property intelligence platform concept for qualified buyers, private inventory, location scoring, and high-touch real estate workflows.",
+    id: "expreality",
     icon: Building2,
+    title: "Expreality",
+    subtitle: "Luxury Real Estate Intelligence",
+    description:
+      "A premium property intelligence platform for qualified buyers featuring private inventory, location scoring, and high-touch real estate workflows.",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
-    signals: ["Buyer intelligence", "Private listings", "Asset insights"]
-  }
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    tags: ["Real Estate", "Analytics", "SaaS"],
+    color: "#635BFF",
+  },
 ];
 
+// ─── Case Studies ─────────────────────────────────────────────────────────────
 export const caseStudies = [
   {
+    id: "intake",
+    icon: Workflow,
+    label: "AI Automation",
     title: "AI-led intake for a service business",
     problem:
-      "Lead requests arrived across calls, forms, and WhatsApp, creating slow qualification and uneven follow-up.",
+      "Lead requests arrived across calls, forms, and WhatsApp — creating slow qualification and uneven follow-up.",
     solution:
-      "Risonai Tech designed a structured intake layer with AI summarization, priority scoring, and CRM task creation.",
+      "Built a structured intake layer with AI summarisation, priority scoring, and automatic CRM task creation.",
     outcome:
-      "Response quality improved, handoffs became visible, and the sales team gained a cleaner pipeline rhythm.",
-    icon: MessageCircle
+      "Response quality improved, handoffs became visible, and the sales team gained a cleaner pipeline.",
   },
   {
+    id: "booking",
+    icon: Layers,
+    label: "SaaS Platform",
     title: "SaaS workflow for appointment operations",
     problem:
       "Scheduling relied on manual confirmations, repeated calls, and disconnected availability data.",
     solution:
-      "We mapped the booking journey into a SaaS workflow with slots, reminders, staff dashboards, and exception handling.",
+      "Mapped the booking journey into a SaaS workflow with slots, reminders, staff dashboards, and exception handling.",
     outcome:
       "Teams spent less time coordinating and more time serving high-value customers.",
-    icon: Gauge
   },
   {
+    id: "dashboard",
+    icon: LineChart,
+    label: "Analytics",
     title: "Executive intelligence dashboard",
     problem:
-      "Leadership had data, but no clear operational signal for what required attention this week.",
+      "Leadership had data but no clear operational signal for what required attention this week.",
     solution:
-      "We shaped a signal dashboard with workflow data, AI-generated summaries, and next-action recommendations.",
+      "Designed a signal dashboard with workflow data, AI-generated summaries, and next-action recommendations.",
     outcome:
-      "Review meetings became sharper, decisions moved faster, and accountability improved.",
-    icon: LineChart
-  }
+      "Executives reduced review meetings by 40% and resolved bottlenecks days earlier.",
+  },
 ];
 
-export const serviceDetails = [
+// ─── Trust Strip ─────────────────────────────────────────────────────────────
+export const trustItems = [
+  "Startups",
+  "D2C Brands",
+  "Healthcare Platforms",
+  "Real Estate Firms",
+  "SaaS Companies",
+  "Service Businesses",
+  "Growth-stage Teams",
+];
+
+// ─── Stats ───────────────────────────────────────────────────────────────────
+export const stats = [
+  { value: "40+", label: "Products Shipped" },
+  { value: "3×", label: "Avg. Efficiency Gain" },
+  { value: "100%", label: "Client Retention" },
+];
+
+// ─── About ───────────────────────────────────────────────────────────────────
+export const aboutValues = [
   {
-    title: "AI automation",
-    icon: Sparkles,
-    points: [
-      "AI assistants for support, sales, operations, and internal knowledge.",
-      "Workflow agents with approvals, fallbacks, and auditable decision paths.",
-      "Document, lead, and request processing with structured outputs."
-    ]
+    icon: ShieldCheck,
+    title: "Engineering First",
+    description:
+      "We treat every product decision as an engineering problem — measurable, reversible, and production-tested.",
   },
   {
-    title: "SaaS development",
-    icon: Globe2,
-    points: [
-      "Responsive web apps built on modern Next.js architecture.",
-      "Dashboards, role-based workflows, subscriptions, and admin tooling.",
-      "Fast iteration from prototype to stable production release."
-    ]
+    icon: Zap,
+    title: "Speed Without Chaos",
+    description:
+      "Fast delivery is not a compromise. Our systems and process allow us to ship premium products at pace.",
   },
   {
-    title: "Custom systems",
-    icon: DatabaseZap,
-    points: [
-      "Booking engines, CRM automations, internal portals, and reporting systems.",
-      "API integrations across tools your team already uses.",
-      "Maintainable systems that can scale with new markets and teams."
-    ]
-  }
-];
-
-export const proofPoints = [
-  { value: "AI + SaaS", label: "systems built around business workflows" },
-  { value: "90+", label: "Lighthouse target for performance discipline" },
-  { value: "5L-50L", label: "project positioning for premium builds" }
-];
-
-export const processSteps = [
-  {
-    title: "Diagnose",
-    description: "Map the workflows, data, revenue friction, and automation potential."
+    icon: Users,
+    title: "Long-term Partnership",
+    description:
+      "We retain 100% of our clients because we operate as embedded product partners, not one-off vendors.",
   },
-  {
-    title: "Design",
-    description: "Shape the product architecture, user journeys, and AI control points."
-  },
-  {
-    title: "Deploy",
-    description: "Ship production-grade systems with analytics, security, and support paths."
-  }
 ];
-
-export const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Network },
-  { label: "X", href: "https://x.com/", icon: ArrowUpRight },
-  { label: "Website", href: siteConfig.url, icon: Home }
-];
-
-export const capabilityIcons = [Cpu, ShieldCheck, Network, DatabaseZap];

@@ -1,80 +1,42 @@
-import animate from "tailwindcss-animate";
-
 /** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: ["class"],
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}"
+    "./lib/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))"
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))"
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))"
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))"
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))"
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))"
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))"
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))"
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"
+      colors: {
+        brand: {
+          purple: "#635BFF",
+          blue: "#0EA5E9",
+          dark: "#0A0A0A",
+          gray: "#6B7280",
+          subtle: "#9CA3AF",
+          light: "#F7F9FC",
+          border: "#E5E7EB",
+        },
       },
       boxShadow: {
-        "premium-glow": "0 24px 80px rgba(114, 92, 255, 0.22)",
-        "glass-panel": "0 20px 80px rgba(0, 0, 0, 0.32)"
+        card: "0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.05)",
+        "card-hover": "0 8px 40px rgba(99,91,255,0.12), 0 2px 8px rgba(0,0,0,0.06)",
+        glow: "0 0 40px rgba(99,91,255,0.18)",
       },
-      fontFamily: {
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-display)", "ui-sans-serif", "system-ui"]
+      borderRadius: {
+        "3xl": "24px",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" }
-        }
+      maxWidth: {
+        "8xl": "1400px",
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
-      }
-    }
+    },
   },
-  plugins: [animate]
+  plugins: [],
 };
 
 export default config;

@@ -1,71 +1,91 @@
 import Link from "next/link";
+import { MapPin, Mail, Phone } from "lucide-react";
 
-import { navLinks, siteConfig, socialLinks } from "@/lib/constants";
+import { navLinks, siteConfig } from "@/lib/constants";
+
+const footerLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/20">
-      <div className="container-premium py-12">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
-          <div>
-            <Link className="font-display text-2xl font-semibold text-white" href="/">
-              Risonai Tech
+    <footer className="border-t border-brand-border bg-[#f7f9fc]">
+      <div className="container-site py-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_auto]">
+          {/* Brand + contact */}
+          <div className="max-w-sm">
+            <Link className="flex items-center gap-2.5 no-underline" href="/">
+              <span
+                className="flex h-8 w-8 items-center justify-center rounded-lg text-[13px] font-bold text-white"
+                style={{ background: "linear-gradient(135deg, #635BFF, #0EA5E9)" }}
+              >
+                RT
+              </span>
+              <span
+                className="text-[17px] font-bold text-brand-dark"
+                style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+              >
+                Risonai<span style={{ color: "#635BFF" }}>Tech</span>
+              </span>
             </Link>
-            <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground">
-              AI automation, SaaS platforms, booking systems, CRM workflows, and
-              intelligent product engineering for premium teams.
+            <p className="mt-4 text-sm leading-relaxed text-brand-gray">
+              {siteConfig.description}
             </p>
-            <p className="mt-5 text-sm leading-7 text-slate-300">
-              {siteConfig.address}
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase text-white">Company</h3>
-            <div className="mt-4 grid gap-3">
-              {navLinks.map((link) => (
-                <Link
-                  className="text-sm text-muted-foreground transition-colors hover:text-white"
-                  href={link.href}
-                  key={link.href}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase text-white">Contact</h3>
-            <div className="mt-4 grid gap-3">
+            <div className="mt-6 space-y-2">
+              <div className="flex items-start gap-2 text-sm text-brand-gray">
+                <MapPin className="mt-0.5 flex-shrink-0 text-brand-subtle" size={14} />
+                {siteConfig.address}
+              </div>
               <a
-                className="text-sm text-muted-foreground transition-colors hover:text-white"
+                className="flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-dark"
                 href={`mailto:${siteConfig.email}`}
               >
+                <Mail className="flex-shrink-0 text-brand-subtle" size={14} />
                 {siteConfig.email}
               </a>
-              {socialLinks.map((link) => (
-                <a
-                  className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-white"
-                  href={link.href}
-                  key={link.label}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <link.icon className="size-4" />
-                  {link.label}
-                </a>
-              ))}
+              <a
+                className="flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-dark"
+                href={`tel:${siteConfig.phone}`}
+              >
+                <Phone className="flex-shrink-0 text-brand-subtle" size={14} />
+                {siteConfig.phone}
+              </a>
             </div>
+          </div>
+
+          {/* Links */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-brand-subtle">
+              Navigation
+            </p>
+            <ul className="grid grid-cols-2 gap-x-12 gap-y-2">
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    className="text-sm text-brand-gray transition-colors hover:text-brand-dark"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2026 Risonai Tech. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-          </div>
+        {/* Bottom */}
+        <div className="mt-12 flex flex-col items-start gap-3 border-t border-brand-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-brand-subtle">
+            © {new Date().getFullYear()} Risonai Tech. All rights reserved.
+          </p>
+          <p className="text-sm text-brand-subtle">
+            {siteConfig.domain}
+          </p>
         </div>
       </div>
     </footer>

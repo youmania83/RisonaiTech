@@ -1,67 +1,87 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { cardReveal, hoverLift, staggerContainer, viewport } from "@/lib/animations";
+import Reveal from "@/components/Reveal";
 import { services } from "@/lib/constants";
+import { scaleUp } from "@/lib/animations";
 
 export default function Services() {
   return (
-    <section className="section-padding">
-      <div className="container-premium">
-        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <motion.div
-            initial="hidden"
-            variants={cardReveal}
-            viewport={viewport}
-            whileInView="visible"
-          >
-            <span className="eyebrow">Services</span>
-            <h2 className="mt-6 max-w-3xl font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
-              Systems that replace manual drag with intelligent momentum.
+    <section className="section-pad bg-[#f7f9fc]">
+      <div className="container-site">
+        {/* Header */}
+        <div className="mx-auto mb-16 max-w-xl text-center">
+          <Reveal>
+            <span className="label-pill mb-4 inline-flex">What We Do</span>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h2
+              className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Built for every layer of{" "}
+              <span className="grad-text">your product</span>
             </h2>
-          </motion.div>
-          <Button asChild variant="outline">
-            <Link href="/services">
-              Explore services
-              <ArrowUpRight />
-            </Link>
-          </Button>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="mt-4 text-lg text-brand-gray">
+              From concept to production — we cover the full engineering stack.
+            </p>
+          </Reveal>
         </div>
 
-        <motion.div
-          className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
-          initial="hidden"
-          variants={staggerContainer}
-          viewport={viewport}
-          whileInView="visible"
-        >
-          {services.map((service) => (
-            <motion.div key={service.title} variants={cardReveal} whileHover={hoverLift}>
-              <Card className="h-full overflow-hidden">
-                <CardHeader>
-                  <div className="mb-5 flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-primary/15 text-primary">
-                    <service.icon className="size-5" />
+        {/* Cards */}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <Reveal delay={i * 0.1} key={service.id} variants={scaleUp}>
+                <div className="card-base flex h-full flex-col gap-5 p-7">
+                  <div
+                    className="flex h-11 w-11 items-center justify-center rounded-xl"
+                    style={{ background: "rgba(99,91,255,0.08)" }}
+                  >
+                    <Icon className="text-[#635BFF]" size={20} />
                   </div>
-                  <CardTitle>{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {service.description}
-                  </p>
-                  <p className="mt-6 border-t border-white/10 pt-5 text-xs font-semibold uppercase text-accent">
-                    {service.proof}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+                  <div>
+                    <h3
+                      className="font-display text-lg font-bold text-brand-dark"
+                      style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-brand-gray">
+                      {service.short}
+                    </p>
+                  </div>
+                  <ul className="mt-auto space-y-1.5">
+                    {service.bullets.slice(0, 3).map((b) => (
+                      <li className="flex items-center gap-2 text-xs text-brand-gray" key={b}>
+                        <span
+                          className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                          style={{ background: "#635BFF" }}
+                        />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <Reveal className="mt-12 text-center" delay={0.3}>
+          <Link className="btn-ghost" href="/services">
+            See all services
+            <ArrowRight size={15} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
 }
+

@@ -1,71 +1,128 @@
-import type { Metadata } from "next";
+"use client";
 
-import MotionSection from "@/components/MotionSection";
-import PageHeader from "@/components/PageHeader";
+import Reveal from "@/components/Reveal";
+import { aboutValues, stats } from "@/lib/constants";
+import { scaleUp } from "@/lib/animations";
 import CTA from "@/components/CTA";
-import { Card } from "@/components/ui/card";
-import { processSteps, siteConfig } from "@/lib/constants";
-
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Learn how Risonai Tech builds AI automation systems, SaaS products, and intelligent workflows for premium teams.",
-  alternates: {
-    canonical: "/about"
-  }
-};
 
 export default function AboutPage() {
   return (
     <>
-      <PageHeader
-        description="We combine product strategy, automation architecture, and senior engineering execution to help businesses turn operational complexity into scalable digital systems."
-        eyebrow="About Risonai"
-        title="A focused AI product studio for serious builders."
-      />
-
-      <MotionSection>
-        <div className="container-premium grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <span className="eyebrow">Positioning</span>
-            <h2 className="mt-6 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
-              Premium systems, not throwaway prototypes.
-            </h2>
-          </div>
-          <div className="space-y-6 text-lg leading-8 text-muted-foreground">
-            <p>
-              Risonai Tech builds AI + Automation + Product Engineering solutions
-              for companies that want measurable outcomes from technology.
-            </p>
-            <p>
-              Our work covers intelligent workflows, booking engines, CRM
-              automation, internal portals, and scalable SaaS platforms designed
-              for high-value operations.
-            </p>
-            <p className="text-slate-300">{siteConfig.address}</p>
+      {/* Hero */}
+      <section className="bg-white pb-16 pt-36">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl text-center">
+            <Reveal>
+              <span className="label-pill mb-5 inline-flex">About</span>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h1
+                className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                A{" "}
+                <span className="grad-text">product engineering</span>{" "}
+                firm — not a dev shop
+              </h1>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="mx-auto mt-5 max-w-xl text-xl text-brand-gray">
+                We build technical products with ownership, craft, and a bias
+                toward measurable outcomes. Based in Panipat, working globally.
+              </p>
+            </Reveal>
           </div>
         </div>
-      </MotionSection>
+      </section>
 
-      <MotionSection className="pt-0">
-        <div className="container-premium">
-          <div className="grid gap-5 md:grid-cols-3">
-            {processSteps.map((step, index) => (
-              <Card className="p-6" key={step.title}>
-                <p className="font-display text-5xl font-semibold text-primary/70">
-                  0{index + 1}
+      {/* Stats */}
+      <section className="border-y border-brand-border bg-[#f7f9fc] py-14">
+        <div className="container-site">
+          <div className="flex flex-wrap justify-center gap-x-20 gap-y-8">
+            {stats.map((s) => (
+              <div className="text-center" key={s.value}>
+                <p
+                  className="font-display text-5xl font-extrabold text-brand-dark"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {s.value}
                 </p>
-                <h3 className="mt-6 font-display text-2xl font-semibold text-white">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  {step.description}
-                </p>
-              </Card>
+                <p className="mt-2 text-base text-brand-gray">{s.label}</p>
+              </div>
             ))}
           </div>
         </div>
-      </MotionSection>
+      </section>
+
+      {/* Mission */}
+      <section className="bg-white py-24">
+        <div className="container-site">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2
+                className="font-display text-4xl font-bold text-brand-dark sm:text-5xl"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Our mission
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-brand-gray">
+                Risonai Tech was founded on a simple belief: great software should
+                feel effortless to use but be deeply engineered underneath. We
+                focus on products that solve real operational problems — booking
+                systems, AI workflows, SaaS platforms — built with the kind of
+                precision that holds up at scale.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-brand-gray">
+                We&apos;re a small team that operates with high standards. Every
+                project gets our full attention, and we stay accountable to
+                outcomes — not just deliverables.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-[#f7f9fc] py-24">
+        <div className="container-site">
+          <Reveal>
+            <div className="mb-14 text-center">
+              <h2
+                className="font-display text-4xl font-bold text-brand-dark"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                What we stand for
+              </h2>
+            </div>
+          </Reveal>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {aboutValues.map((val, i) => {
+              const Icon = val.icon;
+              return (
+                <Reveal delay={i * 0.1} key={val.title} variants={scaleUp}>
+                  <div className="card-base p-8">
+                    <div
+                      className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl"
+                      style={{ background: "rgba(99,91,255,0.08)" }}
+                    >
+                      <Icon className="text-[#635BFF]" size={20} />
+                    </div>
+                    <h3
+                      className="font-display text-xl font-bold text-brand-dark"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      {val.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-brand-gray">
+                      {val.description}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       <CTA />
     </>

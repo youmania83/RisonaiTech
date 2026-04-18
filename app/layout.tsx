@@ -1,78 +1,58 @@
 import type { Metadata } from "next";
-import { Manrope, Sora } from "next/font/google";
+import { Inter, Bricolage_Grotesque } from "next/font/google";
 
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
-const display = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap"
-});
-
-const sans = Manrope({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap"
+  display: "swap",
+});
+
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Risonai Tech | AI Automation & SaaS Product Engineering",
-    template: "%s | Risonai Tech"
+    default: "Risonai Tech | Product Engineering Company",
+    template: "%s | Risonai Tech",
   },
   description: siteConfig.description,
-  applicationName: siteConfig.name,
   keywords: [
+    "web app development",
+    "android app development",
+    "AI automation",
+    "website development",
     "Risonai Tech",
-    "AI automation India",
-    "SaaS development",
-    "workflow automation",
-    "AI product engineering",
-    "booking systems",
-    "CRM automation"
+    "product engineering India",
   ],
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
-    title: "Risonai Tech | AI-Powered Systems That Scale Businesses",
+    title: "Risonai Tech | Product Engineering Company",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
-        width: 1200,
-        height: 630,
-        alt: "Risonai Tech AI systems and automation"
-      }
-    ]
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Risonai Tech | AI Automation & SaaS Product Engineering",
-    description: siteConfig.description
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
-  children
-}: Readonly<{
+  children,
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html className="dark" lang="en">
-      <body className={`${display.variable} ${sans.variable}`}>
+    <html className={`${sans.variable} ${display.variable}`} lang="en">
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
