@@ -1,0 +1,118 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --bg-secondary: #f7f9fc;
+    --text: #0a0a0a;
+    --text-muted: #6b7280;
+    --text-subtle: #9ca3af;
+    --border: #e5e7eb;
+    --border-light: #f3f4f6;
+    --purple: #635bff;
+    --blue: #0ea5e9;
+    --purple-soft: rgba(99, 91, 255, 0.08);
+    --blue-soft: rgba(14, 165, 233, 0.08);
+  }
+
+  * {
+    @apply border-brand-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-brand-dark;
+    font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28 lg:py-36;
+  }
+
+  /* Gradient text */
+  .grad-text {
+    background: linear-gradient(135deg, #635bff 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .grad-text-warm {
+    background: linear-gradient(135deg, #635bff 0%, #f97316 60%, #fb923c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card base */
+  .card-base {
+    @apply rounded-3xl border border-brand-border bg-white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 24px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .card-base:hover {
+    box-shadow: 0 8px 40px rgba(99, 91, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+  }
+
+  /* Label pill */
+  .label-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+    border-color: rgba(99, 91, 255, 0.2);
+    color: #635bff;
+    background: rgba(99, 91, 255, 0.06);
+  }
+
+  /* Button base */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white transition-all duration-200;
+    background: #635bff;
+  }
+  .btn-primary:hover {
+    background: #5549e8;
+    box-shadow: 0 6px 24px rgba(99, 91, 255, 0.32);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold transition-all duration-200;
+    border-color: #e5e7eb;
+    color: #0a0a0a;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200;
+    color: #635bff;
+    background: rgba(99, 91, 255, 0.07);
+  }
+  .btn-ghost:hover {
+    background: rgba(99, 91, 255, 0.12);
+    transform: translateY(-1px);
+  }
+}
