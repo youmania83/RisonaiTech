@@ -1,17 +1,14 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { siteConfig } from "@/lib/constants";
-import { fadeUp } from "@/lib/animations";
 
 export default function CTA() {
   return (
     <section className="section-pad bg-white">
       <div className="container-site">
-        <Reveal variants={fadeUp}>
+        <Reveal>
           <div
             className="relative overflow-hidden rounded-3xl px-8 py-16 text-center sm:px-16 lg:px-24"
             style={{
@@ -33,7 +30,7 @@ export default function CTA() {
             <div className="relative z-10">
               <Reveal delay={0.06}>
                 <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/60">
-                  Ready to start?
+                  Limited to 4 new clients per month
                 </span>
               </Reveal>
 
@@ -42,7 +39,7 @@ export default function CTA() {
                   className="font-display mx-auto max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  Let&apos;s build your next{" "}
+                  Ready to stop doing things{" "}
                   <span
                     style={{
                       background: "linear-gradient(135deg, #a78bfa, #60a5fa)",
@@ -51,15 +48,15 @@ export default function CTA() {
                       backgroundClip: "text",
                     }}
                   >
-                    scalable product
+                    manually?
                   </span>
                 </h2>
               </Reveal>
 
               <Reveal delay={0.18}>
                 <p className="mx-auto mt-5 max-w-lg text-lg text-white/60">
-                  From web apps to AI automation — we turn complex problems into
-                  clean, reliable systems.
+                  Get a fixed-price proposal in 48 hours. Free 30-min strategy
+                  call. No hourly billing. No lock-in. Full code ownership.
                 </p>
               </Reveal>
 
@@ -69,7 +66,7 @@ export default function CTA() {
                     className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-glow"
                     href="/contact"
                   >
-                    Book a Strategy Call
+                    Book Free Strategy Call
                     <ArrowRight size={15} />
                   </Link>
                   <a
@@ -79,9 +76,12 @@ export default function CTA() {
                     target="_blank"
                   >
                     <MessageCircle size={15} />
-                    WhatsApp Us
+                    WhatsApp Us Now
                   </a>
                 </div>
+                <p className="mt-4 text-xs text-white/40">
+                  Proposal delivered within 48 hours · No obligation
+                </p>
               </Reveal>
             </div>
           </div>

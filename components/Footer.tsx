@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 import { navLinks, siteConfig } from "@/lib/constants";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
@@ -19,19 +20,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1fr_auto]">
           {/* Brand + contact */}
           <div className="max-w-sm">
-            <Link className="flex items-center gap-2.5 no-underline" href="/">
-              <span
-                className="flex h-8 w-8 items-center justify-center rounded-lg text-[13px] font-bold text-white"
-                style={{ background: "linear-gradient(135deg, #635BFF, #0EA5E9)" }}
-              >
-                RT
-              </span>
-              <span
-                className="text-[17px] font-bold text-brand-dark"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
-              >
-                Risonai<span style={{ color: "#635BFF" }}>Tech</span>
-              </span>
+            <Link className="no-underline" href="/">
+              <AnimatedLogo size={36} />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-brand-gray">
               {siteConfig.description}

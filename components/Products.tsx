@@ -1,12 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/constants";
-import { fadeLeft, fadeRight } from "@/lib/animations";
 
 export default function Products() {
   return (
@@ -37,11 +34,10 @@ export default function Products() {
         <div className="flex flex-col gap-8">
           {products.map((product, i) => {
             const Icon = product.icon;
-            const isEven = i % 2 === 0;
             return (
-              <Reveal delay={0.05} key={product.id} variants={isEven ? fadeLeft : fadeRight}>
+              <Reveal delay={0.05 + i * 0.06} key={product.id}>
                 <div className="card-base overflow-hidden">
-                  <div className={`flex flex-col lg:flex-row ${isEven ? "" : "lg:flex-row-reverse"}`}>
+                  <div className={`flex flex-col lg:flex-row ${i % 2 === 0 ? "" : "lg:flex-row-reverse"}`}>
                     {/* Text */}
                     <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-12">
                       <div className="flex items-center gap-3">
@@ -89,6 +85,8 @@ export default function Products() {
                         alt={product.title}
                         className="object-cover"
                         fill
+                        priority={i === 0}
+                        quality={70}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         src={product.image}
                       />

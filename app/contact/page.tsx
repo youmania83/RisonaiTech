@@ -44,12 +44,12 @@ export default function ContactPage() {
               style={{ fontFamily: "var(--font-display)" }}
               variants={fadeUp}
             >
-              Let&apos;s{" "}
-              <span className="grad-text">work together</span>
+              Book Your Free{" "}
+              <span className="grad-text">Strategy Call</span>
             </motion.h1>
             <motion.p className="mt-4 text-xl text-brand-gray" variants={fadeUp}>
-              Tell us what you're building and we'll respond within one
-              business day.
+              Tell us what you're building. We'll send a fixed-price proposal
+              within 48 hours — no obligation, no hourly guesswork.
             </motion.p>
           </motion.div>
         </div>

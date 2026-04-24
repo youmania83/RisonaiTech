@@ -1,11 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/constants";
-import { scaleUp } from "@/lib/animations";
 import CTA from "@/components/CTA";
 
 export default function ProductsPage() {
@@ -44,7 +41,7 @@ export default function ProductsPage() {
             {products.map((product, i) => {
               const Icon = product.icon;
               return (
-                <Reveal delay={i * 0.1} key={product.id} variants={scaleUp}>
+                <Reveal delay={i * 0.1} key={product.id}>
                   <div className="card-base group flex flex-col overflow-hidden h-full">
                     {/* Image */}
                     <div className="relative h-56 overflow-hidden">
@@ -52,6 +49,8 @@ export default function ProductsPage() {
                         alt={product.title}
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                         fill
+                        priority={i === 0}
+                        quality={70}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         src={product.image}
                       />

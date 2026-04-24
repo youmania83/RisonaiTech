@@ -1,10 +1,7 @@
-"use client";
-
 import { CheckCircle2 } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { services } from "@/lib/constants";
-import { fadeUp } from "@/lib/animations";
 import CTA from "@/components/CTA";
 
 export default function ServicesPage() {
@@ -42,7 +39,7 @@ export default function ServicesPage() {
             {services.map((service, i) => {
               const Icon = service.icon;
               return (
-                <Reveal delay={i * 0.08} key={service.id} variants={fadeUp}>
+                <Reveal delay={i * 0.08} key={service.id}>
                   <div className="card-base overflow-hidden">
                     <div className="flex flex-col gap-0 lg:flex-row">
                       {/* Icon accent */}

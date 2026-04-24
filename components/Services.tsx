@@ -3,33 +3,35 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import Reveal from "@/components/Reveal";
+import MotionWrapper from "@/components/MotionWrapper";
 import { services } from "@/lib/constants";
-import { scaleUp } from "@/lib/animations";
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <section className="section-pad bg-[#f7f9fc]">
+    <section className="section-pad bg-[#f7f9fc]" id="services-overview">
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
-          <Reveal>
-            <span className="label-pill mb-4 inline-flex">What We Do</span>
-          </Reveal>
-          <Reveal delay={0.08}>
+          <MotionWrapper delay={0}>
+            <span className="label-pill mb-4 inline-flex">What We Build</span>
+          </MotionWrapper>
+          <MotionWrapper delay={1}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Built for every layer of{" "}
-              <span className="grad-text">your product</span>
+              Every service solves a{" "}
+              <span className="grad-text">specific revenue problem</span>
             </h2>
-          </Reveal>
-          <Reveal delay={0.16}>
+          </MotionWrapper>
+          <MotionWrapper delay={2}>
             <p className="mt-4 text-lg text-brand-gray">
-              From concept to production — we cover the full engineering stack.
+              We don't sell technology. We sell outcomes — automation that saves
+              20 hours a week, systems that capture leads at 2 AM, software that
+              scales without a bigger headcount.
             </p>
-          </Reveal>
+          </MotionWrapper>
         </div>
 
         {/* Cards */}
@@ -37,15 +39,18 @@ export default function Services() {
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
-              <Reveal delay={i * 0.1} key={service.id} variants={scaleUp}>
-                <div className="card-base flex h-full flex-col gap-5 p-7">
+              <MotionWrapper delay={i} key={service.id}>
+                <motion.div
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="card-base flex h-full flex-col gap-5 p-7 cursor-default"
+                >
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-xl"
-                    style={{ background: "rgba(99,91,255,0.08)" }}
+                    className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "rgba(90, 77, 241, 0.08)" }}
                   >
-                    <Icon className="text-[#635BFF]" size={20} />
+                    <Icon className="text-[#5a4df1]" size={20} />
                   </div>
-                  <div>
+                  <div className="group">
                     <h3
                       className="font-display text-lg font-bold text-brand-dark"
                       style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
@@ -61,27 +66,26 @@ export default function Services() {
                       <li className="flex items-center gap-2 text-xs text-brand-gray" key={b}>
                         <span
                           className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                          style={{ background: "#635BFF" }}
+                          style={{ background: "#5a4df1" }}
                         />
                         {b}
                       </li>
                     ))}
                   </ul>
-                </div>
-              </Reveal>
+                </motion.div>
+              </MotionWrapper>
             );
           })}
         </div>
 
         {/* CTA */}
-        <Reveal className="mt-12 text-center" delay={0.3}>
-          <Link className="btn-ghost" href="/services">
+        <MotionWrapper className="mt-12 text-center" delay={5}>
+          <Link className="btn-ghost group" href="/services">
             See all services
-            <ArrowRight size={15} />
+            <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
           </Link>
-        </Reveal>
+        </MotionWrapper>
       </div>
     </section>
   );
 }
-

@@ -24,3 +24,9 @@ pnpm-debug.log*
 
 # typescript
 *.tsbuildinfo
+
+# vercel
+.vercel/
+
+# local audits
+lighthouse-*.json

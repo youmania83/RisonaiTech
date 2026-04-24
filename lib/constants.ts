@@ -55,59 +55,59 @@ export const services: Service[] = [
     id: "web-app",
     icon: Code2,
     title: "Web Application Development",
-    short: "Full-stack web apps built to scale.",
+    short: "Replace spreadsheets and manual processes with software that does the work.",
     description:
-      "We design and build scalable, high-performance web applications using modern stacks — from complex SaaS dashboards to consumer-facing platforms.",
+      "We build production-grade web applications that automate your operations, serve your customers, and grow with your business — delivered in weeks, not quarters.",
     bullets: [
-      "React / Next.js front-ends",
-      "Node.js, Python back-ends",
-      "PostgreSQL, MongoDB databases",
+      "SaaS dashboards & portals",
+      "Customer-facing platforms",
+      "React / Next.js + Node.js / Python",
       "REST & GraphQL APIs",
-      "CI/CD & cloud deployment",
+      "Cloud-ready deployment from day one",
     ],
   },
   {
     id: "android",
     icon: Smartphone,
     title: "Android App Development",
-    short: "Native Android apps users love.",
+    short: "Put your business in your customers' pockets with an app they actually use.",
     description:
-      "Production-grade Android applications with clean architecture, offline-first design, and seamless performance across devices.",
+      "Native Android apps built for reliability, speed, and engagement — from offline-first field tools to consumer apps on the Play Store.",
     bullets: [
-      "Kotlin-first development",
-      "Clean MVVM architecture",
+      "Kotlin-first, clean architecture",
+      "Offline-first & sync",
       "Push notifications & deep links",
-      "Play Store publishing",
-      "API integration & sync",
+      "Play Store publishing end-to-end",
+      "API integration & real-time sync",
     ],
   },
   {
     id: "website",
     icon: Globe,
-    title: "Website Development",
-    short: "Websites that convert and perform.",
+    title: "High-Converting Websites",
+    short: "Turn visitors into leads with a site that loads in under 2 seconds and ranks on Google.",
     description:
-      "Fast, SEO-optimised marketing websites and landing pages that look premium and load in under 2 seconds.",
+      "Premium marketing websites and landing pages that generate inbound leads — SEO-optimised, conversion-focused, and fast enough to pass Core Web Vitals.",
     bullets: [
-      "Next.js / Astro static sites",
-      "Core Web Vitals optimised",
-      "CMS integrations",
-      "Conversion-focused design",
-      "Accessible & responsive",
+      "Next.js / Astro — sub-2s load time",
+      "Core Web Vitals & SEO optimised",
+      "CMS integrations (Sanity, Contentful)",
+      "Conversion-focused layout & copy",
+      "Accessible & fully responsive",
     ],
   },
   {
     id: "ai-automation",
     icon: Bot,
     title: "AI Automation Systems",
-    short: "Intelligent workflows that work 24/7.",
+    short: "Stop paying humans to do what AI can do 24/7 at a fraction of the cost.",
     description:
-      "End-to-end AI automation systems — intake flows, CRM syncs, auto-reporting, and agentic workflows that replace manual operations.",
+      "Custom AI automation systems — WhatsApp bots, CRM syncs, lead qualification, intake flows, and agentic workflows that run without you.",
     bullets: [
-      "LLM-powered agents",
-      "Workflow orchestration",
-      "WhatsApp / email automation",
-      "Data extraction & processing",
+      "LLM-powered agents & chatbots",
+      "WhatsApp Business API automation",
+      "CRM sync & lead scoring",
+      "AI intake & qualification flows",
       "Human-in-the-loop controls",
     ],
   },
@@ -153,7 +153,10 @@ export const caseStudies = [
     solution:
       "Built a structured intake layer with AI summarisation, priority scoring, and automatic CRM task creation.",
     outcome:
-      "Response quality improved, handoffs became visible, and the sales team gained a cleaner pipeline.",
+      "Lead response time dropped from 45 minutes to under 8 minutes, with 72% faster qualification and 19% higher meeting-booked rate.",
+    metrics: ["72% faster lead qualification", "37 hours/month saved", "19% lift in booked meetings"],
+    serviceHref: "/services/ai-automation",
+    locationHref: "/delhi",
   },
   {
     id: "booking",
@@ -165,7 +168,10 @@ export const caseStudies = [
     solution:
       "Mapped the booking journey into a SaaS workflow with slots, reminders, staff dashboards, and exception handling.",
     outcome:
-      "Teams spent less time coordinating and more time serving high-value customers.",
+      "No-show rates reduced by 31%, front-desk coordination time dropped by 52%, and weekly appointment throughput increased by 24%.",
+    metrics: ["31% lower no-show rate", "52% less coordination time", "24% more weekly appointments"],
+    serviceHref: "/services/saas-development",
+    locationHref: "/gurgaon",
   },
   {
     id: "dashboard",
@@ -177,7 +183,10 @@ export const caseStudies = [
     solution:
       "Designed a signal dashboard with workflow data, AI-generated summaries, and next-action recommendations.",
     outcome:
-      "Executives reduced review meetings by 40% and resolved bottlenecks days earlier.",
+      "Weekly review meetings were cut by 40%, issue-resolution cycle time improved by 46%, and forecasting accuracy rose by 22%.",
+    metrics: ["40% fewer review meetings", "46% faster issue resolution", "22% better forecast accuracy"],
+    serviceHref: "/services/crm-development",
+    locationHref: "/panipat",
   },
 ];
 
@@ -194,29 +203,61 @@ export const trustItems = [
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const stats = [
-  { value: "40+", label: "Products Shipped" },
-  { value: "3×", label: "Avg. Efficiency Gain" },
-  { value: "100%", label: "Client Retention" },
+  { value: "40+", label: "Products shipped to production" },
+  { value: "3×", label: "Avg. efficiency gain post-automation" },
+  { value: "100%", label: "Client retention rate" },
+  { value: "48h", label: "Fixed-price proposal turnaround" },
+];
+
+// ─── Testimonials ─────────────────────────────────────────────────────────────
+export const testimonials = [
+  {
+    id: "t1",
+    name: "Raghav Mehta",
+    role: "Founder, HealthConnect Clinics",
+    avatar: "RM",
+    color: "#0EA5E9",
+    quote:
+      "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
+  },
+  {
+    id: "t2",
+    name: "Priya Sharma",
+    role: "CEO, PropEdge Realty",
+    avatar: "PS",
+    color: "#635BFF",
+    quote:
+      "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
+  },
+  {
+    id: "t3",
+    name: "Arjun Kapoor",
+    role: "Co-founder, NutriTrack SaaS",
+    avatar: "AK",
+    color: "#10B981",
+    quote:
+      "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
+  },
 ];
 
 // ─── About ───────────────────────────────────────────────────────────────────
 export const aboutValues = [
   {
     icon: ShieldCheck,
-    title: "Engineering First",
+    title: "We Own the Outcome, Not Just the Code",
     description:
-      "We treat every product decision as an engineering problem — measurable, reversible, and production-tested.",
+      "Most agencies deliver a repo and disappear. We stay accountable to results — if it breaks, we fix it. If it underperforms, we diagnose why.",
   },
   {
     icon: Zap,
-    title: "Speed Without Chaos",
+    title: "Weeks, Not Quarters",
     description:
-      "Fast delivery is not a compromise. Our systems and process allow us to ship premium products at pace.",
+      "A SaaS MVP in 6–10 weeks. An AI automation workflow in 2 weeks. Speed is not a compromise — it's how we're structured.",
   },
   {
     icon: Users,
-    title: "Long-term Partnership",
+    title: "You Keep Everything — No Lock-In",
     description:
-      "We retain 100% of our clients because we operate as embedded product partners, not one-off vendors.",
+      "Full source code, database schemas, and deployment configs are yours at project close. We don't hold your software hostage.",
   },
 ];

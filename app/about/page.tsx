@@ -1,8 +1,5 @@
-"use client";
-
 import Reveal from "@/components/Reveal";
 import { aboutValues, stats } from "@/lib/constants";
-import { scaleUp } from "@/lib/animations";
 import CTA from "@/components/CTA";
 
 export default function AboutPage() {
@@ -20,15 +17,15 @@ export default function AboutPage() {
                 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                A{" "}
-                <span className="grad-text">product engineering</span>{" "}
-                firm — not a dev shop
+                The team Indian founders call{" "}
+                <span className="grad-text">when it has to work</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mx-auto mt-5 max-w-xl text-xl text-brand-gray">
-                We build technical products with ownership, craft, and a bias
-                toward measurable outcomes. Based in Panipat, working globally.
+                We've shipped 40+ products for healthcare founders, real estate
+                firms, and SaaS startups across India. Every one of them is
+                still a client. That's not luck — it's how we build.
               </p>
             </Reveal>
           </div>
@@ -63,19 +60,22 @@ export default function AboutPage() {
                 className="font-display text-4xl font-bold text-brand-dark sm:text-5xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Our mission
+                Why we exist
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-brand-gray">
-                Risonai Tech was founded on a simple belief: great software should
-                feel effortless to use but be deeply engineered underneath. We
-                focus on products that solve real operational problems — booking
-                systems, AI workflows, SaaS platforms — built with the kind of
-                precision that holds up at scale.
+                Most software agencies in India overpromise and under-deliver.
+                They quote low, scope-creep high, and hand over code you can't
+                maintain. We built RisonAI Tech to be the opposite: fixed
+                prices, clear scope, and software that actually runs in
+                production.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-brand-gray">
-                We&apos;re a small team that operates with high standards. Every
-                project gets our full attention, and we stay accountable to
-                outcomes — not just deliverables.
+                We specialize in AI automation, SaaS platforms, and custom CRM
+                systems for Indian businesses ready to stop operating manually.
+                Our clients are healthcare founders, real estate operators, and
+                growth-stage startups who need a technical partner — not a
+                vendor. We've shipped DocBooking, Expreality, and 40+ other
+                production systems. Every client has stayed.
               </p>
             </div>
           </Reveal>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 className="font-display text-4xl font-bold text-brand-dark"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                What we stand for
+                What separates us from every other dev agency
               </h2>
             </div>
           </Reveal>
@@ -99,7 +99,7 @@ export default function AboutPage() {
             {aboutValues.map((val, i) => {
               const Icon = val.icon;
               return (
-                <Reveal delay={i * 0.1} key={val.title} variants={scaleUp}>
+                <Reveal delay={i * 0.1} key={val.title}>
                   <div className="card-base p-8">
                     <div
                       className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl"

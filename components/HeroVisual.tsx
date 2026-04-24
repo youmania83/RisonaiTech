@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 /* ─── Floating glass cards ─────────────────────────────────────────── */
@@ -41,16 +40,14 @@ const CARDS = [
 ] as const;
 
 export default function HeroVisual({ className = "" }: { className?: string }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <div
+    <motion.div
       aria-hidden
       className={`relative overflow-hidden rounded-3xl ${className}`}
       style={{ isolation: "isolate" }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* ── Static base gradient (SSR-safe, no opacity:0) ──────────────── */}
       <div
@@ -61,34 +58,24 @@ export default function HeroVisual({ className = "" }: { className?: string }) {
         }}
       />
 
-      {/* ── Animated colour-shift overlay (client only) ─────────────────── */}
-      {mounted && (
-        <motion.div
-          animate={{
-            opacity: [0.6, 0.9, 0.7, 0.85, 0.6],
-          }}
-          className="absolute inset-0"
-          initial={{ opacity: 0.6 }}
-          style={{
-            background:
-              "radial-gradient(ellipse at 30% 40%, rgba(139,92,246,0.85) 0%, transparent 52%)," +
-              "radial-gradient(ellipse at 78% 65%, rgba(59,130,246,0.75) 0%, transparent 52%)," +
-              "radial-gradient(ellipse at 55% 20%, rgba(236,72,153,0.65) 0%, transparent 48%)",
-          }}
-          transition={{
-            duration: 14,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      )}
-
-      {/* ── Slow hue-rotate on the whole canvas (CSS, no JS) ────────────── */}
+      {/* ── Lightweight overlay animation (no blur/hue filters) ────────── */}
       <div
         className="absolute inset-0"
         style={{
-          animation: "heroHue 22s ease-in-out infinite alternate",
+          animation: "heroOverlay 16s ease-in-out infinite",
+          background:
+            "radial-gradient(ellipse at 30% 40%, rgba(139,92,246,0.85) 0%, transparent 52%)," +
+            "radial-gradient(ellipse at 78% 65%, rgba(59,130,246,0.75) 0%, transparent 52%)," +
+            "radial-gradient(ellipse at 55% 20%, rgba(236,72,153,0.65) 0%, transparent 48%)",
+          opacity: 0.62,
+        }}
+      />
+
+      {/* ── Subtle drift layer ──────────────────────────────────────────── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          animation: "heroDrift 20s ease-in-out infinite alternate",
           background:
             "radial-gradient(ellipse at 70% 80%, rgba(99,91,255,0.45) 0%, transparent 55%)," +
             "radial-gradient(ellipse at 15% 20%, rgba(14,165,233,0.38) 0%, transparent 50%)",
@@ -122,93 +109,92 @@ export default function HeroVisual({ className = "" }: { className?: string }) {
           background:
             "radial-gradient(ellipse at 50% 100%, rgba(99,91,255,0.55) 0%, transparent 70%)",
           pointerEvents: "none",
-          filter: "blur(18px)",
+          opacity: 0.75,
         }}
       />
 
       {/* ── Floating glass cards ────────────────────────────────────────── */}
-      {mounted &&
-        CARDS.map((card) => (
-          <motion.div
-            animate={{ y: [0, -14, 0] }}
-            className="absolute"
-            initial={{ y: 0 }}
-            key={card.id}
+      {CARDS.map((card) => (
+        <div
+          className="absolute"
+          key={card.id}
+          style={{
+            top: "top" in card ? card.top : undefined,
+            bottom: "bottom" in card ? card.bottom : undefined,
+            left: "left" in card ? card.left : undefined,
+            right: "right" in card ? card.right : undefined,
+            transform: `rotate(${card.rotate}deg)`,
+            willChange: "transform",
+            animation: `cardFloat ${card.duration}s ease-in-out ${card.delay}s infinite`,
+          }}
+        >
+          <div
             style={{
-              top: "top" in card ? card.top : undefined,
-              bottom: "bottom" in card ? card.bottom : undefined,
-              left: "left" in card ? card.left : undefined,
-              right: "right" in card ? card.right : undefined,
-              rotate: card.rotate,
-              willChange: "transform",
-            }}
-            transition={{
-              duration: card.duration,
-              delay: card.delay,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "loop",
+              background: "rgba(255,255,255,0.10)",
+              border: "1px solid rgba(255,255,255,0.22)",
+              borderRadius: "14px",
+              padding: "12px 18px",
+              minWidth: "130px",
+              boxShadow:
+                "0 4px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)",
             }}
           >
-            <div
+            <p
               style={{
-                background: "rgba(255,255,255,0.10)",
-                backdropFilter: "blur(14px)",
-                WebkitBackdropFilter: "blur(14px)",
-                border: "1px solid rgba(255,255,255,0.22)",
-                borderRadius: "14px",
-                padding: "12px 18px",
-                minWidth: "130px",
-                boxShadow:
-                  "0 4px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)",
+                color: "rgba(255,255,255,0.58)",
+                fontSize: "9.5px",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                margin: 0,
               }}
             >
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.58)",
-                  fontSize: "9.5px",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                  margin: 0,
-                }}
-              >
-                {card.label}
-              </p>
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontSize: "20px",
-                  fontWeight: 800,
-                  lineHeight: 1.15,
-                  margin: "4px 0 2px",
-                  fontFamily: "var(--font-display)",
-                }}
-              >
-                {card.value}
-              </p>
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.45)",
-                  fontSize: "10px",
-                  fontWeight: 500,
-                  margin: 0,
-                }}
-              >
-                {card.sub}
-              </p>
-            </div>
-          </motion.div>
-        ))}
+              {card.label}
+            </p>
+            <p
+              style={{
+                color: "#ffffff",
+                fontSize: "20px",
+                fontWeight: 800,
+                lineHeight: 1.15,
+                margin: "4px 0 2px",
+                fontFamily: "var(--font-display)",
+              }}
+            >
+              {card.value}
+            </p>
+            <p
+              style={{
+                color: "rgba(255,255,255,0.45)",
+                fontSize: "10px",
+                fontWeight: 500,
+                margin: 0,
+              }}
+            >
+              {card.sub}
+            </p>
+          </div>
+        </div>
+      ))}
 
       {/* ── CSS keyframe (scoped inside component as inline style) ───────── */}
       <style>{`
-        @keyframes heroHue {
-          0%   { filter: hue-rotate(0deg)   blur(36px); }
-          50%  { filter: hue-rotate(18deg)  blur(44px); }
-          100% { filter: hue-rotate(-12deg) blur(30px); }
+        @keyframes heroDrift {
+          0%   { transform: translate3d(0, 0, 0) scale(1); }
+          50%  { transform: translate3d(0.8%, -0.8%, 0) scale(1.02); }
+          100% { transform: translate3d(-0.6%, 0.6%, 0) scale(0.99); }
+        }
+        @keyframes heroOverlay {
+          0%, 100% { opacity: 0.6; }
+          25% { opacity: 0.9; }
+          50% { opacity: 0.7; }
+          75% { opacity: 0.85; }
+        }
+        @keyframes cardFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-14px); }
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 }

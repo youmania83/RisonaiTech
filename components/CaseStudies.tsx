@@ -1,12 +1,10 @@
-"use client";
-
 import Reveal from "@/components/Reveal";
 import { caseStudies } from "@/lib/constants";
-import { scaleUp } from "@/lib/animations";
+import Link from "next/link";
 
 export default function CaseStudies() {
   return (
-    <section className="section-pad bg-[#f7f9fc]">
+    <section className="section-pad bg-[#f7f9fc]" id="case-studies">
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
@@ -29,7 +27,7 @@ export default function CaseStudies() {
           {caseStudies.map((cs, i) => {
             const Icon = cs.icon;
             return (
-              <Reveal delay={i * 0.1} key={cs.id} variants={scaleUp}>
+              <Reveal delay={i * 0.1} key={cs.id}>
                 <div className="card-base flex flex-col gap-0 overflow-hidden h-full">
                 {/* Top accent bar */}
                 <div
@@ -74,6 +72,30 @@ export default function CaseStudies() {
                         </p>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 border-t border-brand-border pt-4">
+                    {cs.metrics?.map((metric: string) => (
+                      <span
+                        className="rounded-full border border-brand-border bg-[#f7f9fc] px-2.5 py-1 text-xs font-medium text-brand-dark"
+                        key={metric}
+                      >
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 text-xs font-semibold text-[#635BFF]">
+                    {cs.serviceHref && (
+                      <Link className="underline underline-offset-2" href={cs.serviceHref}>
+                        Related service
+                      </Link>
+                    )}
+                    {cs.locationHref && (
+                      <Link className="underline underline-offset-2" href={cs.locationHref}>
+                        City context
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

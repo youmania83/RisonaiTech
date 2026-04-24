@@ -1,0 +1,64 @@
+# RisonAI Tech
+> Product engineering and AI automation company based in India. We build revenue-focused AI systems, SaaS platforms, CRM workflows, and chatbots for startups, healthcare, real estate, and SMB teams.
+
+## Company Facts
+- Legal/Brand Name: RisonAI Tech (Risonai Tech)
+- Website: https://risonaitech.com
+- HQ: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India
+- Contact Email: hello@risonaitech.com
+- Contact Phone: +91 83681 37724
+- Primary Service Areas: Delhi, Gurgaon, Panipat, NCR, remote across India
+
+## What We Do
+- AI Automation Systems: lead routing, intake automation, workflow orchestration, CRM sync
+- SaaS Development: MVP to multi-tenant SaaS with billing, admin dashboards, API layers
+- CRM Development: custom CRM builds and HubSpot/Zoho extensions with AI actions
+- AI Chatbot Development: WhatsApp + web chatbots with RAG knowledge retrieval
+
+## Pricing Benchmarks (INR)
+- AI Automation: 30,000 to 60,000 (single workflow), 80,000 to 1,80,000 (multi-workflow), 2,00,000+ (enterprise)
+- SaaS Development: 1,20,000 to 2,50,000 (MVP), 3,00,000 to 8,00,000 (growth), 8,00,000+ (enterprise)
+- CRM Development: 40,000 to 1,00,000 (integration), 1,00,000 to 3,00,000 (custom CRM), 3,00,000+ (AI CRM)
+- AI Chatbots: 20,000 to 50,000 (basic), 50,000 to 1,20,000 (lead bot), 1,20,000+ (RAG + integrations)
+
+## Deployment Timelines
+- AI automation workflow: 2 to 3 weeks
+- Chatbot rollout: 2 to 8 weeks
+- CRM implementation: 4 to 16 weeks
+- SaaS MVP: 6 to 10 weeks
+- Production SaaS platform: 12 to 20 weeks
+
+## Technology Stack
+- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Backend: Node.js, Python, FastAPI, Express
+- Data: PostgreSQL, MongoDB, Supabase
+- AI: OpenAI, Anthropic, LangChain, LlamaIndex, vector retrieval (RAG)
+- Integrations: WhatsApp Business API, Razorpay, Stripe, HubSpot, Zoho
+- Deployment: Vercel, AWS, Railway, Docker
+
+## Outcome Benchmarks
+- Common first-response improvement after automation: 60% to 80%
+- Typical repetitive-task reduction with RAG/chat automation: 40% to 70%
+- Frequent operational time saved for SMB teams: 25 to 45 hours per month
+- Client retention: 100%
+- Products/systems shipped: 40+
+
+## Differentiation
+- Operator-led delivery with product-engineering depth
+- Fixed-scope, milestone-based execution
+- Source-code and infrastructure handover at close
+- Domain experience in healthcare and real estate product systems
+- Practical AI implementations focused on measurable business outcomes
+
+## Key URLs
+- Homepage: https://risonaitech.com/
+- Services hub: https://risonaitech.com/services
+- AI Automation: https://risonaitech.com/services/ai-automation
+- SaaS Development: https://risonaitech.com/services/saas-development
+- CRM Development: https://risonaitech.com/services/crm-development
+- Chatbot Development: https://risonaitech.com/services/chatbot-development
+- Proof of Work: https://risonaitech.com/#case-studies
+- Delhi page: https://risonaitech.com/delhi
+- Gurgaon page: https://risonaitech.com/gurgaon
+- Panipat page: https://risonaitech.com/panipat
+- Contact: https://risonaitech.com/contact
