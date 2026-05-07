@@ -54,7 +54,7 @@ Expreality — Luxury real estate intelligence platform with AI location scoring
   "/services": {
     title: "Services — AI Automation, SaaS, CRM & Chatbot Development",
     description:
-      "RisonAI Tech offers AI automation, SaaS development, CRM development, AI chatbot development, and web application development for businesses across India.",
+      "RisonAI Tech offers AI automation, SaaS development, CRM development, AI chatbot development, website development, and WhatsApp automation for businesses across India.",
     body: `## Services Overview
 
 ### AI Automation Systems
@@ -75,7 +75,17 @@ URL: https://risonaitech.com/services/crm-development
 ### AI Chatbot Development
 RAG chatbots trained on business data for website and WhatsApp.
 Pricing: Rs 20,000 – Rs 3,50,000.
-URL: https://risonaitech.com/services/chatbot-development`,
+URL: https://risonaitech.com/services/chatbot-development
+
+### Website Development
+High-performance, SEO-optimized websites built for speed, scalability, and conversions.
+Pricing: Rs 35,000 – Rs 2,50,000.
+URL: https://risonaitech.com/services/website-development
+
+### WhatsApp Automation
+Intelligent WhatsApp systems for lead capture, support automation, and CRM workflows.
+Pricing: Rs 25,000 – Rs 2,00,000+.
+URL: https://risonaitech.com/services/whatsapp-automation`,
   },
 
   "/services/ai-automation": {
@@ -183,6 +193,62 @@ Contact: https://risonaitech.com/contact`,
 - Basic FAQ bot: Rs 20,000 – Rs 50,000, 2–3 weeks
 - AI Lead bot: Rs 50,000 – Rs 1,20,000, 3–5 weeks
 - RAG Chatbot: Rs 1,20,000 – Rs 3,50,000, 5–8 weeks
+
+Contact: https://risonaitech.com/contact`,
+  },
+
+  "/services/website-development": {
+    title: "Website Development — Fast, SEO-Optimized Websites for Growth",
+    description:
+      "RisonAI Tech builds high-performance websites for startups and SMBs in India. SEO-ready, conversion-focused, and engineered for speed.",
+    body: `## Website Development
+
+RisonAI Tech builds high-performance, SEO-optimized websites for Indian startups and SMBs.
+
+### What We Build
+- Next.js websites optimized for speed and scalability
+- SEO-first page architecture and metadata setup
+- Conversion-focused landing pages and service pages
+- Responsive UI across mobile, tablet, and desktop
+- CMS integrations for easy content management
+- Performance tuning for Core Web Vitals
+
+### Delivery and Pricing
+- Typical delivery: 2-8 weeks
+- Pricing range: Rs 35,000 - Rs 2,50,000
+
+### Outcomes
+- Faster load times and reduced bounce
+- Better lead capture on high-intent pages
+- SEO-ready technical foundation from launch
+
+Contact: https://risonaitech.com/contact`,
+  },
+
+  "/services/whatsapp-automation": {
+    title: "WhatsApp Automation — Lead Capture, Support, and CRM Workflows",
+    description:
+      "RisonAI Tech builds WhatsApp automation systems for lead capture, support, and CRM workflows. Official API setup, routing, and analytics included.",
+    body: `## WhatsApp Automation
+
+RisonAI Tech implements intelligent WhatsApp automation systems for businesses that need faster response and better lead handling.
+
+### What We Build
+- WhatsApp Business API automation setup
+- Lead capture and qualification flows
+- Support automation with human handoff
+- CRM sync for contacts, stages, and tasks
+- Appointment reminders and follow-up workflows
+- Reporting dashboards for response and conversion metrics
+
+### Delivery and Pricing
+- Typical rollout: 2-6 weeks
+- Pricing range: Rs 25,000 - Rs 2,00,000+
+
+### Outcomes
+- Faster first-response time
+- Reduced manual lead triage workload
+- Better follow-up consistency across teams
 
 Contact: https://risonaitech.com/contact`,
   },

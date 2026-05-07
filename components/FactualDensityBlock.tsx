@@ -19,7 +19,6 @@ export default function FactualDensityBlock({
       <div className="container-site">
         <h2
           className="font-display text-3xl font-bold text-brand-dark"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           {title}
         </h2>

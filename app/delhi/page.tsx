@@ -92,7 +92,7 @@ export default function DelhiPage() {
             <span className="label-pill mb-5 inline-flex">
               <MapPin className="mr-1" size={12} /> Delhi operations
             </span>
-            <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl" style={{ fontFamily: "var(--font-display)" }}>
+            <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl">
               AI systems for <span className="grad-text">Delhi scale</span>
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-brand-gray">
@@ -113,7 +113,7 @@ export default function DelhiPage() {
 
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Delhi-specific use cases
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -133,7 +133,7 @@ export default function DelhiPage() {
 
       <section className="bg-white py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Why Delhi buyers choose us
           </h2>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -154,7 +154,7 @@ export default function DelhiPage() {
 
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Delhi FAQs
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

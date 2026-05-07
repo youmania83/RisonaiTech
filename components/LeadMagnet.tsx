@@ -25,7 +25,6 @@ export default function LeadMagnet() {
                 </p>
                 <h3
                   className="mt-1 font-display text-xl font-bold text-brand-dark sm:text-2xl"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   Get a Free AI Automation Audit
                 </h3>

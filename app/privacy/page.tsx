@@ -1,10 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | RisonAI Tech",
+  description: "Privacy policy for RisonAI Tech. Learn how we collect, use, and protect your personal data.",
+  alternates: { canonical: "/privacy" },
+  robots: { index: false, follow: false },
+};
+
 export default function PrivacyPage() {
   return (
     <section className="bg-white py-36">
       <div className="container-site mx-auto max-w-3xl">
         <h1
           className="font-display text-4xl font-bold text-brand-dark"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           Privacy Policy
         </h1>

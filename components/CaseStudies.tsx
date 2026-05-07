@@ -14,7 +14,6 @@ export default function CaseStudies() {
           <Reveal delay={0.08}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Problems solved,{" "}
               <span className="grad-text">outcomes delivered</span>
@@ -51,8 +50,7 @@ export default function CaseStudies() {
                   </div>
 
                   <h3
-                    className="font-display text-xl font-700 leading-snug text-brand-dark"
-                    style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+                    className="font-display text-xl font-bold leading-snug text-brand-dark"
                   >
                     {cs.title}
                   </h3>

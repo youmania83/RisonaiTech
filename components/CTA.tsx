@@ -2,7 +2,93 @@ import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
+import { PulseBeams } from "@/components/ui/pulse-beams";
 import { siteConfig } from "@/lib/constants";
+
+const ctaBeams = [
+  {
+    path: "M269 220.5H16.5C10.9772 220.5 6.5 224.977 6.5 230.5V398.5",
+    gradientConfig: {
+      initial: { x1: "0%", x2: "0%", y1: "80%", y2: "100%" },
+      animate: {
+        x1: ["0%", "0%", "200%"],
+        x2: ["0%", "0%", "180%"],
+        y1: ["80%", "0%", "0%"],
+        y2: ["100%", "20%", "20%"],
+      },
+      transition: { duration: 2.5, repeat: Infinity, repeatType: "loop" as const, ease: "linear", repeatDelay: 3, delay: 0.2 },
+    },
+    connectionPoints: [
+      { cx: 6.5, cy: 398.5, r: 5 },
+      { cx: 269, cy: 220.5, r: 5 },
+    ],
+  },
+  {
+    path: "M568 200H841C846.523 200 851 195.523 851 190V40",
+    gradientConfig: {
+      initial: { x1: "0%", x2: "0%", y1: "80%", y2: "100%" },
+      animate: {
+        x1: ["20%", "100%", "100%"],
+        x2: ["0%", "90%", "90%"],
+        y1: ["80%", "80%", "-20%"],
+        y2: ["100%", "100%", "0%"],
+      },
+      transition: { duration: 2.5, repeat: Infinity, repeatType: "loop" as const, ease: "linear", repeatDelay: 3, delay: 1 },
+    },
+    connectionPoints: [
+      { cx: 851, cy: 34, r: 5.5 },
+      { cx: 568, cy: 200, r: 5 },
+    ],
+  },
+  {
+    path: "M425.5 274V333C425.5 338.523 421.023 343 415.5 343H152C146.477 343 142 347.477 142 353V426.5",
+    gradientConfig: {
+      initial: { x1: "0%", x2: "0%", y1: "80%", y2: "100%" },
+      animate: {
+        x1: ["20%", "100%", "100%"],
+        x2: ["0%", "90%", "90%"],
+        y1: ["80%", "80%", "-20%"],
+        y2: ["100%", "100%", "0%"],
+      },
+      transition: { duration: 2.5, repeat: Infinity, repeatType: "loop" as const, ease: "linear", repeatDelay: 3, delay: 1.6 },
+    },
+    connectionPoints: [
+      { cx: 142, cy: 427, r: 5.5 },
+      { cx: 425.5, cy: 274, r: 5 },
+    ],
+  },
+  {
+    path: "M493 274V333.226C493 338.749 497.477 343.226 503 343.226H760C765.523 343.226 770 347.703 770 353.226V427",
+    gradientConfig: {
+      initial: { x1: "40%", x2: "50%", y1: "160%", y2: "180%" },
+      animate: { x1: "0%", x2: "10%", y1: "-40%", y2: "-20%" },
+      transition: { duration: 2.5, repeat: Infinity, repeatType: "loop" as const, ease: "linear", repeatDelay: 3, delay: 0.6 },
+    },
+    connectionPoints: [
+      { cx: 770, cy: 427, r: 5.5 },
+      { cx: 493, cy: 274, r: 5 },
+    ],
+  },
+  {
+    path: "M380 168V17C380 11.4772 384.477 7 390 7H414",
+    gradientConfig: {
+      initial: { x1: "-40%", x2: "-10%", y1: "0%", y2: "20%" },
+      animate: {
+        x1: ["40%", "0%", "0%"],
+        x2: ["10%", "0%", "0%"],
+        y1: ["0%", "0%", "180%"],
+        y2: ["20%", "20%", "200%"],
+      },
+      transition: { duration: 2.5, repeat: Infinity, repeatType: "loop" as const, ease: "linear", repeatDelay: 3, delay: 1.3 },
+    },
+    connectionPoints: [
+      { cx: 420.5, cy: 6.5, r: 5 },
+      { cx: 380, cy: 168, r: 5 },
+    ],
+  },
+];
+
+const ctaGradient = { start: "#a78bfa", middle: "#60a5fa", end: "#ec4899" };
 
 export default function CTA() {
   return (
@@ -10,7 +96,7 @@ export default function CTA() {
       <div className="container-site">
         <Reveal>
           <div
-            className="relative overflow-hidden rounded-3xl px-8 py-16 text-center sm:px-16 lg:px-24"
+            className="relative overflow-hidden rounded-3xl"
             style={{
               background: "linear-gradient(135deg, #0a0a0a 0%, #1a1050 60%, #0a0a3a 100%)",
             }}
@@ -27,7 +113,16 @@ export default function CTA() {
               }}
             />
 
-            <div className="relative z-10">
+            <PulseBeams
+              beams={ctaBeams}
+              gradientColors={ctaGradient}
+              baseColor="rgba(255,255,255,0.06)"
+              accentColor="rgba(255,255,255,0.18)"
+              width={858}
+              height={434}
+              className="h-auto bg-transparent px-8 py-16 sm:px-16 lg:px-24"
+            >
+            <div className="relative z-10 text-center">
               <Reveal delay={0.06}>
                 <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/60">
                   Limited to 4 new clients per month
@@ -37,7 +132,6 @@ export default function CTA() {
               <Reveal delay={0.12}>
                 <h2
                   className="font-display mx-auto max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   Ready to stop doing things{" "}
                   <span
@@ -84,6 +178,7 @@ export default function CTA() {
                 </p>
               </Reveal>
             </div>
+            </PulseBeams>
           </div>
         </Reveal>
       </div>

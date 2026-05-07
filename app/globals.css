@@ -219,3 +219,53 @@
     animation: none !important;
   }
 }
+
+.service-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(99, 91, 255, 0.06);
+  border: 1px solid rgba(99, 91, 255, 0.12);
+}
+
+.service-card:hover .service-icon-wrap {
+  background: rgba(99, 91, 255, 0.1);
+  border-color: rgba(99, 91, 255, 0.22);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* ─── Hero visual keyframes ────────────────────────────────────────────────── */
+@keyframes heroGradientDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(1.2%, -1%, 0) scale(1.04); }
+  100% { transform: translate3d(-0.8%, 0.8%, 0) scale(0.98); }
+}
+
+@keyframes border-beam {
+  to { stroke-dashoffset: -1060; }
+}
+.animate-border-beam {
+  animation-name: border-beam;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gradientMove {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(50px, 50px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-gradient {
+  animation: gradientMove 12s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hero-anim],
+  .animate-gradient {
+    animation: none !important;
+  }
+}

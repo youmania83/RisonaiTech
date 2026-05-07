@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Bot, Layers, Users, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle2, Bot, Layers, Users, Globe, Code2, MessageCircle } from "lucide-react";
 
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -48,6 +48,20 @@ const serviceCards = [
     href: "/services/chatbot-development",
     price: "From ₹20,000",
     desc: "RAG chatbots trained on your data — website and WhatsApp, in English and Hindi.",
+  },
+  {
+    icon: Code2,
+    title: "Website Development",
+    href: "/services/website-development",
+    price: "From ₹35,000",
+    desc: "High-performance, SEO-optimized websites built for speed, scalability, and conversions.",
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp Automation",
+    href: "/services/whatsapp-automation",
+    price: "From ₹25,000",
+    desc: "Intelligent WhatsApp systems for lead capture, customer support, and automated workflows.",
   },
 ];
 
@@ -104,9 +118,8 @@ export default function HomePage() {
         <div className="container-site">
           <h2
             className="font-display text-2xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
-            Four services. One goal: grow your revenue.
+            Six services. One goal: grow your revenue.
           </h2>
           <p className="mt-1 text-brand-gray">
             Fixed pricing. Full code ownership. Delivered in weeks — not months.
@@ -116,12 +129,12 @@ export default function HomePage() {
               Start with a scoped AI sprint
             </Link>
           </div>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {serviceCards.map((s) => {
               const Icon = s.icon;
               return (
                 <Link
-                  className="card-base block p-5 transition-shadow hover:shadow-md"
+                  className="card-base block p-5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-md"
                   href={s.href}
                   key={s.title}
                 >
@@ -156,7 +169,6 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl">
             <h2
               className="font-display text-3xl font-extrabold text-brand-dark sm:text-4xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Frequently asked questions
             </h2>
@@ -181,7 +193,6 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl">
             <h2
               className="font-display text-2xl font-bold text-brand-dark"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Why high-value clients choose us over larger agencies
             </h2>

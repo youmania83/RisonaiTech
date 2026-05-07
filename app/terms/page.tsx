@@ -1,10 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | RisonAI Tech",
+  description: "Terms of service for RisonAI Tech. Read our conditions for using our website and services.",
+  alternates: { canonical: "/terms" },
+  robots: { index: false, follow: false },
+};
+
 export default function TermsPage() {
   return (
     <section className="bg-white py-36">
       <div className="container-site mx-auto max-w-3xl">
         <h1
           className="font-display text-4xl font-bold text-brand-dark"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           Terms of Service
         </h1>

@@ -17,7 +17,6 @@ export default function Products() {
           <Reveal delay={0.08}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Products we&apos;ve{" "}
               <span className="grad-text">designed &amp; built</span>
@@ -53,7 +52,6 @@ export default function Products() {
                       </div>
                       <h3
                         className="font-display mt-5 text-3xl font-bold text-brand-dark"
-                        style={{ fontFamily: "var(--font-display)" }}
                       >
                         {product.title}
                       </h3>

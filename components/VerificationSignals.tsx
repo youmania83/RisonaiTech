@@ -32,7 +32,6 @@ export default function VerificationSignals() {
           <div>
             <h2
               className="font-display text-3xl font-bold text-brand-dark sm:text-4xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Verification signals for technical buyers
             </h2>

@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
+const BASE_URL = "https://risonaitech.com";
+
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
@@ -14,7 +16,7 @@ const display = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "RisonAI Tech | AI Automation & SaaS Development Company in India",
     template: "%s | RisonAI Tech",
@@ -38,13 +40,13 @@ export const metadata: Metadata = {
     title: "RisonAI Tech | AI Automation & SaaS Development Company in India",
     description:
       "We build AI automation systems, SaaS platforms, CRM solutions, and AI chatbots that generate revenue and automate businesses. Serving Delhi NCR, Gurgaon, and clients across India.",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    url: BASE_URL,
+    siteName: "RisonAI Tech",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: `${siteConfig.url}/og-image.png`,
+        url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "RisonAI Tech — AI Automation & SaaS Development",
@@ -57,8 +59,11 @@ export const metadata: Metadata = {
     description:
       "AI automation, SaaS development, CRM, and chatbot systems for businesses across India.",
     site: "@risonaitech",
+    creator: "@risonaitech",
   },
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: BASE_URL,
+  },
   robots: {
     index: true,
     follow: true,
@@ -70,6 +75,67 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    // Add your Google Search Console verification token here
+    // google: "YOUR_VERIFICATION_TOKEN",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  name: "RisonAI Tech",
+  url: BASE_URL,
+  description:
+    "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots for businesses across India.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
+  name: "RisonAI Tech",
+  alternateName: "Risonai Tech",
+  url: BASE_URL,
+  logo: {
+    "@type": "ImageObject",
+    "@id": `${BASE_URL}/#logo`,
+    url: `${BASE_URL}/og-image.png`,
+    contentUrl: `${BASE_URL}/og-image.png`,
+    width: 1200,
+    height: 630,
+    caption: "RisonAI Tech",
+  },
+  image: { "@id": `${BASE_URL}/#logo` },
+  description:
+    "RisonAI Tech is a product engineering company specialising in AI automation systems, SaaS development, CRM solutions, AI chatbots, and web application development for businesses across India.",
+  telephone: "+918368137724",
+  email: "hello@risonaitech.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "196, Ground Floor, New RK Puram",
+    addressLocality: "Panipat",
+    addressRegion: "Haryana",
+    postalCode: "132103",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://twitter.com/risonaitech",
+    "https://linkedin.com/company/risonaitech",
+    "https://github.com/risonaitech",
+  ],
+  foundingDate: "2023",
+  numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
+  areaServed: "India",
 };
 
 const localBusinessSchema = {
@@ -270,15 +336,18 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                websiteSchema,
+                organizationSchema,
+                localBusinessSchema,
+                ...servicesSchema["@graph"],
+                faqSchema,
+              ],
+            }),
+          }}
         />
       </head>
       <body>

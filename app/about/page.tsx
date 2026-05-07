@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { aboutValues, stats } from "@/lib/constants";
 import CTA from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: "About RisonAI Tech — Product Engineering Team Behind 40+ Shipped Products",
+  description:
+    "RisonAI Tech is a product engineering company based in Panipat, Haryana. We've shipped 40+ products for healthcare, real estate, and SaaS startups across India. 100% client retention.",
+  keywords: [
+    "about RisonAI Tech",
+    "product engineering company India",
+    "AI development team India",
+    "software agency Delhi NCR",
+  ],
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About RisonAI Tech | Product Engineering Company India",
+    description:
+      "We've shipped 40+ products for healthcare founders, real estate firms, and SaaS startups across India. 100% client retention.",
+    url: "https://risonaitech.com/about",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -15,7 +35,6 @@ export default function AboutPage() {
             <Reveal delay={0.08}>
               <h1
                 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 The team Indian founders call{" "}
                 <span className="grad-text">when it has to work</span>
@@ -40,7 +59,6 @@ export default function AboutPage() {
               <div className="text-center" key={s.value}>
                 <p
                   className="font-display text-5xl font-extrabold text-brand-dark"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {s.value}
                 </p>
@@ -58,7 +76,6 @@ export default function AboutPage() {
             <div className="mx-auto max-w-2xl text-center">
               <h2
                 className="font-display text-4xl font-bold text-brand-dark sm:text-5xl"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 Why we exist
               </h2>
@@ -89,7 +106,6 @@ export default function AboutPage() {
             <div className="mb-14 text-center">
               <h2
                 className="font-display text-4xl font-bold text-brand-dark"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 What separates us from every other dev agency
               </h2>
@@ -109,7 +125,6 @@ export default function AboutPage() {
                     </div>
                     <h3
                       className="font-display text-xl font-bold text-brand-dark"
-                      style={{ fontFamily: "var(--font-display)" }}
                     >
                       {val.title}
                     </h3>

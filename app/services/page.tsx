@@ -1,8 +1,31 @@
+import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { services } from "@/lib/constants";
 import CTA from "@/components/CTA";
+import ServiceIcon from "@/components/ServiceIcon";
+
+export const metadata: Metadata = {
+  title: "AI & Software Development Services — AI Automation, SaaS, CRM, Chatbots",
+  description:
+    "RisonAI Tech offers AI automation, SaaS development, CRM solutions, AI chatbot development, website development, and WhatsApp automation for Indian businesses. Fixed-price projects.",
+  keywords: [
+    "AI automation services India",
+    "SaaS development services India",
+    "CRM development India",
+    "AI chatbot services India",
+    "software development services Delhi",
+    "WhatsApp automation India",
+  ],
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services | RisonAI Tech — AI Automation, SaaS & CRM Development",
+    description:
+      "AI automation, SaaS platforms, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
+    url: "https://risonaitech.com/services",
+  },
+};
 
 export default function ServicesPage() {
   return (
@@ -17,7 +40,6 @@ export default function ServicesPage() {
             <Reveal delay={0.08}>
               <h1
                 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 Everything you need to{" "}
                 <span className="grad-text">ship great products</span>
@@ -25,7 +47,7 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-5 text-xl text-brand-gray">
-                Four core disciplines. One team. End-to-end ownership.
+                Six core disciplines. One team. End-to-end ownership.
               </p>
             </Reveal>
           </div>
@@ -37,32 +59,22 @@ export default function ServicesPage() {
         <div className="container-site">
           <div className="flex flex-col gap-8">
             {services.map((service, i) => {
-              const Icon = service.icon;
               return (
                 <Reveal delay={i * 0.08} key={service.id}>
-                  <div className="card-base overflow-hidden">
+                  <div className="service-card card-base overflow-hidden">
                     <div className="flex flex-col gap-0 lg:flex-row">
-                      {/* Icon accent */}
+                      {/* Premium service icon */}
                       <div
                         className="flex items-center justify-center p-10 lg:w-[240px]"
-                        style={{ background: "rgba(99,91,255,0.05)" }}
+                        style={{ background: "rgba(99,91,255,0.04)" }}
                       >
-                        <div
-                          className="flex h-16 w-16 items-center justify-center rounded-2xl"
-                          style={{ background: "rgba(99,91,255,0.1)" }}
-                        >
-                          <Icon className="text-[#635BFF]" size={28} />
-                        </div>
+                        <ServiceIcon serviceId={service.id} />
                       </div>
 
                       {/* Content */}
                       <div className="flex flex-col justify-center p-8 lg:flex-1 lg:p-10">
-                        <span className="text-xs font-semibold uppercase tracking-widest text-[#635BFF]">
-                          Service 0{i + 1}
-                        </span>
                         <h2
                           className="font-display mt-2 text-2xl font-bold text-brand-dark sm:text-3xl"
-                          style={{ fontFamily: "var(--font-display)" }}
                         >
                           {service.title}
                         </h2>

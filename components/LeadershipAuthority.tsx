@@ -52,7 +52,6 @@ export default function LeadershipAuthority() {
             <span className="label-pill mb-4 inline-flex">Leadership & Expertise</span>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Operator-led execution with <span className="grad-text">real delivery history</span>
             </h2>
@@ -78,13 +77,13 @@ export default function LeadershipAuthority() {
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-subtle">Authority signals</p>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-4">
-                <p className="font-display text-3xl font-extrabold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+                <p className="font-display text-3xl font-extrabold text-brand-dark">
                   {founder.experienceYears}+
                 </p>
                 <p className="mt-1 text-sm text-brand-gray">Years in product engineering</p>
               </div>
               <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-4">
-                <p className="font-display text-3xl font-extrabold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+                <p className="font-display text-3xl font-extrabold text-brand-dark">
                   {founder.projectsShipped}+
                 </p>
                 <p className="mt-1 text-sm text-brand-gray">Production deployments shipped</p>

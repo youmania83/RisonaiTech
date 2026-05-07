@@ -1,11 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import MotionWrapper from "@/components/MotionWrapper";
 import { services } from "@/lib/constants";
-import { motion } from "framer-motion";
 
 export default function Services() {
   return (
@@ -19,7 +16,6 @@ export default function Services() {
           <MotionWrapper delay={1}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Every service solves a{" "}
               <span className="grad-text">specific revenue problem</span>
@@ -35,25 +31,21 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
               <MotionWrapper delay={i} key={service.id}>
-                <motion.div
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="card-base flex h-full flex-col gap-5 p-7 cursor-default"
-                >
+                <div className="card-base group flex h-full flex-col gap-5 cursor-default p-7 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                   <div
                     className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                     style={{ background: "rgba(90, 77, 241, 0.08)" }}
                   >
                     <Icon className="text-[#5a4df1]" size={20} />
                   </div>
-                  <div className="group">
+                  <div>
                     <h3
                       className="font-display text-lg font-bold text-brand-dark"
-                      style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
                     >
                       {service.title}
                     </h3>
@@ -72,7 +64,7 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               </MotionWrapper>
             );
           })}

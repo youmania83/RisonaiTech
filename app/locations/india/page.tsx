@@ -78,7 +78,6 @@ export default function IndiaPage() {
             </span>
             <h1
               className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               AI & SaaS Development{" "}
               <span className="grad-text">across India</span>
@@ -109,7 +108,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Cities we serve
           </h2>
@@ -134,7 +132,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Industries we serve across India
           </h2>
@@ -154,7 +151,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Why Indian businesses choose RisonAI Tech
           </h2>
@@ -183,7 +179,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Services available across India
           </h2>
@@ -212,7 +207,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Frequently asked questions
           </h2>
@@ -231,7 +225,6 @@ export default function IndiaPage() {
         <div className="container-site">
           <h2
             className="font-display text-2xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Specific location pages
           </h2>
@@ -256,7 +249,6 @@ export default function IndiaPage() {
         <div className="container-site text-center">
           <h2
             className="font-display text-4xl font-extrabold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Start your project from anywhere in India
           </h2>

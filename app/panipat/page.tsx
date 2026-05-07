@@ -92,7 +92,7 @@ export default function PanipatPage() {
             <span className="label-pill mb-5 inline-flex">
               <MapPin className="mr-1" size={12} /> Panipat SMEs
             </span>
-            <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl" style={{ fontFamily: "var(--font-display)" }}>
+            <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl">
               AI adoption for <span className="grad-text">Panipat businesses</span>
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-brand-gray">
@@ -113,7 +113,7 @@ export default function PanipatPage() {
 
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Panipat-specific use cases
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -133,7 +133,7 @@ export default function PanipatPage() {
 
       <section className="bg-white py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Why Panipat teams partner with us
           </h2>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -154,7 +154,7 @@ export default function PanipatPage() {
 
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2 className="font-display text-3xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Panipat FAQs
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

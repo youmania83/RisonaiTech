@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedLogo from "@/components/AnimatedLogo";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const navLinks = [
   { href: "/services", label: "Services" },
@@ -17,15 +18,21 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        ticking = false;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           isScrolled ? "py-1" : "py-0"
@@ -59,9 +66,10 @@ export default function Navbar() {
 
           {/* Right CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <Link className="btn-primary text-sm group" href="/contact">
+            <Link className="btn-primary group relative overflow-hidden text-sm" href="/contact">
               Contact Us
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+              <BorderBeam duration={5} borderRadius={8} beamLength={70} />
             </Link>
           </div>
 
@@ -110,6 +118,5 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
       </header>
-    </>
   );
 }

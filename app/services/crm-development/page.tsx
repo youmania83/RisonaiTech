@@ -135,7 +135,6 @@ export default function CRMDevelopmentPage() {
             <span className="label-pill mb-5 inline-flex">CRM Development</span>
             <h1
               className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               CRM systems built for{" "}
               <span className="grad-text">your actual workflow</span>
@@ -166,7 +165,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             What we build
           </h2>
@@ -189,7 +187,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             CRM use cases by industry
           </h2>
@@ -218,7 +215,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Pricing
           </h2>
@@ -265,13 +261,11 @@ export default function CRMDevelopmentPage() {
                 )}
                 <h3
                   className="font-display text-xl font-bold text-brand-dark"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.tier}
                 </h3>
                 <p
                   className="mt-1 font-display text-2xl font-extrabold text-[#635BFF]"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.price}
                 </p>
@@ -301,7 +295,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Frequently asked questions
           </h2>
@@ -321,7 +314,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-2xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Related services
           </h2>
@@ -356,7 +348,6 @@ export default function CRMDevelopmentPage() {
         <div className="container-site text-center">
           <h2
             className="font-display text-4xl font-extrabold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Stop losing leads to a broken CRM
           </h2>

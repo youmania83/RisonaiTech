@@ -35,7 +35,6 @@ export default function TrustFramework() {
           <span className="label-pill mb-4 inline-flex">Trust & Delivery Clarity</span>
           <h2
             className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Evidence-first delivery. <span className="grad-text">No vague promises.</span>
           </h2>
@@ -44,7 +43,7 @@ export default function TrustFramework() {
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {trustSignals.map((block) => (
             <article className="card-base h-full p-6" key={block.title}>
-              <h3 className="font-display text-2xl font-bold text-brand-dark" style={{ fontFamily: "var(--font-display)" }}>
+              <h3 className="font-display text-2xl font-bold text-brand-dark">
                 {block.title}
               </h3>
               <ul className="mt-4 space-y-2">

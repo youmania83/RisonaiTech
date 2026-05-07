@@ -13,7 +13,6 @@ export default function Testimonials() {
           <Reveal delay={0.08}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Real businesses.{" "}
               <span className="grad-text">Measurable results.</span>

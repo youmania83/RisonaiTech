@@ -135,7 +135,6 @@ export default function SaasDevelopmentPage() {
             <span className="label-pill mb-5 inline-flex">SaaS Development</span>
             <h1
               className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               SaaS platforms built to{" "}
               <span className="grad-text">scale from day one</span>
@@ -172,7 +171,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             What's included
           </h2>
@@ -195,7 +193,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             How we build differently
           </h2>
@@ -224,7 +221,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             SaaS products we've built
           </h2>
@@ -233,7 +229,6 @@ export default function SaasDevelopmentPage() {
             <div className="card-base p-6">
               <h3
                 className="font-display text-xl font-bold text-brand-dark"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 DocBooking
               </h3>
@@ -248,7 +243,6 @@ export default function SaasDevelopmentPage() {
             <div className="card-base p-6">
               <h3
                 className="font-display text-xl font-bold text-brand-dark"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 Expreality
               </h3>
@@ -269,7 +263,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Pricing
           </h2>
@@ -319,13 +312,11 @@ export default function SaasDevelopmentPage() {
                 )}
                 <h3
                   className="font-display text-xl font-bold text-brand-dark"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.tier}
                 </h3>
                 <p
                   className="mt-1 font-display text-2xl font-extrabold text-[#635BFF]"
-                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.price}
                 </p>
@@ -349,7 +340,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-3xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Frequently asked questions
           </h2>
@@ -369,7 +359,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site">
           <h2
             className="font-display text-2xl font-bold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Related services
           </h2>
@@ -404,7 +393,6 @@ export default function SaasDevelopmentPage() {
         <div className="container-site text-center">
           <h2
             className="font-display text-4xl font-extrabold text-brand-dark"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Have a SaaS idea?
           </h2>

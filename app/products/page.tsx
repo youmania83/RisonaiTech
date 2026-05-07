@@ -1,9 +1,29 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/constants";
 import CTA from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: "Our Products — DocBooking & Expreality | Built by RisonAI Tech",
+  description:
+    "RisonAI Tech has built DocBooking (AI clinic management SaaS for healthcare) and Expreality (property intelligence platform for real estate). In-house products shipped to production.",
+  keywords: [
+    "DocBooking AI clinic management",
+    "Expreality property intelligence",
+    "AI SaaS products India",
+    "in-house products RisonAI Tech",
+  ],
+  alternates: { canonical: "/products" },
+  openGraph: {
+    title: "Products | RisonAI Tech — DocBooking & Expreality",
+    description:
+      "In-house products we designed, engineered, and launched — demonstrating what we build for clients.",
+    url: "https://risonaitech.com/products",
+  },
+};
 
 export default function ProductsPage() {
   return (
@@ -18,7 +38,6 @@ export default function ProductsPage() {
             <Reveal delay={0.08}>
               <h1
                 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 Built in-house.{" "}
                 <span className="grad-text">Shipped to production.</span>
@@ -75,7 +94,6 @@ export default function ProductsPage() {
                       </div>
                       <h2
                         className="font-display mt-4 text-2xl font-bold text-brand-dark"
-                        style={{ fontFamily: "var(--font-display)" }}
                       >
                         {product.title}
                       </h2>

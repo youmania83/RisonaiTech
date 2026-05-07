@@ -1,6 +1,7 @@
 import {
   Bot,
   Globe,
+  MessageCircle,
   Layers,
   Smartphone,
   Workflow,
@@ -97,6 +98,22 @@ export const services: Service[] = [
     ],
   },
   {
+    id: "website-development",
+    icon: Globe,
+    title: "Website Development",
+    short:
+      "High-performance, SEO-optimized websites built for speed, scalability, and conversions.",
+    description:
+      "From landing pages to full-scale platforms, we engineer modern websites that are fast, reliable, and built to convert across every screen size.",
+    bullets: [
+      "Landing pages to full-scale platforms",
+      "SEO foundations and technical performance",
+      "Core Web Vitals focused implementation",
+      "Scalable architecture for future growth",
+      "Conversion-first UX and responsive design",
+    ],
+  },
+  {
     id: "ai-automation",
     icon: Bot,
     title: "AI Automation Systems",
@@ -109,6 +126,22 @@ export const services: Service[] = [
       "CRM sync & lead scoring",
       "AI intake & qualification flows",
       "Human-in-the-loop controls",
+    ],
+  },
+  {
+    id: "whatsapp-automation",
+    icon: MessageCircle,
+    title: "WhatsApp Automation",
+    short:
+      "Intelligent WhatsApp systems for lead capture, customer support, and automated workflows.",
+    description:
+      "Integrate chatbots, CRM workflows, and real-time engagement on WhatsApp to respond faster, qualify better leads, and scale customer conversations efficiently.",
+    bullets: [
+      "Automated lead qualification and routing",
+      "Support flows with chatbot escalation",
+      "CRM integration and pipeline updates",
+      "Broadcast and re-engagement journeys",
+      "Analytics, templates, and compliance setup",
     ],
   },
 ];
