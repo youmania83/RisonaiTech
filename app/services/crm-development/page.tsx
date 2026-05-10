@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Users, Zap, BarChart3, MessageSquare } from "lucide-react";
+import {
+  CheckCircle2,
+  ArrowRight,
+  Users,
+  Zap,
+  BarChart3,
+  MessageSquare,
+} from "lucide-react";
 import FactualDensityBlock from "@/components/FactualDensityBlock";
+import {
+  breadcrumbSchema,
+  howToSchema,
+  serviceSchema,
+  faqSchemaFromPairs,
+  graph,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Custom CRM Development India — CRM Systems with AI Integration",
+  title: "Custom CRM Development India — AI CRM with WhatsApp Integration",
   description:
-    "RisonAI Tech builds custom CRM platforms and extends existing CRMs with AI. For healthcare, real estate, and service businesses. WhatsApp integration included. Delhi NCR.",
+    "RisonAI Tech builds custom CRM platforms and AI-enhanced HubSpot / Zoho extensions for healthcare, real estate, and service businesses in India. WhatsApp integration included. From ₹40,000.",
   keywords: [
     "custom CRM development India",
     "CRM development company Delhi",
+    "AI CRM automation India",
     "CRM with WhatsApp integration India",
     "healthcare CRM India",
     "real estate CRM development",
@@ -20,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom CRM Development India | RisonAI Tech",
     description:
-      "Custom CRM systems and AI-enhanced CRM integrations for healthcare, real estate, and service businesses. WhatsApp + CRM + AI.",
+      "Custom CRM systems and AI-enhanced HubSpot / Zoho integrations for healthcare, real estate, and service businesses. WhatsApp + CRM + AI.",
     url: "https://risonaitech.com/services/crm-development",
   },
 };
@@ -61,6 +76,77 @@ const useCases = [
   },
 ];
 
+const processSteps = [
+  {
+    name: "Pipeline and workflow audit",
+    text: "We map your current sales / service pipeline end-to-end — sources, stages, owners, handoffs, and the data each stage actually needs. Output: a written pipeline doc and a list of friction points.",
+  },
+  {
+    name: "Build vs. extend decision",
+    text: "Based on workflow complexity and per-user license cost, we recommend whether to extend HubSpot / Zoho or build a custom CRM. We give you a written rationale, not a sales pitch.",
+  },
+  {
+    name: "Data model and integration design",
+    text: "We design the data model (contacts, organisations, deals, custom objects), integration map (WhatsApp, email, ERP, ad platforms), and reporting requirements before any code.",
+  },
+  {
+    name: "Sprint 1 — core pipeline",
+    text: "Build the contact, organisation, deal, and activity models, plus the primary pipeline view your team will use daily. End of sprint: an internal team can run a live deal end-to-end.",
+  },
+  {
+    name: "Sprint 2 — WhatsApp + email integration",
+    text: "Wire in WhatsApp Business API and email so every conversation logs against the right contact. AI parses intent and suggests next-step actions on inbound messages.",
+  },
+  {
+    name: "Sprint 3 — AI follow-up and scoring",
+    text: "Optional AI module: lead scoring by intent, AI-drafted follow-up messages, predictive deal stage progression, and at-risk account flagging based on engagement patterns.",
+  },
+  {
+    name: "Reporting, dashboards, and exports",
+    text: "Custom dashboards for leadership and reps, scheduled CSV / Excel exports, and per-user activity views. Reporting goes against Postgres views to stay fast at scale.",
+  },
+  {
+    name: "Migration, training, and handover",
+    text: "Data migration from your old CRM or spreadsheet, hands-on training for sales and ops teams, written runbooks, and 60-day support for tuning thresholds and edge cases.",
+  },
+];
+
+const verticalCRMs = [
+  {
+    name: "Healthcare clinic CRM",
+    body: "Patient lifecycle from inquiry → triage → appointment → follow-up. WhatsApp reminders, AI-summarised consult notes, NPS collection, and clinic performance dashboards. Multi-clinic tenancy supported.",
+  },
+  {
+    name: "Real estate brokerage CRM",
+    body: "Multi-portal lead syndication, AI qualification by budget and intent, agent auto-assignment, AI property-match scoring, site-visit scheduling, and developer-facing reporting.",
+  },
+  {
+    name: "Education and admissions CRM",
+    body: "Applicant tracking from inquiry to enrolment, document collection and verification, counsellor routing, parent-facing WhatsApp updates, and admissions performance dashboards.",
+  },
+  {
+    name: "Field-sales CRM",
+    body: "Mobile-first CRM for distributed sales teams — visit logging, geo-tagging, daily plan rollout, expense tracking, and AI-summarised manager rollups for weekly review.",
+  },
+  {
+    name: "Agency / professional-services CRM",
+    body: "Pipeline + project + retainer view in one tool — proposal drafts, contract tracking, project status auto-updates, renewal-risk alerts, and AI-drafted weekly client digests.",
+  },
+  {
+    name: "B2B SaaS sales CRM",
+    body: "Account-based pipeline with multi-touch attribution, AI deal-health scoring, churn-risk alerts, and CS handoff workflows tied to product usage data.",
+  },
+];
+
+const integrationsTable = [
+  { label: "Messaging", body: "WhatsApp Business API (official BSP), Twilio SMS, voice, email via Resend / SendGrid" },
+  { label: "Existing CRMs", body: "HubSpot, Zoho, Salesforce — extend with custom modules, AI enrichment, webhooks" },
+  { label: "Marketing", body: "Meta Ads, Google Ads, LinkedIn Ads — auto-pull lead data, attribute conversions" },
+  { label: "Calendaring", body: "Google Calendar, Outlook, Calendly for booking flows tied to CRM contacts" },
+  { label: "ERP / accounting", body: "Tally, Zoho Books, QuickBooks for invoice and payment status sync" },
+  { label: "Communication", body: "Slack, Microsoft Teams for notifications and AI-drafted alerts to the right channel" },
+];
+
 const faqs = [
   {
     q: "Why build a custom CRM instead of using HubSpot or Zoho?",
@@ -72,11 +158,11 @@ const faqs = [
   },
   {
     q: "Can the CRM integrate with WhatsApp?",
-    a: "Yes. We integrate the WhatsApp Business API so every incoming and outgoing WhatsApp message is logged in the CRM against the lead or contact. AI reads the conversation and suggests the next action or drafts a reply.",
+    a: "Yes. RisonAI Tech integrates the WhatsApp Business API so every incoming and outgoing WhatsApp message is logged in the CRM against the lead or contact. AI reads the conversation and suggests the next action or drafts a reply.",
   },
   {
     q: "Can you extend our existing HubSpot or Zoho CRM?",
-    a: "Yes. We extend HubSpot and Zoho with custom modules, automations, and AI layers without replacing them. This includes custom properties, workflow automations, AI enrichment via webhooks, and custom dashboards.",
+    a: "Yes. RisonAI Tech extends HubSpot and Zoho with custom modules, automations, and AI layers without replacing them. This includes custom properties, workflow automations, AI enrichment via webhooks, and custom dashboards.",
   },
   {
     q: "How long does CRM development take?",
@@ -84,7 +170,23 @@ const faqs = [
   },
   {
     q: "What industries do you build CRMs for?",
-    a: "Our strongest CRM experience is in healthcare (patient and clinic management) and real estate (property lead management). We also build CRMs for consultancies, agencies, D2C brands, and education providers.",
+    a: "Our strongest CRM experience is in healthcare (patient and clinic management) and real estate (property lead management). We also build CRMs for consultancies, agencies, education providers, D2C brands, and B2B SaaS sales teams.",
+  },
+  {
+    q: "Will the CRM work for my field sales team?",
+    a: "Yes. RisonAI Tech ships mobile-first CRM views for field teams — visit logging, geo-tagging, daily-plan rollout, expense tracking, and offline-tolerant data entry. Manager rollups are AI-summarised for weekly review.",
+  },
+  {
+    q: "Can we migrate from a spreadsheet or old CRM?",
+    a: "Yes. Data migration is included in scope: we map old fields to new ones, deduplicate records, run a parallel test, and cutover with audit logs. We have migrated from Excel, Pipedrive, Zoho, HubSpot, and various legacy CRMs.",
+  },
+  {
+    q: "What does AI add to a CRM?",
+    a: "AI adds: lead scoring by intent, AI-drafted follow-up replies, conversation summarisation, predictive deal-stage progression, at-risk account flagging, and AI-generated weekly digests for sales leaders. All AI outputs are gated by a human checkpoint where stakes are high.",
+  },
+  {
+    q: "Do we own the CRM after delivery?",
+    a: "Yes. Full ownership of source code, database schemas, deployment configs, and documentation transfers at project close. There is no per-user license fee charged by RisonAI Tech.",
   },
 ];
 
@@ -107,25 +209,42 @@ const factualBenchmarks = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.a,
-    },
-  })),
-};
+const pageSchema = graph(
+  breadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "CRM Development", url: "/services/crm-development" },
+  ]),
+  serviceSchema({
+    id: "crm-development",
+    name: "CRM Development Services",
+    serviceType: "CRM Development",
+    description:
+      "Custom CRM platforms and AI-enhanced HubSpot / Zoho integrations for healthcare, real estate, and service businesses across India — built by RisonAI Tech.",
+    url: "/services/crm-development",
+    priceRange: "₹40,000 – ₹7,00,000",
+    offers: [
+      { name: "CRM Integration", description: "Extend HubSpot / Zoho / Salesforce with custom workflows", price: "40000" },
+      { name: "Custom CRM", description: "Purpose-built CRM with WhatsApp + pipeline + reporting", price: "100000" },
+      { name: "AI CRM", description: "Custom CRM with AI lead scoring, follow-up drafts, predictive analytics", price: "300000" },
+    ],
+  }),
+  howToSchema({
+    name: "How RisonAI Tech delivers a CRM project",
+    description:
+      "An eight-stage process from pipeline audit to data migration and team training for CRM engagements.",
+    totalTime: "P84D",
+    steps: processSteps,
+  }),
+  faqSchemaFromPairs(faqs),
+);
 
 export default function CRMDevelopmentPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
       {/* Hero */}
@@ -133,16 +252,15 @@ export default function CRMDevelopmentPage() {
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">CRM Development</span>
-            <h1
-              className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-            >
+            <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl">
               CRM systems built for{" "}
               <span className="grad-text">your actual workflow</span>
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-brand-gray">
-              We build custom CRM platforms and extend existing CRMs (HubSpot, Zoho) with AI —
-              WhatsApp integration, intelligent follow-ups, lead scoring, and pipeline dashboards
-              tailored to healthcare, real estate, and service businesses.
+              RisonAI Tech builds custom CRM platforms and extends existing CRMs (HubSpot, Zoho,
+              Salesforce) with AI — WhatsApp integration, intelligent follow-ups, lead scoring, and
+              pipeline dashboards tailored to healthcare, real estate, education, and service
+              businesses across India.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link className="btn-primary" href="/contact">
@@ -154,7 +272,26 @@ export default function CRMDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              From ₹40,000 · CRM + WhatsApp + AI · Based in Delhi NCR
+              From ₹40,000 · CRM + WhatsApp + AI · Headquartered in Panipat, Delhi NCR
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AI summary block */}
+      <section className="bg-[#fafbff] py-10">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
+              AI summary
+            </p>
+            <p className="mt-2 text-base leading-relaxed text-brand-dark">
+              <strong>RisonAI Tech provides CRM development services in India.</strong> The company
+              builds custom CRM platforms (₹1,00,000–₹3,00,000), extends HubSpot / Zoho / Salesforce
+              with AI layers (₹40,000–₹1,00,000), and delivers AI-enhanced CRM systems with
+              predictive lead scoring, AI-drafted follow-ups, and analytics dashboards
+              (₹3,00,000–₹7,00,000). Domain depth in healthcare (DocBooking) and real estate
+              (Expreality). WhatsApp Business API integration is included by default.
             </p>
           </div>
         </div>
@@ -163,13 +300,11 @@ export default function CRMDevelopmentPage() {
       {/* Deliverables */}
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2
-            className="font-display text-3xl font-bold text-brand-dark"
-          >
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             What we build
           </h2>
           <p className="mt-2 text-brand-gray">
-            Every CRM is designed for your team's actual daily workflow.
+            Every CRM is designed for your team&apos;s actual daily workflow.
           </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {deliverables.map((item) => (
@@ -185,9 +320,7 @@ export default function CRMDevelopmentPage() {
       {/* Use Cases */}
       <section className="bg-white py-20">
         <div className="container-site">
-          <h2
-            className="font-display text-3xl font-bold text-brand-dark"
-          >
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             CRM use cases by industry
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -210,14 +343,74 @@ export default function CRMDevelopmentPage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Process */}
       <section className="bg-[#f7f9fc] py-20">
         <div className="container-site">
-          <h2
-            className="font-display text-3xl font-bold text-brand-dark"
-          >
-            Pricing
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
+            Our CRM delivery process
           </h2>
+          <ol className="mt-10 grid gap-5 sm:grid-cols-2">
+            {processSteps.map((step, idx) => (
+              <li className="card-base p-5" key={step.name}>
+                <p className="text-xs font-bold uppercase tracking-wider text-[#635BFF]">
+                  Step {idx + 1}
+                </p>
+                <h3 className="mt-1 font-semibold text-brand-dark">{step.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand-gray">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Verticals */}
+      <section className="bg-white py-20">
+        <div className="container-site">
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
+            Vertical-specific CRMs we ship
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {verticalCRMs.map((v) => (
+              <div className="card-base p-6" key={v.name}>
+                <h3 className="font-semibold text-brand-dark">{v.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand-gray">{v.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations */}
+      <section className="bg-[#f7f9fc] py-20">
+        <div className="container-site">
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
+            CRM integrations we wire by default
+          </h2>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border bg-white">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-[#fafbff] text-brand-dark">
+                <tr>
+                  <th className="px-5 py-3 font-semibold">Category</th>
+                  <th className="px-5 py-3 font-semibold">Tools</th>
+                </tr>
+              </thead>
+              <tbody>
+                {integrationsTable.map((row) => (
+                  <tr className="border-t border-brand-border" key={row.label}>
+                    <td className="px-5 py-3 font-medium text-brand-dark">{row.label}</td>
+                    <td className="px-5 py-3 text-brand-gray">{row.body}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-white py-20">
+        <div className="container-site">
+          <h2 className="font-display text-3xl font-bold text-brand-dark">Pricing</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {[
               {
@@ -259,16 +452,8 @@ export default function CRMDevelopmentPage() {
                 {p.highlight && (
                   <span className="label-pill mb-3 inline-flex text-xs">Most Popular</span>
                 )}
-                <h3
-                  className="font-display text-xl font-bold text-brand-dark"
-                >
-                  {p.tier}
-                </h3>
-                <p
-                  className="mt-1 font-display text-2xl font-extrabold text-[#635BFF]"
-                >
-                  {p.price}
-                </p>
+                <h3 className="font-display text-xl font-bold text-brand-dark">{p.tier}</h3>
+                <p className="mt-1 font-display text-2xl font-extrabold text-[#635BFF]">{p.price}</p>
                 <p className="mt-3 text-sm text-brand-gray">{p.desc}</p>
                 <ul className="mt-4 space-y-2">
                   {p.items.map((item) => (
@@ -293,9 +478,7 @@ export default function CRMDevelopmentPage() {
       {/* FAQ */}
       <section className="bg-white py-20">
         <div className="container-site">
-          <h2
-            className="font-display text-3xl font-bold text-brand-dark"
-          >
+          <h2 className="font-display text-3xl font-bold text-brand-dark">
             Frequently asked questions
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -312,14 +495,15 @@ export default function CRMDevelopmentPage() {
       {/* Internal Links */}
       <section className="bg-[#f7f9fc] py-16">
         <div className="container-site">
-          <h2
-            className="font-display text-2xl font-bold text-brand-dark"
-          >
-            Related services
+          <h2 className="font-display text-2xl font-bold text-brand-dark">
+            Related services and locations
           </h2>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link className="btn-outline text-sm" href="/services/ai-automation">
               AI Automation Systems
+            </Link>
+            <Link className="btn-outline text-sm" href="/services/whatsapp-automation">
+              WhatsApp Automation
             </Link>
             <Link className="btn-outline text-sm" href="/services/chatbot-development">
               AI Chatbot Development
@@ -346,14 +530,12 @@ export default function CRMDevelopmentPage() {
       {/* CTA */}
       <section className="bg-white py-20">
         <div className="container-site text-center">
-          <h2
-            className="font-display text-4xl font-extrabold text-brand-dark"
-          >
+          <h2 className="font-display text-4xl font-extrabold text-brand-dark">
             Stop losing leads to a broken CRM
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-brand-gray">
-            Tell us about your current CRM problems. We'll audit your setup and recommend the right
-            solution — custom build or enhancement.
+            Tell us about your current CRM problems. We&apos;ll audit your setup and recommend the
+            right solution — custom build or enhancement.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link className="btn-primary" href="/contact">

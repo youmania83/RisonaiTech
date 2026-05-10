@@ -7,7 +7,7 @@ import { products } from "@/lib/constants";
 
 export default function Products() {
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad" style={{ backgroundColor: "#090C18" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mb-16 max-w-xl">
@@ -35,7 +35,7 @@ export default function Products() {
             const Icon = product.icon;
             return (
               <Reveal delay={0.05 + i * 0.06} key={product.id}>
-                <div className="card-base overflow-hidden">
+                <div className="card-base group overflow-hidden">
                   <div className={`flex flex-col lg:flex-row ${i % 2 === 0 ? "" : "lg:flex-row-reverse"}`}>
                     {/* Text */}
                     <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-12">
@@ -46,7 +46,7 @@ export default function Products() {
                         >
                           <Icon size={18} />
                         </div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-brand-subtle">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-white/38">
                           {product.subtitle}
                         </p>
                       </div>
@@ -55,7 +55,7 @@ export default function Products() {
                       >
                         {product.title}
                       </h3>
-                      <p className="mt-3 text-base leading-relaxed text-brand-gray">
+                      <p className="mt-3 text-base leading-relaxed text-white/55">
                         {product.description}
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
@@ -81,7 +81,7 @@ export default function Products() {
                     <div className="relative h-56 overflow-hidden lg:h-auto lg:w-1/2">
                       <Image
                         alt={product.title}
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                         fill
                         priority={i === 0}
                         quality={70}

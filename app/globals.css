@@ -2,36 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── CSS Variables ─────────────────────────────────────────────────────────── */
+/* ─── Design System Variables ───────────────────────────────────────────────── */
 @layer base {
   :root {
-    --bg: #ffffff;
-    --bg-secondary: #f7f9fc;
-    --text: #0a0a0a;
-    --text-muted: #6b7280;
-    --text-subtle: #9ca3af;
-    --border: #e5e7eb;
-    --border-light: #f3f4f6;
-    --purple: #5a4df1;
-    --blue: #0ea5e9;
-    --purple-soft: rgba(90, 77, 241, 0.06);
-    --blue-soft: rgba(14, 165, 233, 0.06);
+    /* Core palette */
+    --bg:             #05070F;
+    --bg-secondary:   #090C18;
+    --surface-1:      rgba(255, 255, 255, 0.03);
+    --surface-2:      rgba(255, 255, 255, 0.06);
+    --text:           #FFFFFF;
+    --text-muted:     rgba(255, 255, 255, 0.58);
+    --text-subtle:    rgba(255, 255, 255, 0.32);
+    --border:         rgba(255, 255, 255, 0.08);
+    --border-active:  rgba(255, 255, 255, 0.16);
+
+    /* Brand accents */
+    --purple:         #635BFF;
+    --purple-light:   #a78bfa;
+    --blue:           #0EA5E9;
+
+    /* Glows */
+    --purple-glow:    rgba(99, 91, 255, 0.2);
+    --blue-glow:      rgba(14, 165, 233, 0.15);
+    --purple-soft:    rgba(99, 91, 255, 0.08);
+    --blue-soft:      rgba(14, 165, 233, 0.08);
+
+    /* Premium easing */
+    --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring:    cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   * {
-    @apply border-brand-border;
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-white text-brand-dark;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: #05070F;
+    color: #FFFFFF;
+    font-family: var(--font-sans, system-ui), sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(99, 91, 255, 0.6);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(99, 91, 255, 0.35);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #05070F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 91, 255, 0.45);
+    border-radius: 3px;
   }
 }
 
@@ -45,82 +87,120 @@
     @apply py-20 sm:py-28 lg:py-36;
   }
 
-  /* Gradient text */
+  /* ── Subtle grid texture ── */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: center center;
+  }
+
+  /* ── Animated mesh background ── */
+  .bg-mesh {
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(99, 91, 255, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(236, 72, 153, 0.04) 0%, transparent 50%);
+  }
+
+  /* ── Gradient texts ── */
   .grad-text {
-    background: linear-gradient(135deg, #5a4df1 0%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 60%, #38bdf8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .grad-text-warm {
-    background: linear-gradient(135deg, #635bff 0%, #f97316 60%, #fb923c 100%);
+    background: linear-gradient(135deg, #635bff 0%, #ec4899 60%, #f97316 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Card base */
+  /* ── Card base — dark glassmorphism ── */
   .card-base {
-    @apply rounded-3xl border border-brand-border bg-white;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 4px 12px -4px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    background: rgba(255, 255, 255, 0.028);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+      background 0.4s var(--ease-out-expo),
+      border-color 0.4s var(--ease-out-expo),
+      box-shadow 0.5s var(--ease-out-expo),
+      transform 0.4s var(--ease-spring);
   }
 
   .card-base:hover {
-    box-shadow: 0 8px 40px rgba(99, 91, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
-    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 0 0 1px rgba(99, 91, 255, 0.12),
+      0 8px 40px rgba(0, 0, 0, 0.5),
+      0 0 100px rgba(99, 91, 255, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
   }
 
-  /* Label pill */
+  /* ── Label pill ── */
   .label-pill {
     @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider;
-    border-color: rgba(99, 91, 255, 0.2);
-    color: #635bff;
-    background: rgba(99, 91, 255, 0.06);
+    border-color: rgba(167, 139, 250, 0.22);
+    color: #c4b5fd;
+    background: rgba(99, 91, 255, 0.08);
   }
 
-  /* Button base */
+  /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white transition-all duration-200;
-    background: #635bff;
+    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #635BFF 0%, #4F46E5 100%);
+    box-shadow: 0 4px 20px rgba(99, 91, 255, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
+
   .btn-primary:hover {
-    background: #5549e8;
-    box-shadow: 0 6px 24px rgba(99, 91, 255, 0.32);
+    background: linear-gradient(135deg, #7C74FF 0%, #635BFF 100%);
+    box-shadow: 0 6px 32px rgba(99, 91, 255, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.14);
     transform: translateY(-1px);
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold transition-all duration-200;
-    border-color: #e5e7eb;
-    color: #0a0a0a;
-    background: transparent;
+    @apply inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition-all duration-300;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
   }
+
   .btn-outline:hover {
-    border-color: #d1d5db;
-    background: #f9fafb;
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.09);
     transform: translateY(-1px);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200;
-    color: #635bff;
-    background: rgba(99, 91, 255, 0.07);
+    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-300;
+    color: #c4b5fd;
+    background: rgba(99, 91, 255, 0.08);
+    border: 1px solid rgba(99, 91, 255, 0.18);
   }
+
   .btn-ghost:hover {
-    background: rgba(99, 91, 255, 0.12);
+    background: rgba(99, 91, 255, 0.14);
+    border-color: rgba(99, 91, 255, 0.32);
     transform: translateY(-1px);
   }
 
+  /* ── Reveal ── */
   .reveal {
-    animation: revealUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   @keyframes revealUp {
     from {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(22px);
     }
     to {
       opacity: 1;
@@ -156,7 +236,7 @@
   display: block;
 }
 
-/* Ring rotation — transform-box keeps origin at SVG element centre */
+/* Ring rotation */
 .ring {
   transform-box: fill-box;
   transform-origin: center;
@@ -187,7 +267,7 @@
 .brand-name {
   font-size: 17px;
   font-weight: 600;
-  color: #0b1220;
+  color: #FFFFFF;
   letter-spacing: -0.014em;
   line-height: 1;
 }
@@ -204,7 +284,7 @@
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.32);
   line-height: 1;
 }
 
@@ -220,24 +300,26 @@
   }
 }
 
+/* ─── Service icon ─────────────────────────────────────────────────────────── */
 .service-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  background: rgba(99, 91, 255, 0.06);
-  border: 1px solid rgba(99, 91, 255, 0.12);
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(99, 91, 255, 0.08);
+  border: 1px solid rgba(99, 91, 255, 0.15);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover .service-icon-wrap {
-  background: rgba(99, 91, 255, 0.1);
-  border-color: rgba(99, 91, 255, 0.22);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  background: rgba(99, 91, 255, 0.14);
+  border-color: rgba(99, 91, 255, 0.28);
+  box-shadow: 0 0 24px rgba(99, 91, 255, 0.18);
 }
 
-/* ─── Hero visual keyframes ────────────────────────────────────────────────── */
+/* ─── Hero keyframes ─────────────────────────────────────────────────────────── */
 @keyframes heroGradientDrift {
   0%   { transform: translate3d(0, 0, 0) scale(1); }
   50%  { transform: translate3d(1.2%, -1%, 0) scale(1.04); }
@@ -247,6 +329,7 @@
 @keyframes border-beam {
   to { stroke-dashoffset: -1060; }
 }
+
 .animate-border-beam {
   animation-name: border-beam;
   animation-timing-function: linear;
@@ -254,18 +337,83 @@
 }
 
 @keyframes gradientMove {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(50px, 50px); }
-  100% { transform: translate(0, 0); }
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(60px, 40px) scale(1.06); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 .animate-gradient {
-  animation: gradientMove 12s ease-in-out infinite;
+  animation: gradientMove 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ─── Premium shimmer ─────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── Glow pulse ———————————————————————————————————————————————————— */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.15; }
+  50%       { opacity: 0.28; }
+}
+
+.glow-pulse {
+  animation: glowPulse 4s ease-in-out infinite;
+  will-change: opacity;
+}
+
+/* ─── Float ─────────────────────────────────────────────────────────────────── */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ─── Subtle border glow ───────────────────────────────────────────────────── */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(99, 91, 255, 0.12); }
+  50%      { border-color: rgba(99, 91, 255, 0.28); }
+}
+
+/* ─── Premium logo text ────────────────────────────────────────────────────── */
+.brand-name {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.brand-ai {
+  background: linear-gradient(90deg, #FF8C00, #FF3A6E, #6366F1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.brand-tag {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.32);
+  line-height: 1;
+}
+
+@media (max-width: 639px) {
+  .premium-icon { width: 34px; height: 34px; }
+  .brand-name   { font-size: 15px; }
+  .brand-tag    { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ring,
   [data-hero-anim],
-  .animate-gradient {
+  .animate-gradient,
+  .glow-pulse,
+  .animate-border-beam {
     animation: none !important;
   }
 }

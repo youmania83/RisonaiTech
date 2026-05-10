@@ -41,7 +41,7 @@ const personSchema = {
 
 export default function LeadershipAuthority() {
   return (
-    <section className="bg-white py-20" id="leadership">
+    <section className="py-20" id="leadership" style={{ backgroundColor: "#05070F" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -61,39 +61,62 @@ export default function LeadershipAuthority() {
             <div className="mt-6 flex flex-wrap gap-2">
               {founder.specialties.map((topic) => (
                 <span
-                  className="rounded-full border border-brand-border bg-[#f7f9fc] px-3 py-1.5 text-xs font-medium text-brand-dark"
+                  className="rounded-full px-3 py-1.5 text-xs font-medium text-white/65"
                   key={topic}
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                  }}
                 >
                   {topic}
                 </span>
               ))}
             </div>
-            <p className="mt-6 text-sm text-brand-gray">
-              Need references before you commit? Review our <Link className="text-[#635BFF] underline underline-offset-2" href="/#case-studies">proof-of-work outcomes</Link> and <Link className="text-[#635BFF] underline underline-offset-2" href="/products">live product portfolio</Link>.
+            <p className="mt-6 text-sm text-white/45">
+              Need references before you commit? Review our{" "}
+              <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/#case-studies">proof-of-work outcomes</Link>
+              {" "}and{" "}
+              <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/products">live product portfolio</Link>.
             </p>
           </div>
 
           <div className="card-base p-7">
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-subtle">Authority signals</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/32">Authority signals</p>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-4">
-                <p className="font-display text-3xl font-extrabold text-brand-dark">
+              <div
+                className="rounded-xl p-4"
+                style={{ background: "rgba(99,91,255,0.07)", border: "1px solid rgba(99,91,255,0.14)" }}
+              >
+                <p className="font-display text-3xl font-extrabold grad-text">
                   {founder.experienceYears}+
                 </p>
-                <p className="mt-1 text-sm text-brand-gray">Years in product engineering</p>
+                <p className="mt-1 text-xs text-white/45">Years in product engineering</p>
               </div>
-              <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-4">
-                <p className="font-display text-3xl font-extrabold text-brand-dark">
+              <div
+                className="rounded-xl p-4"
+                style={{ background: "rgba(14,165,233,0.07)", border: "1px solid rgba(14,165,233,0.14)" }}
+              >
+                <p className="font-display text-3xl font-extrabold grad-text">
                   {founder.projectsShipped}+
                 </p>
-                <p className="mt-1 text-sm text-brand-gray">Production deployments shipped</p>
+                <p className="mt-1 text-xs text-white/45">Production deployments shipped</p>
               </div>
-              <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-4 sm:col-span-2">
-                <p className="text-sm font-semibold text-brand-dark">Leadership profile</p>
-                <p className="mt-1 text-sm text-brand-gray">{founder.name} · {founder.role}</p>
+              <div
+                className="rounded-xl p-4 sm:col-span-2"
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <p className="text-sm font-semibold text-white">Leadership profile</p>
+                <p className="mt-1 text-sm text-white/45">{founder.name} · {founder.role}</p>
                 <div className="mt-3 flex flex-wrap gap-2 text-xs">
                   {founder.sameAs.map((url) => (
-                    <a className="rounded-md border border-brand-border px-2 py-1 text-brand-gray transition-colors hover:text-brand-dark" href={url} key={url} rel="noreferrer" target="_blank">
+                    <a
+                      className="rounded-md px-2 py-1 text-white/40 transition-colors hover:text-white/70"
+                      href={url}
+                      key={url}
+                      rel="noreferrer"
+                      target="_blank"
+                      style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                    >
                       {url.replace("https://", "")}
                     </a>
                   ))}

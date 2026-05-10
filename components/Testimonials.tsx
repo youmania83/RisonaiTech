@@ -3,7 +3,7 @@ import { testimonials } from "@/lib/constants";
 
 export default function Testimonials() {
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad" style={{ backgroundColor: "#05070F" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-14 max-w-xl text-center">
@@ -30,33 +30,46 @@ export default function Testimonials() {
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal delay={i * 0.1} key={t.id}>
-              <div className="card-base flex h-full flex-col gap-6 p-7">
+              <div
+                className="flex h-full flex-col gap-5 rounded-[20px] p-7 transition-all duration-400 hover:-translate-y-1 hover:shadow-premium-hover"
+                style={{
+                  background: "rgba(255,255,255,0.028)",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  backdropFilter: "blur(12px)",
+                }}
+              >
                 {/* Quote mark */}
                 <span
                   className="text-5xl font-bold leading-none"
-                  style={{ color: t.color, opacity: 0.25 }}
+                  style={{ color: t.color, opacity: 0.35 }}
                   aria-hidden
                 >
                   &ldquo;
                 </span>
 
-                <p className="flex-1 text-sm leading-relaxed text-brand-gray -mt-4">
+                <p className="flex-1 text-sm leading-relaxed text-white/58 -mt-4">
                   {t.quote}
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-3 border-t border-brand-border pt-5">
+                <div
+                  className="flex items-center gap-3 pt-5"
+                  style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+                >
                   <div
                     className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                    style={{ background: t.color }}
+                    style={{
+                      background: `linear-gradient(135deg, ${t.color}, ${t.color}88)`,
+                      boxShadow: `0 0 16px ${t.color}44`,
+                    }}
                   >
                     {t.avatar}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-brand-dark">
+                    <p className="text-sm font-semibold text-white">
                       {t.name}
                     </p>
-                    <p className="text-xs text-brand-subtle">{t.role}</p>
+                    <p className="text-xs text-white/38">{t.role}</p>
                   </div>
                 </div>
               </div>
@@ -66,9 +79,9 @@ export default function Testimonials() {
 
         {/* Social proof footnote */}
         <Reveal delay={0.35}>
-          <p className="mt-10 text-center text-sm text-brand-subtle">
+          <p className="mt-10 text-center text-sm text-white/32">
             100% client retention rate since founding ·{" "}
-            <span className="font-medium text-brand-gray">
+            <span className="font-medium text-white/50">
               All clients are referenceable on request
             </span>
           </p>

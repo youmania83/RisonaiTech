@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CaseStudies() {
   return (
-    <section className="section-pad bg-[#f7f9fc]" id="case-studies">
+    <section className="section-pad bg-grid" id="case-studies" style={{ backgroundColor: "#05070F" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
@@ -40,11 +40,14 @@ export default function CaseStudies() {
                   <div className="flex items-start gap-3">
                     <div
                       className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg"
-                      style={{ background: "rgba(99,91,255,0.08)" }}
+                      style={{
+                        background: "rgba(99,91,255,0.08)",
+                        border: "1px solid rgba(99,91,255,0.15)",
+                      }}
                     >
-                      <Icon className="text-[#635BFF]" size={17} />
+                      <Icon className="text-[#a78bfa]" size={17} />
                     </div>
-                    <span className="mt-1 text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
+                    <span className="mt-1 text-xs font-semibold uppercase tracking-wider text-[#a78bfa]">
                       {cs.label}
                     </span>
                   </div>
@@ -72,25 +75,32 @@ export default function CaseStudies() {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-2 border-t border-brand-border pt-4">
+                  <div
+                    className="flex flex-wrap gap-2 pt-4"
+                    style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+                  >
                     {cs.metrics?.map((metric: string) => (
                       <span
-                        className="rounded-full border border-brand-border bg-[#f7f9fc] px-2.5 py-1 text-xs font-medium text-brand-dark"
+                        className="rounded-full px-2.5 py-1 text-xs font-medium text-white/70"
                         key={metric}
+                        style={{
+                          background: "rgba(99,91,255,0.08)",
+                          border: "1px solid rgba(99,91,255,0.18)",
+                        }}
                       >
                         {metric}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-3 text-xs font-semibold text-[#635BFF]">
+                  <div className="flex flex-wrap gap-3 text-xs font-semibold text-[#a78bfa]">
                     {cs.serviceHref && (
-                      <Link className="underline underline-offset-2" href={cs.serviceHref}>
+                      <Link className="underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href={cs.serviceHref}>
                         Related service
                       </Link>
                     )}
                     {cs.locationHref && (
-                      <Link className="underline underline-offset-2" href={cs.locationHref}>
+                      <Link className="underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href={cs.locationHref}>
                         City context
                       </Link>
                     )}

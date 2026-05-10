@@ -6,7 +6,7 @@ import { services } from "@/lib/constants";
 
 export default function Services() {
   return (
-    <section className="section-pad bg-[#f7f9fc]" id="services-overview">
+    <section className="section-pad bg-grid" id="services-overview" style={{ backgroundColor: "#090C18" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
@@ -38,10 +38,13 @@ export default function Services() {
               <MotionWrapper delay={i} key={service.id}>
                 <div className="card-base group flex h-full flex-col gap-5 cursor-default p-7 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "rgba(90, 77, 241, 0.08)" }}
+                    className="flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow-sm"
+                    style={{
+                      background: "rgba(99, 91, 255, 0.08)",
+                      border: "1px solid rgba(99, 91, 255, 0.15)",
+                    }}
                   >
-                    <Icon className="text-[#5a4df1]" size={20} />
+                    <Icon className="text-[#a78bfa]" size={20} />
                   </div>
                   <div>
                     <h3
@@ -55,10 +58,10 @@ export default function Services() {
                   </div>
                   <ul className="mt-auto space-y-1.5">
                     {service.bullets.slice(0, 3).map((b) => (
-                      <li className="flex items-center gap-2 text-xs text-brand-gray" key={b}>
+                      <li className="flex items-center gap-2 text-xs text-white/45" key={b}>
                         <span
                           className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                          style={{ background: "#5a4df1" }}
+                          style={{ background: "#a78bfa" }}
                         />
                         {b}
                       </li>

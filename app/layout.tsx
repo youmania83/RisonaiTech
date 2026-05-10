@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,6 +13,13 @@ const display = Bricolage_Grotesque({
   variable: "--font-display",
   display: "swap",
   weight: ["700"],
+});
+
+const sans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -332,7 +339,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={display.variable} lang="en">
+    <html className={`${display.variable} ${sans.variable}`} lang="en">
       <head>
         <script
           type="application/ld+json"

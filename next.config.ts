@@ -9,7 +9,14 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
 
   experimental: {
-    optimizePackageImports: ["lucide-react", "framer-motion"],
+    optimizePackageImports: [
+      "lucide-react",
+      "framer-motion",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-label",
+      "@radix-ui/react-slot",
+      "@radix-ui/react-toast",
+    ],
   },
 
   images: {

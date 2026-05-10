@@ -114,14 +114,14 @@ export default function HomePage() {
       <Hero />
 
       {/* Service quick-links */}
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-grid py-20 sm:py-24" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <h2
-            className="font-display text-2xl font-bold text-brand-dark"
+            className="font-display text-3xl font-bold text-white sm:text-4xl"
           >
             Six services. One goal: grow your revenue.
           </h2>
-          <p className="mt-1 text-brand-gray">
+          <p className="mt-1 text-white/50">
             Fixed pricing. Full code ownership. Delivered in weeks — not months.
           </p>
           <div className="mt-4">
@@ -134,19 +134,22 @@ export default function HomePage() {
               const Icon = s.icon;
               return (
                 <Link
-                  className="card-base block p-5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-md"
+                  className="card-base block p-5"
                   href={s.href}
                   key={s.title}
                 >
                   <div
                     className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg"
-                    style={{ background: "rgba(99,91,255,0.1)" }}
+                    style={{
+                      background: "rgba(99,91,255,0.08)",
+                      border: "1px solid rgba(99,91,255,0.14)",
+                    }}
                   >
-                    <Icon className="text-[#635BFF]" size={18} />
+                    <Icon className="text-[#a78bfa]" size={18} />
                   </div>
-                  <h3 className="font-semibold text-brand-dark">{s.title}</h3>
-                  <p className="mt-0.5 text-xs font-medium text-[#635BFF]">{s.price}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-gray">{s.desc}</p>
+                  <h3 className="font-semibold text-white">{s.title}</h3>
+                  <p className="mt-0.5 text-xs font-medium text-[#a78bfa]">{s.price}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/50">{s.desc}</p>
                 </Link>
               );
             })}
@@ -164,22 +167,22 @@ export default function HomePage() {
       <LeadMagnet />
 
       {/* FAQ Section */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2
-              className="font-display text-3xl font-extrabold text-brand-dark sm:text-4xl"
+              className="font-display text-3xl font-extrabold text-white sm:text-4xl"
             >
               Frequently asked questions
             </h2>
-            <p className="mt-3 text-brand-gray">
+            <p className="mt-3 text-white/48">
               Specific answers. No generic filler.
             </p>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {faqItems.map((faq) => (
-                <div className="card-base p-5" key={faq.q}>
-                  <h3 className="font-semibold text-brand-dark">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-gray">{faq.a}</p>
+                <div className="card-base p-6" key={faq.q}>
+                  <h3 className="font-semibold text-white">{faq.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/50">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -188,11 +191,11 @@ export default function HomePage() {
       </section>
 
       {/* Trust signals */}
-      <section className="bg-white py-16">
+      <section className="py-16" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2
-              className="font-display text-2xl font-bold text-brand-dark"
+              className="font-display text-3xl font-bold text-white sm:text-4xl"
             >
               Why high-value clients choose us over larger agencies
             </h2>
@@ -208,8 +211,8 @@ export default function HomePage() {
                 "WhatsApp-first communication — always reachable",
               ].map((item) => (
                 <li className="flex items-start gap-3" key={item}>
-                  <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#635BFF]" size={18} />
-                  <span className="text-sm text-brand-dark">{item}</span>
+                  <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#a78bfa]" size={18} />
+                  <span className="text-sm text-white/65">{item}</span>
                 </li>
               ))}
             </ul>
@@ -218,27 +221,27 @@ export default function HomePage() {
       </section>
 
       {/* Location links */}
-      <section className="bg-[#f7f9fc] py-12">
+      <section className="py-10" style={{ backgroundColor: "#090C18", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="container-site">
-          <p className="text-sm text-brand-gray">
+          <p className="text-sm text-white/38">
             Serving clients in{" "}
-            <Link className="text-[#635BFF] underline underline-offset-2" href="/delhi">
+            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/delhi">
               Delhi
             </Link>
             {", "}
-            <Link className="text-[#635BFF] underline underline-offset-2" href="/gurgaon">
+            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/gurgaon">
               Gurgaon
             </Link>
             {", "}
-            <Link className="text-[#635BFF] underline underline-offset-2" href="/panipat">
+            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/panipat">
               Panipat
             </Link>
             {", Noida, Mumbai, Bengaluru, and across India. Explore "}
-            <Link className="text-[#635BFF] underline underline-offset-2" href="/#case-studies">
+            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/#case-studies">
               proof of work
             </Link>
             {" and "}
-            <Link className="text-[#635BFF] underline underline-offset-2" href="/services">
+            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/services">
               service benchmarks
             </Link>
             {". Remote-first delivery."}

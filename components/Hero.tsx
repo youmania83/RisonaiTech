@@ -20,25 +20,74 @@ export default function Hero() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/lottie/hero.json")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (!cancelled) setAnimationData(data);
-      })
-      .catch(() => {});
+
+    // Defer Lottie load until browser is idle to protect LCP
+    const loadLottie = () => {
+      if (cancelled) return;
+      fetch("/lottie/hero.json")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => {
+          if (!cancelled) setAnimationData(data);
+        })
+        .catch(() => {});
+    };
+
+    // Skip Lottie entirely if user prefers reduced motion
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      cancelIdleCallback?: (h: number) => void;
+    };
+    const useIdle = typeof w.requestIdleCallback === "function";
+    const timer = useIdle
+      ? w.requestIdleCallback!(loadLottie, { timeout: 2500 })
+      : window.setTimeout(loadLottie, 1500);
+
     return () => {
       cancelled = true;
+      if (useIdle && typeof w.cancelIdleCallback === "function") {
+        w.cancelIdleCallback(timer as number);
+      } else {
+        window.clearTimeout(timer as number);
+      }
     };
   }, []);
 
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#05070F] pt-[68px]">
-      {/* Animated Gradient Background */}
-      <div className="animate-gradient pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-800 opacity-40 blur-3xl" />
+      {/* Grid background */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
+
+      {/* Animated gradient blobs — transform wrapper is separate from blur for compositing */}
+      <div className="animate-gradient pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-violet-950 to-fuchsia-950 opacity-60 blur-3xl" />
+      </div>
+
+      {/* Primary glow — center (static; opacity animation is composited) */}
+      <div
+        className="glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px]"
+        style={{ background: "radial-gradient(circle, rgba(99,91,255,0.22) 0%, rgba(14,165,233,0.08) 50%, transparent 70%)" }}
+      />
+
+      {/* Secondary glow — top right (static) */}
+      <div
+        className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full blur-[100px] opacity-25"
+        style={{ background: "rgba(14,165,233,0.35)" }}
+      />
 
       {/* Lottie AI Flow */}
       {animationData ? (
-        <div className="pointer-events-none absolute inset-0 opacity-30 mix-blend-screen">
+        <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-screen">
           <Lottie
             animationData={animationData}
             loop
@@ -49,15 +98,12 @@ export default function Hero() {
         </div>
       ) : null}
 
-      {/* Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600 opacity-20 blur-[200px]" />
-
-      {/* Vignette */}
+      {/* Vignette — edge darkening */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(2,6,23,0.65) 100%)",
+            "radial-gradient(130% 90% at 50% 50%, transparent 50%, rgba(5,7,15,0.75) 100%)",
         }}
       />
 
@@ -82,7 +128,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-display text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-7xl"
+          className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
           Build Systems. <br />
           <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
@@ -123,41 +169,59 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
           {stats.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 + i * 0.15, duration: 0.7 }}
-              whileHover={{ scale: 1.04, y: -4 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+              transition={{ delay: 0.6 + i * 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ scale: 1.03, y: -4 }}
+              className="group relative overflow-hidden rounded-2xl p-6 backdrop-blur-xl"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.1)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
+              }}
             >
+              {/* Hover glow */}
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
                   background:
-                    "radial-gradient(120% 80% at 0% 0%, rgba(139,92,246,0.25) 0%, transparent 60%)",
+                    "radial-gradient(140% 100% at 0% 0%, rgba(99,91,255,0.22) 0%, transparent 65%)",
                 }}
               />
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/45">
                 {item.title}
               </p>
-              <h3
-                className="mt-3 font-display text-3xl font-semibold tracking-tight text-white"
-                style={{ letterSpacing: "-0.02em" }}
+              <p
+                className="mt-3 font-display text-4xl font-bold tracking-tight"
+                style={{
+                  letterSpacing: "-0.025em",
+                  background: "linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
               >
                 {item.value}
-              </h3>
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
 
       {/* Trust strip */}
-      <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-black/30 backdrop-blur-md">
-        <div className="container-site flex flex-wrap items-center gap-x-10 gap-y-3 py-4">
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-white/45">
+      <div
+        className="absolute inset-x-0 bottom-0 backdrop-blur-md"
+        style={{
+          background: "rgba(5,7,15,0.6)",
+          borderTop: "1px solid rgba(255,255,255,0.07)",
+        }}
+      >
+        <div className="container-site flex flex-wrap items-center gap-x-8 gap-y-2 py-3.5">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
             Built for
           </span>
           {[
@@ -167,12 +231,14 @@ export default function Hero() {
             "D2C Brands",
             "Clinic Chains",
             "PropTech Teams",
-          ].map((name) => (
-            <span
-              key={name}
-              className="text-sm font-medium text-white/60 transition-colors hover:text-white"
-            >
-              {name}
+          ].map((name, i) => (
+            <span key={name} className="flex items-center gap-2">
+              {i > 0 && (
+                <span className="hidden h-3 w-px bg-white/12 sm:block" />
+              )}
+              <span className="text-xs font-medium text-white/50 transition-colors duration-200 hover:text-white/85">
+                {name}
+              </span>
             </span>
           ))}
         </div>

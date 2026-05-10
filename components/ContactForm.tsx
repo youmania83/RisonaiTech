@@ -27,7 +27,7 @@ export default function ContactForm() {
   return (
     <>
       {/* Header */}
-      <section className="bg-white pb-12 pt-36">
+      <section className="pb-12 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <motion.div
             animate="visible"
@@ -39,13 +39,13 @@ export default function ContactForm() {
               Contact
             </motion.span>
             <motion.h1
-              className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
+              className="font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl"
               variants={fadeUp}
             >
               Book Your Free{" "}
               <span className="grad-text">Strategy Call</span>
             </motion.h1>
-            <motion.p className="mt-4 text-xl text-brand-gray" variants={fadeUp}>
+            <motion.p className="mt-4 text-xl text-white/52" variants={fadeUp}>
               Tell us what you&apos;re building. We&apos;ll send a fixed-price proposal
               within 48 hours — no obligation, no hourly guesswork.
             </motion.p>
@@ -54,7 +54,7 @@ export default function ContactForm() {
       </section>
 
       {/* Body */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1fr_380px]">
 
@@ -75,11 +75,11 @@ export default function ContactForm() {
                     <MessageCircle className="text-[#635BFF]" size={24} />
                   </div>
                   <h3
-                    className="font-display text-2xl font-bold text-brand-dark"
+                    className="font-display text-2xl font-bold text-white"
                   >
                     Message sent!
                   </h3>
-                  <p className="text-brand-gray">
+                  <p className="text-white/52">
                     We&apos;ve opened WhatsApp with your message. We&apos;ll
                     get back to you shortly.
                   </p>
@@ -93,18 +93,30 @@ export default function ContactForm() {
               ) : (
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                   <h2
-                    className="font-display text-2xl font-bold text-brand-dark"
+                    className="font-display text-2xl font-bold text-white"
                   >
                     Send a message
                   </h2>
 
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-sm font-medium text-brand-dark" htmlFor="name">
+                      <label className="text-sm font-medium text-white/70" htmlFor="name">
                         Your name
                       </label>
                       <input
-                        className="rounded-lg border border-brand-border bg-white px-4 py-3 text-sm text-brand-dark outline-none transition-colors placeholder:text-brand-subtle focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15"
+                        className="rounded-xl px-4 py-3 text-sm text-white outline-none transition-all placeholder:text-white/25 focus:ring-2 focus:ring-purple-500/30"
+                        style={{
+                          background: "rgba(255,255,255,0.05)",
+                          border: "1px solid rgba(255,255,255,0.1)",
+                        }}
+                        onFocus={(e) => {
+                          e.target.style.border = "1px solid rgba(99,91,255,0.5)";
+                          e.target.style.boxShadow = "0 0 0 3px rgba(99,91,255,0.12)";
+                        }}
+                        onBlur={(e) => {
+                          e.target.style.border = "1px solid rgba(255,255,255,0.1)";
+                          e.target.style.boxShadow = "none";
+                        }}
                         id="name"
                         name="name"
                         onChange={handleChange}
@@ -115,11 +127,23 @@ export default function ContactForm() {
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-sm font-medium text-brand-dark" htmlFor="phone">
+                      <label className="text-sm font-medium text-white/70" htmlFor="phone">
                         Phone number
                       </label>
                       <input
-                        className="rounded-lg border border-brand-border bg-white px-4 py-3 text-sm text-brand-dark outline-none transition-colors placeholder:text-brand-subtle focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15"
+                        className="rounded-xl px-4 py-3 text-sm text-white outline-none transition-all placeholder:text-white/25 focus:ring-2 focus:ring-purple-500/30"
+                        style={{
+                          background: "rgba(255,255,255,0.05)",
+                          border: "1px solid rgba(255,255,255,0.1)",
+                        }}
+                        onFocus={(e) => {
+                          e.target.style.border = "1px solid rgba(99,91,255,0.5)";
+                          e.target.style.boxShadow = "0 0 0 3px rgba(99,91,255,0.12)";
+                        }}
+                        onBlur={(e) => {
+                          e.target.style.border = "1px solid rgba(255,255,255,0.1)";
+                          e.target.style.boxShadow = "none";
+                        }}
                         id="phone"
                         name="phone"
                         onChange={handleChange}
@@ -132,11 +156,23 @@ export default function ContactForm() {
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-sm font-medium text-brand-dark" htmlFor="message">
+                    <label className="text-sm font-medium text-white/70" htmlFor="message">
                       How can we help?
                     </label>
                     <textarea
-                      className="min-h-[140px] rounded-lg border border-brand-border bg-white px-4 py-3 text-sm text-brand-dark outline-none transition-colors placeholder:text-brand-subtle focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15"
+                      className="min-h-[140px] rounded-xl px-4 py-3 text-sm text-white outline-none transition-all placeholder:text-white/25 focus:ring-2 focus:ring-purple-500/30"
+                      style={{
+                        background: "rgba(255,255,255,0.05)",
+                        border: "1px solid rgba(255,255,255,0.1)",
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.border = "1px solid rgba(99,91,255,0.5)";
+                        e.target.style.boxShadow = "0 0 0 3px rgba(99,91,255,0.12)";
+                      }}
+                      onBlur={(e) => {
+                        e.target.style.border = "1px solid rgba(255,255,255,0.1)";
+                        e.target.style.boxShadow = "none";
+                      }}
                       id="message"
                       name="message"
                       onChange={handleChange}
@@ -166,13 +202,14 @@ export default function ContactForm() {
               {/* Quick contact */}
               <div className="card-base p-7">
                 <h3
-                  className="font-display mb-5 text-lg font-bold text-brand-dark"
+                  className="font-display mb-5 text-lg font-bold text-white"
                 >
                   Quick contact
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <a
-                    className="flex items-center gap-3 rounded-lg border border-brand-border px-4 py-3 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-light"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-all hover:text-white"
+                    style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
                     href={siteConfig.whatsappUrl}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -181,14 +218,16 @@ export default function ContactForm() {
                     WhatsApp Chat
                   </a>
                   <a
-                    className="flex items-center gap-3 rounded-lg border border-brand-border px-4 py-3 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-light"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-all hover:text-white"
+                    style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
                     href={`mailto:${siteConfig.email}`}
                   >
-                    <Mail className="flex-shrink-0 text-[#635BFF]" size={18} />
+                    <Mail className="flex-shrink-0 text-[#a78bfa]" size={18} />
                     {siteConfig.email}
                   </a>
                   <a
-                    className="flex items-center gap-3 rounded-lg border border-brand-border px-4 py-3 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-light"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-all hover:text-white"
+                    style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
                     href={`tel:${siteConfig.phone}`}
                   >
                     <Phone className="flex-shrink-0 text-[#0EA5E9]" size={18} />
@@ -200,12 +239,12 @@ export default function ContactForm() {
               {/* Address */}
               <div className="card-base p-7">
                 <h3
-                  className="font-display mb-3 text-lg font-bold text-brand-dark"
+                  className="font-display mb-3 text-lg font-bold text-white"
                 >
                   Office
                 </h3>
-                <div className="flex items-start gap-3 text-sm text-brand-gray">
-                  <MapPin className="mt-0.5 flex-shrink-0 text-brand-subtle" size={16} />
+                <div className="flex items-start gap-3 text-sm text-white/48">
+                  <MapPin className="mt-0.5 flex-shrink-0 text-white/28" size={16} />
                   <span>{siteConfig.address}</span>
                 </div>
                 {/* Google Maps embed */}

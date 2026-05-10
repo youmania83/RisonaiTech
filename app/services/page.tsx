@@ -5,18 +5,21 @@ import Reveal from "@/components/Reveal";
 import { services } from "@/lib/constants";
 import CTA from "@/components/CTA";
 import ServiceIcon from "@/components/ServiceIcon";
+import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "AI & Software Development Services — AI Automation, SaaS, CRM, Chatbots",
   description:
-    "RisonAI Tech offers AI automation, SaaS development, CRM solutions, AI chatbot development, website development, and WhatsApp automation for Indian businesses. Fixed-price projects.",
+    "RisonAI Tech offers AI automation, agentic AI, SaaS development, CRM solutions, AI chatbots, RPA, and WhatsApp automation for Indian businesses. Fixed-price projects, full code ownership.",
   keywords: [
     "AI automation services India",
     "SaaS development services India",
     "CRM development India",
     "AI chatbot services India",
+    "agentic AI India",
     "software development services Delhi",
     "WhatsApp automation India",
+    "RPA services India",
   ],
   alternates: { canonical: "/services" },
   openGraph: {
@@ -27,11 +30,23 @@ export const metadata: Metadata = {
   },
 };
 
+const servicesPageSchema = graph(
+  breadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+  ]),
+);
+
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesPageSchema) }}
+      />
+
       {/* Header */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
@@ -39,14 +54,14 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.08}>
               <h1
-                className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
+                className="font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl"
               >
                 Everything you need to{" "}
                 <span className="grad-text">ship great products</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
-              <p className="mt-5 text-xl text-brand-gray">
+              <p className="mt-5 text-xl text-white/52">
                 Six core disciplines. One team. End-to-end ownership.
               </p>
             </Reveal>
@@ -55,7 +70,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service detail cards */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="flex flex-col gap-8">
             {services.map((service, i) => {
@@ -66,7 +81,7 @@ export default function ServicesPage() {
                       {/* Premium service icon */}
                       <div
                         className="flex items-center justify-center p-10 lg:w-[240px]"
-                        style={{ background: "rgba(99,91,255,0.04)" }}
+                        style={{ background: "rgba(99,91,255,0.06)", borderRight: "1px solid rgba(255,255,255,0.06)" }}
                       >
                         <ServiceIcon serviceId={service.id} />
                       </div>
@@ -74,17 +89,17 @@ export default function ServicesPage() {
                       {/* Content */}
                       <div className="flex flex-col justify-center p-8 lg:flex-1 lg:p-10">
                         <h2
-                          className="font-display mt-2 text-2xl font-bold text-brand-dark sm:text-3xl"
+                          className="font-display mt-2 text-2xl font-bold text-white sm:text-3xl"
                         >
                           {service.title}
                         </h2>
-                        <p className="mt-3 max-w-xl text-base leading-relaxed text-brand-gray">
+                        <p className="mt-3 max-w-xl text-base leading-relaxed text-white/52">
                           {service.description}
                         </p>
                         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                           {service.bullets.map((b) => (
-                            <li className="flex items-center gap-2 text-sm text-brand-gray" key={b}>
-                              <CheckCircle2 className="flex-shrink-0 text-[#635BFF]" size={14} />
+                            <li className="flex items-center gap-2 text-sm text-white/58" key={b}>
+                              <CheckCircle2 className="flex-shrink-0 text-[#a78bfa]" size={14} />
                               {b}
                             </li>
                           ))}

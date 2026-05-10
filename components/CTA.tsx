@@ -1,9 +1,14 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
-import { PulseBeams } from "@/components/ui/pulse-beams";
 import { siteConfig } from "@/lib/constants";
+
+const PulseBeams = dynamic(
+  () => import("@/components/ui/pulse-beams").then((m) => m.PulseBeams),
+  { ssr: false }
+);
 
 const ctaBeams = [
   {
@@ -92,23 +97,34 @@ const ctaGradient = { start: "#a78bfa", middle: "#60a5fa", end: "#ec4899" };
 
 export default function CTA() {
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad" style={{ backgroundColor: "#05070F" }}>
       <div className="container-site">
         <Reveal>
           <div
             className="relative overflow-hidden rounded-3xl"
             style={{
-              background: "linear-gradient(135deg, #0a0a0a 0%, #1a1050 60%, #0a0a3a 100%)",
+              background: "linear-gradient(135deg, #09091f 0%, #110d3a 45%, #0a0e2a 100%)",
+              border: "1px solid rgba(99,91,255,0.2)",
+              boxShadow: "0 0 0 1px rgba(99,91,255,0.08), 0 40px 100px rgba(99,91,255,0.15)",
             }}
           >
+            {/* Grid overlay */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+                backgroundSize: "60px 60px",
+              }}
+            />
             {/* Background glow */}
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-30"
+              className="pointer-events-none absolute inset-0"
               style={{
                 background: `
-                  radial-gradient(ellipse at 20% 50%, rgba(99,91,255,0.5) 0%, transparent 55%),
-                  radial-gradient(ellipse at 80% 30%, rgba(14,165,233,0.4) 0%, transparent 50%)
+                  radial-gradient(ellipse at 20% 50%, rgba(99,91,255,0.4) 0%, transparent 55%),
+                  radial-gradient(ellipse at 80% 30%, rgba(14,165,233,0.3) 0%, transparent 50%)
                 `,
               }}
             />
@@ -157,7 +173,7 @@ export default function CTA() {
               <Reveal delay={0.24}>
                 <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
                   <Link
-                    className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-glow"
+                    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#0a0a1a] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]"
                     href="/contact"
                   >
                     Book Free Strategy Call
