@@ -68,20 +68,20 @@ export default function Hero() {
         }}
       />
 
-      {/* Animated gradient blobs — transform wrapper is separate from blur for compositing */}
-      <div className="animate-gradient pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-violet-950 to-fuchsia-950 opacity-60 blur-3xl" />
+      {/* Static gradient background — no animation to avoid constant GPU repaint of blur-3xl */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-violet-950 to-fuchsia-950 opacity-50" />
       </div>
 
-      {/* Primary glow — center (static; opacity animation is composited) */}
+      {/* Primary glow — center (reduced blur radius for paint performance) */}
       <div
-        className="glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px]"
+        className="glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px]"
         style={{ background: "radial-gradient(circle, rgba(99,91,255,0.22) 0%, rgba(14,165,233,0.08) 50%, transparent 70%)" }}
       />
 
-      {/* Secondary glow — top right (static) */}
+      {/* Secondary glow — top right (reduced blur radius) */}
       <div
-        className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full blur-[100px] opacity-25"
+        className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full blur-[60px] opacity-25"
         style={{ background: "rgba(14,165,233,0.35)" }}
       />
 
@@ -115,10 +115,10 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-6 flex flex-wrap items-center gap-3"
         >
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/70 backdrop-blur-md">
+          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/70">
             Trusted by 40+ Indian Businesses
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300 backdrop-blur-md">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
             3 client slots open this month
           </span>
@@ -162,7 +162,7 @@ export default function Hero() {
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:border-white/40 hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
           >
             <Play size={14} className="fill-white" />
             View Demo
@@ -176,10 +176,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 + i * 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ scale: 1.03, y: -4 }}
-              className="group relative overflow-hidden rounded-2xl p-6 backdrop-blur-xl"
+              className="group relative overflow-hidden rounded-2xl p-6"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
               }}
@@ -214,9 +213,9 @@ export default function Hero() {
 
       {/* Trust strip */}
       <div
-        className="absolute inset-x-0 bottom-0 backdrop-blur-md"
+        className="absolute inset-x-0 bottom-0"
         style={{
-          background: "rgba(5,7,15,0.6)",
+          background: "rgba(5,7,15,0.75)",
           borderTop: "1px solid rgba(255,255,255,0.07)",
         }}
       >

@@ -269,7 +269,6 @@
   transform-box: fill-box;
   transform-origin: center;
   animation: nodePulse 3.6s ease-in-out infinite;
-  will-change: opacity, transform;
 }
 .node-1 { animation-delay: 0s;    }
 .node-2 { animation-delay: 0.25s; }
@@ -290,12 +289,11 @@
   transform-box: fill-box;
   transform-origin: center;
   animation: hubPulse 2.4s ease-in-out infinite;
-  filter: drop-shadow(0 0 6px rgba(108, 71, 255, 0.55));
 }
 
 @keyframes hubPulse {
-  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 5px rgba(108, 71, 255, 0.45)); }
-  50%      { transform: scale(1.12); filter: drop-shadow(0 0 12px rgba(0, 198, 255, 0.7)); }
+  0%, 100% { opacity: 0.75; transform: scale(1);    }
+  50%      { opacity: 1;    transform: scale(1.12); }
 }
 
 .premium-text {

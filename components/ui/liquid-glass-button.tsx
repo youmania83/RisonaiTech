@@ -46,7 +46,6 @@ export interface LiquidButtonProps
 export const LiquidButton = React.forwardRef<HTMLButtonElement, LiquidButtonProps>(
   ({ className, size, asChild = false, children, style, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    const filterId = React.useId();
 
     return (
       <Comp
@@ -55,26 +54,10 @@ export const LiquidButton = React.forwardRef<HTMLButtonElement, LiquidButtonProp
         style={{
           backgroundImage:
             "linear-gradient(135deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.10) 100%)",
-          filter: `url(#${filterId})`,
           ...style,
         }}
         {...props}
       >
-        {/* Goo filter scoped to this button only */}
-        <svg aria-hidden width="0" height="0" className="absolute" style={{ pointerEvents: "none" }}>
-          <defs>
-            <filter id={filterId}>
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" result="blur" />
-              <feColorMatrix
-                in="blur"
-                mode="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10"
-                result="goo"
-              />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-            </filter>
-          </defs>
-        </svg>
 
         {/* Top sheen */}
         <span
