@@ -225,27 +225,33 @@
 }
 
 .premium-icon {
-  width: 40px;
+  width: 52px;
   height: 40px;
   flex-shrink: 0;
+  filter: drop-shadow(0 4px 18px rgba(108, 71, 255, 0.22));
+  transition: filter 0.4s ease;
+}
+
+.premium-logo:hover .premium-icon {
+  filter: drop-shadow(0 6px 22px rgba(0, 198, 255, 0.35));
 }
 
 .premium-icon svg {
   width: 100%;
   height: 100%;
   display: block;
+  overflow: visible;
 }
 
-/* Ring rotation */
+/* Concentric ring rotation around the hub */
 .ring {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: ring-slow 12s linear infinite;
+  transform-origin: 48px 48px;
+  animation: ring-slow 14s linear infinite;
   will-change: transform;
 }
 
 .premium-logo:hover .ring {
-  animation: ring-fast 2s linear infinite;
+  animation: ring-fast 2.4s linear infinite;
 }
 
 @keyframes ring-slow {
@@ -256,6 +262,40 @@
 @keyframes ring-fast {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* Node twinkle — sequential pulses across the lattice */
+.node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodePulse 3.6s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+.node-1 { animation-delay: 0s;    }
+.node-2 { animation-delay: 0.25s; }
+.node-3 { animation-delay: 0.50s; }
+.node-4 { animation-delay: 0.75s; }
+.node-5 { animation-delay: 1.0s;  }
+.node-6 { animation-delay: 1.25s; }
+.node-7 { animation-delay: 1.5s;  }
+.node-8 { animation-delay: 1.75s; }
+.node-9 { animation-delay: 2.0s;  }
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.18); }
+}
+
+.node-hub {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hubPulse 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(108, 71, 255, 0.55));
+}
+
+@keyframes hubPulse {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 5px rgba(108, 71, 255, 0.45)); }
+  50%      { transform: scale(1.12); filter: drop-shadow(0 0 12px rgba(0, 198, 255, 0.7)); }
 }
 
 .premium-text {
@@ -273,11 +313,18 @@
 }
 
 .brand-ai {
-  background: linear-gradient(90deg, #FF8C00, #FF3A6E, #6366F1);
+  background: linear-gradient(90deg, #00E5B0 0%, #00C6FF 45%, #6C47FF 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+  animation: brandAiShimmer 6s linear infinite;
+}
+
+@keyframes brandAiShimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
 .brand-tag {
@@ -289,7 +336,7 @@
 }
 
 @media (max-width: 639px) {
-  .premium-icon { width: 34px; height: 34px; }
+  .premium-icon { width: 44px; height: 34px; }
   .brand-name   { font-size: 15px; }
   .brand-tag    { display: none; }
 }
@@ -387,11 +434,18 @@
 }
 
 .brand-ai {
-  background: linear-gradient(90deg, #FF8C00, #FF3A6E, #6366F1);
+  background: linear-gradient(90deg, #00E5B0 0%, #00C6FF 45%, #6C47FF 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+  animation: brandAiShimmer 6s linear infinite;
+}
+
+@keyframes brandAiShimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
 .brand-tag {
@@ -403,17 +457,20 @@
 }
 
 @media (max-width: 639px) {
-  .premium-icon { width: 34px; height: 34px; }
+  .premium-icon { width: 44px; height: 34px; }
   .brand-name   { font-size: 15px; }
   .brand-tag    { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .ring,
+  .node,
+  .node-hub,
   [data-hero-anim],
   .animate-gradient,
   .glow-pulse,
-  .animate-border-beam {
+  .animate-border-beam,
+  .brand-ai {
     animation: none !important;
   }
 }
