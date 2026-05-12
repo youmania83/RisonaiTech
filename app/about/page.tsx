@@ -92,7 +92,7 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-brand-border bg-[#f7f9fc] py-14">
+      <section className="border-y border-brand-border py-14" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="flex flex-wrap justify-center gap-x-20 gap-y-8">
             {stats.map((s) => (
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder bio — E-E-A-T section */}
-      <section className="bg-white py-24" id="founder">
+      <section className="py-24" id="founder" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-4xl">
             <Reveal>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-5">
+                  <div className="rounded-xl border border-brand-border p-5" style={{ background: "rgba(255,255,255,0.04)" }}>
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-gray mb-3">
                       Verified profiles
                     </p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
                       </a>
                     ))}
                   </div>
-                  <div className="rounded-xl border border-brand-border bg-[#f7f9fc] p-5">
+                  <div className="rounded-xl border border-brand-border p-5" style={{ background: "rgba(255,255,255,0.04)" }}>
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-gray mb-3">
                       Known for
                     </p>
@@ -218,7 +218,7 @@ export default function AboutPage() {
       </section>
 
       {/* Built by us — live products (receipts) */}
-      <section className="bg-[#f7f9fc] py-24" id="products">
+      <section className="py-24" id="products" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <Reveal>
             <div className="mb-12 text-center">
@@ -298,7 +298,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="bg-white py-24">
+      <section className="py-24" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -328,7 +328,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-[#f7f9fc] py-24">
+      <section className="py-24" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <Reveal>
             <div className="mb-14 text-center">
