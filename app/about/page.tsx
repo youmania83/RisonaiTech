@@ -23,14 +23,14 @@ const founderSchema = {
   },
   url: `${BASE_URL}/about`,
   description:
-    "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. With 15+ years in automotive sales (Land Rover, AMP Motors, Panipat), he transitioned to building AI-powered software products for Indian businesses. He brings an operator's lens — not just an engineer's — to every automation project.",
+    "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. A self-taught programmer who transitioned from business operations to building AI-powered software products for Indian businesses. He brings an operator's lens — not just an engineer's — to every automation project.",
   knowsAbout: [
     "AI automation",
     "WhatsApp Business API",
     "SaaS development",
     "Web development",
     "Indian SMB market",
-    "Automotive industry",
+    "Self-taught programmer",
     "Healthcare technology",
     "CRM systems",
     "LangChain",
@@ -43,7 +43,7 @@ const founderSchema = {
   ],
   alumniOf: {
     "@type": "Organization",
-    name: "AMP Motors — Land Rover dealership, Panipat",
+    name: "Self-taught — programming, AI/ML, and product engineering",
   },
   foundedOrganizations: [
     { "@type": "Organization", name: "RisonAI Tech", url: BASE_URL },
@@ -52,9 +52,9 @@ const founderSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "About Yogesh Wadhwa & RisonAI Tech — 40+ Products Shipped in India",
+  title: "About Yogesh Wadhwa & RisonAI Tech — Self-Taught Programmer, 40+ Products Shipped",
   description:
-    "Yogesh Kumar Wadhwa founded RisonAI Tech after 15+ years in automotive sales. He built DocBooking (live clinic SaaS), Chazo Tea brand, and 40+ AI automation products. 100% client retention.",
+    "Yogesh Kumar Wadhwa is a self-taught programmer who founded RisonAI Tech. He built DocBooking (live clinic SaaS), Chazo Tea brand, and 40+ AI automation products. 100% client retention.",
   keywords: [
     "about RisonAI Tech",
     "Yogesh Kumar Wadhwa founder",
@@ -71,14 +71,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Yogesh Wadhwa & RisonAI Tech | 40+ Products Shipped",
     description:
-      "Operator-turned-engineer. 15+ years in automotive sales, then built DocBooking and 40+ AI automation products for Indian businesses. 100% client retention.",
+      "Self-taught programmer and founder. Built DocBooking and 40+ AI automation products for Indian businesses. 100% client retention.",
     url: `${BASE_URL}/about`,
     images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Yogesh Wadhwa & RisonAI Tech | 40+ Products Shipped",
-    description: "Operator-led AI agency. 15+ yrs automotive, then built DocBooking + 40 AI products for Indian businesses.",
+    description: "Self-taught programmer & founder. Built DocBooking + 40 AI products for Indian businesses. 100% client retention.",
     images: [`${BASE_URL}/og-image.png`],
   },
 };
@@ -152,12 +152,11 @@ export default function AboutPage() {
               <div className="mt-8 grid gap-8 lg:grid-cols-[2fr_1fr]">
                 <div className="space-y-5 text-lg leading-relaxed text-brand-gray">
                   <p>
-                    Before writing a single line of AI code, Yogesh spent 15+ years running
-                    high-pressure automotive sales operations — most recently at{" "}
-                    <strong className="text-brand-dark">AMP Motors (Land Rover), Panipat</strong>.
-                    That experience — managing lead funnels, customer journeys, and sales ops at
-                    scale — is what separates how RisonAI Tech builds automation from every other
-                    agency. We&apos;ve lived the problems we automate.
+                    Yogesh is a self-taught programmer who transitioned from business operations
+                    to building AI-powered software products for Indian businesses. That operator
+                    background — understanding lead funnels, customer journeys, and business ops
+                    from the inside — is what separates how RisonAI Tech builds automation from
+                    every other agency. We&apos;ve lived the problems we automate.
                   </p>
                   <p>
                     In 2023, he founded RisonAI Tech and immediately put the work into production:
@@ -198,11 +197,11 @@ export default function AboutPage() {
                       Known for
                     </p>
                     {[
+                      "Self-taught programmer",
                       "AI automation for Indian SMBs",
                       "WhatsApp Business API",
                       "DocBooking — clinic SaaS",
                       "Fixed-price delivery",
-                      "Operator-led engineering",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2 py-1.5 text-sm text-brand-gray border-b border-brand-border last:border-0">
                         <CheckCircle2 size={12} className="text-[#635BFF] flex-shrink-0" />

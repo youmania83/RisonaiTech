@@ -343,12 +343,12 @@ const founderSchema = {
     "SaaS development",
     "Web development",
     "Indian SMB market",
-    "Automotive sales",
+    "Self-taught programmer",
     "Healthcare technology",
     "CRM systems",
   ],
   description:
-    "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. With 15+ years in automotive sales (Land Rover, AMP Motors) and hands-on experience running real businesses, he brings an operator's lens to every AI automation project.",
+    "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. A self-taught programmer who built AI-powered software products for Indian businesses, bringing an operator's lens to every automation project.",
   sameAs: [
     "https://www.linkedin.com/in/yogesh-wadhwa",
     "https://github.com/youmania83",

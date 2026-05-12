@@ -15,7 +15,7 @@
 ## Founder
 - Name: Yogesh Kumar Wadhwa
 - Title: Founder & CEO, RisonAI Tech
-- Background: 15+ years in automotive sales (Land Rover, AMP Motors, Panipat); founded DocBooking.in (live, paying customers); founded Chazo Tea brand (chazotea.com)
+- Background: Self-taught programmer; founded DocBooking.in (live, paying customers); founded Chazo Tea brand (chazotea.com)
 - Expertise: AI automation, WhatsApp Business API, SaaS development, Indian SMB market, healthcare technology
 - LinkedIn: https://www.linkedin.com/in/yogesh-wadhwa
 - Profile: https://risonaitech.com/about
