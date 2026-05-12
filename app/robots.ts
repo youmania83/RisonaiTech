@@ -6,14 +6,23 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        // Default: allow all search engines and AI crawlers
+        // Default: allow all search engines
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/_next/",
-        ],
+        disallow: ["/api/", "/_next/"],
       },
+      // Explicitly allow every major AI crawler
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "Googlebot", allow: "/" },
+      { userAgent: "bingbot", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "YouBot", allow: "/" },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
     host: BASE_URL,

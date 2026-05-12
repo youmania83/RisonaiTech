@@ -42,7 +42,15 @@ export const metadata: Metadata = {
     "web app development Delhi NCR",
     "RisonAI Tech",
     "product engineering India",
+    "AI agency India",
+    "small business AI tools",
+    "Android app development India",
+    "WhatsApp automation India",
+    "AI automation for Indian SMBs",
   ],
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: `${BASE_URL}/about` }],
+  creator: "RisonAI Tech",
+  publisher: "RisonAI Tech",
   openGraph: {
     title: "RisonAI Tech | AI Automation & SaaS Development Company in India",
     description:
@@ -70,6 +78,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      "en-IN": BASE_URL,
+      "en": BASE_URL,
+    },
   },
   icons: {
     icon: [
@@ -317,6 +329,33 @@ const reviewsSchema = {
   ],
 };
 
+const founderSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${BASE_URL}/#founder`,
+  name: "Yogesh Kumar Wadhwa",
+  jobTitle: "Founder & CEO",
+  worksFor: { "@id": `${BASE_URL}/#organization` },
+  url: `${BASE_URL}/about`,
+  knowsAbout: [
+    "AI automation",
+    "WhatsApp Business API",
+    "SaaS development",
+    "Web development",
+    "Indian SMB market",
+    "Automotive sales",
+    "Healthcare technology",
+    "CRM systems",
+  ],
+  description:
+    "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. With 15+ years in automotive sales (Land Rover, AMP Motors) and hands-on experience running real businesses, he brings an operator's lens to every AI automation project.",
+  sameAs: [
+    "https://www.linkedin.com/in/yogesh-wadhwa",
+    "https://github.com/youmania83",
+    "https://twitter.com/risonaitech",
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -385,6 +424,38 @@ const faqSchema = {
         text: "Yes. We work with early-stage and growth-stage startups as a technical product partner. Our MVP packages start at ₹1,20,000 and we've shipped 40+ products with 100% client retention.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What is the best AI automation agency for an Indian small business with a budget under ₹1 lakh?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RisonAI Tech specialises in AI automation for Indian SMBs with India-first pricing. Single AI workflows start at ₹30,000, WhatsApp automation at ₹25,000, and AI chatbots from ₹20,000. All projects are fixed-price with full code ownership — no lock-in.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I automate WhatsApp for my Indian business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RisonAI Tech builds WhatsApp automation using the official WhatsApp Business API. The process covers DLT registration, message template approval, flow design, CRM integration, and agent handoff. Projects start at ₹25,000 and go live in 2–6 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who built DocBooking.in?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DocBooking.in is an AI-powered doctor appointment and clinic management SaaS built by RisonAI Tech, founded by Yogesh Kumar Wadhwa in Panipat, Haryana. The platform handles patient intake, WhatsApp reminders, AI symptom triage, and clinic analytics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What AI tools does RisonAI Tech use to build automations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RisonAI Tech uses OpenAI GPT-4/GPT-5, Anthropic Claude, Google Gemini, LangChain, LlamaIndex, n8n, Make.com, and pgvector/Pinecone for RAG pipelines. We choose the right tool for each client's stack — no single-vendor lock-in.",
+      },
+    },
   ],
 };
 
@@ -396,6 +467,8 @@ export default function RootLayout({
   return (
     <html className={`${display.variable} ${sans.variable}`} lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -405,6 +478,7 @@ export default function RootLayout({
                 websiteSchema,
                 organizationSchema,
                 localBusinessSchema,
+                founderSchema,
                 reviewsSchema,
                 ...servicesSchema["@graph"],
                 faqSchema,

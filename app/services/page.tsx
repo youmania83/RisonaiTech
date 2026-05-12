@@ -8,9 +8,9 @@ import ServiceIcon from "@/components/ServiceIcon";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI & Software Development Services — AI Automation, SaaS, CRM, Chatbots",
+  title: "6 AI & Software Services for Indian Businesses — Automation, SaaS, CRM, Chatbots",
   description:
-    "RisonAI Tech offers AI automation, agentic AI, SaaS development, CRM solutions, AI chatbots, RPA, and WhatsApp automation for Indian businesses. Fixed-price projects, full code ownership.",
+    "RisonAI Tech offers 6 core services for Indian businesses: AI automation, agentic AI, SaaS development, CRM solutions, AI chatbots, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
   keywords: [
     "AI automation services India",
     "SaaS development services India",
@@ -22,11 +22,19 @@ export const metadata: Metadata = {
     "RPA services India",
   ],
   alternates: { canonical: "/services" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
     title: "Services | RisonAI Tech — AI Automation, SaaS & CRM Development",
     description:
       "AI automation, SaaS platforms, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
     url: "https://risonaitech.com/services",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "6 AI & Software Services | RisonAI Tech India",
+    description: "AI automation, SaaS, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 

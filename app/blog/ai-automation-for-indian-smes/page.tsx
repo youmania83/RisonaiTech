@@ -4,23 +4,34 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation for Indian SMEs: What Actually Works in 2025 | RisonAI Tech",
+  title: "AI Automation for Indian SMEs: What Actually Works in 2026 | RisonAI Tech",
   description:
     "Most AI automation projects fail because businesses automate the wrong things first. The prioritisation framework we use with 40+ Indian clients to get measurable ROI in under 90 days.",
   keywords: [
     "AI automation for small business India",
     "AI workflow automation SME India",
-    "business process automation India 2025",
+    "business process automation India 2026",
     "AI ROI India",
     "AI automation company India",
     "automation for Indian business",
+    "cheapest AI automation India",
+    "AI automation under 1 lakh India",
   ],
   alternates: { canonical: "/blog/ai-automation-for-indian-smes" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Automation for Indian SMEs: What Actually Works in 2025",
+    title: "AI Automation for Indian SMEs: What Actually Works in 2026",
     description:
       "The prioritisation framework 40+ Indian businesses use to pick the right automation workflows and see ROI in under 90 days.",
     url: "https://risonaitech.com/blog/ai-automation-for-indian-smes",
+    type: "article",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation for Indian SMEs: What Actually Works in 2026",
+    description: "The framework 40+ Indian businesses use to pick automation workflows and see ROI in under 90 days.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 
@@ -50,12 +61,12 @@ const jsonLd = graph(
     { name: "AI Automation for Indian SMEs", url: "/blog/ai-automation-for-indian-smes" },
   ]),
   articleSchema({
-    title: "AI Automation for Indian SMEs: What Actually Works in 2025",
+    title: "AI Automation for Indian SMEs: What Actually Works in 2026",
     description:
       "Most AI automation projects fail because businesses automate the wrong things first. Here's the prioritisation framework we use with 40+ Indian clients to get measurable ROI in under 90 days.",
     url: "/blog/ai-automation-for-indian-smes",
     datePublished: "2025-04-20",
-    dateModified: "2025-05-10",
+    dateModified: "2026-05-12",
     wordCount: 1200,
   }),
   faqSchemaFromPairs(faqItems)
@@ -93,7 +104,7 @@ export default function AiAutomationSMEPost() {
               </span>
             </div>
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-tight">
-              AI Automation for Indian SMEs: What Actually Works in 2025
+              AI Automation for Indian SMEs: What Actually Works in 2026
             </h1>
             <p className="mt-5 text-xl text-white/60 leading-relaxed">
               Most AI automation projects fail because businesses automate the wrong things first.
@@ -101,9 +112,9 @@ export default function AiAutomationSMEPost() {
               right workflows and get measurable ROI in under 90 days.
             </p>
             <div className="mt-6 flex items-center gap-4 text-sm text-white/40">
-              <span>By RisonAI Tech</span>
+              <span>By Yogesh Kumar Wadhwa, RisonAI Tech</span>
               <span>·</span>
-              <time dateTime="2025-04-20">20 April 2025</time>
+              <time dateTime="2026-05-12">12 May 2026</time>
               <span>·</span>
               <span>8 min read</span>
             </div>
@@ -120,6 +131,18 @@ export default function AiAutomationSMEPost() {
       >
         <div className="container-site">
           <div className="mx-auto max-w-3xl prose prose-invert prose-lg">
+
+            {/* TL;DR — answer-first block for AI crawlers */}
+            <div className="not-prose rounded-xl border border-indigo-500/20 bg-indigo-500/5 px-6 py-5 mb-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">TL;DR — Direct Answer</p>
+              <p className="text-white/80 text-base leading-relaxed">
+                The most effective AI automation for Indian SMEs in 2026 is WhatsApp lead
+                qualification — a workflow that costs ₹30,000–₹50,000, goes live in 2–3 weeks,
+                and consistently replaces 3–5 lakh per year in manual follow-up labour.
+                Automate high-volume, repetitive tasks first. Build in human review checkpoints.
+                Measure ROI in the first 30 days.
+              </p>
+            </div>
 
             <div className="card-base p-6 mb-10 not-prose">
               <p className="text-sm font-semibold text-[#a78bfa] mb-2">Key takeaways</p>
@@ -319,6 +342,48 @@ export default function AiAutomationSMEPost() {
           </div>
         </div>
       </article>
+
+      {/* Topic cluster: next step CTA + related content */}
+      <section className="py-14" style={{ backgroundColor: "#090C18" }}>
+        <div className="container-site">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/40">
+            Next steps
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                href: "/services/ai-automation",
+                tag: "Service",
+                title: "AI Automation Services",
+                desc: "Get a fixed-price quote for your automation workflow. WhatsApp, CRM sync, agentic AI.",
+              },
+              {
+                href: "/services/whatsapp-automation",
+                tag: "Service",
+                title: "WhatsApp Automation",
+                desc: "The highest-ROI entry point for Indian SMEs. Lead capture + follow-ups from \u20b925,000.",
+              },
+              {
+                href: "/blog/whatsapp-chatbot-for-business-india",
+                tag: "Guide",
+                title: "WhatsApp Chatbot Costs in India",
+                desc: "Full cost breakdown and vendor comparison for WhatsApp chatbots in 2026.",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block rounded-xl p-5 transition-colors"
+                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
+              >
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">{item.tag}</span>
+                <p className="mt-1 font-display text-base font-bold text-white">{item.title}</p>
+                <p className="mt-2 text-sm text-white/50">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Back to blog */}
       <section className="py-10" style={{ backgroundColor: "#05070F" }}>

@@ -130,9 +130,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
-          Build Systems. <br />
+          The AI automation agency{" "}<br />
           <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
-            Automate Growth.
+            built for Indian businesses.
           </span>
         </motion.h1>
 
@@ -142,9 +142,9 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
         >
-          We design AI-powered websites and automation systems that generate
-          leads, respond instantly, and scale your business without manual
-          effort.
+          WhatsApp bots, custom web apps, SaaS platforms, and AI workflows —
+          fixed-price, full code ownership, delivered in weeks. Starting ₹20,000.
+          Built by operators who run real businesses.
         </motion.p>
 
         <motion.div

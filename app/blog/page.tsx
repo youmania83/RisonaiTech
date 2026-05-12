@@ -4,9 +4,9 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Blog — AI Automation, SaaS & Product Engineering Insights | RisonAI Tech",
+  title: "AI Automation Blog India — Costs, Guides & Comparisons for 2026 | RisonAI Tech",
   description:
-    "Practical guides on AI automation, SaaS development, chatbot deployment, and CRM integration for Indian businesses. Written by the RisonAI Tech product team.",
+    "Practical 2026 guides: How much does WhatsApp chatbot cost in India? SaaS development cost for Indian startups? AI automation ROI for SMEs? Written by operators who built it.",
   keywords: [
     "AI automation blog India",
     "SaaS development guide India",
@@ -17,11 +17,19 @@ export const metadata: Metadata = {
     "RisonAI Tech blog",
   ],
   alternates: { canonical: "/blog" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
     title: "Blog — AI Automation & SaaS Insights | RisonAI Tech",
     description:
       "Practical guides on AI automation, SaaS development, and chatbot deployment for Indian businesses.",
     url: "https://risonaitech.com/blog",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation & SaaS Blog | RisonAI Tech",
+    description: "Practical guides on AI automation, WhatsApp chatbots, SaaS dev costs, and CRM integration for Indian businesses.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 

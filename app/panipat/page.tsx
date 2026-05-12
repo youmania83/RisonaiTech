@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     description:
       "Practical AI adoption for Panipat SMEs, service businesses, and traditional operators digitizing workflows. Headquartered in Panipat, serving Haryana and Delhi NCR.",
     url: "https://risonaitech.com/panipat",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation in Panipat | RisonAI Tech HQ",
+    description: "Practical AI for Panipat SMEs. WhatsApp automation, CRM, SaaS. Headquartered in Panipat. Starting ₹30,000.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 

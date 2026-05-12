@@ -87,19 +87,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/blog/ai-automation-for-indian-smes`,
-      lastModified: new Date("2025-05-10"),
+      lastModified: new Date("2026-05-12"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/blog/whatsapp-chatbot-for-business-india`,
-      lastModified: new Date("2025-05-10"),
+      lastModified: new Date("2026-05-12"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/blog/saas-development-cost-india`,
-      lastModified: new Date("2025-05-10"),
+      lastModified: new Date("2026-05-12"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -128,6 +128,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/locations/delhi`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/locations/gurgaon`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    // ── Legal ─────────────────────────────────────────────────────
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }

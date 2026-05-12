@@ -37,7 +37,15 @@ export const metadata: Metadata = {
     description:
       "Production-ready multi-tenant SaaS — billing-integrated, AI-powered, fully owned by you. From MVP in 6–10 weeks to enterprise platforms in 16–24 weeks.",
     url: "https://risonaitech.com/services/saas-development",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "SaaS Development Company India | RisonAI Tech",
+    description: "Multi-tenant SaaS MVP to enterprise. Fixed price, full code ownership. From ₹1,20,000.",
+    images: ["https://risonaitech.com/og-image.png"],
+  },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };
 
 const deliverables = [
@@ -659,6 +667,47 @@ export default function SaasDevelopmentPage() {
             <Link className="btn-outline" href="/products">
               See Our Work
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Topic cluster: related guides */}
+      <section className="bg-[#f7f9fc] py-16">
+        <div className="container-site">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-brand-gray">
+            Related guides
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              {
+                href: "/blog/saas-development-cost-india",
+                tag: "Guide",
+                title: "SaaS Development Cost in India (2026)",
+                desc: "Full pricing breakdown: MVP ₹1,20,000–₹2,50,000 · Growth-stage ₹3,00,000–₹8,00,000. Timelines and vendor comparison.",
+              },
+              {
+                href: "/services/ai-automation",
+                tag: "Service",
+                title: "AI Automation",
+                desc: "Add LLM agents and automation workflows to your SaaS — intake bots, reporting agents, CRM sync.",
+              },
+              {
+                href: "/services/crm-development",
+                tag: "Service",
+                title: "CRM Development",
+                desc: "Custom CRM built into your SaaS or standalone. Pipeline management, lead scoring, multi-channel sync.",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="card-base block p-6 transition-shadow hover:shadow-md"
+              >
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#635BFF]">{item.tag}</span>
+                <p className="mt-1 font-display text-base font-bold text-brand-dark">{item.title}</p>
+                <p className="mt-2 text-sm text-brand-gray">{item.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

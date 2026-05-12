@@ -36,7 +36,15 @@ export const metadata: Metadata = {
     description:
       "Automate lead capture, customer support, and follow-ups on WhatsApp with CRM-integrated workflows on the official Business API.",
     url: "https://risonaitech.com/services/whatsapp-automation",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "WhatsApp Automation India | RisonAI Tech",
+    description: "Official WhatsApp Business API automation: lead capture, CRM sync, and 24/7 support bots. From ₹25,000.",
+    images: ["https://risonaitech.com/og-image.png"],
+  },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };
 
 const deliverables = [
@@ -423,6 +431,47 @@ export default function WhatsAppAutomationPage() {
             <Link className="btn-outline text-sm" href="/contact">
               Book WhatsApp Audit
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Topic cluster: related guides */}
+      <section className="bg-[#f7f9fc] py-16">
+        <div className="container-site">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-brand-gray">
+            Related guides
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              {
+                href: "/blog/whatsapp-chatbot-for-business-india",
+                tag: "Guide",
+                title: "WhatsApp Chatbot Cost in India (2026)",
+                desc: "Full cost breakdown: \u20b920,000 FAQ bot to \u20b93,50,000 AI-integrated chatbot. Timelines included.",
+              },
+              {
+                href: "/services/chatbot-development",
+                tag: "Service",
+                title: "AI Chatbot Development",
+                desc: "RAG bots trained on your data. Context-aware WhatsApp + website chatbots from \u20b920,000.",
+              },
+              {
+                href: "/services/ai-automation",
+                tag: "Service",
+                title: "AI Automation",
+                desc: "End-to-end LLM agent workflows — beyond WhatsApp. Intake, CRM sync, reporting, agentic tasks.",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="card-base block p-6 transition-shadow hover:shadow-md"
+              >
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#635BFF]">{item.tag}</span>
+                <p className="mt-1 font-display text-base font-bold text-brand-dark">{item.title}</p>
+                <p className="mt-2 text-sm text-brand-gray">{item.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

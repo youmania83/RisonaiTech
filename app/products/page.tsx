@@ -17,11 +17,19 @@ export const metadata: Metadata = {
     "in-house products RisonAI Tech",
   ],
   alternates: { canonical: "/products" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
     title: "Products | RisonAI Tech — DocBooking & Expreality",
     description:
       "In-house products we designed, engineered, and launched — demonstrating what we build for clients.",
     url: "https://risonaitech.com/products",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | RisonAI Tech — DocBooking & Expreality",
+    description: "DocBooking (AI clinic SaaS) + Expreality (property intelligence). Built in-house, shipped to production.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 

@@ -4,24 +4,35 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide | RisonAI Tech",
+  title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide | RisonAI Tech",
   description:
-    "How to build a WhatsApp chatbot for your Indian business in 2025 — lead qualification, appointment booking, customer support, and 24/7 response. Costs, timelines, and real examples.",
+    "How to build a WhatsApp chatbot for your Indian business in 2026 — lead qualification, appointment booking, customer support, and 24/7 response. Costs, timelines, and real examples.",
   keywords: [
     "WhatsApp chatbot for business India",
     "WhatsApp Business API India",
-    "WhatsApp automation India 2025",
+    "WhatsApp automation India 2026",
     "AI WhatsApp bot India",
     "WhatsApp lead generation India",
     "WhatsApp customer support bot",
     "WhatsApp chatbot development India",
+    "how to automate WhatsApp India",
+    "cheapest WhatsApp chatbot India",
   ],
   alternates: { canonical: "/blog/whatsapp-chatbot-for-business-india" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide",
+    title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide",
     description:
       "How to build a WhatsApp chatbot that qualifies leads, books appointments, and handles FAQs 24/7. Costs, timelines, and real examples from Indian businesses.",
     url: "https://risonaitech.com/blog/whatsapp-chatbot-for-business-india",
+    type: "article",
+    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide",
+    description: "Build a WhatsApp chatbot that handles leads, appointments, and FAQs 24/7. Costs ₹20k–₹3.5L.",
+    images: ["https://risonaitech.com/og-image.png"],
   },
 };
 
@@ -51,12 +62,12 @@ const jsonLd = graph(
     { name: "WhatsApp Chatbot for Business India", url: "/blog/whatsapp-chatbot-for-business-india" },
   ]),
   articleSchema({
-    title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide",
+    title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide",
     description:
       "How to build a WhatsApp chatbot that qualifies leads, books appointments, and handles FAQs 24/7 for Indian businesses.",
     url: "/blog/whatsapp-chatbot-for-business-india",
     datePublished: "2025-05-05",
-    dateModified: "2025-05-10",
+    dateModified: "2026-05-12",
     wordCount: 1100,
   }),
   faqSchemaFromPairs(faqItems)
@@ -94,7 +105,7 @@ export default function WhatsappChatbotPost() {
               </span>
             </div>
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-tight">
-              WhatsApp Chatbot for Business in India: The Complete 2025 Guide
+              WhatsApp Chatbot for Business in India: The Complete 2026 Guide
             </h1>
             <p className="mt-5 text-xl text-white/60 leading-relaxed">
               India has 535 million WhatsApp users. Yet most businesses still respond to leads
@@ -102,9 +113,9 @@ export default function WhatsappChatbotPost() {
               that qualifies leads, books appointments, and handles FAQs 24/7.
             </p>
             <div className="mt-6 flex items-center gap-4 text-sm text-white/40">
-              <span>By RisonAI Tech</span>
+              <span>By Yogesh Kumar Wadhwa, RisonAI Tech</span>
               <span>·</span>
-              <time dateTime="2025-05-05">5 May 2025</time>
+              <time dateTime="2026-05-12">12 May 2026</time>
               <span>·</span>
               <span>10 min read</span>
             </div>
@@ -116,6 +127,18 @@ export default function WhatsappChatbotPost() {
       <article className="py-16" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
+
+            {/* TL;DR — answer-first block for AI crawlers */}
+            <div className="rounded-xl border border-indigo-500/20 bg-indigo-500/5 px-6 py-5 mb-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">TL;DR — Direct Answer</p>
+              <p className="text-white/80 text-base leading-relaxed">
+                A WhatsApp chatbot for an Indian business costs ₹20,000–₹3,50,000 depending on
+                complexity. A basic FAQ bot costs ₹20,000–₹50,000 and goes live in 2–3 weeks.
+                An AI-powered lead qualification bot with CRM integration costs ₹50,000–₹1,20,000.
+                You need the WhatsApp Business API (not the free app) — RisonAI Tech handles the
+                setup end-to-end.
+              </p>
+            </div>
 
             <div className="card-base p-6 mb-10">
               <p className="text-sm font-semibold text-[#a78bfa] mb-2">Key takeaways</p>
@@ -319,6 +342,48 @@ export default function WhatsappChatbotPost() {
           </div>
         </div>
       </article>
+
+      {/* Topic cluster: next step CTA + related content */}
+      <section className="py-14" style={{ backgroundColor: "#090C18" }}>
+        <div className="container-site">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/40">
+            Next steps
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                href: "/services/whatsapp-automation",
+                tag: "Service",
+                title: "WhatsApp Automation",
+                desc: "Get a fixed-price quote for your WhatsApp bot. CRM sync, lead capture, support bots. From \u20b925,000.",
+              },
+              {
+                href: "/services/chatbot-development",
+                tag: "Service",
+                title: "AI Chatbot Development",
+                desc: "RAG chatbots trained on your docs. Website + WhatsApp. From \u20b920,000.",
+              },
+              {
+                href: "/blog/ai-automation-for-indian-smes",
+                tag: "Guide",
+                title: "AI Automation for Indian SMEs",
+                desc: "Beyond WhatsApp: full AI automation roadmap for Indian businesses in 2026.",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block rounded-xl p-5 transition-colors"
+                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
+              >
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">{item.tag}</span>
+                <p className="mt-1 font-display text-base font-bold text-white">{item.title}</p>
+                <p className="mt-2 text-sm text-white/50">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-10" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
