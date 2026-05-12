@@ -272,6 +272,51 @@ const servicesSchema = {
   ],
 };
 
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "40",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Raghav Mehta" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "Patient booking system delivered in 8 weeks",
+      reviewBody:
+        "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
+      datePublished: "2024-11-01",
+      itemReviewed: { "@id": `${BASE_URL}/#business` },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Priya Sharma" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "WhatsApp CRM doubled our conversion rate",
+      reviewBody:
+        "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
+      datePublished: "2025-01-15",
+      itemReviewed: { "@id": `${BASE_URL}/#business` },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Arjun Kapoor" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "SaaS MVP in 10 weeks, full code ownership",
+      reviewBody:
+        "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
+      datePublished: "2025-03-20",
+      itemReviewed: { "@id": `${BASE_URL}/#business` },
+    },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -360,6 +405,7 @@ export default function RootLayout({
                 websiteSchema,
                 organizationSchema,
                 localBusinessSchema,
+                reviewsSchema,
                 ...servicesSchema["@graph"],
                 faqSchema,
               ],

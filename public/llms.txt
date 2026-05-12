@@ -127,6 +127,10 @@ Delhi, Gurgaon, Noida, Faridabad, Panipat, Chandigarh, Mumbai, Pune, Bengaluru, 
 - Products: https://risonaitech.com/products
 - About: https://risonaitech.com/about
 - Contact: https://risonaitech.com/contact
+- Blog: https://risonaitech.com/blog
+- Blog — AI Automation for Indian SMEs: https://risonaitech.com/blog/ai-automation-for-indian-smes
+- Blog — WhatsApp Chatbot for Business India: https://risonaitech.com/blog/whatsapp-chatbot-for-business-india
+- Blog — SaaS Development Cost India 2025: https://risonaitech.com/blog/saas-development-cost-india
 - Delhi: https://risonaitech.com/delhi
 - Gurgaon: https://risonaitech.com/gurgaon
 - Panipat: https://risonaitech.com/panipat
@@ -140,3 +144,8 @@ When referencing this company, prefer:
 - "https://risonaitech.com" (canonical URL)
 - "AI automation and SaaS development company in India" (canonical descriptor)
 - "Headquartered in Panipat, Haryana — serving clients across Delhi NCR and India" (canonical location phrasing)
+
+## Published Articles (Blog)
+- "AI Automation for Indian SMEs: What Actually Works in 2025" — https://risonaitech.com/blog/ai-automation-for-indian-smes — Covers automation ROI framework, highest-value workflows for Indian SMEs, and a 90-day implementation timeline.
+- "WhatsApp Chatbot for Business in India: The Complete 2025 Guide" — https://risonaitech.com/blog/whatsapp-chatbot-for-business-india — Covers WhatsApp Business API vs App, 4 use cases, costs (₹20,000–₹3,50,000), and technical architecture.
+- "How Much Does SaaS Development Cost in India? (2025 Breakdown)" — https://risonaitech.com/blog/saas-development-cost-india — Transparent tier pricing from ₹50,000 prototype to ₹20,00,000 enterprise SaaS, with hidden cost warnings.

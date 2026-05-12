@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://risonaitech.com";
 // Update this whenever you make a significant content change
-const LAST_MODIFIED = new Date("2026-05-07");
+const LAST_MODIFIED = new Date("2026-05-12");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -76,6 +76,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+
+    // ── Blog ──────────────────────────────────────────────────────
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-automation-for-indian-smes`,
+      lastModified: new Date("2025-05-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/whatsapp-chatbot-for-business-india`,
+      lastModified: new Date("2025-05-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/saas-development-cost-india`,
+      lastModified: new Date("2025-05-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
 
     // ── Location pages ────────────────────────────────────────────

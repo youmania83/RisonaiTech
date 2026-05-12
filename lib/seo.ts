@@ -155,6 +155,51 @@ export function faqSchemaFromPairs(pairs: { q: string; a: string }[]) {
 }
 
 /**
+ * Build an Article JSON-LD schema for blog posts.
+ */
+export function articleSchema(args: {
+  title: string;
+  description: string;
+  url: string; // relative or absolute
+  datePublished: string; // ISO 8601, e.g. "2025-04-15"
+  dateModified?: string;
+  authorName?: string;
+  imageUrl?: string;
+  wordCount?: number;
+}) {
+  const fullUrl = args.url.startsWith("http") ? args.url : `${BASE_URL}${args.url}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${fullUrl}#article`,
+    headline: args.title,
+    description: args.description,
+    url: fullUrl,
+    datePublished: args.datePublished,
+    dateModified: args.dateModified ?? args.datePublished,
+    author: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: args.authorName ?? "RisonAI Tech",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "RisonAI Tech",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/brand/risonaitech-logo-dark@2x.png`,
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": fullUrl },
+    ...(args.imageUrl ? { image: { "@type": "ImageObject", url: args.imageUrl } } : {}),
+    ...(args.wordCount ? { wordCount: args.wordCount } : {}),
+    inLanguage: "en-IN",
+    isPartOf: { "@id": `${BASE_URL}/#website` },
+  };
+}
+
+/**
  * Wrap multiple JSON-LD nodes in a single @graph object so a page can emit
  * one <script> tag with all of its structured data.
  */
