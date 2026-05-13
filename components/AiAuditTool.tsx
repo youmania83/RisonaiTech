@@ -12,6 +12,7 @@ type AuditFactor = {
 
 type AuditResult = {
   query: string;
+  resolvedUrl?: string | null;
   score: number;
   grade: "A" | "B" | "C" | "D" | "F";
   summary: string;
@@ -23,6 +24,15 @@ type AuditResult = {
     robotsTxt: "good" | "restricted" | "unknown";
     structuredData: "present" | "missing" | "unknown";
     factualDensity: "high" | "medium" | "low";
+  };
+  evidence?: {
+    fetched: boolean;
+    pageBytes: number;
+    hasLlmsTxt: boolean;
+    hasRobotsTxt: boolean;
+    jsonLdCount: number;
+    aiCrawlersAllowed: string[];
+    aiCrawlersBlocked: string[];
   };
   generatedAt: string;
 };
@@ -188,7 +198,36 @@ export default function AiAuditTool({
             <Chip icon={<Bot size={13} />} label={`robots.txt: ${readinessLabel(result.aiCrawlerReadiness.robotsTxt)}`} />
             <Chip icon={<Shield size={13} />} label={`Schema: ${readinessLabel(result.aiCrawlerReadiness.structuredData)}`} />
             <Chip icon={<Globe2 size={13} />} label={`Factual density: ${readinessLabel(result.aiCrawlerReadiness.factualDensity)}`} />
+            {result.evidence?.fetched && (
+              <Chip icon={<CheckCircle2 size={13} />} label="Live evidence used" />
+            )}
           </div>
+
+          {/* Evidence breakdown — only when we actually fetched the site */}
+          {result.evidence?.fetched && (
+            <div
+              className="mt-5 rounded-xl p-4 text-xs text-white/55"
+              style={{
+                background: "rgba(255,255,255,0.025)",
+                border: "1px solid rgba(255,255,255,0.06)",
+              }}
+            >
+              <p className="font-semibold text-white/70">
+                What we observed on {result.resolvedUrl}
+              </p>
+              <ul className="mt-2 grid gap-1 sm:grid-cols-2">
+                <li>• {result.evidence.jsonLdCount} JSON-LD schema block(s)</li>
+                <li>• llms.txt: {result.evidence.hasLlmsTxt ? "present" : "missing"}</li>
+                <li>• robots.txt: {result.evidence.hasRobotsTxt ? "present" : "missing"}</li>
+                <li>• AI crawlers allowed: {result.evidence.aiCrawlersAllowed.length || 0}</li>
+                {result.evidence.aiCrawlersBlocked.length > 0 && (
+                  <li className="sm:col-span-2 text-orange-300/80">
+                    • Blocked AI crawlers: {result.evidence.aiCrawlersBlocked.join(", ")}
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
 
           {/* Factors */}
           {result.factors.length > 0 && (
