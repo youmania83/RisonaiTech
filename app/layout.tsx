@@ -47,6 +47,14 @@ export const metadata: Metadata = {
     "Android app development India",
     "WhatsApp automation India",
     "AI automation for Indian SMBs",
+    "AI search ranking audit",
+    "AI visibility score",
+    "Generative engine optimization India",
+    "GEO audit tool India",
+    "AEO audit India",
+    "ChatGPT SEO checker",
+    "Perplexity ranking checker",
+    "LLM visibility audit",
   ],
   authors: [{ name: "Yogesh Kumar Wadhwa", url: `${BASE_URL}/about` }],
   creator: "RisonAI Tech",
@@ -356,6 +364,36 @@ const founderSchema = {
   ],
 };
 
+const aiAuditToolSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": `${BASE_URL}/tools/ai-search-audit#tool`,
+  name: "AI Search Ranking Audit",
+  alternateName: "RisonAI Visibility Score",
+  url: `${BASE_URL}/tools/ai-search-audit`,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Any (Web)",
+  isAccessibleForFree: true,
+  inLanguage: "en-IN",
+  description:
+    "Free AI search ranking audit by RisonAI Tech. Enter a website URL or business name and instantly see how visible the brand is to ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+  },
+  provider: { "@id": `${BASE_URL}/#organization` },
+  featureList: [
+    "AI visibility score (0–100)",
+    "Letter grade (A–F)",
+    "Per-factor breakdown with weights",
+    "Strengths and gaps detection",
+    "Prioritised optimisation recommendations",
+    "AI crawler readiness check",
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -481,6 +519,7 @@ export default function RootLayout({
                 founderSchema,
                 reviewsSchema,
                 ...servicesSchema["@graph"],
+                aiAuditToolSchema,
                 faqSchema,
               ],
             }),

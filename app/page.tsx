@@ -8,6 +8,7 @@ import Products from "@/components/Products";
 import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
 import LeadMagnet from "@/components/LeadMagnet";
+import HomeAiAuditBanner from "@/components/HomeAiAuditBanner";
 import CTA from "@/components/CTA";
 import LeadershipAuthority from "@/components/LeadershipAuthority";
 import TrustFramework from "@/components/TrustFramework";
@@ -112,6 +113,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <HomeAiAuditBanner />
 
       {/* Service quick-links */}
       <section className="bg-grid py-20 sm:py-24" style={{ backgroundColor: "#090C18" }}>

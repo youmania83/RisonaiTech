@@ -78,6 +78,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
+    // ── Tools ─────────────────────────────────────────────────────
+    {
+      url: `${BASE_URL}/tools/ai-search-audit`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
     // ── Blog ──────────────────────────────────────────────────────
     {
       url: `${BASE_URL}/blog`,

@@ -7,11 +7,14 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 const footerLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
 ];
+// First 5 entries render in the Navigation column; the rest in Legal.
+const FOOTER_NAV_COUNT = 5;
 
 export default function Footer() {
   return (
@@ -69,7 +72,7 @@ export default function Footer() {
               Navigation
             </p>
             <ul className="space-y-3">
-              {footerLinks.slice(0, 4).map((link) => (
+              {footerLinks.slice(0, FOOTER_NAV_COUNT).map((link) => (
                 <li key={link.href}>
                   <Link
                     className="text-sm text-white/45 transition-colors duration-150 hover:text-white/85"
@@ -88,7 +91,7 @@ export default function Footer() {
               Legal
             </p>
             <ul className="space-y-3">
-              {footerLinks.slice(4).map((link) => (
+              {footerLinks.slice(FOOTER_NAV_COUNT).map((link) => (
                 <li key={link.href}>
                   <Link
                     className="text-sm text-white/45 transition-colors duration-150 hover:text-white/85"
