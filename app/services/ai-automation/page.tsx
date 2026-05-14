@@ -284,7 +284,7 @@ export default function AIAutomationPage() {
       />
 
       {/* Hero */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">AI Automation Systems</span>
@@ -314,9 +314,9 @@ export default function AIAutomationPage() {
       </section>
 
       {/* AI summary block — gives LLMs a clean, citable definition */}
-      <section className="bg-[#fafbff] py-10">
+      <section className="bg-brand-light/50 py-10">
         <div className="container-site">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-brand-light/30 p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
               AI summary
             </p>
@@ -335,7 +335,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Problem + Solution narrative */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2 className="font-display text-3xl font-bold text-brand-dark">
@@ -369,7 +369,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* What we build */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             What we build
@@ -390,7 +390,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Common automation use cases
@@ -419,7 +419,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             How we deliver an AI automation project
@@ -443,7 +443,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Industries */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Industries where AI automation pays back fastest
@@ -460,7 +460,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Tech stack */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Tech stack we standardise on
@@ -480,7 +480,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Pricing
@@ -547,14 +547,14 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Comparison vs typical agency */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             How RisonAI Tech compares to a typical Indian dev agency
           </h2>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border bg-white">
+          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border bg-brand-light/30">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#fafbff] text-brand-dark">
+              <thead className="bg-brand-light/50 text-brand-dark">
                 <tr>
                   <th className="px-5 py-3 font-semibold">Dimension</th>
                   <th className="px-5 py-3 font-semibold text-[#635BFF]">RisonAI Tech</th>
@@ -582,7 +582,7 @@ export default function AIAutomationPage() {
       />
 
       {/* FAQ */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Frequently asked questions
@@ -599,7 +599,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Internal Links */}
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-brand-light/50 py-16">
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-brand-dark">
             Related services and locations
@@ -637,7 +637,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site text-center">
           <h2 className="font-display text-4xl font-extrabold text-brand-dark">
             Ready to automate your business?
@@ -659,7 +659,7 @@ export default function AIAutomationPage() {
       </section>
 
       {/* Topic cluster: related guides */}
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-brand-light/50 py-16">
         <div className="container-site">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-brand-gray">
             Related guides
