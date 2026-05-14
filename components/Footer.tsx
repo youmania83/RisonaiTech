@@ -129,7 +129,10 @@ export default function Footer() {
           <p className="text-xs text-white/28">
             © {new Date().getFullYear()} Risonai Tech. All rights reserved.
           </p>
-          <p className="text-xs text-white/28">{siteConfig.domain}</p>
+          <div className="flex flex-col items-start gap-1 sm:items-end">
+            <p className="text-xs text-white/28">GSTIN: 06CDBPS8926D2ZE</p>
+            <p className="text-xs text-white/28">{siteConfig.domain}</p>
+          </div>
         </div>
       </div>
     </footer>

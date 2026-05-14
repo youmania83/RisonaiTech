@@ -63,7 +63,7 @@ export default function ContactPage() {
       <div className="sr-only" aria-hidden="false">
         <address>
           RisonAI Tech — 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India.
-          Phone: +91 83681 37724. Email: hello@risonaitech.com.
+          Phone: +91 83681 37724. Email: hello@risonaitech.com. GSTIN: 06CDBPS8926D2ZE.
         </address>
       </div>
       <ContactForm />
