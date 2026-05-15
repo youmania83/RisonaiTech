@@ -7,7 +7,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<{ id: string; role: 'user' | 'assistant'; content: string }[]>([]);
+  const [messages, setMessages] = useState<{ id: string; role: 'user' | 'assistant'; content: string }[]>([
+    {
+      id: 'init',
+      role: 'assistant',
+      content: 'Hi! I am the RisonAI Tech assistant. How can I help you scale your business today?'
+    }
+  ]);
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -20,10 +26,13 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
+      // Filter out the initial greeting message so the API doesn't fail due to strict role ordering rules
+      const apiMessages = [...messages, userMessage].filter(m => m.id !== 'init');
+
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: [...messages, userMessage] }),
+        body: JSON.stringify({ messages: apiMessages }),
       });
 
       if (!response.body) throw new Error('No body');
@@ -84,19 +93,7 @@ export default function Chatbot() {
 
             {/* Chat Area */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.length === 0 && (
-                <div className="flex h-full flex-col items-center justify-center text-center space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#635BFF]/10">
-                    <MessageCircle size={24} className="text-[#635BFF]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white">How can we help?</h4>
-                    <p className="text-sm text-brand-gray mt-1">
-                      Ask about our AI automation, CRM, or SaaS services.
-                    </p>
-                  </div>
-                </div>
-              )}
+
               {messages.map((m) => (
                 <div
                   key={m.id}
@@ -156,6 +153,11 @@ export default function Chatbot() {
                 >
                   <Send size={14} />
                 </button>
+              </div>
+              <div className="mt-2 text-center">
+                <span className="text-[10px] text-brand-gray/50 font-medium tracking-wide">
+                  Powered by Rison AI Tech
+                </span>
               </div>
             </form>
           </motion.div>
