@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -503,7 +504,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${display.variable} ${sans.variable}`} lang="en">
+    <html className={`${display.variable} ${sans.variable}`} lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -526,10 +527,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Chatbot />
       </body>
     </html>
   );
