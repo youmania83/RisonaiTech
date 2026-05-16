@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | RisonAI Tech",
   },
   description:
-    "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots for startups, healthcare, and real estate firms across India. Based in Delhi NCR.",
+    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency. Serving teams globally from India.",
   keywords: [
     "AI automation company India",
     "SaaS development company Delhi",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RisonAI Tech | AI Automation & SaaS Development Company in India",
     description:
-      "We build AI automation systems, SaaS platforms, CRM solutions, and AI chatbots that generate revenue and automate businesses. Serving Delhi NCR, Gurgaon, and clients across India.",
+      "We build AI automation systems, operational infrastructure, and enterprise SaaS platforms that reduce manual work and scale business efficiency.",
     url: BASE_URL,
     siteName: "RisonAI Tech",
     locale: "en_IN",
@@ -127,7 +127,7 @@ const websiteSchema = {
   name: "RisonAI Tech",
   url: BASE_URL,
   description:
-    "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots for businesses across India.",
+    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -156,7 +156,7 @@ const organizationSchema = {
   },
   image: { "@id": `${BASE_URL}/#logo` },
   description:
-    "RisonAI Tech is a product engineering company specialising in AI automation systems, SaaS development, CRM solutions, AI chatbots, and web application development for businesses across India.",
+    "RisonAI Tech is an AI Automation & AI Systems Infrastructure Company specializing in operational workflows, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
   address: {
@@ -184,7 +184,7 @@ const localBusinessSchema = {
   name: "RisonAI Tech",
   alternateName: "Risonai Tech",
   description:
-    "RisonAI Tech is a product engineering company specialising in AI automation systems, SaaS development, CRM solutions, AI chatbots, and web application development for businesses across India.",
+    "RisonAI Tech is an AI Automation & AI Systems Infrastructure Company specializing in operational workflows, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
   url: "https://risonaitech.com",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
@@ -278,10 +278,10 @@ const servicesSchema = {
     {
       "@type": "Service",
       "@id": "https://risonaitech.com/services/chatbot-development#service",
-      name: "AI Chatbot Development",
+      name: "AI Customer Support Agents",
       serviceType: "AI Chatbot Development",
       description:
-        "Context-aware AI chatbots for websites and WhatsApp — trained on business data for lead qualification, appointment booking, and customer support.",
+        "Context-aware AI chatbots for websites and WhatsApp — trained on business data via RAG for lead qualification and automated customer support triage.",
       provider: { "@id": "https://risonaitech.com/#business" },
       areaServed: "India",
       offers: {
@@ -402,98 +402,82 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What does RisonAI Tech do?",
+      name: "What does RisonAI Tech specialize in?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RisonAI Tech is a product engineering company that builds AI automation systems, SaaS platforms, CRM solutions, AI chatbots, and high-performance websites. We work with startups, SMBs, healthcare providers, and real estate firms across India.",
+        text: "We are an AI Automation & AI Systems Infrastructure Company. We build AI workflows, operational infrastructure, and scalable SaaS platforms that reduce manual work and increase business efficiency.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does AI automation cost in India?",
+      name: "How does AI automation reduce operational costs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RisonAI Tech charges ₹30,000–₹60,000 for a single automation workflow, ₹80,000–₹1,80,000 for a mid-scale automation suite, and ₹2,00,000–₹6,00,000+ for enterprise AI automation systems. Final pricing depends on complexity and scope.",
+        text: "By replacing repetitive manual tasks—like lead qualification, data entry, and customer support triage—with intelligent AI agents and API integrations, saving thousands of manual hours annually.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does it take to build a SaaS product?",
+      name: "How long does it take to deploy an AI system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A basic SaaS MVP typically takes 6–10 weeks. A full multi-tenant SaaS platform with billing, admin dashboards, and AI features takes 12–20 weeks. We deliver working software every 2 weeks.",
+        text: "A targeted AI workflow automation takes 2–4 weeks. Full SaaS platforms or comprehensive CRM automation infrastructure typically take 8–16 weeks. We deliver in iterative 2-week sprints.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you build AI chatbots for WhatsApp?",
+      name: "Are the AI Customer Support Agents trained on our data?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build AI-powered WhatsApp chatbots that handle lead qualification, appointment booking, FAQ answering, and customer support using the WhatsApp Business API and RAG architecture.",
+        text: "Yes. We use Retrieval-Augmented Generation (RAG) architecture to train the AI strictly on your company's knowledge base, ensuring accurate, context-aware responses without hallucination.",
       },
     },
     {
       "@type": "Question",
-      name: "Which cities does RisonAI Tech serve?",
+      name: "Do you build internal operations dashboards?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RisonAI Tech is headquartered in Panipat, Haryana and actively serves clients in Delhi, Gurgaon, Noida, Faridabad, and remote clients across India and internationally.",
+        text: "Absolutely. We engineer custom internal tools and performance dashboards that connect to your AI systems, giving your operations team full visibility and control.",
       },
     },
     {
       "@type": "Question",
-      name: "Can RisonAI Tech build a custom CRM for my business?",
+      name: "Do clients own the AI system infrastructure?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build custom CRM platforms from scratch for healthcare, real estate, and service businesses. We also extend existing CRMs like HubSpot and Zoho with AI layers. Custom CRM projects start at ₹1,00,000.",
+        text: "Yes. We operate on a full-ownership model. At project close, you receive the complete source code, deployment configurations, and system documentation. No vendor lock-in.",
       },
     },
     {
       "@type": "Question",
-      name: "What industries does RisonAI Tech specialise in?",
+      name: "Can RisonAI Tech integrate AI into our existing CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our primary focus is healthcare (we built DocBooking, an AI clinic management SaaS) and real estate (we built Expreality, a property intelligence platform). We also serve startups, D2C brands, and service businesses.",
+        text: "Yes. We build custom API middleware to integrate LLM capabilities directly into existing operational hubs like HubSpot, Zoho, or Salesforce to automate data entry and lead scoring.",
       },
     },
     {
       "@type": "Question",
-      name: "Is RisonAI Tech suitable for early-stage startups?",
+      name: "What is the typical ROI on an AI automation project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We work with early-stage and growth-stage startups as a technical product partner. Our MVP packages start at ₹1,20,000 and we've shipped 40+ products with 100% client retention.",
+        text: "Our clients typically see a 3× increase in operational efficiency, a 60% reduction in customer response times, and significant savings in administrative overhead within the first quarter of deployment.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the best AI automation agency for an Indian small business with a budget under ₹1 lakh?",
+      name: "What is the minimum engagement size?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RisonAI Tech specialises in AI automation for Indian SMBs with India-first pricing. Single AI workflows start at ₹30,000, WhatsApp automation at ₹25,000, and AI chatbots from ₹20,000. All projects are fixed-price with full code ownership — no lock-in.",
+        text: "Our targeted automation projects start at ₹20,000. Comprehensive operational transformation and SaaS engineering projects typically start at ₹1,20,000+.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I automate WhatsApp for my Indian business?",
+      name: "How do we begin the transformation process?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RisonAI Tech builds WhatsApp automation using the official WhatsApp Business API. The process covers DLT registration, message template approval, flow design, CRM integration, and agent handoff. Projects start at ₹25,000 and go live in 2–6 weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who built DocBooking.in?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "DocBooking.in is an AI-powered doctor appointment and clinic management SaaS built by RisonAI Tech, founded by Yogesh Kumar Wadhwa in Panipat, Haryana. The platform handles patient intake, WhatsApp reminders, AI symptom triage, and clinic analytics.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What AI tools does RisonAI Tech use to build automations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "RisonAI Tech uses OpenAI GPT-4/GPT-5, Anthropic Claude, Google Gemini, LangChain, LlamaIndex, n8n, Make.com, and pgvector/Pinecone for RAG pipelines. We choose the right tool for each client's stack — no single-vendor lock-in.",
+        text: "Contact us to schedule an AI Systems Strategy Session. We will audit your current workflows, map out automation opportunities, and deliver a fixed-price architectural proposal within 48 hours.",
       },
     },
   ],

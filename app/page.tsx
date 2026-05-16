@@ -15,97 +15,97 @@ import TrustFramework from "@/components/TrustFramework";
 import VerificationSignals from "@/components/VerificationSignals";
 
 export const metadata: Metadata = {
-  title: "RisonAI Tech | AI Automation & SaaS Development Company India",
+  title: "RisonAI Tech | AI Automation Systems & Enterprise SaaS Development India",
   description:
-    "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots that generate revenue and automate businesses. Serving startups, healthcare, and real estate across India.",
+    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency. Serving teams globally from India.",
   alternates: { canonical: "/" },
 };
 
 const serviceCards = [
   {
     icon: Bot,
-    title: "AI Automation",
+    title: "AI Workflow Automation",
     href: "/services/ai-automation",
     price: "From ₹30,000",
-    desc: "LLM agents, WhatsApp automation, CRM syncs, and agentic workflows that replace manual operations.",
+    desc: "End-to-end AI automation systems that eliminate manual operations. LLM-powered agents and agentic workflows.",
   },
   {
     icon: Layers,
-    title: "SaaS Development",
+    title: "SaaS Platform Engineering",
     href: "/services/saas-development",
     price: "From ₹1,20,000",
-    desc: "Multi-tenant SaaS platforms with billing, dashboards, and AI features — MVP to enterprise.",
+    desc: "Enterprise-grade multi-tenant SaaS platforms with billing, admin dashboards, and native AI capabilities.",
   },
   {
     icon: Users,
-    title: "CRM Development",
+    title: "CRM Automation Infrastructure",
     href: "/services/crm-development",
     price: "From ₹40,000",
-    desc: "Custom CRM or AI-enhanced HubSpot/Zoho with WhatsApp integration and lead scoring.",
+    desc: "Custom CRM platforms and AI-enhanced HubSpot/Zoho integrations for centralized operational workflows.",
   },
   {
     icon: Globe,
-    title: "AI Chatbot",
+    title: "AI Customer Support Agents",
     href: "/services/chatbot-development",
     price: "From ₹20,000",
-    desc: "RAG chatbots trained on your data — website and WhatsApp, in English and Hindi.",
+    desc: "Context-aware RAG chatbots trained on your business data for 24/7 lead qualification and customer support.",
   },
   {
     icon: Code2,
-    title: "Website Development",
+    title: "AI Operations Dashboards",
     href: "/services/website-development",
     price: "From ₹35,000",
-    desc: "High-performance, SEO-optimized websites built for speed, scalability, and conversions.",
+    desc: "Custom internal business tools and high-performance operational dashboards to monitor AI systems.",
   },
   {
     icon: MessageCircle,
-    title: "WhatsApp Automation",
+    title: "WhatsApp AI Systems",
     href: "/services/whatsapp-automation",
     price: "From ₹25,000",
-    desc: "Intelligent WhatsApp systems for lead capture, customer support, and automated workflows.",
+    desc: "Intelligent WhatsApp systems via official APIs for lead capture, automated support, and CRM syncing.",
   },
 ];
 
 const faqItems = [
   {
-    q: "What does RisonAI Tech do?",
-    a: "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, AI chatbots, and websites for startups, healthcare providers, real estate firms, and SMBs across India.",
+    q: "What does RisonAI Tech specialize in?",
+    a: "We are an AI Automation & AI Systems Infrastructure Company. We build AI workflows, operational infrastructure, and scalable SaaS platforms that reduce manual work and increase business efficiency.",
   },
   {
-    q: "How much does AI automation cost in India?",
-    a: "A single automation workflow costs ₹30,000–₹60,000. A 3–5 workflow suite costs ₹80,000–₹1,80,000. Enterprise systems with multiple AI agents range from ₹2,00,000–₹6,00,000+.",
+    q: "How does AI automation reduce operational costs?",
+    a: "By replacing repetitive manual tasks—like lead qualification, data entry, and customer support triage—with intelligent AI agents and API integrations, saving thousands of manual hours annually.",
   },
   {
-    q: "How long does a SaaS MVP take to build?",
-    a: "A basic SaaS MVP typically takes 6–10 weeks. A full multi-tenant SaaS with billing and admin dashboards takes 12–20 weeks. We deliver working software in 2-week sprints.",
+    q: "How long does it take to deploy an AI system?",
+    a: "A targeted AI workflow automation takes 2–4 weeks. Full SaaS platforms or comprehensive CRM automation infrastructure typically take 8–16 weeks. We deliver in iterative 2-week sprints.",
   },
   {
-    q: "Do you build WhatsApp chatbots?",
-    a: "Yes. We build AI-powered WhatsApp chatbots via the WhatsApp Business API — trained on your data using RAG for lead qualification, appointment booking, and customer support.",
+    q: "Are the AI Customer Support Agents trained on our data?",
+    a: "Yes. We use Retrieval-Augmented Generation (RAG) architecture to train the AI strictly on your company's knowledge base, ensuring accurate, context-aware responses without hallucination.",
   },
   {
-    q: "Which cities do you serve?",
-    a: "We are headquartered in Panipat, Haryana, and serve clients in Delhi, Gurgaon, Noida, Mumbai, Bengaluru, and remotely across India. All projects are delivered remotely.",
+    q: "Do you build internal operations dashboards?",
+    a: "Absolutely. We engineer custom internal tools and performance dashboards that connect to your AI systems, giving your operations team full visibility and control.",
   },
   {
-    q: "What industries do you specialise in?",
-    a: "Healthcare (we built DocBooking), real estate (we built Expreality), startups (40+ products shipped), and SMBs needing AI automation. 100% client retention rate.",
+    q: "Do clients own the AI system infrastructure?",
+    a: "Yes. We operate on a full-ownership model. At project close, you receive the complete source code, deployment configurations, and system documentation. No vendor lock-in.",
   },
   {
-    q: "Do clients own the source code?",
-    a: "Yes. Full source code ownership is transferred at project close — repository, database schemas, deployment configs, and documentation. No lock-in.",
+    q: "Can RisonAI Tech integrate AI into our existing CRM?",
+    a: "Yes. We build custom API middleware to integrate LLM capabilities directly into existing operational hubs like HubSpot, Zoho, or Salesforce to automate data entry and lead scoring.",
   },
   {
-    q: "Can RisonAI Tech add AI features to my existing product?",
-    a: "Yes. We add AI modules — smart search, LLM chat, auto-generated content, intelligent notifications — to existing web apps and SaaS products without requiring a rebuild.",
+    q: "What is the typical ROI on an AI automation project?",
+    a: "Our clients typically see a 3× increase in operational efficiency, a 60% reduction in customer response times, and significant savings in administrative overhead within the first quarter of deployment.",
   },
   {
-    q: "What is the minimum project size?",
-    a: "Our smallest projects start at ₹20,000 (simple FAQ chatbot or landing page). Most clients start with a ₹30,000–₹60,000 automation workflow or a ₹1,20,000+ SaaS MVP.",
+    q: "What is the minimum engagement size?",
+    a: "Our targeted automation projects start at ₹20,000. Comprehensive operational transformation and SaaS engineering projects typically start at ₹1,20,000+.",
   },
   {
-    q: "How do I start a project with RisonAI Tech?",
-    a: "Contact us via WhatsApp, email, or our contact form. We schedule a free 30-minute discovery call, scope the project, and deliver a fixed-price proposal within 48 hours.",
+    q: "How do we begin the transformation process?",
+    a: "Contact us to schedule an AI Systems Strategy Session. We will audit your current workflows, map out automation opportunities, and deliver a fixed-price architectural proposal within 48 hours.",
   },
 ];
 
@@ -122,14 +122,14 @@ export default function HomePage() {
           <h2
             className="font-display text-3xl font-bold text-white sm:text-4xl"
           >
-            Six services. One goal: grow your revenue.
+            Enterprise AI Infrastructure. Built to scale your operations.
           </h2>
-          <p className="mt-1 text-white/50">
-            Fixed pricing. Full code ownership. Delivered in weeks — not months.
+          <p className="mt-2 text-white/50 max-w-2xl">
+            Operational efficiency delivered through custom AI systems. Fixed pricing, full code ownership, and measurable business outcomes.
           </p>
-          <div className="mt-4">
+          <div className="mt-6">
             <Link className="btn-outline !py-2.5" href="/contact">
-              Start with a scoped AI sprint
+              Book an AI Systems Strategy Session
             </Link>
           </div>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -200,18 +200,18 @@ export default function HomePage() {
             <h2
               className="font-display text-3xl font-bold text-white sm:text-4xl"
             >
-              Why high-value clients choose us over larger agencies
+              Why operations leaders choose our AI infrastructure
             </h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {[
-                "40+ products shipped — web, mobile, AI, and SaaS",
+                "40+ enterprise-grade systems shipped",
                 "100% client retention rate since founding",
                 "3× average efficiency gain post-automation",
-                "Fixed-price contracts — no surprise invoices",
-                "2-week delivery sprints — see progress every fortnight",
-                "Full source code ownership at project close",
-                "30–90 day post-launch support included free",
-                "WhatsApp-first communication — always reachable",
+                "Fixed-price architectural contracts",
+                "2-week delivery sprints for rapid ROI",
+                "Full source code & infrastructure ownership",
+                "Automated workflows that run 24/7",
+                "Direct access to senior AI engineers",
               ].map((item) => (
                 <li className="flex items-start gap-3" key={item}>
                   <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#a78bfa]" size={18} />

@@ -21,7 +21,7 @@ export const siteConfig = {
   domain: "risonaitech.com",
   url: "https://risonaitech.com",
   description:
-    "Risonai Tech is a product engineering company building high-performance web apps, Android apps, websites, and AI automation systems.",
+    "Risonai Tech is an AI Automation & AI Systems Infrastructure Company building enterprise SaaS platforms, operational dashboards, and AI automation systems.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
   email: "hello@risonaitech.com",
   phone: "+918368137724",
@@ -56,10 +56,10 @@ export const services: Service[] = [
   {
     id: "web-app",
     icon: Code2,
-    title: "Web Application Development",
-    short: "Replace spreadsheets and manual processes with software that does the work.",
+    title: "Internal Operations Platforms",
+    short: "Replace fragmented spreadsheets with centralized, automated software systems.",
     description:
-      "We build production-grade web applications that automate your operations, serve your customers, and grow with your business — delivered in weeks, not quarters.",
+      "We build production-grade web applications that automate your operations, centralize data, and eliminate manual processing — delivered in weeks, not quarters.",
     bullets: [
       "SaaS dashboards & portals",
       "Customer-facing platforms",
@@ -71,10 +71,10 @@ export const services: Service[] = [
   {
     id: "android",
     icon: Smartphone,
-    title: "Android App Development",
-    short: "Put your business in your customers' pockets with an app they actually use.",
+    title: "Field Operations Mobile Apps",
+    short: "Put operational control and automated data entry in your field team's pockets.",
     description:
-      "Native Android apps built for reliability, speed, and engagement — from offline-first field tools to consumer apps on the Play Store.",
+      "Native Android apps built for operational reliability and field data collection — featuring offline-first syncing and direct CRM/AI integrations.",
     bullets: [
       "Kotlin-first, clean architecture",
       "Offline-first & sync",
@@ -86,10 +86,10 @@ export const services: Service[] = [
   {
     id: "website",
     icon: Globe,
-    title: "High-Converting Websites",
-    short: "Turn visitors into leads with a site that loads in under 2 seconds and ranks on Google.",
+    title: "High-Performance Web Systems",
+    short: "Enterprise-grade web infrastructure built for operational speed and AI discovery.",
     description:
-      "Premium marketing websites and landing pages that generate inbound leads — SEO-optimised, conversion-focused, and fast enough to pass Core Web Vitals.",
+      "Premium marketing and operational web interfaces that act as the front door for your automation systems — SEO-optimised, fast, and structured for LLM crawlers.",
     bullets: [
       "Next.js / Astro — sub-2s load time",
       "Core Web Vitals & SEO optimised",
@@ -101,11 +101,11 @@ export const services: Service[] = [
   {
     id: "website-development",
     icon: Globe,
-    title: "Website Development",
+    title: "AI Operations Dashboards",
     short:
-      "High-performance, SEO-optimized websites built for speed, scalability, and conversions.",
+      "Custom internal business tools and high-performance operational dashboards to monitor AI systems.",
     description:
-      "From landing pages to full-scale platforms, we engineer modern websites that are fast, reliable, and built to convert across every screen size.",
+      "From data visualization to full-scale platform management, we engineer modern operational dashboards that give leadership full visibility and control.",
     bullets: [
       "Landing pages to full-scale platforms",
       "SEO foundations and technical performance",
@@ -117,10 +117,10 @@ export const services: Service[] = [
   {
     id: "ai-automation",
     icon: Bot,
-    title: "AI Automation Systems",
-    short: "Stop paying humans to do what AI can do 24/7 at a fraction of the cost.",
+    title: "AI Workflow Automation",
+    short: "Stop paying humans to do what intelligent AI workflows can execute 24/7.",
     description:
-      "Custom AI automation systems — WhatsApp bots, CRM syncs, lead qualification, intake flows, and agentic workflows that run without you.",
+      "Custom AI automation systems — agentic workflows, API integrations, document parsing, and operational intelligence that run autonomously.",
     bullets: [
       "LLM-powered agents & chatbots",
       "WhatsApp Business API automation",
@@ -132,11 +132,11 @@ export const services: Service[] = [
   {
     id: "whatsapp-automation",
     icon: MessageCircle,
-    title: "WhatsApp Automation",
+    title: "WhatsApp AI Systems",
     short:
-      "Intelligent WhatsApp systems for lead capture, customer support, and automated workflows.",
+      "Intelligent WhatsApp infrastructure for automated support, lead capture, and CRM syncing.",
     description:
-      "Integrate chatbots, CRM workflows, and real-time engagement on WhatsApp to respond faster, qualify better leads, and scale customer conversations efficiently.",
+      "Integrate RAG chatbots and CRM workflows into the WhatsApp Business API to respond instantly, qualify leads automatically, and scale customer operations.",
     bullets: [
       "Automated lead qualification and routing",
       "Support flows with chatbot escalation",
@@ -228,21 +228,21 @@ export const caseStudies = [
 
 // ─── Trust Strip ─────────────────────────────────────────────────────────────
 export const trustItems = [
-  "Startups",
-  "D2C Brands",
-  "Healthcare Platforms",
-  "Real Estate Firms",
-  "SaaS Companies",
-  "Service Businesses",
-  "Growth-stage Teams",
+  "Enterprise Operations",
+  "Healthcare Networks",
+  "SaaS Infrastructure",
+  "Real Estate Ops",
+  "Scaling Startups",
+  "Logistics & Service",
+  "B2B Tech Leaders",
 ];
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const stats = [
-  { value: "40+", label: "Products shipped to production" },
+  { value: "40+", label: "Enterprise systems deployed" },
   { value: "3×", label: "Avg. efficiency gain post-automation" },
-  { value: "100%", label: "Client retention rate" },
-  { value: "48h", label: "Fixed-price proposal turnaround" },
+  { value: "10,000+", label: "Manual hours saved monthly" },
+  { value: "48h", label: "Architectural proposal turnaround" },
 ];
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────

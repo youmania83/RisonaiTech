@@ -10,9 +10,9 @@ import { LiquidButton } from "@/components/ui/liquid-glass-button";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const stats = [
-  { title: "Products Shipped", value: "40+" },
-  { title: "AI Efficiency", value: "3× Faster" },
-  { title: "Uptime SLA", value: "99.9%" },
+  { title: "Manual Hours Saved", value: "10,000+" },
+  { title: "Operational Efficiency", value: "3× Faster" },
+  { title: "System Uptime", value: "99.9%" },
 ];
 
 export default function Hero() {
@@ -120,7 +120,7 @@ export default function Hero() {
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-            3 client slots open this month
+            Accepting new enterprise partners
           </span>
         </motion.div>
 
@@ -130,9 +130,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
-          The AI automation agency{" "}<br />
+          AI Automation Systems <br />
           <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
-            built for Indian businesses.
+            That Scale Business Efficiency.
           </span>
         </motion.h1>
 
@@ -142,9 +142,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
         >
-          WhatsApp bots, custom web apps, SaaS platforms, and AI workflows —
-          fixed-price, full code ownership, delivered in weeks. Starting ₹20,000.
-          Built by operators who run real businesses.
+          We build AI-powered workflows, automation systems, AI agents, and operational infrastructure that reduce manual work, improve response time, and scale business operations for high-growth companies.
         </motion.p>
 
         <motion.div
@@ -155,17 +153,17 @@ export default function Hero() {
         >
           <LiquidButton size="xxl" asChild>
             <Link href="/contact">
-              Book AI Consultation
+              Book AI Systems Strategy
               <ArrowRight size={18} />
             </Link>
           </LiquidButton>
 
           <Link
-            href="/products"
+            href="/services/ai-automation"
             className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
           >
             <Play size={14} className="fill-white" />
-            View Demo
+            View Automation Systems
           </Link>
         </motion.div>
 
@@ -224,12 +222,12 @@ export default function Hero() {
             Built for
           </span>
           {[
-            "Healthcare Founders",
+            "Enterprise Operations",
+            "Healthcare Networks",
+            "Scaling Startups",
             "Real Estate Firms",
-            "SaaS Startups",
-            "D2C Brands",
-            "Clinic Chains",
-            "PropTech Teams",
+            "SaaS Companies",
+            "Logistics Teams",
           ].map((name, i) => (
             <span key={name} className="flex items-center gap-2">
               {i > 0 && (
