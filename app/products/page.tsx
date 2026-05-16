@@ -37,7 +37,7 @@ export default function ProductsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36 bg-mesh" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
@@ -62,7 +62,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products grid */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="grid gap-8 md:grid-cols-2">
             {products.map((product, i) => {
