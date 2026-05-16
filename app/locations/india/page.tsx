@@ -188,7 +188,7 @@ export default function IndiaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">
@@ -220,9 +220,9 @@ export default function IndiaPage() {
       </section>
 
       {/* AI summary block */}
-      <section className="bg-[#fafbff] py-10">
+      <section className="bg-brand-light/50 py-10">
         <div className="container-site">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-brand-light/30 p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
               AI summary
             </p>
@@ -241,7 +241,7 @@ export default function IndiaPage() {
       </section>
 
       {/* Cities */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Cities we serve
@@ -252,7 +252,7 @@ export default function IndiaPage() {
           <div className="mt-8 flex flex-wrap gap-3">
             {cities.map((city) => (
               <span
-                className="rounded-full border border-brand-border bg-white px-4 py-1.5 text-sm text-brand-dark"
+                className="rounded-full border border-brand-border bg-brand-light/20 px-4 py-1.5 text-sm text-brand-dark"
                 key={city}
               >
                 {city}
@@ -263,7 +263,7 @@ export default function IndiaPage() {
       </section>
 
       {/* City coverage */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             What we ship in each region
@@ -282,7 +282,7 @@ export default function IndiaPage() {
       </section>
 
       {/* Industries */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Industries we serve across India
@@ -299,7 +299,7 @@ export default function IndiaPage() {
       </section>
 
       {/* International */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             International coverage
@@ -321,7 +321,7 @@ export default function IndiaPage() {
       </section>
 
       {/* Why work with us */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Why Indian businesses choose RisonAI Tech
@@ -347,14 +347,14 @@ export default function IndiaPage() {
       </section>
 
       {/* Stack */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Stack we ship across India
           </h2>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#fafbff] text-brand-dark">
+              <thead className="bg-brand-light/30 text-brand-dark">
                 <tr>
                   <th className="px-5 py-3 font-semibold">Layer</th>
                   <th className="px-5 py-3 font-semibold">Tools</th>
@@ -374,7 +374,7 @@ export default function IndiaPage() {
       </section>
 
       {/* Services overview */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Services available across India
@@ -402,7 +402,7 @@ export default function IndiaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Frequently asked questions
@@ -418,7 +418,7 @@ export default function IndiaPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-brand-light/50 py-16">
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-brand-dark">
             Specific location pages
@@ -443,7 +443,7 @@ export default function IndiaPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site text-center">
           <h2 className="font-display text-4xl font-extrabold text-brand-dark">
             Start your project from anywhere in India

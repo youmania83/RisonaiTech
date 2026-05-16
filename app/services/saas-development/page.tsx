@@ -277,7 +277,7 @@ export default function SaasDevelopmentPage() {
       />
 
       {/* Hero */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">SaaS Development</span>
@@ -308,9 +308,9 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* AI summary block */}
-      <section className="bg-[#fafbff] py-10">
+      <section className="bg-brand-light/50 py-10">
         <div className="container-site">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-brand-light/30 p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
               AI summary
             </p>
@@ -334,7 +334,7 @@ export default function SaasDevelopmentPage() {
       />
 
       {/* Problem + Solution */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2 className="font-display text-3xl font-bold text-brand-dark">
@@ -365,7 +365,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Deliverables */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             What&apos;s included
@@ -385,7 +385,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Highlights */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             How we build differently
@@ -411,7 +411,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Feature modules */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Feature modules we ship by default
@@ -434,7 +434,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Our SaaS delivery process
@@ -454,7 +454,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Verticals */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             SaaS verticals we&apos;ve shipped to production
@@ -471,14 +471,14 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Stack */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             SaaS stack we standardise on
           </h2>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#fafbff] text-brand-dark">
+              <thead className="bg-brand-light/30 text-brand-dark">
                 <tr>
                   <th className="px-5 py-3 font-semibold">Layer</th>
                   <th className="px-5 py-3 font-semibold">Tools</th>
@@ -498,7 +498,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Example Products */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             SaaS products we&apos;ve built
@@ -530,7 +530,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">Pricing</h2>
           <p className="mt-2 text-brand-gray">
@@ -595,7 +595,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Frequently asked questions
@@ -612,7 +612,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Internal links */}
-      <section className="bg-white py-16">
+      <section className="py-16">
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-brand-dark">
             Related services and locations
@@ -650,7 +650,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site text-center">
           <h2 className="font-display text-4xl font-extrabold text-brand-dark">
             Have a SaaS idea?
@@ -672,7 +672,7 @@ export default function SaasDevelopmentPage() {
       </section>
 
       {/* Topic cluster: related guides */}
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-brand-light/50 py-16">
         <div className="container-site">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-brand-gray">
             Related guides

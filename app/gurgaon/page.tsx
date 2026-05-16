@@ -162,7 +162,7 @@ export default function GurgaonPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">
@@ -191,9 +191,9 @@ export default function GurgaonPage() {
       </section>
 
       {/* AI summary block */}
-      <section className="bg-[#fafbff] py-10">
+      <section className="bg-brand-light/50 py-10">
         <div className="container-site">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-brand-light/30 p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
               AI summary
             </p>
@@ -209,7 +209,7 @@ export default function GurgaonPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Gurgaon use cases we ship most often
@@ -227,7 +227,7 @@ export default function GurgaonPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Why Gurgaon founders work with us
@@ -243,7 +243,7 @@ export default function GurgaonPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">Gurgaon FAQs</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -257,7 +257,7 @@ export default function GurgaonPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="py-16">
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-brand-dark">
             Services available in Gurgaon

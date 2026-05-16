@@ -242,7 +242,7 @@ export default function WhatsAppAutomationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">WhatsApp Automation</span>
@@ -272,9 +272,9 @@ export default function WhatsAppAutomationPage() {
       </section>
 
       {/* AI summary block */}
-      <section className="bg-[#fafbff] py-10">
+      <section className="bg-brand-light/50 py-10">
         <div className="container-site">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-white p-6">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-border bg-brand-light/30 p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#635BFF]">
               AI summary
             </p>
@@ -296,7 +296,7 @@ export default function WhatsAppAutomationPage() {
         title="WhatsApp automation benchmarks: response speed and workflow efficiency"
       />
 
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             What&apos;s included
@@ -312,7 +312,7 @@ export default function WhatsAppAutomationPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Automation systems we implement
@@ -338,14 +338,14 @@ export default function WhatsAppAutomationPage() {
       </section>
 
       {/* Use cases by industry */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             WhatsApp flows by industry
           </h2>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border bg-white">
+          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-border bg-brand-light/20">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#fafbff] text-brand-dark">
+              <thead className="bg-brand-light/30 text-brand-dark">
                 <tr>
                   <th className="px-5 py-3 font-semibold">Industry</th>
                   <th className="px-5 py-3 font-semibold">Typical flow</th>
@@ -365,7 +365,7 @@ export default function WhatsAppAutomationPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Our WhatsApp automation delivery process
@@ -384,7 +384,7 @@ export default function WhatsAppAutomationPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="bg-brand-light/50 py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
             Frequently asked questions
@@ -401,7 +401,7 @@ export default function WhatsAppAutomationPage() {
       </section>
 
       {/* Internal Links */}
-      <section className="bg-white py-16">
+      <section className="py-16">
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-brand-dark">
             Related services and locations
@@ -436,7 +436,7 @@ export default function WhatsAppAutomationPage() {
       </section>
 
       {/* Topic cluster: related guides */}
-      <section className="bg-[#f7f9fc] py-16">
+      <section className="bg-brand-light/50 py-16">
         <div className="container-site">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-brand-gray">
             Related guides
