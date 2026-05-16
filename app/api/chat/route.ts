@@ -10,22 +10,118 @@ const ipRateLimitMap = new Map<string, { count: number, resetTime: number }>();
 const RATE_LIMIT_MAX_REQUESTS = 10; // Max 10 messages per minute per IP
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
 
+// In-memory dedup for sent leads in this edge isolate.
+// Prevents the same email being sent multiple times when the user
+// keeps chatting after providing contact info.
+const sentLeadHashes = new Set<string>();
+
 const systemPrompt = `You are a helpful customer support and lead generation agent for RisonAI Tech.
 Keep all answers EXTREMELY crisp, short, and to the point. No long paragraphs.
 
-IMPORTANT END GOAL: At the end of answering their query, ALWAYS politely ask the user to share their contact details (Name, Email, and Phone number) so the sales team can call them back to discuss further. When asking for these details, you MUST reassure them by adding a friendly note like "We promise we won't spam you."
+IMPORTANT END GOAL: At the end of answering their query, ALWAYS politely ask the user to share their contact details so the sales team can call them back to discuss further. Ask for these 4 fields, ONE AT A TIME, in this exact order:
+  1. Full Name
+  2. Email
+  3. Phone number (with country code if outside India)
+  4. Country
+When asking for these details, you MUST reassure them by adding a friendly note like "We promise we won't spam you."
+
+PLACEHOLDER HINTS FOR THE UI:
+When you ask the user for a specific field, phrase the question so it clearly contains the field word — e.g. "Could you share your name?", "What's your email?", "Your phone number please?", "Which country are you in?". This is required so the chat input can show the right placeholder.
 
 CRITICAL CONTACT VALIDATION RULES:
 1. If the user provides an email, verify it looks like a valid email address (must contain "@" and a proper domain). Reject fake emails like "jj#gmail.com" or "test@test".
 2. If the user provides a phone number, verify it looks like a real mobile number. Reject obvious fake numbers like "0000000000", "1234567890", or "9999999999".
 3. If the provided contact details look fake or invalid, politely inform the user that the details appear incorrect and ask them to provide a valid email and phone number.
-4. Only when the user provides VALID looking contact details should you thank them and confirm that the team has received their details.
+4. Only when the user provides VALID looking contact details for ALL FOUR fields (Name, Email, Phone, Country) should you thank them and confirm that the team has received their details.
 
 Company Info:
 - Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, SaaS Development.
 - Location: Panipat, Haryana. Serving Delhi NCR and globally.
 - Founder: Yogesh Kumar Wadhwa
 `;
+
+// ---- Helpers ---------------------------------------------------------------
+
+type ChatMsg = { role: 'user' | 'assistant' | 'system'; content: string };
+
+function extractEmail(text: string): string | null {
+  const m = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+  if (!m) return null;
+  const email = m[0];
+  if (/test@|example\.com|fake|^.@/i.test(email)) return null;
+  return email;
+}
+
+function extractPhone(text: string): string | null {
+  // Look for a sequence of digits (optionally with + - space ()) that's
+  // 8-15 digits long total.
+  const cleaned = text.replace(/[^\d+]/g, ' ').match(/\+?\d[\d\s-]{7,18}\d/);
+  if (!cleaned) return null;
+  const digits = cleaned[0].replace(/\D/g, '');
+  if (digits.length < 8 || digits.length > 15) return null;
+  if (/^(\d)\1{7,}$/.test(digits)) return null; // 00000000, 99999999, etc.
+  if (/^12345678|^87654321/.test(digits)) return null;
+  return cleaned[0].trim();
+}
+
+// Light country detection: known names + common ISO codes + UAE/UK aliases.
+const COUNTRY_LIST = [
+  'india', 'usa', 'united states', 'us', 'america', 'uae', 'united arab emirates', 'dubai',
+  'uk', 'united kingdom', 'england', 'britain', 'canada', 'australia', 'singapore',
+  'malaysia', 'indonesia', 'bali', 'philippines', 'germany', 'france', 'spain', 'italy',
+  'netherlands', 'sweden', 'norway', 'denmark', 'switzerland', 'ireland', 'new zealand',
+  'south africa', 'nigeria', 'kenya', 'egypt', 'saudi arabia', 'qatar', 'kuwait', 'oman',
+  'bahrain', 'pakistan', 'bangladesh', 'sri lanka', 'nepal', 'china', 'japan', 'korea',
+  'south korea', 'thailand', 'vietnam', 'mexico', 'brazil', 'argentina', 'chile',
+];
+function extractCountry(text: string): string | null {
+  const lower = text.toLowerCase();
+  for (const c of COUNTRY_LIST) {
+    // Match whole-word boundary
+    const re = new RegExp(`(^|[^a-z])${c.replace(/\s+/g, '\\s+')}([^a-z]|$)`, 'i');
+    if (re.test(lower)) {
+      return c.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+    }
+  }
+  return null;
+}
+
+// A name is the trickiest to extract. Heuristic: if the user's message is
+// short (≤ 6 words), contains no @, no digits, and the previous assistant
+// message was asking for a name, treat the whole message as the name.
+function extractName(messages: ChatMsg[]): string | null {
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (m.role !== 'user') continue;
+    const text = m.content.trim();
+    if (!text || text.length > 80) continue;
+    if (/@|\d{4,}/.test(text)) continue;
+    const wordCount = text.split(/\s+/).length;
+    if (wordCount > 6) continue;
+    const prevAssistant = messages.slice(0, i).reverse().find(x => x.role === 'assistant');
+    if (prevAssistant && /name/i.test(prevAssistant.content)) {
+      // Strip common prefixes ("my name is X", "I'm X", "this is X")
+      const cleaned = text
+        .replace(/^(my name is|i am|i'm|this is|name[:\-]\s*)/i, '')
+        .replace(/[.!]+$/, '')
+        .trim();
+      if (cleaned.length > 0 && cleaned.length < 80) return cleaned;
+    }
+  }
+  return null;
+}
+
+function gatherLead(messages: ChatMsg[]) {
+  const allText = messages.filter(m => m.role === 'user').map(m => m.content).join('\n');
+  return {
+    name: extractName(messages),
+    email: extractEmail(allText),
+    phone: extractPhone(allText),
+    country: extractCountry(allText),
+  };
+}
+
+// ---- POST handler ----------------------------------------------------------
 
 export async function POST(req: Request) {
   try {
@@ -48,7 +144,7 @@ export async function POST(req: Request) {
           });
         }
       }
-      
+
       // Cleanup old entries occasionally to prevent memory leaks in edge isolates
       if (Math.random() < 0.1) {
         for (const [key, value] of ipRateLimitMap.entries()) {
@@ -64,48 +160,73 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing DEEPSEEK_API_KEY' }, { status: 500 });
     }
 
-    const cleanMessages = messages.map((m: any) => ({
+    const cleanMessages: ChatMsg[] = messages.map((m: any) => ({
       role: m.role,
       content: m.content,
     }));
 
-    // Auto-detect if the user just provided contact info to trigger an email
-    const lastUserMessage = cleanMessages.filter((m: any) => m.role === 'user').pop();
-    if (lastUserMessage) {
-      const text = lastUserMessage.content;
-      // Basic validation to prevent sending emails for obvious fake inputs
-      const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-      const hasEmail = emailMatch && !text.includes('test@');
-      
-      const cleanPhone = text.replace(/[\s-()]/g, '');
-      const hasPhone = /\+?\d{8,15}/.test(cleanPhone) && !/0{8,}|12345678|9{8,}/.test(cleanPhone);
-      
-      if (hasEmail || hasPhone) {
-        console.log('Detected contact info in message. Sending email to hello@risonaitech.com...');
-        // Format the entire chat history for context
-        const chatHistory = cleanMessages.map((m: any) => `${m.role.toUpperCase()}: ${m.content}`).join('\n\n');
-        
+    // ---- Lead capture (runs across the FULL conversation, not just last msg)
+    const lead = gatherLead(cleanMessages);
+    const hasEmail = !!lead.email;
+    const hasPhone = !!lead.phone;
+
+    // Send when we have at least an email OR a phone. Dedup by a stable hash
+    // of (email + phone) so we never spam the inbox if the user keeps chatting.
+    if (hasEmail || hasPhone) {
+      const leadKey = `${lead.email || ''}|${lead.phone || ''}`;
+      if (!sentLeadHashes.has(leadKey)) {
+        sentLeadHashes.add(leadKey);
+
+        // Best-effort fire-and-forget. We do NOT block the chat stream.
+        const chatHistory = cleanMessages
+          .map((m) => `${m.role.toUpperCase()}: ${m.content}`)
+          .join('\n\n');
+
         const resendApiKey = process.env.RESEND_API_KEY;
+        console.log('[lead-capture] candidate detected', {
+          hasEmail, hasPhone,
+          email: lead.email, phone: lead.phone,
+          name: lead.name, country: lead.country,
+          resendKeyPresent: !!resendApiKey,
+          ip,
+        });
+
         if (resendApiKey) {
           const resend = new Resend(resendApiKey);
-          try {
-            await resend.emails.send({
-              from: 'RisonAI Chatbot <noreply@risonaitech.com>',
-              to: 'hello@risonaitech.com',
-              subject: '🔔 New Lead from Chatbot',
-              html: `<h2>New lead captured via chatbot</h2>
-<p><strong>User message:</strong> ${text}</p>
+          const payload = {
+            from: 'RisonAI Chatbot <noreply@risonaitech.com>',
+            to: 'hello@risonaitech.com',
+            subject: `🔔 New Lead: ${lead.name || lead.email || lead.phone || 'unknown'}`,
+            html: `<h2>New lead captured via chatbot</h2>
+<table style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">Name</td><td style="padding:6px 12px">${lead.name || '<i>not provided</i>'}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">Email</td><td style="padding:6px 12px">${lead.email || '<i>not provided</i>'}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">Phone</td><td style="padding:6px 12px">${lead.phone || '<i>not provided</i>'}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">Country</td><td style="padding:6px 12px">${lead.country || '<i>not provided</i>'}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">IP</td><td style="padding:6px 12px">${ip}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;background:#f4f4f4">Captured at</td><td style="padding:6px 12px">${new Date().toISOString()}</td></tr>
+</table>
 <hr />
 <h3>Full Conversation</h3>
-<pre style="background:#f4f4f4;padding:12px;border-radius:6px;white-space:pre-wrap">${chatHistory}</pre>`,
+<pre style="background:#f4f4f4;padding:12px;border-radius:6px;white-space:pre-wrap;font-family:Menlo,monospace;font-size:13px">${chatHistory.replace(/</g, '&lt;')}</pre>`,
+          } as const;
+
+          // Fire-and-forget — don't block the streaming response on email delivery
+          resend.emails.send(payload)
+            .then((res) => {
+              console.log('[lead-capture] resend response', JSON.stringify(res));
+            })
+            .catch((err) => {
+              console.error('[lead-capture] resend ERROR', err);
+              // Allow a retry next message if the send failed
+              sentLeadHashes.delete(leadKey);
             });
-            console.log('Successfully sent lead to email.');
-          } catch (err) {
-            console.error('Error sending email via Resend:', err);
-          }
         } else {
-          console.error('RESEND_API_KEY is missing! Could not send lead to email.');
+          console.error('[lead-capture] RESEND_API_KEY missing — cannot send lead email');
+          sentLeadHashes.delete(leadKey); // allow retry once env is fixed
         }
+      } else {
+        console.log('[lead-capture] dedup hit, already sent for', leadKey);
       }
     }
 

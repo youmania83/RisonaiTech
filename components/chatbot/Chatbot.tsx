@@ -1,10 +1,36 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { MessageCircle, X, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Message } from './types';
 import dynamic from 'next/dynamic';
+
+const DEFAULT_PLACEHOLDER = 'Message Rison AI...';
+
+/**
+ * Inspect the latest assistant message and pick a field-specific placeholder
+ * for the input box. Order matters: a single message could ask for "name and
+ * email" — we surface the FIRST field that hasn't obviously been answered yet
+ * by checking what the assistant asked for most prominently.
+ */
+function derivePlaceholder(messages: Message[]): string {
+  // Find the latest assistant message
+  const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant');
+  if (!lastAssistant) return DEFAULT_PLACEHOLDER;
+  const text = lastAssistant.content.toLowerCase();
+
+  // The bot asks fields one at a time per the system prompt, so we match in
+  // the order Name -> Email -> Phone -> Country and return the FIRST hit.
+  // We check email/phone/country before name because "name" is a more
+  // ambiguous substring (e.g. "company name").
+  if (/\bemail\b|e-mail/.test(text)) return 'you@example.com';
+  if (/\bphone\b|\bmobile\b|\bnumber\b|whatsapp/.test(text)) return '+91 9876543210';
+  if (/\bcountry\b|\blocation\b|where (are|do) you/.test(text)) return 'India / UAE / USA …';
+  if (/\bname\b/.test(text)) return 'Your full name';
+
+  return DEFAULT_PLACEHOLDER;
+}
 
 // Lazy load the heavy ChatWindow (and all its markdown/syntax-highlighter deps)
 const ChatWindow = dynamic(() => import('./ChatWindow'), { ssr: false });
@@ -125,6 +151,8 @@ export default function Chatbot() {
     if (!hasOpened) setHasOpened(true);
   };
 
+  const inputPlaceholder = useMemo(() => derivePlaceholder(messages), [messages]);
+
   if (!isMounted) return null;
 
   return (
@@ -138,6 +166,7 @@ export default function Chatbot() {
             setInput={setInput}
             setIsOpen={setIsOpen}
             handleSend={handleSend}
+            inputPlaceholder={inputPlaceholder}
           />
         )}
       </AnimatePresence>

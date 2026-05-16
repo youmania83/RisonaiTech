@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # local audits
 lighthouse-*.json
+
+# outreach scratch (cowork-generated lead trackers, not part of site)
+outreach/

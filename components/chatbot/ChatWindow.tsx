@@ -14,6 +14,7 @@ interface ChatWindowProps {
   setInput: (v: string) => void;
   setIsOpen: (v: boolean) => void;
   handleSend: (customInput?: string) => void;
+  inputPlaceholder?: string;
 }
 
 export default function ChatWindow({
@@ -22,7 +23,8 @@ export default function ChatWindow({
   input,
   setInput,
   setIsOpen,
-  handleSend
+  handleSend,
+  inputPlaceholder,
 }: ChatWindowProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -86,11 +88,12 @@ export default function ChatWindow({
         <div ref={messagesEndRef} className="h-1" />
       </div>
 
-      <ChatInput 
-        input={input} 
-        setInput={setInput} 
-        onSubmit={() => handleSend()} 
-        isLoading={isLoading} 
+      <ChatInput
+        input={input}
+        setInput={setInput}
+        onSubmit={() => handleSend()}
+        isLoading={isLoading}
+        placeholder={inputPlaceholder}
       />
     </motion.div>
   );
