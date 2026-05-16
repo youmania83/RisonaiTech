@@ -160,6 +160,7 @@ export const products = [
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
     tags: ["Healthcare", "SaaS", "AI"],
     color: "#0EA5E9",
+    textLight: "#7DD3FC",
   },
   {
     id: "expreality",
@@ -172,6 +173,7 @@ export const products = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     tags: ["Real Estate", "Analytics", "SaaS"],
     color: "#635BFF",
+    textLight: "#A5B4FC",
   },
 ];
 

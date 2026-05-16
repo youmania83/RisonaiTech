@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/25">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
               Navigation
             </p>
             <ul className="space-y-3">
@@ -87,7 +87,7 @@ export default function Footer() {
 
           {/* Legal + socials */}
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/25">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
               Legal
             </p>
             <ul className="space-y-3">

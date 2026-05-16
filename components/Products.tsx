@@ -63,7 +63,7 @@ export default function Products() {
                           <span
                             className="rounded-full px-3 py-1 text-xs font-medium"
                             key={tag}
-                            style={{ background: `${product.color}12`, color: product.color }}
+                            style={{ background: `${product.color}20`, color: product.textLight || product.color }}
                           >
                             {tag}
                           </span>
@@ -72,7 +72,7 @@ export default function Products() {
                       <Link
                         className="mt-7 inline-flex w-fit items-center gap-1.5 text-sm font-semibold transition-colors hover:opacity-70"
                         href="/products"
-                        style={{ color: product.color }}
+                        style={{ color: product.textLight || product.color }}
                       >
                         Learn more <ArrowUpRight size={14} />
                       </Link>

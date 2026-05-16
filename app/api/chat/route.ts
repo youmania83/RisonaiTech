@@ -5,11 +5,21 @@ import { Resend } from 'resend';
 
 export const runtime = 'edge';
 
+// Simple in-memory rate limiting map for the edge isolate
+const ipRateLimitMap = new Map<string, { count: number, resetTime: number }>();
+const RATE_LIMIT_MAX_REQUESTS = 10; // Max 10 messages per minute per IP
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
+
 const systemPrompt = `You are a helpful customer support and lead generation agent for RisonAI Tech.
 Keep all answers EXTREMELY crisp, short, and to the point. No long paragraphs.
 
-IMPORTANT END GOAL: At the end of answering their query, ALWAYS politely ask the user to share their contact details (Name, Email, and Phone number) so the sales team can call them back to discuss further.
-When the user provides their name, email, or phone, you MUST thank them and confirm that the team has received their details and will contact them shortly.
+IMPORTANT END GOAL: At the end of answering their query, ALWAYS politely ask the user to share their contact details (Name, Email, and Phone number) so the sales team can call them back to discuss further. When asking for these details, you MUST reassure them by adding a friendly note like "We promise we won't spam you."
+
+CRITICAL CONTACT VALIDATION RULES:
+1. If the user provides an email, verify it looks like a valid email address (must contain "@" and a proper domain). Reject fake emails like "jj#gmail.com" or "test@test".
+2. If the user provides a phone number, verify it looks like a real mobile number. Reject obvious fake numbers like "0000000000", "1234567890", or "9999999999".
+3. If the provided contact details look fake or invalid, politely inform the user that the details appear incorrect and ask them to provide a valid email and phone number.
+4. Only when the user provides VALID looking contact details should you thank them and confirm that the team has received their details.
 
 Company Info:
 - Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, SaaS Development.
@@ -19,6 +29,34 @@ Company Info:
 
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+
+    // Apply Rate Limiting
+    if (ip !== 'unknown') {
+      const now = Date.now();
+      const ipData = ipRateLimitMap.get(ip);
+
+      if (!ipData || now > ipData.resetTime) {
+        // First request or window expired
+        ipRateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+      } else {
+        ipData.count += 1;
+        if (ipData.count > RATE_LIMIT_MAX_REQUESTS) {
+          return new Response("⚠️ You are sending messages too quickly. Please wait a moment and try again.", {
+            status: 429,
+            headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+          });
+        }
+      }
+      
+      // Cleanup old entries occasionally to prevent memory leaks in edge isolates
+      if (Math.random() < 0.1) {
+        for (const [key, value] of ipRateLimitMap.entries()) {
+          if (now > value.resetTime) ipRateLimitMap.delete(key);
+        }
+      }
+    }
+
     const { messages } = await req.json();
 
     const apiKey = process.env.DEEPSEEK_API_KEY;
@@ -35,8 +73,12 @@ export async function POST(req: Request) {
     const lastUserMessage = cleanMessages.filter((m: any) => m.role === 'user').pop();
     if (lastUserMessage) {
       const text = lastUserMessage.content;
-      const hasEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(text);
-      const hasPhone = /\+?\d{8,15}/.test(text.replace(/[\s-()]/g, ''));
+      // Basic validation to prevent sending emails for obvious fake inputs
+      const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+      const hasEmail = emailMatch && !text.includes('test@');
+      
+      const cleanPhone = text.replace(/[\s-()]/g, '');
+      const hasPhone = /\+?\d{8,15}/.test(cleanPhone) && !/0{8,}|12345678|9{8,}/.test(cleanPhone);
       
       if (hasEmail || hasPhone) {
         console.log('Detected contact info in message. Sending email to hello@risonaitech.com...');

@@ -113,7 +113,7 @@ export default function ProductsPage() {
                           <span
                             className="rounded-full px-3 py-1 text-xs font-medium"
                             key={tag}
-                            style={{ background: `${product.color}15`, color: product.color }}
+                            style={{ background: `${product.color}20`, color: product.textLight || product.color }}
                           >
                             {tag}
                           </span>
@@ -122,7 +122,7 @@ export default function ProductsPage() {
                       <div className="mt-6 flex-1" />
                       <button
                         className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                        style={{ color: product.color }}
+                        style={{ color: product.textLight || product.color }}
                       >
                         Learn more <ArrowUpRight size={14} />
                       </button>

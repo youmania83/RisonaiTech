@@ -72,7 +72,7 @@ export default function LeadershipAuthority() {
                 </span>
               ))}
             </div>
-            <p className="mt-6 text-sm text-white/45">
+            <p className="mt-6 text-sm text-white/60">
               Need references before you commit? Review our{" "}
               <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/#case-studies">proof-of-work outcomes</Link>
               {" "}and{" "}
@@ -90,7 +90,7 @@ export default function LeadershipAuthority() {
                 <p className="font-display text-3xl font-extrabold grad-text">
                   {founder.experienceYears}+
                 </p>
-                <p className="mt-1 text-xs text-white/45">Years in product engineering</p>
+                <p className="mt-1 text-xs text-white/60">Years in product engineering</p>
               </div>
               <div
                 className="rounded-xl p-4"
@@ -99,18 +99,18 @@ export default function LeadershipAuthority() {
                 <p className="font-display text-3xl font-extrabold grad-text">
                   {founder.projectsShipped}+
                 </p>
-                <p className="mt-1 text-xs text-white/45">Production deployments shipped</p>
+                <p className="mt-1 text-xs text-white/60">Production deployments shipped</p>
               </div>
               <div
                 className="rounded-xl p-4 sm:col-span-2"
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
               >
                 <p className="text-sm font-semibold text-white">Leadership profile</p>
-                <p className="mt-1 text-sm text-white/45">{founder.name} · {founder.role}</p>
+                <p className="mt-1 text-sm text-white/60">{founder.name} · {founder.role}</p>
                 <div className="mt-3 flex flex-wrap gap-2 text-xs">
                   {founder.sameAs.map((url) => (
                     <a
-                      className="rounded-md px-2 py-1 text-white/40 transition-colors hover:text-white/70"
+                      className="rounded-md px-2 py-1 text-white/60 transition-colors hover:text-white/80"
                       href={url}
                       key={url}
                       rel="noreferrer"
