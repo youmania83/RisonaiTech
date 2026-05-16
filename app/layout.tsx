@@ -3,8 +3,10 @@ import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
+import dynamic from "next/dynamic";
 import { siteConfig } from "@/lib/constants";
+
+const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 import "./globals.css";
 
 const BASE_URL = "https://risonaitech.com";
