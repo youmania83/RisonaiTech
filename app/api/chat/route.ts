@@ -88,12 +88,17 @@ export async function POST(req: Request) {
         const resendApiKey = process.env.RESEND_API_KEY;
         if (resendApiKey) {
           const resend = new Resend(resendApiKey);
-          resend.emails.send({
-            from: 'RisonAI Chatbot <onboarding@resend.dev>',
-            to: 'hello@risonaitech.com',
-            subject: 'New Lead Captured from Chatbot',
-            text: `The user provided contact information in the chatbot.\n\nUser Input: ${text}\n\nFull Conversation:\n${chatHistory}`,
-          }).catch(err => console.error('Error sending email via Resend:', err));
+          try {
+            await resend.emails.send({
+              from: 'RisonAI Chatbot <onboarding@resend.dev>',
+              to: 'hello@risonaitech.com',
+              subject: 'New Lead Captured from Chatbot',
+              text: `The user provided contact information in the chatbot.\n\nUser Input: ${text}\n\nFull Conversation:\n${chatHistory}`,
+            });
+            console.log('Successfully sent lead to email.');
+          } catch (err) {
+            console.error('Error sending email via Resend:', err);
+          }
         } else {
           console.error('RESEND_API_KEY is missing! Could not send lead to email.');
         }
