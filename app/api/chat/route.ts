@@ -90,10 +90,14 @@ export async function POST(req: Request) {
           const resend = new Resend(resendApiKey);
           try {
             await resend.emails.send({
-              from: 'RisonAI Chatbot <onboarding@resend.dev>',
+              from: 'RisonAI Chatbot <noreply@risonaitech.com>',
               to: 'hello@risonaitech.com',
-              subject: 'New Lead Captured from Chatbot',
-              text: `The user provided contact information in the chatbot.\n\nUser Input: ${text}\n\nFull Conversation:\n${chatHistory}`,
+              subject: '🔔 New Lead from Chatbot',
+              html: `<h2>New lead captured via chatbot</h2>
+<p><strong>User message:</strong> ${text}</p>
+<hr />
+<h3>Full Conversation</h3>
+<pre style="background:#f4f4f4;padding:12px;border-radius:6px;white-space:pre-wrap">${chatHistory}</pre>`,
             });
             console.log('Successfully sent lead to email.');
           } catch (err) {
