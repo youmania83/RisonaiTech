@@ -25,13 +25,13 @@ export const metadata: Metadata = {
       "The prioritisation framework 40+ Indian businesses use to pick the right automation workflows and see ROI in under 90 days.",
     url: "https://risonaitech.com/blog/ai-automation-for-indian-smes",
     type: "article",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Automation for Indian SMEs: What Actually Works in 2026",
     description: "The framework 40+ Indian businesses use to pick automation workflows and see ROI in under 90 days.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

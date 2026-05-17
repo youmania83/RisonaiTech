@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     description:
       "Tell us what you're building. We'll send a fixed-price proposal within 48 hours.",
     url: "https://risonaitech.com/contact",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact RisonAI Tech | Free Strategy Call",
     description: "Book a free 30-min call. Fixed-price proposal in 48 hours. AI automation, SaaS, CRM for Indian businesses.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

@@ -137,18 +137,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${BASE_URL}/locations/delhi`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/locations/gurgaon`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    // NOTE: /locations/delhi and /locations/gurgaon are 301 redirect pages
+    // pointing to /delhi and /gurgaon respectively. Redirect source URLs are
+    // intentionally excluded from the sitemap to avoid crawl budget waste
+    // and duplicate-URL signals in Google Search Console.
 
     // ── Legal ─────────────────────────────────────────────────────
     {

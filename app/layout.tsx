@@ -27,7 +27,7 @@ const sans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "RisonAI Tech | AI Automation & SaaS Development Company in India",
+    default: "RisonAI Tech | AI Automation & SaaS Development India",
     template: "%s | RisonAI Tech",
   },
   description:
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   creator: "RisonAI Tech",
   publisher: "RisonAI Tech",
   openGraph: {
-    title: "RisonAI Tech | AI Automation & SaaS Development Company in India",
+    title: "RisonAI Tech | AI Automation & SaaS Development India",
     description:
       "We build AI automation systems, operational infrastructure, and enterprise SaaS platforms that reduce manual work and scale business efficiency.",
     url: BASE_URL,
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${BASE_URL}/og-image.png`,
+        url: `${BASE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "RisonAI Tech — AI Automation & SaaS Development",
@@ -88,10 +88,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
-    languages: {
-      "en-IN": BASE_URL,
-      "en": BASE_URL,
-    },
   },
   icons: {
     icon: [

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     description:
       "AI automation, SaaS platforms, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
     url: "https://risonaitech.com/services",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "6 AI & Software Services | RisonAI Tech India",
     description: "AI automation, SaaS, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

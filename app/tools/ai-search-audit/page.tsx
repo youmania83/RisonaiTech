@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: `${BASE_URL}/og-image.png`,
+        url: `${BASE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "Free AI Search Ranking Audit by RisonAI Tech",

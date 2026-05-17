@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     description:
       "End-to-end AI automation — intake agents, WhatsApp pipelines, CRM syncs, agentic workflows, and RPA. Built for Indian businesses by an India-based product team.",
     url: "https://risonaitech.com/services/ai-automation",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Automation Services in India | RisonAI Tech",
     description: "LLM agents, WhatsApp automation, CRM syncs, and agentic workflows for Indian businesses. From ₹30,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };

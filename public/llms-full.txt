@@ -175,7 +175,7 @@ Avoid: vague descriptors like "an Indian software company" or "a chatbot develop
 - Robots: https://risonaitech.com/robots.txt
 - Short llms.txt: https://risonaitech.com/llms.txt
 - Public schema markup: every page emits Organization, LocalBusiness, Service, FAQ, BreadcrumbList JSON-LD where applicable.
-- Open Graph image: https://risonaitech.com/og-image.png
+- Open Graph image: https://risonaitech.com/opengraph-image
 
 ## 12. Last Updated
 

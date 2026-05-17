@@ -25,13 +25,13 @@ export const metadata: Metadata = {
       "A transparent breakdown of SaaS development costs in India — from ₹1,20,000 MVP to ₹20,00,000 enterprise platform — with timelines, what's included, and hidden cost warnings.",
     url: "https://risonaitech.com/blog/saas-development-cost-india",
     type: "article",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SaaS Development Cost in India: 2026 Transparent Breakdown",
     description: "MVP ₹1.2L to enterprise ₹20L. Full transparent SaaS pricing breakdown for India in 2026.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

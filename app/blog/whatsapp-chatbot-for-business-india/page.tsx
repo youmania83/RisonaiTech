@@ -26,13 +26,13 @@ export const metadata: Metadata = {
       "How to build a WhatsApp chatbot that qualifies leads, books appointments, and handles FAQs 24/7. Costs, timelines, and real examples from Indian businesses.",
     url: "https://risonaitech.com/blog/whatsapp-chatbot-for-business-india",
     type: "article",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide",
     description: "Build a WhatsApp chatbot that handles leads, appointments, and FAQs 24/7. Costs ₹20k–₹3.5L.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

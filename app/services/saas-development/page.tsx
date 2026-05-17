@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     description:
       "Production-ready multi-tenant SaaS — billing-integrated, AI-powered, fully owned by you. From MVP in 6–10 weeks to enterprise platforms in 16–24 weeks.",
     url: "https://risonaitech.com/services/saas-development",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SaaS Development Company India | RisonAI Tech",
     description: "Multi-tenant SaaS MVP to enterprise. Fixed price, full code ownership. From ₹1,20,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };

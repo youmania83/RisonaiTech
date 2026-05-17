@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     description:
       "Custom CRM systems and AI-enhanced HubSpot / Zoho integrations for healthcare, real estate, and service businesses. WhatsApp + CRM + AI.",
     url: "https://risonaitech.com/services/crm-development",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom CRM Development India | RisonAI Tech",
     description: "Custom CRM + WhatsApp + AI for healthcare and real estate. From ₹40,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };

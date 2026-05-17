@@ -31,6 +31,13 @@ const nextConfig: NextConfig = {
   // Permanent redirects — consolidate all traffic to canonical non-www HTTPS
   async redirects() {
     return [
+      // http → https (belt-and-suspenders; Vercel also enforces this at edge)
+      {
+        source: "/:path*",
+        has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
+        destination: "https://risonaitech.com/:path*",
+        permanent: true,
+      },
       // www → non-www (301 permanent)
       {
         source: "/:path*",

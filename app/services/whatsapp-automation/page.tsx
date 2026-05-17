@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     description:
       "Automate lead capture, customer support, and follow-ups on WhatsApp with CRM-integrated workflows on the official Business API.",
     url: "https://risonaitech.com/services/whatsapp-automation",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "WhatsApp Automation India | RisonAI Tech",
     description: "Official WhatsApp Business API automation: lead capture, CRM sync, and 24/7 support bots. From ₹25,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };

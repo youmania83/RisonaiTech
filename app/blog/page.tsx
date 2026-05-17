@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     description:
       "Practical guides on AI automation, SaaS development, and chatbot deployment for Indian businesses.",
     url: "https://risonaitech.com/blog",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Automation & SaaS Blog | RisonAI Tech",
     description: "Practical guides on AI automation, WhatsApp chatbots, SaaS dev costs, and CRM integration for Indian businesses.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 

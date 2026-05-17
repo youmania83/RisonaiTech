@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     description:
       "Premium Next.js websites engineered for Core Web Vitals, AI-search visibility, and conversions — from focused landing pages to multi-page business websites.",
     url: "https://risonaitech.com/services/website-development",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Website Development India | RisonAI Tech",
     description: "Fast, SEO + AI-search optimized Next.js websites for Indian businesses. From ₹35,000.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
 };

@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     description:
       "Startup-focused AI and SaaS implementation for Gurgaon product teams — from MVP to multi-tenant scale.",
     url: "https://risonaitech.com/gurgaon",
-    images: [{ url: "https://risonaitech.com/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI & SaaS Development in Gurgaon | RisonAI Tech",
     description: "AI automation, SaaS MVPs, CRM & chatbots for Gurgaon startups and scaling tech companies. Fixed-price delivery.",
-    images: ["https://risonaitech.com/og-image.png"],
+    images: ["https://risonaitech.com/opengraph-image"],
   },
 };
 
