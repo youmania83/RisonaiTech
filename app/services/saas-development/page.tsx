@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -307,7 +308,7 @@ export default function SaasDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              MVP from ₹1,20,000 · Full SaaS from ₹3,00,000 · Headquartered in Panipat, Delhi NCR
+              MVP from <PriceTag service="saas" /> · Full SaaS from <PriceTag service="saas" variant="range" /> · Headquartered in Panipat, Delhi NCR
             </p>
           </div>
         </div>

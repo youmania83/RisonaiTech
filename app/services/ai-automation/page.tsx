@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -315,7 +316,7 @@ export default function AIAutomationPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              Pricing from ₹30,000 · Delivery in 2–8 weeks · Headquartered in Panipat, serving Delhi NCR
+              Pricing from <PriceTag service="ai-automation" /> · Delivery in 2–8 weeks · Headquartered in Panipat, serving Delhi NCR
             </p>
           </div>
         </div>

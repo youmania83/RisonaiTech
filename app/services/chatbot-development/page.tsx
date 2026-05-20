@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -269,7 +270,7 @@ export default function ChatbotDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              From ₹20,000 · WhatsApp + Website · English + Hindi · Headquartered in Panipat
+              From <PriceTag service="chatbot" /> · WhatsApp + Website · English + Hindi · Headquartered in Panipat
             </p>
           </div>
         </div>

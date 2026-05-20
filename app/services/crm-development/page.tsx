@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -287,7 +288,7 @@ export default function CRMDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              From ₹40,000 · CRM + WhatsApp + AI · Headquartered in Panipat, Delhi NCR
+              From <PriceTag service="crm" /> · CRM + WhatsApp + AI · Headquartered in Panipat, Delhi NCR
             </p>
           </div>
         </div>

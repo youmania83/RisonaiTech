@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -271,7 +272,7 @@ export default function WhatsAppAutomationPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              From ₹25,000 · 2–6 week rollout · API + CRM integration
+              From <PriceTag service="whatsapp" /> · 2–6 week rollout · API + CRM integration
             </p>
           </div>
         </div>

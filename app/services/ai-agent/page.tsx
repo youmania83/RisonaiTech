@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -228,7 +229,7 @@ export default function AIAgentPage() {
             <p className="mt-6 text-xl text-white/60">
               We build production-grade AI agents — from single-purpose task automation to
               multi-agent systems that handle complex end-to-end workflows without human supervision.
-              Fixed price. Full code ownership. From ₹40,000.
+              Fixed price. Full code ownership. From <PriceTag service="ai-agent" />.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">

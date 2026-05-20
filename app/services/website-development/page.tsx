@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import {
   CheckCircle2,
   ArrowRight,
@@ -301,7 +302,7 @@ export default function WebsiteDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              From ₹35,000 · 2–8 week delivery · SEO + GEO + performance focused
+              From <PriceTag service="website" /> · 2–8 week delivery · SEO + GEO + performance focused
             </p>
           </div>
         </div>
