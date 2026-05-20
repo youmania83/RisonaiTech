@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Vercel automatically injects x-vercel-ip-country on their Edge Network.
   // Falls back to "IN" (India) for local dev / unknown.
   const country =
