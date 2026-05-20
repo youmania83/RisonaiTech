@@ -3,7 +3,7 @@ import { testimonials } from "@/lib/constants";
 
 export default function Testimonials() {
   return (
-    <section className="section-pad" style={{ backgroundColor: "#05070F" }}>
+    <section className="section-pad cv-auto" style={{ backgroundColor: "#05070F" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-14 max-w-xl text-center">

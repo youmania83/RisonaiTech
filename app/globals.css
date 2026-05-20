@@ -87,6 +87,12 @@
     @apply py-20 sm:py-28 lg:py-36;
   }
 
+  /* ── Content-visibility: skip off-screen rendering until near viewport ── */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 700px;
+  }
+
   /* ── Subtle grid texture ── */
   .bg-grid {
     background-image:
@@ -124,8 +130,6 @@
     background: rgba(255, 255, 255, 0.028);
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 20px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     transition:
       background 0.4s var(--ease-out-expo),
       border-color 0.4s var(--ease-out-expo),
@@ -195,7 +199,6 @@
   /* ── Reveal ── */
   .reveal {
     animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
-    will-change: opacity, transform;
   }
 
   @keyframes revealUp {
@@ -215,7 +218,6 @@
     opacity: 0;
     transform: translate3d(0, 28px, 0);
     animation: heroFadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    will-change: opacity, transform;
   }
 
   @keyframes heroFadeUp {
@@ -407,7 +409,6 @@
 
 .animate-gradient {
   animation: gradientMove 16s ease-in-out infinite;
-  will-change: transform;
 }
 
 /* ─── Premium shimmer ─────────────────────────────────────────────────────────── */
@@ -424,7 +425,6 @@
 
 .glow-pulse {
   animation: glowPulse 4s ease-in-out infinite;
-  will-change: opacity;
 }
 
 /* ─── Float ─────────────────────────────────────────────────────────────────── */

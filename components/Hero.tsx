@@ -78,21 +78,15 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-violet-950 to-fuchsia-950 opacity-50" />
       </div>
 
-      {/* Primary glow — center (reduced blur radius for paint performance) */}
+      {/* Primary + secondary glow — pure radial gradients, no CSS filter blur (avoids two
+          compositing layers and the expensive Gaussian blur during initial paint) */}
       <div
         aria-hidden
-        className="glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px]"
+        className="glow-pulse pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(99,91,255,0.22) 0%, rgba(14,165,233,0.08) 50%, transparent 70%)",
+            "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(99,91,255,0.18) 0%, rgba(14,165,233,0.06) 45%, transparent 70%), radial-gradient(ellipse 40% 40% at 85% 10%, rgba(14,165,233,0.18) 0%, transparent 60%)",
         }}
-      />
-
-      {/* Secondary glow — top right */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full blur-[60px] opacity-25"
-        style={{ background: "rgba(14,165,233,0.35)" }}
       />
 
       {/* Lottie AI Flow — deferred, off the critical path */}

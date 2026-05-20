@@ -6,7 +6,7 @@ import { services } from "@/lib/constants";
 
 export default function Services() {
   return (
-    <section className="section-pad bg-grid" id="services-overview" style={{ backgroundColor: "#090C18" }}>
+    <section className="section-pad bg-grid cv-auto" id="services-overview" style={{ backgroundColor: "#090C18" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">

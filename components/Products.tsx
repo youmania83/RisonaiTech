@@ -7,7 +7,7 @@ import { products } from "@/lib/constants";
 
 export default function Products() {
   return (
-    <section className="section-pad" style={{ backgroundColor: "#090C18" }}>
+    <section className="section-pad cv-auto" style={{ backgroundColor: "#090C18" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mb-16 max-w-xl">

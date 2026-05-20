@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CaseStudies() {
   return (
-    <section className="section-pad bg-grid" id="case-studies" style={{ backgroundColor: "#05070F" }}>
+    <section className="section-pad bg-grid cv-auto" id="case-studies" style={{ backgroundColor: "#05070F" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
