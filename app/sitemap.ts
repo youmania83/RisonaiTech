@@ -94,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${BASE_URL}/blog/ai-employee-never-sleeps`,
+      lastModified: new Date("2026-05-20"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/blog/ai-automation-for-indian-smes`,
       lastModified: new Date("2026-05-12"),
       changeFrequency: "monthly",

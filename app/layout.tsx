@@ -556,8 +556,9 @@ export default function RootLayout({
   return (
     <html className={`${display.variable} ${sans.variable}`} lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* next/font/google self-hosts the typeface files at /_next/static —
+            no third-party preconnects required. Removing them eliminates two
+            entries from the network dependency tree. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

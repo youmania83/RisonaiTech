@@ -35,6 +35,15 @@ export const metadata: Metadata = {
 
 export const posts = [
   {
+    slug: "ai-employee-never-sleeps",
+    title: "The Employee Who Never Sleeps: How AI Saves Indian Owners Lakhs Every Year",
+    excerpt:
+      "Three real stories of Indian business owners who replaced ₹5–15 lakh/year of repetitive work with an AI employee that never sleeps, never asks for a hike, never quits — and finally let them take a real holiday.",
+    date: "2026-05-20",
+    readTime: "9 min read",
+    category: "Story",
+  },
+  {
     slug: "ai-automation-for-indian-smes",
     title: "AI Automation for Indian SMEs: What Actually Works in 2025",
     excerpt:

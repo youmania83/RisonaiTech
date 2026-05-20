@@ -169,6 +169,71 @@ export default function HomePage() {
       <Testimonials />
       <LeadMagnet />
 
+      {/* Storytelling teaser — "The employee who never sleeps" */}
+      <section className="py-20" style={{ backgroundColor: "#05070F" }}>
+        <div className="container-site">
+          <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
+            <div>
+              <span className="label-pill mb-4 inline-flex">A short story</span>
+              <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl leading-tight">
+                The employee who{" "}
+                <span className="grad-text">never sleeps</span>.
+              </h2>
+              <p className="mt-4 text-white/60 leading-relaxed">
+                He doesn&apos;t ask for a salary hike. He doesn&apos;t take chai
+                breaks. He doesn&apos;t resign on a Friday evening. He replies to
+                a lead at 2:47 AM while you&apos;re in Manali — and books the
+                site visit before you wake up.
+              </p>
+              <p className="mt-3 text-white/60 leading-relaxed">
+                No PF. No TDS u/s 192. No bonus liability. No data leak risk.
+                Just one quiet AI workflow that absorbs ₹5 lakh of yearly work
+                for less than one month of a junior&apos;s salary.
+              </p>
+              <Link
+                href="/blog/ai-employee-never-sleeps"
+                className="mt-6 inline-flex items-center gap-2 btn-primary"
+              >
+                Read three real stories <ArrowRight size={15} />
+              </Link>
+            </div>
+
+            <div
+              className="rounded-2xl p-6"
+              style={{
+                background: "rgba(99,91,255,0.06)",
+                border: "1px solid rgba(99,91,255,0.18)",
+              }}
+            >
+              <p className="text-xs font-bold uppercase tracking-widest text-[#a78bfa] mb-4">
+                Human vs AI employee
+              </p>
+              <ul className="space-y-3 text-sm text-white/75">
+                {[
+                  "Works 24x7x365 — Diwali, Sunday, 2 AM",
+                  "No salary hike conversation, ever",
+                  "No TDS, no PF, no ESIC, no gratuity",
+                  "No recruitment, no notice period, no attrition",
+                  "Loyal by design — runs in your own cloud",
+                  "You finally take a real holiday",
+                ].map((point) => (
+                  <li key={point} className="flex items-start gap-2.5">
+                    <CheckCircle2
+                      className="text-[#a78bfa] mt-0.5 flex-shrink-0"
+                      size={16}
+                    />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-xs text-white/40">
+                Most owners break even in under 90 days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">

@@ -72,9 +72,14 @@ export default function Products() {
                       <Link
                         className="mt-7 inline-flex w-fit items-center gap-1.5 text-sm font-semibold transition-colors hover:opacity-70"
                         href="/products"
+                        // Accessible name includes the product title so the link
+                        // is descriptive for screen readers + Lighthouse SEO.
+                        aria-label={`Learn more about ${product.title}`}
                         style={{ color: product.textLight || product.color }}
                       >
-                        Learn more <ArrowUpRight size={14} />
+                        <span aria-hidden="true">Learn more</span>
+                        <span className="sr-only">about {product.title}</span>
+                        <ArrowUpRight size={14} aria-hidden="true" />
                       </Link>
                     </div>
                     {/* Image */}
@@ -83,7 +88,10 @@ export default function Products() {
                         alt={product.title}
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                         fill
-                        priority={i === 0}
+                        // Products live below the fold; the actual LCP element is the
+                        // hero headline. Lazy-loading here keeps the preload queue
+                        // clear for the real LCP candidate.
+                        loading="lazy"
                         quality={70}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         src={product.image}

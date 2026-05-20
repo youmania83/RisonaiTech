@@ -121,10 +121,16 @@ export default function ProductsPage() {
                       </div>
                       <div className="mt-6 flex-1" />
                       <button
+                        type="button"
                         className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
+                        // Accessible name includes the product title so the
+                        // control is descriptive for assistive tech + crawlers.
+                        aria-label={`Learn more about ${product.title}`}
                         style={{ color: product.textLight || product.color }}
                       >
-                        Learn more <ArrowUpRight size={14} />
+                        <span aria-hidden="true">Learn more</span>
+                        <span className="sr-only">about {product.title}</span>
+                        <ArrowUpRight size={14} aria-hidden="true" />
                       </button>
                     </div>
                   </div>

@@ -2,17 +2,18 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
+// Lottie + its JSON are deferred behind dynamic import + idle callback so they
+// never block LCP. Component only mounts once `animationData` is fetched.
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const stats = [
-  { title: "Manual Hours Saved", value: "10,000+" },
-  { title: "Operational Efficiency", value: "3× Faster" },
-  { title: "System Uptime", value: "99.9%" },
+  { title: "Products Shipped", value: "40+" },
+  { title: "AI Efficiency", value: "3× Faster" },
+  { title: "Uptime SLA", value: "99.9%" },
 ];
 
 export default function Hero() {
@@ -21,7 +22,15 @@ export default function Hero() {
   useEffect(() => {
     let cancelled = false;
 
-    // Defer Lottie load until browser is idle to protect LCP
+    // Skip Lottie entirely if user prefers reduced motion
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
     const loadLottie = () => {
       if (cancelled) return;
       fetch("/lottie/hero.json")
@@ -31,11 +40,6 @@ export default function Hero() {
         })
         .catch(() => {});
     };
-
-    // Skip Lottie entirely if user prefers reduced motion
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
 
     const w = window as Window & {
       requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
@@ -61,6 +65,7 @@ export default function Hero() {
       {/* Grid background */}
       <div
         className="pointer-events-none absolute inset-0"
+        aria-hidden
         style={{
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px)",
@@ -75,19 +80,24 @@ export default function Hero() {
 
       {/* Primary glow — center (reduced blur radius for paint performance) */}
       <div
+        aria-hidden
         className="glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px]"
-        style={{ background: "radial-gradient(circle, rgba(99,91,255,0.22) 0%, rgba(14,165,233,0.08) 50%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(99,91,255,0.22) 0%, rgba(14,165,233,0.08) 50%, transparent 70%)",
+        }}
       />
 
-      {/* Secondary glow — top right (reduced blur radius) */}
+      {/* Secondary glow — top right */}
       <div
+        aria-hidden
         className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full blur-[60px] opacity-25"
         style={{ background: "rgba(14,165,233,0.35)" }}
       />
 
-      {/* Lottie AI Flow */}
+      {/* Lottie AI Flow — deferred, off the critical path */}
       {animationData ? (
-        <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-screen">
+        <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-screen" aria-hidden>
           <Lottie
             animationData={animationData}
             loop
@@ -100,6 +110,7 @@ export default function Hero() {
 
       {/* Vignette — edge darkening */}
       <div
+        aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
@@ -109,73 +120,62 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container-site relative z-10 w-full py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6 flex flex-wrap items-center gap-3"
-        >
+        <div className="hero-fade-up mb-6 flex flex-wrap items-center gap-3" style={{ animationDelay: "0s" }}>
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/70">
             Trusted by 40+ Indian Businesses
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-            Accepting new enterprise partners
+            3 client slots open this month
           </span>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+        <h1
+          className="hero-fade-up font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          style={{ animationDelay: "0.08s" }}
         >
-          AI Automation Systems <br />
+          Build Systems. <br />
           <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
-            That Scale Business Efficiency.
+            Automate Growth.
           </span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
+        <p
+          className="hero-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/70"
+          style={{ animationDelay: "0.18s" }}
         >
-          We build AI-powered workflows, automation systems, AI agents, and operational infrastructure that reduce manual work, improve response time, and scale business operations for high-growth companies.
-        </motion.p>
+          We design AI-powered websites and automation systems that generate
+          leads, respond instantly, and scale your business without manual
+          effort.
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-9 flex flex-wrap gap-4"
+        <div
+          className="hero-fade-up mt-9 flex flex-wrap gap-4"
+          style={{ animationDelay: "0.3s" }}
         >
           <LiquidButton size="xxl" asChild>
             <Link href="/contact">
-              Book AI Systems Strategy
+              Book AI Consultation
               <ArrowRight size={18} />
             </Link>
           </LiquidButton>
 
           <Link
-            href="/services/ai-automation"
+            href="/products"
             className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
           >
             <Play size={14} className="fill-white" />
-            View Automation Systems
+            View Demo
           </Link>
-        </motion.div>
+        </div>
 
         <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
           {stats.map((item, i) => (
-            <motion.div
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 + i * 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-2xl p-6"
+              className="hero-fade-up group relative overflow-hidden rounded-2xl p-6"
               style={{
+                animationDelay: `${0.45 + i * 0.1}s`,
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
@@ -183,6 +183,7 @@ export default function Hero() {
             >
               {/* Hover glow */}
               <div
+                aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
                   background:
@@ -204,7 +205,7 @@ export default function Hero() {
               >
                 {item.value}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -222,12 +223,12 @@ export default function Hero() {
             Built for
           </span>
           {[
-            "Enterprise Operations",
-            "Healthcare Networks",
-            "Scaling Startups",
+            "Healthcare Founders",
             "Real Estate Firms",
-            "SaaS Companies",
-            "Logistics Teams",
+            "SaaS Startups",
+            "D2C Brands",
+            "Clinic Chains",
+            "PropTech Teams",
           ].map((name, i) => (
             <span key={name} className="flex items-center gap-2">
               {i > 0 && (
