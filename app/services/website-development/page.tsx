@@ -18,31 +18,37 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Website Development India — Fast, SEO-Optimized Websites for Growth",
+  title: "AI-Ready Website Development India — GEO, AEO & Core Web Vitals From ₹35,000",
   description:
-    "RisonAI Tech builds high-performance Next.js websites for Indian startups and SMBs — Core Web Vitals, AI-search ready, conversion-focused. From ₹35,000. Delhi NCR.",
+    "RisonAI Tech builds AI-search-ready Next.js websites for Indian startups and SMBs — GEO (Generative Engine Optimization), AEO, Core Web Vitals, conversion-focused. Rank on Google AND ChatGPT/Perplexity. From ₹35,000.",
   keywords: [
     "website development company India",
+    "AI-ready website development India",
     "Next.js website development India",
-    "SEO website development Delhi",
-    "AI search optimization India",
     "GEO generative engine optimization India",
-    "conversion focused website development",
-    "high performance website development",
+    "AEO answer engine optimization India",
+    "AI search optimization India",
+    "SEO website development Delhi",
     "Core Web Vitals optimization India",
+    "conversion focused website development India",
+    "high performance website India",
+    "LLM-optimized website India",
+    "Perplexity optimization India",
+    "ChatGPT SEO India",
+    "AI visibility website India",
   ],
   alternates: { canonical: "/services/website-development" },
   openGraph: {
-    title: "Website Development India | RisonAI Tech",
+    title: "AI-Ready Website Development India | GEO, AEO & Core Web Vitals | RisonAI Tech",
     description:
-      "Premium Next.js websites engineered for Core Web Vitals, AI-search visibility, and conversions — from focused landing pages to multi-page business websites.",
+      "Premium Next.js websites built for AI search (GEO/AEO) + Google — Core Web Vitals, conversion-focused, AI-citation ready. Rank on ChatGPT, Perplexity, and Google. From ₹35,000.",
     url: "https://risonaitech.com/services/website-development",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development India | RisonAI Tech",
-    description: "Fast, SEO + AI-search optimized Next.js websites for Indian businesses. From ₹35,000.",
+    title: "AI-Ready Website Development India | GEO, AEO & Core Web Vitals | RisonAI Tech",
+    description: "Next.js websites optimized for Google + AI search (GEO/AEO). Core Web Vitals, conversions. From ₹35,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],

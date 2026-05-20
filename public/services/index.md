@@ -1,8 +1,8 @@
 ---
-title: "Services — AI Automation, SaaS, CRM & Chatbot Development"
-description: "RisonAI Tech offers AI automation, SaaS development, CRM development, AI chatbot development, and web application development for businesses across India."
+title: "Services — AI Automation, AI Agents, CRM & Chatbot Development"
+description: "RisonAI Tech offers AI automation, AI agent development, CRM development, AI chatbot development, and web application development for businesses across India."
 url: "https://risonaitech.com/services"
-last_updated: "2026-04-19"
+last_updated: "2026-05-19"
 ---
 
 ## Services Overview
@@ -12,10 +12,10 @@ End-to-end AI automation — LLM intake agents, WhatsApp pipelines, CRM syncs.
 Pricing: Rs 30,000 – Rs 6,00,000.
 URL: https://risonaitech.com/services/ai-automation
 
-### SaaS Platform Development
-Multi-tenant SaaS with billing, admin dashboards, and AI integrations.
-Pricing: Rs 1,20,000 – Rs 20,00,000.
-URL: https://risonaitech.com/services/saas-development
+### AI Agent Development
+Autonomous AI agents — multi-step reasoning, tool-use, RAG knowledge agents, multi-agent systems.
+Pricing: Rs 40,000 – Rs 5,00,000.
+URL: https://risonaitech.com/services/ai-agent
 
 ### CRM Development and Integration
 Custom CRM platforms and AI-enhanced CRM extensions (HubSpot, Zoho).

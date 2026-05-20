@@ -18,30 +18,36 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Automation India — Lead Capture, CRM, and Support Workflows",
+  title: "WhatsApp AI Automation India — Agentic WhatsApp Bots & CRM Workflows From ₹25,000",
   description:
-    "RisonAI Tech builds intelligent WhatsApp automation systems on the official Business API for lead capture, customer support, and CRM workflows. From ₹25,000. Delhi NCR.",
+    "RisonAI Tech builds AI-powered WhatsApp automation on the official Business API — agentic lead capture bots, CRM sync, intelligent customer support, and broadcast campaigns for Indian businesses. From ₹25,000.",
   keywords: [
     "WhatsApp automation India",
+    "WhatsApp AI automation India",
+    "WhatsApp agentic bot India",
     "WhatsApp Business API automation",
     "WhatsApp chatbot development India",
-    "WhatsApp CRM integration",
-    "lead capture automation WhatsApp",
-    "WhatsApp commerce automation",
+    "WhatsApp CRM integration India",
+    "lead capture automation WhatsApp India",
+    "WhatsApp commerce automation India",
     "WhatsApp BSP integration India",
+    "AI WhatsApp bot India",
+    "WhatsApp drip campaign India",
+    "WhatsApp lead generation India",
+    "WhatsApp marketing automation India",
   ],
   alternates: { canonical: "/services/whatsapp-automation" },
   openGraph: {
-    title: "WhatsApp Automation India | RisonAI Tech",
+    title: "WhatsApp AI Automation India | Agentic Bots & CRM Workflows | RisonAI Tech",
     description:
-      "Automate lead capture, customer support, and follow-ups on WhatsApp with CRM-integrated workflows on the official Business API.",
+      "AI-powered WhatsApp automation — agentic lead capture, CRM sync, intelligent support bots, and broadcast campaigns on the official Business API. From ₹25,000.",
     url: "https://risonaitech.com/services/whatsapp-automation",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp Automation India | RisonAI Tech",
-    description: "Official WhatsApp Business API automation: lead capture, CRM sync, and 24/7 support bots. From ₹25,000.",
+    title: "WhatsApp AI Automation India | Agentic Bots & CRM Workflows | RisonAI Tech",
+    description: "AI-powered WhatsApp Business API: agentic lead bots, CRM sync, 24/7 support automation. From ₹25,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],

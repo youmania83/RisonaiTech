@@ -187,6 +187,47 @@ function WhatsAppIcon() {
   );
 }
 
+// AI Agent Development — interconnected agent nodes with reasoning arcs
+function AIAgentIcon() {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" className="h-14 w-14">
+      {/* Central agent node */}
+      <motion.rect
+        x="24" y="22" width="16" height="16" rx="4"
+        stroke={ACCENT} strokeWidth="1.5" fill="none"
+        animate={{ opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+      />
+      {/* Brain symbol inside */}
+      <circle cx="32" cy="30" r="3" fill={ACCENT} opacity={0.85} />
+      {/* Tool node — top */}
+      <circle cx="32" cy="8" r="4" stroke={ACCENT2} strokeWidth="1.2" fill="none" />
+      <motion.line x1="32" y1="12" x2="32" y2="22" stroke={ACCENT2} strokeWidth="1"
+        strokeDasharray="3 2"
+        animate={{ opacity: [0.3, 1, 0.3] }}
+        transition={{ duration: 1.6, repeat: Infinity, delay: 0 }} />
+      {/* Tool node — bottom-left */}
+      <circle cx="14" cy="50" r="4" stroke={ACCENT3} strokeWidth="1.2" fill="none" />
+      <motion.line x1="18" y1="47" x2="25" y2="38" stroke={ACCENT3} strokeWidth="1"
+        strokeDasharray="3 2"
+        animate={{ opacity: [0.3, 1, 0.3] }}
+        transition={{ duration: 1.6, repeat: Infinity, delay: 0.5 }} />
+      {/* Tool node — bottom-right */}
+      <circle cx="50" cy="50" r="4" stroke={ACCENT} strokeWidth="1.2" fill="none" opacity={0.7} />
+      <motion.line x1="46" y1="47" x2="39" y2="38" stroke={ACCENT} strokeWidth="1"
+        strokeDasharray="3 2"
+        animate={{ opacity: [0.3, 1, 0.3] }}
+        transition={{ duration: 1.6, repeat: Infinity, delay: 1 }} />
+      {/* Rotating orbit */}
+      <motion.circle cx="32" cy="30" r="14" stroke={ACCENT} strokeWidth="0.8"
+        strokeDasharray="4 6" fill="none"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        style={{ transformOrigin: "32px 30px" }} />
+    </svg>
+  );
+}
+
 // ─── Map service id → icon component ─────────────────────────────────────────
 const iconMap: Record<string, React.FC> = {
   "web-app": WebAppIcon,
@@ -195,6 +236,7 @@ const iconMap: Record<string, React.FC> = {
   "website-development": WebsiteIcon,
   "ai-automation": AIAutomationIcon,
   "whatsapp-automation": WhatsAppIcon,
+  "ai-agent": AIAgentIcon,
 };
 
 // Fallback — rotating ring + core for any future services

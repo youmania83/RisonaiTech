@@ -1,11 +1,12 @@
 import { deepseek } from '@ai-sdk/deepseek';
 import { streamText } from 'ai';
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
-export const runtime = 'edge';
+// Note: Using Node.js runtime so nodemailer (SMTP) works reliably
+export const runtime = 'nodejs';
 
-// Simple in-memory rate limiting map for the edge isolate
+// Simple in-memory rate limiting map
 const ipRateLimitMap = new Map<string, { count: number, resetTime: number }>();
 const RATE_LIMIT_MAX_REQUESTS = 10; // Max 10 messages per minute per IP
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
@@ -35,7 +36,7 @@ CRITICAL CONTACT VALIDATION RULES:
 4. Only when the user provides VALID looking contact details for ALL FOUR fields (Name, Email, Phone, Country) should you thank them and confirm that the team has received their details.
 
 Company Info:
-- Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, SaaS Development.
+- Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, AI Agent Development.
 - Location: Panipat, Haryana. Serving Delhi NCR and globally.
 - Founder: Yogesh Kumar Wadhwa
 `;
@@ -48,7 +49,10 @@ function extractEmail(text: string): string | null {
   const m = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
   if (!m) return null;
   const email = m[0];
-  if (/test@|example\.com|fake|^.@/i.test(email)) return null;
+  // Reject obvious dummies; the previous `^.@` rule also rejected legitimate
+  // single-char local parts so we drop it.
+  if (/^(test|fake|asdf|abc|noreply|no-reply)@/i.test(email)) return null;
+  if (/@(example\.com|test\.com|mailinator\.com)$/i.test(email)) return null;
   return email;
 }
 
@@ -177,25 +181,33 @@ export async function POST(req: Request) {
       if (!sentLeadHashes.has(leadKey)) {
         sentLeadHashes.add(leadKey);
 
-        // Best-effort fire-and-forget. We do NOT block the chat stream.
         const chatHistory = cleanMessages
           .map((m) => `${m.role.toUpperCase()}: ${m.content}`)
           .join('\n\n');
 
-        const resendApiKey = process.env.RESEND_API_KEY;
+        const gmailUser = process.env.GMAIL_USER;
+        const gmailPass = process.env.GMAIL_APP_PASSWORD;
+
         console.log('[lead-capture] candidate detected', {
           hasEmail, hasPhone,
           email: lead.email, phone: lead.phone,
           name: lead.name, country: lead.country,
-          resendKeyPresent: !!resendApiKey,
+          gmailConfigured: !!(gmailUser && gmailPass),
           ip,
         });
 
-        if (resendApiKey) {
-          const resend = new Resend(resendApiKey);
-          const payload = {
-            from: 'RisonAI Chatbot <noreply@risonaitech.com>',
-            to: 'hello@risonaitech.com',
+        if (gmailUser && gmailPass) {
+          const toAddress = process.env.RESEND_TO_EMAIL || 'hello@risonaitech.com';
+
+          const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: { user: gmailUser, pass: gmailPass },
+          });
+
+          const mailOptions = {
+            from: `"RisonAI Chatbot" <${gmailUser}>`,
+            to: toAddress,
+            replyTo: lead.email || undefined,
             subject: `🔔 New Lead: ${lead.name || lead.email || lead.phone || 'unknown'}`,
             html: `<h2>New lead captured via chatbot</h2>
 <table style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
@@ -209,21 +221,18 @@ export async function POST(req: Request) {
 <hr />
 <h3>Full Conversation</h3>
 <pre style="background:#f4f4f4;padding:12px;border-radius:6px;white-space:pre-wrap;font-family:Menlo,monospace;font-size:13px">${chatHistory.replace(/</g, '&lt;')}</pre>`,
-          } as const;
+          };
 
-          // Fire-and-forget — don't block the streaming response on email delivery
-          resend.emails.send(payload)
-            .then((res) => {
-              console.log('[lead-capture] resend response', JSON.stringify(res));
-            })
+          // Fire in parallel with the stream — function stays alive during streaming
+          transporter.sendMail(mailOptions)
+            .then(() => console.log('[lead-capture] gmail OK'))
             .catch((err) => {
-              console.error('[lead-capture] resend ERROR', err);
-              // Allow a retry next message if the send failed
-              sentLeadHashes.delete(leadKey);
+              console.error('[lead-capture] gmail EXCEPTION', err);
+              sentLeadHashes.delete(leadKey); // allow retry
             });
         } else {
-          console.error('[lead-capture] RESEND_API_KEY missing — cannot send lead email');
-          sentLeadHashes.delete(leadKey); // allow retry once env is fixed
+          console.error('[lead-capture] GMAIL_USER or GMAIL_APP_PASSWORD missing');
+          sentLeadHashes.delete(leadKey);
         }
       } else {
         console.log('[lead-capture] dedup hit, already sent for', leadKey);

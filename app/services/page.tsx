@@ -8,32 +8,32 @@ import ServiceIcon from "@/components/ServiceIcon";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "6 AI & Software Services for Indian Businesses — Automation, SaaS, CRM, Chatbots",
+  title: "6 AI & Software Services for Indian Businesses — Automation, AI Agents, CRM, Chatbots",
   description:
-    "RisonAI Tech offers 6 core services for Indian businesses: AI automation, agentic AI, SaaS development, CRM solutions, AI chatbots, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
+    "RisonAI Tech offers 6 core services for Indian businesses: AI automation, AI agent development, CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
   keywords: [
     "AI automation services India",
-    "SaaS development services India",
+    "AI agent development India",
     "CRM development India",
     "AI chatbot services India",
     "agentic AI India",
     "software development services Delhi",
     "WhatsApp automation India",
-    "RPA services India",
+    "AI workflow automation India",
   ],
   alternates: { canonical: "/services" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "Services | RisonAI Tech — AI Automation, SaaS & CRM Development",
+    title: "Services | RisonAI Tech — AI Automation, AI Agents & CRM Development",
     description:
-      "AI automation, SaaS platforms, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
+      "AI automation, AI agent development, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
     url: "https://risonaitech.com/services",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "6 AI & Software Services | RisonAI Tech India",
-    description: "AI automation, SaaS, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
+    description: "AI automation, AI agents, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
 };

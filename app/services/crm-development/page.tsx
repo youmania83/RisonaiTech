@@ -18,31 +18,38 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Custom CRM Development India — AI CRM with WhatsApp Integration",
+  title: "AI CRM Development India — Custom CRM with AI Automation & WhatsApp From ₹40,000",
   description:
-    "RisonAI Tech builds custom CRM platforms and AI-enhanced HubSpot / Zoho extensions for healthcare, real estate, and service businesses in India. WhatsApp integration included. From ₹40,000.",
+    "RisonAI Tech builds AI-powered custom CRM platforms and agentic HubSpot / Zoho extensions for healthcare, real estate, and service businesses in India. AI lead scoring, WhatsApp sync. From ₹40,000.",
   keywords: [
     "custom CRM development India",
-    "CRM development company Delhi",
+    "AI CRM development India",
     "AI CRM automation India",
+    "CRM development company Delhi",
     "CRM with WhatsApp integration India",
+    "AI lead scoring CRM India",
+    "agentic CRM India",
     "healthcare CRM India",
-    "real estate CRM development",
+    "real estate CRM development India",
     "HubSpot customisation India",
     "Zoho CRM integration India",
+    "Salesforce integration India",
+    "CRM automation India",
+    "AI sales automation India",
+    "AI pipeline management India",
   ],
   alternates: { canonical: "/services/crm-development" },
   openGraph: {
-    title: "Custom CRM Development India | RisonAI Tech",
+    title: "AI CRM Development India | Agentic CRM & WhatsApp Automation | RisonAI Tech",
     description:
-      "Custom CRM systems and AI-enhanced HubSpot / Zoho integrations for healthcare, real estate, and service businesses. WhatsApp + CRM + AI.",
+      "AI-powered custom CRM platforms and agentic HubSpot / Zoho integrations — AI lead scoring, WhatsApp sync, pipeline automation for healthcare, real estate, and service businesses. From ₹40,000.",
     url: "https://risonaitech.com/services/crm-development",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom CRM Development India | RisonAI Tech",
-    description: "Custom CRM + WhatsApp + AI for healthcare and real estate. From ₹40,000.",
+    title: "AI CRM Development India | Agentic CRM & WhatsApp Automation | RisonAI Tech",
+    description: "AI-powered CRM + WhatsApp + agentic automation for healthcare and real estate. From ₹40,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -516,8 +523,8 @@ export default function CRMDevelopmentPage() {
             <Link className="btn-outline text-sm" href="/services/chatbot-development">
               AI Chatbot Development
             </Link>
-            <Link className="btn-outline text-sm" href="/services/saas-development">
-              SaaS Development
+            <Link className="btn-outline text-sm" href="/services/ai-agent">
+              AI Agent Development
             </Link>
             <Link className="btn-outline text-sm" href="/#case-studies">
               Case Studies

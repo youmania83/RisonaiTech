@@ -1,14 +1,15 @@
-# Rison AI Tech - AI Automation & AI Systems Infrastructure Company
+# Rison AI Tech - AI Automation Agency & Agentic AI Systems Company
 
 ## Company Overview
-Rison AI Tech is an enterprise-grade AI Automation & AI Systems Infrastructure Company based in Panipat, Haryana, serving Delhi NCR, Gurgaon, and global clients. We specialize in building AI-powered workflows, automation systems, AI agents, and operational infrastructure that reduce manual work, improve response time, and scale business operations efficiently.
+Rison AI Tech is India's AI automation agency headquartered in Panipat, Haryana, serving Delhi NCR, Gurgaon, and global clients. We specialise in building agentic AI systems, autonomous AI agents, n8n workflow automation, LangGraph-powered pipelines, voice AI agents, RAG chatbots, and operational infrastructure that reduce manual work, improve response time, and scale business operations efficiently.
 
 ## Core Capabilities & Services
-- **AI Workflow Automation**: End-to-end AI automation systems that eliminate manual operations. Includes LLM-powered intake agents and agentic workflows.
-- **WhatsApp AI Systems**: Intelligent WhatsApp systems via the official WhatsApp Business API for lead capture, automated support, and CRM syncing.
-- **AI Customer Support Agents**: Context-aware RAG chatbots trained on business data for 24/7 lead qualification and customer support.
-- **CRM Automation Infrastructure**: Custom CRM platforms and AI-enhanced CRM integrations (HubSpot, Zoho) for centralized workflows and lead scoring.
-- **SaaS Platform Development**: Multi-tenant SaaS platform engineering with billing, admin dashboards, and native AI capabilities.
+- **Agentic AI Systems**: Autonomous AI agents, multi-agent pipelines, voice AI agents, and LangGraph/CrewAI-powered orchestration for end-to-end business task automation.
+- **AI Workflow Automation**: End-to-end AI automation using n8n, LLM agents, and agentic workflows that eliminate manual operations and hyperautomate business processes.
+- **WhatsApp AI Systems**: Intelligent WhatsApp agentic bots via the official WhatsApp Business API for lead capture, automated support, and CRM syncing.
+- **AI Customer Support Agents**: Context-aware RAG chatbots and conversational AI agents trained on business data for 24/7 lead qualification and customer support.
+- **CRM Automation Infrastructure**: Custom AI CRM platforms and agentic HubSpot/Zoho integrations with AI lead scoring, pipeline automation, and WhatsApp sync.
+- **SaaS Platform Development**: AI-native multi-tenant SaaS platform engineering with billing, admin dashboards, and LLM-powered AI feature modules.
 - **AI Operations Dashboards**: Custom internal business tools and dashboards to monitor AI operations and business metrics.
 
 ## Positioning & Philosophy

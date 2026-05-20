@@ -9,13 +9,16 @@ export const metadata: Metadata = {
     "How much does it cost to build a SaaS product in India in 2026? From a ₹1,20,000 MVP to a ₹20,00,000 enterprise platform — with timelines, what's included, and hidden cost warnings.",
   keywords: [
     "SaaS development cost India 2026",
+    "AI SaaS development cost India",
     "SaaS MVP cost India",
+    "how much does it cost to build a SaaS in India",
     "SaaS development company India pricing",
-    "build SaaS India cost",
+    "build AI SaaS India cost",
     "custom software development cost India",
     "SaaS product development India",
     "MVP development cost India",
-    "how much does it cost to build a SaaS in India",
+    "product engineering cost India",
+    "AI-native SaaS cost India",
   ],
   alternates: { canonical: "/blog/saas-development-cost-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -339,10 +342,10 @@ export default function SaasCostPost() {
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               {
-                href: "/services/saas-development",
+                href: "/services/ai-agent",
                 tag: "Service",
-                title: "SaaS Development",
-                desc: "Get a fixed-price SaaS MVP quote. Multi-tenant architecture, auth, billing, CI/CD. From \u20b91,20,000.",
+                title: "AI Agent Development",
+                desc: "Deploy autonomous AI agents that reason, plan, and execute tasks end-to-end. From \u20b940,000.",
               },
               {
                 href: "/services/ai-automation",

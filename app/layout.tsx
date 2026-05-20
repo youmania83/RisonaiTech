@@ -27,44 +27,71 @@ const sans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "RisonAI Tech | AI Automation & SaaS Development India",
+    default: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
     template: "%s | RisonAI Tech",
   },
   description:
-    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency. Serving teams globally from India.",
+    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure to scale business efficiency. Delhi NCR.",
   keywords: [
+    // ── Primary commercial intent ─────────────────────────────────
+    "AI automation agency India",
     "AI automation company India",
-    "SaaS development company Delhi",
+    "agentic AI company India",
+    "AI agents development India",
+    "AI automation services India",
+    "AI implementation partner India",
+    "AI system integrator India",
+    // ── Agentic AI & autonomous systems (trending 2025-26) ────────
+    "autonomous AI agents India",
+    "agentic AI solutions India",
+    "AI agent development company India",
+    "multi-agent AI systems India",
+    "LangGraph development India",
+    "LangChain development India",
+    "n8n automation India",
+    "hyperautomation India",
+    // ── Service-specific ──────────────────────────────────────────
+    "AI workflow automation India",
+    "business process automation AI India",
+    "AI SDR agent India",
+    "voice AI agent India",
+    "intelligent document processing India",
     "AI chatbot development India",
+    "WhatsApp AI automation India",
+    "RAG chatbot India",
+    // ── SaaS & CRM ────────────────────────────────────────────────
+    "SaaS development company India",
+    "AI SaaS development India",
     "custom CRM development India",
-    "AI automation for healthcare",
-    "SaaS development Gurgaon",
+    "AI CRM automation India",
+    "SaaS development Delhi NCR",
+    // ── Local SEO ─────────────────────────────────────────────────
+    "AI automation company Delhi",
+    "AI automation company Gurgaon",
+    "AI agency Delhi NCR",
     "AI systems for startups India",
-    "WhatsApp chatbot development India",
-    "web app development Delhi NCR",
-    "RisonAI Tech",
-    "product engineering India",
-    "AI agency India",
-    "small business AI tools",
-    "Android app development India",
-    "WhatsApp automation India",
-    "AI automation for Indian SMBs",
-    "AI search ranking audit",
-    "AI visibility score",
+    "AI for MSMEs India",
+    "AI for Indian SMBs",
+    // ── GEO / AEO (AI search citations) ──────────────────────────
+    "best AI automation company in India",
+    "how much does AI automation cost India",
+    "AI automation for small business India",
     "Generative engine optimization India",
     "GEO audit tool India",
     "AEO audit India",
-    "ChatGPT SEO checker",
-    "Perplexity ranking checker",
+    "AI visibility score",
     "LLM visibility audit",
+    // ── Brand ─────────────────────────────────────────────────────
+    "RisonAI Tech",
+    "Risonaitech",
   ],
   authors: [{ name: "Yogesh Kumar Wadhwa", url: `${BASE_URL}/about` }],
   creator: "RisonAI Tech",
   publisher: "RisonAI Tech",
   openGraph: {
-    title: "RisonAI Tech | AI Automation & SaaS Development India",
+    title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
     description:
-      "We build AI automation systems, operational infrastructure, and enterprise SaaS platforms that reduce manual work and scale business efficiency.",
+      "India's AI automation agency — we build agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure that reduce manual work and scale business efficiency.",
     url: BASE_URL,
     siteName: "RisonAI Tech",
     locale: "en_IN",
@@ -74,20 +101,25 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "RisonAI Tech — AI Automation & SaaS Development",
+        alt: "RisonAI Tech — India's AI Automation Agency & Agentic AI Systems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RisonAI Tech | AI Automation & SaaS Development India",
+    title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
     description:
-      "AI automation, SaaS development, CRM, and chatbot systems for businesses across India.",
+      "AI automation agency India — agentic AI agents, SaaS development, CRM automation, and AI chatbots for businesses across India.",
     site: "@risonaitech",
     creator: "@risonaitech",
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      "en": BASE_URL,
+      "en-IN": BASE_URL,
+      "x-default": BASE_URL,
+    },
   },
   icons: {
     icon: [
@@ -113,6 +145,29 @@ export const metadata: Metadata = {
   verification: {
     // Add your Google Search Console verification token here
     // google: "YOUR_VERIFICATION_TOKEN",
+    // bing: "YOUR_BING_VERIFICATION_TOKEN",
+  },
+  // ── International & Social Visibility ────────────────────────────────────
+  other: {
+    // OG locale alternates — tells social platforms this content suits global English audiences
+    "og:locale:alternate": ["en_US", "en_GB", "en_AE", "en_SG", "en_AU"],
+    // Mobile branding
+    "theme-color": "#090C18",
+    "msapplication-TileColor": "#090C18",
+    "msapplication-navbutton-color": "#090C18",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-title": "RisonAI Tech",
+    // LinkedIn / Pinterest
+    "linkedin:owner": "risonaitech",
+    // GEO meta (international audience signal)
+    "geo.region": "IN-HR",
+    "geo.placename": "Panipat, Haryana, India",
+    "geo.position": "29.3909;76.9635",
+    ICBM: "29.3909, 76.9635",
+    // Language & content signals for global crawlers
+    "content-language": "en-IN, en",
+    "og:availability": "instock",
   },
 };
 
@@ -123,7 +178,7 @@ const websiteSchema = {
   name: "RisonAI Tech",
   url: BASE_URL,
   description:
-    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency.",
+    "RisonAI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS platforms, and operational infrastructure to scale business efficiency.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -152,7 +207,7 @@ const organizationSchema = {
   },
   image: { "@id": `${BASE_URL}/#logo` },
   description:
-    "RisonAI Tech is an AI Automation & AI Systems Infrastructure Company specializing in operational workflows, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
+    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
   address: {
@@ -164,23 +219,30 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   sameAs: [
-    "https://twitter.com/risonaitech",
-    "https://linkedin.com/company/risonaitech",
+    "https://www.twitter.com/risonaitech",
+    "https://www.linkedin.com/company/risonaitech",
     "https://github.com/risonaitech",
   ],
   foundingDate: "2023",
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
-  areaServed: "India",
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "United Arab Emirates" },
+    { "@type": "Country", name: "Singapore" },
+    { "@type": "Country", name: "Australia" },
+  ],
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": "https://risonaitech.com/#business",
   name: "RisonAI Tech",
   alternateName: "Risonai Tech",
   description:
-    "RisonAI Tech is an AI Automation & AI Systems Infrastructure Company specializing in operational workflows, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
+    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
   url: "https://risonaitech.com",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
@@ -211,13 +273,13 @@ const localBusinessSchema = {
     closes: "19:00",
   },
   sameAs: [
-    "https://twitter.com/risonaitech",
-    "https://linkedin.com/company/risonaitech",
+    "https://www.twitter.com/risonaitech",
+    "https://www.linkedin.com/company/risonaitech",
     "https://github.com/risonaitech",
   ],
   priceRange: "₹₹",
-  currenciesAccepted: "INR",
-  paymentAccepted: "Bank Transfer, UPI, Razorpay",
+  currenciesAccepted: "INR, USD, GBP, AED, SGD",
+  paymentAccepted: "Bank Transfer, UPI, Razorpay, Stripe, Wire Transfer",
 };
 
 const servicesSchema = {
@@ -241,19 +303,19 @@ const servicesSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://risonaitech.com/services/saas-development#service",
-      name: "SaaS Platform Development",
-      serviceType: "Software Development",
+      "@id": "https://risonaitech.com/services/ai-agent#service",
+      name: "AI Agent Development",
+      serviceType: "AI Agent Development",
       description:
-        "End-to-end SaaS platform development — multi-tenant architecture, subscription billing, admin dashboards, and AI feature integration.",
+        "Production-ready autonomous AI agents — multi-step reasoning pipelines, tool-calling agents, RAG knowledge agents, and multi-agent systems.",
       provider: { "@id": "https://risonaitech.com/#business" },
       areaServed: "India",
       offers: {
         "@type": "Offer",
         priceCurrency: "INR",
-        priceRange: "₹1,20,000 – ₹20,00,000",
+        priceRange: "₹40,000 – ₹5,00,000",
       },
-      url: "https://risonaitech.com/services/saas-development",
+      url: "https://risonaitech.com/services/ai-agent",
     },
     {
       "@type": "Service",
@@ -345,20 +407,27 @@ const founderSchema = {
   url: `${BASE_URL}/about`,
   knowsAbout: [
     "AI automation",
+    "Agentic AI systems",
+    "Autonomous AI agents",
+    "n8n workflow automation",
+    "LangGraph development",
+    "LangChain development",
+    "Voice AI agents",
     "WhatsApp Business API",
+    "RAG architecture",
     "SaaS development",
     "Web development",
     "Indian SMB market",
-    "Self-taught programmer",
     "Healthcare technology",
     "CRM systems",
+    "Self-taught programmer",
   ],
   description:
     "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. A self-taught programmer who built AI-powered software products for Indian businesses, bringing an operator's lens to every automation project.",
   sameAs: [
     "https://www.linkedin.com/in/yogesh-wadhwa",
     "https://github.com/youmania83",
-    "https://twitter.com/risonaitech",
+    "https://www.twitter.com/risonaitech",
   ],
 };
 

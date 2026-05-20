@@ -18,31 +18,37 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "SaaS Development Company India — Multi-Tenant SaaS in 8–16 Weeks",
+  title: "AI SaaS Development Company India — AI-Native Multi-Tenant SaaS From ₹1,20,000",
   description:
-    "RisonAI Tech is a SaaS development company in India. We build production-ready multi-tenant SaaS platforms — billing, RBAC, admin dashboards, and AI feature modules. From ₹1,20,000.",
+    "RisonAI Tech builds AI-native multi-tenant SaaS platforms in India — billing, RBAC, admin dashboards, AI agent modules, and LLM-powered features. MVP in 6–10 weeks. From ₹1,20,000.",
   keywords: [
     "SaaS development company India",
+    "AI SaaS development India",
+    "AI-native SaaS India",
+    "multi-tenant SaaS India",
     "SaaS development Delhi",
     "SaaS product development Gurgaon",
     "MVP SaaS development India",
-    "multi-tenant SaaS India",
-    "custom SaaS platform development",
-    "AI SaaS development India",
-    "Next.js SaaS development",
+    "custom SaaS platform development India",
+    "Next.js SaaS development India",
+    "SaaS with AI features India",
+    "SaaS MVP development India",
+    "B2B SaaS development India",
+    "LLM SaaS integration India",
+    "product engineering company India",
   ],
   alternates: { canonical: "/services/saas-development" },
   openGraph: {
-    title: "SaaS Development Company India | RisonAI Tech",
+    title: "AI SaaS Development Company India | AI-Native Multi-Tenant SaaS | RisonAI Tech",
     description:
-      "Production-ready multi-tenant SaaS — billing-integrated, AI-powered, fully owned by you. From MVP in 6–10 weeks to enterprise platforms in 16–24 weeks.",
+      "AI-native multi-tenant SaaS platforms — billing-integrated, LLM-powered AI modules, fully owned by you. MVP in 6–10 weeks. Enterprise in 16–24 weeks. From ₹1,20,000.",
     url: "https://risonaitech.com/services/saas-development",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaS Development Company India | RisonAI Tech",
-    description: "Multi-tenant SaaS MVP to enterprise. Fixed price, full code ownership. From ₹1,20,000.",
+    title: "AI SaaS Development Company India | AI-Native Multi-Tenant SaaS | RisonAI Tech",
+    description: "AI-native multi-tenant SaaS — MVP to enterprise with LLM features, billing, RBAC. Fixed price. From ₹1,20,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],

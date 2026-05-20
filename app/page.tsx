@@ -15,9 +15,9 @@ import TrustFramework from "@/components/TrustFramework";
 import VerificationSignals from "@/components/VerificationSignals";
 
 export const metadata: Metadata = {
-  title: "RisonAI Tech | AI Automation & SaaS Development India",
+  title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
   description:
-    "RisonAI Tech builds enterprise AI automation systems, SaaS platforms, AI workflows, and operational infrastructure to scale business efficiency. Serving teams globally from India.",
+    "RisonAI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, SaaS platforms, and operational infrastructure. Serving startups and enterprises globally from Delhi NCR.",
   alternates: { canonical: "/" },
 };
 

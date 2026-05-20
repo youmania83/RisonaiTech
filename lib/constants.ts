@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Users,
   Code2,
+  Cpu,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -21,7 +22,7 @@ export const siteConfig = {
   domain: "risonaitech.com",
   url: "https://risonaitech.com",
   description:
-    "Risonai Tech is an AI Automation & AI Systems Infrastructure Company building enterprise SaaS platforms, operational dashboards, and AI automation systems.",
+    "Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
   email: "hello@risonaitech.com",
   phone: "+918368137724",
@@ -145,6 +146,21 @@ export const services: Service[] = [
       "Analytics, templates, and compliance setup",
     ],
   },
+  {
+    id: "ai-agent",
+    icon: Cpu,
+    title: "AI Agent Development",
+    short: "Deploy autonomous AI agents that reason, plan, and execute complex tasks end-to-end.",
+    description:
+      "We build production-grade AI agents — multi-step reasoning systems, tool-using LLM pipelines, and autonomous workflows that operate without constant human supervision.",
+    bullets: [
+      "Multi-step agentic pipelines (LangGraph, CrewAI)",
+      "Tool-calling & function-use agents",
+      "RAG-powered knowledge agents",
+      "Web & API browsing agents",
+      "Human-in-the-loop oversight",
+    ],
+  },
 ];
 
 // ─── Products ────────────────────────────────────────────────────────────────
@@ -206,7 +222,7 @@ export const caseStudies = [
     outcome:
       "No-show rates reduced by 31%, front-desk coordination time dropped by 52%, and weekly appointment throughput increased by 24%.",
     metrics: ["31% lower no-show rate", "52% less coordination time", "24% more weekly appointments"],
-    serviceHref: "/services/saas-development",
+    serviceHref: "/services/ai-agent",
     locationHref: "/gurgaon",
   },
   {
