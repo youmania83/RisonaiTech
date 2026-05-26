@@ -9,6 +9,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
   { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
 ];

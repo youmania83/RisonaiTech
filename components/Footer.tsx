@@ -7,6 +7,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 const footerLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
   { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
