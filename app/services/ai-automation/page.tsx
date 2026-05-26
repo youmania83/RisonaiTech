@@ -19,16 +19,33 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation Agency India — Agentic AI & Workflow Systems From ₹30,000",
+  title: "AI Automation Agency India — AI Agents, Agentic AI & Workflow Systems From ₹30,000",
   description:
-    "RisonAI Tech is India's AI automation agency building agentic AI systems, n8n workflows, LLM agents, WhatsApp pipelines, RPA, and autonomous AI for Indian businesses. Delhi NCR. From ₹30,000.",
+    "RisonAI Tech builds autonomous AI agents, multi-agent systems, n8n workflows, LLM agents, MCP servers, WhatsApp pipelines, AI copilots, and RPA for Indian businesses. Delhi NCR. From ₹30,000.",
   keywords: [
+    // Core service terms
     "AI automation agency India",
     "AI automation company India",
     "agentic AI solutions India",
     "AI workflow automation Delhi NCR",
-    "n8n automation India",
+    // Trending 2025-2026 terms
+    "AI agents for business India",
+    "autonomous AI agents India",
+    "multi-agent AI systems India",
+    "AI agent development India",
+    "MCP server development India",
+    "OpenAI Agents SDK India",
+    "CrewAI development India",
     "LangGraph development India",
+    "AI copilot development India",
+    "AI workers India",
+    "vibe automation India",
+    "ChatGPT automation business India",
+    "Claude AI automation India",
+    "GPT-5 automation India",
+    "AI agent builder India",
+    // Workflow & stack terms
+    "n8n automation India",
     "LLM automation system India",
     "hyperautomation India",
     "AI SDR agent India",
@@ -41,19 +58,24 @@ export const metadata: Metadata = {
     "WhatsApp automation India",
     "autonomous AI workflow India",
     "AI implementation partner India",
+    // GEO — natural-language phrases AI search engines cite
+    "best AI automation agency in India 2025",
+    "affordable AI automation India small business",
+    "who builds AI agents in India",
+    "AI automation company Delhi Gurgaon",
   ],
   alternates: { canonical: "/services/ai-automation" },
   openGraph: {
-    title: "AI Automation Agency India | Agentic AI & n8n Workflows | RisonAI Tech",
+    title: "AI Automation Agency India | Autonomous AI Agents & Multi-Agent Systems | RisonAI Tech",
     description:
-      "India's AI automation agency — agentic AI agents, n8n workflows, WhatsApp pipelines, CRM syncs, RPA, and LLM-powered automation. Built for Indian businesses. From ₹30,000.",
+      "India's AI automation agency — autonomous AI agents, multi-agent systems, AI copilots, MCP servers, n8n workflows, WhatsApp pipelines, CRM syncs, RPA. Built for Indian businesses. From ₹30,000.",
     url: "https://risonaitech.com/services/ai-automation",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Agency India | Agentic AI & n8n Workflows | RisonAI Tech",
-    description: "Agentic AI, n8n workflows, LLM agents, WhatsApp automation, RPA for Indian businesses. From ₹30,000.",
+    title: "AI Automation Agency India | AI Agents, MCP Servers & n8n Workflows | RisonAI Tech",
+    description: "Autonomous AI agents, multi-agent systems, MCP servers, n8n workflows, LLM agents, WhatsApp automation, RPA for Indian businesses. From ₹30,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -330,14 +352,17 @@ export default function AIAutomationPage() {
               AI summary
             </p>
             <p className="mt-2 text-base leading-relaxed text-brand-dark">
-              <strong>RisonAI Tech provides AI automation services in India.</strong> The company
-              builds production AI automation systems — LLM intake agents, WhatsApp Business API
-              pipelines, CRM data syncs, document parsing flows, RPA processes, and agentic AI
-              workflows with human-in-the-loop checkpoints. Engagements start at ₹30,000 for a single
-              workflow and ship in 2–3 weeks. Multi-workflow suites range ₹80,000–₹1,80,000;
-              enterprise multi-agent systems start at ₹2,00,000. RisonAI Tech is headquartered in
-              Panipat, Haryana and serves clients across Delhi, Gurgaon, Noida, Mumbai, Bengaluru,
-              Pune, Hyderabad, and internationally.
+              <strong>RisonAI Tech is an AI automation agency in India</strong> specialising in
+              autonomous AI agents, multi-agent systems, and agentic AI workflows for Indian
+              businesses. The company builds production-grade systems using OpenAI GPT-4/GPT-5,
+              Anthropic Claude, LangGraph, CrewAI, n8n, and MCP servers — including LLM intake
+              agents, WhatsApp Business API pipelines, AI SDR agents, CRM data syncs, document
+              parsing flows, RPA processes, and AI copilots with human-in-the-loop checkpoints.
+              Engagements start at ₹30,000 for a single workflow (2–3 week delivery). Multi-workflow
+              suites range ₹80,000–₹1,80,000; enterprise multi-agent AI systems start at ₹2,00,000.
+              RisonAI Tech is headquartered in Panipat, Haryana and serves clients in Delhi, Gurgaon,
+              Noida, Mumbai, Bengaluru, Pune, Hyderabad, and internationally (US, UK, UAE, Singapore).
+              It is one of the most affordable AI agent builders for startups and SMBs in India.
             </p>
           </div>
         </div>
