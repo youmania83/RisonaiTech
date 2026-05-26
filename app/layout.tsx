@@ -461,93 +461,6 @@ const aiAuditToolSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What does RisonAI Tech specialize in?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We are an AI Automation & AI Systems Infrastructure Company. We build AI workflows, operational infrastructure, and scalable SaaS platforms that reduce manual work and increase business efficiency.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does AI automation reduce operational costs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "By replacing repetitive manual tasks—like lead qualification, data entry, and customer support triage—with intelligent AI agents and API integrations, saving thousands of manual hours annually.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to deploy an AI system?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A targeted AI workflow automation takes 2–4 weeks. Full SaaS platforms or comprehensive CRM automation infrastructure typically take 8–16 weeks. We deliver in iterative 2-week sprints.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are the AI Customer Support Agents trained on our data?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We use Retrieval-Augmented Generation (RAG) architecture to train the AI strictly on your company's knowledge base, ensuring accurate, context-aware responses without hallucination.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you build internal operations dashboards?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We engineer custom internal tools and performance dashboards that connect to your AI systems, giving your operations team full visibility and control.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do clients own the AI system infrastructure?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We operate on a full-ownership model. At project close, you receive the complete source code, deployment configurations, and system documentation. No vendor lock-in.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can RisonAI Tech integrate AI into our existing CRM?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We build custom API middleware to integrate LLM capabilities directly into existing operational hubs like HubSpot, Zoho, or Salesforce to automate data entry and lead scoring.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the typical ROI on an AI automation project?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our clients typically see a 3× increase in operational efficiency, a 60% reduction in customer response times, and significant savings in administrative overhead within the first quarter of deployment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the minimum engagement size?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our targeted automation projects start at ₹20,000. Comprehensive operational transformation and SaaS engineering projects typically start at ₹1,20,000+.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do we begin the transformation process?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Contact us to schedule an AI Systems Strategy Session. We will audit your current workflows, map out automation opportunities, and deliver a fixed-price architectural proposal within 48 hours.",
-      },
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -572,7 +485,6 @@ export default function RootLayout({
                 reviewsSchema,
                 ...servicesSchema["@graph"],
                 aiAuditToolSchema,
-                faqSchema,
               ],
             }),
           }}

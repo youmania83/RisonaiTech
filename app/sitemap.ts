@@ -156,6 +156,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     },
     {
+      url: `${BASE_URL}/chandigarh`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: `${BASE_URL}/new-york`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
