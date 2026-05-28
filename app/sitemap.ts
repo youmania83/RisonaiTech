@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://risonaitech.com";
 // Update this whenever you make a significant content change
-const LAST_MODIFIED = new Date("2026-05-20");
+const LAST_MODIFIED = new Date("2026-05-28");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
