@@ -179,13 +179,24 @@ const websiteSchema = {
   url: BASE_URL,
   description:
     "RisonAI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS platforms, and operational infrastructure to scale business efficiency.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+  potentialAction: [
+    {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
     },
-    "query-input": "required name=search_term_string",
+    {
+      "@type": "ContactAction",
+      name: "Book a free AI strategy session",
+      target: `${BASE_URL}/contact`,
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2", "[data-speakable]"],
   },
 };
 
@@ -225,6 +236,50 @@ const organizationSchema = {
   ],
   foundingDate: "2023",
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
+  slogan: "AI systems that work while you sleep.",
+  hasMap: "https://maps.google.com/?q=196+New+RK+Puram+Panipat+Haryana+132103+India",
+  knowsAbout: [
+    "AI automation",
+    "Agentic AI systems",
+    "Autonomous AI agents",
+    "n8n workflow automation",
+    "LangGraph development",
+    "LangChain development",
+    "Multi-agent AI systems",
+    "RAG chatbot development",
+    "WhatsApp Business API automation",
+    "Voice AI agents",
+    "SaaS platform development",
+    "Custom CRM development",
+    "AI customer support agents",
+    "Business process automation",
+    "Generative AI implementation",
+    "AI for Indian SMBs and MSMEs",
+    "AI workflow orchestration",
+    "MCP server development",
+    "OpenAI Agents SDK",
+    "CrewAI development",
+    "AI SDR agent",
+    "LLM integration",
+    "Retrieval-Augmented Generation",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+918368137724",
+      contactType: "sales",
+      areaServed: ["IN", "US", "GB", "AE", "SG", "AU"],
+      availableLanguage: ["English", "Hindi"],
+      contactOption: "TollFree",
+      email: "hello@risonaitech.com",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "hello@risonaitech.com",
+      availableLanguage: ["English", "Hindi"],
+    },
+  ],
   areaServed: [
     { "@type": "Country", name: "India" },
     { "@type": "Country", name: "United States" },
@@ -280,6 +335,26 @@ const localBusinessSchema = {
   priceRange: "₹₹",
   currenciesAccepted: "INR, USD, GBP, AED, SGD",
   paymentAccepted: "Bank Transfer, UPI, Razorpay, Stripe, Wire Transfer",
+  slogan: "AI systems that work while you sleep.",
+  hasMap: "https://maps.google.com/?q=196+New+RK+Puram+Panipat+Haryana+132103+India",
+  openingHours: "Mo-Fr 09:00-19:00",
+  knowsAbout: [
+    "AI automation",
+    "Agentic AI systems",
+    "n8n workflow automation",
+    "RAG chatbot development",
+    "WhatsApp Business API",
+    "SaaS platform development",
+    "Custom CRM development",
+    "AI agents for Indian businesses",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+918368137724",
+    contactType: "sales",
+    email: "hello@risonaitech.com",
+    availableLanguage: ["English", "Hindi"],
+  },
 };
 
 const servicesSchema = {
@@ -372,7 +447,6 @@ const reviewsSchema = {
       reviewBody:
         "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
       datePublished: "2024-11-01",
-      itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
     {
       "@type": "Review",
@@ -382,7 +456,6 @@ const reviewsSchema = {
       reviewBody:
         "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
       datePublished: "2025-01-15",
-      itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
     {
       "@type": "Review",
@@ -392,7 +465,6 @@ const reviewsSchema = {
       reviewBody:
         "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
       datePublished: "2025-03-20",
-      itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
   ],
 };
