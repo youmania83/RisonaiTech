@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation for Indian SMEs: What Actually Works in 2026 | RisonAI Tech",
+  title: { absolute: "AI Automation for Indian SMEs: What Works in 2026 | RisonAI Tech" },
   description:
     "Most AI automation projects fail because businesses automate the wrong things first. The prioritisation framework we use with 40+ Indian clients to get measurable ROI in under 90 days.",
   keywords: [

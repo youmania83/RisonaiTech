@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "SaaS Development Cost in India: 2026 Transparent Breakdown | RisonAI Tech",
+  title: { absolute: "SaaS Development Cost in India: 2026 Breakdown | RisonAI Tech" },
   description:
     "How much does it cost to build a SaaS product in India in 2026? From a ₹1,20,000 MVP to a ₹20,00,000 enterprise platform — with timelines, what's included, and hidden cost warnings.",
   keywords: [

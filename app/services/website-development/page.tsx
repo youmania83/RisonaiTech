@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI-Ready Website Development India — GEO, AEO & Core Web Vitals From ₹35,000",
+  title: { absolute: "AI Website Development India | GEO & Core Web Vitals | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI-search-ready Next.js websites for Indian startups and SMBs — GEO (Generative Engine Optimization), AEO, Core Web Vitals, conversion-focused. Rank on Google AND ChatGPT/Perplexity. From ₹35,000.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/website-development" },
   openGraph: {
-    title: "AI-Ready Website Development India | GEO, AEO & Core Web Vitals | RisonAI Tech",
+    title: "AI Website Development India | GEO & Core Web Vitals | RisonAI Tech",
     description:
       "Premium Next.js websites built for AI search (GEO/AEO) + Google — Core Web Vitals, conversion-focused, AI-citation ready. Rank on ChatGPT, Perplexity, and Google. From ₹35,000.",
     url: "https://risonaitech.com/services/website-development",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI-Ready Website Development India | GEO, AEO & Core Web Vitals | RisonAI Tech",
+    title: "AI Website Development India | GEO & Core Web Vitals | RisonAI Tech",
     description: "Next.js websites optimized for Google + AI search (GEO/AEO). Core Web Vitals, conversions. From ₹35,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

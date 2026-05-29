@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Chatbot for Business in India: The Complete 2026 Guide | RisonAI Tech",
+  title: { absolute: "WhatsApp Chatbot for Business India: 2026 Guide | RisonAI Tech" },
   description:
     "How to build a WhatsApp chatbot for your Indian business in 2026 — lead qualification, appointment booking, customer support, and 24/7 response. Costs, timelines, and real examples.",
   keywords: [

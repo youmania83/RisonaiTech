@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Agent Development India — Agentic AI & Autonomous Systems From ₹40,000",
+  title: { absolute: "AI Agent Development India | Agentic AI Systems | RisonAI Tech" },
   description:
     "RisonAI Tech builds production-ready agentic AI systems — autonomous AI agents, voice AI agents, multi-agent pipelines, RAG knowledge agents, and LangGraph-powered orchestration for Indian businesses. From ₹40,000.",
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/ai-agent" },
   openGraph: {
-    title: "AI Agent Development India | Agentic AI & Autonomous Systems | RisonAI Tech",
+    title: "AI Agent Development India | Agentic AI Systems | RisonAI Tech",
     description:
       "Production-ready agentic AI systems — autonomous agents, voice AI agents, multi-agent pipelines, LangGraph orchestration. Built for Indian businesses. From ₹40,000.",
     url: "https://risonaitech.com/services/ai-agent",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Agent Development India | Agentic AI & Autonomous Systems | RisonAI Tech",
+    title: "AI Agent Development India | Agentic AI Systems | RisonAI Tech",
     description: "Agentic AI systems, voice AI agents, multi-agent pipelines, LangGraph. Fixed price, full code ownership. From ₹40,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

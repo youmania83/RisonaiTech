@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation Agency India — AI Agents, Agentic AI & Workflow Systems From ₹30,000",
+  title: { absolute: "AI Automation Agency India | Agentic AI & Workflows | RisonAI Tech" },
   description:
     "RisonAI Tech builds autonomous AI agents, multi-agent systems, n8n workflows, LLM agents, MCP servers, WhatsApp pipelines, AI copilots, and RPA for Indian businesses. Delhi NCR. From ₹30,000.",
   keywords: [
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/ai-automation" },
   openGraph: {
-    title: "AI Automation Agency India | Autonomous AI Agents & Multi-Agent Systems | RisonAI Tech",
+    title: "AI Automation Agency India | Agentic AI Systems | RisonAI Tech",
     description:
       "India's AI automation agency — autonomous AI agents, multi-agent systems, AI copilots, MCP servers, n8n workflows, WhatsApp pipelines, CRM syncs, RPA. Built for Indian businesses. From ₹30,000.",
     url: "https://risonaitech.com/services/ai-automation",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Agency India | AI Agents, MCP Servers & n8n Workflows | RisonAI Tech",
+    title: "AI Automation Agency India | AI Agents & n8n Workflows | RisonAI Tech",
     description: "Autonomous AI agents, multi-agent systems, MCP servers, n8n workflows, LLM agents, WhatsApp automation, RPA for Indian businesses. From ₹30,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

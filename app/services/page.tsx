@@ -8,7 +8,7 @@ import ServiceIcon from "@/components/ServiceIcon";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "6 AI & Software Services for Indian Businesses — Automation, AI Agents, CRM, Chatbots",
+  title: { absolute: "AI & Software Services for Indian Businesses | RisonAI Tech" },
   description:
     "RisonAI Tech offers 6 core services for Indian businesses: AI automation, AI agent development, CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
   keywords: [

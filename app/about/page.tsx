@@ -52,7 +52,7 @@ const founderSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "About Yogesh Wadhwa & RisonAI Tech — Self-Taught Programmer, 40+ Products Shipped",
+  title: { absolute: "About Yogesh Wadhwa & RisonAI Tech — 40+ Products Shipped" },
   description:
     "Yogesh Kumar Wadhwa is a self-taught programmer who founded RisonAI Tech. He built DocBooking (live clinic SaaS), Chazo Tea brand, and 40+ AI automation products. 100% client retention.",
   keywords: [

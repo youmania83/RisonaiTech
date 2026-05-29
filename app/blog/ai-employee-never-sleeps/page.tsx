@@ -21,8 +21,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title:
-    "The Employee Who Never Sleeps: How AI Saves Indian Business Owners Lakhs Every Year | RisonAI Tech",
+  title: { absolute: "How AI Saves Indian Business Owners Lakhs Every Year | RisonAI Tech" },
   description:
     "True stories of Indian business owners who replaced ₹5–15 lakh/year of manual work with an AI employee that never sleeps, never asks for a hike, never quits, and lets them finally take a real holiday.",
   keywords: [

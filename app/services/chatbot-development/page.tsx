@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot Development India — RAG, Voice AI & WhatsApp Bots From ₹20,000",
+  title: { absolute: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI chatbots for websites and WhatsApp — RAG bots trained on your data, voice AI agents, conversational AI, multilingual (English + Hindi), CRM-integrated. From ₹20,000.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/chatbot-development" },
   openGraph: {
-    title: "AI Chatbot Development India | RAG, Voice AI & WhatsApp Bots | RisonAI Tech",
+    title: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech",
     description:
       "Context-aware AI chatbots — RAG bots on your data, voice AI agents, conversational AI for WhatsApp and websites. Lead qualification, booking, and customer support. From ₹20,000.",
     url: "https://risonaitech.com/services/chatbot-development",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Chatbot Development India | RAG, Voice AI & WhatsApp Bots | RisonAI Tech",
+    title: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech",
     description: "RAG chatbots, voice AI agents, WhatsApp bots. Lead qual, appointment booking, 24/7 support. From ₹20,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

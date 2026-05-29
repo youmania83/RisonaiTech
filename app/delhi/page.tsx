@@ -9,7 +9,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation Company in Delhi — SaaS, CRM & Chatbot Development",
+  title: { absolute: "AI Automation in Delhi | SaaS, CRM & Chatbot Dev | RisonAI Tech" },
   description:
     "RisonAI Tech is an AI automation company serving Delhi businesses with AI workflows, SaaS engineering, custom CRM systems, and WhatsApp chatbots. Built for high-volume operations and competitive markets.",
   keywords: [

@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation Blog India — Costs, Guides & Comparisons for 2026 | RisonAI Tech",
+  title: { absolute: "AI Automation Blog India — Guides & Insights | RisonAI Tech" },
   description:
     "Practical 2026 guides: How much does WhatsApp chatbot cost in India? SaaS development cost for Indian startups? AI automation ROI for SMEs? Written by operators who built it.",
   keywords: [

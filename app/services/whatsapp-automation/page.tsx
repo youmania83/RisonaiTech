@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "WhatsApp AI Automation India — Agentic WhatsApp Bots & CRM Workflows From ₹25,000",
+  title: { absolute: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI-powered WhatsApp automation on the official Business API — agentic lead capture bots, CRM sync, intelligent customer support, and broadcast campaigns for Indian businesses. From ₹25,000.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/whatsapp-automation" },
   openGraph: {
-    title: "WhatsApp AI Automation India | Agentic Bots & CRM Workflows | RisonAI Tech",
+    title: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech",
     description:
       "AI-powered WhatsApp automation — agentic lead capture, CRM sync, intelligent support bots, and broadcast campaigns on the official Business API. From ₹25,000.",
     url: "https://risonaitech.com/services/whatsapp-automation",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp AI Automation India | Agentic Bots & CRM Workflows | RisonAI Tech",
+    title: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech",
     description: "AI-powered WhatsApp Business API: agentic lead bots, CRM sync, 24/7 support automation. From ₹25,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

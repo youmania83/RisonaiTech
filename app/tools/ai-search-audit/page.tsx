@@ -8,7 +8,7 @@ const BASE_URL = "https://risonaitech.com";
 const PAGE_URL = `${BASE_URL}/tools/ai-search-audit`;
 
 export const metadata: Metadata = {
-  title: "Free AI Search Ranking Audit — Check Your AI Visibility Score",
+  title: { absolute: "Free AI Search Ranking Audit | Check AI Visibility | RisonAI Tech" },
   description:
     "Free AI search ranking audit by RisonAI Tech. Enter your website URL or business name and instantly see how visible your brand is to ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. Powered by DeepSeek + Anthropic SDK.",
   keywords: [

@@ -7,7 +7,7 @@ import { products } from "@/lib/constants";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Our Products — DocBooking & Expreality | Built by RisonAI Tech",
+  title: { absolute: "Our Products — DocBooking & Expreality | RisonAI Tech" },
   description:
     "RisonAI Tech has built DocBooking (AI clinic management SaaS for healthcare) and Expreality (property intelligence platform for real estate). In-house products shipped to production.",
   keywords: [

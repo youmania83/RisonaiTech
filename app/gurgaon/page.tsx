@@ -9,7 +9,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI & SaaS Development in Gurgaon — Startup Product Engineering",
+  title: { absolute: "AI & SaaS Development in Gurgaon | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Gurgaon startups and scaling tech companies. Cyber City to Sohna Road. Fixed-price delivery.",
   keywords: [

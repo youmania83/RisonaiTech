@@ -19,7 +19,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI CRM Development India — Custom CRM with AI Automation & WhatsApp From ₹40,000",
+  title: { absolute: "AI CRM Development India | Custom CRM & WhatsApp | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI-powered custom CRM platforms and agentic HubSpot / Zoho extensions for healthcare, real estate, and service businesses in India. AI lead scoring, WhatsApp sync. From ₹40,000.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/crm-development" },
   openGraph: {
-    title: "AI CRM Development India | Agentic CRM & WhatsApp Automation | RisonAI Tech",
+    title: "AI CRM Development India | Custom CRM & WhatsApp | RisonAI Tech",
     description:
       "AI-powered custom CRM platforms and agentic HubSpot / Zoho integrations — AI lead scoring, WhatsApp sync, pipeline automation for healthcare, real estate, and service businesses. From ₹40,000.",
     url: "https://risonaitech.com/services/crm-development",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI CRM Development India | Agentic CRM & WhatsApp Automation | RisonAI Tech",
+    title: "AI CRM Development India | Custom CRM & WhatsApp | RisonAI Tech",
     description: "AI-powered CRM + WhatsApp + agentic automation for healthcare and real estate. From ₹40,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

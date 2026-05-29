@@ -9,7 +9,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Automation Company in Panipat — Practical AI for SMEs",
+  title: { absolute: "AI Automation in Panipat | Practical AI for SMEs | RisonAI Tech" },
   description:
     "RisonAI Tech is an AI automation company headquartered in Panipat, Haryana. We help Panipat SMEs and traditional businesses adopt practical AI — WhatsApp automation, CRM, dashboards. From ₹30,000.",
   keywords: [
