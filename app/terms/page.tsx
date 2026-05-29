@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: "Terms of Service | RisonAI Tech",
   description: "Terms of service for RisonAI Tech. Read our conditions for using our website and services.",
   alternates: { canonical: "/terms" },
-  robots: { index: false, follow: false },
 };
 
 export default function TermsPage() {

@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: "Privacy Policy | RisonAI Tech",
   description: "Privacy policy for RisonAI Tech. Learn how we collect, use, and protect your personal data.",
   alternates: { canonical: "/privacy" },
-  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
