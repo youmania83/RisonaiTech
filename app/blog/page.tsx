@@ -35,6 +35,96 @@ export const metadata: Metadata = {
 
 export const posts = [
   {
+    slug: "ai-automation-for-small-businesses",
+    title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)",
+    excerpt:
+      "Small businesses with 5–50 employees are the biggest AI automation opportunity in India. A practical playbook: 4 workflows, ₹60,000–₹80,000 total, 90-day roadmap, no technical team required.",
+    date: "2026-06-10",
+    readTime: "8 min read",
+    category: "AI Automation",
+  },
+  {
+    slug: "ai-lead-generation-systems",
+    title: "AI Lead Generation Automation: Build a System That Never Sleeps",
+    excerpt:
+      "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the full 5-layer architecture — channels, AI scoring, CRM sync, and cost breakdown.",
+    date: "2026-06-09",
+    readTime: "10 min read",
+    category: "Lead Generation",
+  },
+  {
+    slug: "ai-automation-real-estate-india",
+    title: "AI Automation for Real Estate India: The 2026 Playbook",
+    excerpt:
+      "In 2026, the fastest-growing real estate agencies in India all have one thing in common: they respond to leads in under 60 seconds, qualify every inquiry automatically, and never lose a hot lead to a competitor. Here is how.",
+    date: "2026-06-08",
+    readTime: "10 min read",
+    category: "Real Estate",
+  },
+  {
+    slug: "make-vs-n8n-ai-automation",
+    title: "Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?",
+    excerpt:
+      "Make (formerly Integromat) and n8n are the two most popular automation platforms for business workflows. Here is a complete comparison with a clear decision framework for Indian businesses.",
+    date: "2026-06-07",
+    readTime: "9 min read",
+    category: "AI Tools",
+  },
+  {
+    slug: "ai-agents-for-business-automation",
+    title: "AI Agents for Business: What They Are, What They Cost, and How to Deploy Them",
+    excerpt:
+      "AI agents are not just advanced chatbots — they are autonomous systems that plan, act, and complete multi-step tasks without human direction. This is the production guide for deploying AI agents in your business.",
+    date: "2026-06-06",
+    readTime: "10 min read",
+    category: "AI Agents",
+  },
+  {
+    slug: "ai-and-automation",
+    title: "AI and Automation Together: How to Combine Them for Maximum Business Impact",
+    excerpt:
+      "AI and automation are two different capabilities that work best when combined. Understanding when to use rule-based automation, when to add AI intelligence, and how to layer them is the highest-leverage skill in modern business systems.",
+    date: "2026-06-05",
+    readTime: "9 min read",
+    category: "AI Automation",
+  },
+  {
+    slug: "ai-vs-automation",
+    title: "AI vs Automation: What Is the Difference and Which Does Your Business Need?",
+    excerpt:
+      "Most businesses use the terms AI and automation interchangeably — but they mean fundamentally different things. Knowing the difference determines which technology solves your actual business problem.",
+    date: "2026-06-04",
+    readTime: "8 min read",
+    category: "AI Automation",
+  },
+  {
+    slug: "ai-automation-tools",
+    title: "Top AI Automation Tools in 2026: The No-Fluff Shortlist",
+    excerpt:
+      "There are now 400+ tools that claim to offer AI automation. Most are noise. This is the production-grade shortlist for Indian businesses — tools we actually deploy for clients.",
+    date: "2026-06-03",
+    readTime: "9 min read",
+    category: "AI Tools",
+  },
+  {
+    slug: "how-to-use-ai-for-automation",
+    title: "How to Use AI for Automation: A Step-by-Step Implementation Guide",
+    excerpt:
+      "Most businesses know they should use AI to automate workflows — but have no idea where to start. This is a no-fluff, step-by-step guide to implementing AI automation in a real business.",
+    date: "2026-06-02",
+    readTime: "9 min read",
+    category: "AI Automation",
+  },
+  {
+    slug: "what-is-ai-automation",
+    title: "What Is AI Automation? A Clear Explanation for Business Owners",
+    excerpt:
+      "AI automation combines artificial intelligence with traditional automation to handle complex, judgment-based tasks without human intervention. Here is a clear, jargon-free explanation of what it is, how it works, and what it can do for your business.",
+    date: "2026-06-01",
+    readTime: "8 min read",
+    category: "AI Automation",
+  },
+  {
     slug: "ai-employee-never-sleeps",
     title: "The Employee Who Never Sleeps: How AI Saves Indian Owners Lakhs Every Year",
     excerpt:
