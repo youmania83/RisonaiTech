@@ -181,7 +181,7 @@ export default function AiAutomationSmallBusinesses() {
                 {
                   num: "01",
                   title: "WhatsApp lead qualification",
-                  problem: "Leads come in through website, Instagram, or referrals. Someone on WhatsApp says "interested" — and then waits 4 hours for a reply before calling a competitor.",
+                  problem: "Leads come in through website, Instagram, or referrals. Someone on WhatsApp says \"interested\" — and then waits 4 hours for a reply before calling a competitor.",
                   solution: "An AI agent on WhatsApp responds within 60 seconds, asks qualification questions (budget, timeline, use case), scores the lead, and notifies the business owner only when a lead is hot. All cold/warm leads enter an automated follow-up sequence.",
                   cost: "₹30,000–₹45,000 to build | ₹3,000–₹6,000/month to run",
                 },
