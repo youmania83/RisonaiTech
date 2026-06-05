@@ -117,6 +117,50 @@ RisonAI Tech builds end-to-end AI automation for Indian businesses.
 Contact: https://risonaitech.com/contact`,
   },
 
+  "/services/ai-agent": {
+    title: "AI Agent Development — Autonomous AI Agents in 4–10 Weeks",
+    description:
+      "RisonAI Tech builds production-ready autonomous AI agents — multi-step reasoning pipelines, tool-using LLM agents, RAG knowledge agents, and multi-agent systems. From Rs 40,000.",
+    body: `## AI Agent Development
+
+RisonAI Tech builds production-grade AI agents that autonomously plan, call tools, and execute complex business processes.
+
+### What We Build
+- Multi-step reasoning agent pipelines (LangGraph, CrewAI)
+- Tool-calling agents with web search, database querying, and API access
+- RAG-powered knowledge agents grounded in business data
+- Autonomous task orchestration with human-in-the-loop guardrails
+- Agent observability, tracing, and evaluation dashboards
+
+### Pricing
+- Focused Single Agent: Rs 40,000 – Rs 1,20,000 (4–6 weeks)
+- Multi-Agent Orchestration Suite: Rs 1,50,000 – Rs 5,00,000 (8–12 weeks)
+
+Contact: https://risonaitech.com/contact`,
+  },
+
+  "/services/resume-screening": {
+    title: "AI Resume Screening — Candidate Screening Automation",
+    description:
+      "RisonAI Tech builds AI-powered resume screening systems: CV parsing, Skills Graph matching, contextual evaluation, and ATS integration. From Rs 35,000.",
+    body: `## AI Resume Screening Systems
+
+We automate first-pass candidate screening, saving 70-80% of recruiter review time while maintaining transparent recruiter-in-the-loop oversight.
+
+### Key Features
+- Resume parsing and structured profile extraction
+- Skills Graph matching (capturing equivalent/adjacent technologies)
+- Contextual evaluation (seniority, domain depth, recency of experience)
+- Direct ATS, spreadsheet, or email integration
+- Ranked shortlists with detailed score explanations
+
+### Pricing
+- Starter screening workflow: Rs 35,000 – Rs 60,000
+- ATS-integrated hiring workflow: Rs 90,000 – Rs 2,50,000
+
+Contact: https://risonaitech.com/contact`,
+  },
+
   "/services/saas-development": {
     title: "SaaS Development — Build Production-Ready SaaS in 8–16 Weeks",
     description:
@@ -126,7 +170,7 @@ Contact: https://risonaitech.com/contact`,
 ### What We Build
 - Multi-tenant SaaS architecture
 - Subscription billing (Razorpay, Stripe)
-- Role-based access control
+- Role-based access control (RBAC)
 - Admin and analytics dashboards
 - REST and GraphQL APIs
 - AI feature integration
@@ -316,13 +360,15 @@ Process:
 4. Project starts within 1 week of sign-off`,
   },
 
-  "/locations/delhi": {
+  // ─── Geo / Location Landing Pages ──────────────────────────────────────────
+
+  "/delhi": {
     title: "AI and SaaS Development in Delhi — RisonAI Tech",
     description:
       "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Delhi businesses.",
     body: `## RisonAI Tech — Delhi NCR
 
-RisonAI Tech serves clients across Delhi and the Delhi NCR region.
+RisonAI Tech serves clients across Delhi and the Delhi NCR region with conversion-focused automation and high-reliability operations infrastructure.
 
 Services in Delhi:
 - AI Automation from Rs 30,000
@@ -333,19 +379,155 @@ Services in Delhi:
 Contact: hello@risonaitech.com | +91 83681 37724`,
   },
 
-  "/locations/gurgaon": {
+  "/gurgaon": {
     title: "AI and SaaS Development in Gurgaon — RisonAI Tech",
     description:
       "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Gurgaon startups and enterprises.",
     body: `## RisonAI Tech — Gurgaon
 
-RisonAI Tech serves clients across Gurgaon (Gurugram) and the Haryana tech corridor.
+RisonAI Tech serves startups, growth-stage platforms, and enterprises in Gurgaon (Gurugram) and the Haryana tech corridor.
 
 Services in Gurgaon:
 - AI Automation from Rs 30,000
 - SaaS Development from Rs 1,20,000
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/panipat": {
+    title: "AI & SaaS Development in Panipat — RisonAI Tech",
+    description:
+      "RisonAI Tech is headquartered in Panipat, Haryana, delivering AI automation, custom CRM systems, and SaaS development to local industries and businesses.",
+    body: `## RisonAI Tech — Panipat Headquarters
+
+Headquartered in Panipat, Haryana, RisonAI Tech delivers high-efficiency AI automation, custom CRMs, and web systems for distributors, exporters, and SMBs locally and across Haryana.
+
+Services in Panipat:
+- AI Automation: from Rs 30,000
+- SaaS MVP Development: from Rs 1,20,000
+- CRM Integrations: from Rs 40,000
+- WhatsApp Business API Automation: from Rs 25,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/indore": {
+    title: "AI and SaaS Development in Indore — RisonAI Tech",
+    description:
+      "RisonAI Tech serves Indore-based businesses, traders, and exporters with custom AI automation, WhatsApp workflows, and SaaS product engineering.",
+    body: `## RisonAI Tech — Indore Services
+
+RisonAI Tech serves growing enterprises, distributors, and logistics firms in Indore (Madhya Pradesh) with workflow digitization and AI integration.
+
+Services in Indore:
+- WhatsApp CRM & Lead Triage: from Rs 25,000
+- AI Automation Workflows: from Rs 30,000
+- Custom CRM Systems: from Rs 40,000
+- SaaS MVP Engineering: from Rs 1,20,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/ahmedabad": {
+    title: "AI & SaaS Development in Ahmedabad — RisonAI Tech",
+    description:
+      "RisonAI Tech delivers AI automation, custom CRM solutions, and SaaS development for startups, textile exporters, and manufacturers in Ahmedabad, Gujarat.",
+    body: `## RisonAI Tech — Ahmedabad Services
+
+We build operational dashboards, WhatsApp automation, and custom CRM tools for Ahmedabad-based family offices, exporters, and startups to automate administrative overhead.
+
+Services in Ahmedabad:
+- Custom CRM and ERP Syncs: from Rs 40,000
+- AI Workflow Automation: from Rs 30,000
+- WhatsApp Commerce Bots: from Rs 25,000
+- SaaS MVP Engineering: from Rs 1,20,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/jaipur": {
+    title: "AI Automation & SaaS Development in Jaipur — RisonAI Tech",
+    description:
+      "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Jaipur startups, tourism tech companies, and Rajasthan enterprises.",
+    body: `## RisonAI Tech — Jaipur Services
+
+We serve tourism platforms, handicraft exporters, and growing retail startups in Jaipur, Rajasthan, with remote-first sprint delivery.
+
+Services in Jaipur:
+- Hospitality & Booking Chatbots: from Rs 20,000
+- Custom CRM & Export Workflows: from Rs 40,000
+- B2B/D2C Marketplace SaaS: from Rs 1,20,000
+- AI Automation pipelines: from Rs 30,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/chandigarh": {
+    title: "AI Automation & SaaS Development in Chandigarh — RisonAI Tech",
+    description:
+      "RisonAI Tech provides AI workflow automation, CRM software, and custom SaaS engineering for Chandigarh, Mohali, and Panchkula businesses.",
+    body: `## RisonAI Tech — Chandigarh Services
+
+We help IT service providers, startups, and agencies in the Chandigarh Tricity area automate sales triage, lead tracking, and operations dashboards.
+
+Services in Chandigarh:
+- AI SDR & Lead Qualification: from Rs 30,000
+- Custom CRM & Zoho/HubSpot Extensions: from Rs 40,000
+- SaaS Platform Development: from Rs 1,20,000
+- WhatsApp Triage Chatbots: from Rs 20,000
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/new-york": {
+    title: "AI Agent & SaaS Development in New York (NYC) — RisonAI Tech",
+    description:
+      "RisonAI Tech serves US startups and agencies in New York with AI agent systems, multi-tenant SaaS engineering, and operational automation.",
+    body: `## RisonAI Tech — New York Services
+
+We partner with NYC-based startups and B2B consultancies looking for high-competence product engineering at competitive offshore economics.
+
+Services in New York:
+- Autonomous AI Agents: from $719
+- SaaS MVP Development: from $2,159
+- HubSpot/Salesforce AI Integrations: from $719
+- Custom CRM & Dashboard Builds: from $1,439
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/new-jersey": {
+    title: "AI Automation & SaaS Development in New Jersey (NJ) — RisonAI Tech",
+    description:
+      "RisonAI Tech provides SaaS development, custom CRM systems, and autonomous AI agents for businesses and founders in New Jersey.",
+    body: `## RisonAI Tech — New Jersey Services
+
+We deliver enterprise-grade multi-tenant SaaS, billing portals, and AI workflows for NJ startups and healthcare tech firms.
+
+Services in New Jersey:
+- SaaS Platform Development: from $2,159
+- CRM Automation Infrastructure: from $719
+- AI Chatbots & RAG Systems: from $359
+- AI Automation Workflows: from $539
+
+Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  "/london": {
+    title: "AI Agent & SaaS Development in London — RisonAI Tech",
+    description:
+      "RisonAI Tech builds autonomous AI agents, custom CRM integrations, and multi-tenant SaaS platforms for London startups and UK SMEs.",
+    body: `## RisonAI Tech — London & UK Services
+
+We serve London founders, agencies, and e-commerce brands with modern React/Node/Python stacks and robust AI capabilities.
+
+Services in London:
+- SaaS MVP and Billing Setup: from £1,650
+- Custom CRM & API Integrations: from £550
+- AI Agents & n8n Workflows: from £450
+- Conversational RAG Chatbots: from £275
 
 Contact: hello@risonaitech.com | +91 83681 37724`,
   },
@@ -363,6 +545,235 @@ All projects delivered remotely. Fixed INR pricing. Full source code ownership.
 Services: AI Automation, SaaS Development, CRM, AI Chatbots, Web Apps.
 
 Contact: hello@risonaitech.com | +91 83681 37724`,
+  },
+
+  // ─── Blog Pages ─────────────────────────────────────────────────────────────
+
+  "/blog/how-to-check-if-your-website-appears-in-chatgpt": {
+    title: "How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews",
+    description: "A practical guide to audit your website's visibility in AI search engines and answer engines in 2026.",
+    body: `## Auditing Your Website's AI Visibility
+
+As search habits shift to ChatGPT Search, Perplexity, Gemini, Claude, and Google AI Overviews, tracking your AI visibility is crucial.
+
+### Testing Method
+1. Query key brand keywords directly in ChatGPT and Perplexity.
+2. Check if the engines fetch your URL or refer to your entity.
+3. Review references/links in Google AI Overviews.
+4. Run a technical crawler check to verify that User-Agents like 'GPTBot' and 'ClaudeBot' are not blocked in your robots.txt.`,
+  },
+
+  "/blog/free-ai-seo-audit-checklist": {
+    title: "Free AI SEO Audit Checklist for 2026: 18 Things to Fix Before You Pay an Agency",
+    description: "A complete 18-step checklist to prepare your website for AI search crawlers and answer engine optimization (AEO).",
+    body: `## AI SEO Audit Checklist
+
+Before hiring an expensive agency, ensure your website has these 18 basic elements of Generative Engine Optimization (GEO):
+
+### Key Actions
+- Do not block AI bots (GPTBot, ClaudeBot, PerplexityBot) in robots.txt.
+- Expose a clean, structured sitemap.xml.
+- Implement a public 'llms.txt' file mapping your site's core information.
+- Use clear schema.org tags (Organization, LocalBusiness, Service).
+- Maintain high factual density and clean, prose-first content mirrors.`,
+  },
+
+  "/blog/why-your-website-is-not-showing-in-ai-search": {
+    title: "Why Your Website Is Not Showing in AI Search: 9 Common Reasons and What to Fix First",
+    description: "Common reasons why ChatGPT, Perplexity, and Gemini ignore your brand, and how to fix it.",
+    body: `## Common AI Search Blockages
+
+If your website isn't showing up as a citation in answer engines, it's typically due to one of these 9 reasons:
+
+1. Crawlers are blocked in robots.txt.
+2. Low factual density (too much marketing fluff, too little data).
+3. Missing structured JSON-LD schemas.
+4. Weak brand entity signals on third-party sites (Wikipedia, LinkedIn).
+5. Lack of clear, text-only mirrors (like public index.md files).
+6. Slow server response times causing crawler timeouts.`,
+  },
+
+  "/blog/ai-automation-for-small-businesses": {
+    title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)",
+    description: "A practical guide for small businesses to automate workflows, qualify leads, and save manual hours.",
+    body: `## AI Automation for Small Business
+
+Small businesses with 5–50 employees get the fastest return on investment from AI workflows.
+
+### High-Impact Workflows
+- **Lead Intake**: Instant qualification via WhatsApp/Web and CRM syncing.
+- **Support Deflection**: FAQ bots handling repetitive L1 queries.
+- **Reporting**: Automated data extraction from emails or PDFs.
+- **Reminders**: Automated invoice or appointment alerts.`,
+  },
+
+  "/blog/ai-lead-generation-systems": {
+    title: "AI Lead Generation Automation: Build a System That Never Sleeps",
+    description: "The 5-layer architecture of an automated lead qualification system that responds in under 60 seconds.",
+    body: `## Building an Automated Lead System
+
+To maximize conversion, you must follow up with inbound leads immediately. An AI lead system operates 24/7/365.
+
+### System Architecture
+1. **Intake Channels**: Website forms, Meta ads, WhatsApp Business API.
+2. **LLM Scorer**: Qualifies budget, authority, need, and timeline (BANT).
+3. **CRM Connector**: Syncs qualified contacts directly to HubSpot/Zoho.
+4. **Calendar Router**: Sends scheduling links to hot leads.
+5. **Analytics**: Tracks response time and conversion uplift.`,
+  },
+
+  "/blog/ai-automation-real-estate-india": {
+    title: "AI Automation for Real Estate India: The 2026 Playbook",
+    description: "How Indian real estate developers and brokerages automate portal leads, WhatsApp triage, and site-visit bookings.",
+    body: `## Real Estate Automation Playbook
+
+Indian property teams manage high volumes of portal leads (MagicBricks, 99acres) and WhatsApp chats. 
+
+### Key Workflows
+- **Portal Triage**: Scraping incoming lead emails/APIs and routing them instantly.
+- **WhatsApp Qualification**: Automated bots asking location, budget, and configurations.
+- **Site-Visit Booking**: Syncing calendar availability without manual phone calls.
+- **Pipeline Hygiene**: Updating CRM lead stages autonomously.`,
+  },
+
+  "/blog/make-vs-n8n-ai-automation": {
+    title: "Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?",
+    description: "A complete comparison of Make.com and n8n for running AI workflow automations.",
+    body: `## Make vs n8n
+
+Choosing the right automation orchestrator impacts hosting costs, data privacy, and AI integration capabilities.
+
+### Comparison
+- **n8n**: Open-source, self-hostable (unlimited executions, fits Indian data compliance), native advanced AI nodes (LangChain-based).
+- **Make.com**: Cloud-only, user-friendly visual builder, paid tier limits executions, data routed through external servers.
+- **Verdict**: n8n is preferred for data-sensitive or high-volume enterprise AI integrations; Make is great for quick, low-volume setups.`,
+  },
+
+  "/blog/ai-agents-for-business-automation": {
+    title: "AI Agents for Business: What They Are, What They Cost, and How to Deploy Them",
+    description: "The complete guide to planning and deploying autonomous AI agents in enterprise workflows.",
+    body: `## Deploying AI Agents
+
+AI agents are stateful systems that can plan actions, call APIs, run code, and recover from intermediate errors to accomplish a high-level goal.
+
+### Best Practices
+- Define clear bounds and tool schemas for agent operations.
+- Implement Human-in-the-Loop (HITL) gates for actions like sending client emails or charging cards.
+- Track step-level execution cost and latency using tracing tools.`,
+  },
+
+  "/blog/ai-and-automation": {
+    title: "AI and Automation Together: How to Combine Them for Maximum Business Impact",
+    description: "How to combine rule-based automation engines with LLM cognitive capabilities.",
+    body: `## Layering AI and Traditional Automation
+
+The most reliable systems do not rely on LLMs for everything. They combine deterministic rules with AI intelligence.
+
+### Design Pattern
+- Use **Traditional Automation** for structure, API connections, database queries, and routing (high reliability, low cost).
+- Use **Generative AI** for cognitive parsing, content summarization, classification, and drafting responses (handles unstructured data).`,
+  },
+
+  "/blog/ai-vs-automation": {
+    title: "AI vs Automation: What Is the Difference and Which Does Your Business Need?",
+    description: "Understand the differences between deterministic automation and cognitive AI capabilities.",
+    body: `## AI vs. Automation
+
+Knowing which technology to apply prevents over-engineering and reduces project failure rates.
+
+### Differences
+- **Traditional Automation**: Follows strict 'If-This-Then-That' rules. Highly predictable, runs instantly, zero token cost.
+- **Artificial Intelligence**: Handles unstructured inputs, makes probabilistic decisions, requires prompt tuning, incurs token costs.`,
+  },
+
+  "/blog/ai-automation-tools": {
+    title: "Top AI Automation Tools in 2026: The No-Fluff Shortlist",
+    description: "A production-tested shortlist of tools for building and deploying AI workflows.",
+    body: `## Production AI Automation Stack
+
+Skip the hype. These are the tools RisonAI Tech deploys for real-world business systems:
+
+- **Orchestration**: n8n, LangGraph (for complex state machines).
+- **LLM API Providers**: OpenAI, Anthropic Claude, Google Gemini (via Vertex AI).
+- **Database/Vector**: PostgreSQL (pgvector), Supabase, Qdrant.
+- **Observability**: LangSmith, Sentry.`,
+  },
+
+  "/blog/how-to-use-ai-for-automation": {
+    title: "How to Use AI for Automation: A Step-by-Step Implementation Guide",
+    description: "A step-by-step roadmap to auditing, scoping, building, and deploying your first AI automation workflow.",
+    body: `## AI Automation Implementation Guide
+
+Follow this structured framework to automate any business process:
+
+1. **Audit**: Document the manual steps, systems touched, and time spent on the process.
+2. **Scope**: Isolate a single workflow (e.g. intake triage) that saves the most time first.
+3. **Build**: Set up n8n/middleware API connections and write clear prompt guardrails.
+4. **Calibrate**: Run historical data through the workflow and adjust prompts for errors.
+5. **Launch**: Deploy with human approval gates, then transition to autonomous execution.`,
+  },
+
+  "/blog/what-is-ai-automation": {
+    title: "What Is AI Automation? A Clear Explanation for Business Owners",
+    description: "A plain-language guide for business owners to understand what AI automation is and how it saves costs.",
+    body: `## What is AI Automation?
+
+AI Automation is the integration of cognitive AI (large language models) with traditional software APIs to handle tasks that previously required human judgment, such as drafting responses, extracting data from messy emails, or triage support tickets.
+
+Unlike legacy software, it adapts to variations in customer wording and documents without breaking.`,
+  },
+
+  "/blog/ai-employee-never-sleeps": {
+    title: "The Employee Who Never Sleeps: How AI Saves Indian Owners Lakhs Every Year",
+    description: "Three real stories of Indian SMEs using AI workers to eliminate notice periods, TDS liabilities, and manual data errors.",
+    body: `## The AI Employee
+
+An AI employee runs 24/7 in your cloud infrastructure, absorbing thousands of manual operational tasks for less than the cost of a junior hire's monthly salary.
+
+### Case Studies
+- A clinic automated doctor booking and symptom triage over WhatsApp, cutting front-desk coordination load by 52%.
+- A real estate agency built portal lead triage bots, reducing lead response times from 45 minutes to under 8 minutes.
+- A service company automated invoice reconciliation and CRM sync, saving 37 hours of owner time monthly.`,
+  },
+
+  "/blog/ai-automation-for-indian-smes": {
+    title: "AI Automation for Indian SMEs: What Actually Works in 2025",
+    description: "Prioritization frameworks and ROI playbooks for Indian small and medium enterprises implementing AI.",
+    body: `## SME AI Playbook
+
+Indian SMEs require practical, cost-effective automation that delivers ROI in under 90 days.
+
+### Prioritization Framework
+- **High ROI**: WhatsApp lead-capture bots, HubSpot/Zoho CRM automation, data entry pipelines.
+- **Low ROI (Avoid First)**: Custom-trained large models, fully autonomous coding agents, complex voice-agent cold callers.`,
+  },
+
+  "/blog/whatsapp-chatbot-for-business-india": {
+    title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide",
+    description: "How to deploy official WhatsApp Business API bots for lead qualification, appointment booking, and customer support.",
+    body: `## WhatsApp Chatbot Guide
+
+With over 535 million users in India, WhatsApp is the primary communication channel for customers.
+
+### Setup Steps
+1. Get Meta Business Manager verification.
+2. Choose a BSP (Business Solution Provider) to activate the official API.
+3. Configure webhook receivers in n8n or Node.js.
+4. Build RAG knowledge queries to answer FAQs instantly.
+5. Setup human agent live-chat handoff rules.`,
+  },
+
+  "/blog/saas-development-cost-india": {
+    title: "How Much Does SaaS Development Cost in India? (2025 Breakdown)",
+    description: "A transparent breakdown of MVP, multi-tenant, and enterprise SaaS development costs and timelines in India.",
+    body: `## SaaS Development Costs in India
+
+SaaS development economics depend on architectural choices, database isolation, billing requirements, and AI modules.
+
+### Budget Guide
+- **SaaS MVP (6–10 weeks)**: Rs 1,20,000 – Rs 2,50,000. Includes core features, email auth, single-tenant isolated DB, basic dashboards.
+- **Growth Multi-Tenant (12–16 weeks)**: Rs 3,00,000 – Rs 8,00,000. Includes tenant data isolation, subscription billing, custom domains.
+- **Enterprise AI SaaS (16–24 weeks)**: Rs 8,00,000+. Includes SSO, audit logs, vector databases, custom integrations, SLAs.`,
   },
 };
 

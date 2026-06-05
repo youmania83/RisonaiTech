@@ -21,13 +21,16 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "AI Agent Development India | Agentic AI Systems | RisonAI Tech" },
   description:
-    "RisonAI Tech builds production-ready agentic AI systems — autonomous AI agents, voice AI agents, multi-agent pipelines, RAG knowledge agents, and LangGraph-powered orchestration for Indian businesses. From ₹40,000.",
+    "RisonAI Tech builds production-ready agentic AI systems with autonomous AI agents, voice AI agents, Skills Graph memory, contextual evaluation, multi-agent pipelines, and LangGraph-powered orchestration for Indian businesses. From ₹40,000.",
   keywords: [
     "AI agent development India",
     "agentic AI company India",
+    "Agentic AI",
     "autonomous AI agent India",
     "agentic AI systems India",
     "voice AI agent India",
+    "Skills Graph",
+    "Contextual Evaluation",
     "AI agent development Delhi",
     "AI agent company Gurgaon",
     "multi-agent systems India",
@@ -61,6 +64,7 @@ export const metadata: Metadata = {
 const deliverables = [
   "Multi-step reasoning agent pipelines (LangGraph, CrewAI)",
   "Tool-calling agents with web search, code execution & API access",
+  "Skills Graph memory and contextual evaluation loops for higher reliability",
   "RAG-powered knowledge agents trained on your business data",
   "Autonomous task orchestration with human-in-the-loop controls",
   "Memory systems (short-term, long-term, episodic)",
@@ -360,7 +364,7 @@ export default function AIAgentPage() {
               Ready to deploy your first AI agent?
             </h2>
             <p className="mt-4 text-white/60">
-              Free 30-minute scoping call. We'll define the agent, estimate the cost, and outline
+              Free 30-minute scoping call. We&apos;ll define the agent, estimate the cost, and outline
               the delivery timeline — no obligation.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

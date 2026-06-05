@@ -2,7 +2,7 @@
 title: "SaaS Development — Build Production-Ready SaaS in 8–16 Weeks"
 description: "RisonAI Tech builds multi-tenant SaaS platforms with billing, admin dashboards, and AI features. MVP from Rs 1,20,000. Delhi NCR."
 url: "https://risonaitech.com/services/saas-development"
-last_updated: "2026-04-19"
+last_updated: "2026-06-05"
 ---
 
 ## SaaS Platform Development
@@ -10,7 +10,7 @@ last_updated: "2026-04-19"
 ### What We Build
 - Multi-tenant SaaS architecture
 - Subscription billing (Razorpay, Stripe)
-- Role-based access control
+- Role-based access control (RBAC)
 - Admin and analytics dashboards
 - REST and GraphQL APIs
 - AI feature integration

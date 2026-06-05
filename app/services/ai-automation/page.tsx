@@ -21,11 +21,12 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "AI Automation Agency India | Agentic AI & Workflows | RisonAI Tech" },
   description:
-    "RisonAI Tech builds autonomous AI agents, multi-agent systems, n8n workflows, LLM agents, MCP servers, WhatsApp pipelines, AI copilots, and RPA for Indian businesses. Delhi NCR. From ₹30,000.",
+    "RisonAI Tech is a business process automation agency delivering custom AI automation services, AI integration services for business, autonomous AI agents, n8n workflows, and AI-powered resume screening for Indian businesses. Delhi NCR. From ₹30,000.",
   keywords: [
     // Core service terms
     "AI automation agency India",
     "AI automation company India",
+    "AI workflow automation agency",
     "agentic AI solutions India",
     "AI workflow automation Delhi NCR",
     // Trending 2025-2026 terms
@@ -50,14 +51,19 @@ export const metadata: Metadata = {
     "hyperautomation India",
     "AI SDR agent India",
     "business process automation AI India",
+    "business process automation agency",
     "RPA services India",
     "intelligent automation India",
     "AI integration company India",
+    "AI integration services for business",
+    "custom AI automation services",
     "AI automation for startups India",
     "AI automation services Panipat",
     "WhatsApp automation India",
     "autonomous AI workflow India",
     "AI implementation partner India",
+    "AI-powered resume screening",
+    "resume screening automation India",
     // GEO — natural-language phrases AI search engines cite
     "best AI automation agency in India 2025",
     "affordable AI automation India small business",
@@ -97,6 +103,11 @@ const useCases = [
     icon: Bot,
     title: "Lead Qualification Agent",
     desc: "AI agent captures inbound leads from website forms, WhatsApp, and email — scores them by intent, enriches with context, and creates CRM tasks automatically. Reduces manual qualification time by 70%.",
+  },
+  {
+    icon: Zap,
+    title: "AI-Powered Resume Screening",
+    desc: "AI reviews incoming resumes against role criteria, extracts experience signals, scores candidates, and routes the strongest profiles to recruiters first — saving 70-80% of first-pass screening time.",
   },
   {
     icon: Workflow,

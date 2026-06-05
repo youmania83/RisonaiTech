@@ -21,9 +21,10 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech" },
   description:
-    "RisonAI Tech builds AI chatbots for websites and WhatsApp — RAG bots trained on your data, voice AI agents, conversational AI, multilingual (English + Hindi), CRM-integrated. From ₹20,000.",
+    "RisonAI Tech builds AI chatbot and voice agent development systems for websites and WhatsApp — RAG bots trained on your data, conversational AI, multilingual (English + Hindi), CRM-integrated. From ₹20,000.",
   keywords: [
     "AI chatbot development India",
+    "AI chatbot and voice agent development",
     "conversational AI India",
     "RAG chatbot India",
     "voice AI agent India",

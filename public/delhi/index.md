@@ -1,13 +1,13 @@
 ---
 title: "AI and SaaS Development in Delhi — RisonAI Tech"
 description: "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Delhi businesses."
-url: "https://risonaitech.com/locations/delhi"
-last_updated: "2026-04-19"
+url: "https://risonaitech.com/delhi"
+last_updated: "2026-06-05"
 ---
 
 ## RisonAI Tech — Delhi NCR
 
-RisonAI Tech serves clients across Delhi and the Delhi NCR region.
+RisonAI Tech serves clients across Delhi and the Delhi NCR region with conversion-focused automation and high-reliability operations infrastructure.
 
 Services in Delhi:
 - AI Automation from Rs 30,000

@@ -161,6 +161,21 @@ export const services: Service[] = [
       "Human-in-the-loop oversight",
     ],
   },
+  {
+    id: "resume-screening",
+    icon: Layers,
+    title: "AI Resume Screening",
+    short: "Automate first-pass candidate screening and save 70-80% of recruiter time.",
+    description:
+      "AI-powered resume screening systems that parse CVs, match candidates against job criteria, rank top applicants, and route recruiter-ready shortlists into your ATS or hiring workflow.",
+    bullets: [
+      "Resume parsing and structured candidate scoring",
+      "Skills Graph matching against job requirements",
+      "Contextual evaluation for shortlist quality",
+      "ATS, email, and spreadsheet integration",
+      "Human review controls and audit trails",
+    ],
+  },
 ];
 
 // ─── Products ────────────────────────────────────────────────────────────────

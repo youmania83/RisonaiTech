@@ -6,10 +6,13 @@ import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/li
 export const metadata: Metadata = {
   title: { absolute: "AI Agents for Business Automation: Complete Guide for 2026 | RisonAI Tech" },
   description:
-    "AI agents are autonomous programs that perceive, decide, and act without human input at every step. Learn how to deploy them in your business — with real examples and India pricing.",
+    "AI agents are autonomous programs that perceive, decide, and act without human input at every step. Learn how to deploy Agentic AI in your business with Skills Graph memory, Contextual Evaluation, real examples, and India pricing.",
   keywords: [
     "ai agents for business automation",
     "ai agents business",
+    "agentic ai",
+    "skills graph",
+    "contextual evaluation",
     "autonomous ai agents",
     "ai agent vs chatbot",
     "deploy ai agents",
@@ -169,6 +172,9 @@ export default function AiAgentsPost() {
             <p className="text-white/65 leading-relaxed">
               An AI agent has three defining characteristics that separate it from simpler AI systems:
             </p>
+            <p className="text-white/65 leading-relaxed mt-3">
+              In production systems, the difference between a demo bot and real <strong className="text-white">Agentic AI</strong> is infrastructure: a <strong className="text-white">Skills Graph</strong> to represent what the agent can do, memory to preserve task state, and <strong className="text-white">Contextual Evaluation</strong> loops to verify whether each action actually improved the workflow outcome.
+            </p>
             <div className="not-prose mt-5 space-y-3">
               {[
                 { label: "1. Perception", desc: "Reads inputs from its environment — WhatsApp messages, emails, database records, website content, uploaded files. It does not wait to be directly queried." },
@@ -258,6 +264,7 @@ export default function AiAgentsPost() {
               {[
                 "WhatsApp lead qualification agent: reads messages 24/7, qualifies leads, books discovery calls, updates CRM — replacing 2–3 hours of daily SDR work",
                 "Customer support resolution agent: reads tickets, queries knowledge base and order data, resolves 60–70% without human intervention, escalates the rest with context",
+                "Resume screening agent: parses CVs, matches candidates using a Skills Graph, runs contextual evaluation against role requirements, and sends recruiters a ranked shortlist — saving 70-80% of first-pass screening time",
                 "Competitor intelligence agent: monitors competitor websites and review platforms daily, summarises changes, delivers a briefing to the product team every morning",
                 "Invoice processing agent: reads PDF invoices (any format), extracts vendor/amount/line-items, validates against purchase orders, creates accounting entries, flags exceptions",
                 "Outbound sales agent: researches prospects from a CRM list, generates personalised email drafts, sends via connected email tool, tracks opens and replies",
@@ -343,6 +350,12 @@ export default function AiAgentsPost() {
                 tag: "Guide",
                 title: "Top AI Automation Tools in 2026",
                 desc: "See how AI agent frameworks compare against workflow automation tools like n8n, Make.com, and Zapier.",
+              },
+              {
+                href: "/services/resume-screening",
+                tag: "Service",
+                title: "AI-powered resume screening",
+                desc: "See how agentic scoring, Skills Graph matching, and recruiter controls work in a production hiring workflow.",
               },
               {
                 href: "/contact",

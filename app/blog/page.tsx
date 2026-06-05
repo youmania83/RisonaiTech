@@ -35,6 +35,33 @@ export const metadata: Metadata = {
 
 export const posts = [
   {
+    slug: "how-to-check-if-your-website-appears-in-chatgpt",
+    title: "How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews",
+    excerpt:
+      "A practical workflow to test your website's AI visibility across ChatGPT Search, Perplexity, Gemini, Claude, and Google AI Overviews, plus a faster free audit method.",
+    date: "2026-06-13",
+    readTime: "9 min read",
+    category: "AI Search",
+  },
+  {
+    slug: "free-ai-seo-audit-checklist",
+    title: "Free AI SEO Audit Checklist for 2026: 18 Things to Fix Before You Pay an Agency",
+    excerpt:
+      "Use this practical GEO checklist to improve your website's visibility in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews before you spend on a full engagement.",
+    date: "2026-06-12",
+    readTime: "10 min read",
+    category: "GEO Checklist",
+  },
+  {
+    slug: "why-your-website-is-not-showing-in-ai-search",
+    title: "Why Your Website Is Not Showing in AI Search: 9 Common Reasons and What to Fix First",
+    excerpt:
+      "Nine common reasons AI systems skip your brand, from weak entity signals to weak factual density, plus the fixes that usually improve AI visibility fastest.",
+    date: "2026-06-11",
+    readTime: "9 min read",
+    category: "AI Search",
+  },
+  {
     slug: "ai-automation-for-small-businesses",
     title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)",
     excerpt:

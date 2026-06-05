@@ -4,7 +4,6 @@ import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
-import { siteConfig } from "@/lib/constants";
 
 import "./globals.css";
 
@@ -31,19 +30,26 @@ export const metadata: Metadata = {
     template: "%s | RisonAI Tech",
   },
   description:
-    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure to scale business efficiency. Delhi NCR.",
+    "RisonAI Tech is India's AI workflow automation agency delivering custom AI automation services, AI integration services for business, agentic AI systems, SaaS platforms, and operational infrastructure. Delhi NCR.",
   keywords: [
     // ── Primary commercial intent ─────────────────────────────────
     "AI automation agency India",
     "AI automation company India",
+    "AI workflow automation agency",
     "agentic AI company India",
     "AI agents development India",
     "AI automation services India",
+    "custom AI automation services",
     "AI implementation partner India",
     "AI system integrator India",
+    "AI integration services for business",
+    "business process automation agency",
     // ── Agentic AI & autonomous systems (trending 2025-26) ────────
     "autonomous AI agents India",
     "agentic AI solutions India",
+    "Agentic AI",
+    "Skills Graph",
+    "Contextual Evaluation",
     "AI agent development company India",
     "multi-agent AI systems India",
     "LangGraph development India",
@@ -55,10 +61,13 @@ export const metadata: Metadata = {
     "business process automation AI India",
     "AI SDR agent India",
     "voice AI agent India",
+    "AI chatbot and voice agent development",
     "intelligent document processing India",
     "AI chatbot development India",
     "WhatsApp AI automation India",
     "RAG chatbot India",
+    "AI-powered resume screening",
+    "resume screening automation",
     // ── SaaS & CRM ────────────────────────────────────────────────
     "SaaS development company India",
     "AI SaaS development India",
@@ -91,7 +100,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
     description:
-      "India's AI automation agency — we build agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure that reduce manual work and scale business efficiency.",
+      "India's AI workflow automation agency for custom AI automation services, AI integration services for business, agentic AI systems, and AI chatbot and voice agent development.",
     url: BASE_URL,
     siteName: "RisonAI Tech",
     locale: "en_IN",
@@ -109,7 +118,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
     description:
-      "AI automation agency India — agentic AI agents, SaaS development, CRM automation, and AI chatbots for businesses across India.",
+      "AI workflow automation agency India — custom AI automation services, AI integration services for business, and chatbot plus voice agent development.",
     site: "@risonaitech",
     creator: "@risonaitech",
   },
@@ -178,7 +187,7 @@ const websiteSchema = {
   name: "RisonAI Tech",
   url: BASE_URL,
   description:
-    "RisonAI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS platforms, and operational infrastructure to scale business efficiency.",
+    "RisonAI Tech is India's AI workflow automation agency building agentic AI systems, custom AI automation services, AI integration services for business, and operational infrastructure to scale business efficiency.",
   potentialAction: [
     {
       "@type": "SearchAction",
@@ -218,7 +227,7 @@ const organizationSchema = {
   },
   image: { "@id": `${BASE_URL}/#logo` },
   description:
-    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
+    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, CRM infrastructure, and AI chatbot and voice agent development for enterprise efficiency.",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
   address: {
@@ -249,10 +258,13 @@ const organizationSchema = {
     "RAG chatbot development",
     "WhatsApp Business API automation",
     "Voice AI agents",
+    "Skills Graph",
+    "Contextual evaluation",
     "SaaS platform development",
     "Custom CRM development",
     "AI customer support agents",
     "Business process automation",
+    "AI-powered resume screening",
     "Generative AI implementation",
     "AI for Indian SMBs and MSMEs",
     "AI workflow orchestration",
@@ -297,7 +309,7 @@ const localBusinessSchema = {
   name: "RisonAI Tech",
   alternateName: "Risonai Tech",
   description:
-    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, autonomous AI agents, n8n workflow automation, SaaS engineering, CRM infrastructure, and AI chatbots for enterprise efficiency.",
+    "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, SaaS engineering, CRM infrastructure, and AI chatbot and voice agent development.",
   url: "https://risonaitech.com",
   telephone: "+918368137724",
   email: "hello@risonaitech.com",
@@ -343,10 +355,12 @@ const localBusinessSchema = {
     "Agentic AI systems",
     "n8n workflow automation",
     "RAG chatbot development",
+    "AI chatbot and voice agent development",
     "WhatsApp Business API",
     "SaaS platform development",
     "Custom CRM development",
     "AI agents for Indian businesses",
+    "AI-powered resume screening",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -366,7 +380,7 @@ const servicesSchema = {
       name: "AI Automation Systems",
       serviceType: "AI Automation",
       description:
-        "End-to-end AI automation systems that eliminate manual operations — LLM-powered intake agents, WhatsApp automation, CRM syncs, and agentic workflows.",
+        "End-to-end AI automation systems that eliminate manual operations — LLM-powered intake agents, WhatsApp automation, CRM syncs, AI-powered resume screening, and agentic workflows.",
       provider: { "@id": "https://risonaitech.com/#business" },
       areaServed: "India",
       offers: {
@@ -382,7 +396,7 @@ const servicesSchema = {
       name: "AI Agent Development",
       serviceType: "AI Agent Development",
       description:
-        "Production-ready autonomous AI agents — multi-step reasoning pipelines, tool-calling agents, RAG knowledge agents, and multi-agent systems.",
+        "Production-ready autonomous AI agents — multi-step reasoning pipelines, tool-calling agents, Skills Graph memory, contextual evaluation loops, RAG knowledge agents, and multi-agent systems.",
       provider: { "@id": "https://risonaitech.com/#business" },
       areaServed: "India",
       offers: {
@@ -414,7 +428,7 @@ const servicesSchema = {
       name: "AI Customer Support Agents",
       serviceType: "AI Chatbot Development",
       description:
-        "Context-aware AI chatbots for websites and WhatsApp — trained on business data via RAG for lead qualification and automated customer support triage.",
+        "Context-aware AI chatbots and voice agents for websites and WhatsApp — trained on business data via RAG for lead qualification and automated customer support triage.",
       provider: { "@id": "https://risonaitech.com/#business" },
       areaServed: "India",
       offers: {
@@ -423,6 +437,22 @@ const servicesSchema = {
         priceRange: "₹20,000 – ₹3,50,000",
       },
       url: "https://risonaitech.com/services/chatbot-development",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://risonaitech.com/services/resume-screening#service",
+      name: "AI-Powered Resume Screening",
+      serviceType: "AI Resume Screening Automation",
+      description:
+        "AI-powered resume screening systems with Skills Graph matching, contextual evaluation, ATS integration, and recruiter-in-the-loop controls that save 70-80% of first-pass screening time.",
+      provider: { "@id": "https://risonaitech.com/#business" },
+      areaServed: "India",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        priceRange: "₹35,000 – ₹2,50,000",
+      },
+      url: "https://risonaitech.com/services/resume-screening",
     },
   ],
 };
@@ -485,6 +515,8 @@ const founderSchema = {
     "LangGraph development",
     "LangChain development",
     "Voice AI agents",
+    "Skills Graph",
+    "Contextual evaluation",
     "WhatsApp Business API",
     "RAG architecture",
     "SaaS development",
@@ -492,6 +524,7 @@ const founderSchema = {
     "Indian SMB market",
     "Healthcare technology",
     "CRM systems",
+    "AI-powered resume screening",
     "Self-taught programmer",
   ],
   description:

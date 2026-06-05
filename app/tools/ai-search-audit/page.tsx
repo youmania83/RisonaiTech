@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Sparkles, ShieldCheck, Gauge, Bot } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, Gauge, Bot, CheckCircle2 } from "lucide-react";
 
 import AiAuditTool from "@/components/AiAuditTool";
 
@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     "AEO audit tool",
     "AI search ranking tool",
     "free AI SEO audit",
+    "free GEO audit",
+    "free AI visibility audit for website",
+    "AI search audit tool",
+    "website AI visibility checker",
+    "free website GEO audit",
+    "check website visibility in ChatGPT",
+    "how to rank in AI search",
+    "free AI search audit for business",
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -193,6 +201,141 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${PAGE_URL}#article`,
+  headline: "Free AI Search Audit for Websites: Check Your Visibility in ChatGPT, Perplexity and Google AI Overviews",
+  description:
+    "Run a free AI search audit for your website and check how visible your brand is across ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. Learn what the score means and how to improve it.",
+  url: PAGE_URL,
+  datePublished: "2026-06-04",
+  dateModified: "2026-06-04",
+  author: {
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "RisonAI Tech",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "RisonAI Tech",
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  inLanguage: "en-IN",
+};
+
+const keyTakeaways = [
+  "Use the free audit when you want to know whether ChatGPT, Perplexity, Claude, Gemini, or Google AI Overviews can confidently cite your brand.",
+  "A low score usually means weak structured data, thin factual content, weak brand mentions, or blocked AI crawlers rather than one isolated SEO issue.",
+  "The fastest wins usually come from better FAQ content, entity clarity, schema markup, llms.txt, and pages written in direct-answer format.",
+  "This tool is designed for founders, marketers, local businesses, SaaS teams, agencies, clinics, and service businesses that want free AI visibility feedback before paying for consulting.",
+];
+
+const auditSignals = [
+  {
+    name: "Brand authority",
+    text: "Whether AI engines can identify your company as a real entity with a clear name, service category, location, and supporting mentions across the web.",
+  },
+  {
+    name: "Structured data",
+    text: "Whether your website uses usable schema markup, clear service definitions, FAQ content, and machine-readable signals that help answer engines extract facts quickly.",
+  },
+  {
+    name: "Factual density",
+    text: "Whether your pages contain quotable information such as pricing, timelines, numbers, locations, use cases, and direct answers instead of vague marketing copy.",
+  },
+  {
+    name: "AI crawler accessibility",
+    text: "Whether bots can reach your key pages and supporting files like robots.txt, sitemap.xml, llms.txt, and other discovery surfaces without friction.",
+  },
+  {
+    name: "Topical clarity",
+    text: "Whether a model can tell what you do, who you serve, and which problems you solve from the page structure, headings, metadata, and surrounding content.",
+  },
+  {
+    name: "Geographic specificity",
+    text: "Whether your site clearly ties your services to the cities, regions, or countries where you actually want to be discovered in AI answers.",
+  },
+];
+
+const improvementSteps = [
+  {
+    step: "1. Make your entity obvious",
+    text: "Use the exact business name, service category, founder or organization details, location, and contact information consistently across the site and supporting profiles.",
+  },
+  {
+    step: "2. Add direct-answer content",
+    text: "Create pages that answer buyer questions in the first 100 words. AI engines reward passages that can stand alone without requiring extra context.",
+  },
+  {
+    step: "3. Strengthen schema markup",
+    text: "Deploy Organization, LocalBusiness, Service, FAQ, Article, and Breadcrumb schema where relevant so AI systems can read page meaning with less ambiguity.",
+  },
+  {
+    step: "4. Improve llms.txt and crawl surfaces",
+    text: "Expose a clean llms.txt, an up-to-date sitemap, and accessible robots rules so AI crawlers and retrieval systems can discover your highest-value pages.",
+  },
+  {
+    step: "5. Publish specific proof",
+    text: "Include concrete use cases, pricing ranges, implementation steps, benchmarks, screenshots, and FAQs. Specificity increases citation odds far more than generic claims.",
+  },
+  {
+    step: "6. Build supporting mentions",
+    text: "Third-party references, business profiles, reviews, and brand mentions help models trust that your company is legitimate and worth citing.",
+  },
+];
+
+const scoreBands = [
+  {
+    band: "85–100 (A)",
+    text: "Strong authority. Your brand is likely being surfaced for category and comparison queries. The focus is defending relevance and expanding coverage.",
+  },
+  {
+    band: "70–84 (B)",
+    text: "Good visibility but inconsistent citation. You probably appear for some prompts but not the highest-value commercial searches yet.",
+  },
+  {
+    band: "55–69 (C)",
+    text: "Discoverable but weakly trusted. AI engines can find you, but your pages need more clarity, factual density, and authority signals to earn citations.",
+  },
+  {
+    band: "40–54 (D)",
+    text: "Low visibility. Your site likely lacks enough structure, entity context, or topic depth for AI search systems to use confidently.",
+  },
+  {
+    band: "Below 40 (F)",
+    text: "Effectively invisible in AI search. This is common for small businesses and new sites, and it usually means foundational GEO work is still missing.",
+  },
+];
+
+const visibleFaqs = [
+  {
+    q: "What is a free AI search audit?",
+    a: "A free AI search audit checks how visible your website or brand is across AI answer engines such as ChatGPT Search, Perplexity, Claude, Gemini, and Google AI Overviews. It estimates whether your site is easy for these systems to discover, understand, and cite.",
+  },
+  {
+    q: "Who should use this AI visibility audit?",
+    a: "This audit is useful for founders, marketers, local businesses, agencies, SaaS teams, clinics, e-commerce brands, and service companies that want to know whether they are appearing in AI-generated answers before spending on a full consulting engagement.",
+  },
+  {
+    q: "Is this different from a normal SEO audit?",
+    a: "Yes. A traditional SEO audit focuses on rankings in standard search results. An AI search audit focuses on whether answer engines can extract facts about your business, trust your content, and include your brand in generated responses.",
+  },
+  {
+    q: "How long does the free audit take?",
+    a: "The tool returns a visibility score, factor breakdown, and next actions in seconds. It is meant to be a fast first-pass diagnostic rather than a multi-week enterprise audit.",
+  },
+  {
+    q: "What should I do after getting my score?",
+    a: "Start with the highest-priority gaps: entity clarity, FAQ content, schema markup, llms.txt, and stronger direct-answer pages. Once the basics are in place, improve citations, third-party mentions, and supporting proof across the site.",
+  },
+  {
+    q: "Can RisonAI Tech fix the issues found in the audit?",
+    a: "Yes. RisonAI Tech offers GEO and AEO implementation for businesses that want help improving AI visibility through content restructuring, schema rollout, internal linking, entity optimization, and AI crawler readiness.",
+  },
+];
+
 export default function AiSearchAuditPage() {
   return (
     <>
@@ -201,7 +344,7 @@ export default function AiSearchAuditPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [softwareSchema, howToSchema, faqSchema, breadcrumbSchema],
+            "@graph": [softwareSchema, howToSchema, faqSchema, breadcrumbSchema, articleSchema],
           }),
         }}
       />
@@ -252,7 +395,7 @@ export default function AiSearchAuditPage() {
           </div>
 
           {/* ─── Tool ─────────────────────────────────────────────── */}
-          <div className="mx-auto mt-10 max-w-3xl">
+          <div id="audit-tool" className="mx-auto mt-10 max-w-3xl">
             <AiAuditTool variant="page" />
           </div>
 
@@ -276,7 +419,48 @@ export default function AiSearchAuditPage() {
           </div>
 
           {/* ─── Long-form SEO content (crawler food) ─────────────── */}
-          <article className="mx-auto mt-20 max-w-3xl space-y-6 text-white/70">
+          <article
+            className="mx-auto mt-20 max-w-3xl space-y-6 text-white/70"
+            itemScope
+            itemType="https://schema.org/Article"
+          >
+            <div className="rounded-xl border border-indigo-500/20 bg-indigo-500/5 px-6 py-5">
+              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-indigo-400">
+                TL;DR - Direct Answer
+              </p>
+              <p className="text-base leading-relaxed text-white/80">
+                A free AI search audit shows whether your website is discoverable, understandable, and citable in answer engines like ChatGPT,
+                Perplexity, Claude, Gemini, and Google AI Overviews. If your brand is not being cited in AI answers, you are losing high-intent
+                traffic before the click ever reaches your site. This page lets you run that audit for free and understand exactly what to fix first.
+              </p>
+            </div>
+
+            <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <p className="mb-3 text-sm font-semibold text-[#a78bfa]">Key takeaways</p>
+              <ul className="space-y-2">
+                {keyTakeaways.map((point) => (
+                  <li key={point} className="flex items-start gap-2.5 text-sm leading-relaxed text-white/70">
+                    <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#10B981]" size={15} />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+              Free AI search audit for websites: what it actually tells you
+            </h2>
+            <p className="leading-relaxed">
+              A website can rank in traditional SEO and still be weak in AI search. That happens when answer engines can crawl the page but cannot
+              confidently extract who you are, what you do, where you operate, and why your content should be cited. A proper GEO audit closes that
+              gap by measuring citation readiness, not just rank position.
+            </p>
+            <p className="leading-relaxed">
+              This matters because more buyers now search in conversational form: <strong className="text-white">best AI automation agency in India</strong>,
+              <strong className="text-white"> how to improve AI visibility for my website</strong>, or <strong className="text-white">free audit for ChatGPT rankings</strong>.
+              If your site is not structured for those queries, AI engines will answer with someone else.
+            </p>
+
             <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
               What this AI visibility audit measures
             </h2>
@@ -284,7 +468,7 @@ export default function AiSearchAuditPage() {
               Search is changing. In 2026, more than 30% of high-intent queries
               never reach a results page — users get their answer directly from
               ChatGPT Search, Perplexity, Claude, Google AI Overviews or
-              Gemini. If those engines don't surface your brand, you lose the
+              Gemini. If those engines don&apos;t surface your brand, you lose the
               click before it ever existed. This is the problem
               <strong className="text-white"> AI Search Optimization (GEO / AEO)</strong>{" "}
               solves, and this audit is the first step.
@@ -299,36 +483,137 @@ export default function AiSearchAuditPage() {
               per-factor breakdown, and prioritised next actions.
             </p>
 
+            <div className="space-y-3 not-prose">
+              {auditSignals.map((signal) => (
+                <div
+                  key={signal.name}
+                  className="rounded-xl p-5"
+                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                >
+                  <p className="text-sm font-semibold text-white">{signal.name}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{signal.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+              Who should run this free GEO audit
+            </h2>
+            <p className="leading-relaxed">
+              This tool is most useful if your business depends on trust-heavy searches where buyers compare options before contacting you. That
+              includes local service businesses, SaaS startups, AI agencies, healthcare clinics, real-estate firms, consultants, and e-commerce
+              brands with a strong support or education layer.
+            </p>
+            <p className="leading-relaxed">
+              If you already have traffic but want more of it from zero-click discovery and AI-generated answers, this page gives you a fast baseline.
+              If you have almost no visibility today, it tells you which foundations to fix before investing in a larger SEO or GEO program.
+            </p>
+
             <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
               How to interpret your score
             </h2>
-            <ul className="space-y-3 leading-relaxed">
-              <li>
-                <strong className="text-white">85–100 (A):</strong> Strong
-                authority — you're likely cited by AI engines for category
-                queries. Focus on defending the moat.
-              </li>
-              <li>
-                <strong className="text-white">70–84 (B):</strong> Visible but
-                inconsistent — you appear for some queries but not the most
-                valuable ones. Tighten schema and topical depth.
-              </li>
-              <li>
-                <strong className="text-white">55–69 (C):</strong> Discoverable
-                but rarely cited — engines see you, but don't trust you enough
-                to quote you. Build factual density and external mentions.
-              </li>
-              <li>
-                <strong className="text-white">40–54 (D):</strong> Largely
-                invisible — limited schema, weak brand signals, sparse content.
-                Foundational work needed.
-              </li>
-              <li>
-                <strong className="text-white">Below 40 (F):</strong> Effectively
-                invisible to AI search. This is where most Indian SMBs are
-                today — and where the biggest wins are.
-              </li>
-            </ul>
+            <div className="space-y-3 not-prose">
+              {scoreBands.map((item) => (
+                <div
+                  key={item.band}
+                  className="rounded-xl p-5"
+                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                >
+                  <p className="text-sm font-semibold text-white">{item.band}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+              AI search audit vs traditional SEO audit
+            </h2>
+            <div className="not-prose overflow-hidden rounded-xl border border-white/10">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr style={{ background: "rgba(99,91,255,0.1)" }}>
+                    <th className="px-4 py-3 text-left font-semibold text-white">Area</th>
+                    <th className="px-4 py-3 text-left font-semibold text-white">Traditional SEO audit</th>
+                    <th className="px-4 py-3 text-left font-semibold text-white">AI search audit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Primary outcome", "Better rankings in search results", "More citations and mentions in AI answers"],
+                    ["Main surfaces", "Google and Bing result pages", "ChatGPT, Perplexity, Claude, Gemini, AI Overviews"],
+                    ["What matters most", "Keywords, backlinks, indexing, page quality", "Entity clarity, extractability, schema, factual density, crawl readiness"],
+                    ["Typical content format", "Optimized landing pages and blogs", "Direct-answer passages, FAQs, entity pages, machine-readable content"],
+                    ["Winning metric", "Rank, CTR, organic traffic", "Citation likelihood, answer presence, brand recall in AI outputs"],
+                  ].map((row) => (
+                    <tr key={row[0]} style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                      <td className="px-4 py-3 text-white/80">{row[0]}</td>
+                      <td className="px-4 py-3 text-white/60">{row[1]}</td>
+                      <td className="px-4 py-3 text-white/60">{row[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              className="mt-12 rounded-2xl p-7"
+              style={{ background: "rgba(99,91,255,0.07)", border: "1px solid rgba(99,91,255,0.18)" }}
+            >
+              <p className="text-xs font-bold uppercase tracking-widest text-[#c4b5fd]">Free audit CTA</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-white">
+                Run the free audit before you spend on GEO consulting
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                If your business site is not yet visible in AI answers, the fastest next step is to benchmark it now, fix the biggest structural gaps,
+                and then decide whether you need implementation help. The tool is free, instant, and requires no signup.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="#audit-tool" className="btn-primary">
+                  Use the audit above
+                  <ArrowRight size={14} />
+                </Link>
+                <Link
+                  href="/blog/what-is-ai-automation"
+                  className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
+                  style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+                >
+                  Read more about AI-driven growth
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+
+            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+              How to improve your AI visibility after the audit
+            </h2>
+            <div className="space-y-3 not-prose">
+              {improvementSteps.map((item) => (
+                <div
+                  key={item.step}
+                  className="rounded-xl p-5"
+                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                >
+                  <p className="text-sm font-semibold text-[#a78bfa]">{item.step}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+              Frequently asked questions about the free AI website audit
+            </h2>
+            <div className="space-y-3 not-prose">
+              {visibleFaqs.map((faq) => (
+                <div
+                  key={faq.q}
+                  className="rounded-xl p-5"
+                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                >
+                  <h3 className="text-base font-semibold text-white">{faq.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{faq.a}</p>
+                </div>
+              ))}
+            </div>
 
             <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
               Want help implementing the recommendations?
@@ -342,6 +627,14 @@ export default function AiSearchAuditPage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <Link href="/contact" className="btn-primary">
                 Talk to RisonAI Tech
+                <ArrowRight size={14} />
+              </Link>
+              <Link
+                href="/blog/ai-automation-for-small-businesses"
+                className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
+                style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+              >
+                Read the small-business AI playbook
                 <ArrowRight size={14} />
               </Link>
               <Link

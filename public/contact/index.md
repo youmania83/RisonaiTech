@@ -2,7 +2,7 @@
 title: "Contact RisonAI Tech — Book Free AI Consultation"
 description: "Contact RisonAI Tech for a free 30-minute consultation for AI automation, SaaS development, CRM, or chatbot projects."
 url: "https://risonaitech.com/contact"
-last_updated: "2026-04-19"
+last_updated: "2026-06-05"
 ---
 
 ## Contact RisonAI Tech

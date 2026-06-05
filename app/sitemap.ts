@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://risonaitech.com";
 // Update this whenever you make a significant content change
-const LAST_MODIFIED = new Date("2026-05-28");
+const LAST_MODIFIED = new Date("2026-06-04");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -77,6 +77,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/services/resume-screening`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/services/saas-development`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
 
     // ── Tools ─────────────────────────────────────────────────────
     {
@@ -91,6 +103,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/blog`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/how-to-check-if-your-website-appears-in-chatgpt`,
+      lastModified: new Date("2026-06-13"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/free-ai-seo-audit-checklist`,
+      lastModified: new Date("2026-06-12"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/why-your-website-is-not-showing-in-ai-search`,
+      lastModified: new Date("2026-06-11"),
+      changeFrequency: "monthly",
       priority: 0.85,
     },
     {
@@ -116,6 +146,66 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-05-12"),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-agents-for-business-automation`,
+      lastModified: new Date("2026-06-06"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-automation-real-estate-india`,
+      lastModified: new Date("2026-06-08"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/make-vs-n8n-ai-automation`,
+      lastModified: new Date("2026-06-07"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-automation-for-small-businesses`,
+      lastModified: new Date("2026-06-04"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-lead-generation-systems`,
+      lastModified: new Date("2026-06-04"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-and-automation`,
+      lastModified: new Date("2026-06-05"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-vs-automation`,
+      lastModified: new Date("2026-06-04"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-automation-tools`,
+      lastModified: new Date("2026-06-03"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/how-to-use-ai-for-automation`,
+      lastModified: new Date("2026-06-02"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blog/what-is-ai-automation`,
+      lastModified: new Date("2026-06-01"),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
 
     // ── Location pages ────────────────────────────────────────────

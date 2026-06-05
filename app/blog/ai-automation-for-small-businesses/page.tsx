@@ -6,10 +6,13 @@ import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/li
 export const metadata: Metadata = {
   title: { absolute: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team) | RisonAI Tech" },
   description:
-    "Small businesses with 5–50 employees are the biggest AI automation opportunity in India. A practical playbook with no technical background required.",
+    "Small businesses with 5–50 employees are the biggest AI automation opportunity in India. A practical playbook for working with an AI workflow automation agency and deploying custom AI automation services without a tech team.",
   keywords: [
     "ai automation for small businesses india",
     "ai automation small business 2026",
+    "ai workflow automation agency",
+    "custom ai automation services",
+    "ai integration services for business",
     "ai tools for small business india",
     "affordable ai automation india",
     "ai automation without tech team",
@@ -171,6 +174,9 @@ export default function AiAutomationSmallBusinesses() {
             </p>
             <p className="text-white/65 text-base leading-relaxed mt-3">
               A business owner spending 3 hours a day on lead follow-up, customer queries, and report compilation saves ₹50,000–₹80,000/year in equivalent labour cost from a single automation suite. The math is simple and the payback period is short.
+            </p>
+            <p className="text-white/65 text-base leading-relaxed mt-3">
+              That is why many SMEs now work with an <strong className="text-white">AI workflow automation agency</strong> instead of buying disconnected tools one by one. The right partner provides <strong className="text-white">custom AI automation services</strong> and <strong className="text-white">AI integration services for business</strong> so WhatsApp, CRM, email, spreadsheets, and reporting all operate as a single system.
             </p>
 
             <h2 className="font-display text-2xl font-bold text-white mt-12 mb-5">
@@ -353,6 +359,12 @@ export default function AiAutomationSmallBusinesses() {
                 tag: "Get started",
                 title: "Free discovery call",
                 desc: "Walk us through your current manual workflows. We will identify your top 3 automation opportunities in 30 minutes.",
+              },
+              {
+                href: "/services/resume-screening",
+                tag: "Service",
+                title: "AI-powered resume screening",
+                desc: "Use the same workflow automation logic for hiring: parse resumes, rank candidates, and save 70-80% of recruiter screening time.",
               },
               {
                 href: "/blog/how-to-use-ai-for-automation",

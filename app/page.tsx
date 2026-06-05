@@ -17,7 +17,18 @@ import VerificationSignals from "@/components/VerificationSignals";
 export const metadata: Metadata = {
   title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
   description:
-    "RisonAI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, SaaS platforms, and operational infrastructure. Serving startups and enterprises globally from Delhi NCR.",
+    "RisonAI Tech is India's AI workflow automation agency delivering custom AI automation services, AI integration services for business, agentic AI systems, AI chatbot and voice agent development, and SaaS platforms from Delhi NCR.",
+  keywords: [
+    "AI workflow automation agency",
+    "custom AI automation services",
+    "AI integration services for business",
+    "business process automation agency",
+    "AI chatbot and voice agent development",
+    "Agentic AI",
+    "Skills Graph",
+    "Contextual Evaluation",
+    "AI-powered resume screening",
+  ],
   alternates: { canonical: "/" },
 };
 
@@ -27,12 +38,12 @@ const serviceCards = [
     title: "AI Workflow Automation",
     href: "/services/ai-automation",
     price: "From ₹30,000",
-    desc: "End-to-end AI automation systems that eliminate manual operations. LLM-powered agents and agentic workflows.",
+    desc: "Custom AI automation services and AI integration services for business, including LLM-powered agents, agentic workflows, and business process automation.",
   },
   {
     icon: Layers,
     title: "SaaS Platform Engineering",
-    href: "/services/ai-agent",
+    href: "/services/saas-development",
     price: "From ₹1,20,000",
     desc: "Enterprise-grade multi-tenant SaaS platforms with billing, admin dashboards, and native AI capabilities.",
   },
@@ -48,7 +59,7 @@ const serviceCards = [
     title: "AI Customer Support Agents",
     href: "/services/chatbot-development",
     price: "From ₹20,000",
-    desc: "Context-aware RAG chatbots trained on your business data for 24/7 lead qualification and customer support.",
+    desc: "AI chatbot and voice agent development for 24/7 lead qualification, customer support, and context-aware responses grounded in your business data.",
   },
   {
     icon: Code2,
@@ -73,7 +84,7 @@ const faqItems = [
   },
   {
     q: "How does AI automation reduce operational costs?",
-    a: "By replacing repetitive manual tasks—like lead qualification, data entry, and customer support triage—with intelligent AI agents and API integrations, saving thousands of manual hours annually.",
+    a: "By replacing repetitive manual tasks like lead qualification, data entry, customer support triage, and AI-powered resume screening with intelligent AI agents and API integrations, businesses often save thousands of manual hours annually and cut first-pass screening time by 70-80%.",
   },
   {
     q: "How long does it take to deploy an AI system?",
@@ -96,6 +107,10 @@ const faqItems = [
     a: "Yes. We build custom API middleware to integrate LLM capabilities directly into existing operational hubs like HubSpot, Zoho, or Salesforce to automate data entry and lead scoring.",
   },
   {
+    q: "Do you build agentic AI systems with skills graphs and contextual evaluation?",
+    a: "Yes. For complex automation, we build agentic AI systems with Skills Graph memory, contextual evaluation loops, tool use, and human-in-the-loop controls so the system can act reliably across multi-step business workflows.",
+  },
+  {
     q: "What is the typical ROI on an AI automation project?",
     a: "Our clients typically see a 3× increase in operational efficiency, a 60% reduction in customer response times, and significant savings in administrative overhead within the first quarter of deployment.",
   },
@@ -106,6 +121,79 @@ const faqItems = [
   {
     q: "How do we begin the transformation process?",
     a: "Contact us to schedule an AI Systems Strategy Session. We will audit your current workflows, map out automation opportunities, and deliver a fixed-price architectural proposal within 48 hours.",
+  },
+];
+
+const aiSearchPrompts = [
+  {
+    prompt: "Best AI automation for small business workflows",
+    intent: "Commercial",
+    href: "/blog/ai-automation-for-small-businesses",
+    answer:
+      "For most small businesses, the fastest-payback workflows are lead qualification, FAQ support, invoice reminders, and weekly reporting because they save owner time immediately.",
+  },
+  {
+    prompt: "How to automate lead qualification with AI",
+    intent: "Informational",
+    href: "/blog/ai-lead-generation-systems",
+    answer:
+      "AI lead qualification works best when the system replies instantly, asks structured budget and intent questions, scores the lead, and syncs the result into your CRM.",
+  },
+  {
+    prompt: "AI workflow automation for real estate agencies",
+    intent: "Commercial",
+    href: "/blog/ai-automation-real-estate-india",
+    answer:
+      "Real estate teams benefit most from instant portal lead response, WhatsApp qualification, site-visit scheduling, and automated follow-up across the full property pipeline.",
+  },
+  {
+    prompt: "Replace manual data entry with AI agent",
+    intent: "Informational",
+    href: "/services/crm-development",
+    answer:
+      "AI agents can capture structured details from forms, emails, and chats, then write clean records into a CRM without repeated manual copy-paste.",
+  },
+  {
+    prompt: "AI customer support agent for small business",
+    intent: "Commercial",
+    href: "/services/chatbot-development",
+    answer:
+      "A small-business support agent should answer repetitive questions instantly, escalate edge cases to humans, and stay grounded in your real product or service knowledge.",
+  },
+  {
+    prompt: "How to build custom AI agent for my website",
+    intent: "Informational",
+    href: "/services/ai-agent",
+    answer:
+      "A custom website AI agent needs clear business goals, trusted source data, guardrails, handoff logic, and analytics before it should be exposed to customers.",
+  },
+  {
+    prompt: "AI SaaS platform development for startups India",
+    intent: "Commercial",
+    href: "/services/saas-development",
+    answer:
+      "Indian startups usually need a multi-tenant SaaS base with billing, RBAC, admin tools, and selective AI features instead of an overbuilt first version.",
+  },
+  {
+    prompt: "Best AI tools for healthcare clinic operations",
+    intent: "Commercial",
+    href: "/products",
+    answer:
+      "Clinics usually get the highest ROI from AI-powered appointment booking, WhatsApp reminders, patient intake automation, and support bots connected to their operations stack.",
+  },
+  {
+    prompt: "AI automation ROI for D2C brands",
+    intent: "Informational",
+    href: "/services/ai-automation",
+    answer:
+      "D2C ROI typically comes from faster lead response, support deflection, order-status automation, and recovering revenue from repetitive customer communication flows.",
+  },
+  {
+    prompt: "Alternatives to manual CRM data entry AI",
+    intent: "Commercial",
+    href: "/services/crm-development",
+    answer:
+      "The best alternative is not another spreadsheet process. It is an AI-assisted CRM flow that captures, enriches, and routes records automatically at intake.",
   },
 ];
 
@@ -243,6 +331,51 @@ export default function HomePage() {
               <p className="mt-5 text-xs text-white/40">
                 Most owners break even in under 90 days.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+        <div className="container-site">
+          <div className="mx-auto max-w-5xl">
+            <div className="max-w-3xl">
+              <span className="label-pill mb-4 inline-flex">AI search coverage</span>
+              <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+                Popular AI search prompts we answer directly
+              </h2>
+              <p className="mt-3 text-white/55 leading-relaxed">
+                These are the real commercial and research-style queries buyers use in ChatGPT, Google AI Overviews,
+                Perplexity, Gemini, and Copilot when evaluating AI automation partners and use cases.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 lg:grid-cols-2">
+              {aiSearchPrompts.map((item) => (
+                <Link
+                  className="card-base block p-6 transition-transform duration-200 hover:-translate-y-0.5"
+                  href={item.href}
+                  key={item.prompt}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-semibold text-lg leading-snug text-white">{item.prompt}</h3>
+                    <span
+                      className="shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
+                      style={{
+                        background: "rgba(99,91,255,0.1)",
+                        border: "1px solid rgba(99,91,255,0.2)",
+                        color: "#c4b5fd",
+                      }}
+                    >
+                      {item.intent}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-white/60">{item.answer}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#a78bfa]">
+                    Read the relevant page <ArrowRight size={14} />
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

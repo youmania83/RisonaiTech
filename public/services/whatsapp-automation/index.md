@@ -2,7 +2,7 @@
 title: "WhatsApp Automation — Lead Capture, Support, and CRM Workflows"
 description: "RisonAI Tech builds WhatsApp automation systems for lead capture, support, and CRM workflows. Official API setup, routing, and analytics included."
 url: "https://risonaitech.com/services/whatsapp-automation"
-last_updated: "2026-04-26"
+last_updated: "2026-06-05"
 ---
 
 ## WhatsApp Automation

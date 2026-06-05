@@ -6,10 +6,12 @@ import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/li
 export const metadata: Metadata = {
   title: { absolute: "AI Lead Generation Automation: Build a System That Never Sleeps | RisonAI Tech" },
   description:
-    "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the system.",
+    "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the system, including AI integration services for business and chatbot plus voice agent workflows.",
   keywords: [
     "ai lead generation automation",
     "ai automated lead generation",
+    "ai integration services for business",
+    "ai chatbot and voice agent development",
     "automated lead qualification system",
     "ai lead generation india",
     "24 7 lead qualification ai",
@@ -172,6 +174,9 @@ export default function AiLeadGenSystems() {
             <p className="text-white/65 text-base leading-relaxed mt-3">
               The fix is not hiring more salespeople. The fix is a system that handles the mechanical parts — response, qualification, data entry, follow-up scheduling — so your sales team only spends time on conversations that matter.
             </p>
+            <p className="text-white/65 text-base leading-relaxed mt-3">
+              In production, this usually means combining <strong className="text-white">AI integration services for business</strong> with <strong className="text-white">AI chatbot and voice agent development</strong>. Your website bot, WhatsApp layer, calling workflow, CRM, and nurture engine need to share the same lead state or the system breaks under real volume.
+            </p>
 
             <h2 className="font-display text-2xl font-bold text-white mt-12 mb-5">
               The 5-layer AI lead generation architecture
@@ -315,6 +320,12 @@ export default function AiLeadGenSystems() {
                 tag: "Service",
                 title: "CRM Development",
                 desc: "Custom CRM builds and integrations with automation pipelines for Indian businesses.",
+              },
+              {
+                href: "/services/resume-screening",
+                tag: "Service",
+                title: "AI-powered resume screening",
+                desc: "Apply the same qualification and routing logic to recruiting workflows with AI-driven candidate scoring and shortlist automation.",
               },
               {
                 href: "/contact",

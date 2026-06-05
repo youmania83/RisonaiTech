@@ -1,13 +1,13 @@
 ---
 title: "AI and SaaS Development in Gurgaon — RisonAI Tech"
 description: "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Gurgaon startups and enterprises."
-url: "https://risonaitech.com/locations/gurgaon"
-last_updated: "2026-04-19"
+url: "https://risonaitech.com/gurgaon"
+last_updated: "2026-06-05"
 ---
 
 ## RisonAI Tech — Gurgaon
 
-RisonAI Tech serves clients across Gurgaon (Gurugram) and the Haryana tech corridor.
+RisonAI Tech serves startups, growth-stage platforms, and enterprises in Gurgaon (Gurugram) and the Haryana tech corridor.
 
 Services in Gurgaon:
 - AI Automation from Rs 30,000

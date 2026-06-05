@@ -10,10 +10,11 @@ import { breadcrumbSchema, graph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: { absolute: "AI & Software Services for Indian Businesses | RisonAI Tech" },
   description:
-    "RisonAI Tech offers 6 core services for Indian businesses: AI automation, AI agent development, CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
+    "RisonAI Tech offers 7 core services for Indian businesses: AI automation, AI agent development, AI-powered resume screening, CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
   keywords: [
     "AI automation services India",
     "AI agent development India",
+    "AI-powered resume screening India",
     "CRM development India",
     "AI chatbot services India",
     "agentic AI India",
@@ -26,14 +27,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Services | RisonAI Tech — AI Automation, AI Agents & CRM Development",
     description:
-      "AI automation, AI agent development, CRM solutions, AI chatbots, websites, and WhatsApp automation. Six core disciplines, one team.",
+      "AI automation, AI agent development, AI-powered resume screening, CRM solutions, AI chatbots, websites, and WhatsApp automation. Seven core disciplines, one team.",
     url: "https://risonaitech.com/services",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "6 AI & Software Services | RisonAI Tech India",
-    description: "AI automation, AI agents, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
+    title: "7 AI & Software Services | RisonAI Tech India",
+    description: "AI automation, AI agents, AI-powered resume screening, CRM, chatbots, WhatsApp automation, websites. Fixed-price. Full code ownership. Starting ₹20,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
 };
@@ -70,7 +71,7 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-5 text-xl text-white/52">
-                Six core disciplines. One team. End-to-end ownership.
+                Seven core disciplines. One team. End-to-end ownership.
               </p>
             </Reveal>
           </div>

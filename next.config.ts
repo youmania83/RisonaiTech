@@ -45,12 +45,6 @@ const nextConfig: NextConfig = {
         destination: "https://risonaitech.com/:path*",
         permanent: true,
       },
-      // SaaS Development → AI Agent (301 — preserves SEO authority)
-      {
-        source: "/services/saas-development",
-        destination: "/services/ai-agent",
-        permanent: true,
-      },
     ];
   },
 

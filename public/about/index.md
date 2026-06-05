@@ -2,7 +2,7 @@
 title: "About RisonAI Tech — Product Engineering and AI Company India"
 description: "RisonAI Tech is a product engineering company based in Panipat, Haryana. We build AI systems, SaaS platforms, and digital products for businesses across India."
 url: "https://risonaitech.com/about"
-last_updated: "2026-04-19"
+last_updated: "2026-06-05"
 ---
 
 ## About RisonAI Tech
