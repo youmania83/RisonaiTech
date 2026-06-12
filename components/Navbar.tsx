@@ -94,10 +94,10 @@ export default function Navbar() {
         {/* Mobile Menu — CSS transitions (no framer-motion) */}
         <div
           aria-hidden={!isMobileMenuOpen}
-          className={`fixed inset-x-0 top-[64px] z-40 px-4 pt-2 pb-4 lg:hidden transition-[opacity,transform] duration-200 ease-out ${
+          className={`fixed inset-x-0 top-[64px] z-40 px-4 pt-2 pb-4 lg:hidden transition-[opacity,transform,visibility] duration-200 ease-out ${
             isMobileMenuOpen
-              ? "translate-y-0 opacity-100"
-              : "-translate-y-2 opacity-0 pointer-events-none"
+              ? "translate-y-0 opacity-100 visible"
+              : "-translate-y-2 opacity-0 pointer-events-none invisible"
           }`}
           style={{
             background: "rgba(5, 7, 15, 0.95)",

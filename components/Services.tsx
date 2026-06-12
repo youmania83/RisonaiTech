@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 import MotionWrapper from "@/components/MotionWrapper";
 import { services } from "@/lib/constants";
@@ -23,7 +23,7 @@ export default function Services() {
           </MotionWrapper>
           <MotionWrapper delay={2}>
             <p className="mt-4 text-lg text-brand-gray">
-              We don't sell technology. We sell outcomes — automation that saves
+              We don&apos;t sell technology. We sell outcomes — automation that saves
               20 hours a week, systems that capture leads at 2 AM, software that
               scales without a bigger headcount.
             </p>
@@ -31,42 +31,73 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
             const Icon = service.icon;
+            const waMsg = encodeURIComponent(
+              `Hi RisonAI Tech, I want to discuss the ${service.title} system for our business.`
+            );
             return (
               <MotionWrapper delay={i} key={service.id}>
-                <div className="card-base group flex h-full flex-col gap-5 cursor-default p-7 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div
-                    className="flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow-sm"
-                    style={{
-                      background: "rgba(99, 91, 255, 0.08)",
-                      border: "1px solid rgba(99, 91, 255, 0.15)",
-                    }}
-                  >
-                    <Icon className="text-[#a78bfa]" size={20} />
+                <div className="card-base group flex h-full flex-col justify-between cursor-default p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#635BFF]/30">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div
+                        className="flex h-10 w-10 items-center justify-center rounded-lg"
+                        style={{
+                          background: "rgba(99, 91, 255, 0.08)",
+                          border: "1px solid rgba(99, 91, 255, 0.15)",
+                        }}
+                      >
+                        <Icon className="text-[#a78bfa]" size={18} />
+                      </div>
+                      <span className="text-xs font-semibold text-[#a78bfa]">
+                        {service.price}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-white">
+                        {service.title}
+                      </h3>
+                      <p className="mt-1 text-xs text-white/60 leading-relaxed">
+                        {service.short}
+                      </p>
+                    </div>
+
+                    <div className="space-y-2.5 pt-2 border-t border-white/5">
+                      {service.problem && (
+                        <div className="text-xs">
+                          <span className="font-bold text-white/60 block uppercase tracking-wider text-[9px]">Problem</span>
+                          <span className="text-white/60 mt-0.5 block leading-normal">{service.problem}</span>
+                        </div>
+                      )}
+                      {service.solution && (
+                        <div className="text-xs">
+                          <span className="font-bold text-white/60 block uppercase tracking-wider text-[9px]">Solution</span>
+                          <span className="text-white/60 mt-0.5 block leading-normal">{service.solution}</span>
+                        </div>
+                      )}
+                      {service.outcome && (
+                        <div className="text-xs p-2 rounded bg-[#635BFF]/5 border border-[#635BFF]/10">
+                          <span className="font-bold text-[#a78bfa] block uppercase tracking-wider text-[9px]">Expected Outcome</span>
+                          <span className="text-white font-medium mt-0.5 block leading-normal">{service.outcome}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <h3
-                      className="font-display text-lg font-bold text-brand-dark"
+
+                  <div className="mt-6 pt-4 border-t border-white/5">
+                    <a
+                      href={`https://wa.me/918368137724?text=${waMsg}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-4 py-2 w-full text-xs font-semibold text-white transition-all hover:bg-[#25D366]/10 hover:border-[#25D366]/30 hover:text-white"
                     >
-                      {service.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-brand-gray">
-                      {service.short}
-                    </p>
+                      <MessageCircle size={13} className="text-[#25D366] fill-[#25D366]" />
+                      Discuss on WhatsApp
+                    </a>
                   </div>
-                  <ul className="mt-auto space-y-1.5">
-                    {service.bullets.slice(0, 3).map((b) => (
-                      <li className="flex items-center gap-2 text-xs text-white/45" key={b}>
-                        <span
-                          className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                          style={{ background: "#a78bfa" }}
-                        />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </MotionWrapper>
             );

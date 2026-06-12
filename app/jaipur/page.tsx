@@ -222,6 +222,31 @@ export default function JaipurPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Modernizing Jaipur's Heritage and Export Sectors with High-Impact AI & SaaS Platforms
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                Jaipur, the Pink City of India, presents a unique economic landscape where centuries-old traditions meet modern global commerce. As one of the country's premier tourist destinations, the city's hospitality and heritage sectors cater to millions of international and domestic travelers. Concurrently, Jaipur is a globally recognized manufacturing and export epicenter for premium gemstones, fine jewelry, block-printed textiles, and handmade crafts. As competition intensifies, local businesses are increasingly embracing digital transformation. RisonAI Tech helps Jaipur enterprises and startups build custom software infrastructure that automates operations, reaches international audiences, and optimizes conversion rates.
+              </p>
+              <p>
+                In the tourism and hospitality sectors, booking speed and customer interaction quality are key determinants of occupancy rates. We construct automated guest engagement pipelines that integrate directly with property management systems (PMS) and online travel agency (OTA) feeds. Using the WhatsApp Business API, we develop intelligent reservation assistants that guide guests through room availability, customize itinerary packages, collect payment credentials, and distribute automated pre-arrival briefings. Post-departure, these systems automatically solicit and aggregate customer reviews, enhancing the hotel's online reputation with zero administrative effort.
+              </p>
+              <p>
+                For Jaipur's renowned jewelry and handicraft exporters, presenting collections to international buyers requires high visual standards and efficient administrative processing. We build custom B2B and D2C marketplace portals in Next.js, featuring automated product cataloging, multi-currency pricing models, and international payment gateways like Stripe or PayPal. Our AI agents can automatically extract catalog details from designer sketches, generate search-engine-optimized descriptions, and pre-populate export compliance documents, allowing local merchants to scale their global sales pipelines seamlessly.
+              </p>
+              <p>
+                Whether you are an EdTech founder near Malviya Nagar seeking to build a scalable test prep platform, or an established boutique hotel in C-Scheme automating guest communications, RisonAI Tech provides top-tier software engineering. We offer transparent pricing structures and a full transfer of source code and deployment privileges at project completion, ensuring you retain total control over your business infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

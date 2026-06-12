@@ -1,297 +1,102 @@
 import type { MetadataRoute } from "next";
+import fs from "fs";
+import path from "path";
 
 const BASE_URL = "https://risonaitech.com";
-// Update this whenever you make a significant content change
-const LAST_MODIFIED = new Date("2026-06-04");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    // ── Homepage ──────────────────────────────────────────────────
-    {
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+  const appDir = path.join(process.cwd(), "app");
+
+  function scanDirectory(dirPath: string, routePath = "") {
+    const items = fs.readdirSync(dirPath);
+
+    for (const item of items) {
+      if (item.startsWith("_") || item.startsWith(".") || item === "api" || item === "locations") {
+        continue; // Skip layout groups, next internal, API routes, and legacy locations wrapper
+      }
+
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+
+      if (stat.isDirectory()) {
+        const currentRoute = routePath ? `${routePath}/${item}` : `/${item}`;
+        const pagePath = path.join(fullPath, "page.tsx");
+
+        if (fs.existsSync(pagePath)) {
+          const pageContent = fs.readFileSync(pagePath, "utf-8");
+          // Skip pages that are just permanent redirects (legacy redirect pages)
+          if (pageContent.includes("permanentRedirect") || pageContent.includes("redirect(")) {
+            continue;
+          }
+
+          const pageStat = fs.statSync(pagePath);
+          let priority = 0.5;
+          let changeFrequency = "monthly";
+
+          if (currentRoute === "/") {
+            priority = 1.0;
+            changeFrequency = "weekly";
+          } else if (currentRoute.startsWith("/services")) {
+            priority = currentRoute === "/services" ? 0.9 : 0.95;
+            changeFrequency = "weekly";
+          } else if (currentRoute.startsWith("/blog")) {
+            priority = currentRoute === "/blog" ? 0.85 : 0.85;
+            changeFrequency = currentRoute === "/blog" ? "weekly" : "monthly";
+          } else if (currentRoute.startsWith("/tools")) {
+            priority = 0.9;
+            changeFrequency = "weekly";
+          } else if (["/delhi", "/gurgaon", "/panipat", "/jaipur", "/ahmedabad", "/indore", "/chandigarh", "/london", "/new-york", "/new-jersey"].includes(currentRoute)) {
+            priority = 0.8;
+            changeFrequency = "monthly";
+          } else if (currentRoute === "/about" || currentRoute === "/products") {
+            priority = 0.8;
+            changeFrequency = "monthly";
+          } else if (currentRoute === "/contact") {
+            priority = 0.7;
+            changeFrequency = "monthly";
+          } else if (currentRoute === "/privacy" || currentRoute === "/terms") {
+            priority = 0.3;
+            changeFrequency = "yearly";
+          }
+
+          sitemapEntries.push({
+            url: `${BASE_URL}${currentRoute}`,
+            lastModified: pageStat.mtime,
+            changeFrequency: changeFrequency as any,
+            priority,
+          });
+        }
+        scanDirectory(fullPath, currentRoute);
+      }
+    }
+  }
+
+  // Scan root level app/
+  scanDirectory(appDir);
+
+  // Add homepage explicitly (app/page.tsx matches currentRoute = "")
+  const rootPagePath = path.join(appDir, "page.tsx");
+  if (fs.existsSync(rootPagePath)) {
+    sitemapEntries.push({
       url: `${BASE_URL}/`,
-      lastModified: LAST_MODIFIED,
+      lastModified: fs.statSync(rootPagePath).mtime,
       changeFrequency: "weekly",
       priority: 1.0,
-    },
+    });
+  }
 
-    // ── Core pages ────────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/services`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/products`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/contact`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-
-    // ── Service pages ─────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/services/ai-automation`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${BASE_URL}/services/ai-agent`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${BASE_URL}/services/crm-development`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/chatbot-development`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/website-development`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/whatsapp-automation`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/resume-screening`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/saas-development`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    // ── Tools ─────────────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/tools/ai-search-audit`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    // ── Blog ──────────────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/how-to-check-if-your-website-appears-in-chatgpt`,
-      lastModified: new Date("2026-06-13"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/free-ai-seo-audit-checklist`,
-      lastModified: new Date("2026-06-12"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/why-your-website-is-not-showing-in-ai-search`,
-      lastModified: new Date("2026-06-11"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-employee-never-sleeps`,
-      lastModified: new Date("2026-05-20"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-automation-for-indian-smes`,
-      lastModified: new Date("2026-05-12"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/blog/whatsapp-chatbot-for-business-india`,
-      lastModified: new Date("2026-05-12"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/blog/saas-development-cost-india`,
-      lastModified: new Date("2026-05-12"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-agents-for-business-automation`,
-      lastModified: new Date("2026-06-06"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-automation-real-estate-india`,
-      lastModified: new Date("2026-06-08"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/make-vs-n8n-ai-automation`,
-      lastModified: new Date("2026-06-07"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-automation-for-small-businesses`,
-      lastModified: new Date("2026-06-04"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-lead-generation-systems`,
-      lastModified: new Date("2026-06-04"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-and-automation`,
-      lastModified: new Date("2026-06-05"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-vs-automation`,
-      lastModified: new Date("2026-06-04"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/ai-automation-tools`,
-      lastModified: new Date("2026-06-03"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/how-to-use-ai-for-automation`,
-      lastModified: new Date("2026-06-02"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/blog/what-is-ai-automation`,
-      lastModified: new Date("2026-06-01"),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-
-    // ── Location pages ────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/delhi`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/gurgaon`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/panipat`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/indore`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/ahmedabad`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/jaipur`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/chandigarh`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/new-york`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/new-jersey`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE_URL}/london`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
+  // Add locations/india explicitly (as locations/ is skipped in scanDirectory)
+  const indiaPath = path.join(appDir, "locations", "india", "page.tsx");
+  if (fs.existsSync(indiaPath)) {
+    sitemapEntries.push({
       url: `${BASE_URL}/locations/india`,
-      lastModified: LAST_MODIFIED,
+      lastModified: fs.statSync(indiaPath).mtime,
       changeFrequency: "monthly",
       priority: 0.8,
-    },
-    // NOTE: /locations/delhi and /locations/gurgaon are 301 redirect pages
-    // pointing to /delhi and /gurgaon respectively. Redirect source URLs are
-    // intentionally excluded from the sitemap to avoid crawl budget waste
-    // and duplicate-URL signals in Google Search Console.
+    });
+  }
 
-    // ── Legal ─────────────────────────────────────────────────────
-    {
-      url: `${BASE_URL}/privacy`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+  // Sort entries for deterministic output
+  return sitemapEntries.sort((a, b) => (b.priority ?? 0.5) - (a.priority ?? 0.5) || a.url.localeCompare(b.url));
 }

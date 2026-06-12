@@ -35,6 +35,7 @@ export default function ChatInput({ input, setInput, onSubmit, isLoading, placeh
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder ?? "Message Rison AI..."}
+          aria-label={placeholder ?? "Message Rison AI"}
           minRows={1}
           maxRows={5}
           className="w-full resize-none bg-transparent py-3 pl-4 pr-12 text-sm text-white placeholder-brand-gray focus:outline-none"

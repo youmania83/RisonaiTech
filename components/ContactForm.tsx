@@ -45,7 +45,7 @@ export default function ContactForm() {
               Book Your Free{" "}
               <span className="grad-text">Strategy Call</span>
             </motion.h1>
-            <motion.p className="mt-4 text-xl text-white/52" variants={fadeUp}>
+            <motion.p className="mt-4 text-xl text-white/60" variants={fadeUp}>
               Tell us what you&apos;re building. We&apos;ll send a fixed-price proposal
               within 48 hours — no obligation, no hourly guesswork.
             </motion.p>
@@ -243,8 +243,8 @@ export default function ContactForm() {
                 >
                   Office
                 </h3>
-                <div className="flex items-start gap-3 text-sm text-white/48">
-                  <MapPin className="mt-0.5 flex-shrink-0 text-white/28" size={16} />
+                <div className="flex items-start gap-3 text-sm text-white/60">
+                  <MapPin className="mt-0.5 flex-shrink-0 text-white/50" size={16} />
                   <span>{siteConfig.address}</span>
                 </div>
                 {/* Google Maps embed */}

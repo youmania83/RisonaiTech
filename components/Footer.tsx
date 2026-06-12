@@ -42,23 +42,23 @@ export default function Footer() {
             <Link className="no-underline" href="/">
               <AnimatedLogo size={36} />
             </Link>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/50">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               {siteConfig.description}
             </p>
             <div className="mt-7 space-y-3">
-              <div className="flex items-start gap-2.5 text-sm text-white/45">
+              <div className="flex items-start gap-2.5 text-sm text-white/60">
                 <MapPin className="mt-0.5 flex-shrink-0 text-white/25" size={13} />
                 <span>{siteConfig.address}</span>
               </div>
               <a
-                className="flex items-center gap-2.5 text-sm text-white/45 transition-colors hover:text-white/80"
+                className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white/80"
                 href={`mailto:${siteConfig.email}`}
               >
                 <Mail className="flex-shrink-0 text-white/25" size={13} />
                 {siteConfig.email}
               </a>
               <a
-                className="flex items-center gap-2.5 text-sm text-white/45 transition-colors hover:text-white/80"
+                className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white/80"
                 href={`tel:${siteConfig.phone}`}
               >
                 <Phone className="flex-shrink-0 text-white/25" size={13} />
@@ -69,14 +69,14 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
               Navigation
             </p>
             <ul className="space-y-3">
               {footerLinks.slice(0, FOOTER_NAV_COUNT).map((link) => (
                 <li key={link.href}>
                   <Link
-                    className="text-sm text-white/45 transition-colors duration-150 hover:text-white/85"
+                    className="text-sm text-white/60 transition-colors duration-150 hover:text-white/85"
                     href={link.href}
                   >
                     {link.label}
@@ -88,14 +88,14 @@ export default function Footer() {
 
           {/* Legal + socials */}
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
               Legal
             </p>
             <ul className="space-y-3">
               {footerLinks.slice(FOOTER_NAV_COUNT).map((link) => (
                 <li key={link.href}>
                   <Link
-                    className="text-sm text-white/45 transition-colors duration-150 hover:text-white/85"
+                    className="text-sm text-white/60 transition-colors duration-150 hover:text-white/85"
                     href={link.href}
                   >
                     {link.label}
@@ -111,7 +111,7 @@ export default function Footer() {
                   href={url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-8 w-8 items-center justify-center rounded-lg text-white/35 transition-all duration-300 hover:bg-white/06 hover:text-white/70 hover:shadow-glow-sm"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-white/60 transition-all duration-300 hover:bg-white/06 hover:text-white/70 hover:shadow-glow-sm"
                   style={{ border: "1px solid rgba(255,255,255,0.08)" }}
                   aria-label={name}
                 >
@@ -127,12 +127,12 @@ export default function Footer() {
           className="mt-14 flex flex-col items-start gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between"
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
-          <p className="text-xs text-white/28">
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Risonai Tech. All rights reserved.
           </p>
           <div className="flex flex-col items-start gap-1 sm:items-end">
-            <p className="text-xs text-white/28">GSTIN: 06CDBPS8926D2ZE</p>
-            <p className="text-xs text-white/28">{siteConfig.domain}</p>
+            <p className="text-xs text-white/50">GSTIN: 06CDBPS8926D2ZE</p>
+            <p className="text-xs text-white/50">{siteConfig.domain}</p>
           </div>
         </div>
       </div>

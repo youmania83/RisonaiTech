@@ -54,6 +54,29 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
+          // Content Security Policy
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com",
+              "font-src 'self' data:",
+              "connect-src 'self' https://www.googletagmanager.com",
+              "frame-src 'self' https://www.google.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'self'",
+              "upgrade-insecure-requests",
+            ].join("; "),
+          },
+          // Cross-Origin Opener Policy
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
           // Prevents MIME-type sniffing
           { key: "X-Content-Type-Options", value: "nosniff" },
           // Blocks clickjacking

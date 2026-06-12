@@ -227,6 +227,31 @@ export default function GurgaonPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Engineering Scalable AI and Multi-Tenant SaaS Systems for Gurgaon Startups
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                Gurgaon, Haryana, has cemented its position as India's premier corporate hub, housing thousands of tech companies, VC-backed startups, and multinational corporations along the Golf Course Extension and Sohna Road corridors. In this hyper-growth tech ecosystem, businesses are constantly seeking ways to achieve operational scale without adding administrative friction or proportional employee costs. RisonAI Tech delivers production-ready AI systems, custom CRM workflows, and multi-tenant SaaS MVPs built for Gurgaon's high-speed tech corridor.
+              </p>
+              <p>
+                We specialize in building robust, production-grade AI agents and RAG-powered customer support systems that integrate directly into your developer workflows or product stacks. Startups located in DLF Cyber City deploy our contextual AI virtual assistants to handle customer support triage. Rather than serving simple, canned replies, our bots leverage state-of-the-art retrieval systems to read product documentation, databases, and APIs, resolving 40–70% of tier-1 support queries with proper source citations and offering seamless handoff to human agents when required.
+              </p>
+              <p>
+                For B2B sales teams in Gurgaon, manual lead qualification and pipeline management are major bottlenecks. We automate these processes using customized n8n/Make workflows and LLM engines that read inbound emails and forms, score lead intent, enrich data, and trigger follow-ups automatically in your CRM. These services are delivered remotely from our nearby Panipat headquarters with a strict two-week sprint cadence, giving you complete visibility into code progress and a fixed-price contract that eliminates the risk of budget creep.
+              </p>
+              <p>
+                Whether you need a custom SaaS MVP to raise your next seed round, or an internal AI dashboard that pulls from Snowflake and Slack to simplify executive reporting, we transfer full source code, infrastructure credentials, and documentation at close, giving you complete project independence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

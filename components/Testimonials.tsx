@@ -31,45 +31,47 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <Reveal delay={i * 0.1} key={t.id}>
               <div
-                className="flex h-full flex-col gap-5 rounded-[20px] p-7 transition-all duration-400 hover:-translate-y-1 hover:shadow-premium-hover"
+                className="flex h-full flex-col gap-5 rounded-[20px] p-7 transition-all duration-400 hover:-translate-y-1 hover:shadow-premium-hover relative overflow-hidden"
                 style={{
-                  background: "rgba(255,255,255,0.028)",
+                  background: "rgba(255,255,255,0.025)",
                   border: "1px solid rgba(255,255,255,0.07)",
                   backdropFilter: "blur(12px)",
                 }}
               >
-                {/* Quote mark */}
-                <span
-                  className="text-5xl font-bold leading-none"
-                  style={{ color: t.color, opacity: 0.35 }}
-                  aria-hidden
-                >
-                  &ldquo;
-                </span>
+                {/* Highlighted Outcome Headline */}
+                {t.outcomeHeadline && (
+                  <div className="text-base font-extrabold text-white tracking-tight leading-snug">
+                    "{t.outcomeHeadline}"
+                  </div>
+                )}
 
-                <p className="flex-1 text-sm leading-relaxed text-white/58 -mt-4">
+                {/* Quote */}
+                <p className="flex-1 text-xs leading-relaxed text-white/60">
                   {t.quote}
                 </p>
 
                 {/* Author */}
                 <div
-                  className="flex items-center gap-3 pt-5"
+                  className="flex items-center gap-3 pt-4"
                   style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
                 >
                   <div
-                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
                     style={{
                       background: `linear-gradient(135deg, ${t.color}, ${t.color}88)`,
-                      boxShadow: `0 0 16px ${t.color}44`,
+                      boxShadow: `0 0 12px ${t.color}33`,
                     }}
                   >
                     {t.avatar}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">
+                    <p className="text-xs font-bold text-white">
                       {t.name}
                     </p>
-                    <p className="text-xs text-white/38">{t.role}</p>
+                    <p className="text-[10px] text-white/45 mt-0.5">
+                      {t.role}
+                      {t.businessType && ` · ${t.businessType}`}
+                    </p>
                   </div>
                 </div>
               </div>

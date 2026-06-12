@@ -1,9 +1,7 @@
 import {
   Bot,
-  Globe,
   MessageCircle,
   Layers,
-  Smartphone,
   Workflow,
   Zap,
   Building2,
@@ -51,129 +49,147 @@ export type Service = {
   short: string;
   description: string;
   bullets: string[];
+  problem?: string;
+  solution?: string;
+  outcome?: string;
+  price?: string;
 };
 
 export const services: Service[] = [
   {
-    id: "web-app",
-    icon: Code2,
-    title: "Internal Operations Platforms",
-    short: "Replace fragmented spreadsheets with centralized, automated software systems.",
-    description:
-      "We build production-grade web applications that automate your operations, centralize data, and eliminate manual processing — delivered in weeks, not quarters.",
-    bullets: [
-      "SaaS dashboards & portals",
-      "Customer-facing platforms",
-      "React / Next.js + Node.js / Python",
-      "REST & GraphQL APIs",
-      "Cloud-ready deployment from day one",
-    ],
-  },
-  {
-    id: "android",
-    icon: Smartphone,
-    title: "Field Operations Mobile Apps",
-    short: "Put operational control and automated data entry in your field team's pockets.",
-    description:
-      "Native Android apps built for operational reliability and field data collection — featuring offline-first syncing and direct CRM/AI integrations.",
-    bullets: [
-      "Kotlin-first, clean architecture",
-      "Offline-first & sync",
-      "Push notifications & deep links",
-      "Play Store publishing end-to-end",
-      "API integration & real-time sync",
-    ],
-  },
-  {
-    id: "website",
-    icon: Globe,
-    title: "High-Performance Web Systems",
-    short: "Enterprise-grade web infrastructure built for operational speed and AI discovery.",
-    description:
-      "Premium marketing and operational web interfaces that act as the front door for your automation systems — SEO-optimised, fast, and structured for LLM crawlers.",
-    bullets: [
-      "Next.js / Astro — sub-2s load time",
-      "Core Web Vitals & SEO optimised",
-      "CMS integrations (Sanity, Contentful)",
-      "Conversion-focused layout & copy",
-      "Accessible & fully responsive",
-    ],
-  },
-  {
-    id: "website-development",
-    icon: Globe,
-    title: "AI Operations Dashboards",
-    short:
-      "Custom internal business tools and high-performance operational dashboards to monitor AI systems.",
-    description:
-      "From data visualization to full-scale platform management, we engineer modern operational dashboards that give leadership full visibility and control.",
-    bullets: [
-      "Landing pages to full-scale platforms",
-      "SEO foundations and technical performance",
-      "Core Web Vitals focused implementation",
-      "Scalable architecture for future growth",
-      "Conversion-first UX and responsive design",
-    ],
-  },
-  {
     id: "ai-automation",
     icon: Bot,
-    title: "AI Workflow Automation",
-    short: "Stop paying humans to do what intelligent AI workflows can execute 24/7.",
-    description:
-      "Custom AI automation systems — agentic workflows, API integrations, document parsing, and operational intelligence that run autonomously.",
+    title: "AI Lead Qualification",
+    short: "Stop letting hot leads go cold. Qualify prospects instantly 24/7.",
+    description: "Custom AI automation systems that capture leads, score intent, and trigger instant responses.",
+    problem: "Leads go cold before your team responds, resulting in missed revenue.",
+    solution: "AI agents respond instantly on WhatsApp & Web to qualify prospects 24/7.",
+    outcome: "72% faster lead qualification.",
+    price: "From ₹30,000",
     bullets: [
-      "LLM-powered agents & chatbots",
-      "WhatsApp Business API automation",
-      "CRM sync & lead scoring",
-      "AI intake & qualification flows",
-      "Human-in-the-loop controls",
+      "Instant 2-minute lead response",
+      "Intent scoring & qualification questions",
+      "Automated CRM sync (HubSpot, Zoho)",
+      "Human routing for hot prospects",
     ],
   },
   {
     id: "whatsapp-automation",
     icon: MessageCircle,
     title: "WhatsApp AI Systems",
-    short:
-      "Intelligent WhatsApp infrastructure for automated support, lead capture, and CRM syncing.",
-    description:
-      "Integrate RAG chatbots and CRM workflows into the WhatsApp Business API to respond instantly, qualify leads automatically, and scale customer operations.",
+    short: "Turn India's most popular chat app into your primary sales channel.",
+    description: "Integrate RAG chatbots and CRM workflows into the official WhatsApp Business API.",
+    problem: "Operations teams are overwhelmed by high WhatsApp message volumes.",
+    solution: "Official WhatsApp API bots that resolve FAQs and book meetings automatically.",
+    outcome: "52% reduction in staff coordination time.",
+    price: "From ₹25,000",
     bullets: [
-      "Automated lead qualification and routing",
-      "Support flows with chatbot escalation",
-      "CRM integration and pipeline updates",
-      "Broadcast and re-engagement journeys",
-      "Analytics, templates, and compliance setup",
+      "Official API setup & green tick guidance",
+      "RAG chatbot trained on business data",
+      "Interactive templates & buttons",
+      "Live agent chat handoff rules",
+    ],
+  },
+  {
+    id: "crm-development",
+    icon: Users,
+    title: "CRM & Workflow Automation",
+    short: "Eliminate manual data entry and connect your tools seamlessly.",
+    description: "Centralize data, automate pipelines, and connect tools with custom n8n/Make integrations.",
+    problem: "Staff waste 10+ hours a week copy-pasting data between forms and CRM.",
+    solution: "Custom automated pipelines that sync and enrich leads instantly.",
+    outcome: "37 hours saved per month per manager.",
+    price: "From ₹40,000",
+    bullets: [
+      "Custom HubSpot, Zoho & Salesforce setups",
+      "Spreadsheet-to-CRM auto-migration",
+      "Automated quote & invoice generation",
+      "Real-time slack & email notifications",
     ],
   },
   {
     id: "ai-agent",
     icon: Cpu,
-    title: "AI Agent Development",
-    short: "Deploy autonomous AI agents that reason, plan, and execute complex tasks end-to-end.",
-    description:
-      "We build production-grade AI agents — multi-step reasoning systems, tool-using LLM pipelines, and autonomous workflows that operate without constant human supervision.",
+    title: "Autonomous AI Agents",
+    short: "Deploy AI workers that reason, plan, and execute complex workflows.",
+    description: "Multi-step reasoning systems, tool-using LLM pipelines, and autonomous agents.",
+    problem: "Complex operations require constant manual checks and decision-making.",
+    solution: "Multi-step agentic pipelines that run tools and execute work autonomously.",
+    outcome: "Up to 90% automation of repetitive reasoning tasks.",
+    price: "From ₹50,000",
     bullets: [
-      "Multi-step agentic pipelines (LangGraph, CrewAI)",
-      "Tool-calling & function-use agents",
-      "RAG-powered knowledge agents",
-      "Web & API browsing agents",
-      "Human-in-the-loop oversight",
+      "LangGraph / CrewAI multi-agent pipelines",
+      "Custom tool-calling & database write capabilities",
+      "E-commerce & order tracking automation",
+      "Human-in-the-loop validation checkpoints",
+    ],
+  },
+  {
+    id: "chatbot-development",
+    icon: MessageCircle,
+    title: "AI Chatbots & Support",
+    short: "Context-aware AI chatbots trained on your business data 24/7.",
+    description: "AI customer support agents and website chatbots grounded in your SOPs and docs via RAG.",
+    problem: "Inbound support queues are slow and expensive, costing conversion.",
+    solution: "Deploy AI chatbots and virtual assistants that answer from your data instantly.",
+    outcome: "60-80% deflection of repetitive support tickets.",
+    price: "From ₹20,000",
+    bullets: [
+      "Website chat widget & embeds",
+      "RAG-powered custom knowledge base",
+      "Multilingual (Hindi + English)",
+      "Graceful human agent handoff",
+    ],
+  },
+  {
+    id: "website-development",
+    icon: Code2,
+    title: "Custom Web Applications",
+    short: "High-performance operational dashboards and internal web tools.",
+    description: "Custom internal tools, administrative panels, and performance dashboards connected to your AI.",
+    problem: "Staff lose time navigating disjointed spreadsheets and manual tracking tools.",
+    solution: "Tailored operations dashboards that integrate all workflows and show metrics.",
+    outcome: "40% reduction in weekly review meeting times.",
+    price: "From ₹35,000",
+    bullets: [
+      "High-speed Next.js application core",
+      "Custom administrative dashboards",
+      "Third-party API integrations",
+      "LCP < 2.5s and SEO-ready by default",
     ],
   },
   {
     id: "resume-screening",
     icon: Layers,
     title: "AI Resume Screening",
-    short: "Automate first-pass candidate screening and save 70-80% of recruiter time.",
-    description:
-      "AI-powered resume screening systems that parse CVs, match candidates against job criteria, rank top applicants, and route recruiter-ready shortlists into your ATS or hiring workflow.",
+    short: "Automate first-pass hiring and find top talent in minutes.",
+    description: "AI screening systems that match candidates against criteria using Skills Graphs.",
+    problem: "HR teams spend days reading thousands of resumes manually.",
+    solution: "AI agents parse, score, and rank resumes based on custom skills matrices.",
+    outcome: "80% reduction in first-pass screening time.",
+    price: "From ₹20,000",
     bullets: [
-      "Resume parsing and structured candidate scoring",
-      "Skills Graph matching against job requirements",
-      "Contextual evaluation for shortlist quality",
-      "ATS, email, and spreadsheet integration",
-      "Human review controls and audit trails",
+      "Skills Graph matching against job descriptions",
+      "Contextual evaluation to prevent resume gaming",
+      "ATS, email, and Google Sheets integrations",
+      "Recruiter-ready candidate shortlists",
+    ],
+  },
+  {
+    id: "saas-development",
+    icon: Code2,
+    title: "SaaS Platform Engineering",
+    short: "Custom multi-tenant platforms built to scale your business.",
+    description: "Enterprise-grade SaaS products with billing, admin dashboards, and native AI.",
+    problem: "Generic software doesn't fit your business, leading to spreadsheet clutter.",
+    solution: "Tailored React/Next.js platforms with custom workflows and billing.",
+    outcome: "100% customized operations built to scale.",
+    price: "From ₹1,20,000",
+    bullets: [
+      "Multi-tenant auth & database design",
+      "Stripe / Razorpay subscriptions",
+      "Custom admin portals & analytics",
+      "Full code ownership & deployment",
     ],
   },
 ];
@@ -221,7 +237,7 @@ export const caseStudies = [
       "Built a structured intake layer with AI summarisation, priority scoring, and automatic CRM task creation.",
     outcome:
       "Lead response time dropped from 45 minutes to under 8 minutes, with 72% faster qualification and 19% higher meeting-booked rate.",
-    metrics: ["72% faster lead qualification", "37 hours/month saved", "19% lift in booked meetings"],
+    metrics: ["72% Faster Qualification", "37 Hours Saved Monthly", "19% Increase In Meetings"],
     serviceHref: "/services/ai-automation",
     locationHref: "/delhi",
   },
@@ -270,20 +286,32 @@ export const trustItems = [
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const stats = [
-  { value: "40+", label: "Enterprise systems deployed" },
-  { value: "3×", label: "Avg. efficiency gain post-automation" },
-  { value: "10,000+", label: "Manual hours saved monthly" },
-  { value: "48h", label: "Architectural proposal turnaround" },
+  { value: "40+", label: "Business Systems Delivered" },
+  { value: "72%", label: "Faster Lead Qualification" },
+  { value: "37", label: "Hours Saved Per Month" },
 ];
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
-export const testimonials = [
+export type Testimonial = {
+  id: string;
+  name: string;
+  role: string;
+  avatar: string;
+  color: string;
+  quote: string;
+  businessType?: string;
+  outcomeHeadline?: string;
+};
+
+export const testimonials: Testimonial[] = [
   {
     id: "t1",
     name: "Raghav Mehta",
     role: "Founder, HealthConnect Clinics",
     avatar: "RM",
     color: "#0EA5E9",
+    businessType: "Healthcare Chain",
+    outcomeHeadline: "31% Lower No-Show Rate",
     quote:
       "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
   },
@@ -293,6 +321,8 @@ export const testimonials = [
     role: "CEO, PropEdge Realty",
     avatar: "PS",
     color: "#635BFF",
+    businessType: "Real Estate Brokerage",
+    outcomeHeadline: "Doubled Our Conversion Rate",
     quote:
       "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
   },
@@ -302,6 +332,8 @@ export const testimonials = [
     role: "Co-founder, NutriTrack SaaS",
     avatar: "AK",
     color: "#10B981",
+    businessType: "B2B SaaS Startup",
+    outcomeHeadline: "Launch MVP in 10 Weeks",
     quote:
       "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
   },

@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
-import { siteConfig } from "@/lib/constants";
 
 const PulseBeams = dynamic(
   () => import("@/components/ui/pulse-beams").then((m) => m.PulseBeams),
@@ -151,7 +149,7 @@ export default function CTA() {
                 <h2
                   className="font-display mx-auto max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl"
                 >
-                  Ready to stop doing things{" "}
+                  What problem are you trying to{" "}
                   <span
                     style={{
                       background: "linear-gradient(135deg, #a78bfa, #60a5fa)",
@@ -160,39 +158,43 @@ export default function CTA() {
                       backgroundClip: "text",
                     }}
                   >
-                    manually?
+                    solve?
                   </span>
                 </h2>
               </Reveal>
 
               <Reveal delay={0.18}>
-                <p className="mx-auto mt-5 max-w-lg text-lg text-white/60">
-                  Get a fixed-price proposal in 48 hours. Free 30-min strategy
-                  call. No hourly billing. No lock-in. Full code ownership.
+                <p className="mx-auto mt-5 max-w-lg text-sm text-white/60">
+                  Select your primary business challenge below. You will connect directly with founder Yogesh on WhatsApp to discuss an automated solution.
                 </p>
               </Reveal>
 
               <Reveal delay={0.24}>
-                <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-                  <Link
-                    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#0a0a1a] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]"
-                    href="/contact"
-                  >
-                    Book Free Strategy Call
-                    <ArrowRight size={15} />
-                  </Link>
-                  <a
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-                    href={siteConfig.whatsappUrl}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <MessageCircle size={15} />
-                    WhatsApp Us Now
-                  </a>
+                <div className="mt-8 grid gap-3 max-w-md mx-auto">
+                  {[
+                    { label: "Generate More Leads", msg: "Hi RisonAI Tech, I want to discuss generating more leads with AI automation." },
+                    { label: "Automate WhatsApp", msg: "Hi RisonAI Tech, I want to discuss automating our WhatsApp channel with AI." },
+                    { label: "Build AI Agent", msg: "Hi RisonAI Tech, I want to discuss building a custom AI agent for our business." },
+                    { label: "Replace Manual Data Entry", msg: "Hi RisonAI Tech, I want to discuss replacing manual data entry processes with AI workflows." },
+                    { label: "Launch SaaS Product", msg: "Hi RisonAI Tech, I want to discuss launching a custom SaaS platform." }
+                  ].map((btn) => (
+                    <a
+                      key={btn.label}
+                      href={`https://wa.me/918368137724?text=${encodeURIComponent(btn.msg)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20 hover:scale-[1.01]"
+                    >
+                      <span className="flex items-center gap-2">
+                        <MessageCircle size={15} className="text-[#25D366] fill-[#25D366] shrink-0" />
+                        {btn.label}
+                      </span>
+                      <ArrowRight size={14} className="text-white/40 group-hover:text-white/80" />
+                    </a>
+                  ))}
                 </div>
-                <p className="mt-4 text-xs text-white/40">
-                  Proposal delivered within 48 hours · No obligation
+                <p className="mt-6 text-xs text-white/40">
+                  Direct WhatsApp scoping with founder Yogesh · No obligation · Quotes in 48 hours
                 </p>
               </Reveal>
             </div>

@@ -28,11 +28,11 @@ export default function LeadMagnet() {
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a78bfa]">
                   Free for Indian Businesses
                 </p>
-                <h3
+                <h2
                   className="mt-1 font-display text-xl font-bold text-white sm:text-2xl"
                 >
                   Get a Free AI Automation Audit
-                </h3>
+                </h2>
                 <p className="mt-1.5 text-sm leading-relaxed text-white/52">
                   We'll map exactly which of your manual processes can be
                   automated, what it will cost, and how much time you'll save —

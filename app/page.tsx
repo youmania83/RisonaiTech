@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, CheckCircle2, Bot, Layers, Users, Globe, Code2, MessageCircle } from "lucide-react";
 
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Products from "@/components/Products";
-import CaseStudies from "@/components/CaseStudies";
-import Testimonials from "@/components/Testimonials";
-import LeadMagnet from "@/components/LeadMagnet";
-import HomeAiAuditBanner from "@/components/HomeAiAuditBanner";
-import CTA from "@/components/CTA";
-import LeadershipAuthority from "@/components/LeadershipAuthority";
-import TrustFramework from "@/components/TrustFramework";
-import VerificationSignals from "@/components/VerificationSignals";
+
+const Services = dynamic(() => import("@/components/Services"));
+const Products = dynamic(() => import("@/components/Products"));
+const CaseStudies = dynamic(() => import("@/components/CaseStudies"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const LeadMagnet = dynamic(() => import("@/components/LeadMagnet"));
+const HomeAiAuditBanner = dynamic(() => import("@/components/HomeAiAuditBanner"));
+const CTA = dynamic(() => import("@/components/CTA"));
+const LeadershipAuthority = dynamic(() => import("@/components/LeadershipAuthority"));
+const TrustFramework = dynamic(() => import("@/components/TrustFramework"));
+const VerificationSignals = dynamic(() => import("@/components/VerificationSignals"));
+
+// Interactive CRO Components
+const RoiCalculator = dynamic(() => import("@/components/RoiCalculator"));
+const Pricing = dynamic(() => import("@/components/Pricing"));
+const AiSearchProof = dynamic(() => import("@/components/AiSearchProof"));
+const HumanVsAi = dynamic(() => import("@/components/HumanVsAi"));
+const StickyWhatsApp = dynamic(() => import("@/components/StickyWhatsApp"));
 
 export const metadata: Metadata = {
   title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
@@ -218,124 +227,19 @@ export default function HomePage() {
 
       <HomeAiAuditBanner />
 
-      {/* Service quick-links */}
-      <section className="bg-grid py-20 sm:py-24" style={{ backgroundColor: "#090C18" }}>
-        <div className="container-site">
-          <h2
-            className="font-display text-3xl font-bold text-white sm:text-4xl"
-          >
-            Enterprise AI Infrastructure. Built to scale your operations.
-          </h2>
-          <p className="mt-2 text-white/50 max-w-2xl">
-            Operational efficiency delivered through custom AI systems. Fixed pricing, full code ownership, and measurable business outcomes.
-          </p>
-          <div className="mt-6">
-            <Link className="btn-outline !py-2.5" href="/contact">
-              Book an AI Systems Strategy Session
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {serviceCards.map((s) => {
-              const Icon = s.icon;
-              return (
-                <Link
-                  className="card-base block p-5"
-                  href={s.href}
-                  key={s.title}
-                >
-                  <div
-                    className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg"
-                    style={{
-                      background: "rgba(99,91,255,0.08)",
-                      border: "1px solid rgba(99,91,255,0.14)",
-                    }}
-                  >
-                    <Icon className="text-[#a78bfa]" size={18} />
-                  </div>
-                  <h3 className="font-semibold text-white">{s.title}</h3>
-                  <p className="mt-0.5 text-xs font-medium text-[#a78bfa]">{s.price}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/50">{s.desc}</p>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <RoiCalculator />
+
+      <HumanVsAi />
 
       <Services />
-      <Products />
+
+      <Pricing />
+
       <CaseStudies />
-      <VerificationSignals />
-      <LeadershipAuthority />
-      <TrustFramework />
-      <Testimonials />
-      <LeadMagnet />
 
-      {/* Storytelling teaser — "The employee who never sleeps" */}
-      <section className="py-20" style={{ backgroundColor: "#05070F" }}>
-        <div className="container-site">
-          <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
-            <div>
-              <span className="label-pill mb-4 inline-flex">A short story</span>
-              <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl leading-tight">
-                The employee who{" "}
-                <span className="grad-text">never sleeps</span>.
-              </h2>
-              <p className="mt-4 text-white/60 leading-relaxed">
-                He doesn&apos;t ask for a salary hike. He doesn&apos;t take chai
-                breaks. He doesn&apos;t resign on a Friday evening. He replies to
-                a lead at 2:47 AM while you&apos;re in Manali — and books the
-                site visit before you wake up.
-              </p>
-              <p className="mt-3 text-white/60 leading-relaxed">
-                No PF. No TDS u/s 192. No bonus liability. No data leak risk.
-                Just one quiet AI workflow that absorbs ₹5 lakh of yearly work
-                for less than one month of a junior&apos;s salary.
-              </p>
-              <Link
-                href="/blog/ai-employee-never-sleeps"
-                className="mt-6 inline-flex items-center gap-2 btn-primary"
-              >
-                Read three real stories <ArrowRight size={15} />
-              </Link>
-            </div>
+      <AiSearchProof />
 
-            <div
-              className="rounded-2xl p-6"
-              style={{
-                background: "rgba(99,91,255,0.06)",
-                border: "1px solid rgba(99,91,255,0.18)",
-              }}
-            >
-              <p className="text-xs font-bold uppercase tracking-widest text-[#a78bfa] mb-4">
-                Human vs AI employee
-              </p>
-              <ul className="space-y-3 text-sm text-white/75">
-                {[
-                  "Works 24x7x365 — Diwali, Sunday, 2 AM",
-                  "No salary hike conversation, ever",
-                  "No TDS, no PF, no ESIC, no gratuity",
-                  "No recruitment, no notice period, no attrition",
-                  "Loyal by design — runs in your own cloud",
-                  "You finally take a real holiday",
-                ].map((point) => (
-                  <li key={point} className="flex items-start gap-2.5">
-                    <CheckCircle2
-                      className="text-[#a78bfa] mt-0.5 flex-shrink-0"
-                      size={16}
-                    />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 text-xs text-white/40">
-                Most owners break even in under 90 days.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* AI search coverage - SEO links */}
       <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="mx-auto max-w-5xl">
@@ -381,6 +285,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      <VerificationSignals />
+
+      <LeadershipAuthority />
+
+      <TrustFramework />
+
+      <Testimonials />
+
+      <Products />
+
+      <LeadMagnet />
+
       {/* FAQ Section */}
       <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
@@ -390,7 +306,7 @@ export default function HomePage() {
             >
               Frequently asked questions
             </h2>
-            <p className="mt-3 text-white/48">
+            <p className="mt-3 text-white/60">
               Specific answers. No generic filler.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -438,7 +354,7 @@ export default function HomePage() {
       {/* Location links */}
       <section className="py-10" style={{ backgroundColor: "#090C18", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="container-site">
-          <p className="text-sm text-white/38">
+          <p className="text-sm text-white/60">
             Serving clients in{" "}
             <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/delhi">
               Delhi
@@ -465,6 +381,8 @@ export default function HomePage() {
       </section>
 
       <CTA />
+
+      <StickyWhatsApp />
     </>
   );
 }

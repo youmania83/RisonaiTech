@@ -223,6 +223,31 @@ export default function AhmedabadPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Driving Gujarat's Industrial and Fintech Boom with Specialized AI Workflows
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                Ahmedabad has long been recognized as Gujarat's primary economic engine, combining a massive historical textile industry with advanced manufacturing, pharmaceuticals, and chemicals. In recent years, the rapid growth of GIFT City (Gujarat International Finance Tec-City) has added a cutting-edge global financial services and fintech dimension to the region. As local businesses strive to meet both domestic demands and international standards, the need for automated operations and robust software architecture is paramount. RisonAI Tech provides Ahmedabad enterprises and GIFT City fintechs with custom AI agents, automated workflow orchestration, and scalable SaaS solutions.
+              </p>
+              <p>
+                In the highly regulated GIFT City environment, fintech startups face stringent compliance requirements, detailed KYC audits, and high volumes of document verification. We help these firms automate the tedious parts of their operations by building custom document-processing pipelines. By utilizing advanced OCR and LLM models, our AI systems can ingest, parse, and verify bank statements, tax documents, and identity certificates in seconds. These pipelines flag irregularities for human review, reducing operational friction while ensuring compliance protocols are strictly followed.
+              </p>
+              <p>
+                For Gujarat's leading pharmaceutical and chemical manufacturing units in industrial zones like Vatva, Naroda, and Changodar, operational precision is critical. We build custom ERP integrations and central dashboards to automate batch tracking, vendor communications, and laboratory quality control checklists. By linking these back-end systems with the WhatsApp Business API, we allow supply chain managers and distributors to receive real-time dispatch alerts, ETA updates, and payment confirmations on their mobile devices, minimizing communication delays and keeping logistics pipelines moving.
+              </p>
+              <p>
+                Whether you are an e-commerce brand based in Prahladnagar seeking to optimize post-purchase support via WhatsApp, or a startup founder in GIFT City looking to ship a compliant SaaS platform in 8 weeks, RisonAI Tech delivers production-ready code with complete transparency. We handover full source-code ownership at project close, giving you complete control over your technology stack.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

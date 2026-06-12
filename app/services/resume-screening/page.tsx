@@ -319,6 +319,41 @@ export default function ResumeScreeningPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Services */}
+      <section className="py-16" style={{ backgroundColor: "#05070F", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="container-site">
+          <h2 className="font-display text-2xl font-bold text-white">
+            Related services and locations
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link className="btn-outline text-sm" href="/services/ai-automation">
+              AI Automation Systems
+            </Link>
+            <Link className="btn-outline text-sm" href="/services/ai-agent">
+              AI Agent Development
+            </Link>
+            <Link className="btn-outline text-sm" href="/services/crm-development">
+              CRM Development
+            </Link>
+            <Link className="btn-outline text-sm" href="/services/saas-development">
+              SaaS Development
+            </Link>
+            <Link className="btn-outline text-sm" href="/#case-studies">
+              Case Studies
+            </Link>
+            <Link className="btn-outline text-sm" href="/delhi">
+              Delhi hiring automation
+            </Link>
+            <Link className="btn-outline text-sm" href="/gurgaon">
+              Gurgaon tech recruitment
+            </Link>
+            <Link className="btn-outline text-sm" href="/contact">
+              Hiring Scoping Call
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

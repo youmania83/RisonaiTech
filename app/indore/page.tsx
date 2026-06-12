@@ -223,6 +223,31 @@ export default function IndorePage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Empowering Indore's Startups and Traditional Industries with Next-Gen AI Workflows
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                Indore, recognized nationwide as India's cleanest city, has rapidly transitioned into one of the country's most vibrant startup and technology hubs. With the emergence of dynamic co-working spaces, incubation centers, and a growing pool of technical talent, the city's entrepreneurial spirit is stronger than ever. In parallel, Indore's historical strengths in textiles, wholesale trading, logistics, and FMCG distribution continue to serve as the economic backbone of Madhya Pradesh. RisonAI Tech bridges the gap between these traditional industrial sectors and modern technology by engineering custom AI automation, bespoke CRM systems, and production-grade SaaS solutions.
+              </p>
+              <p>
+                For early-stage startups in Indore looking to raise capital or establish product-market fit, speed to market is critical. Our team builds full-stack, multi-tenant SaaS MVPs in Next.js, integrated with secure user authentication, standard administrative panels, and localized payment gateways like Razorpay or Cashfree. By delivering fully functional products in 6 to 10 weeks, we allow local founders to skip months of development overhead and focus directly on customer acquisition. We provide complete source code handover and deployment documentation at the close of every project, ensuring you have total ownership of your proprietary intellectual property.
+              </p>
+              <p>
+                In the manufacturing and textile sectors, operational efficiency is highly dependent on swift coordination between suppliers, production managers, and distributors. We replace disjointed spreadsheets and manual messaging protocols with integrated workflows and custom web dashboards. By utilizing WhatsApp Business API, we automate inventory alerts, transport dispatch confirmations, and invoice reminders. Our AI agents can process unstructured emails, classify purchase orders, and automatically update internal tracking databases, reducing clerical errors and increasing daily throughput.
+              </p>
+              <p>
+                Whether you are a logistics provider near the Indore Bypass seeking route optimization software, a coaching institute in Geeta Bhawan automating student registrations, or a SaaS company ready to build its next feature, RisonAI Tech acts as your dedicated engineering arm. Our milestone-based pricing models mean you know exactly what you are paying for, with zero hidden costs or billing surprises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

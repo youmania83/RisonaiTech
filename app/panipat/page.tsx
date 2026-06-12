@@ -230,6 +230,31 @@ export default function PanipatPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Empowering Panipat's Manufacturing and Export Hub with Modern AI Systems
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                As a historic manufacturing powerhouse and India's legendary "City of Weavers", Panipat, Haryana, drives billions in textile, carpet, and home furnishing exports globally. Traditional businesses here operate in high-volume, low-margin sectors where operational efficiency determines profit. Yet, many local export houses, logistics companies, and distributors still manage complex international orders, supply chains, and customer follow-ups using fragmented spreadsheets and manual WhatsApp messages. RisonAI Tech provides local, hands-on software engineering and AI automation systems designed specifically for Panipat's industrial landscape.
+              </p>
+              <p>
+                Headquartered locally at New RK Puram, we understand the practical constraints of Panipat SMEs. We help textile exporters build automated tracking dashboards that consolidate order status, dispatch logs, and payment schedules. By pulling data from legacy enterprise resource planning (ERP) software or shared spreadsheets and wrapping them in simple web panels, we save managers up to 30–40 hours of manual coordination every month. Local businesses also deploy our WhatsApp Business API systems to automate client inquiries, product catalogs, and shipping confirmations, allowing lean administrative teams to support global clients 24/7 without scaling overhead.
+              </p>
+              <p>
+                In addition, Panipat's growing private healthcare and educational coaching sectors utilize our custom AI chatbot and appointment booking software. Our reference SaaS build, DocBooking, is already live with local clinics, proving that RisonAI Tech is not just an advisory vendor, but an engineering partner that deploys working software in our own backyard.
+              </p>
+              <p>
+                We offer local, in-person consultations, training sessions, and system handovers in Hindi and English. Every project comes with a fixed price, a two-week sprint delivery model, and full source code and infrastructure ownership transferred directly to you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

@@ -137,9 +137,71 @@ export default function AiAuditTool({
         </button>
       </form>
 
-      <p className="mt-2 text-xs text-white/40">
+      <p className="mt-2 text-xs text-white/60">
         Powered by DeepSeek via Anthropic-compatible SDK · Free · No signup
       </p>
+
+      {/* ─── Example Report (Shown before submit to reduce uncertainty) ─── */}
+      {!result && !loading && !error && (
+        <div 
+          className="mt-6 rounded-xl p-5 border relative overflow-hidden transition-all duration-300"
+          style={{
+            background: "rgba(255,255,255,0.015)",
+            borderColor: "rgba(99,91,255,0.15)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)",
+          }}
+        >
+          <div className="absolute top-3 right-4 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#635BFF]/10 text-[#a78bfa] border border-[#635BFF]/20">
+            Example Report
+          </div>
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-1">
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/60">Example Target</p>
+              <p className="text-lg font-bold text-white">yourcompany.com</p>
+              <p className="text-xs text-white/55 max-w-sm">This is a preview of the report generated instantly upon submission.</p>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              {/* Score Ring Mock */}
+              <div className="relative h-14 w-14">
+                <svg width="56" height="56" viewBox="0 0 56 56" className="rotate-[-90deg]">
+                  <circle cx="28" cy="28" r="23" stroke="rgba(255,255,255,0.05)" strokeWidth="4.5" fill="none" />
+                  <circle cx="28" cy="28" r="23" stroke="#a78bfa" strokeWidth="4.5" fill="none" strokeDasharray="144.5" strokeDashoffset="31.8" strokeLinecap="round" />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="font-display text-base font-bold text-white leading-none">78</span>
+                  <span className="text-[8px] text-white/60">/100</span>
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-xs uppercase tracking-wider text-white/60">AI Visibility Score</p>
+                <p className="text-base font-bold text-[#84cc16] leading-none mt-1">Grade: B</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
+              <span className="text-xs text-white/60">ChatGPT Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">High</span>
+            </div>
+            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
+              <span className="text-xs text-white/60">Perplexity Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Medium</span>
+            </div>
+            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
+              <span className="text-xs text-white/60">Gemini Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-rose-500/10 text-rose-400 border border-rose-500/20">Low</span>
+            </div>
+          </div>
+
+          <div className="mt-4 p-3 rounded-lg bg-[#635BFF]/5 border border-[#635BFF]/10 text-xs flex flex-col sm:flex-row gap-1 sm:gap-2">
+            <span className="font-bold text-[#a78bfa] shrink-0">Top Recommendation:</span>
+            <span className="text-white/80">Publish service-specific case studies to help AI engines verify your authority.</span>
+          </div>
+        </div>
+      )}
 
       {/* ─── Error ─────────────────────────────────────────────────────── */}
       {error && (
@@ -182,7 +244,7 @@ export default function AiAuditTool({
             <div className="flex items-center gap-5">
               <ScoreRing score={result.score} />
               <div>
-                <p className="text-xs uppercase tracking-wider text-white/40">Grade</p>
+                <p className="text-xs uppercase tracking-wider text-white/60">Grade</p>
                 <p
                   className="font-display text-5xl font-bold leading-none"
                   style={{ color: gradeColor[result.grade] }}
@@ -232,7 +294,7 @@ export default function AiAuditTool({
           {/* Factors */}
           {result.factors.length > 0 && (
             <section className="mt-8">
-              <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">
+              <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-white/60">
                 Scoring factors
               </h3>
               <ul className="mt-4 space-y-3">

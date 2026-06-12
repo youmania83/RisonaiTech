@@ -223,6 +223,31 @@ export default function ChandigarhPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Catalyzing growth in Chandigarh Tricity's Startup and Service Ecosystems
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                Chandigarh, designed by Le Corbusier, has evolved far beyond its administrative status as the joint capital of Punjab and Haryana. Today, the Chandigarh Tricity area—including Mohali and Panchkula—stands as one of North India's most prominent technology corridors, attracting a massive wave of SaaS startups, digital marketing agencies, private healthcare institutes, and premium real estate projects. This unique blend of public-sector stability and high-growth private enterprise creates a demanding market where operational scaling is key. RisonAI Tech equips Tricity organizations with robust AI workflows, automated lead capture funnels, and enterprise-grade Next.js SaaS applications.
+              </p>
+              <p>
+                For the region's dense network of EdTech companies and coaching academies in sectors like Sector 34 and Sector 17, admissions pipeline management is a primary operational bottleneck. We design and launch customized WhatsApp enrollment assistants that handle the entire student intake journey automatically. From qualifying leads based on interest and test eligibility to collecting document uploads, dispatching study materials, and updating internal CRM lead statuses, these systems handle thousands of student queries per day with absolute consistency, allowing counselors to focus on direct conversion.
+              </p>
+              <p>
+                Similarly, real estate developers and brokers in Mohali and Panchkula face high volumes of inbound lead traffic from property portals. We build custom-tailored CRMs integrated with AI-driven qualification models that analyze lead behavior, budget parameters, and urgency. These platforms automatically prioritize hot leads, prompt sales agents to follow up, and schedule physical site visits directly through WhatsApp, eliminating manual database upkeep and lead leakage.
+              </p>
+              <p>
+                Whether you are a healthcare facility in Chandigarh looking to automate post-discharge patient check-ins, or a Mohali-based startup aiming to build a secure multi-tenant SaaS MVP in 6 to 10 weeks, RisonAI Tech provides local founders with world-class software development. We deliver fully transparent, fixed-scope contracts and guarantee a full transfer of codebase ownership upon completion, giving you a firm foundation to scale your digital presence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">

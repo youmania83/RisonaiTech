@@ -595,17 +595,31 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18229362372"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tag" strategy="afterInteractive">
+        {/* Google tag (gtag.js) deferred load on interaction */}
+        <Script id="google-tag-deferred" strategy="lazyOnload">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18229362372');
+            (function() {
+              var loaded = false;
+              function loadGTM() {
+                if (loaded) return;
+                loaded = true;
+                var script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18229362372';
+                script.async = true;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'AW-18229362372');
+              }
+              window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+              window.addEventListener('mousemove', loadGTM, { once: true, passive: true });
+              window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+              // Fallback timeout to ensure loading
+              setTimeout(loadGTM, 3500);
+            })();
           `}
         </Script>
       </head>

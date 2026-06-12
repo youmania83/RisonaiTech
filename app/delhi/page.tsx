@@ -229,6 +229,31 @@ export default function DelhiPage() {
         </div>
       </section>
 
+      {/* Localized Deep-Dive */}
+      <section className="py-20 bg-white">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl font-bold text-brand-dark mb-6">
+              Accelerating Delhi NCR's Business Velocity with Custom AI & SaaS Solutions
+            </h2>
+            <div className="space-y-6 text-base leading-relaxed text-brand-gray">
+              <p>
+                In the highly competitive business landscape of Delhi, speed of operations is the primary differentiator between market leaders and lagging competitors. From the commercial hubs of Connaught Place and South Delhi to the bustling manufacturing clusters of Okhla and Wazirpur, companies face high transaction volumes and demanding client expectations. RisonAI Tech builds operational infrastructure that handles these volumes automatically, allowing Delhi-based firms to scale without proportional headcount growth.
+              </p>
+              <p>
+                Our core specialty is designing and deploying custom AI agents and workflow systems that connect directly to your existing tools (CRM, WhatsApp, email, databases). By utilizing state-of-the-art frameworks like LangGraph and CrewAI, we engineer multi-agent teams that think, plan, and execute multi-step operations. For example, a real estate firm in Delhi NCR receiving hundreds of property inquiries daily across housing portals can deploy our AI Lead Triage Agent to capture, qualify, enrich, and route prospects within 2 minutes—completely eliminating manual data entry delays and ensuring that high-value buyers are called immediately.
+              </p>
+              <p>
+                Similarly, private medical practices and diagnostic chains in Dwarka, Saket, and Vasant Vihar use our WhatsApp patient intake systems to collect patient history, symptoms, and consent prior to visits. This reduces administrative pressure at the front desk by up to 60%, minimizes patient wait times, and provides doctors with automated, structured patient briefs before consultations. These solutions are delivered remotely from our Panipat headquarters, combining NCR-adjacent proximity with fixed, transparent pricing that eliminates the scope creep typical of traditional software development agencies.
+              </p>
+              <p>
+                Whether you are an early-stage SaaS startup in Okhla needing to ship a multi-tenant MVP in 8 weeks, or an established trading house in Chandni Chowk digitizing operations for the first time, RisonAI Tech is your technical partner. We provide full source code ownership, complete deployment configs, and dedicated post-launch support to ensure your operational transition is smooth and permanent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-brand-dark">
