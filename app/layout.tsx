@@ -204,10 +204,6 @@ const websiteSchema = {
       target: `${BASE_URL}/contact`,
     },
   ],
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["h1", "h2", "[data-speakable]"],
-  },
 };
 
 const organizationSchema = {
@@ -247,7 +243,6 @@ const organizationSchema = {
   foundingDate: "2023",
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
   slogan: "AI systems that work while you sleep.",
-  hasMap: "https://maps.google.com/?q=196+New+RK+Puram+Panipat+Haryana+132103+India",
   knowsAbout: [
     "AI automation",
     "Agentic AI systems",
@@ -349,7 +344,6 @@ const localBusinessSchema = {
   currenciesAccepted: "INR, USD, GBP, AED, SGD",
   paymentAccepted: "Bank Transfer, UPI, Razorpay, Stripe, Wire Transfer",
   slogan: "AI systems that work while you sleep.",
-  hasMap: "https://maps.google.com/?q=196+New+RK+Puram+Panipat+Haryana+132103+India",
   openingHours: "Mo-Fr 09:00-19:00",
   knowsAbout: [
     "AI automation",
@@ -370,6 +364,42 @@ const localBusinessSchema = {
     email: "hello@risonaitech.com",
     availableLanguage: ["English", "Hindi"],
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "40",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Raghav Mehta" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "Patient booking system delivered in 8 weeks",
+      reviewBody:
+        "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
+      datePublished: "2024-11-01",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Priya Sharma" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "WhatsApp CRM doubled our conversion rate",
+      reviewBody:
+        "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
+      datePublished: "2025-01-15",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Arjun Kapoor" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      name: "SaaS MVP in 10 weeks, full code ownership",
+      reviewBody:
+        "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
+      datePublished: "2025-03-20",
+    },
+  ],
 };
 
 const servicesSchema = {
@@ -458,47 +488,7 @@ const servicesSchema = {
   ],
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${BASE_URL}/#organization`,
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "40",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Raghav Mehta" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      name: "Patient booking system delivered in 8 weeks",
-      reviewBody:
-        "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
-      datePublished: "2024-11-01",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Priya Sharma" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      name: "WhatsApp CRM doubled our conversion rate",
-      reviewBody:
-        "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
-      datePublished: "2025-01-15",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Arjun Kapoor" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      name: "SaaS MVP in 10 weeks, full code ownership",
-      reviewBody:
-        "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
-      datePublished: "2025-03-20",
-    },
-  ],
-};
+
 
 const founderSchema = {
   "@context": "https://schema.org",
@@ -588,7 +578,6 @@ export default function RootLayout({
                 organizationSchema,
                 localBusinessSchema,
                 founderSchema,
-                reviewsSchema,
                 ...servicesSchema["@graph"],
                 aiAuditToolSchema,
               ],
