@@ -97,3 +97,12 @@ A: hello@risonaitech.com
 - **Twitter/X**: https://twitter.com/risonaitech
 - **GitHub**: https://github.com/risonaitech
 - **Full AI index**: https://risonaitech.com/llms-full.txt
+
+## Key Links
+- [Website](https://risonaitech.com)
+- [Services](https://risonaitech.com/services)
+- [Products](https://risonaitech.com/products)
+- [Blog](https://risonaitech.com/blog)
+- [Contact](https://risonaitech.com/contact)
+- [Full AI Index](https://risonaitech.com/llms-full.txt)
+- [WhatsApp](https://wa.me/918368137724)

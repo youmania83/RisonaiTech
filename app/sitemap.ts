@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
           const pageStat = fs.statSync(pagePath);
           let priority = 0.5;
-          let changeFrequency = "monthly";
+          let changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "monthly";
 
           if (currentRoute === "/") {
             priority = 1.0;
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           sitemapEntries.push({
             url: `${BASE_URL}${currentRoute}`,
             lastModified: pageStat.mtime,
-            changeFrequency: changeFrequency as any,
+            changeFrequency,
             priority,
           });
         }

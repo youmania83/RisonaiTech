@@ -1,35 +1,63 @@
-import { memo, useState } from 'react';
+import { memo, useState, useRef, useEffect } from 'react';
 import { Bot, AlertCircle, Copy, Check } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
+import python from 'react-syntax-highlighter/dist/esm/languages/prism/python';
+import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
+import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'; // html
 import { Message } from './types';
 
+SyntaxHighlighter.registerLanguage('tsx', tsx);
+SyntaxHighlighter.registerLanguage('typescript', typescript);
+SyntaxHighlighter.registerLanguage('javascript', javascript);
+SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('bash', bash);
+SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('css', css);
+SyntaxHighlighter.registerLanguage('markup', markup);
+SyntaxHighlighter.registerLanguage('html', markup);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 const CodeBlock = memo(({ node, inline, className, children, ...props }: any) => {
   const match = /language-(\w+)/.exec(className || '');
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(String(children).replace(/\n$/, ''));
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   if (!inline && match) {
     return (
-      <div className="relative my-4 overflow-hidden rounded-lg border border-brand-border bg-[#1E1E1E]">
-        <div className="flex items-center justify-between bg-[rgba(255,255,255,0.05)] px-4 py-1.5">
-          <span className="text-xs font-medium text-brand-gray">{match[1]}</span>
+      <div className="relative my-4 overflow-hidden rounded-lg border border-slate-800 bg-slate-900">
+        <div className="flex items-center justify-between bg-slate-950 px-4 py-1.5 border-b border-slate-800">
+          <span className="text-xs font-medium text-slate-400">{match[1]}</span>
           <button
             onClick={handleCopy}
-            className="text-brand-gray hover:text-white transition-colors"
+            className="text-slate-400 hover:text-slate-100 transition-colors"
             aria-label="Copy code"
           >
             {copied ? <Check size={14} className="text-green-400" /> : <Copy size={14} />}
           </button>
         </div>
         <SyntaxHighlighter
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           style={vscDarkPlus as any}
           language={match[1]}
           PreTag="div"
@@ -42,7 +70,7 @@ const CodeBlock = memo(({ node, inline, className, children, ...props }: any) =>
     );
   }
   return (
-    <code className={`${className} rounded bg-[rgba(255,255,255,0.1)] px-1.5 py-0.5 text-[0.85em]`} {...props}>
+    <code className={`${className} rounded bg-slate-100 text-slate-850 px-1.5 py-0.5 text-[0.85em] border border-slate-200/50`} {...props}>
       {children}
     </code>
   );
@@ -59,8 +87,8 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
     <div className={`flex w-full ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div className={`flex max-w-[85%] items-start gap-3 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
         {!isUser && (
-          <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full mt-0.5 ${isError ? 'bg-red-500/20' : 'bg-[#635BFF]/20'}`}>
-            {isError ? <AlertCircle size={14} className="text-red-400" /> : <Bot size={14} className="text-[#635BFF]" />}
+          <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full mt-0.5 ${isError ? 'bg-red-100 border border-red-200' : 'bg-[#635BFF]/10 border border-[#635BFF]/20'}`}>
+            {isError ? <AlertCircle size={14} className="text-red-500" /> : <Bot size={14} className="text-[#635BFF]" />}
           </div>
         )}
         
@@ -70,8 +98,8 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
               isUser
                 ? 'bg-[#635BFF] text-white rounded-tr-none'
                 : isError
-                ? 'bg-red-500/10 text-red-200 border border-red-500/20 rounded-tl-none'
-                : 'bg-[rgba(255,255,255,0.05)] text-gray-200 border border-brand-border rounded-tl-none'
+                ? 'bg-red-50 text-red-700 border border-red-200 rounded-tl-none'
+                : 'bg-slate-50 text-slate-800 border border-slate-200/60 rounded-tl-none'
             }`}
           >
             {isUser || isError ? (
@@ -80,22 +108,23 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   code: CodeBlock as any,
                   p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
                   ul: ({ children }) => <ul className="mb-2 list-disc pl-4 last:mb-0 space-y-1">{children}</ul>,
                   ol: ({ children }) => <ol className="mb-2 list-decimal pl-4 last:mb-0 space-y-1">{children}</ol>,
                   li: ({ children }) => <li>{children}</li>,
-                  h1: ({ children }) => <h1 className="mb-2 mt-4 text-lg font-bold">{children}</h1>,
-                  h2: ({ children }) => <h2 className="mb-2 mt-3 text-base font-bold">{children}</h2>,
-                  h3: ({ children }) => <h3 className="mb-2 mt-2 text-sm font-bold">{children}</h3>,
-                  a: ({ children, href }) => <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#A5B4FC] underline hover:text-white transition-colors">{children}</a>,
+                  h1: ({ children }) => <h1 className="mb-2 mt-4 text-lg font-bold text-slate-900">{children}</h1>,
+                  h2: ({ children }) => <h2 className="mb-2 mt-3 text-base font-bold text-slate-900">{children}</h2>,
+                  h3: ({ children }) => <h3 className="mb-2 mt-2 text-sm font-bold text-slate-900">{children}</h3>,
+                  a: ({ children, href }) => <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#4F46E5] underline hover:text-[#6366F1] transition-colors">{children}</a>,
                 }}
               >
                 {message.content}
               </ReactMarkdown>
             )}
           </div>
-          <span className={`text-[10px] text-brand-gray/50 ${isUser ? 'text-right' : 'text-left'} px-1`}>
+          <span className={`text-[10px] text-slate-400 ${isUser ? 'text-right' : 'text-left'} px-1`}>
             {timeString}
           </span>
         </div>

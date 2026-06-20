@@ -172,7 +172,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing DEEPSEEK_API_KEY' }, { status: 500 });
     }
 
-    const cleanMessages: ChatMsg[] = messages.map((m: any) => ({
+    const cleanMessages: ChatMsg[] = messages.map((m: ChatMsg) => ({
       role: m.role,
       content: m.content,
     }));

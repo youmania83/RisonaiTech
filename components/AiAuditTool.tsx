@@ -98,14 +98,13 @@ export default function AiAuditTool({
           Website URL or business name
         </label>
         <div
-          className="flex flex-1 items-center gap-2 rounded-xl px-4 py-3"
+          className="flex flex-1 items-center gap-2 rounded-xl px-4 py-3 bg-white"
           style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(99,91,255,0.22)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
+            border: "1px solid #CBD5E1",
+            boxShadow: "0 1px 2px rgba(15,23,42,0.02)",
           }}
         >
-          <Sparkles size={16} className="text-[#a78bfa]" />
+          <Sparkles size={16} className="text-[#4F46E5]" />
           <input
             id="ai-audit-query"
             type="text"
@@ -113,7 +112,7 @@ export default function AiAuditTool({
             onChange={(e) => setQuery(e.target.value)}
             placeholder={initialPlaceholder}
             maxLength={200}
-            className="w-full bg-transparent text-sm text-white placeholder:text-white/40 outline-none"
+            className="w-full bg-transparent text-sm text-slate-800 placeholder:text-slate-400 outline-none"
             autoComplete="off"
             spellCheck={false}
           />
@@ -137,7 +136,7 @@ export default function AiAuditTool({
         </button>
       </form>
 
-      <p className="mt-2 text-xs text-white/60">
+      <p className="mt-2 text-xs text-slate-500">
         Powered by DeepSeek via Anthropic-compatible SDK · Free · No signup
       </p>
 
@@ -146,59 +145,59 @@ export default function AiAuditTool({
         <div 
           className="mt-6 rounded-xl p-5 border relative overflow-hidden transition-all duration-300"
           style={{
-            background: "rgba(255,255,255,0.015)",
-            borderColor: "rgba(99,91,255,0.15)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)",
+            background: "#FFFFFF",
+            borderColor: "#E2E8F0",
+            boxShadow: "0 1px 3px rgba(15,23,42,0.02), 0 4px 16px rgba(15,23,42,0.015)",
           }}
         >
-          <div className="absolute top-3 right-4 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#635BFF]/10 text-[#a78bfa] border border-[#635BFF]/20">
+          <div className="absolute top-3 right-4 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 border border-indigo-100">
             Example Report
           </div>
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="space-y-1">
-              <p className="text-xs font-semibold uppercase tracking-wider text-white/60">Example Target</p>
-              <p className="text-lg font-bold text-white">yourcompany.com</p>
-              <p className="text-xs text-white/55 max-w-sm">This is a preview of the report generated instantly upon submission.</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Example Target</p>
+              <p className="text-lg font-bold text-slate-900">yourcompany.com</p>
+              <p className="text-xs text-slate-500 max-w-sm">This is a preview of the report generated instantly upon submission.</p>
             </div>
             
             <div className="flex items-center gap-6">
               {/* Score Ring Mock */}
               <div className="relative h-14 w-14">
                 <svg width="56" height="56" viewBox="0 0 56 56" className="rotate-[-90deg]">
-                  <circle cx="28" cy="28" r="23" stroke="rgba(255,255,255,0.05)" strokeWidth="4.5" fill="none" />
-                  <circle cx="28" cy="28" r="23" stroke="#a78bfa" strokeWidth="4.5" fill="none" strokeDasharray="144.5" strokeDashoffset="31.8" strokeLinecap="round" />
+                  <circle cx="28" cy="28" r="23" stroke="rgba(15,23,42,0.05)" strokeWidth="4.5" fill="none" />
+                  <circle cx="28" cy="28" r="23" stroke="#4F46E5" strokeWidth="4.5" fill="none" strokeDasharray="144.5" strokeDashoffset="31.8" strokeLinecap="round" />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="font-display text-base font-bold text-white leading-none">78</span>
-                  <span className="text-[8px] text-white/60">/100</span>
+                  <span className="font-display text-base font-bold text-slate-950 leading-none">78</span>
+                  <span className="text-[8px] text-slate-450">/100</span>
                 </div>
               </div>
               
               <div>
-                <p className="text-xs uppercase tracking-wider text-white/60">AI Visibility Score</p>
+                <p className="text-xs uppercase tracking-wider text-slate-500">AI Visibility Score</p>
                 <p className="text-base font-bold text-[#84cc16] leading-none mt-1">Grade: B</p>
               </div>
             </div>
           </div>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
-              <span className="text-xs text-white/60">ChatGPT Visibility</span>
-              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">High</span>
+            <div className="rounded-lg p-2.5 bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <span className="text-xs text-slate-650">ChatGPT Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100">High</span>
             </div>
-            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
-              <span className="text-xs text-white/60">Perplexity Visibility</span>
-              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Medium</span>
+            <div className="rounded-lg p-2.5 bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <span className="text-xs text-slate-650">Perplexity Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-yellow-50 text-yellow-750 border border-yellow-100">Medium</span>
             </div>
-            <div className="rounded-lg p-2.5 bg-white/[0.01] border border-white/5 flex items-center justify-between">
-              <span className="text-xs text-white/60">Gemini Visibility</span>
-              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-rose-500/10 text-rose-400 border border-rose-500/20">Low</span>
+            <div className="rounded-lg p-2.5 bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <span className="text-xs text-slate-650">Gemini Visibility</span>
+              <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-red-50 text-red-700 border border-red-100">Low</span>
             </div>
           </div>
 
-          <div className="mt-4 p-3 rounded-lg bg-[#635BFF]/5 border border-[#635BFF]/10 text-xs flex flex-col sm:flex-row gap-1 sm:gap-2">
-            <span className="font-bold text-[#a78bfa] shrink-0">Top Recommendation:</span>
-            <span className="text-white/80">Publish service-specific case studies to help AI engines verify your authority.</span>
+          <div className="mt-4 p-3 rounded-lg bg-indigo-50/50 border border-indigo-100/60 text-xs flex flex-col sm:flex-row gap-1 sm:gap-2">
+            <span className="font-bold text-[#4F46E5] shrink-0">Top Recommendation:</span>
+            <span className="text-slate-700">Publish service-specific case studies to help AI engines verify your authority.</span>
           </div>
         </div>
       )}
@@ -209,12 +208,12 @@ export default function AiAuditTool({
           role="alert"
           className="mt-6 flex items-start gap-3 rounded-xl p-4 text-sm"
           style={{
-            background: "rgba(239,68,68,0.08)",
-            border: "1px solid rgba(239,68,68,0.3)",
+            background: "rgba(239,68,68,0.05)",
+            border: "1px solid rgba(239,68,68,0.2)",
           }}
         >
-          <AlertTriangle size={16} className="mt-0.5 flex-shrink-0 text-red-400" />
-          <span className="text-red-200">{error}</span>
+          <AlertTriangle size={16} className="mt-0.5 flex-shrink-0 text-red-650" />
+          <span className="text-red-850 font-medium">{error}</span>
         </div>
       )}
 
@@ -223,28 +222,28 @@ export default function AiAuditTool({
         <article
           className="mt-8 rounded-2xl p-6 sm:p-8"
           style={{
-            background: "linear-gradient(135deg, rgba(99,91,255,0.06) 0%, rgba(14,165,233,0.04) 100%)",
-            border: "1px solid rgba(99,91,255,0.22)",
-            boxShadow: "0 0 60px rgba(99,91,255,0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
+            background: "linear-gradient(135deg, rgba(79,70,229,0.03) 0%, rgba(37,99,235,0.02) 100%)",
+            border: "1px solid rgba(79,70,229,0.15)",
+            boxShadow: "0 4px 20px rgba(15,23,42,0.02), inset 0 1px 0 rgba(255,255,255,0.8)",
           }}
         >
           {/* Header — score + grade */}
           <header className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a78bfa]">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4F46E5]">
                 AI Visibility Audit
               </p>
-              <h2 className="mt-1 font-display text-2xl font-bold text-white sm:text-3xl">
+              <h2 className="mt-1 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                 {result.query}
               </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/65">
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600">
                 {result.summary}
               </p>
             </div>
             <div className="flex items-center gap-5">
               <ScoreRing score={result.score} />
               <div>
-                <p className="text-xs uppercase tracking-wider text-white/60">Grade</p>
+                <p className="text-xs uppercase tracking-wider text-slate-400">Grade</p>
                 <p
                   className="font-display text-5xl font-bold leading-none"
                   style={{ color: gradeColor[result.grade] }}
@@ -268,13 +267,13 @@ export default function AiAuditTool({
           {/* Evidence breakdown — only when we actually fetched the site */}
           {result.evidence?.fetched && (
             <div
-              className="mt-5 rounded-xl p-4 text-xs text-white/55"
+              className="mt-5 rounded-xl p-4 text-xs text-slate-600"
               style={{
-                background: "rgba(255,255,255,0.025)",
-                border: "1px solid rgba(255,255,255,0.06)",
+                background: "rgba(15,23,42,0.015)",
+                border: "1px solid #E2E8F0",
               }}
             >
-              <p className="font-semibold text-white/70">
+              <p className="font-semibold text-slate-700">
                 What we observed on {result.resolvedUrl}
               </p>
               <ul className="mt-2 grid gap-1 sm:grid-cols-2">
@@ -283,7 +282,7 @@ export default function AiAuditTool({
                 <li>• robots.txt: {result.evidence.hasRobotsTxt ? "present" : "missing"}</li>
                 <li>• AI crawlers allowed: {result.evidence.aiCrawlersAllowed.length || 0}</li>
                 {result.evidence.aiCrawlersBlocked.length > 0 && (
-                  <li className="sm:col-span-2 text-orange-300/80">
+                  <li className="sm:col-span-2 text-orange-600/80">
                     • Blocked AI crawlers: {result.evidence.aiCrawlersBlocked.join(", ")}
                   </li>
                 )}
@@ -294,7 +293,7 @@ export default function AiAuditTool({
           {/* Factors */}
           {result.factors.length > 0 && (
             <section className="mt-8">
-              <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-white/60">
+              <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Scoring factors
               </h3>
               <ul className="mt-4 space-y-3">
@@ -303,25 +302,25 @@ export default function AiAuditTool({
                     key={f.name}
                     className="rounded-xl p-4"
                     style={{
-                      background: "rgba(255,255,255,0.025)",
-                      border: "1px solid rgba(255,255,255,0.06)",
+                      background: "#FFFFFF",
+                      border: "1px solid #E2E8F0",
                     }}
                   >
                     <div className="flex items-center justify-between gap-3">
-                      <p className="text-sm font-semibold text-white">{f.name}</p>
-                      <p className="text-sm font-mono text-white/70">{Math.round(f.score)}/100</p>
+                      <p className="text-sm font-semibold text-slate-800">{f.name}</p>
+                      <p className="text-sm font-mono text-slate-600">{Math.round(f.score)}/100</p>
                     </div>
-                    <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/05">
+                    <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
                       <div
                         className="h-full rounded-full"
                         style={{
                           width: `${Math.max(0, Math.min(100, f.score))}%`,
-                          background: "linear-gradient(90deg, #635BFF 0%, #0EA5E9 100%)",
+                          background: "linear-gradient(90deg, #4F46E5 0%, #2563EB 100%)",
                         }}
                       />
                     </div>
                     {f.notes && (
-                      <p className="mt-2 text-xs leading-relaxed text-white/55">{f.notes}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-slate-500">{f.notes}</p>
                     )}
                   </li>
                 ))}
@@ -348,7 +347,7 @@ export default function AiAuditTool({
           {/* Recommendations */}
           {result.recommendations.length > 0 && (
             <section className="mt-8">
-              <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#a78bfa]">
+              <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#4F46E5]">
                 <TrendingUp size={13} />
                 Recommendations
               </h3>
@@ -356,13 +355,13 @@ export default function AiAuditTool({
                 {result.recommendations.map((r, i) => (
                   <li
                     key={i}
-                    className="flex gap-3 rounded-xl p-3 text-sm leading-relaxed text-white/80"
+                    className="flex gap-3 rounded-xl p-3 text-sm leading-relaxed text-slate-700"
                     style={{
-                      background: "rgba(99,91,255,0.05)",
-                      border: "1px solid rgba(99,91,255,0.16)",
+                      background: "rgba(79,70,229,0.02)",
+                      border: "1px solid rgba(79,70,229,0.12)",
                     }}
                   >
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#635BFF]/20 text-[10px] font-bold text-[#a78bfa]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-[10px] font-bold text-indigo-700">
                       {i + 1}
                     </span>
                     <span>{r}</span>
@@ -372,7 +371,7 @@ export default function AiAuditTool({
             </section>
           )}
 
-          <p className="mt-6 text-[10px] uppercase tracking-wider text-white/30">
+          <p className="mt-6 text-[10px] uppercase tracking-wider text-slate-400">
             Generated {new Date(result.generatedAt).toLocaleString("en-IN")}
           </p>
         </article>
@@ -393,7 +392,7 @@ function ScoreRing({ score }: { score: number }) {
           cx="40"
           cy="40"
           r="30"
-          stroke="rgba(255,255,255,0.08)"
+          stroke="rgba(15,23,42,0.05)"
           strokeWidth="6"
           fill="none"
         />
@@ -410,14 +409,14 @@ function ScoreRing({ score }: { score: number }) {
         />
         <defs>
           <linearGradient id="auditGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#635BFF" />
-            <stop offset="100%" stopColor="#0EA5E9" />
+            <stop offset="0%" stopColor="#4F46E5" />
+            <stop offset="100%" stopColor="#2563EB" />
           </linearGradient>
         </defs>
       </svg>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-        <span className="font-display text-xl font-bold leading-none text-white">{Math.round(safe)}</span>
-        <span className="mt-0.5 text-[9px] uppercase tracking-wider text-white/40">/ 100</span>
+        <span className="font-display text-xl font-bold leading-none text-slate-900">{Math.round(safe)}</span>
+        <span className="mt-0.5 text-[9px] uppercase tracking-wider text-slate-400">/ 100</span>
       </div>
     </div>
   );
@@ -426,10 +425,10 @@ function ScoreRing({ score }: { score: number }) {
 function Chip({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <span
-      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium text-white/70"
+      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium text-slate-650"
       style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(255,255,255,0.08)",
+        background: "rgba(15,23,42,0.02)",
+        border: "1px solid rgba(15,23,42,0.08)",
       }}
     >
       {icon}
@@ -455,8 +454,8 @@ function CardList({
     <div
       className="rounded-xl p-4"
       style={{
-        background: "rgba(255,255,255,0.025)",
-        border: "1px solid rgba(255,255,255,0.06)",
+        background: "#FFFFFF",
+        border: "1px solid #E2E8F0",
       }}
     >
       <h3
@@ -468,7 +467,7 @@ function CardList({
       </h3>
       <ul className="mt-3 space-y-2">
         {items.map((s, i) => (
-          <li key={i} className="text-sm leading-relaxed text-white/75">
+          <li key={i} className="text-sm leading-relaxed text-slate-600">
             • {s}
           </li>
         ))}

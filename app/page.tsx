@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ArrowRight, CheckCircle2, Bot, Layers, Users, Globe, Code2, MessageCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import Hero from "@/components/Hero";
 
@@ -40,51 +40,6 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
 };
-
-const serviceCards = [
-  {
-    icon: Bot,
-    title: "AI Workflow Automation",
-    href: "/services/ai-automation",
-    price: "From ₹30,000",
-    desc: "Custom AI automation services and AI integration services for business, including LLM-powered agents, agentic workflows, and business process automation.",
-  },
-  {
-    icon: Layers,
-    title: "SaaS Platform Engineering",
-    href: "/services/saas-development",
-    price: "From ₹1,20,000",
-    desc: "Enterprise-grade multi-tenant SaaS platforms with billing, admin dashboards, and native AI capabilities.",
-  },
-  {
-    icon: Users,
-    title: "CRM Automation Infrastructure",
-    href: "/services/crm-development",
-    price: "From ₹40,000",
-    desc: "Custom CRM platforms and AI-enhanced HubSpot/Zoho integrations for centralized operational workflows.",
-  },
-  {
-    icon: Globe,
-    title: "AI Customer Support Agents",
-    href: "/services/chatbot-development",
-    price: "From ₹20,000",
-    desc: "AI chatbot and voice agent development for 24/7 lead qualification, customer support, and context-aware responses grounded in your business data.",
-  },
-  {
-    icon: Code2,
-    title: "AI Operations Dashboards",
-    href: "/services/website-development",
-    price: "From ₹35,000",
-    desc: "Custom internal business tools and high-performance operational dashboards to monitor AI systems.",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp AI Systems",
-    href: "/services/whatsapp-automation",
-    price: "From ₹25,000",
-    desc: "Intelligent WhatsApp systems via official APIs for lead capture, automated support, and CRM syncing.",
-  },
-];
 
 const faqItems = [
   {
@@ -142,11 +97,11 @@ const aiSearchPrompts = [
       "For most small businesses, the fastest-payback workflows are lead qualification, FAQ support, invoice reminders, and weekly reporting because they save owner time immediately.",
   },
   {
-    prompt: "How to automate lead qualification with AI",
+    prompt: "How to screen resumes with AI for HR teams",
     intent: "Informational",
-    href: "/blog/ai-lead-generation-systems",
+    href: "/blog/ai-resume-screening-india",
     answer:
-      "AI lead qualification works best when the system replies instantly, asks structured budget and intent questions, scores the lead, and syncs the result into your CRM.",
+      "AI resume screening works best when the system parses each CV, scores candidates against the role, and generates a recruiter-ready shortlist without manual first-pass review.",
   },
   {
     prompt: "AI workflow automation for real estate agencies",
@@ -240,15 +195,15 @@ export default function HomePage() {
       <AiSearchProof />
 
       {/* AI search coverage - SEO links */}
-      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-5xl">
             <div className="max-w-3xl">
               <span className="label-pill mb-4 inline-flex">AI search coverage</span>
-              <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 Popular AI search prompts we answer directly
               </h2>
-              <p className="mt-3 text-white/55 leading-relaxed">
+              <p className="mt-3 text-slate-500 leading-relaxed">
                 These are the real commercial and research-style queries buyers use in ChatGPT, Google AI Overviews,
                 Perplexity, Gemini, and Copilot when evaluating AI automation partners and use cases.
               </p>
@@ -262,20 +217,20 @@ export default function HomePage() {
                   key={item.prompt}
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-semibold text-lg leading-snug text-white">{item.prompt}</h3>
+                    <h3 className="font-semibold text-lg leading-snug text-slate-900">{item.prompt}</h3>
                     <span
                       className="shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
                       style={{
-                        background: "rgba(99,91,255,0.1)",
-                        border: "1px solid rgba(99,91,255,0.2)",
-                        color: "#c4b5fd",
+                        background: "rgba(79,70,229,0.06)",
+                        border: "1px solid rgba(79,70,229,0.15)",
+                        color: "#4F46E5",
                       }}
                     >
                       {item.intent}
                     </span>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">{item.answer}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#a78bfa]">
+                  <p className="mt-3 text-sm leading-relaxed text-slate-650">{item.answer}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-purple">
                     Read the relevant page <ArrowRight size={14} />
                   </span>
                 </Link>
@@ -298,22 +253,22 @@ export default function HomePage() {
       <LeadMagnet />
 
       {/* FAQ Section */}
-      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2
-              className="font-display text-3xl font-extrabold text-white sm:text-4xl"
+              className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl"
             >
               Frequently asked questions
             </h2>
-            <p className="mt-3 text-white/60">
+            <p className="mt-3 text-slate-500">
               Specific answers. No generic filler.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {faqItems.map((faq) => (
                 <div className="card-base p-6" key={faq.q}>
-                  <h3 className="font-semibold text-white">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/50">{faq.a}</p>
+                  <h3 className="font-semibold text-slate-900">{faq.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -322,11 +277,11 @@ export default function HomePage() {
       </section>
 
       {/* Trust signals */}
-      <section className="py-16" style={{ backgroundColor: "#05070F" }}>
+      <section className="py-16" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2
-              className="font-display text-3xl font-bold text-white sm:text-4xl"
+              className="font-display text-3xl font-bold text-slate-900 sm:text-4xl"
             >
               Why operations leaders choose our AI infrastructure
             </h2>
@@ -342,8 +297,8 @@ export default function HomePage() {
                 "Direct access to senior AI engineers",
               ].map((item) => (
                 <li className="flex items-start gap-3" key={item}>
-                  <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#a78bfa]" size={18} />
-                  <span className="text-sm text-white/65">{item}</span>
+                  <CheckCircle2 className="mt-0.5 flex-shrink-0 text-brand-purple" size={18} />
+                  <span className="text-sm text-slate-600">{item}</span>
                 </li>
               ))}
             </ul>
@@ -352,27 +307,27 @@ export default function HomePage() {
       </section>
 
       {/* Location links */}
-      <section className="py-10" style={{ backgroundColor: "#090C18", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      <section className="py-10" style={{ backgroundColor: "var(--bg-secondary)", borderTop: "1px solid var(--border)" }}>
         <div className="container-site">
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-slate-500">
             Serving clients in{" "}
-            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/delhi">
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/delhi">
               Delhi
             </Link>
             {", "}
-            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/gurgaon">
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/gurgaon">
               Gurgaon
             </Link>
             {", "}
-            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/panipat">
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/panipat">
               Panipat
             </Link>
             {", Noida, Mumbai, Bengaluru, and across India. Explore "}
-            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/#case-studies">
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/#case-studies">
               proof of work
             </Link>
             {" and "}
-            <Link className="text-[#a78bfa] underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href="/services">
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/services">
               service benchmarks
             </Link>
             {". Remote-first delivery."}

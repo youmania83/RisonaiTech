@@ -43,7 +43,7 @@ export default function LeadershipAuthority() {
   );
 
   return (
-    <section className="py-20 relative overflow-hidden" id="leadership" style={{ backgroundColor: "#05070F" }}>
+    <section className="py-20 relative overflow-hidden" id="leadership" style={{ backgroundColor: "var(--bg)" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -53,7 +53,7 @@ export default function LeadershipAuthority() {
       <div
         aria-hidden
         className="pointer-events-none absolute -right-32 top-10 h-[300px] w-[300px] rounded-full blur-[80px] opacity-10"
-        style={{ background: "rgba(99,91,255,0.30)" }}
+        style={{ background: "rgba(79,70,229,0.06)" }}
       />
 
       <div className="container-site relative z-10">
@@ -61,26 +61,26 @@ export default function LeadershipAuthority() {
           {/* Text and Copy */}
           <div className="space-y-6">
             <span className="label-pill inline-flex">Work Directly With The Founder</span>
-            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl md:text-5xl leading-tight">
+            <h2 className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl md:text-5xl leading-tight">
               Direct Engineering access. <br />
               <span className="grad-text">Zero middlemen.</span>
             </h2>
-            <p className="text-white/60 text-base leading-relaxed">
+            <p className="text-slate-600 text-base leading-relaxed">
               {founder.bio}
             </p>
-
+ 
             <div className="grid gap-4 sm:grid-cols-3 pt-4">
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-2xl font-extrabold text-[#a78bfa] block">{founder.experienceYears}+ Years</span>
-                <span className="text-[10px] text-white/40 uppercase tracking-wider block mt-1">Building Software</span>
+              <div className="p-4 rounded-xl bg-[#FAFAFA] border border-slate-200/60">
+                <span className="text-2xl font-extrabold text-brand-purple block">{founder.experienceYears}+ Years</span>
+                <span className="text-[10px] text-slate-500 uppercase tracking-wider block mt-1">Building Software</span>
               </div>
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-2xl font-extrabold text-[#a78bfa] block">{founder.projectsShipped}+ Systems</span>
-                <span className="text-[10px] text-white/40 uppercase tracking-wider block mt-1">Delivered Globally</span>
+              <div className="p-4 rounded-xl bg-[#FAFAFA] border border-slate-200/60">
+                <span className="text-2xl font-extrabold text-brand-purple block">{founder.projectsShipped}+ Systems</span>
+                <span className="text-[10px] text-slate-500 uppercase tracking-wider block mt-1">Delivered Globally</span>
               </div>
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-2xl font-extrabold text-[#a78bfa] block">Real Estate & Health</span>
-                <span className="text-[10px] text-white/40 uppercase tracking-wider block mt-1">Products Built</span>
+              <div className="p-4 rounded-xl bg-[#FAFAFA] border border-slate-200/60">
+                <span className="text-2xl font-extrabold text-brand-purple block">Real Estate & Health</span>
+                <span className="text-[10px] text-slate-500 uppercase tracking-wider block mt-1">Products Built</span>
               </div>
             </div>
 
@@ -94,8 +94,8 @@ export default function LeadershipAuthority() {
                 <MessageCircle size={16} />
                 Chat with Yogesh on WhatsApp
               </a>
-              <span className="text-xs text-white/45 flex items-center gap-1.5">
-                <ShieldCheck size={14} className="text-[#a78bfa]" />
+              <span className="text-xs text-slate-500 flex items-center gap-1.5">
+                <ShieldCheck size={14} className="text-brand-purple" />
                 No sales pitches. Direct technical scoping.
               </span>
             </div>
@@ -103,30 +103,29 @@ export default function LeadershipAuthority() {
 
           {/* Visual Profile Card */}
           <div 
-            className="rounded-2xl p-6 sm:p-8 border relative overflow-hidden flex flex-col justify-between h-full"
+            className="rounded-2xl p-6 sm:p-8 border relative overflow-hidden flex flex-col justify-between h-full border-indigo-100"
             style={{
-              background: "linear-gradient(135deg, rgba(99,91,255,0.04) 0%, rgba(14,165,233,0.02) 100%)",
-              borderColor: "rgba(99,91,255,0.18)",
-              boxShadow: "0 15px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.02)",
+              background: "linear-gradient(135deg, rgba(79,70,229,0.02) 0%, rgba(37,99,235,0.01) 100%)",
+              boxShadow: "0 15px 40px rgba(15,23,42,0.03), inset 0 1px 0 rgba(255,255,255,0.8)",
             }}
           >
             <div className="space-y-6">
               {/* Profile Avatar */}
               <div className="flex items-center gap-4">
                 <div className="relative h-16 w-16 rounded-full shrink-0 flex items-center justify-center bg-gradient-to-tr from-[#635BFF] to-[#0EA5E9] p-0.5 shadow-lg shadow-[#635BFF]/20">
-                  <div className="h-full w-full rounded-full bg-[#090C18] flex items-center justify-center font-display text-lg font-bold text-white tracking-wider">
+                  <div className="h-full w-full rounded-full bg-slate-900 flex items-center justify-center font-display text-lg font-bold text-white tracking-wider">
                     YW
                   </div>
-                  <span className="absolute bottom-0.5 right-0.5 h-3.5 w-3.5 rounded-full border-2 border-[#090C18] bg-emerald-500" title="Online" />
+                  <span className="absolute bottom-0.5 right-0.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-500" title="Online" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white">{founder.name}</h3>
-                  <p className="text-xs text-[#a78bfa] font-medium">{founder.role}</p>
+                  <h3 className="text-lg font-bold text-slate-900">{founder.name}</h3>
+                  <p className="text-xs text-brand-purple font-medium">{founder.role}</p>
                 </div>
               </div>
 
               {/* Promises checklist */}
-              <ul className="space-y-3 pt-4 border-t border-white/5">
+              <ul className="space-y-3 pt-4 border-t border-slate-100">
                 {[
                   "No sales representatives or account managers",
                   "Direct WhatsApp line for rapid development updates",
@@ -134,23 +133,23 @@ export default function LeadershipAuthority() {
                   "Weekly demo calls & iterative production delivery",
                   "Complete IP, source code, and cloud ownership",
                 ].map((point) => (
-                  <li key={point} className="flex items-start gap-2.5 text-xs text-white/75">
-                    <Zap className="text-[#a78bfa] shrink-0 mt-0.5" size={14} />
+                  <li key={point} className="flex items-start gap-2.5 text-xs text-slate-700">
+                    <Zap className="text-brand-purple shrink-0 mt-0.5" size={14} />
                     <span>{point}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-2 text-xs pt-4 border-t border-white/5">
+ 
+            <div className="mt-8 flex flex-wrap gap-2 text-xs pt-4 border-t border-slate-100">
               {founder.sameAs.map((url) => (
                 <a
-                  className="rounded-md px-2 py-1 text-white/50 transition-colors hover:text-[#a78bfa] hover:bg-white/5"
+                  className="rounded-md px-2 py-1 text-slate-500 transition-colors hover:text-brand-purple hover:bg-slate-100/50"
                   href={url}
                   key={url}
                   rel="noreferrer"
                   target="_blank"
-                  style={{ border: "1px solid rgba(255,255,255,0.05)" }}
+                  style={{ border: "1px solid var(--border)" }}
                 >
                   {url.replace("https://", "")}
                 </a>

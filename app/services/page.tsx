@@ -55,7 +55,7 @@ export default function ServicesPage() {
       />
 
       {/* Header */}
-      <section className="pb-16 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
+      <section className="pb-16 pt-36 bg-grid border-b border-slate-200/50" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
@@ -63,14 +63,14 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.08}>
               <h1
-                className="font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl"
+                className="font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl"
               >
                 Everything you need to{" "}
                 <span className="grad-text">ship great products</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
-              <p className="mt-5 text-xl text-white/52">
+              <p className="mt-5 text-xl text-slate-500">
                 Seven core disciplines. One team. End-to-end ownership.
               </p>
             </Reveal>
@@ -79,7 +79,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service detail cards */}
-      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <div className="flex flex-col gap-8">
             {services.map((service, i) => {
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                       {/* Premium service icon */}
                       <div
                         className="flex items-center justify-center p-10 lg:w-[240px]"
-                        style={{ background: "rgba(99,91,255,0.06)", borderRight: "1px solid rgba(255,255,255,0.06)" }}
+                        style={{ background: "rgba(79,70,229,0.03)", borderRight: "1px solid var(--border)" }}
                       >
                         <ServiceIcon serviceId={service.id} />
                       </div>
@@ -98,17 +98,17 @@ export default function ServicesPage() {
                       {/* Content */}
                       <div className="flex flex-col justify-center p-8 lg:flex-1 lg:p-10">
                         <h2
-                          className="font-display mt-2 text-2xl font-bold text-white sm:text-3xl"
+                          className="font-display mt-2 text-2xl font-bold text-slate-900 sm:text-3xl"
                         >
                           {service.title}
                         </h2>
-                        <p className="mt-3 max-w-xl text-base leading-relaxed text-white/52">
+                        <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-600">
                           {service.description}
                         </p>
                         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                           {service.bullets.map((b) => (
-                            <li className="flex items-center gap-2 text-sm text-white/58" key={b}>
-                              <CheckCircle2 className="flex-shrink-0 text-[#a78bfa]" size={14} />
+                            <li className="flex items-center gap-2 text-sm text-slate-600" key={b}>
+                              <CheckCircle2 className="flex-shrink-0 text-brand-purple" size={14} />
                               {b}
                             </li>
                           ))}

@@ -1,0 +1,9 @@
+node_modules/
+.git/
+.next/
+.vercel/
+.turbo/
+dist/
+build/
+coverage/
+.cache/

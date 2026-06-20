@@ -92,7 +92,7 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="pb-16 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
+      <section className="pb-16 pt-36 bg-grid border-b border-slate-200/50" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-brand-border py-14" style={{ backgroundColor: "#090C18" }}>
+      <section className="border-y border-brand-border py-14" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <div className="flex flex-wrap justify-center gap-x-20 gap-y-8">
             {stats.map((s) => (
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder bio — E-E-A-T section */}
-      <section className="py-24" id="founder" style={{ backgroundColor: "#05070F" }}>
+      <section className="py-24" id="founder" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-4xl">
             <Reveal>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <div className="rounded-xl border border-brand-border p-5" style={{ background: "rgba(255,255,255,0.04)" }}>
+                  <div className="rounded-xl border border-slate-200 p-5 bg-slate-50/50">
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-gray mb-3">
                       Verified profiles
                     </p>
@@ -185,14 +185,14 @@ export default function AboutPage() {
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-between py-2 text-sm font-medium text-brand-dark hover:text-[#635BFF] transition-colors border-b border-brand-border last:border-0"
+                        className="flex items-center justify-between py-2 text-sm font-medium text-brand-dark hover:text-[#635BFF] transition-colors border-b border-slate-200 last:border-0"
                       >
                         {link.label}
                         <ExternalLink size={13} className="text-brand-gray" />
                       </a>
                     ))}
                   </div>
-                  <div className="rounded-xl border border-brand-border p-5" style={{ background: "rgba(255,255,255,0.04)" }}>
+                  <div className="rounded-xl border border-slate-200 p-5 bg-slate-50/50">
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-gray mb-3">
                       Known for
                     </p>
@@ -203,7 +203,7 @@ export default function AboutPage() {
                       "DocBooking — clinic SaaS",
                       "Fixed-price delivery",
                     ].map((item) => (
-                      <div key={item} className="flex items-center gap-2 py-1.5 text-sm text-brand-gray border-b border-brand-border last:border-0">
+                      <div key={item} className="flex items-center gap-2 py-1.5 text-sm text-brand-gray border-b border-slate-200 last:border-0">
                         <CheckCircle2 size={12} className="text-[#635BFF] flex-shrink-0" />
                         {item}
                       </div>
@@ -217,7 +217,7 @@ export default function AboutPage() {
       </section>
 
       {/* Built by us — live products (receipts) */}
-      <section className="py-24" id="products" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-24 border-y border-slate-200/50" id="products" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <Reveal>
             <div className="mb-12 text-center">
@@ -297,7 +297,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-24" style={{ backgroundColor: "#05070F" }}>
+      <section className="py-24" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -327,7 +327,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-24 border-t border-slate-200/50" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <Reveal>
             <div className="mb-14 text-center">

@@ -40,15 +40,15 @@ export default function Navbar() {
       }`}
       style={{
         background: isScrolled
-          ? "rgba(5, 7, 15, 0.92)"
-          : "rgba(5, 7, 15, 0.55)",
+          ? "rgba(255, 255, 255, 0.85)"
+          : "rgba(255, 255, 255, 0.4)",
         backdropFilter: "blur(24px) saturate(180%)",
         WebkitBackdropFilter: "blur(24px) saturate(180%)",
         borderBottom: isScrolled
-          ? "1px solid rgba(255,255,255,0.08)"
-          : "1px solid rgba(255,255,255,0.04)",
+          ? "1px solid rgba(15,23,42,0.08)"
+          : "1px solid rgba(15,23,42,0.04)",
         boxShadow: isScrolled
-          ? "0 4px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,91,255,0.05)"
+          ? "0 4px 32px rgba(15,23,42,0.03), 0 0 0 1px rgba(79,70,229,0.02)"
           : "none",
       }}
     >
@@ -62,12 +62,12 @@ export default function Navbar() {
         <nav className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <Link
-              className="relative rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition-colors duration-200 hover:text-white group"
+              className="relative rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-slate-900 group"
               href={link.href}
               key={link.href}
             >
               {link.label}
-              <span className="absolute inset-x-2 bottom-0 h-px origin-left scale-x-0 rounded-full bg-white/30 transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="absolute inset-x-2 bottom-0 h-px origin-left scale-x-0 rounded-full bg-indigo-600 transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
           ))}
         </nav>
@@ -86,7 +86,7 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
-          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/70 backdrop-blur-sm lg:hidden"
+          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-slate-200 bg-white/80 text-slate-700 backdrop-blur-sm lg:hidden hover:bg-slate-50 transition-colors"
         >
           {isMobileMenuOpen ? <X size={17} /> : <Menu size={17} />}
         </button>
@@ -100,17 +100,17 @@ export default function Navbar() {
               : "-translate-y-2 opacity-0 pointer-events-none invisible"
           }`}
           style={{
-            background: "rgba(5, 7, 15, 0.95)",
+            background: "rgba(255, 255, 255, 0.98)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
-            borderBottom: "1px solid rgba(255,255,255,0.08)",
+            borderBottom: "1px solid rgba(15,23,42,0.08)",
             willChange: "opacity, transform",
           }}
         >
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
-                className="rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900"
                 href={link.href}
                 key={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 border-t border-white/08 pt-3">
+            <div className="mt-3 border-t border-slate-100 pt-3">
               <Link
                 className="btn-primary w-full justify-center text-sm"
                 href="/contact"

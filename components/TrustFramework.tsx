@@ -29,7 +29,7 @@ const trustSignals = [
 
 export default function TrustFramework() {
   return (
-    <section className="py-20" id="trust-framework" style={{ backgroundColor: "#090C18" }}>
+    <section className="py-20" id="trust-framework" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
           <span className="label-pill mb-4 inline-flex">Trust & Delivery Clarity</span>
@@ -43,15 +43,15 @@ export default function TrustFramework() {
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {trustSignals.map((block) => (
             <article className="card-base h-full p-7" key={block.title}>
-              <h3 className="font-display text-xl font-bold text-white">
+              <h3 className="font-display text-xl font-bold text-slate-900">
                 {block.title}
               </h3>
               <ul className="mt-4 space-y-2.5">
                 {block.points.map((point) => (
-                  <li className="flex items-start gap-2 text-sm leading-relaxed text-white/55" key={point}>
+                  <li className="flex items-start gap-2 text-sm leading-relaxed text-slate-600" key={point}>
                     <span
                       className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                      style={{ background: "#a78bfa" }}
+                      style={{ background: "var(--purple)" }}
                     />
                     {point}
                   </li>

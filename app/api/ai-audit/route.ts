@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
 
 // Edge-incompatible (Anthropic SDK needs Node primitives); explicit runtime keeps
 // existing `next build` happy without touching other route handlers.
@@ -154,26 +153,32 @@ ${evidenceBlock}
 
 Respond with JSON only. No prose.`;
 
-    // DeepSeek exposes an Anthropic-compatible endpoint, so we point the
-    // official Anthropic SDK at it. This keeps our SDK surface area identical
-    // to other Anthropic-based features we may add later.
-    const client = new Anthropic({
-      apiKey,
-      baseURL: "https://api.deepseek.com/anthropic",
+    // Call DeepSeek Chat API directly via fetch to avoid extra SDK dependencies
+    const apiRes = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: userMessage },
+        ],
+        temperature: 0.3,
+        max_tokens: 1600,
+        response_format: { type: "json_object" },
+      }),
     });
 
-    const response = await client.messages.create({
-      model: "deepseek-chat",
-      max_tokens: 1600,
-      temperature: 0.3,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: "user", content: userMessage }],
-    });
+    if (!apiRes.ok) {
+      const errText = await apiRes.text();
+      throw new Error(`DeepSeek API error: ${apiRes.status} - ${errText}`);
+    }
 
-    const text = response.content
-      .map((b) => (b.type === "text" ? b.text : ""))
-      .join("")
-      .trim();
+    const apiData = await apiRes.json();
+    const text = (apiData.choices?.[0]?.message?.content || "").trim();
 
     const cleaned = text
       .replace(/^```(?:json)?\s*/i, "")

@@ -349,45 +349,30 @@ export default function AiSearchAuditPage() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-[#05070F] pt-[120px] pb-20">
+      <section className="relative overflow-hidden bg-white pt-[120px] pb-20 bg-grid">
         {/* Decorative glows — match site style */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
+          className="pointer-events-none absolute -left-32 top-20 h-[400px] w-[400px] rounded-full blur-[80px] opacity-25"
+          style={{ background: "rgba(99,91,255,0.2)" }}
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-32 top-20 h-[400px] w-[400px] rounded-full blur-[80px] opacity-30"
-          style={{ background: "rgba(99,91,255,0.35)" }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-32 top-40 h-[400px] w-[400px] rounded-full blur-[80px] opacity-20"
-          style={{ background: "rgba(14,165,233,0.35)" }}
+          className="pointer-events-none absolute -right-32 top-40 h-[400px] w-[400px] rounded-full blur-[80px] opacity-15"
+          style={{ background: "rgba(14,165,233,0.2)" }}
         />
 
         <div className="container-site relative">
           {/* ─── Header ───────────────────────────────────────────── */}
           <div className="mx-auto max-w-3xl text-center">
-            <span
-              className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a78bfa]"
-              style={{
-                background: "rgba(99,91,255,0.08)",
-                border: "1px solid rgba(99,91,255,0.22)",
-              }}
-            >
+            <span className="label-pill">
               <Sparkles size={12} />
               Free AI SEO Tool
             </span>
-            <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+            <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
               AI Search Ranking Audit
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-white/60 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
               Enter your website URL or business name — get your AI visibility
               score in seconds. See exactly how ChatGPT, Perplexity, Claude and
               Gemini view your brand, and what to fix first.
@@ -402,17 +387,17 @@ export default function AiSearchAuditPage() {
           {/* ─── Trust strip ──────────────────────────────────────── */}
           <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
             <Feature
-              icon={<Gauge size={16} className="text-[#a78bfa]" />}
+              icon={<Gauge size={16} className="text-indigo-600" />}
               title="Instant score"
               body="0–100 score, A–F grade, factor breakdown — under 10 seconds."
             />
             <Feature
-              icon={<Bot size={16} className="text-[#a78bfa]" />}
+              icon={<Bot size={16} className="text-indigo-600" />}
               title="AI-engine aware"
               body="Reasons about ChatGPT, Perplexity, Claude, Gemini and AI Overviews."
             />
             <Feature
-              icon={<ShieldCheck size={16} className="text-[#a78bfa]" />}
+              icon={<ShieldCheck size={16} className="text-indigo-600" />}
               title="No signup, no spam"
               body="Free, anonymous, rate-limited. We don't store your input."
             />
@@ -420,34 +405,34 @@ export default function AiSearchAuditPage() {
 
           {/* ─── Long-form SEO content (crawler food) ─────────────── */}
           <article
-            className="mx-auto mt-20 max-w-3xl space-y-6 text-white/70"
+            className="mx-auto mt-20 max-w-3xl space-y-6 text-slate-700"
             itemScope
             itemType="https://schema.org/Article"
           >
-            <div className="rounded-xl border border-indigo-500/20 bg-indigo-500/5 px-6 py-5">
-              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-indigo-400">
+            <div className="rounded-xl border border-indigo-200 bg-indigo-50/40 px-6 py-5">
+              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-indigo-600">
                 TL;DR - Direct Answer
               </p>
-              <p className="text-base leading-relaxed text-white/80">
+              <p className="text-base leading-relaxed text-slate-800">
                 A free AI search audit shows whether your website is discoverable, understandable, and citable in answer engines like ChatGPT,
                 Perplexity, Claude, Gemini, and Google AI Overviews. If your brand is not being cited in AI answers, you are losing high-intent
                 traffic before the click ever reaches your site. This page lets you run that audit for free and understand exactly what to fix first.
               </p>
             </div>
 
-            <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
-              <p className="mb-3 text-sm font-semibold text-[#a78bfa]">Key takeaways</p>
+            <div className="rounded-2xl p-6 bg-slate-50 border border-slate-200">
+              <p className="mb-3 text-sm font-semibold text-indigo-650">Key takeaways</p>
               <ul className="space-y-2">
                 {keyTakeaways.map((point) => (
-                  <li key={point} className="flex items-start gap-2.5 text-sm leading-relaxed text-white/70">
-                    <CheckCircle2 className="mt-0.5 flex-shrink-0 text-[#10B981]" size={15} />
+                  <li key={point} className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-600">
+                    <CheckCircle2 className="mt-0.5 flex-shrink-0 text-emerald-600" size={15} />
                     {point}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               Free AI search audit for websites: what it actually tells you
             </h2>
             <p className="leading-relaxed">
@@ -456,12 +441,12 @@ export default function AiSearchAuditPage() {
               gap by measuring citation readiness, not just rank position.
             </p>
             <p className="leading-relaxed">
-              This matters because more buyers now search in conversational form: <strong className="text-white">best AI automation agency in India</strong>,
-              <strong className="text-white"> how to improve AI visibility for my website</strong>, or <strong className="text-white">free audit for ChatGPT rankings</strong>.
+              This matters because more buyers now search in conversational form: <strong className="text-slate-900">best AI automation agency in India</strong>,{" "}
+              <strong className="text-slate-900">how to improve AI visibility for my website</strong>, or <strong className="text-slate-900">free audit for ChatGPT rankings</strong>.
               If your site is not structured for those queries, AI engines will answer with someone else.
             </p>
 
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               What this AI visibility audit measures
             </h2>
             <p className="leading-relaxed">
@@ -469,8 +454,8 @@ export default function AiSearchAuditPage() {
               never reach a results page — users get their answer directly from
               ChatGPT Search, Perplexity, Claude, Google AI Overviews or
               Gemini. If those engines don&apos;t surface your brand, you lose the
-              click before it ever existed. This is the problem
-              <strong className="text-white"> AI Search Optimization (GEO / AEO)</strong>{" "}
+              click before it ever existed. This is the problem{" "}
+              <strong className="text-slate-900">AI Search Optimization (GEO / AEO)</strong>{" "}
               solves, and this audit is the first step.
             </p>
 
@@ -487,16 +472,15 @@ export default function AiSearchAuditPage() {
               {auditSignals.map((signal) => (
                 <div
                   key={signal.name}
-                  className="rounded-xl p-5"
-                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                  className="rounded-xl p-5 bg-slate-50/50 border border-slate-200"
                 >
-                  <p className="text-sm font-semibold text-white">{signal.name}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/60">{signal.text}</p>
+                  <p className="text-sm font-semibold text-slate-900">{signal.name}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{signal.text}</p>
                 </div>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               Who should run this free GEO audit
             </h2>
             <p className="leading-relaxed">
@@ -509,32 +493,31 @@ export default function AiSearchAuditPage() {
               If you have almost no visibility today, it tells you which foundations to fix before investing in a larger SEO or GEO program.
             </p>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               How to interpret your score
             </h2>
             <div className="space-y-3 not-prose">
               {scoreBands.map((item) => (
                 <div
                   key={item.band}
-                  className="rounded-xl p-5"
-                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                  className="rounded-xl p-5 bg-slate-50/50 border border-slate-200"
                 >
-                  <p className="text-sm font-semibold text-white">{item.band}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
+                  <p className="text-sm font-semibold text-slate-900">{item.band}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-650">{item.text}</p>
                 </div>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               AI search audit vs traditional SEO audit
             </h2>
-            <div className="not-prose overflow-hidden rounded-xl border border-white/10">
+            <div className="not-prose overflow-hidden rounded-xl border border-slate-200">
               <table className="w-full text-sm">
                 <thead>
-                  <tr style={{ background: "rgba(99,91,255,0.1)" }}>
-                    <th className="px-4 py-3 text-left font-semibold text-white">Area</th>
-                    <th className="px-4 py-3 text-left font-semibold text-white">Traditional SEO audit</th>
-                    <th className="px-4 py-3 text-left font-semibold text-white">AI search audit</th>
+                  <tr style={{ background: "rgba(99,91,255,0.05)" }}>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-900">Area</th>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-900">Traditional SEO audit</th>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-900">AI search audit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -545,10 +528,10 @@ export default function AiSearchAuditPage() {
                     ["Typical content format", "Optimized landing pages and blogs", "Direct-answer passages, FAQs, entity pages, machine-readable content"],
                     ["Winning metric", "Rank, CTR, organic traffic", "Citation likelihood, answer presence, brand recall in AI outputs"],
                   ].map((row) => (
-                    <tr key={row[0]} style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                      <td className="px-4 py-3 text-white/80">{row[0]}</td>
-                      <td className="px-4 py-3 text-white/60">{row[1]}</td>
-                      <td className="px-4 py-3 text-white/60">{row[2]}</td>
+                    <tr key={row[0]} style={{ borderTop: "1px solid #E2E8F0" }}>
+                      <td className="px-4 py-3 font-medium text-slate-800">{row[0]}</td>
+                      <td className="px-4 py-3 text-slate-600">{row[1]}</td>
+                      <td className="px-4 py-3 text-slate-600">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -557,13 +540,13 @@ export default function AiSearchAuditPage() {
 
             <div
               className="mt-12 rounded-2xl p-7"
-              style={{ background: "rgba(99,91,255,0.07)", border: "1px solid rgba(99,91,255,0.18)" }}
+              style={{ background: "rgba(99,91,255,0.05)", border: "1px solid rgba(99,91,255,0.15)" }}
             >
-              <p className="text-xs font-bold uppercase tracking-widest text-[#c4b5fd]">Free audit CTA</p>
-              <h3 className="mt-3 font-display text-2xl font-bold text-white">
+              <p className="text-xs font-bold uppercase tracking-widest text-indigo-600">Free audit CTA</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-slate-900">
                 Run the free audit before you spend on GEO consulting
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">
+              <p className="mt-3 text-sm leading-relaxed text-slate-650">
                 If your business site is not yet visible in AI answers, the fastest next step is to benchmark it now, fix the biggest structural gaps,
                 and then decide whether you need implementation help. The tool is free, instant, and requires no signup.
               </p>
@@ -574,8 +557,7 @@ export default function AiSearchAuditPage() {
                 </Link>
                 <Link
                   href="/blog/what-is-ai-automation"
-                  className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
-                  style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+                  className="btn-outline"
                 >
                   Read more about AI-driven growth
                   <ArrowRight size={14} />
@@ -583,39 +565,37 @@ export default function AiSearchAuditPage() {
               </div>
             </div>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               How to improve your AI visibility after the audit
             </h2>
             <div className="space-y-3 not-prose">
               {improvementSteps.map((item) => (
                 <div
                   key={item.step}
-                  className="rounded-xl p-5"
-                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                  className="rounded-xl p-5 bg-slate-50/50 border border-slate-200"
                 >
-                  <p className="text-sm font-semibold text-[#a78bfa]">{item.step}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
+                  <p className="text-sm font-semibold text-indigo-600">{item.step}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-650">{item.text}</p>
                 </div>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               Frequently asked questions about the free AI website audit
             </h2>
             <div className="space-y-3 not-prose">
               {visibleFaqs.map((faq) => (
                 <div
                   key={faq.q}
-                  className="rounded-xl p-5"
-                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}
+                  className="rounded-xl p-5 bg-slate-50/50 border border-slate-200"
                 >
-                  <h3 className="text-base font-semibold text-white">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/60">{faq.a}</p>
+                  <h3 className="text-base font-semibold text-slate-900">{faq.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-650">{faq.a}</p>
                 </div>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="mt-10 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               Want help implementing the recommendations?
             </h2>
             <p className="leading-relaxed">
@@ -631,16 +611,14 @@ export default function AiSearchAuditPage() {
               </Link>
               <Link
                 href="/blog/ai-automation-for-small-businesses"
-                className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
-                style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+                className="btn-outline"
               >
                 Read the small-business AI playbook
                 <ArrowRight size={14} />
               </Link>
               <Link
                 href="/services/ai-automation"
-                className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
-                style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+                className="btn-outline"
               >
                 Explore AI Automation Services
                 <ArrowRight size={14} />
@@ -663,18 +641,12 @@ function Feature({
   body: string;
 }) {
   return (
-    <div
-      className="rounded-xl p-5"
-      style={{
-        background: "rgba(255,255,255,0.025)",
-        border: "1px solid rgba(255,255,255,0.06)",
-      }}
-    >
+    <div className="rounded-xl p-5 bg-slate-50 border border-slate-200/60 shadow-sm">
       <div className="flex items-center gap-2">
         {icon}
-        <p className="text-sm font-semibold text-white">{title}</p>
+        <p className="text-sm font-semibold text-slate-900">{title}</p>
       </div>
-      <p className="mt-2 text-xs leading-relaxed text-white/55">{body}</p>
+      <p className="mt-2 text-xs leading-relaxed text-slate-600">{body}</p>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { testimonials } from "@/lib/constants";
 
 export default function Testimonials() {
   return (
-    <section className="section-pad cv-auto" style={{ backgroundColor: "#05070F" }}>
+    <section className="section-pad cv-auto" style={{ backgroundColor: "var(--bg)" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-14 max-w-xl text-center">
@@ -20,7 +20,7 @@ export default function Testimonials() {
           </Reveal>
           <Reveal delay={0.14}>
             <p className="mt-4 text-lg text-brand-gray">
-              We don't anonymise our work. Here's what clients say after we
+              We don&apos;t anonymise our work. Here&apos;s what clients say after we
               deliver.
             </p>
           </Reveal>
@@ -31,29 +31,23 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <Reveal delay={i * 0.1} key={t.id}>
               <div
-                className="flex h-full flex-col gap-5 rounded-[20px] p-7 transition-all duration-400 hover:-translate-y-1 hover:shadow-premium-hover relative overflow-hidden"
-                style={{
-                  background: "rgba(255,255,255,0.025)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  backdropFilter: "blur(12px)",
-                }}
+                className="card-base flex h-full flex-col gap-5 p-7 relative overflow-hidden bg-white"
               >
                 {/* Highlighted Outcome Headline */}
                 {t.outcomeHeadline && (
-                  <div className="text-base font-extrabold text-white tracking-tight leading-snug">
-                    "{t.outcomeHeadline}"
+                  <div className="text-base font-extrabold text-slate-900 tracking-tight leading-snug">
+                    &ldquo;{t.outcomeHeadline}&rdquo;
                   </div>
                 )}
 
                 {/* Quote */}
-                <p className="flex-1 text-xs leading-relaxed text-white/60">
+                <p className="flex-1 text-xs leading-relaxed text-slate-600">
                   {t.quote}
                 </p>
 
                 {/* Author */}
                 <div
-                  className="flex items-center gap-3 pt-4"
-                  style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+                  className="flex items-center gap-3 pt-4 border-t border-slate-100"
                 >
                   <div
                     className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
@@ -65,10 +59,10 @@ export default function Testimonials() {
                     {t.avatar}
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-white">
+                    <p className="text-xs font-bold text-slate-900">
                       {t.name}
                     </p>
-                    <p className="text-[10px] text-white/45 mt-0.5">
+                    <p className="text-[10px] text-slate-500 mt-0.5">
                       {t.role}
                       {t.businessType && ` · ${t.businessType}`}
                     </p>
@@ -81,9 +75,9 @@ export default function Testimonials() {
 
         {/* Social proof footnote */}
         <Reveal delay={0.35}>
-          <p className="mt-10 text-center text-sm text-white/32">
+          <p className="mt-10 text-center text-sm text-slate-400">
             100% client retention rate since founding ·{" "}
-            <span className="font-medium text-white/50">
+            <span className="font-medium text-slate-500">
               All clients are referenceable on request
             </span>
           </p>

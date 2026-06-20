@@ -6,7 +6,7 @@ import { breadcrumbSchema, graph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: { absolute: "AI Automation Blog India — Guides & Insights | RisonAI Tech" },
   description:
-    "Practical 2026 guides: How much does WhatsApp chatbot cost in India? SaaS development cost for Indian startups? AI automation ROI for SMEs? Written by operators who built it.",
+    "Practical 2026 guides on AI automation, AI resume screening for HR teams, SaaS development costs, and WhatsApp systems for Indian businesses.",
   keywords: [
     "AI automation blog India",
     "SaaS development guide India",
@@ -71,13 +71,13 @@ export const posts = [
     category: "AI Automation",
   },
   {
-    slug: "ai-lead-generation-systems",
-    title: "AI Lead Generation Automation: Build a System That Never Sleeps",
+    slug: "ai-resume-screening-india",
+    title: "AI Resume Screening for HR Teams in India: Score CVs and Shortlist Candidates 90% Faster",
     excerpt:
-      "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the full 5-layer architecture — channels, AI scoring, CRM sync, and cost breakdown.",
+      "Manual CV review slows hiring and burns recruiter time. Here is how AI resume screening scores candidates, shortlists the best fits, and saves up to 90% of first-pass screening time.",
     date: "2026-06-09",
-    readTime: "10 min read",
-    category: "Lead Generation",
+    readTime: "9 min read",
+    category: "HR Automation",
   },
   {
     slug: "ai-automation-real-estate-india",
@@ -205,15 +205,15 @@ export default function BlogPage() {
       />
 
       {/* Hero */}
-      <section className="pb-12 pt-36 bg-grid" style={{ backgroundColor: "#05070F" }}>
+      <section className="pb-12 pt-36 bg-grid border-b border-slate-200/50" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-2xl text-center">
             <span className="label-pill mb-5 inline-flex">Blog</span>
-            <h1 className="font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+            <h1 className="font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
               Insights on{" "}
               <span className="grad-text">AI, SaaS & Automation</span>
             </h1>
-            <p className="mt-5 text-xl text-white/52">
+            <p className="mt-5 text-xl text-slate-500">
               Practical guides written by engineers who ship production AI systems for Indian
               businesses — no hype, just what works.
             </p>
@@ -222,7 +222,7 @@ export default function BlogPage() {
       </section>
 
       {/* Posts */}
-      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+      <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
           <div className="mx-auto max-w-3xl grid gap-6">
             {posts.map((post) => (
@@ -233,16 +233,16 @@ export default function BlogPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span
-                    className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
                     style={{
-                      background: "rgba(99,91,255,0.1)",
-                      border: "1px solid rgba(99,91,255,0.2)",
-                      color: "#a78bfa",
+                      background: "rgba(79,70,229,0.06)",
+                      border: "1px solid rgba(79,70,229,0.15)",
+                      color: "#4F46E5",
                     }}
                   >
                     {post.category}
                   </span>
-                  <span className="flex items-center gap-1.5 text-xs text-white/40">
+                  <span className="flex items-center gap-1.5 text-xs text-slate-400">
                     <Calendar size={11} />
                     {new Date(post.date).toLocaleDateString("en-IN", {
                       year: "numeric",
@@ -250,16 +250,16 @@ export default function BlogPage() {
                       day: "numeric",
                     })}
                   </span>
-                  <span className="flex items-center gap-1.5 text-xs text-white/40">
+                  <span className="flex items-center gap-1.5 text-xs text-slate-400">
                     <Clock size={11} />
                     {post.readTime}
                   </span>
                 </div>
-                <h2 className="font-display text-xl font-bold text-white group-hover:text-[#a78bfa] transition-colors">
+                <h2 className="font-display text-xl font-bold text-slate-900 group-hover:text-indigo-650 group-hover:text-indigo-600 transition-colors">
                   {post.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-white/52">{post.excerpt}</p>
-                <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-[#635BFF]">
+                <p className="mt-3 text-sm leading-relaxed text-slate-500">{post.excerpt}</p>
+                <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-[#4F46E5]">
                   Read article <ArrowRight size={14} />
                 </div>
               </Link>
@@ -269,9 +269,9 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: "#05070F" }}>
+      <section className="py-16 border-t border-slate-200/50" style={{ backgroundColor: "var(--bg)" }}>
         <div className="container-site text-center">
-          <p className="text-white/50 text-sm mb-3">Want to talk about your project?</p>
+          <p className="text-slate-500 text-sm mb-3">Want to talk about your project?</p>
           <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
             Book a free strategy call <ArrowRight size={16} />
           </Link>

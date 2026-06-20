@@ -28,7 +28,7 @@ export default function StickyWhatsApp() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 select-none">
+    <div className="fixed bottom-24 right-5 z-40 flex flex-col items-end gap-3 select-none sm:bottom-28 sm:right-6">
       {/* Tooltip / Prompt Card */}
       {showTooltip && (
         <div 

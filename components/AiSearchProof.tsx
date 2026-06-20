@@ -12,8 +12,8 @@ const proofData = [
     citations: ["risonaitech.com", "risonaitech.com/services"],
     icon: MessageSquare,
     color: "#10a37f",
-    bgAccent: "rgba(16,163,127,0.05)",
-    borderAccent: "rgba(16,163,127,0.2)",
+    bgAccent: "rgba(16,163,127,0.03)",
+    borderAccent: "rgba(16,163,127,0.15)",
   },
   {
     engine: "Perplexity",
@@ -22,8 +22,8 @@ const proofData = [
     citations: ["risonaitech.com/services/crm-development", "risonaitech.com/panipat"],
     icon: Search,
     color: "#22c55e",
-    bgAccent: "rgba(34,197,94,0.05)",
-    borderAccent: "rgba(34,197,94,0.2)",
+    bgAccent: "rgba(34,197,94,0.03)",
+    borderAccent: "rgba(34,197,94,0.15)",
   },
   {
     engine: "Gemini",
@@ -32,8 +32,8 @@ const proofData = [
     citations: ["risonaitech.com/products", "risonaitech.com/blog"],
     icon: Compass,
     color: "#60a5fa",
-    bgAccent: "rgba(96,165,250,0.05)",
-    borderAccent: "rgba(96,165,250,0.2)",
+    bgAccent: "rgba(96,165,250,0.03)",
+    borderAccent: "rgba(96,165,250,0.15)",
   },
 ];
 
@@ -43,11 +43,11 @@ export default function AiSearchProof() {
   const EngineIcon = activeProof.icon;
 
   return (
-    <section className="py-20 relative overflow-hidden" id="ai-proof" style={{ backgroundColor: "#090C18" }}>
+    <section className="py-20 relative overflow-hidden" id="ai-proof" style={{ backgroundColor: "var(--bg)" }}>
       {/* Background grids and blurs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200/50 to-transparent"
       />
 
       <div className="container-site relative z-10">
@@ -56,12 +56,12 @@ export default function AiSearchProof() {
             <span className="label-pill mb-4 inline-flex">AI Search Validation</span>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
               See Where We Already Appear In AI Search
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <p className="mt-3 text-white/50 max-w-2xl mx-auto">
+            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">
               We practice what we preach. RisonAI Tech ranks at the top of commercial search intent inside the leading AI platforms.
             </p>
           </Reveal>
@@ -79,8 +79,8 @@ export default function AiSearchProof() {
                   onClick={() => setActiveTab(idx)}
                   className={`flex items-center gap-3 rounded-xl p-4 text-left transition-all duration-300 w-full shrink-0 border md:shrink ${
                     isSelected
-                      ? "bg-white/5 text-white"
-                      : "bg-transparent text-white/40 border-transparent hover:bg-white/[0.02] hover:text-white/70"
+                      ? "bg-slate-100/80 text-slate-900"
+                      : "bg-transparent text-slate-500 border-transparent hover:bg-slate-50 hover:text-slate-900"
                   }`}
                   style={{
                     borderColor: isSelected ? proof.borderAccent : "transparent",
@@ -90,15 +90,15 @@ export default function AiSearchProof() {
                   <div
                     className="flex h-9 w-9 items-center justify-center rounded-lg"
                     style={{
-                      backgroundColor: isSelected ? `${proof.color}15` : "rgba(255,255,255,0.03)",
-                      border: `1px solid ${isSelected ? `${proof.color}35` : "rgba(255,255,255,0.05)"}`,
+                      backgroundColor: isSelected ? `${proof.color}15` : "var(--surface-1)",
+                      border: `1px solid ${isSelected ? `${proof.color}35` : "var(--border)"}`,
                     }}
                   >
                     <Icon style={{ color: isSelected ? proof.color : "currentColor" }} size={16} />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider">{proof.engine}</p>
-                    <p className="text-[10px] text-white/30 hidden md:block truncate max-w-[150px] mt-0.5">
+                    <p className="text-[10px] text-slate-400 hidden md:block truncate max-w-[150px] mt-0.5">
                       {proof.query}
                     </p>
                   </div>
@@ -111,28 +111,28 @@ export default function AiSearchProof() {
           <div 
             className="md:col-span-8 rounded-2xl border transition-all duration-500 overflow-hidden"
             style={{
-              background: "rgba(255,255,255,0.015)",
-              borderColor: activeProof.borderAccent,
-              boxShadow: `0 15px 50px ${activeProof.bgAccent}, inset 0 1px 0 rgba(255,255,255,0.03)`,
+              background: "#FFFFFF",
+              borderColor: "var(--border)",
+              boxShadow: `0 15px 50px ${activeProof.bgAccent}, inset 0 1px 0 rgba(255,255,255,0.8)`,
             }}
           >
             {/* Header bar */}
-            <div className="px-5 py-3 border-b border-white/5 flex items-center justify-between text-xs text-white/40 bg-white/[0.01]">
-              <span className="font-semibold text-white/60 flex items-center gap-1.5">
+            <div className="px-5 py-3 border-b border-slate-100 flex items-center justify-between text-xs text-slate-500 bg-slate-50/50">
+              <span className="font-semibold text-slate-700 flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full" style={{ backgroundColor: activeProof.color }} />
                 {activeProof.engine} Interface
               </span>
               <span className="font-mono">Status: Verified</span>
             </div>
-
+ 
             {/* Chat Content */}
             <div className="p-5 sm:p-7 space-y-6">
               {/* User Prompt */}
               <div className="flex gap-4 items-start">
-                <div className="h-8 w-8 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 flex items-center justify-center shrink-0">
+                <div className="h-8 w-8 rounded-full bg-indigo-50 border border-indigo-100 text-[10px] font-bold text-indigo-600 flex items-center justify-center shrink-0">
                   USER
                 </div>
-                <div className="rounded-2xl p-4 bg-white/5 border border-white/5 text-sm text-white/90 leading-relaxed max-w-xl">
+                <div className="rounded-2xl p-4 bg-slate-50 border border-slate-100 text-sm text-slate-800 leading-relaxed max-w-xl">
                   {activeProof.query}
                 </div>
               </div>
@@ -149,18 +149,18 @@ export default function AiSearchProof() {
                   <EngineIcon size={14} style={{ color: activeProof.color }} />
                 </div>
                 <div className="space-y-4 max-w-xl">
-                  <div className="text-sm text-white/80 leading-relaxed">
+                  <div className="text-sm text-slate-700 leading-relaxed">
                     {activeProof.response}
                   </div>
                   
                   {/* Citations */}
                   <div className="flex flex-wrap gap-2 items-center text-xs">
-                    <span className="text-white/30 text-[10px] uppercase tracking-wider font-bold">Sources:</span>
+                    <span className="text-slate-400 text-[10px] uppercase tracking-wider font-bold">Sources:</span>
                     {activeProof.citations.map((cite, i) => (
                       <span 
                         key={cite} 
-                        className="px-2 py-1 rounded-md text-[10px] font-mono text-white/50 border border-white/5 hover:text-[#a78bfa] hover:border-[#635BFF]/30 transition-all duration-200 cursor-default"
-                        style={{ background: "rgba(255,255,255,0.02)" }}
+                        className="px-2 py-1 rounded-md text-[10px] font-mono text-slate-650 border border-slate-200 hover:text-brand-purple hover:border-brand-purple/30 transition-all duration-200 cursor-default"
+                        style={{ background: "var(--bg-secondary)" }}
                       >
                         [{i + 1}] {cite}
                       </span>
@@ -169,11 +169,11 @@ export default function AiSearchProof() {
                 </div>
               </div>
             </div>
-
+ 
             {/* Footer validation badge */}
-            <div className="p-4 bg-[#635BFF]/5 border-t border-white/5 flex items-center justify-center gap-2 text-xs">
-              <ShieldCheck size={14} className="text-[#a78bfa]" />
-              <span className="text-white/60">Verified AI Engine Citation Proof · Scanned 2026</span>
+            <div className="p-4 bg-[#635BFF]/5 border-t border-slate-100 flex items-center justify-center gap-2 text-xs">
+              <ShieldCheck size={14} className="text-brand-purple" />
+              <span className="text-slate-600">Verified AI Engine Citation Proof · Scanned 2026</span>
             </div>
           </div>
         </div>

@@ -18,8 +18,8 @@ const packages = [
     ctaText: "Discuss AI Starter",
     whatsappRef: "AI Starter Package",
     recommended: false,
-    color: "rgba(255,255,255,0.06)",
-    borderColor: "rgba(255,255,255,0.08)",
+    color: "#FFFFFF",
+    borderColor: "#E2E8F0",
   },
   {
     name: "Growth Automation",
@@ -36,8 +36,8 @@ const packages = [
     ctaText: "Discuss Growth Package",
     whatsappRef: "Growth Automation Package",
     recommended: true,
-    color: "linear-gradient(135deg, rgba(99,91,255,0.08) 0%, rgba(14,165,233,0.05) 100%)",
-    borderColor: "rgba(99,91,255,0.3)",
+    color: "linear-gradient(135deg, rgba(79,70,229,0.03) 0%, rgba(37,99,235,0.02) 100%)",
+    borderColor: "rgba(79,70,229,0.18)",
   },
   {
     name: "Enterprise AI Systems",
@@ -54,8 +54,8 @@ const packages = [
     ctaText: "Discuss Enterprise Systems",
     whatsappRef: "Enterprise AI Systems",
     recommended: false,
-    color: "rgba(255,255,255,0.06)",
-    borderColor: "rgba(255,255,255,0.08)",
+    color: "#FFFFFF",
+    borderColor: "#E2E8F0",
   },
 ];
 
@@ -68,17 +68,17 @@ export default function Pricing() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden" id="pricing" style={{ backgroundColor: "#05070F" }}>
+    <section className="py-20 relative overflow-hidden" id="pricing" style={{ backgroundColor: "var(--bg)" }}>
       {/* Background blur glows */}
       <div
         aria-hidden
         className="pointer-events-none absolute -right-32 top-10 h-[400px] w-[400px] rounded-full blur-[100px] opacity-15"
-        style={{ background: "rgba(14,165,233,0.30)" }}
+        style={{ background: "rgba(37,99,235,0.08)" }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute -left-32 bottom-10 h-[400px] w-[400px] rounded-full blur-[100px] opacity-15"
-        style={{ background: "rgba(99,91,255,0.30)" }}
+        style={{ background: "rgba(79,70,229,0.08)" }}
       />
 
       <div className="container-site relative z-10">
@@ -87,12 +87,12 @@ export default function Pricing() {
             <span className="label-pill mb-4 inline-flex">Fixed Pricing</span>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
               Transparent, Outcome-Based Investment
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <p className="mt-3 text-white/60 max-w-2xl mx-auto">
+            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">
               No hourly bills. No monthly lock-ins. You receive full code ownership and deployment setup with clear fixed scopes.
             </p>
           </Reveal>
@@ -103,7 +103,7 @@ export default function Pricing() {
             <Reveal delay={i * 0.1} key={pkg.name} className="flex">
               <div
                 className={`rounded-2xl p-6 sm:p-8 flex flex-col justify-between w-full relative transition-all duration-300 hover:scale-[1.01] hover:-translate-y-0.5 ${
-                  pkg.recommended ? "shadow-[0_20px_50px_rgba(99,91,255,0.12)]" : ""
+                  pkg.recommended ? "shadow-[0_20px_50px_rgba(79,70,229,0.05)] border-indigo-200" : ""
                 }`}
                 style={{
                   background: pkg.color,
@@ -111,7 +111,7 @@ export default function Pricing() {
                 }}
               >
                 {pkg.recommended && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white flex items-center gap-1.5 shadow-md">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white flex items-center gap-1.5 shadow-md border-none">
                     <Sparkles size={11} />
                     Most Popular
                   </div>
@@ -119,21 +119,21 @@ export default function Pricing() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-white">{pkg.name}</h3>
-                    <p className="mt-2 text-xs text-white/60 min-h-[40px]">{pkg.description}</p>
+                    <h3 className="text-xl font-bold text-slate-900">{pkg.name}</h3>
+                    <p className="mt-2 text-xs text-slate-500 min-h-[40px]">{pkg.description}</p>
                   </div>
 
-                  <div className="py-2 border-y border-white/5">
-                    <p className="text-sm font-semibold text-white/60">Investment range</p>
-                    <p className="text-2xl sm:text-3xl font-extrabold text-[#a78bfa] mt-1 tracking-tight">
+                  <div className="py-2 border-y border-slate-100">
+                    <p className="text-sm font-semibold text-slate-500">Investment range</p>
+                    <p className="text-2xl sm:text-3xl font-extrabold text-[#4F46E5] mt-1 tracking-tight">
                       {pkg.price}
                     </p>
                   </div>
 
                   <ul className="space-y-3.5">
                     {pkg.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2.5 text-xs text-white/70">
-                        <Check size={14} className="text-[#a78bfa] shrink-0 mt-0.5" />
+                      <li key={feat} className="flex items-start gap-2.5 text-xs text-slate-600">
+                        <Check size={14} className="text-[#4F46E5] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -148,7 +148,7 @@ export default function Pricing() {
                     className={`btn-primary w-full justify-center text-xs font-semibold py-3 ${
                       pkg.recommended
                         ? "bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-600 hover:to-fuchsia-600 border-none text-white"
-                        : "btn-outline bg-white/5 border-white/10 hover:bg-white/10 text-white"
+                        : "btn-outline border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 shadow-sm"
                     }`}
                   >
                     <MessageCircle size={14} className="fill-[#25D366] text-[#25D366] border-none" />
@@ -171,7 +171,7 @@ export default function Pricing() {
               >
                 Get Fixed Quote in 48 Hours
               </a>
-              <p className="text-xs text-white/60">
+              <p className="text-xs text-slate-500">
                 100% money-back guarantee on delivery timelines · Direct reference calls available
               </p>
             </div>

@@ -25,12 +25,12 @@ export default function RoiCalculator() {
   );
 
   return (
-    <section className="py-20 relative overflow-hidden" id="roi-calculator" style={{ backgroundColor: "#090C18" }}>
+    <section className="py-20 relative overflow-hidden" id="roi-calculator" style={{ backgroundColor: "var(--bg-secondary)" }}>
       {/* Background radial glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px] opacity-10"
-        style={{ background: "radial-gradient(circle, #635BFF 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #4F46E5 0%, transparent 70%)" }}
       />
 
       <div className="container-site relative z-10">
@@ -40,12 +40,12 @@ export default function RoiCalculator() {
               <span className="label-pill mb-4 inline-flex">ROI Calculator</span>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
                 How Much Is Manual Work Costing Your Business?
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="mt-3 text-white/60 max-w-2xl mx-auto">
+              <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
                 Delayed lead responses, manual CRM entry, and missed follow-ups cost Indian businesses lakhs in lost sales. Calculate your leak in 10 seconds.
               </p>
             </Reveal>
@@ -58,16 +58,16 @@ export default function RoiCalculator() {
                 {/* Leads Slider */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <label htmlFor="leads-missed" className="text-sm font-semibold text-white/80 flex items-center gap-2">
+                    <label htmlFor="leads-missed" className="text-sm font-semibold text-slate-700 flex items-center gap-2">
                       Leads missed or delayed per day
                       <span className="group relative cursor-help">
-                        <Info size={13} className="text-white/40 hover:text-white/70" />
-                        <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 rounded bg-slate-900 border border-white/10 p-2 text-[10px] font-normal leading-normal text-white/90 opacity-0 transition-opacity group-hover:opacity-100 shadow-xl z-50">
+                        <Info size={13} className="text-slate-400 hover:text-slate-600" />
+                        <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 rounded bg-white border border-slate-200 p-2 text-[10px] font-normal leading-normal text-slate-700 opacity-0 transition-opacity group-hover:opacity-100 shadow-xl z-50">
                           Leads that go cold because your team responds late, or aren&apos;t captured from WhatsApp / portals at night.
                         </span>
                       </span>
                     </label>
-                    <span className="text-lg font-bold text-[#a78bfa]">{leadsMissed} leads</span>
+                    <span className="text-lg font-bold text-[#4F46E5]">{leadsMissed} leads</span>
                   </div>
                   <input
                     id="leads-missed"
@@ -76,9 +76,9 @@ export default function RoiCalculator() {
                     max="50"
                     value={leadsMissed}
                     onChange={(e) => setLeadsMissed(parseInt(e.target.value))}
-                    className="w-full h-1.5 rounded-lg bg-white/10 appearance-none cursor-pointer accent-[#a78bfa]"
+                    className="w-full h-1.5 rounded-lg bg-slate-200 appearance-none cursor-pointer accent-[#4F46E5]"
                   />
-                  <div className="flex justify-between text-[10px] text-white/30 font-mono">
+                  <div className="flex justify-between text-[10px] text-slate-400 font-mono">
                     <span>1 lead</span>
                     <span>25 leads</span>
                     <span>50 leads</span>
@@ -88,10 +88,10 @@ export default function RoiCalculator() {
                 {/* Deal Value Slider */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <label htmlFor="deal-value" className="text-sm font-semibold text-white/80">
+                    <label htmlFor="deal-value" className="text-sm font-semibold text-slate-700">
                       Average deal or booking value
                     </label>
-                    <span className="text-lg font-bold text-[#a78bfa]">{formatCurrency(dealValue)}</span>
+                    <span className="text-lg font-bold text-[#4F46E5]">{formatCurrency(dealValue)}</span>
                   </div>
                   <input
                     id="deal-value"
@@ -101,18 +101,18 @@ export default function RoiCalculator() {
                     step="1000"
                     value={dealValue}
                     onChange={(e) => setDealValue(parseInt(e.target.value))}
-                    className="w-full h-1.5 rounded-lg bg-white/10 appearance-none cursor-pointer accent-[#a78bfa]"
+                    className="w-full h-1.5 rounded-lg bg-slate-200 appearance-none cursor-pointer accent-[#4F46E5]"
                   />
-                  <div className="flex justify-between text-[10px] text-white/30 font-mono">
-                    <span>₹1,000</span>
+                  <div className="flex justify-between text-[10px] text-slate-400 font-mono">
+                    <span>₹1,00,000</span>
                     <span>₹75,000</span>
                     <span>₹1,50,000</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/5 text-xs text-white/60 flex items-start gap-2">
-                <Sparkles size={14} className="text-[#a78bfa] shrink-0 mt-0.5" />
+              <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500 flex items-start gap-2">
+                <Sparkles size={14} className="text-[#4F46E5] shrink-0 mt-0.5" />
                 <span>Calculations assume a highly conservative 15% conversion rate on missed leads. In many service/healthcare businesses, qualified leads convert at 20-35%.</span>
               </div>
             </div>
@@ -121,13 +121,13 @@ export default function RoiCalculator() {
             <div 
               className="lg:col-span-5 rounded-2xl p-6 sm:p-8 border flex flex-col justify-between relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, rgba(99,91,255,0.06) 0%, rgba(14,165,233,0.04) 100%)",
-                borderColor: "rgba(99,91,255,0.22)",
-                boxShadow: "0 0 60px rgba(99,91,255,0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
+                background: "linear-gradient(135deg, rgba(79,70,229,0.03) 0%, rgba(37,99,235,0.02) 100%)",
+                borderColor: "rgba(79,70,229,0.15)",
+                boxShadow: "0 4px 20px rgba(15,23,42,0.02), inset 0 1px 0 rgba(255,255,255,0.8)",
               }}
             >
               <div className="space-y-4 relative z-10">
-                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a78bfa] bg-[#635BFF]/10 px-2.5 py-1 rounded-full border border-[#635BFF]/20 inline-block">
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#4F46E5] bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100 inline-block">
                   Estimated monthly loss
                 </span>
                 
@@ -135,21 +135,21 @@ export default function RoiCalculator() {
                   <p className="font-display text-4xl sm:text-5xl font-extrabold text-[#ef4444] tracking-tight">
                     {formatCurrency(monthlyRevenueLoss)}
                   </p>
-                  <p className="text-xs text-white/50 mt-1">Leakage due to slow manual workflows</p>
+                  <p className="text-xs text-slate-500 mt-1">Leakage due to slow manual workflows</p>
                 </div>
 
-                <div className="space-y-2 pt-4 border-t border-white/10 text-xs text-white/70">
+                <div className="space-y-2 pt-4 border-t border-slate-100 text-xs text-slate-600">
                   <div className="flex justify-between">
                     <span>Missed pipeline/month:</span>
                     <span className="font-mono">{formatCurrency(leadsMissed * dealValue * 30)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Est. response speed lag:</span>
-                    <span className="text-orange-400 font-medium">45+ minutes</span>
+                    <span className="text-orange-600 font-medium">45+ minutes</span>
                   </div>
                   <div className="flex justify-between">
                     <span>AI response speed:</span>
-                    <span className="text-emerald-400 font-medium">&lt; 10 seconds</span>
+                    <span className="text-emerald-600 font-medium">&lt; 10 seconds</span>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function RoiCalculator() {
                   <MessageCircle size={16} />
                   Calculate My Automation Savings
                 </a>
-                <p className="text-[10px] text-center text-white/60">
+                <p className="text-[10px] text-center text-slate-500">
                   Redirects to WhatsApp with your calculations
                 </p>
               </div>

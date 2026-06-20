@@ -7,7 +7,7 @@ import { products } from "@/lib/constants";
 
 export default function Products() {
   return (
-    <section className="section-pad cv-auto" style={{ backgroundColor: "#090C18" }}>
+    <section className="section-pad cv-auto" style={{ backgroundColor: "var(--bg)" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mb-16 max-w-xl">
@@ -46,7 +46,7 @@ export default function Products() {
                         >
                           <Icon size={18} />
                         </div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-white/38">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                           {product.subtitle}
                         </p>
                       </div>
@@ -55,7 +55,7 @@ export default function Products() {
                       >
                         {product.title}
                       </h3>
-                      <p className="mt-3 text-base leading-relaxed text-white/55">
+                      <p className="mt-3 text-base leading-relaxed text-slate-600">
                         {product.description}
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
@@ -63,7 +63,7 @@ export default function Products() {
                           <span
                             className="rounded-full px-3 py-1 text-xs font-medium"
                             key={tag}
-                            style={{ background: `${product.color}20`, color: product.textLight || product.color }}
+                            style={{ background: `${product.color}15`, color: product.color }}
                           >
                             {tag}
                           </span>
@@ -75,7 +75,7 @@ export default function Products() {
                         // Accessible name includes the product title so the link
                         // is descriptive for screen readers + Lighthouse SEO.
                         aria-label={`Learn more about ${product.title}`}
-                        style={{ color: product.textLight || product.color }}
+                        style={{ color: product.color }}
                       >
                         <span aria-hidden="true">Learn more</span>
                         <span className="sr-only">about {product.title}</span>

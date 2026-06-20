@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CaseStudies() {
   return (
-    <section className="section-pad bg-grid cv-auto" id="case-studies" style={{ backgroundColor: "#05070F" }}>
+    <section className="section-pad bg-grid cv-auto" id="case-studies" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-xl text-center">
@@ -37,11 +37,11 @@ export default function CaseStudies() {
                   />
 
                   {/* Highlight outcome metric at top */}
-                  <div className="px-6 py-4 border-b border-white/5 bg-white/[0.01] flex items-center justify-between">
-                    <span className="text-lg font-extrabold text-white tracking-tight">
+                  <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                    <span className="text-lg font-extrabold text-slate-900 tracking-tight">
                       {cs.metrics[0]}
                     </span>
-                    <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                    <span className="text-[9px] text-emerald-600 font-bold uppercase tracking-wider bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/50">
                       Verified
                     </span>
                   </div>
@@ -56,14 +56,14 @@ export default function CaseStudies() {
                             border: "1px solid rgba(99,91,255,0.15)",
                           }}
                         >
-                          <Icon className="text-[#a78bfa]" size={15} />
+                          <Icon className="text-brand-purple" size={15} />
                         </div>
-                        <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#a78bfa]">
+                        <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-wider text-brand-purple">
                           {cs.label}
                         </span>
                       </div>
 
-                      <h3 className="font-display text-lg font-bold leading-snug text-white">
+                      <h3 className="font-display text-lg font-bold leading-snug text-slate-900">
                         {cs.title}
                       </h3>
 
@@ -74,10 +74,10 @@ export default function CaseStudies() {
                           { label: "Outcome", text: cs.outcome },
                         ].map(({ label, text }) => (
                           <div key={label} className="text-xs">
-                            <p className="mb-0.5 font-bold uppercase tracking-widest text-white/60 text-[9px]">
+                            <p className="mb-0.5 font-bold uppercase tracking-widest text-slate-500 text-[9px]">
                               {label}
                             </p>
-                            <p className="leading-relaxed text-white/60">
+                            <p className="leading-relaxed text-slate-600">
                               {text}
                             </p>
                           </div>
@@ -85,30 +85,30 @@ export default function CaseStudies() {
                       </div>
                     </div>
 
-                    <div className="pt-4 mt-4 border-t border-white/5 space-y-3">
+                    <div className="pt-4 mt-4 border-t border-slate-100 space-y-3">
                       <div className="flex flex-wrap gap-1.5">
                         {cs.metrics.slice(1).map((metric: string) => (
                           <span
-                            className="rounded-full px-2 py-0.5 text-[10px] font-medium text-white/55"
+                            className="rounded-full px-2 py-0.5 text-[10px] font-medium text-slate-600"
                             key={metric}
                             style={{
-                              background: "rgba(255,255,255,0.02)",
-                              border: "1px solid rgba(255,255,255,0.06)",
+                              background: "var(--bg-secondary)",
+                              border: "1px solid var(--border)",
                             }}
                           >
                             {metric}
                           </span>
                         ))}
                       </div>
-
-                      <div className="flex flex-wrap gap-3 text-[11px] font-semibold text-[#a78bfa]">
+ 
+                      <div className="flex flex-wrap gap-3 text-[11px] font-semibold text-brand-purple">
                         {cs.serviceHref && (
-                          <Link className="underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href={cs.serviceHref}>
+                          <Link className="underline underline-offset-2 hover:text-brand-purple/80 transition-colors" href={cs.serviceHref}>
                             Related service
                           </Link>
                         )}
                         {cs.locationHref && (
-                          <Link className="underline underline-offset-2 hover:text-[#c4b5fd] transition-colors" href={cs.locationHref}>
+                          <Link className="underline underline-offset-2 hover:text-brand-purple/80 transition-colors" href={cs.locationHref}>
                             City context
                           </Link>
                         )}
