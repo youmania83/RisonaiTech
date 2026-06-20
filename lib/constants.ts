@@ -1,8 +1,7 @@
 import {
   Bot,
-  Globe,
+  MessageCircle,
   Layers,
-  Smartphone,
   Workflow,
   Zap,
   Building2,
@@ -11,6 +10,7 @@ import {
   ShieldCheck,
   Users,
   Code2,
+  Cpu,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -20,7 +20,7 @@ export const siteConfig = {
   domain: "risonaitech.com",
   url: "https://risonaitech.com",
   description:
-    "Risonai Tech is a product engineering company building high-performance web apps, Android apps, websites, and AI automation systems.",
+    "Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
   email: "hello@risonaitech.com",
   phone: "+918368137724",
@@ -37,6 +37,7 @@ export const siteConfig = {
 export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
 
@@ -48,67 +49,147 @@ export type Service = {
   short: string;
   description: string;
   bullets: string[];
+  problem?: string;
+  solution?: string;
+  outcome?: string;
+  price?: string;
 };
 
 export const services: Service[] = [
   {
-    id: "web-app",
-    icon: Code2,
-    title: "Web Application Development",
-    short: "Full-stack web apps built to scale.",
-    description:
-      "We design and build scalable, high-performance web applications using modern stacks — from complex SaaS dashboards to consumer-facing platforms.",
-    bullets: [
-      "React / Next.js front-ends",
-      "Node.js, Python back-ends",
-      "PostgreSQL, MongoDB databases",
-      "REST & GraphQL APIs",
-      "CI/CD & cloud deployment",
-    ],
-  },
-  {
-    id: "android",
-    icon: Smartphone,
-    title: "Android App Development",
-    short: "Native Android apps users love.",
-    description:
-      "Production-grade Android applications with clean architecture, offline-first design, and seamless performance across devices.",
-    bullets: [
-      "Kotlin-first development",
-      "Clean MVVM architecture",
-      "Push notifications & deep links",
-      "Play Store publishing",
-      "API integration & sync",
-    ],
-  },
-  {
-    id: "website",
-    icon: Globe,
-    title: "Website Development",
-    short: "Websites that convert and perform.",
-    description:
-      "Fast, SEO-optimised marketing websites and landing pages that look premium and load in under 2 seconds.",
-    bullets: [
-      "Next.js / Astro static sites",
-      "Core Web Vitals optimised",
-      "CMS integrations",
-      "Conversion-focused design",
-      "Accessible & responsive",
-    ],
-  },
-  {
     id: "ai-automation",
     icon: Bot,
-    title: "AI Automation Systems",
-    short: "Intelligent workflows that work 24/7.",
-    description:
-      "End-to-end AI automation systems — intake flows, CRM syncs, auto-reporting, and agentic workflows that replace manual operations.",
+    title: "AI Lead Qualification",
+    short: "Stop letting hot leads go cold. Qualify prospects instantly 24/7.",
+    description: "Custom AI automation systems that capture leads, score intent, and trigger instant responses.",
+    problem: "Leads go cold before your team responds, resulting in missed revenue.",
+    solution: "AI agents respond instantly on WhatsApp & Web to qualify prospects 24/7.",
+    outcome: "72% faster lead qualification.",
+    price: "From ₹30,000",
     bullets: [
-      "LLM-powered agents",
-      "Workflow orchestration",
-      "WhatsApp / email automation",
-      "Data extraction & processing",
-      "Human-in-the-loop controls",
+      "Instant 2-minute lead response",
+      "Intent scoring & qualification questions",
+      "Automated CRM sync (HubSpot, Zoho)",
+      "Human routing for hot prospects",
+    ],
+  },
+  {
+    id: "whatsapp-automation",
+    icon: MessageCircle,
+    title: "WhatsApp AI Systems",
+    short: "Turn India's most popular chat app into your primary sales channel.",
+    description: "Integrate RAG chatbots and CRM workflows into the official WhatsApp Business API.",
+    problem: "Operations teams are overwhelmed by high WhatsApp message volumes.",
+    solution: "Official WhatsApp API bots that resolve FAQs and book meetings automatically.",
+    outcome: "52% reduction in staff coordination time.",
+    price: "From ₹25,000",
+    bullets: [
+      "Official API setup & green tick guidance",
+      "RAG chatbot trained on business data",
+      "Interactive templates & buttons",
+      "Live agent chat handoff rules",
+    ],
+  },
+  {
+    id: "crm-development",
+    icon: Users,
+    title: "CRM & Workflow Automation",
+    short: "Eliminate manual data entry and connect your tools seamlessly.",
+    description: "Centralize data, automate pipelines, and connect tools with custom n8n/Make integrations.",
+    problem: "Staff waste 10+ hours a week copy-pasting data between forms and CRM.",
+    solution: "Custom automated pipelines that sync and enrich leads instantly.",
+    outcome: "37 hours saved per month per manager.",
+    price: "From ₹40,000",
+    bullets: [
+      "Custom HubSpot, Zoho & Salesforce setups",
+      "Spreadsheet-to-CRM auto-migration",
+      "Automated quote & invoice generation",
+      "Real-time slack & email notifications",
+    ],
+  },
+  {
+    id: "ai-agent",
+    icon: Cpu,
+    title: "Autonomous AI Agents",
+    short: "Deploy AI workers that reason, plan, and execute complex workflows.",
+    description: "Multi-step reasoning systems, tool-using LLM pipelines, and autonomous agents.",
+    problem: "Complex operations require constant manual checks and decision-making.",
+    solution: "Multi-step agentic pipelines that run tools and execute work autonomously.",
+    outcome: "Up to 90% automation of repetitive reasoning tasks.",
+    price: "From ₹50,000",
+    bullets: [
+      "LangGraph / CrewAI multi-agent pipelines",
+      "Custom tool-calling & database write capabilities",
+      "E-commerce & order tracking automation",
+      "Human-in-the-loop validation checkpoints",
+    ],
+  },
+  {
+    id: "chatbot-development",
+    icon: MessageCircle,
+    title: "AI Chatbots & Support",
+    short: "Context-aware AI chatbots trained on your business data 24/7.",
+    description: "AI customer support agents and website chatbots grounded in your SOPs and docs via RAG.",
+    problem: "Inbound support queues are slow and expensive, costing conversion.",
+    solution: "Deploy AI chatbots and virtual assistants that answer from your data instantly.",
+    outcome: "60-80% deflection of repetitive support tickets.",
+    price: "From ₹20,000",
+    bullets: [
+      "Website chat widget & embeds",
+      "RAG-powered custom knowledge base",
+      "Multilingual (Hindi + English)",
+      "Graceful human agent handoff",
+    ],
+  },
+  {
+    id: "website-development",
+    icon: Code2,
+    title: "Custom Web Applications",
+    short: "High-performance operational dashboards and internal web tools.",
+    description: "Custom internal tools, administrative panels, and performance dashboards connected to your AI.",
+    problem: "Staff lose time navigating disjointed spreadsheets and manual tracking tools.",
+    solution: "Tailored operations dashboards that integrate all workflows and show metrics.",
+    outcome: "40% reduction in weekly review meeting times.",
+    price: "From ₹35,000",
+    bullets: [
+      "High-speed Next.js application core",
+      "Custom administrative dashboards",
+      "Third-party API integrations",
+      "LCP < 2.5s and SEO-ready by default",
+    ],
+  },
+  {
+    id: "resume-screening",
+    icon: Layers,
+    title: "AI Resume Screening",
+    short: "Automate first-pass hiring and find top talent in minutes.",
+    description: "AI screening systems that match candidates against criteria using Skills Graphs.",
+    problem: "HR teams spend days reading thousands of resumes manually.",
+    solution: "AI agents parse, score, and rank resumes based on custom skills matrices.",
+    outcome: "80% reduction in first-pass screening time.",
+    price: "From ₹20,000",
+    bullets: [
+      "Skills Graph matching against job descriptions",
+      "Contextual evaluation to prevent resume gaming",
+      "ATS, email, and Google Sheets integrations",
+      "Recruiter-ready candidate shortlists",
+    ],
+  },
+  {
+    id: "saas-development",
+    icon: Code2,
+    title: "SaaS Platform Engineering",
+    short: "Custom multi-tenant platforms built to scale your business.",
+    description: "Enterprise-grade SaaS products with billing, admin dashboards, and native AI.",
+    problem: "Generic software doesn't fit your business, leading to spreadsheet clutter.",
+    solution: "Tailored React/Next.js platforms with custom workflows and billing.",
+    outcome: "100% customized operations built to scale.",
+    price: "From ₹1,20,000",
+    bullets: [
+      "Multi-tenant auth & database design",
+      "Stripe / Razorpay subscriptions",
+      "Custom admin portals & analytics",
+      "Full code ownership & deployment",
     ],
   },
 ];
@@ -126,6 +207,7 @@ export const products = [
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
     tags: ["Healthcare", "SaaS", "AI"],
     color: "#0EA5E9",
+    textLight: "#7DD3FC",
   },
   {
     id: "expreality",
@@ -138,6 +220,7 @@ export const products = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     tags: ["Real Estate", "Analytics", "SaaS"],
     color: "#635BFF",
+    textLight: "#A5B4FC",
   },
 ];
 
@@ -153,7 +236,10 @@ export const caseStudies = [
     solution:
       "Built a structured intake layer with AI summarisation, priority scoring, and automatic CRM task creation.",
     outcome:
-      "Response quality improved, handoffs became visible, and the sales team gained a cleaner pipeline.",
+      "Lead response time dropped from 45 minutes to under 8 minutes, with 72% faster qualification and 19% higher meeting-booked rate.",
+    metrics: ["72% Faster Qualification", "37 Hours Saved Monthly", "19% Increase In Meetings"],
+    serviceHref: "/services/ai-automation",
+    locationHref: "/delhi",
   },
   {
     id: "booking",
@@ -165,7 +251,10 @@ export const caseStudies = [
     solution:
       "Mapped the booking journey into a SaaS workflow with slots, reminders, staff dashboards, and exception handling.",
     outcome:
-      "Teams spent less time coordinating and more time serving high-value customers.",
+      "No-show rates reduced by 31%, front-desk coordination time dropped by 52%, and weekly appointment throughput increased by 24%.",
+    metrics: ["31% lower no-show rate", "52% less coordination time", "24% more weekly appointments"],
+    serviceHref: "/services/ai-agent",
+    locationHref: "/gurgaon",
   },
   {
     id: "dashboard",
@@ -177,46 +266,97 @@ export const caseStudies = [
     solution:
       "Designed a signal dashboard with workflow data, AI-generated summaries, and next-action recommendations.",
     outcome:
-      "Executives reduced review meetings by 40% and resolved bottlenecks days earlier.",
+      "Weekly review meetings were cut by 40%, issue-resolution cycle time improved by 46%, and forecasting accuracy rose by 22%.",
+    metrics: ["40% fewer review meetings", "46% faster issue resolution", "22% better forecast accuracy"],
+    serviceHref: "/services/crm-development",
+    locationHref: "/panipat",
   },
 ];
 
 // ─── Trust Strip ─────────────────────────────────────────────────────────────
 export const trustItems = [
-  "Startups",
-  "D2C Brands",
-  "Healthcare Platforms",
-  "Real Estate Firms",
-  "SaaS Companies",
-  "Service Businesses",
-  "Growth-stage Teams",
+  "Enterprise Operations",
+  "Healthcare Networks",
+  "SaaS Infrastructure",
+  "Real Estate Ops",
+  "Scaling Startups",
+  "Logistics & Service",
+  "B2B Tech Leaders",
 ];
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const stats = [
-  { value: "40+", label: "Products Shipped" },
-  { value: "3×", label: "Avg. Efficiency Gain" },
-  { value: "100%", label: "Client Retention" },
+  { value: "40+", label: "Business Systems Delivered" },
+  { value: "72%", label: "Faster Lead Qualification" },
+  { value: "37", label: "Hours Saved Per Month" },
+];
+
+// ─── Testimonials ─────────────────────────────────────────────────────────────
+export type Testimonial = {
+  id: string;
+  name: string;
+  role: string;
+  avatar: string;
+  color: string;
+  quote: string;
+  businessType?: string;
+  outcomeHeadline?: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "t1",
+    name: "Raghav Mehta",
+    role: "Founder, HealthConnect Clinics",
+    avatar: "RM",
+    color: "#0EA5E9",
+    businessType: "Healthcare Chain",
+    outcomeHeadline: "31% Lower No-Show Rate",
+    quote:
+      "RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.",
+  },
+  {
+    id: "t2",
+    name: "Priya Sharma",
+    role: "CEO, PropEdge Realty",
+    avatar: "PS",
+    color: "#635BFF",
+    businessType: "Real Estate Brokerage",
+    outcomeHeadline: "Doubled Our Conversion Rate",
+    quote:
+      "The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.",
+  },
+  {
+    id: "t3",
+    name: "Arjun Kapoor",
+    role: "Co-founder, NutriTrack SaaS",
+    avatar: "AK",
+    color: "#10B981",
+    businessType: "B2B SaaS Startup",
+    outcomeHeadline: "Launch MVP in 10 Weeks",
+    quote:
+      "I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.",
+  },
 ];
 
 // ─── About ───────────────────────────────────────────────────────────────────
 export const aboutValues = [
   {
     icon: ShieldCheck,
-    title: "Engineering First",
+    title: "We Own the Outcome, Not Just the Code",
     description:
-      "We treat every product decision as an engineering problem — measurable, reversible, and production-tested.",
+      "Most agencies deliver a repo and disappear. We stay accountable to results — if it breaks, we fix it. If it underperforms, we diagnose why.",
   },
   {
     icon: Zap,
-    title: "Speed Without Chaos",
+    title: "Weeks, Not Quarters",
     description:
-      "Fast delivery is not a compromise. Our systems and process allow us to ship premium products at pace.",
+      "A SaaS MVP in 6–10 weeks. An AI automation workflow in 2 weeks. Speed is not a compromise — it's how we're structured.",
   },
   {
     icon: Users,
-    title: "Long-term Partnership",
+    title: "You Keep Everything — No Lock-In",
     description:
-      "We retain 100% of our clients because we operate as embedded product partners, not one-off vendors.",
+      "Full source code, database schemas, and deployment configs are yours at project close. We don't hold your software hostage.",
   },
 ];

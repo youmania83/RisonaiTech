@@ -1,18 +1,43 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/constants";
-import { scaleUp } from "@/lib/animations";
 import CTA from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: { absolute: "Our Products — DocBooking & Expreality | RisonAI Tech" },
+  description:
+    "RisonAI Tech has built DocBooking (AI clinic management SaaS for healthcare) and Expreality (property intelligence platform for real estate). In-house products shipped to production.",
+  keywords: [
+    "DocBooking AI clinic management",
+    "Expreality property intelligence",
+    "AI SaaS products India",
+    "in-house products RisonAI Tech",
+  ],
+  alternates: { canonical: "/products" },
+  authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
+  openGraph: {
+    title: "Products | RisonAI Tech — DocBooking & Expreality",
+    description:
+      "In-house products we designed, engineered, and launched — demonstrating what we build for clients.",
+    url: "https://risonaitech.com/products",
+    images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | RisonAI Tech — DocBooking & Expreality",
+    description: "DocBooking (AI clinic SaaS) + Expreality (property intelligence). Built in-house, shipped to production.",
+    images: ["https://risonaitech.com/opengraph-image"],
+  },
+};
 
 export default function ProductsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-white pb-16 pt-36">
+      <section className="pb-16 pt-36 bg-mesh" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
@@ -21,7 +46,6 @@ export default function ProductsPage() {
             <Reveal delay={0.08}>
               <h1
                 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl"
-                style={{ fontFamily: "var(--font-display)" }}
               >
                 Built in-house.{" "}
                 <span className="grad-text">Shipped to production.</span>
@@ -38,13 +62,13 @@ export default function ProductsPage() {
       </section>
 
       {/* Products grid */}
-      <section className="bg-[#f7f9fc] py-20">
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
           <div className="grid gap-8 md:grid-cols-2">
             {products.map((product, i) => {
               const Icon = product.icon;
               return (
-                <Reveal delay={i * 0.1} key={product.id} variants={scaleUp}>
+                <Reveal delay={i * 0.1} key={product.id}>
                   <div className="card-base group flex flex-col overflow-hidden h-full">
                     {/* Image */}
                     <div className="relative h-56 overflow-hidden">
@@ -52,6 +76,8 @@ export default function ProductsPage() {
                         alt={product.title}
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                         fill
+                        priority={i === 0}
+                        quality={70}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         src={product.image}
                       />
@@ -76,7 +102,6 @@ export default function ProductsPage() {
                       </div>
                       <h2
                         className="font-display mt-4 text-2xl font-bold text-brand-dark"
-                        style={{ fontFamily: "var(--font-display)" }}
                       >
                         {product.title}
                       </h2>
@@ -88,7 +113,7 @@ export default function ProductsPage() {
                           <span
                             className="rounded-full px-3 py-1 text-xs font-medium"
                             key={tag}
-                            style={{ background: `${product.color}15`, color: product.color }}
+                            style={{ background: `${product.color}20`, color: product.textLight || product.color }}
                           >
                             {tag}
                           </span>
@@ -96,10 +121,16 @@ export default function ProductsPage() {
                       </div>
                       <div className="mt-6 flex-1" />
                       <button
+                        type="button"
                         className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                        style={{ color: product.color }}
+                        // Accessible name includes the product title so the
+                        // control is descriptive for assistive tech + crawlers.
+                        aria-label={`Learn more about ${product.title}`}
+                        style={{ color: product.textLight || product.color }}
                       >
-                        Learn more <ArrowUpRight size={14} />
+                        <span aria-hidden="true">Learn more</span>
+                        <span className="sr-only">about {product.title}</span>
+                        <ArrowUpRight size={14} aria-hidden="true" />
                       </button>
                     </div>
                   </div>

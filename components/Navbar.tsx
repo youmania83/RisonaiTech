@@ -1,117 +1,136 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
+import AnimatedLogo from "@/components/AnimatedLogo";
+import { BorderBeam } from "@/components/ui/border-beam";
 
-import { navLinks, siteConfig } from "@/lib/constants";
+const navLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
+  { href: "/tools/ai-search-audit", label: "AI Audit" },
+  { href: "/about", label: "About" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
+    let ticking = false;
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        ticking = false;
+      });
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      <header
-        className="fixed inset-x-0 top-0 z-50 transition-all duration-300"
-        style={{
-          background: scrolled ? "rgba(255,255,255,0.92)" : "transparent",
-          backdropFilter: scrolled ? "blur(16px)" : "none",
-          borderBottom: scrolled ? "1px solid #f3f4f6" : "1px solid transparent",
-          boxShadow: scrolled ? "0 1px 12px rgba(0,0,0,0.06)" : "none",
-        }}
-      >
-        <div className="container-site flex h-[68px] items-center justify-between">
-          {/* Logo */}
-          <Link className="flex items-center gap-2.5 no-underline" href="/">
-            <span
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-[13px] font-bold text-white"
-              style={{ background: "linear-gradient(135deg, #635BFF, #0EA5E9)" }}
-            >
-              RT
-            </span>
-            <span
-              className="font-display text-[17px] font-700 text-brand-dark"
-              style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
-            >
-              Risonai<span style={{ color: "#635BFF" }}>Tech</span>
-            </span>
-          </Link>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        isScrolled ? "py-0" : "py-1"
+      }`}
+      style={{
+        background: isScrolled
+          ? "rgba(5, 7, 15, 0.92)"
+          : "rgba(5, 7, 15, 0.55)",
+        backdropFilter: "blur(24px) saturate(180%)",
+        WebkitBackdropFilter: "blur(24px) saturate(180%)",
+        borderBottom: isScrolled
+          ? "1px solid rgba(255,255,255,0.08)"
+          : "1px solid rgba(255,255,255,0.04)",
+        boxShadow: isScrolled
+          ? "0 4px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,91,255,0.05)"
+          : "none",
+      }}
+    >
+      <div className="container-site flex h-[68px] items-center justify-between">
+        {/* Logo */}
+        <Link className="flex items-center gap-2.5 no-underline group" href="/">
+          <AnimatedLogo />
+        </Link>
 
-          {/* Center nav */}
-          <nav className="hidden items-center gap-1 lg:flex">
+        {/* Center nav */}
+        <nav className="hidden items-center gap-1 lg:flex">
+          {navLinks.map((link) => (
+            <Link
+              className="relative rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition-colors duration-200 hover:text-white group"
+              href={link.href}
+              key={link.href}
+            >
+              {link.label}
+              <span className="absolute inset-x-2 bottom-0 h-px origin-left scale-x-0 rounded-full bg-white/30 transition-transform duration-300 group-hover:scale-x-100" />
+            </Link>
+          ))}
+        </nav>
+
+        {/* Right CTA */}
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link className="btn-primary group relative overflow-hidden text-sm" href="/contact">
+            Contact Us
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+            <BorderBeam duration={5} borderRadius={8} beamLength={70} />
+          </Link>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/70 backdrop-blur-sm lg:hidden"
+        >
+          {isMobileMenuOpen ? <X size={17} /> : <Menu size={17} />}
+        </button>
+
+        {/* Mobile Menu — CSS transitions (no framer-motion) */}
+        <div
+          aria-hidden={!isMobileMenuOpen}
+          className={`fixed inset-x-0 top-[64px] z-40 px-4 pt-2 pb-4 lg:hidden transition-[opacity,transform,visibility] duration-200 ease-out ${
+            isMobileMenuOpen
+              ? "translate-y-0 opacity-100 visible"
+              : "-translate-y-2 opacity-0 pointer-events-none invisible"
+          }`}
+          style={{
+            background: "rgba(5, 7, 15, 0.95)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderBottom: "1px solid rgba(255,255,255,0.08)",
+            willChange: "opacity, transform",
+          }}
+        >
+          <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
-                className="rounded-lg px-4 py-2 text-sm font-medium text-brand-gray transition-colors hover:bg-[#f7f9fc] hover:text-brand-dark"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
                 href={link.href}
                 key={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            <div className="mt-3 border-t border-white/08 pt-3">
+              <Link
+                className="btn-primary w-full justify-center text-sm"
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </nav>
-
-          {/* Right CTA */}
-          <div className="hidden items-center gap-3 lg:flex">
-            <Link className="btn-primary text-sm" href="/contact">
-              Contact Us
-              <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          {/* Mobile toggle */}
-          <button
-            aria-label="Menu"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-brand-border bg-white lg:hidden"
-            onClick={() => setMobileOpen((v) => !v)}
-          >
-            {mobileOpen ? <X size={17} /> : <Menu size={17} />}
-          </button>
         </div>
-      </header>
-
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            animate={{ opacity: 1, y: 0 }}
-            className="fixed inset-x-0 top-[68px] z-40 border-b border-brand-border bg-white px-5 py-4 shadow-lg lg:hidden"
-            exit={{ opacity: 0, y: -8 }}
-            initial={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-          >
-            <nav className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  className="rounded-lg px-4 py-3 text-sm font-medium text-brand-dark hover:bg-brand-light"
-                  href={link.href}
-                  key={link.href}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="mt-3 border-t border-brand-border pt-3">
-                <Link
-                  className="btn-primary w-full justify-center text-sm"
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Contact Us
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+    </header>
   );
 }

@@ -2,72 +2,81 @@ import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 import { navLinks, siteConfig } from "@/lib/constants";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
+  { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
 ];
+// First 5 entries render in the Navigation column; the rest in Legal.
+const FOOTER_NAV_COUNT = 5;
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-border bg-[#f7f9fc]">
+    <footer
+      style={{
+        background: "#080B14",
+        borderTop: "1px solid rgba(255,255,255,0.07)",
+      }}
+    >
+      {/* Top glow accent */}
+      <div
+        aria-hidden
+        className="pointer-events-none h-px w-full"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(99,91,255,0.6) 30%, rgba(14,165,233,0.4) 70%, transparent 100%)",
+        }}
+      />
+
       <div className="container-site py-16">
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
           {/* Brand + contact */}
-          <div className="max-w-sm">
-            <Link className="flex items-center gap-2.5 no-underline" href="/">
-              <span
-                className="flex h-8 w-8 items-center justify-center rounded-lg text-[13px] font-bold text-white"
-                style={{ background: "linear-gradient(135deg, #635BFF, #0EA5E9)" }}
-              >
-                RT
-              </span>
-              <span
-                className="text-[17px] font-bold text-brand-dark"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
-              >
-                Risonai<span style={{ color: "#635BFF" }}>Tech</span>
-              </span>
+          <div>
+            <Link className="no-underline" href="/">
+              <AnimatedLogo size={36} />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-brand-gray">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               {siteConfig.description}
             </p>
-            <div className="mt-6 space-y-2">
-              <div className="flex items-start gap-2 text-sm text-brand-gray">
-                <MapPin className="mt-0.5 flex-shrink-0 text-brand-subtle" size={14} />
-                {siteConfig.address}
+            <div className="mt-7 space-y-3">
+              <div className="flex items-start gap-2.5 text-sm text-white/60">
+                <MapPin className="mt-0.5 flex-shrink-0 text-white/25" size={13} />
+                <span>{siteConfig.address}</span>
               </div>
               <a
-                className="flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-dark"
+                className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white/80"
                 href={`mailto:${siteConfig.email}`}
               >
-                <Mail className="flex-shrink-0 text-brand-subtle" size={14} />
+                <Mail className="flex-shrink-0 text-white/25" size={13} />
                 {siteConfig.email}
               </a>
               <a
-                className="flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-dark"
+                className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white/80"
                 href={`tel:${siteConfig.phone}`}
               >
-                <Phone className="flex-shrink-0 text-brand-subtle" size={14} />
+                <Phone className="flex-shrink-0 text-white/25" size={13} />
                 {siteConfig.phone}
               </a>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Navigation */}
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-brand-subtle">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
               Navigation
             </p>
-            <ul className="grid grid-cols-2 gap-x-12 gap-y-2">
-              {footerLinks.map((link) => (
+            <ul className="space-y-3">
+              {footerLinks.slice(0, FOOTER_NAV_COUNT).map((link) => (
                 <li key={link.href}>
                   <Link
-                    className="text-sm text-brand-gray transition-colors hover:text-brand-dark"
+                    className="text-sm text-white/60 transition-colors duration-150 hover:text-white/85"
                     href={link.href}
                   >
                     {link.label}
@@ -76,16 +85,55 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Legal + socials */}
+          <div>
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
+              Legal
+            </p>
+            <ul className="space-y-3">
+              {footerLinks.slice(FOOTER_NAV_COUNT).map((link) => (
+                <li key={link.href}>
+                  <Link
+                    className="text-sm text-white/60 transition-colors duration-150 hover:text-white/85"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex gap-3">
+              {Object.entries(siteConfig.socials).map(([name, url]) => (
+                <a
+                  key={name}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-white/60 transition-all duration-300 hover:bg-white/06 hover:text-white/70 hover:shadow-glow-sm"
+                  style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                  aria-label={name}
+                >
+                  <span className="text-xs font-medium capitalize">{name[0].toUpperCase()}</span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 flex flex-col items-start gap-3 border-t border-brand-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-brand-subtle">
+        {/* Bottom bar */}
+        <div
+          className="mt-14 flex flex-col items-start gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+        >
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Risonai Tech. All rights reserved.
           </p>
-          <p className="text-sm text-brand-subtle">
-            {siteConfig.domain}
-          </p>
+          <div className="flex flex-col items-start gap-1 sm:items-end">
+            <p className="text-xs text-white/50">GSTIN: 06CDBPS8926D2ZE</p>
+            <p className="text-xs text-white/50">{siteConfig.domain}</p>
+          </div>
         </div>
       </div>
     </footer>

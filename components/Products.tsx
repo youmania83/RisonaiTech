@@ -1,16 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/constants";
-import { fadeLeft, fadeRight } from "@/lib/animations";
 
 export default function Products() {
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad cv-auto" style={{ backgroundColor: "#090C18" }}>
       <div className="container-site">
         {/* Header */}
         <div className="mb-16 max-w-xl">
@@ -20,7 +17,6 @@ export default function Products() {
           <Reveal delay={0.08}>
             <h2
               className="font-display text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl"
-              style={{ fontFamily: "var(--font-display)" }}
             >
               Products we&apos;ve{" "}
               <span className="grad-text">designed &amp; built</span>
@@ -37,11 +33,10 @@ export default function Products() {
         <div className="flex flex-col gap-8">
           {products.map((product, i) => {
             const Icon = product.icon;
-            const isEven = i % 2 === 0;
             return (
-              <Reveal delay={0.05} key={product.id} variants={isEven ? fadeLeft : fadeRight}>
-                <div className="card-base overflow-hidden">
-                  <div className={`flex flex-col lg:flex-row ${isEven ? "" : "lg:flex-row-reverse"}`}>
+              <Reveal delay={0.05 + i * 0.06} key={product.id}>
+                <div className="card-base group overflow-hidden">
+                  <div className={`flex flex-col lg:flex-row ${i % 2 === 0 ? "" : "lg:flex-row-reverse"}`}>
                     {/* Text */}
                     <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-12">
                       <div className="flex items-center gap-3">
@@ -51,17 +46,16 @@ export default function Products() {
                         >
                           <Icon size={18} />
                         </div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-brand-subtle">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-white/38">
                           {product.subtitle}
                         </p>
                       </div>
                       <h3
                         className="font-display mt-5 text-3xl font-bold text-brand-dark"
-                        style={{ fontFamily: "var(--font-display)" }}
                       >
                         {product.title}
                       </h3>
-                      <p className="mt-3 text-base leading-relaxed text-brand-gray">
+                      <p className="mt-3 text-base leading-relaxed text-white/55">
                         {product.description}
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
@@ -69,7 +63,7 @@ export default function Products() {
                           <span
                             className="rounded-full px-3 py-1 text-xs font-medium"
                             key={tag}
-                            style={{ background: `${product.color}12`, color: product.color }}
+                            style={{ background: `${product.color}20`, color: product.textLight || product.color }}
                           >
                             {tag}
                           </span>
@@ -78,17 +72,27 @@ export default function Products() {
                       <Link
                         className="mt-7 inline-flex w-fit items-center gap-1.5 text-sm font-semibold transition-colors hover:opacity-70"
                         href="/products"
-                        style={{ color: product.color }}
+                        // Accessible name includes the product title so the link
+                        // is descriptive for screen readers + Lighthouse SEO.
+                        aria-label={`Learn more about ${product.title}`}
+                        style={{ color: product.textLight || product.color }}
                       >
-                        Learn more <ArrowUpRight size={14} />
+                        <span aria-hidden="true">Learn more</span>
+                        <span className="sr-only">about {product.title}</span>
+                        <ArrowUpRight size={14} aria-hidden="true" />
                       </Link>
                     </div>
                     {/* Image */}
                     <div className="relative h-56 overflow-hidden lg:h-auto lg:w-1/2">
                       <Image
                         alt={product.title}
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                         fill
+                        // Products live below the fold; the actual LCP element is the
+                        // hero headline. Lazy-loading here keeps the preload queue
+                        // clear for the real LCP candidate.
+                        loading="lazy"
+                        quality={70}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         src={product.image}
                       />

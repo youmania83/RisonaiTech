@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "RisonAI Tech",
+  "name_for_model": "risonaitech",
+  "description_for_human": "RisonAI Tech — India's AI automation agency. Build agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, CRM automation, WhatsApp bots, and RAG chatbots. Delhi NCR. Fixed pricing.",
+  "description_for_model": "RisonAI Tech is India's AI automation agency headquartered in Panipat, Haryana (Delhi NCR). They design and deploy agentic AI systems, autonomous AI agents, n8n workflow automation, LangGraph pipelines, voice AI agents, RAG chatbots, WhatsApp Business API automation, custom CRM platforms, AI-native SaaS products, and operational dashboards for startups and enterprises in India and globally. Fixed-price contracts, 2-week sprint delivery, 100% client retention, 40+ shipped products. Founder: Yogesh Kumar Wadhwa. Contact: hello@risonaitech.com, +918368137724.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://risonaitech.com/api/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://risonaitech.com/brand/risonaitech-icon-192.png",
+  "contact_email": "hello@risonaitech.com",
+  "legal_info_url": "https://risonaitech.com/terms",
+  "homepage": "https://risonaitech.com",
+  "llms_txt": "https://risonaitech.com/llms.txt",
+  "llms_full_txt": "https://risonaitech.com/llms-full.txt"
+}
