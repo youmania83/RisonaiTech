@@ -27,12 +27,12 @@ export default function CaseStudies() {
             const Icon = cs.icon;
             return (
               <Reveal delay={i * 0.1} key={cs.id}>
-                <div className="card-base flex flex-col gap-0 overflow-hidden h-full group hover:shadow-[0_15px_40px_rgba(99,91,255,0.06)] transition-all duration-300">
+                <div className="card-base flex flex-col gap-0 overflow-hidden h-full group hover:shadow-[0_15px_40px_rgba(255,122,0,0.06)] transition-all duration-300">
                   {/* Top accent bar */}
                   <div
                     className="h-1 w-full"
                     style={{
-                      background: "linear-gradient(90deg, #635BFF, #0EA5E9)",
+                      background: "linear-gradient(90deg, #FF7A00, #FFA500)",
                     }}
                   />
 

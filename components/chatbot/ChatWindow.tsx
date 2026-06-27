@@ -49,8 +49,8 @@ export default function ChatWindow({
     >
       <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/80 px-4 py-3 backdrop-blur-md">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#635BFF]/10 border border-[#635BFF]/20">
-            <Bot size={18} className="text-[#635BFF]" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/20">
+            <Bot size={18} className="text-[#FF7A00]" />
           </div>
           <div>
             <h3 className="text-sm font-semibold text-slate-900">AI Assistant</h3>

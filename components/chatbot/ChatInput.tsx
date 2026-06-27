@@ -29,7 +29,7 @@ export default function ChatInput({ input, setInput, onSubmit, isLoading, placeh
       }}
       className="border-t border-brand-border bg-[rgba(255,255,255,0.02)] p-3 backdrop-blur-md"
     >
-      <div className="relative flex items-end rounded-2xl border border-brand-border bg-[rgba(255,255,255,0.05)] transition-colors focus-within:border-[#635BFF] focus-within:ring-1 focus-within:ring-[#635BFF]">
+      <div className="relative flex items-end rounded-2xl border border-brand-border bg-[rgba(255,255,255,0.05)] transition-colors focus-within:border-[#FF7A00] focus-within:ring-1 focus-within:ring-[#FF7A00]">
         <TextareaAutosize
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -45,7 +45,7 @@ export default function ChatInput({ input, setInput, onSubmit, isLoading, placeh
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-[#635BFF] text-white transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+            className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF7A00] text-white transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
             aria-label="Send message"
           >
             <Send size={14} />

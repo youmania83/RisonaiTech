@@ -57,7 +57,7 @@ export default function StickyWhatsApp() {
               Want a free AI Visibility Audit delivered directly to your chat? Tap below to start.
             </p>
             <div className="pt-2 border-t border-slate-800 flex items-center gap-2">
-              <div className="h-5 w-5 rounded-full bg-indigo-500/10 border border-indigo-[#635BFF]/30 text-[9px] font-bold text-indigo-300 flex items-center justify-center shrink-0">
+              <div className="h-5 w-5 rounded-full bg-orange-500/10 border border-orange-500/30 text-[9px] font-bold text-orange-400 flex items-center justify-center shrink-0">
                 YW
               </div>
               <span className="text-[10px] text-slate-400">Talk directly with founder Yogesh</span>

@@ -103,16 +103,16 @@ export default function LeadershipAuthority() {
 
           {/* Visual Profile Card */}
           <div 
-            className="rounded-2xl p-6 sm:p-8 border relative overflow-hidden flex flex-col justify-between h-full border-indigo-100"
+            className="rounded-2xl p-6 sm:p-8 border relative overflow-hidden flex flex-col justify-between h-full border-orange-100"
             style={{
-              background: "linear-gradient(135deg, rgba(79,70,229,0.02) 0%, rgba(37,99,235,0.01) 100%)",
+              background: "linear-gradient(135deg, rgba(255,122,0,0.02) 0%, rgba(255,165,0,0.01) 100%)",
               boxShadow: "0 15px 40px rgba(15,23,42,0.03), inset 0 1px 0 rgba(255,255,255,0.8)",
             }}
           >
             <div className="space-y-6">
               {/* Profile Avatar */}
               <div className="flex items-center gap-4">
-                <div className="relative h-16 w-16 rounded-full shrink-0 flex items-center justify-center bg-gradient-to-tr from-[#635BFF] to-[#0EA5E9] p-0.5 shadow-lg shadow-[#635BFF]/20">
+                <div className="relative h-16 w-16 rounded-full shrink-0 flex items-center justify-center bg-gradient-to-tr from-[#FF7A00] to-[#FFA500] p-0.5 shadow-lg shadow-[#FF7A00]/20">
                   <div className="h-full w-full rounded-full bg-slate-900 flex items-center justify-center font-display text-lg font-bold text-white tracking-wider">
                     YW
                   </div>

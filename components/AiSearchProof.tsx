@@ -171,7 +171,7 @@ export default function AiSearchProof() {
             </div>
  
             {/* Footer validation badge */}
-            <div className="p-4 bg-[#635BFF]/5 border-t border-slate-100 flex items-center justify-center gap-2 text-xs">
+            <div className="p-4 bg-[#FF7A00]/5 border-t border-slate-100 flex items-center justify-center gap-2 text-xs">
               <ShieldCheck size={14} className="text-brand-purple" />
               <span className="text-slate-600">Verified AI Engine Citation Proof · Scanned 2026</span>
             </div>

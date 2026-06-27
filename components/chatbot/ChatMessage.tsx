@@ -87,8 +87,8 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
     <div className={`flex w-full ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div className={`flex max-w-[85%] items-start gap-3 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
         {!isUser && (
-          <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full mt-0.5 ${isError ? 'bg-red-100 border border-red-200' : 'bg-[#635BFF]/10 border border-[#635BFF]/20'}`}>
-            {isError ? <AlertCircle size={14} className="text-red-500" /> : <Bot size={14} className="text-[#635BFF]" />}
+          <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full mt-0.5 ${isError ? 'bg-red-100 border border-red-200' : 'bg-[#FF7A00]/10 border border-[#FF7A00]/20'}`}>
+            {isError ? <AlertCircle size={14} className="text-red-500" /> : <Bot size={14} className="text-[#FF7A00]" />}
           </div>
         )}
         
@@ -96,7 +96,7 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
           <div
             className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
               isUser
-                ? 'bg-[#635BFF] text-slate-50 rounded-tr-none'
+                ? 'bg-[#FF7A00] text-slate-50 rounded-tr-none'
                 : isError
                 ? 'bg-red-50 text-red-700 border border-red-200 rounded-tl-none'
                 : 'bg-slate-50 text-slate-800 border border-slate-200/60 rounded-tl-none'

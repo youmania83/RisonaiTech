@@ -30,44 +30,42 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="container-site relative z-10 w-full py-24">
-        {/* Badges */}
+      <div className="container-site relative z-10 w-full py-24 flex flex-col items-center text-center">
+        {/* Badge/Pill */}
         <div
-          className="hero-fade-up mb-7 flex flex-wrap items-center gap-3"
+          className="hero-fade-up mb-7 inline-flex items-center gap-2 rounded-full border border-orange-500/15 bg-orange-500/[0.02] px-4 py-1.5"
           style={{ animationDelay: "0s" }}
         >
-          <span className="inline-flex items-center rounded-full border border-[#E5E7EB] bg-[#F9F9F9] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#555555]">
-            Trusted by 40+ Businesses
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
-            Only 3 Client Slots Available This Month
+          <span className="h-2 w-2 rounded-full bg-[#FF7A00] animate-pulse" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
+            Engineering AI Operating Systems
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-[#111111] sm:text-6xl md:text-7xl max-w-4xl">
-          AI Automation That{" "}
-          <br className="hidden md:inline" />
-          Works For Your Business
+        <h1 className="font-display text-5xl font-extrabold leading-[1.08] tracking-tight text-[#111111] sm:text-6xl md:text-7xl max-w-4xl">
+          Build AI <br />
+          Employees. <br />
+          <span className="text-slate-450/80">Not AI Tools.</span>
         </h1>
 
+        {/* Description */}
         <p
-          className="hero-fade-up mt-6 max-w-xl text-base leading-relaxed text-[#555555] sm:text-lg"
+          className="hero-fade-up mt-8 max-w-2xl text-base leading-relaxed text-[#555555] sm:text-lg"
           style={{ animationDelay: "0.15s" }}
         >
-          Deploy AI agents, automate operations, and eliminate repetitive work
-          with enterprise-grade AI solutions. Get a free proposal within 48 hours.
+          We engineer intelligent systems that automate your operations, eliminate
+          repetitive work, and scale your business without hiring more people.
         </p>
 
         {/* CTAs */}
         <div
-          className="hero-fade-up mt-9 flex flex-wrap items-center gap-4"
+          className="hero-fade-up mt-10 flex flex-wrap items-center justify-center gap-4"
           style={{ animationDelay: "0.28s" }}
         >
           <a
             href="#contact"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[#111111] px-8 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#333333]"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[#FF7A00] px-8 text-sm font-semibold text-white transition-all duration-150 hover:bg-[#E06B00] shadow-[0_4px_20px_rgba(255,122,0,0.25)] border border-[#FF7A00]"
           >
             Book Free Consultation
             <ArrowRight size={16} />
@@ -75,16 +73,16 @@ export default function Hero() {
 
           <a
             href="#case-studies"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-[#E5E7EB] bg-white px-8 text-sm font-semibold text-[#111111] transition-colors duration-150 hover:border-[#111111] hover:bg-[#F9F9F9]"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-[#FF7A00]/25 bg-white px-8 text-sm font-semibold text-[#FF7A00] transition-all duration-150 hover:border-[#FF7A00] hover:bg-orange-500/[0.02]"
           >
             See Case Studies
-            <ArrowRight size={16} className="text-[#999999]" />
+            <ArrowRight size={16} className="text-[#FF7A00]/75" />
           </a>
         </div>
 
         {/* Trust micro-copy */}
         <div
-          className="hero-fade-up mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-[#999999]"
+          className="hero-fade-up mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-[#999999]"
           style={{ animationDelay: "0.38s" }}
         >
           <span>✓ Fixed Scope</span>
@@ -93,11 +91,11 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3 w-full max-w-4xl">
           {stats.map((item, i) => (
             <div
               key={item.title}
-              className="hero-fade-up group rounded-2xl border border-[#E5E7EB] bg-white p-6 transition-[border-color,transform] duration-200 hover:border-[#111111] hover:-translate-y-0.5"
+              className="hero-fade-up group rounded-2xl border border-[#E5E7EB] bg-white p-6 transition-[border-color,transform] duration-200 hover:border-[#FF7A00] hover:-translate-y-0.5 text-left"
               style={{ animationDelay: `${0.45 + i * 0.1}s` }}
             >
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#999999]">
@@ -115,7 +113,7 @@ export default function Hero() {
       <div
         className="absolute inset-x-0 bottom-0 border-t border-[#E5E7EB] bg-white"
       >
-        <div className="container-site flex flex-wrap items-center gap-x-8 gap-y-2 py-3.5">
+        <div className="container-site flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-3.5">
           <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#999999]">
             Built for
           </span>
