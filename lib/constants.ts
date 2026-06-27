@@ -202,7 +202,7 @@ export const products = [
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     tags: ["Real Estate", "Analytics", "SaaS"],
-    color: "#635BFF",
+    color: "#FF7A00",
     textLight: "#A5B4FC",
   },
 ];
@@ -303,7 +303,7 @@ export const testimonials: Testimonial[] = [
     name: "Priya Sharma",
     role: "CEO, PropEdge Realty",
     avatar: "PS",
-    color: "#635BFF",
+    color: "#FF7A00",
     businessType: "Real Estate Brokerage",
     outcomeHeadline: "Doubled Our Conversion Rate",
     quote:
