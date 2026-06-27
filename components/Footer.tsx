@@ -11,11 +11,12 @@ const footerLinks = [
   { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/cookies", label: "Cookies Policy" },
+  { href: "/terms", label: "Terms of Service" },
 ];
-// First 5 entries render in the Navigation column; the rest in Legal.
-const FOOTER_NAV_COUNT = 5;
+// First 6 entries render in the Navigation column; the rest in Legal.
+const FOOTER_NAV_COUNT = 6;
 
 export default function Footer() {
   return (
