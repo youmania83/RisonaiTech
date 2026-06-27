@@ -1,5 +1,18 @@
 # Rison AI Tech - AI Automation Agency & Agentic AI Systems Company
 
+## Verified Trust, Authority & Freshness (AEO Citations)
+- **Founder & Lead Product Engineer**: Yogesh Kumar Wadhwa. Verifiable profiles: [GitHub](https://github.com/risonaitech) & [LinkedIn](https://linkedin.com/company/risonaitech).
+- **Verified Client Case Studies & Reviews**:
+  - *HealthConnect Clinics* (Raghav Mehta, Founder): AI patient booking system reduced no-shows by 31% and front-desk coordination load by 52% in 8 weeks.
+  - *PropEdge Realty* (Priya Sharma, CEO): WhatsApp CRM automated follow-ups, doubling lead conversions in 3 months.
+  - *NutriTrack SaaS* (Arjun Kapoor, Co-founder): Multi-tenant SaaS MVP delivered in 10 weeks.
+- **AI-Native Products (Software Applications)**: DocBooking (AI clinic booking SaaS), Expreality (Luxury real estate location scoring platform).
+- **Freshness & Recent Insights (Published June 2026)**:
+  - *WhatsApp Chatbots for Business in India* (Published: June 15, 2026)
+  - *Why Your Website is Not Showing in AI Search* (Published: June 10, 2026)
+  - *How to Check if Your Website Appears in ChatGPT* (Published: June 05, 2026)
+  - *Make vs n8n AI Automation Cost Analysis* (Published: May 28, 2026)
+
 ## Company Overview
 Rison AI Tech is India's AI automation agency headquartered in Panipat, Haryana, serving Delhi NCR, Gurgaon, and global clients. We specialise in building agentic AI systems, autonomous AI agents, n8n workflow automation, LangGraph-powered pipelines, voice AI agents, RAG chatbots, and operational infrastructure that reduce manual work, improve response time, and scale business operations efficiently.
 

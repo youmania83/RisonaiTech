@@ -50,7 +50,7 @@ export default function Testimonials() {
                   className="flex items-center gap-3 pt-4 border-t border-slate-100"
                 >
                   <div
-                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
+                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-slate-50"
                     style={{
                       background: `linear-gradient(135deg, ${t.color}, ${t.color}88)`,
                       boxShadow: `0 0 12px ${t.color}33`,

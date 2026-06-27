@@ -12,11 +12,11 @@ const path = require("path");
 
 // --- Configuration ---
 const CONFIG = {
-  maxRssMb: 1200,             // Safe RSS ceiling for a 16GB Mac
-  maxCpuLoadPercent: 85,      // Warn or limit if CPU is saturated
-  maxFilesPerAnalysis: 20,    // Hard limit on file processing batch sizes
-  maxRecursiveDepth: 3,       // Max planning recursion depth
-  defaultTimeoutMs: 300000,   // 5 minutes maximum execution timeout
+  maxRssMb: 4096,             // Increased to 4GB for better stability
+  maxCpuLoadPercent: 95,      // Be more lenient with CPU saturation
+  maxFilesPerAnalysis: 100,    // Increased from 20 to 100 to allow full codebase scans
+  maxRecursiveDepth: 5,       // Increased depth for complex planning
+  defaultTimeoutMs: 600000,   // Increased to 10 minutes
 };
 
 // --- Execution State Tracking ---

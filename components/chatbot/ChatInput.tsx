@@ -38,7 +38,7 @@ export default function ChatInput({ input, setInput, onSubmit, isLoading, placeh
           aria-label={placeholder ?? "Message Rison AI"}
           minRows={1}
           maxRows={5}
-          className="w-full resize-none bg-transparent py-3 pl-4 pr-12 text-sm text-white placeholder-brand-gray focus:outline-none"
+          className="w-full resize-none bg-transparent py-3 pl-4 pr-12 text-sm text-slate-800 placeholder-brand-gray focus:outline-none"
           disabled={isLoading}
         />
         <div className="absolute bottom-1.5 right-2 flex h-8 w-8 shrink-0 items-center justify-center">

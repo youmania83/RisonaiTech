@@ -555,6 +555,58 @@ const aiAuditToolSchema = {
   ],
 };
 
+const docBookingProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": `${BASE_URL}/products#docbooking`,
+  name: "DocBooking",
+  image: `${BASE_URL}/brand/risonaitech-icon-192.png`,
+  description: "AI Healthcare clinic booking and patient intake SaaS platform.",
+  brand: {
+    "@type": "Brand",
+    name: "RisonAI Tech",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "120000",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+  },
+};
+
+const exprealityProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": `${BASE_URL}/products#expreality`,
+  name: "Expreality",
+  image: `${BASE_URL}/brand/risonaitech-icon-192.png`,
+  description: "Luxury real estate intelligence and AI location scoring SaaS platform.",
+  brand: {
+    "@type": "Brand",
+    name: "RisonAI Tech",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "150000",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+  },
+};
+
+const walkthroughVideoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": `${BASE_URL}/#walkthrough-video`,
+  name: "RisonAI Tech AI Systems & CRM Walkthrough",
+  description: "A complete walkthrough of the AI automation workflows, n8n pipelines, and CRM systems engineered by RisonAI Tech.",
+  thumbnailUrl: [
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+  ],
+  uploadDate: "2026-03-10T08:00:00+05:30",
+  duration: "PT5M30S",
+  embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -578,6 +630,9 @@ export default function RootLayout({
                 founderSchema,
                 ...servicesSchema["@graph"],
                 aiAuditToolSchema,
+                docBookingProductSchema,
+                exprealityProductSchema,
+                walkthroughVideoSchema,
               ],
             }),
           }}

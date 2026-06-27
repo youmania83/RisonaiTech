@@ -96,7 +96,7 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
           <div
             className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
               isUser
-                ? 'bg-[#635BFF] text-white rounded-tr-none'
+                ? 'bg-[#635BFF] text-slate-50 rounded-tr-none'
                 : isError
                 ? 'bg-red-50 text-red-700 border border-red-200 rounded-tl-none'
                 : 'bg-slate-50 text-slate-800 border border-slate-200/60 rounded-tl-none'

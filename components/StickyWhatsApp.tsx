@@ -43,7 +43,7 @@ export default function StickyWhatsApp() {
           {/* Close button */}
           <button 
             onClick={() => setShowTooltip(false)}
-            className="absolute top-2.5 right-2.5 text-white/40 hover:text-white/80 p-0.5 rounded-full hover:bg-white/5 transition-colors"
+            className="absolute top-2.5 right-2.5 text-slate-400 hover:text-slate-200 p-0.5 rounded-full hover:bg-white/5 transition-colors"
           >
             <X size={12} />
           </button>
@@ -51,16 +51,16 @@ export default function StickyWhatsApp() {
           <div className="space-y-2.5">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="font-semibold text-white/80">Average response &lt; 3 mins</span>
+              <span className="font-semibold text-slate-100">Average response &lt; 3 mins</span>
             </div>
-            <p className="text-white/60 leading-relaxed">
+            <p className="text-slate-300 leading-relaxed">
               Want a free AI Visibility Audit delivered directly to your chat? Tap below to start.
             </p>
-            <div className="pt-2 border-t border-white/5 flex items-center gap-2">
+            <div className="pt-2 border-t border-slate-800 flex items-center gap-2">
               <div className="h-5 w-5 rounded-full bg-indigo-500/10 border border-indigo-[#635BFF]/30 text-[9px] font-bold text-indigo-300 flex items-center justify-center shrink-0">
                 YW
               </div>
-              <span className="text-[10px] text-white/45">Talk directly with founder Yogesh</span>
+              <span className="text-[10px] text-slate-400">Talk directly with founder Yogesh</span>
             </div>
           </div>
 

@@ -41,7 +41,7 @@ export default function Products() {
                     <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-12">
                       <div className="flex items-center gap-3">
                         <div
-                          className="flex h-10 w-10 items-center justify-center rounded-xl text-white"
+                          className="flex h-10 w-10 items-center justify-center rounded-xl text-slate-50"
                           style={{ background: product.color }}
                         >
                           <Icon size={18} />

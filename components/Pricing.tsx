@@ -111,7 +111,7 @@ export default function Pricing() {
                 }}
               >
                 {pkg.recommended && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white flex items-center gap-1.5 shadow-md border-none">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-slate-50 flex items-center gap-1.5 shadow-md border-none">
                     <Sparkles size={11} />
                     Most Popular
                   </div>

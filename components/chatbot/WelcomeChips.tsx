@@ -17,7 +17,7 @@ export default function WelcomeChips({ onSelect }: { onSelect: (text: string) =>
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 + i * 0.1 }}
           onClick={() => onSelect(text)}
-          className="rounded-full border border-brand-border bg-[rgba(255,255,255,0.03)] px-3 py-1.5 text-xs font-medium text-brand-gray transition-colors hover:bg-[rgba(255,255,255,0.08)] hover:text-white"
+          className="rounded-full border border-brand-border bg-[rgba(255,255,255,0.03)] px-3 py-1.5 text-xs font-medium text-brand-gray transition-colors hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300"
         >
           {text}
         </motion.button>
