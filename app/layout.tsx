@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import Script from "next/script";
 
 import Navbar from "@/components/Navbar";
@@ -10,19 +10,17 @@ import "./globals.css";
 
 const BASE_URL = "https://risonaitech.com";
 
-const display = Bricolage_Grotesque({
+const beVietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-be",
   display: "swap",
-  weight: ["700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const sans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-  weight: ["400", "500", "600"],
-});
+// Alias both CSS vars to the same family so all existing
+// font-display / font-sans references keep working unchanged.
+const display = beVietnam;
+const sans = beVietnam;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -563,7 +561,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${display.variable} ${sans.variable}`} lang="en" suppressHydrationWarning>
+    <html className={`${beVietnam.variable} ${beVietnam.variable}`} lang="en" suppressHydrationWarning>
       <head>
         {/* next/font/google self-hosts the typeface files at /_next/static —
             no third-party preconnects required. Removing them eliminates two

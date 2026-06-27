@@ -22,19 +22,10 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#F8FAFC",
-        borderTop: "1px solid var(--border)",
+        background: "#FFFFFF",
+        borderTop: "1px solid #E5E7EB",
       }}
     >
-      {/* Top glow accent */}
-      <div
-        aria-hidden
-        className="pointer-events-none h-px w-full"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, rgba(79,70,229,0.2) 30%, rgba(37,99,235,0.15) 70%, transparent 100%)",
-        }}
-      />
 
       <div className="container-site py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">

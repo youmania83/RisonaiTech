@@ -5,27 +5,27 @@
 /* ─── Design System Variables ───────────────────────────────────────────────── */
 @layer base {
   :root {
-    /* Core palette */
+    /* Core palette — clean, high-contrast, editorial */
     --bg:             #FFFFFF;
-    --bg-secondary:   #FAFAFA;
-    --surface-1:      rgba(15, 23, 42, 0.02);
-    --surface-2:      rgba(15, 23, 42, 0.05);
-    --text:           #0F172A; /* Deep Navy Slate-900 */
-    --text-muted:     #4B5563; /* Medium Gray */
-    --text-subtle:    #9CA3AF; /* Light Gray text */
-    --border:         #E2E8F0; /* Slate-200 */
-    --border-active:  #CBD5E1; /* Slate-300 */
+    --bg-secondary:   #F9F9F9;
+    --surface-1:      rgba(0, 0, 0, 0.02);
+    --surface-2:      rgba(0, 0, 0, 0.04);
+    --text:           #111111; /* Near-black */
+    --text-muted:     #555555;
+    --text-subtle:    #999999;
+    --border:         #E5E7EB;
+    --border-active:  #D1D5DB;
 
-    /* Brand accents */
-    --purple:         #4F46E5; /* Indigo */
-    --purple-light:   #6366F1; /* Indigo light */
-    --blue:           #2563EB; /* Electric Blue */
+    /* Brand accent — solid black for primary actions */
+    --purple:         #111111;
+    --purple-light:   #333333;
+    --blue:           #111111;
 
-    /* Glows */
-    --purple-glow:    rgba(79, 70, 229, 0.08);
-    --blue-glow:      rgba(37, 99, 235, 0.06);
-    --purple-soft:    rgba(79, 70, 229, 0.03);
-    --blue-soft:      rgba(37, 99, 235, 0.03);
+    /* No glows in minimal theme */
+    --purple-glow:    transparent;
+    --blue-glow:      transparent;
+    --purple-soft:    transparent;
+    --blue-soft:      transparent;
 
     /* Premium easing */
     --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
@@ -93,109 +93,84 @@
     contain-intrinsic-size: 0 700px;
   }
 
-  /* ── Subtle grid texture ── */
+  /* ── Subtle grid texture (very light, barely visible) ── */
   .bg-grid {
     background-image:
-      linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+      linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px);
     background-size: 60px 60px;
     background-position: center center;
   }
 
-  /* ── Animated mesh background ── */
-  .bg-mesh {
-    background-image:
-      radial-gradient(ellipse at 20% 50%, rgba(79, 70, 229, 0.04) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 80%, rgba(236, 72, 153, 0.02) 0%, transparent 50%);
-  }
-
-  /* ── Gradient texts ── */
+  /* ── Gradient texts — simplified to plain dark ── */
   .grad-text {
-    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 60%, #0ea5e9 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #111111;
+    -webkit-text-fill-color: #111111;
   }
 
   .grad-text-warm {
-    background: linear-gradient(135deg, #4f46e5 0%, #ec4899 60%, #f97316 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #111111;
+    -webkit-text-fill-color: #111111;
   }
 
-  /* ── Card base — premium light card ── */
+  /* ── Card base — flat, minimal border ── */
   .card-base {
     background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(15,23,42,0.015);
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
     transition:
-      background 0.4s var(--ease-out-expo),
-      border-color 0.4s var(--ease-out-expo),
-      box-shadow 0.5s var(--ease-out-expo),
-      transform 0.4s var(--ease-spring);
+      border-color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .card-base:hover {
-    background: #FFFFFF;
-    border-color: rgba(79, 70, 229, 0.22);
-    box-shadow:
-      0 0 0 1px rgba(79, 70, 229, 0.08),
-      0 12px 30px rgba(15, 23, 42, 0.04),
-      0 0 80px rgba(79, 70, 229, 0.02),
-      inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    transform: translateY(-2px);
+    border-color: #111111;
+    transform: translateY(-1px);
   }
 
-  /* ── Label pill ── */
+  /* ── Label pill — minimal dark version ── */
   .label-pill {
     @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider;
-    border-color: rgba(79, 70, 229, 0.15);
-    color: #4F46E5;
-    background: rgba(79, 70, 229, 0.05);
+    border-color: #E5E7EB;
+    color: #111111;
+    background: #F9F9F9;
   }
 
-  /* ── Buttons ── */
+  /* ── Buttons — solid black, no gradients ── */
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white transition-all duration-300;
-    background: linear-gradient(135deg, #4F46E5 0%, #2563EB 100%);
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white transition-all duration-200;
+    background: #111111;
+    border: 1px solid #111111;
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-    box-shadow: 0 6px 32px rgba(79, 70, 229, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-    transform: translateY(-1px);
+    background: #333333;
+    border-color: #333333;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition-all duration-300;
-    border-color: #E2E8F0;
-    color: #334155;
+    @apply inline-flex items-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold transition-all duration-200;
+    border-color: #E5E7EB;
+    color: #111111;
     background: #FFFFFF;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
   }
 
   .btn-outline:hover {
-    border-color: #CBD5E1;
-    background: #F8FAFC;
-    color: #0F172A;
-    transform: translateY(-1px);
+    border-color: #111111;
+    background: #FFFFFF;
+    color: #111111;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-300;
-    color: #4F46E5;
-    background: rgba(79, 70, 229, 0.05);
-    border: 1px solid rgba(79, 70, 229, 0.12);
+    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200;
+    color: #111111;
+    background: #F9F9F9;
+    border: 1px solid #E5E7EB;
   }
 
   .btn-ghost:hover {
-    background: rgba(79, 70, 229, 0.1);
-    border-color: rgba(79, 70, 229, 0.25);
-    transform: translateY(-1px);
+    background: #F3F4F6;
+    border-color: #D1D5DB;
   }
 
   /* ── Reveal ── */
@@ -327,29 +302,25 @@
 }
 
 .brand-name {
-  font-family: var(--font-display, Georgia, serif);
+  font-family: var(--font-be, system-ui, sans-serif);
   font-size: 18px;
-  font-weight: 700;
-  color: #0F172A;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .brand-ai {
-  background: linear-gradient(90deg, #10B981 0%, #2563EB 45%, #4F46E5 100%);
-  background-size: 200% auto;
-  background-position: 0% 50%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+  font-weight: 800;
 }
 
 .brand-tag {
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #64748B;
+  color: #999999;
   line-height: 1;
 }
 
@@ -372,16 +343,15 @@
   justify-content: center;
   width: 52px;
   height: 52px;
-  border-radius: 14px;
-  background: rgba(79, 70, 229, 0.05);
-  border: 1px solid rgba(79, 70, 229, 0.12);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: #F9F9F9;
+  border: 1px solid #E5E7EB;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .service-card:hover .service-icon-wrap {
-  background: rgba(79, 70, 229, 0.1);
-  border-color: rgba(79, 70, 229, 0.22);
-  box-shadow: 0 0 24px rgba(79, 70, 229, 0.1);
+  background: #F3F4F6;
+  border-color: #111111;
 }
 
 /* ─── Hero keyframes ─────────────────────────────────────────────────────────── */
@@ -574,11 +544,17 @@ div.bg-\[\#090c18\] {
 button.btn-primary,
 a.btn-primary,
 .bg-emerald-500,
-.bg-emerald-500 *,
-.text-emerald-300,
+.bg-emerald-500 * {
+  color: #ffffff !important;
+}
+
+.text-emerald-300 {
+  color: #6ee7b7 !important;
+}
+
 .label-pill,
 .label-pill * {
-  color: revert !important; /* let custom classes handle this */
+  color: #111111 !important;
 }
 
 /* Background glassmorphism for overlays */
