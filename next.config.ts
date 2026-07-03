@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "launchbuff.com" },
     ],
   },
 
@@ -45,6 +46,17 @@ const nextConfig: NextConfig = {
         destination: "https://risonaitech.com/:path*",
         permanent: true,
       },
+      // legacy locations redirects
+      {
+        source: "/locations/delhi",
+        destination: "/delhi",
+        permanent: true,
+      },
+      {
+        source: "/locations/gurgaon",
+        destination: "/gurgaon",
+        permanent: true,
+      },
     ];
   },
 
@@ -61,7 +73,7 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com",
+              "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com https://launchbuff.com",
               "font-src 'self' data:",
               "connect-src 'self' https://www.googletagmanager.com",
               "frame-src 'self' https://www.google.com",
