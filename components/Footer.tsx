@@ -51,6 +51,21 @@ export default function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-500">
               {siteConfig.description}
             </p>
+
+            {!isExpired && (
+              <div className="mt-6">
+                <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
+                  <Image
+                    src="https://launchbuff.com/badge-featured-dark.svg"
+                    alt="Featured on LaunchBuff"
+                    width={256}
+                    height={80}
+                    unoptimized
+                  />
+                </a>
+              </div>
+            )}
+
             <div className="mt-7 space-y-3">
               <div className="flex items-start gap-2.5 text-sm text-slate-500">
                 <MapPin className="mt-0.5 flex-shrink-0 text-slate-400" size={13} />
@@ -71,20 +86,6 @@ export default function Footer() {
                 {siteConfig.phone}
               </a>
             </div>
-
-            {!isExpired && (
-              <div className="mt-8">
-                <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
-                  <Image
-                    src="https://launchbuff.com/badge-featured-dark.svg"
-                    alt="Featured on LaunchBuff"
-                    width={256}
-                    height={80}
-                    unoptimized
-                  />
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Navigation */}
