@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 import { siteConfig } from "@/lib/constants";
@@ -23,16 +19,6 @@ const footerLinks = [
 const FOOTER_NAV_COUNT = 6;
 
 export default function Footer() {
-  const [isExpired, setIsExpired] = useState(false);
-
-  useEffect(() => {
-    // Hide badge client-side after July 18, 2026
-    const expiryDate = new Date("2026-07-18T00:00:00Z");
-    if (new Date() >= expiryDate) {
-      setIsExpired(true);
-    }
-  }, []);
-
   return (
     <footer
       style={{
@@ -51,20 +37,6 @@ export default function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-500">
               {siteConfig.description}
             </p>
-
-            {!isExpired && (
-              <div className="mt-6">
-                <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
-                  <Image
-                    src="https://launchbuff.com/badge-featured-dark.svg"
-                    alt="Featured on LaunchBuff"
-                    width={256}
-                    height={80}
-                    unoptimized
-                  />
-                </a>
-              </div>
-            )}
 
             <div className="mt-7 space-y-3">
               <div className="flex items-start gap-2.5 text-sm text-slate-500">
