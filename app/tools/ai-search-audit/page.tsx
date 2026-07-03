@@ -377,6 +377,15 @@ export default function AiSearchAuditPage() {
               score in seconds. See exactly how ChatGPT, Perplexity, Claude and
               Gemini view your brand, and what to fix first.
             </p>
+            {new Date() < new Date("2026-07-18T00:00:00Z") && (
+              <div className="mt-6 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="https://launchbuff.com/badge-featured-dark.svg" alt="Featured on LaunchBuff" width="256" height="80" />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* ─── Tool ─────────────────────────────────────────────── */}

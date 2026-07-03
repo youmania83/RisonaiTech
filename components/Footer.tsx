@@ -23,13 +23,13 @@ const footerLinks = [
 const FOOTER_NAV_COUNT = 6;
 
 export default function Footer() {
-  const [showBadge, setShowBadge] = useState(false);
+  const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
-    // Show badge only for 2 weeks (expires July 18, 2026)
+    // Hide badge client-side after July 18, 2026
     const expiryDate = new Date("2026-07-18T00:00:00Z");
-    if (new Date() < expiryDate) {
-      setShowBadge(true);
+    if (new Date() >= expiryDate) {
+      setIsExpired(true);
     }
   }, []);
 
@@ -72,7 +72,7 @@ export default function Footer() {
               </a>
             </div>
 
-            {showBadge && (
+            {!isExpired && (
               <div className="mt-8">
                 <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
                   <Image
