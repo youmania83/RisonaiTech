@@ -20,15 +20,6 @@
       "parameters": {
         "required": ["name", "phone", "message"]
       }
-    },
-    {
-      "id": "book-consultation",
-      "name": "Book Live Consultation",
-      "description": "Schedule a live video consultation call to discuss custom AI automation systems.",
-      "method": "imperative",
-      "parameters": {
-        "required": ["name", "phone", "message"]
-      }
     }
   ]
 }

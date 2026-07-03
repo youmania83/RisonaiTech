@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2, Calendar } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { siteConfig } from "@/lib/constants";
 import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
@@ -10,11 +10,10 @@ import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [sent, setSent] = useState(false);
-  const [activeTab, setActiveTab] = useState<"message" | "schedule">("message");
 
   useEffect(() => {
     if (typeof window !== "undefined" && "mcpActions" in navigator) {
-      // 1. Register Proposal Request Action
+      // Register Proposal Request Action
       (navigator as any).mcpActions.register({
         id: "submit-proposal-request",
         name: "Submit Proposal Request",
@@ -43,40 +42,6 @@ export default function ContactForm() {
             return { success: false, message: "Failed to submit request to RisonAI API." };
           } catch (e) {
             return { success: false, message: "Network error submitting proposal: " + String(e) };
-          }
-        }
-      });
-
-      // 2. Register Book Consultation Action (Bypass Iframe)
-      (navigator as any).mcpActions.register({
-        id: "book-consultation",
-        name: "Book Live Consultation",
-        description: "Schedule a live video consultation call to discuss custom AI automation systems.",
-        parameters: {
-          type: "object",
-          required: ["name", "phone", "message"],
-          properties: {
-            name: { type: "string", description: "Full name" },
-            phone: { type: "string", description: "Contact phone number" },
-            message: { type: "string", description: "Preferred dates/times and consultation topic details" }
-          }
-        },
-        handler: async (params: { name: string; phone: string; message: string }) => {
-          try {
-            const res = await fetch("/api/inquiries", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ ...params, type: "consultation" })
-            });
-            if (res.ok) {
-              setActiveTab("message");
-              setForm({ name: params.name, phone: params.phone, message: params.message });
-              setSent(true);
-              return { success: true, message: "Consultation request successfully recorded." };
-            }
-            return { success: false, message: "Failed to schedule consultation via RisonAI API." };
-          } catch (e) {
-            return { success: false, message: "Network error booking consultation: " + String(e) };
           }
         }
       });
@@ -130,7 +95,7 @@ export default function ContactForm() {
         <div className="container-site">
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1fr_380px]">
  
-            {/* Form & Calendly Container */}
+            {/* Form Container */}
             <motion.div
               className="card-base p-8 sm:p-10 flex flex-col gap-6"
               initial={{ opacity: 0, y: 24 }}
@@ -138,145 +103,87 @@ export default function ContactForm() {
               viewport={viewportOptions}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              {/* Tab Switcher */}
-              <div className="flex flex-col sm:flex-row gap-1.5 rounded-xl p-1.5 bg-slate-100/80 border border-slate-200">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab("message")}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-semibold rounded-lg transition-all ${
-                    activeTab === "message"
-                      ? "bg-white text-indigo-600 shadow-sm border border-slate-250/20"
-                      : "text-slate-500 hover:text-slate-800"
-                  }`}
-                >
-                  <MessageCircle size={15} />
-                  Send Proposal Request
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab("schedule")}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-semibold rounded-lg transition-all ${
-                    activeTab === "schedule"
-                      ? "bg-white text-indigo-600 shadow-sm border border-slate-250/20"
-                      : "text-slate-500 hover:text-slate-800"
-                  }`}
-                >
-                  <Calendar size={15} />
-                  Schedule Live Consultation
-                </button>
-              </div>
-
-              {activeTab === "message" ? (
-                sent ? (
-                  <div className="flex h-full flex-col items-center justify-center gap-4 py-12 text-center">
-                    <div
-                      className="flex h-14 w-14 items-center justify-center rounded-full"
-                      style={{ background: "rgba(99,91,255,0.1)" }}
-                    >
-                      <MessageCircle className="text-[#635BFF]" size={24} />
-                    </div>
-                    <h3 className="font-display text-2xl font-bold text-slate-900">
-                      Message sent!
-                    </h3>
-                    <p className="text-slate-500">
-                      We&apos;ve opened WhatsApp with your message. We&apos;ll
-                      get back to you shortly.
-                    </p>
-                    <button
-                      className="btn-ghost mt-2"
-                      onClick={() => setSent(false)}
-                    >
-                      Send another
-                    </button>
+              {sent ? (
+                <div className="flex h-full flex-col items-center justify-center gap-4 py-12 text-center">
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-full"
+                    style={{ background: "rgba(99,91,255,0.1)" }}
+                  >
+                    <MessageCircle className="text-[#635BFF]" size={24} />
                   </div>
-                ) : (
-                  <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-                    <h2 className="font-display text-2xl font-bold text-slate-900">
-                      Send a message
-                    </h2>
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <div className="flex flex-col gap-1.5">
-                        <label className="text-sm font-medium text-slate-600" htmlFor="name">
-                          Your name
-                        </label>
-                        <input
-                          className="rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                          id="name"
-                          name="name"
-                          onChange={handleChange}
-                          placeholder="Ramesh Kumar"
-                          required
-                          type="text"
-                          value={form.name}
-                        />
-                      </div>
-                      <div className="flex flex-col gap-1.5">
-                        <label className="text-sm font-medium text-slate-600" htmlFor="phone">
-                          Phone number
-                        </label>
-                        <input
-                          className="rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                          id="phone"
-                          name="phone"
-                          onChange={handleChange}
-                          placeholder="+919310837724"
-                          required
-                          type="tel"
-                          value={form.phone}
-                        />
-                      </div>
-                    </div>
-   
+                  <h3 className="font-display text-2xl font-bold text-slate-900">
+                    Message sent!
+                  </h3>
+                  <p className="text-slate-500">
+                    We&apos;ve opened WhatsApp with your message. We&apos;ll
+                    get back to you shortly.
+                  </p>
+                  <button
+                    className="btn-ghost mt-2"
+                    onClick={() => setSent(false)}
+                  >
+                    Send another
+                  </button>
+                </div>
+              ) : (
+                <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+                  <h2 className="font-display text-2xl font-bold text-slate-900">
+                    Send a message
+                  </h2>
+                  <div className="grid gap-5 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-sm font-medium text-slate-600" htmlFor="message">
-                        How can we help?
+                      <label className="text-sm font-medium text-slate-600" htmlFor="name">
+                        Your name
                       </label>
-                      <textarea
-                        className="min-h-[140px] rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                        id="message"
-                        name="message"
+                      <input
+                        className="rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                        id="name"
+                        name="name"
                         onChange={handleChange}
-                        placeholder="Tell us about your project — what you're building, the problem you're solving, and your timeline..."
+                        placeholder="Ramesh Kumar"
                         required
-                        rows={5}
-                        value={form.message}
+                        type="text"
+                        value={form.name}
                       />
                     </div>
-  
-                    <button className="btn-primary mt-1 w-full justify-center" type="submit">
-                      Send via WhatsApp
-                      <ArrowRight size={15} />
-                    </button>
-                  </form>
-                )
-              ) : (
-                /* Calendly Embed */
-                <div className="w-full flex flex-col gap-4">
-                  <div className="flex flex-col gap-1">
-                    <h2 className="font-display text-2xl font-bold text-slate-900">
-                      Book a consultation
-                    </h2>
-                    <p className="text-sm text-slate-500">
-                      Pick a slot directly from our calendar to speak with an AI architect.
-                    </p>
-                  </div>
-                  <div className="w-full h-[600px] rounded-xl overflow-hidden border border-slate-200 bg-white relative">
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-50 z-0">
-                      <div className="flex flex-col items-center gap-3">
-                        <Loader2 className="animate-spin text-indigo-600" size={24} />
-                        <p className="text-sm text-slate-500">Loading booking calendar...</p>
-                      </div>
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-sm font-medium text-slate-600" htmlFor="phone">
+                        Phone number
+                      </label>
+                      <input
+                        className="rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                        id="phone"
+                        name="phone"
+                        onChange={handleChange}
+                        placeholder="+919310837724"
+                        required
+                        type="tel"
+                        value={form.phone}
+                      />
                     </div>
-                    <iframe
-                      src="https://calendly.com/risonaitech/consultation?hide_landing_page_details=1&hide_gdpr_banner=1"
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      className="relative z-10"
-                      title="Book Consultation"
-                    ></iframe>
                   </div>
-                </div>
+
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-medium text-slate-600" htmlFor="message">
+                      How can we help?
+                    </label>
+                    <textarea
+                      className="min-h-[140px] rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                      id="message"
+                      name="message"
+                      onChange={handleChange}
+                      placeholder="Tell us about your project — what you're building, the problem you're solving, and your timeline..."
+                      required
+                      rows={5}
+                      value={form.message}
+                    />
+                  </div>
+
+                  <button className="btn-primary mt-1 w-full justify-center" type="submit">
+                    Send via WhatsApp
+                    <ArrowRight size={15} />
+                  </button>
+                </form>
               )}
             </motion.div>
 
@@ -319,7 +226,7 @@ export default function ContactForm() {
                   </a>
                 </div>
               </div>
- 
+
               {/* Address */}
               <div className="card-base p-7">
                 <h3 className="font-display mb-3 text-lg font-bold text-slate-900">
