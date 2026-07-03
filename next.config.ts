@@ -117,6 +117,25 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Prevent search engine indexing of LLM metadata files
+      {
+        source: "/llms.txt",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/llms-full.txt",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 };
