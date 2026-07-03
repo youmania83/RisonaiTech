@@ -76,7 +76,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com https://launchbuff.com",
               "font-src 'self' data:",
               "connect-src 'self' https://www.googletagmanager.com",
-              "frame-src 'self' https://www.google.com",
+              "frame-src 'self' https://www.google.com https://calendly.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
