@@ -17,11 +17,6 @@ const beVietnam = Be_Vietnam_Pro({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-// Alias both CSS vars to the same family so all existing
-// font-display / font-sans references keep working unchanged.
-const display = beVietnam;
-const sans = beVietnam;
-
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
@@ -223,7 +218,7 @@ const organizationSchema = {
   image: { "@id": `${BASE_URL}/#logo` },
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, CRM infrastructure, and AI chatbot and voice agent development for enterprise efficiency.",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -272,7 +267,7 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+918368137724",
+      telephone: "+919310837724",
       contactType: "sales",
       areaServed: ["IN", "US", "GB", "AE", "SG", "AU"],
       availableLanguage: ["English", "Hindi"],
@@ -305,7 +300,7 @@ const localBusinessSchema = {
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, SaaS engineering, CRM infrastructure, and AI chatbot and voice agent development.",
   url: "https://risonaitech.com",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -357,7 +352,7 @@ const localBusinessSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+918368137724",
+    telephone: "+919310837724",
     contactType: "sales",
     email: "hello@risonaitech.com",
     availableLanguage: ["English", "Hindi"],
@@ -571,7 +566,61 @@ const docBookingProductSchema = {
     price: "120000",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "IN",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: 0,
+        currency: "INR",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "IN",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+      },
+    },
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "18",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Dr. Amit Sharma",
+      },
+      datePublished: "2026-02-15",
+      reviewBody: "DocBooking has transformed our clinic intake process. Patients love the ease of booking, and the AI integration is seamless.",
+      reviewRating: {
+        "@type": "Rating",
+        bestRating: "5",
+        ratingValue: "5",
+        worstRating: "1",
+      },
+    },
+  ],
 };
 
 const exprealityProductSchema = {
@@ -590,7 +639,61 @@ const exprealityProductSchema = {
     price: "150000",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "IN",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: 0,
+        currency: "INR",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "IN",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+      },
+    },
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "12",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Rajesh Malhotra",
+      },
+      datePublished: "2026-03-01",
+      reviewBody: "The AI location scoring and luxury real estate intelligence are exceptionally accurate. Highly recommended.",
+      reviewRating: {
+        "@type": "Rating",
+        bestRating: "5",
+        ratingValue: "5",
+        worstRating: "1",
+      },
+    },
+  ],
 };
 
 const walkthroughVideoSchema = {
@@ -613,8 +716,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${beVietnam.variable} ${beVietnam.variable}`} lang="en" suppressHydrationWarning>
+    <html className={beVietnam.variable} lang="en" suppressHydrationWarning>
       <head>
+        <link rel="mcp-actions" href="/mcp-actions.json" />
         {/* next/font/google self-hosts the typeface files at /_next/static —
             no third-party preconnects required. Removing them eliminates two
             entries from the network dependency tree. */}

@@ -93,6 +93,9 @@ export default function AiAuditTool({
         onSubmit={onSubmit}
         className="flex w-full flex-col gap-3 sm:flex-row"
         aria-label="AI search ranking audit form"
+        data-mcp-action="get-ai-visibility"
+        data-mcp-description="Analyze website visibility and ranking scores in AI search engines."
+        data-mcp-params='{"required": ["query"], "optional": []}'
       >
         <label htmlFor="ai-audit-query" className="sr-only">
           Website URL or business name
@@ -110,6 +113,8 @@ export default function AiAuditTool({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            data-mcp-param="query"
+            data-mcp-description="Website URL or business name to audit"
             placeholder={initialPlaceholder}
             maxLength={200}
             className="w-full bg-transparent text-sm text-slate-800 placeholder:text-slate-400 outline-none"

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2, Calendar } from "lucide-react";
 
@@ -12,6 +12,77 @@ export default function ContactForm() {
   const [sent, setSent] = useState(false);
   const [activeTab, setActiveTab] = useState<"message" | "schedule">("message");
 
+  useEffect(() => {
+    if (typeof window !== "undefined" && "mcpActions" in navigator) {
+      // 1. Register Proposal Request Action
+      (navigator as any).mcpActions.register({
+        id: "submit-proposal-request",
+        name: "Submit Proposal Request",
+        description: "Submit details of your project to request a fixed-price AI implementation proposal.",
+        parameters: {
+          type: "object",
+          required: ["name", "phone", "message"],
+          properties: {
+            name: { type: "string", description: "Full name of the contact person" },
+            phone: { type: "string", description: "Phone number including country code" },
+            message: { type: "string", description: "Detailed description of the project requirements, timelines, and systems you want to automate." }
+          }
+        },
+        handler: async (params: { name: string; phone: string; message: string }) => {
+          try {
+            const res = await fetch("/api/inquiries", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ ...params, type: "proposal" })
+            });
+            if (res.ok) {
+              setForm({ name: params.name, phone: params.phone, message: params.message });
+              setSent(true);
+              return { success: true, message: "Proposal request successfully recorded." };
+            }
+            return { success: false, message: "Failed to submit request to RisonAI API." };
+          } catch (e) {
+            return { success: false, message: "Network error submitting proposal: " + String(e) };
+          }
+        }
+      });
+
+      // 2. Register Book Consultation Action (Bypass Iframe)
+      (navigator as any).mcpActions.register({
+        id: "book-consultation",
+        name: "Book Live Consultation",
+        description: "Schedule a live video consultation call to discuss custom AI automation systems.",
+        parameters: {
+          type: "object",
+          required: ["name", "phone", "message"],
+          properties: {
+            name: { type: "string", description: "Full name" },
+            phone: { type: "string", description: "Contact phone number" },
+            message: { type: "string", description: "Preferred dates/times and consultation topic details" }
+          }
+        },
+        handler: async (params: { name: string; phone: string; message: string }) => {
+          try {
+            const res = await fetch("/api/inquiries", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ ...params, type: "consultation" })
+            });
+            if (res.ok) {
+              setActiveTab("message");
+              setForm({ name: params.name, phone: params.phone, message: params.message });
+              setSent(true);
+              return { success: true, message: "Consultation request successfully recorded." };
+            }
+            return { success: false, message: "Failed to schedule consultation via RisonAI API." };
+          } catch (e) {
+            return { success: false, message: "Network error booking consultation: " + String(e) };
+          }
+        }
+      });
+    }
+  }, []);
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
@@ -21,7 +92,7 @@ export default function ContactForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const msg = `Hi Risonai Tech!%0AName: ${encodeURIComponent(form.name)}%0APhone: ${encodeURIComponent(form.phone)}%0AMessage: ${encodeURIComponent(form.message)}`;
-    window.open(`https://wa.me/918368137724?text=${msg}`, "_blank");
+    window.open(`https://wa.me/919310837724?text=${msg}`, "_blank");
     setSent(true);
   }
 
@@ -148,7 +219,7 @@ export default function ContactForm() {
                           id="phone"
                           name="phone"
                           onChange={handleChange}
-                          placeholder="+918368137724"
+                          placeholder="+919310837724"
                           required
                           type="tel"
                           value={form.phone}

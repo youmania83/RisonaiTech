@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "site": "https://risonaitech.com",
+  "actions": [
+    {
+      "id": "get-ai-visibility",
+      "name": "Get AI Visibility Score",
+      "description": "Analyze website visibility and ranking scores in AI search engines.",
+      "method": "declarative",
+      "endpoint": "/tools/ai-search-audit",
+      "parameters": {
+        "required": ["query"]
+      }
+    },
+    {
+      "id": "submit-proposal-request",
+      "name": "Submit Proposal Request",
+      "description": "Submit details of your project to request a fixed-price AI implementation proposal.",
+      "method": "imperative",
+      "parameters": {
+        "required": ["name", "phone", "message"]
+      }
+    },
+    {
+      "id": "book-consultation",
+      "name": "Book Live Consultation",
+      "description": "Schedule a live video consultation call to discuss custom AI automation systems.",
+      "method": "imperative",
+      "parameters": {
+        "required": ["name", "phone", "message"]
+      }
+    }
+  ]
+}
