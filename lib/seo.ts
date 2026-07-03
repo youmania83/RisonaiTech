@@ -210,4 +210,70 @@ export function graph(...nodes: object[]) {
   };
 }
 
+/**
+ * Build a Speakable JSON-LD schema for voice search crawlers.
+ */
+export function speakableSchema(cssSelectors: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Speakable",
+    "cssSelector": cssSelectors,
+  };
+}
+
+/**
+ * Build a VideoObject JSON-LD schema for embedded videos.
+ */
+export function videoObjectSchema(args: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string; // ISO 8601
+  contentUrl: string;
+  embedUrl: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: args.name,
+    description: args.description,
+    thumbnailUrl: args.thumbnailUrl,
+    uploadDate: args.uploadDate,
+    contentUrl: args.contentUrl,
+    embedUrl: args.embedUrl,
+  };
+}
+
+/**
+ * Build a Product JSON-LD schema for software products (e.g. DocBooking, Expreality).
+ */
+export function productSchema(args: {
+  id: string; // relative or absolute
+  name: string;
+  description: string;
+  price: string;
+  currency: string;
+  imageUrl?: string;
+}) {
+  const fullId = args.id.startsWith("http") ? args.id : `${BASE_URL}${args.id}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": ["Product", "IndividualProduct"],
+    "@id": `${fullId}#product`,
+    name: args.name,
+    description: args.description,
+    ...(args.imageUrl ? { image: args.imageUrl } : {}),
+    brand: {
+      "@type": "Brand",
+      name: "RisonAI Tech",
+    },
+    offers: {
+      "@type": "Offer",
+      price: args.price,
+      priceCurrency: args.currency,
+      availability: "https://schema.org/InStock",
+    },
+  };
+}
+
 export const BASE = BASE_URL;

@@ -237,12 +237,39 @@ const organizationSchema = {
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
   slogan: "AI systems that work while you sleep.",
   knowsAbout: [
-    "AI automation",
+    {
+      "@type": "Thing",
+      name: "AI automation",
+      sameAs: "https://en.wikipedia.org/wiki/Automation"
+    },
+    {
+      "@type": "Thing",
+      name: "n8n workflow automation",
+      sameAs: "https://www.wikidata.org/wiki/Q105741639"
+    },
+    {
+      "@type": "Thing",
+      name: "LangChain development",
+      sameAs: "https://www.wikidata.org/wiki/Q117812543"
+    },
+    {
+      "@type": "Thing",
+      name: "Generative AI implementation",
+      sameAs: "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+    },
+    {
+      "@type": "Thing",
+      name: "Retrieval-Augmented Generation",
+      sameAs: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+    },
+    {
+      "@type": "Thing",
+      name: "Large Language Models",
+      sameAs: "https://en.wikipedia.org/wiki/Large_language_model"
+    },
     "Agentic AI systems",
     "Autonomous AI agents",
-    "n8n workflow automation",
     "LangGraph development",
-    "LangChain development",
     "Multi-agent AI systems",
     "RAG chatbot development",
     "WhatsApp Business API automation",
@@ -254,15 +281,13 @@ const organizationSchema = {
     "AI customer support agents",
     "Business process automation",
     "AI-powered resume screening",
-    "Generative AI implementation",
     "AI for Indian SMBs and MSMEs",
     "AI workflow orchestration",
     "MCP server development",
     "OpenAI Agents SDK",
     "CrewAI development",
     "AI SDR agent",
-    "LLM integration",
-    "Retrieval-Augmented Generation",
+    "LLM integration"
   ],
   contactPoint: [
     {
@@ -737,6 +762,16 @@ export default function RootLayout({
                 docBookingProductSchema,
                 exprealityProductSchema,
                 walkthroughVideoSchema,
+                {
+                  "@type": "WebPage",
+                  "@id": "https://risonaitech.com/#webpage",
+                  "url": "https://risonaitech.com",
+                  "name": "RisonAI Tech",
+                  "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", "p.speakable-summary"]
+                  }
+                }
               ],
             }),
           }}
