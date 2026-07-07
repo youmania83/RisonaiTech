@@ -2,7 +2,7 @@
 title: "AI Automation Systems — Replace Manual Work with AI Workflows"
 description: "RisonAI Tech builds AI automation systems — LLM intake agents, WhatsApp automation, CRM syncs, and agentic workflows. Pricing from Rs 30,000."
 url: "https://risonaitech.com/services/ai-automation"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## AI Automation Systems

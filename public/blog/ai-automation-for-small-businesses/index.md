@@ -2,7 +2,7 @@
 title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)"
 description: "A practical guide for small businesses to automate workflows, qualify leads, and save manual hours."
 url: "https://risonaitech.com/blog/ai-automation-for-small-businesses"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## AI Automation for Small Business

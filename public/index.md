@@ -2,7 +2,7 @@
 title: "RisonAI Tech — AI Automation & SaaS Development Company India"
 description: "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots that generate revenue and automate businesses across India."
 url: "https://risonaitech.com"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## What RisonAI Tech Does
@@ -32,6 +32,6 @@ Expreality — Luxury real estate intelligence platform with AI location scoring
 
 - Website: https://risonaitech.com
 - Email: hello@risonaitech.com
-- Phone: +91 83681 37724
-- WhatsApp: https://wa.me/918368137724
+- Phone: +91 93108 37724
+- WhatsApp: https://wa.me/919310837724
 - Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103

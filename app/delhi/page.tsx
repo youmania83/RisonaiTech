@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/delhi#localbusiness",
   name: "RisonAI Tech — Delhi Services",
   url: "https://risonaitech.com/delhi",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS, CRM, and chatbot development services for Delhi businesses, delivered remotely from RisonAI Tech's Panipat headquarters.",

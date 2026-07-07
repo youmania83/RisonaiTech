@@ -73,7 +73,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         aria-hidden={!isMobileMenuOpen}
-        className={`border-t border-[#E5E7EB] bg-white px-4 pt-2 pb-4 lg:hidden transition-[opacity,transform,visibility] duration-200 ease-out ${
+        className={`absolute top-full inset-x-0 border-t border-b border-[#E5E7EB] bg-white px-4 pt-2 pb-6 lg:hidden shadow-lg transition-[opacity,transform,visibility] duration-200 ease-out ${
           isMobileMenuOpen
             ? "translate-y-0 opacity-100 visible"
             : "-translate-y-2 opacity-0 pointer-events-none invisible"

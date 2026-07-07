@@ -4,13 +4,17 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { breadcrumbSchema, graph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation Blog India — Guides & Insights | RisonAI Tech" },
+  title: { absolute: "AI Automation Blog — 2026 Guides on AI Agents, Chatbots & Workflows | RisonAI Tech" },
   description:
-    "Practical 2026 guides on AI automation, AI resume screening for HR teams, SaaS development costs, and WhatsApp systems for Indian businesses.",
+    "Practical 2026 guides on AI automation, agentic AI agents, WhatsApp chatbots, voice AI, AI resume screening & GEO optimization for Indian businesses — written by engineers who ship production systems.",
   keywords: [
     "AI automation blog India",
-    "SaaS development guide India",
-    "WhatsApp chatbot tutorial",
+    "agentic AI guides India",
+    "WhatsApp chatbot tutorial India",
+    "AI automation guides 2026",
+    "AI agent development blog",
+    "GEO optimization India",
+    "AEO optimization India",
     "CRM automation India",
     "AI for small business India",
     "product engineering blog",
@@ -19,16 +23,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "Blog — AI Automation & SaaS Insights | RisonAI Tech",
+    title: "AI Automation Blog — 2026 Guides on AI Agents, Chatbots & Workflows | RisonAI Tech",
     description:
-      "Practical guides on AI automation, SaaS development, and chatbot deployment for Indian businesses.",
+      "Practical guides on AI automation, agentic AI, WhatsApp chatbots, voice AI, and GEO optimization for Indian businesses.",
     url: "https://risonaitech.com/blog",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation & SaaS Blog | RisonAI Tech",
-    description: "Practical guides on AI automation, WhatsApp chatbots, SaaS dev costs, and CRM integration for Indian businesses.",
+    title: "AI Automation Blog 2026 | RisonAI Tech",
+    description: "Practical guides on AI automation, agentic AI, WhatsApp chatbots, voice AI, and GEO for Indian businesses.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
 };
@@ -190,6 +194,19 @@ export const posts = [
 ];
 
 const jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    "@id": "https://risonaitech.com/blog/#collection",
+    name: "RisonAI Tech Blog — AI Automation, Agentic AI & GEO Guides",
+    url: "https://risonaitech.com/blog",
+    description:
+      "Practical 2026 guides on AI automation, agentic AI agents, WhatsApp chatbots, voice AI, AI resume screening, and GEO optimization — written by engineers who ship production AI systems for Indian businesses.",
+    publisher: {
+      "@type": "Organization",
+      name: "RisonAI Tech",
+      url: "https://risonaitech.com",
+    },
+  },
   breadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Blog", url: "/blog" },
@@ -224,7 +241,17 @@ export default function BlogPage() {
       {/* Posts */}
       <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container-site">
-          <div className="mx-auto max-w-3xl grid gap-6">
+          <div className="mx-auto max-w-3xl">
+            <p className="mb-8 text-sm leading-relaxed text-slate-500 border-b border-slate-200/50 pb-8">
+              Over 17 guides covering{" "}
+              <Link href="/services/ai-automation" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-800">AI automation</Link>,{" "}
+              <Link href="/services/ai-agent" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-800">agentic AI agents</Link>,{" "}
+              <Link href="/services/whatsapp-automation" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-800">WhatsApp automation</Link>,{" "}
+              <Link href="/services/chatbot-development" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-800">chatbot development</Link>,{" "}
+              <Link href="/services/resume-screening" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-800">AI resume screening</Link>,{" "}
+              and more — written by engineers who deploy these systems for Indian businesses.
+            </p>
+            <div className="grid gap-6">
             {posts.map((post) => (
               <Link
                 key={post.slug}
@@ -264,6 +291,7 @@ export default function BlogPage() {
                 </div>
               </Link>
             ))}
+            </div>
           </div>
         </div>
       </section>

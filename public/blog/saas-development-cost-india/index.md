@@ -2,7 +2,7 @@
 title: "How Much Does SaaS Development Cost in India? (2025 Breakdown)"
 description: "A transparent breakdown of MVP, multi-tenant, and enterprise SaaS development costs and timelines in India."
 url: "https://risonaitech.com/blog/saas-development-cost-india"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## SaaS Development Costs in India

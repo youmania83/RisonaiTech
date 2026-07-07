@@ -2,14 +2,14 @@
 title: "Contact RisonAI Tech — Book Free AI Consultation"
 description: "Contact RisonAI Tech for a free 30-minute consultation for AI automation, SaaS development, CRM, or chatbot projects."
 url: "https://risonaitech.com/contact"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## Contact RisonAI Tech
 
 Email: hello@risonaitech.com
-Phone: +91 83681 37724
-WhatsApp: https://wa.me/918368137724
+Phone: +91 93108 37724
+WhatsApp: https://wa.me/919310837724
 Website: https://risonaitech.com/contact
 
 Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India

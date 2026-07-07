@@ -1,0 +1,27 @@
+{
+  "city": "Chicago",
+  "country": "USA",
+  "businessDistricts": [
+    "The Loop",
+    "River North",
+    "Fulton Market",
+    "Streeterville",
+    "Lincoln Park",
+    "West Loop"
+  ],
+  "industries": [
+    "Finance & Trading",
+    "Logistics & Supply Chain",
+    "Manufacturing & Metals",
+    "Healthcare & Medical",
+    "Real Estate & Corporate",
+    "Retail & E-commerce"
+  ],
+  "nearbyCities": [
+    "Naperville",
+    "Evanston",
+    "Schaumburg",
+    "Oak Park"
+  ],
+  "language": "English"
+}

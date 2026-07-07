@@ -1,0 +1,8 @@
+{
+  "city": "Mumbai",
+  "country": "India",
+  "businessDistricts": ["BKC", "Andheri", "Powai", "Nariman Point", "Lower Parel"],
+  "industries": ["Finance", "Media", "Real Estate", "Retail"],
+  "nearbyCities": ["Navi Mumbai", "Thane"],
+  "language": "English"
+}

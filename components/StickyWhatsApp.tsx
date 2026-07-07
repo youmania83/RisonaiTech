@@ -21,7 +21,7 @@ export default function StickyWhatsApp() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const whatsappUrl = `https://wa.me/918368137724?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/919310837724?text=${encodeURIComponent(
     "Hi RisonAI Tech, Please send me my AI Visibility Report."
   )}`;
 

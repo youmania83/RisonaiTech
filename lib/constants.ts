@@ -23,9 +23,9 @@ export const siteConfig = {
     "Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
   email: "hello@risonaitech.com",
-  phone: "+918368137724",
+  phone: "+919310837724",
   whatsappUrl:
-    "https://wa.me/918368137724?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
+    "https://wa.me/919310837724?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
   socials: {
     twitter: "https://twitter.com/risonaitech",
     linkedin: "https://linkedin.com/company/risonaitech",
@@ -173,6 +173,23 @@ export const services: Service[] = [
       "Stripe / Razorpay subscriptions",
       "Custom admin portals & analytics",
       "Full code ownership & deployment",
+    ],
+  },
+  {
+    id: "managed-ai-services",
+    icon: Cpu,
+    title: "Managed AI Services (AIOps)",
+    short: "Continuous monitoring, prompt drift tuning, and vector database updates.",
+    description: "Proactive monthly management to keep your LLMs, agentic pipelines, n8n automations, and vector databases running securely and efficiently.",
+    problem: "AI pipelines degrade as model behavior drifts, APIs update, database indexes go stale, and costs spike.",
+    solution: "Continuous telemetry monitoring, prompt engineering calibration, RAG audits, and webhook repairs under strict SLAs.",
+    outcome: "99.9% uptime SLA and stabilized, optimized monthly token budgets.",
+    price: "From ₹15,000 / mo",
+    bullets: [
+      "24/7 telemetry monitoring & error logging",
+      "Prompt engineering drift calibration",
+      "RAG vector database re-indexing & updates",
+      "n8n / Make workflow scenario repairs",
     ],
   },
 ];

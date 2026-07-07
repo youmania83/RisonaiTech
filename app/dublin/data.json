@@ -1,0 +1,27 @@
+{
+  "city": "Dublin",
+  "country": "Ireland",
+  "businessDistricts": [
+    "Silicon Docks",
+    "IFSC",
+    "Sandyford",
+    "City Centre",
+    "Dublin 2",
+    "Dublin 4"
+  ],
+  "industries": [
+    "SaaS & Tech Startups",
+    "Finance & FinTech",
+    "Real Estate & Housing",
+    "Retail & E-commerce",
+    "Logistics & Supply Chain",
+    "Healthcare & Biotech"
+  ],
+  "nearbyCities": [
+    "Howth",
+    "Dún Laoghaire",
+    "Bray",
+    "Malahide"
+  ],
+  "language": "English"
+}

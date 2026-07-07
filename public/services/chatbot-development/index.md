@@ -2,7 +2,7 @@
 title: "AI Chatbot Development — WhatsApp and Website Chatbots with RAG"
 description: "RisonAI Tech builds AI chatbots trained on business data using RAG. WhatsApp and website bots for lead qualification, support, and booking. From Rs 20,000."
 url: "https://risonaitech.com/services/chatbot-development"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## AI Chatbot Development

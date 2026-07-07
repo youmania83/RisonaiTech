@@ -341,8 +341,8 @@ const sections = [
           </p>
           <p>
             Phone:{" "}
-            <a className="text-[#4F46E5] hover:underline" href="tel:+918368137724">
-              +91 83681 37724
+            <a className="text-[#4F46E5] hover:underline" href="tel:+919310837724">
+              +91 93108 37724
             </a>
           </p>
         </address>

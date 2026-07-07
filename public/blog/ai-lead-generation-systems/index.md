@@ -2,7 +2,7 @@
 title: "AI Lead Generation Automation: Build a System That Never Sleeps"
 description: "The 5-layer architecture of an automated lead qualification system that responds in under 60 seconds."
 url: "https://risonaitech.com/blog/ai-lead-generation-systems"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## Building an Automated Lead System

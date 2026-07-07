@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/panipat#localbusiness",
   name: "RisonAI Tech — Panipat Headquarters",
   url: "https://risonaitech.com/panipat",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "RisonAI Tech is headquartered in Panipat, Haryana, providing AI automation, CRM, chatbot, and SaaS development for SMEs across Panipat and Haryana.",

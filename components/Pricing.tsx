@@ -1,5 +1,3 @@
-"use client";
-
 import { Check, MessageCircle, Sparkles } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -64,7 +62,7 @@ export default function Pricing() {
     const text = encodeURIComponent(
       `Hi RisonAI Tech,\n\nI want to discuss a project. I am interested in the ${pkgName} package. Please share details on getting a fixed-price quote.`
     );
-    return `https://wa.me/918368137724?text=${text}`;
+    return `https://wa.me/919310837724?text=${text}`;
   };
 
   return (
@@ -164,7 +162,7 @@ export default function Pricing() {
           <Reveal delay={0.3}>
             <div className="inline-flex flex-col items-center gap-2">
               <a
-                href="https://wa.me/918368137724?text=Hi%20RisonAI%20Tech%2C%20I%20want%20to%20get%20a%20fixed%20quote%20for%20our%20automation%20project."
+                href="https://wa.me/919310837724?text=Hi%20RisonAI%20Tech%2C%20I%20want%20to%20get%20a%20fixed%20quote%20for%20our%20automation%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

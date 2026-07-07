@@ -2,7 +2,7 @@
 title: "The Employee Who Never Sleeps: How AI Saves Indian Owners Lakhs Every Year"
 description: "Three real stories of Indian SMEs using AI workers to eliminate notice periods, TDS liabilities, and manual data errors."
 url: "https://risonaitech.com/blog/ai-employee-never-sleeps"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## The AI Employee

@@ -45,7 +45,7 @@ SMART BEHAVIOUR:
 
 Company Info:
 - Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, AI Agent Development.
-- Location: Panipat, Haryana. Serving Delhi NCR and globally.
+- Location: Headquartered in Panipat, Haryana. Serving Delhi NCR, Mumbai, Chandigarh, Noida, Gurgaon, Pune, Hyderabad, Chennai, Jaipur, Ahmedabad, Indore, London, New York, New Jersey, Dublin, Sydney, Melbourne, San Francisco, Chicago, Austin, Seattle, Los Angeles, Houston, and globally.
 - Founder: Yogesh Kumar Wadhwa
 `;
 

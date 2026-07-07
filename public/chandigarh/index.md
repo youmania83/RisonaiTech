@@ -2,7 +2,7 @@
 title: "AI Automation & SaaS Development in Chandigarh — RisonAI Tech"
 description: "RisonAI Tech provides AI workflow automation, CRM software, and custom SaaS engineering for Chandigarh, Mohali, and Panchkula businesses."
 url: "https://risonaitech.com/chandigarh"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## RisonAI Tech — Chandigarh Services
@@ -15,4 +15,4 @@ Services in Chandigarh:
 - SaaS Platform Development: from Rs 1,20,000
 - WhatsApp Triage Chatbots: from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724
+Contact: hello@risonaitech.com | +91 93108 37724

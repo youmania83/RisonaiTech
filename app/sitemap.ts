@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           } else if (currentRoute.startsWith("/tools")) {
             priority = 0.9;
             changeFrequency = "weekly";
-          } else if (["/delhi", "/gurgaon", "/panipat", "/jaipur", "/ahmedabad", "/indore", "/chandigarh", "/london", "/new-york", "/new-jersey"].includes(currentRoute)) {
+          } else if (["/delhi", "/gurgaon", "/panipat", "/jaipur", "/ahmedabad", "/indore", "/chandigarh", "/london", "/new-york", "/new-jersey", "/mumbai", "/dublin", "/sydney", "/melbourne", "/san-francisco", "/chicago", "/austin", "/seattle", "/los-angeles", "/houston", "/pune", "/hyderabad", "/chennai", "/noida", "/ranchi", "/patna"].includes(currentRoute)) {
             priority = 0.8;
             changeFrequency = "monthly";
           } else if (currentRoute === "/about" || currentRoute === "/products") {

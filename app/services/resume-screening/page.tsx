@@ -19,15 +19,20 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Resume Screening India | Candidate Screening Automation | RisonAI Tech" },
+  title: { absolute: "AI Resume Screening & HR Automation India | Skills Graph Matching | RisonAI Tech" },
   description:
-    "RisonAI Tech builds AI-powered resume screening systems for recruiters and hiring teams: CV parsing, Skills Graph matching, contextual evaluation, ATS integration, and ranked shortlists that save 70-80% of screening time. From ₹35,000.",
+    "AI-powered resume screening for HR teams in India — Skills Graph matching, contextual evaluation, ATS integration & recruiter-in-the-loop controls. Cut first-pass screening time by 70–80%. From ₹35,000.",
   keywords: [
     "AI-powered resume screening",
     "resume screening automation India",
     "AI resume screening India",
-    "candidate screening automation",
+    "HR automation India",
     "AI hiring automation India",
+    "AI recruiting India",
+    "AI hiring tool India",
+    "hiring automation agency India",
+    "automated resume screening software",
+    "candidate screening automation",
     "Skills Graph hiring",
     "Contextual Evaluation recruiting",
     "ATS integration India",
@@ -38,17 +43,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/resume-screening" },
   openGraph: {
-    title: "AI Resume Screening India | Candidate Screening Automation | RisonAI Tech",
+    title: "AI Resume Screening & HR Automation India | Skills Graph Matching | RisonAI Tech",
     description:
-      "AI-powered resume screening with Skills Graph matching, contextual evaluation, ATS integration, and recruiter review controls. Save 70-80% of first-pass screening time.",
+      "AI-powered resume screening with Skills Graph matching, contextual evaluation, ATS integration, and recruiter review controls. Save 70–80% of first-pass screening time. From ₹35,000.",
     url: "https://risonaitech.com/services/resume-screening",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Resume Screening India | RisonAI Tech",
+    title: "AI Resume Screening & HR Automation India | RisonAI Tech",
     description:
-      "Parse resumes, rank candidates, and route recruiter-ready shortlists automatically. 70-80% less first-pass screening time.",
+      "Parse resumes, rank candidates, and route recruiter-ready shortlists automatically. 70–80% less first-pass screening time. From ₹35,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],

@@ -2,7 +2,7 @@
 title: "How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews"
 description: "A practical guide to audit your website's visibility in AI search engines and answer engines in 2026."
 url: "https://risonaitech.com/blog/how-to-check-if-your-website-appears-in-chatgpt"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## Auditing Your Website's AI Visibility

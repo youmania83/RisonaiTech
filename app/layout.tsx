@@ -725,14 +725,14 @@ const walkthroughVideoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": `${BASE_URL}/#walkthrough-video`,
-  name: "RisonAI Tech AI Systems & CRM Walkthrough",
-  description: "A complete walkthrough of the AI automation workflows, n8n pipelines, and CRM systems engineered by RisonAI Tech.",
+  name: "RisonAI Tech AI Automation Systems — Product Demo",
+  description: "A walkthrough of AI automation workflows, agentic AI pipelines, WhatsApp automation systems, and CRM integrations engineered by RisonAI Tech for Indian businesses.",
   thumbnailUrl: [
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    `${BASE_URL}/brand/risonaitech-icon-512.png`,
   ],
-  uploadDate: "2026-03-10T08:00:00+05:30",
+  uploadDate: "2026-06-01T08:00:00+05:30",
   duration: "PT5M30S",
-  embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  contentUrl: `${BASE_URL}/contact`,
 };
 
 export default function RootLayout({

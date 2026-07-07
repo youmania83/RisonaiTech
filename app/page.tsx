@@ -20,18 +20,27 @@ import Pricing from "@/components/Pricing";
 import AiSearchProof from "@/components/AiSearchProof";
 import HumanVsAi from "@/components/HumanVsAi";
 import StickyWhatsApp from "@/components/StickyWhatsApp";
+import ManagedAiServices from "@/components/ManagedAiServices";
 
 export const metadata: Metadata = {
-  title: "RisonAI Tech | AI Automation Agency & Agentic AI Systems India",
+  title: "RisonAI Tech | India's AI Automation Agency & Agentic AI Systems — From ₹30,000",
   description:
-    "RisonAI Tech is India's AI workflow automation agency delivering custom AI automation services, AI integration services for business, agentic AI systems, AI chatbot and voice agent development, and SaaS platforms from Delhi NCR.",
+    "India's leading AI automation agency — custom AI agents, agentic workflows, WhatsApp AI, voice AI & chatbot development. 40+ systems shipped. Fixed price from ₹30,000. Delhi NCR.",
   keywords: [
     "AI workflow automation agency",
+    "AI automation company India",
     "custom AI automation services",
     "AI integration services for business",
     "business process automation agency",
     "AI chatbot and voice agent development",
     "Agentic AI",
+    "autonomous AI agents India",
+    "AI agent development company India",
+    "enterprise AI solutions India",
+    "AI consulting company India",
+    "AI workforce India",
+    "AI copilot India",
+    "custom AI agents India",
     "Skills Graph",
     "Contextual Evaluation",
     "AI-powered resume screening",
@@ -91,6 +100,7 @@ const aiSearchPrompts = [
     prompt: "Best AI automation for small business workflows",
     intent: "Commercial",
     href: "/blog/ai-automation-for-small-businesses",
+    linkLabel: "Read AI automation for small businesses",
     answer:
       "For most small businesses, the fastest-payback workflows are lead qualification, FAQ support, invoice reminders, and weekly reporting because they save owner time immediately.",
   },
@@ -98,6 +108,7 @@ const aiSearchPrompts = [
     prompt: "How to screen resumes with AI for HR teams",
     intent: "Informational",
     href: "/blog/ai-resume-screening-india",
+    linkLabel: "Read the AI resume screening guide",
     answer:
       "AI resume screening works best when the system parses each CV, scores candidates against the role, and generates a recruiter-ready shortlist without manual first-pass review.",
   },
@@ -105,6 +116,7 @@ const aiSearchPrompts = [
     prompt: "AI workflow automation for real estate agencies",
     intent: "Commercial",
     href: "/blog/ai-automation-real-estate-india",
+    linkLabel: "Explore real estate AI automation",
     answer:
       "Real estate teams benefit most from instant portal lead response, WhatsApp qualification, site-visit scheduling, and automated follow-up across the full property pipeline.",
   },
@@ -112,6 +124,7 @@ const aiSearchPrompts = [
     prompt: "Replace manual data entry with AI agent",
     intent: "Informational",
     href: "/services/crm-development",
+    linkLabel: "See AI CRM development services",
     answer:
       "AI agents can capture structured details from forms, emails, and chats, then write clean records into a CRM without repeated manual copy-paste.",
   },
@@ -119,6 +132,7 @@ const aiSearchPrompts = [
     prompt: "AI customer support agent for small business",
     intent: "Commercial",
     href: "/services/chatbot-development",
+    linkLabel: "See AI chatbot development pricing",
     answer:
       "A small-business support agent should answer repetitive questions instantly, escalate edge cases to humans, and stay grounded in your real product or service knowledge.",
   },
@@ -126,6 +140,7 @@ const aiSearchPrompts = [
     prompt: "How to build custom AI agent for my website",
     intent: "Informational",
     href: "/services/ai-agent",
+    linkLabel: "Explore AI agent development",
     answer:
       "A custom website AI agent needs clear business goals, trusted source data, guardrails, handoff logic, and analytics before it should be exposed to customers.",
   },
@@ -133,6 +148,7 @@ const aiSearchPrompts = [
     prompt: "AI SaaS platform development for startups India",
     intent: "Commercial",
     href: "/services/saas-development",
+    linkLabel: "See AI SaaS development services",
     answer:
       "Indian startups usually need a multi-tenant SaaS base with billing, RBAC, admin tools, and selective AI features instead of an overbuilt first version.",
   },
@@ -140,6 +156,7 @@ const aiSearchPrompts = [
     prompt: "Best AI tools for healthcare clinic operations",
     intent: "Commercial",
     href: "/products",
+    linkLabel: "View AI products for healthcare",
     answer:
       "Clinics usually get the highest ROI from AI-powered appointment booking, WhatsApp reminders, patient intake automation, and support bots connected to their operations stack.",
   },
@@ -147,6 +164,7 @@ const aiSearchPrompts = [
     prompt: "AI automation ROI for D2C brands",
     intent: "Informational",
     href: "/services/ai-automation",
+    linkLabel: "See AI automation ROI benchmarks",
     answer:
       "D2C ROI typically comes from faster lead response, support deflection, order-status automation, and recovering revenue from repetitive customer communication flows.",
   },
@@ -154,6 +172,7 @@ const aiSearchPrompts = [
     prompt: "Alternatives to manual CRM data entry AI",
     intent: "Commercial",
     href: "/services/crm-development",
+    linkLabel: "See AI-assisted CRM workflows",
     answer:
       "The best alternative is not another spreadsheet process. It is an AI-assisted CRM flow that captures, enriches, and routes records automatically at intake.",
   },
@@ -216,6 +235,10 @@ export default function HomePage() {
           Verifiable profiles are available on GitHub (https://github.com/risonaitech), LinkedIn (https://linkedin.com/company/risonaitech), and Twitter (https://twitter.com/risonaitech).
           GSTIN number: 06CDBPS8926D2ZE.
         </p>
+        <h2>Managed AI Services & AIOps Retainers</h2>
+        <p>
+          RisonAI Tech provides managed AI operations, telemetry monitoring, prompt drift tuning, model regression testing, vector database RAG re-indexing, n8n and Make workflow maintenance, and AI security compliance. Managed AI support retainers start at ₹15,000 / $299 per month for small businesses, and scale to Growth AIOps (₹35,000 / $699) and Enterprise AIOps (₹75,000 / $1,499) with dedicated SLAs and Slack support channels.
+        </p>
         <h2>Freshness & Recent Blog Updates (2026)</h2>
         <ul>
           <li>"WhatsApp Chatbot for Business in India" - Published June 15, 2026</li>
@@ -233,6 +256,8 @@ export default function HomePage() {
       <HumanVsAi />
 
       <Services />
+
+      <ManagedAiServices />
 
       <Pricing />
 
@@ -277,7 +302,7 @@ export default function HomePage() {
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-slate-650">{item.answer}</p>
                   <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-purple">
-                    Read the relevant page <ArrowRight size={14} />
+                    {item.linkLabel ?? "Explore this guide"} <ArrowRight size={14} />
                   </span>
                 </Link>
               ))}
@@ -368,7 +393,43 @@ export default function HomePage() {
             <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/panipat">
               Panipat
             </Link>
-            {", Noida, Mumbai, Bengaluru, and across India. Explore "}
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/noida">
+              Noida
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/mumbai">
+              Mumbai
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/pune">
+              Pune
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/chennai">
+              Chennai
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/sydney">
+              Sydney
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/dublin">
+              Dublin
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/los-angeles">
+              Los Angeles
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/ranchi">
+              Ranchi
+            </Link>
+            {", "}
+            <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/patna">
+              Patna
+            </Link>
+            {" and across India & Australia. Explore "}
             <Link className="text-brand-purple underline underline-offset-2 hover:text-indigo-500 transition-colors" href="/#case-studies">
               proof of work
             </Link>

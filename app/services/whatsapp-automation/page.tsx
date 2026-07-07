@@ -19,12 +19,14 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech" },
+  title: { absolute: "WhatsApp AI Automation & Chatbot India | Business API & CRM Workflows | RisonAI Tech" },
   description:
-    "RisonAI Tech builds AI-powered WhatsApp automation on the official Business API — agentic lead capture bots, CRM sync, intelligent customer support, and broadcast campaigns for Indian businesses. From ₹25,000.",
+    "India's WhatsApp AI automation experts — agentic lead bots, CRM sync, 24/7 support automation on the official WhatsApp Business API. Healthcare, real estate, e-commerce. From ₹25,000.",
   keywords: [
     "WhatsApp automation India",
     "WhatsApp AI automation India",
+    "WhatsApp chatbot India",
+    "WhatsApp AI agent India",
     "WhatsApp agentic bot India",
     "WhatsApp Business API automation",
     "WhatsApp chatbot development India",
@@ -36,18 +38,21 @@ export const metadata: Metadata = {
     "WhatsApp drip campaign India",
     "WhatsApp lead generation India",
     "WhatsApp marketing automation India",
+    "WhatsApp automation for real estate India",
+    "WhatsApp automation for healthcare India",
+    "WhatsApp automation for ecommerce India",
   ],
   alternates: { canonical: "/services/whatsapp-automation" },
   openGraph: {
-    title: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech",
+    title: "WhatsApp AI Automation & Chatbot India | Business API & CRM Workflows | RisonAI Tech",
     description:
-      "AI-powered WhatsApp automation — agentic lead capture, CRM sync, intelligent support bots, and broadcast campaigns on the official Business API. From ₹25,000.",
+      "AI-powered WhatsApp automation — agentic lead bots, CRM sync, intelligent support bots, and broadcast campaigns on the official Business API. From ₹25,000.",
     url: "https://risonaitech.com/services/whatsapp-automation",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp AI Automation India | Bots & CRM Workflows | RisonAI Tech",
+    title: "WhatsApp AI Automation & Chatbot India | Business API & CRM Workflows | RisonAI Tech",
     description: "AI-powered WhatsApp Business API: agentic lead bots, CRM sync, 24/7 support automation. From ₹25,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
@@ -434,6 +439,12 @@ export default function WhatsAppAutomationPage() {
             </Link>
             <Link className="btn-outline text-sm" href="/panipat">
               Panipat
+            </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna
             </Link>
             <Link className="btn-outline text-sm" href="/contact">
               Book WhatsApp Audit

@@ -2,7 +2,7 @@
 title: "AI and SaaS Development in Indore — RisonAI Tech"
 description: "RisonAI Tech serves Indore-based businesses, traders, and exporters with custom AI automation, WhatsApp workflows, and SaaS product engineering."
 url: "https://risonaitech.com/indore"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## RisonAI Tech — Indore Services
@@ -15,4 +15,4 @@ Services in Indore:
 - Custom CRM Systems: from Rs 40,000
 - SaaS MVP Engineering: from Rs 1,20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724
+Contact: hello@risonaitech.com | +91 93108 37724

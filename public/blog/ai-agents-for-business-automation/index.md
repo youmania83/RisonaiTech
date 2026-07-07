@@ -2,7 +2,7 @@
 title: "AI Agents for Business: What They Are, What They Cost, and How to Deploy Them"
 description: "The complete guide to planning and deploying autonomous AI agents in enterprise workflows."
 url: "https://risonaitech.com/blog/ai-agents-for-business-automation"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## Deploying AI Agents

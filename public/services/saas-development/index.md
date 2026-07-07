@@ -2,7 +2,7 @@
 title: "SaaS Development — Build Production-Ready SaaS in 8–16 Weeks"
 description: "RisonAI Tech builds multi-tenant SaaS platforms with billing, admin dashboards, and AI features. MVP from Rs 1,20,000. Delhi NCR."
 url: "https://risonaitech.com/services/saas-development"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## SaaS Platform Development

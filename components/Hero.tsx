@@ -8,7 +8,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-white pt-[64px]">
+    <section className="relative flex min-h-screen w-full items-start md:items-center justify-center overflow-hidden bg-white pt-[64px]">
       {/* Very subtle dot grid — barely visible, editorial feel */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -30,7 +30,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="container-site relative z-10 w-full py-24 flex flex-col items-center text-center">
+      <div className="container-site relative z-10 w-full py-12 md:py-24 flex flex-col items-center text-center">
         {/* Badge/Pill */}
         <div
           className="hero-fade-up mb-7 inline-flex items-center gap-2 rounded-full border border-orange-500/15 bg-orange-500/[0.02] px-4 py-1.5"
@@ -46,7 +46,7 @@ export default function Hero() {
         <h1 className="font-display text-5xl font-extrabold leading-[1.08] tracking-tight text-[#111111] sm:text-6xl md:text-7xl max-w-4xl">
           Build AI <br />
           Employees. <br />
-          <span className="text-slate-450/80">Not AI Tools.</span>
+          <span className="text-slate-500/80">Not AI Tools.</span>
         </h1>
 
         {/* Description */}

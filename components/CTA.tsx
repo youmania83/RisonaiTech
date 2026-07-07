@@ -180,7 +180,7 @@ export default function CTA() {
                   ].map((btn) => (
                     <a
                       key={btn.label}
-                      href={`https://wa.me/918368137724?text=${encodeURIComponent(btn.msg)}`}
+                      href={`https://wa.me/919310837724?text=${encodeURIComponent(btn.msg)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-between rounded-xl border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm font-semibold text-slate-800 transition-all hover:bg-slate-50 hover:border-slate-300 hover:scale-[1.01] shadow-sm"

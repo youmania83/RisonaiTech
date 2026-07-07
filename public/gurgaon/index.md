@@ -1,18 +1,29 @@
 ---
-title: "AI and SaaS Development in Gurgaon — RisonAI Tech"
-description: "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Gurgaon startups and enterprises."
+title: "AI Automation Company in Gurgaon | Workflows & AI Agents"
+description: "RisonAI Tech is a leading AI automation company in Gurgaon. We build custom AI workflows, chatbots, WhatsApp automation, and SaaS platforms for local industries."
 url: "https://risonaitech.com/gurgaon"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
-## RisonAI Tech — Gurgaon
+## AI Automation & Agent Systems in Gurgaon
+RisonAI Tech builds custom AI workflows, chatbots, and SaaS platforms for businesses in Gurgaon, India.
 
-RisonAI Tech serves startups, growth-stage platforms, and enterprises in Gurgaon (Gurugram) and the Haryana tech corridor.
+### Target Industries
+- **undefined**: undefined
+- **undefined**: undefined
+- **undefined**: undefined
+- **undefined**: undefined
+- **undefined**: undefined
+- **undefined**: undefined
 
-Services in Gurgaon:
-- AI Automation from Rs 30,000
-- SaaS Development from Rs 1,20,000
-- CRM Development from Rs 40,000
-- AI Chatbot from Rs 20,000
+### Local Coverage & Districts
+We serve clients across key districts including: Cyber City, Sohna Road, Golf Course Road, Sector 48, Sector 44, Udyog Vihar.
+Nearby cities served: Delhi, Faridabad, Manesar, Noida.
 
-Contact: hello@risonaitech.com | +91 83681 37724
+### Services Offered
+- Custom AI Workflows & n8n/Make Automations
+- WhatsApp AI Systems & RAG Chatbots
+- Custom CRM Development & HubSpot/Zoho Syncs
+- Multi-Tenant SaaS Platform Engineering
+
+Contact hello@risonaitech.com or visit https://risonaitech.com/contact to start your project.

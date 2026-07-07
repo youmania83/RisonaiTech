@@ -536,6 +536,12 @@ export default function CRMDevelopmentPage() {
             <Link className="btn-outline text-sm" href="/panipat">
               Panipat SME CRM use cases
             </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi CRM systems
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna CRM systems
+            </Link>
             <Link className="btn-outline text-sm" href="/contact">
               Get Free CRM Audit
             </Link>

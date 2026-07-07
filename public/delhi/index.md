@@ -2,7 +2,7 @@
 title: "AI and SaaS Development in Delhi — RisonAI Tech"
 description: "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Delhi businesses."
 url: "https://risonaitech.com/delhi"
-last_updated: "2026-06-05"
+last_updated: "2026-07-07"
 ---
 
 ## RisonAI Tech — Delhi NCR
@@ -15,4 +15,4 @@ Services in Delhi:
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724
+Contact: hello@risonaitech.com | +91 93108 37724
