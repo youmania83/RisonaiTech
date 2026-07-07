@@ -65,6 +65,10 @@ const payload = {
     "https://risonaitech.com/chandigarh/chatbot-solutions",
     "https://risonaitech.com/privacy",
     "https://risonaitech.com/terms",
+    "https://risonaitech.com/services/voice-ai",
+    "https://risonaitech.com/services/ai-consulting",
+    "https://risonaitech.com/ranchi",
+    "https://risonaitech.com/patna",
   ],
 };
 
