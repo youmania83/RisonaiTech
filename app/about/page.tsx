@@ -37,7 +37,7 @@ const founderSchema = {
     "RAG architecture",
   ],
   sameAs: [
-    "https://www.linkedin.com/in/yogesh-wadhwa",
+    "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/youmania83",
     "https://twitter.com/risonaitech",
   ],
@@ -176,7 +176,7 @@ export default function AboutPage() {
                       Verified profiles
                     </p>
                     {[
-                      { label: "LinkedIn", href: "https://www.linkedin.com/in/yogesh-wadhwa" },
+                      { label: "LinkedIn", href: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/" },
                       { label: "GitHub", href: "https://github.com/youmania83" },
                       { label: "Twitter / X", href: "https://twitter.com/risonaitech" },
                     ].map((link) => (
