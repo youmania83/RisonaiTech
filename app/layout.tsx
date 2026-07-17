@@ -791,7 +791,8 @@ export default function RootLayout({
             window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || "AW-18229362372"}', {
-              'allow_ad_personalization_signals': true
+              'allow_ad_personalization_signals': true,
+              'conversion_linker': true
             });
           `}
         </Script>

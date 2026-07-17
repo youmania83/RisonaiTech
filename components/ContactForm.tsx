@@ -79,13 +79,24 @@ export default function ContactForm() {
       setSubmitting(false);
       setSent(true);
 
-      // Redirect to the Thank You page which triggers the conversion tag
-      const params = new URLSearchParams({
-        name: form.name,
-        phone: form.phone,
-        message: form.message
-      });
-      router.push(`/thank-you?${params.toString()}`);
+      // Securely store lead data in sessionStorage to prevent exposing PII in URL parameters
+      if (typeof window !== "undefined") {
+        try {
+          sessionStorage.setItem(
+            "risonai_lead_temp",
+            JSON.stringify({
+              name: form.name,
+              phone: form.phone,
+              message: form.message,
+            })
+          );
+        } catch (err) {
+          console.error("Failed to write to sessionStorage:", err);
+        }
+      }
+
+      // Redirect to the clean Thank You page (no query parameters)
+      router.push("/thank-you");
     }
   }
 

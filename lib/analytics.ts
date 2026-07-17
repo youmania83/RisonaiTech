@@ -155,6 +155,20 @@ export function trackLeadSubmission(
   phone: string,
   callback: () => void
 ) {
+  // Fire GA4 generate_lead event
+  const gtag = typeof window !== "undefined" ? window.gtag : undefined;
+  if (gtag) {
+    console.log("Firing GA4 generate_lead event");
+    try {
+      gtag("event", "generate_lead", {
+        value: 1.0,
+        currency: "INR"
+      });
+    } catch (err) {
+      console.error("Error firing GA4 generate_lead event:", err);
+    }
+  }
+
   trackAdsEvent(
     "conversion",
     LEAD_FORM_LABEL,

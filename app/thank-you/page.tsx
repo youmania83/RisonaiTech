@@ -1,33 +1,44 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { CheckCircle2, MessageCircle, ArrowRight } from "lucide-react";
 import { trackLeadSubmission } from "@/lib/analytics";
 
-/**
- * Inner component that uses useSearchParams and triggers the conversion tracking.
- */
-function ThankYouContent() {
-  const searchParams = useSearchParams();
-  const name = searchParams.get("name") || "";
-  const phone = searchParams.get("phone") || "";
-  const message = searchParams.get("message") || "";
-
+export default function ThankYouPage() {
+  const [leadData, setLeadData] = useState({ name: "", phone: "", message: "" });
   const [progress, setProgress] = useState(100);
   const [redirectStarted, setRedirectStarted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Retrieve lead details on client load
+  useEffect(() => {
+    setIsMounted(true);
+    if (typeof window !== "undefined") {
+      try {
+        const stored = sessionStorage.getItem("risonai_lead_temp");
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          setLeadData(parsed);
+          // Remove immediately to prevent PII leakage and double triggers on page reload
+          sessionStorage.removeItem("risonai_lead_temp");
+        }
+      } catch (err) {
+        console.error("Failed to read from sessionStorage:", err);
+      }
+    }
+  }, []);
+
+  const { name, phone, message } = leadData;
 
   // Formulate the WhatsApp URL
   const waMessage = `Hi Risonai Tech!\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
   const whatsappUrl = `https://wa.me/919310837724?text=${encodeURIComponent(waMessage)}`;
 
   useEffect(() => {
-    // 1. Fire the Google Ads Lead Form conversion event
-    console.log("Thank You page loaded. Firing Lead Conversion event.");
-    
-    // We pass the callback that will redirect to WhatsApp. 
-    // If the conversion is tracked successfully, it will call this callback immediately.
-    // If it fails or is blocked, our helper's safety timeout (1.5s) will trigger it.
+    if (!isMounted) return;
+
+    console.log("Thank You page activated. Firing Lead Conversion event.");
+
     const handleRedirect = () => {
       if (redirectStarted) return;
       setRedirectStarted(true);
@@ -35,9 +46,11 @@ function ThankYouContent() {
       window.location.href = whatsappUrl;
     };
 
+    // Fire the tracking events (both GA4 generate_lead and Google Ads conversion)
+    // Runs handleRedirect immediately when gtag calls back (callback-first)
     trackLeadSubmission(name, phone, handleRedirect);
 
-    // 2. Animate the countdown loader (1.5 seconds total)
+    // 1.5s visual progress loader countdown as a safety backup
     const duration = 1500;
     const intervalTime = 30; // ms
     const steps = duration / intervalTime;
@@ -47,7 +60,7 @@ function ThankYouContent() {
       setProgress((prev) => {
         if (prev <= 0) {
           clearInterval(timer);
-          handleRedirect(); // Safety backup in case helper timeout fails
+          handleRedirect();
           return 0;
         }
         return prev - stepSize;
@@ -57,7 +70,17 @@ function ThankYouContent() {
     return () => {
       clearInterval(timer);
     };
-  }, [name, phone, whatsappUrl, redirectStarted]);
+  }, [isMounted, name, phone, whatsappUrl, redirectStarted]);
+
+  if (!isMounted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#090C18] text-white">
+        <div className="text-center animate-pulse">
+          <p className="text-slate-400 text-sm">Loading success details...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#090C18] text-white px-4 py-20 relative overflow-hidden bg-grid">
@@ -130,23 +153,5 @@ function ThankYouContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-/**
- * Root ThankYouPage wrapped in Suspense boundary for standard Next.js building.
- */
-export default function ThankYouPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-[#090C18] text-white">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-500 mx-auto mb-4" />
-          <p className="text-slate-400 text-sm">Loading success details...</p>
-        </div>
-      </div>
-    }>
-      <ThankYouContent />
-    </Suspense>
   );
 }
