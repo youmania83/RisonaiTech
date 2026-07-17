@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2 } from "lucide-react";
 
 import { siteConfig } from "@/lib/constants";
 import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
@@ -10,6 +11,8 @@ import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined" && "mcpActions" in navigator) {
@@ -54,11 +57,36 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const msg = `Hi Risonai Tech!%0AName: ${encodeURIComponent(form.name)}%0APhone: ${encodeURIComponent(form.phone)}%0AMessage: ${encodeURIComponent(form.message)}`;
-    window.open(`https://wa.me/919310837724?text=${msg}`, "_blank");
-    setSent(true);
+    setSubmitting(true);
+
+    try {
+      // Submit lead to the backend API first
+      await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          message: form.message,
+          type: "proposal"
+        })
+      });
+    } catch (err) {
+      console.error("Graceful submission fallback:", err);
+    } finally {
+      setSubmitting(false);
+      setSent(true);
+
+      // Redirect to the Thank You page which triggers the conversion tag
+      const params = new URLSearchParams({
+        name: form.name,
+        phone: form.phone,
+        message: form.message
+      });
+      router.push(`/thank-you?${params.toString()}`);
+    }
   }
 
   return (
@@ -179,9 +207,22 @@ export default function ContactForm() {
                     />
                   </div>
 
-                  <button className="btn-primary mt-1 w-full justify-center" type="submit">
-                    Send via WhatsApp
-                    <ArrowRight size={15} />
+                  <button 
+                    className="btn-primary mt-1 w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed" 
+                    type="submit"
+                    disabled={submitting}
+                  >
+                    {submitting ? (
+                      <>
+                        <Loader2 className="animate-spin" size={15} />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Send via WhatsApp
+                        <ArrowRight size={15} />
+                      </>
+                    )}
                   </button>
                 </form>
               )}

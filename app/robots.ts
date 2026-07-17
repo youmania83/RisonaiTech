@@ -19,10 +19,12 @@ export default function robots(): MetadataRoute.Robots {
     {
       userAgent: "*",
       allow: "/",
+      disallow: ["/thank-you"],
     },
     ...AI_CRAWLERS.map((crawler) => ({
       userAgent: crawler,
       allow: "/",
+      disallow: ["/thank-you"],
     })),
   ];
 

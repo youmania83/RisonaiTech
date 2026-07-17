@@ -12,8 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-      if (item.startsWith("_") || item.startsWith(".") || item === "api" || item === "locations") {
-        continue; // Skip layout groups, next internal, API routes, and legacy locations wrapper
+      if (item.startsWith("_") || item.startsWith(".") || item === "api" || item === "locations" || item === "thank-you") {
+        continue; // Skip layout groups, next internal, API routes, legacy locations, and thank-you page
       }
 
       const fullPath = path.join(dirPath, item);
