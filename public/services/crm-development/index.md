@@ -2,7 +2,7 @@
 title: "CRM Development — Custom CRM with WhatsApp and AI Integration"
 description: "RisonAI Tech builds custom CRM systems and extends HubSpot/Zoho with AI. For healthcare, real estate, and service businesses. From Rs 40,000."
 url: "https://risonaitech.com/services/crm-development"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## CRM Development and Integration

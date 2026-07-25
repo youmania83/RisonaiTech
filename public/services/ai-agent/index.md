@@ -2,7 +2,7 @@
 title: "AI Agent Development — Autonomous AI Agents in 4–10 Weeks"
 description: "RisonAI Tech builds production-ready autonomous AI agents — multi-step reasoning pipelines, tool-using LLM agents, RAG knowledge agents, and multi-agent systems. From Rs 40,000."
 url: "https://risonaitech.com/services/ai-agent"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## AI Agent Development

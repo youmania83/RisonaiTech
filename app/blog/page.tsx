@@ -43,7 +43,7 @@ export const posts = [
     title: "How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews",
     excerpt:
       "A practical workflow to test your website's AI visibility across ChatGPT Search, Perplexity, Gemini, Claude, and Google AI Overviews, plus a faster free audit method.",
-    date: "2026-06-13",
+    date: "2026-07-20",
     readTime: "9 min read",
     category: "AI Search",
   },
@@ -52,7 +52,7 @@ export const posts = [
     title: "Free AI SEO Audit Checklist for 2026: 18 Things to Fix Before You Pay an Agency",
     excerpt:
       "Use this practical GEO checklist to improve your website's visibility in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews before you spend on a full engagement.",
-    date: "2026-06-12",
+    date: "2026-07-15",
     readTime: "10 min read",
     category: "GEO Checklist",
   },
@@ -61,7 +61,7 @@ export const posts = [
     title: "Why Your Website Is Not Showing in AI Search: 9 Common Reasons and What to Fix First",
     excerpt:
       "Nine common reasons AI systems skip your brand, from weak entity signals to weak factual density, plus the fixes that usually improve AI visibility fastest.",
-    date: "2026-06-11",
+    date: "2026-07-10",
     readTime: "9 min read",
     category: "AI Search",
   },
@@ -70,7 +70,7 @@ export const posts = [
     title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)",
     excerpt:
       "Small businesses with 5–50 employees are the biggest AI automation opportunity in India. A practical playbook: 4 workflows, ₹60,000–₹80,000 total, 90-day roadmap, no technical team required.",
-    date: "2026-06-10",
+    date: "2026-06-25",
     readTime: "8 min read",
     category: "AI Automation",
   },
@@ -79,7 +79,7 @@ export const posts = [
     title: "AI Resume Screening for HR Teams in India: Score CVs and Shortlist Candidates 90% Faster",
     excerpt:
       "Manual CV review slows hiring and burns recruiter time. Here is how AI resume screening scores candidates, shortlists the best fits, and saves up to 90% of first-pass screening time.",
-    date: "2026-06-09",
+    date: "2026-06-18",
     readTime: "9 min read",
     category: "HR Automation",
   },
@@ -88,7 +88,7 @@ export const posts = [
     title: "AI Automation for Real Estate India: The 2026 Playbook",
     excerpt:
       "In 2026, the fastest-growing real estate agencies in India all have one thing in common: they respond to leads in under 60 seconds, qualify every inquiry automatically, and never lose a hot lead to a competitor. Here is how.",
-    date: "2026-06-08",
+    date: "2026-06-04",
     readTime: "10 min read",
     category: "Real Estate",
   },
@@ -97,7 +97,7 @@ export const posts = [
     title: "Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?",
     excerpt:
       "Make (formerly Integromat) and n8n are the two most popular automation platforms for business workflows. Here is a complete comparison with a clear decision framework for Indian businesses.",
-    date: "2026-06-07",
+    date: "2026-05-22",
     readTime: "9 min read",
     category: "AI Tools",
   },
@@ -106,7 +106,7 @@ export const posts = [
     title: "AI Agents for Business: What They Are, What They Cost, and How to Deploy Them",
     excerpt:
       "AI agents are not just advanced chatbots — they are autonomous systems that plan, act, and complete multi-step tasks without human direction. This is the production guide for deploying AI agents in your business.",
-    date: "2026-06-06",
+    date: "2026-05-14",
     readTime: "10 min read",
     category: "AI Agents",
   },
@@ -115,7 +115,7 @@ export const posts = [
     title: "AI and Automation Together: How to Combine Them for Maximum Business Impact",
     excerpt:
       "AI and automation are two different capabilities that work best when combined. Understanding when to use rule-based automation, when to add AI intelligence, and how to layer them is the highest-leverage skill in modern business systems.",
-    date: "2026-06-05",
+    date: "2026-04-28",
     readTime: "9 min read",
     category: "AI Automation",
   },
@@ -124,7 +124,7 @@ export const posts = [
     title: "AI vs Automation: What Is the Difference and Which Does Your Business Need?",
     excerpt:
       "Most businesses use the terms AI and automation interchangeably — but they mean fundamentally different things. Knowing the difference determines which technology solves your actual business problem.",
-    date: "2026-06-04",
+    date: "2026-04-12",
     readTime: "8 min read",
     category: "AI Automation",
   },
@@ -133,7 +133,7 @@ export const posts = [
     title: "Top AI Automation Tools in 2026: The No-Fluff Shortlist",
     excerpt:
       "There are now 400+ tools that claim to offer AI automation. Most are noise. This is the production-grade shortlist for Indian businesses — tools we actually deploy for clients.",
-    date: "2026-06-03",
+    date: "2026-03-30",
     readTime: "9 min read",
     category: "AI Tools",
   },
@@ -142,7 +142,7 @@ export const posts = [
     title: "How to Use AI for Automation: A Step-by-Step Implementation Guide",
     excerpt:
       "Most businesses know they should use AI to automate workflows — but have no idea where to start. This is a no-fluff, step-by-step guide to implementing AI automation in a real business.",
-    date: "2026-06-02",
+    date: "2026-03-15",
     readTime: "9 min read",
     category: "AI Automation",
   },
@@ -151,7 +151,7 @@ export const posts = [
     title: "What Is AI Automation? A Clear Explanation for Business Owners",
     excerpt:
       "AI automation combines artificial intelligence with traditional automation to handle complex, judgment-based tasks without human intervention. Here is a clear, jargon-free explanation of what it is, how it works, and what it can do for your business.",
-    date: "2026-06-01",
+    date: "2026-02-28",
     readTime: "8 min read",
     category: "AI Automation",
   },
@@ -160,7 +160,7 @@ export const posts = [
     title: "The Employee Who Never Sleeps: How AI Saves Indian Owners Lakhs Every Year",
     excerpt:
       "Three real stories of Indian business owners who replaced ₹5–15 lakh/year of repetitive work with an AI employee that never sleeps, never asks for a hike, never quits — and finally let them take a real holiday.",
-    date: "2026-05-20",
+    date: "2026-02-10",
     readTime: "9 min read",
     category: "Story",
   },
@@ -169,7 +169,7 @@ export const posts = [
     title: "AI Automation for Indian SMEs: What Actually Works in 2025",
     excerpt:
       "Most AI automation projects fail because businesses automate the wrong things first. Here's the prioritisation framework we use with 40+ Indian clients to pick the right workflows and get measurable ROI in under 90 days.",
-    date: "2025-04-20",
+    date: "2025-11-20",
     readTime: "8 min read",
     category: "AI Automation",
   },
@@ -178,7 +178,7 @@ export const posts = [
     title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide",
     excerpt:
       "India has 535 million WhatsApp users. Yet most businesses still respond to leads manually — or miss them entirely. This guide covers how to build a WhatsApp chatbot that qualifies leads, books appointments, and handles FAQs 24/7.",
-    date: "2025-05-05",
+    date: "2025-08-14",
     readTime: "10 min read",
     category: "WhatsApp Automation",
   },

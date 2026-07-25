@@ -2,7 +2,7 @@
 title: "RisonAI Tech — AI Automation & SaaS Development Company India"
 description: "RisonAI Tech builds AI automation systems, SaaS platforms, CRM solutions, and AI chatbots that generate revenue and automate businesses across India."
 url: "https://risonaitech.com"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## What RisonAI Tech Does

@@ -2,7 +2,7 @@
 title: "Voice AI Agents India | AI Receptionist & Outbound Calling | RisonAI Tech"
 description: "RisonAI Tech builds voice AI agents for inbound and outbound calls — AI receptionists, appointment confirmation bots, lead callback agents & post-purchase NPS callers. Twilio + LLM. From Rs 1,50,000."
 url: "https://risonaitech.com/services/voice-ai"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## Voice AI Agents

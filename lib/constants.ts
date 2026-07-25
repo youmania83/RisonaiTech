@@ -27,9 +27,12 @@ export const siteConfig = {
   whatsappUrl:
     "https://wa.me/919310837724?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
   socials: {
-    twitter: "https://twitter.com/risonaitech",
-    linkedin: "https://linkedin.com/company/risonaitech",
+    linkedin: "https://www.linkedin.com/company/risonaitech",
+    founderLinkedin: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     github: "https://github.com/risonaitech",
+    founderGithub: "https://github.com/youmania83",
+    twitter: "https://x.com/risonaitech",
+    crunchbase: "https://www.crunchbase.com/organization/risonaitech",
   },
 };
 

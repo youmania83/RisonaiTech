@@ -2,7 +2,7 @@
 title: "Products — DocBooking and Expreality SaaS Platforms"
 description: "RisonAI Tech has built DocBooking (AI healthcare SaaS) and Expreality (real estate intelligence SaaS). Available for white-label licensing."
 url: "https://risonaitech.com/products"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech Products

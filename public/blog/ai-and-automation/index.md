@@ -2,7 +2,7 @@
 title: "AI and Automation Together: How to Combine Them for Maximum Business Impact"
 description: "How to combine rule-based automation engines with LLM cognitive capabilities."
 url: "https://risonaitech.com/blog/ai-and-automation"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## Layering AI and Traditional Automation

@@ -14,9 +14,11 @@ const founder = {
   ],
   bio: "No sales reps, no middlemen, and no account managers. At RisonAI Tech, you work directly with me. I lead engineering and execution for healthcare, real estate, and SaaS systems with strict uptime, conversion, and operational requirements.",
   sameAs: [
-    "https://linkedin.com/company/risonaitech",
+    "https://www.linkedin.com/company/risonaitech",
+    "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/risonaitech",
-    "https://twitter.com/risonaitech",
+    "https://github.com/youmania83",
+    "https://x.com/risonaitech",
   ],
 };
 

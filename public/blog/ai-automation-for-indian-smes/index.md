@@ -2,7 +2,7 @@
 title: "AI Automation for Indian SMEs: What Actually Works in 2025"
 description: "Prioritization frameworks and ROI playbooks for Indian small and medium enterprises implementing AI."
 url: "https://risonaitech.com/blog/ai-automation-for-indian-smes"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## SME AI Playbook

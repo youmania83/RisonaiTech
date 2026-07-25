@@ -2,7 +2,7 @@
 title: "AI and SaaS Development in Delhi — RisonAI Tech"
 description: "RisonAI Tech provides AI automation, SaaS development, CRM, and chatbot services for Delhi businesses."
 url: "https://risonaitech.com/delhi"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech — Delhi NCR

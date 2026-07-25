@@ -2,7 +2,7 @@
 title: "AI Automation & SaaS Development in Ranchi — RisonAI Tech"
 description: "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM workflows for Ranchi businesses, Jharkhand startups, and government-adjacent enterprises."
 url: "https://risonaitech.com/ranchi"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech — Ranchi Services

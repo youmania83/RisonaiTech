@@ -2,7 +2,7 @@
 title: "AI Consulting Company India | AI Strategy & Implementation | RisonAI Tech"
 description: "RisonAI Tech is an AI consulting company in India — AI readiness audits, automation roadmaps, AI strategy for enterprise & SMEs, LLM evaluation, and implementation oversight. Fixed fee from Rs 75,000."
 url: "https://risonaitech.com/services/ai-consulting"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## AI Consulting Services

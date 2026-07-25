@@ -2,7 +2,7 @@
 title: "AI Agent & SaaS Development in London — RisonAI Tech"
 description: "RisonAI Tech builds autonomous AI agents, custom CRM integrations, and multi-tenant SaaS platforms for London startups and UK SMEs."
 url: "https://risonaitech.com/london"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech — London & UK Services

@@ -2,7 +2,7 @@
 title: "AI and SaaS Development in Indore — RisonAI Tech"
 description: "RisonAI Tech serves Indore-based businesses, traders, and exporters with custom AI automation, WhatsApp workflows, and SaaS product engineering."
 url: "https://risonaitech.com/indore"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech — Indore Services

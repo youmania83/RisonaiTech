@@ -2,7 +2,7 @@
 title: "AI Resume Screening — Candidate Screening Automation"
 description: "RisonAI Tech builds AI-powered resume screening systems: CV parsing, Skills Graph matching, contextual evaluation, and ATS integration. From Rs 35,000."
 url: "https://risonaitech.com/services/resume-screening"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## AI Resume Screening Systems

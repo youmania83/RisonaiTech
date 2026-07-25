@@ -2,7 +2,7 @@
 title: "Why Your Website Is Not Showing in AI Search: 9 Common Reasons and What to Fix First"
 description: "Common reasons why ChatGPT, Perplexity, and Gemini ignore your brand, and how to fix it."
 url: "https://risonaitech.com/blog/why-your-website-is-not-showing-in-ai-search"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## Common AI Search Blockages

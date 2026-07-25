@@ -97,20 +97,50 @@ export default function Footer() {
               ))}
             </ul>
 
-            <div className="mt-8 flex gap-3">
-              {Object.entries(siteConfig.socials).map(([name, url]) => (
-                <a
-                  key={name}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition-all duration-300 hover:bg-slate-150 hover:text-slate-800 hover:shadow-sm"
-                  style={{ border: "1px solid var(--border)" }}
-                  aria-label={name}
-                >
-                  <span className="text-xs font-medium capitalize">{name[0].toUpperCase()}</span>
-                </a>
-              ))}
+            <p className="mt-8 mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+              Verified External Profiles
+            </p>
+            <div className="flex flex-wrap gap-2 text-xs">
+              <a
+                href={siteConfig.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={siteConfig.socials.founderLinkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                Founder Profile
+              </a>
+              <a
+                href={siteConfig.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                GitHub
+              </a>
+              <a
+                href={siteConfig.socials.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                Twitter / X
+              </a>
+              <a
+                href={siteConfig.socials.crunchbase}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                Crunchbase
+              </a>
             </div>
           </div>
         </div>

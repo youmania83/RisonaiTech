@@ -2,7 +2,7 @@
 title: "Free AI SEO Audit Checklist for 2026: 18 Things to Fix Before You Pay an Agency"
 description: "A complete 18-step checklist to prepare your website for AI search crawlers and answer engine optimization (AEO)."
 url: "https://risonaitech.com/blog/free-ai-seo-audit-checklist"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## AI SEO Audit Checklist

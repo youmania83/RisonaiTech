@@ -2,7 +2,7 @@
 title: "AI Automation & SaaS Development in Patna — RisonAI Tech"
 description: "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM systems for Patna businesses, Bihar startups, and education-sector enterprises."
 url: "https://risonaitech.com/patna"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## RisonAI Tech — Patna Services

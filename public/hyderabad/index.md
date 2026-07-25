@@ -2,7 +2,7 @@
 title: "AI Automation Company in Hyderabad | Workflows & AI Agents"
 description: "RisonAI Tech is a leading AI automation company in Hyderabad. We build custom AI workflows, chatbots, WhatsApp automation, and SaaS platforms for local industries."
 url: "https://risonaitech.com/hyderabad"
-last_updated: "2026-07-07"
+last_updated: "2026-07-25"
 ---
 
 ## AI Automation & Agent Systems in Hyderabad
