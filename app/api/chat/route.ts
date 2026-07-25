@@ -17,6 +17,7 @@ const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
 const sentLeadHashes = new Set<string>();
 
 const systemPrompt = `You are a helpful customer support and lead generation agent for RisonAI Tech.
+You MUST always respond in English.
 Keep all answers EXTREMELY crisp, short, and to the point. No long paragraphs.
 
 CRITICAL SCOPE & MISUSE PROTECTION RULES:
@@ -248,7 +249,7 @@ export async function POST(req: Request) {
     }
 
     const result = streamText({
-      model: deepseek('deepseek-chat'),
+      model: deepseek('deepseek-v4-flash'),
       system: systemPrompt,
       messages: cleanMessages,
       temperature: 0.3,
