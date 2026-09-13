@@ -62,20 +62,28 @@ export function serviceSchema(args: {
   description: string;
   url: string; // relative or absolute
   priceRange: string; // e.g. "₹30,000 – ₹6,00,000"
+  category?: string;
   areaServed?: string[];
   offers?: { name: string; description: string; price: string }[];
 }) {
   const fullUrl = args.url.startsWith("http") ? args.url : `${BASE_URL}${args.url}`;
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": ["Service", "ProfessionalService"],
     "@id": `${fullUrl}#service`,
     name: args.name,
     serviceType: args.serviceType,
+    category: args.category ?? "Artificial Intelligence Services",
     description: args.description,
     url: fullUrl,
-    provider: { "@id": `${BASE_URL}/#business` },
-    areaServed: args.areaServed ?? [
+    termsOfService: `${BASE_URL}/terms`,
+    provider: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "RisonAI Tech",
+      url: BASE_URL,
+    },
+    areaServed: (args.areaServed ?? [
       "India",
       "Delhi",
       "Gurgaon",
@@ -83,11 +91,20 @@ export function serviceSchema(args: {
       "Panipat",
       "Mumbai",
       "Bengaluru",
-    ],
+      "United States",
+      "United Kingdom",
+      "United Arab Emirates",
+      "Singapore",
+      "Australia",
+    ]).map((area) => ({
+      "@type": typeof area === "string" ? "Country" : "Place",
+      name: area,
+    })),
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
       priceRange: args.priceRange,
+      availability: "https://schema.org/InStock",
     },
     ...(args.offers && args.offers.length > 0
       ? {
@@ -98,10 +115,12 @@ export function serviceSchema(args: {
               "@type": "Offer",
               priceCurrency: "INR",
               price: o.price,
+              availability: "https://schema.org/InStock",
               itemOffered: {
                 "@type": "Service",
                 name: o.name,
                 description: o.description,
+                category: args.category ?? "Artificial Intelligence Services",
               },
             })),
           },
@@ -207,6 +226,72 @@ export function graph(...nodes: object[]) {
   return {
     "@context": "https://schema.org",
     "@graph": nodes,
+  };
+}
+
+/**
+ * Build a Speakable JSON-LD schema for voice search crawlers.
+ */
+export function speakableSchema(cssSelectors: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Speakable",
+    "cssSelector": cssSelectors,
+  };
+}
+
+/**
+ * Build a VideoObject JSON-LD schema for embedded videos.
+ */
+export function videoObjectSchema(args: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string; // ISO 8601
+  contentUrl: string;
+  embedUrl: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: args.name,
+    description: args.description,
+    thumbnailUrl: args.thumbnailUrl,
+    uploadDate: args.uploadDate,
+    contentUrl: args.contentUrl,
+    embedUrl: args.embedUrl,
+  };
+}
+
+/**
+ * Build a Product JSON-LD schema for software products (e.g. DocBooking, Expreality).
+ */
+export function productSchema(args: {
+  id: string; // relative or absolute
+  name: string;
+  description: string;
+  price: string;
+  currency: string;
+  imageUrl?: string;
+}) {
+  const fullId = args.id.startsWith("http") ? args.id : `${BASE_URL}${args.id}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": ["Product", "IndividualProduct"],
+    "@id": `${fullId}#product`,
+    name: args.name,
+    description: args.description,
+    ...(args.imageUrl ? { image: args.imageUrl } : {}),
+    brand: {
+      "@type": "Brand",
+      name: "RisonAI Tech",
+    },
+    offers: {
+      "@type": "Offer",
+      price: args.price,
+      priceCurrency: args.currency,
+      availability: "https://schema.org/InStock",
+    },
   };
 }
 

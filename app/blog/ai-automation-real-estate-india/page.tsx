@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation for Real Estate: Use Cases & Guide for 2026 | RisonAI Tech" },
+  title: { absolute: "AI Automation for Real Estate in India: 2026 Practical Guide | RisonAI Tech" },
   description:
-    "How real estate agencies in India are using AI automation to qualify leads 24/7, send follow-ups, manage listings, and cut manual work by 70%.",
+    "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
   keywords: [
     "ai automation for real estate",
     "real estate ai automation india",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/ai-automation-real-estate-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Automation for Real Estate: Use Cases & Guide for 2026",
+    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
     description:
-      "Indian real estate agencies using AI automation to qualify leads 24/7, automate follow-ups, and cut manual work by 70%. Here is exactly how.",
+      "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
     url: "https://risonaitech.com/blog/ai-automation-real-estate-india",
     type: "article",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation for Real Estate: Use Cases & Guide for 2026",
+    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
     description:
       "AI automation use cases for Indian real estate agencies — lead qualification, WhatsApp follow-up, CRM sync, and site visit scheduling.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -73,13 +73,13 @@ const jsonLd = graph(
     { name: "AI Automation for Real Estate India", url: "/blog/ai-automation-real-estate-india" },
   ]),
   articleSchema({
-    title: "AI Automation for Real Estate: Use Cases & Guide for 2026",
+    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
     description:
-      "How Indian real estate agencies use AI automation to qualify leads 24/7, send follow-ups, and cut manual work by 70%.",
+      "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
     url: "/blog/ai-automation-real-estate-india",
     datePublished: "2026-06-08",
-    dateModified: "2026-06-08",
-    wordCount: 1700,
+    dateModified: "2026-09-13",
+    wordCount: 1950,
   }),
   faqSchemaFromPairs(faqItems)
 );
@@ -108,15 +108,17 @@ export default function AiAutomationRealEstate() {
               </span>
             </div>
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-tight">
-              AI Automation for Real Estate: Use Cases & Guide for 2026
+              AI Automation for Real Estate in India: 2026 Guide &amp; Workflows
             </h1>
             <p className="mt-5 text-xl text-white/60 leading-relaxed">
               Indian real estate agencies are losing deals to slow follow-up and unqualified manual sorting. AI automation solves both — permanently. Here is exactly how to implement it.
             </p>
-            <div className="mt-6 flex items-center gap-4 text-sm text-white/40">
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/40">
               <span>By Yogesh Kumar Wadhwa, RisonAI Tech</span>
               <span>·</span>
               <time dateTime="2026-06-08">8 June 2026</time>
+              <span>·</span>
+              <span className="text-[#a78bfa] font-medium">Last updated: September 2026</span>
               <span>·</span>
               <span>8 min read</span>
             </div>
@@ -186,6 +188,11 @@ export default function AiAutomationRealEstate() {
                   desc: "2 hours after site visit: automated feedback form sent via WhatsApp. Based on response, lead gets placed in 'hot follow-up,' 'needs more info,' or 'not interested' segment with appropriate next actions.",
                   impact: "Closes feedback loop, prioritises pipeline correctly",
                 },
+                {
+                  title: "Instant 60-second voice AI callback + WhatsApp fallback",
+                  desc: "When portal inquiries arrive, an outbound voice AI calling agent calls the lead in under 60 seconds to confirm budget and preferred micro-market. If unanswered, an automated WhatsApp brochure and qualification trigger is dispatched immediately.",
+                  impact: "3–5× higher contact rate on ad leads",
+                },
               ].map((uc, i) => (
                 <div key={i} className="rounded-xl px-5 py-4 border border-white/10" style={{ background: "rgba(255,255,255,0.03)" }}>
                   <div className="flex items-start justify-between gap-4">
@@ -213,6 +220,7 @@ export default function AiAutomationRealEstate() {
                   {[
                     ["CRM", "Zoho CRM or HubSpot", "Lead storage, pipeline, activity tracking"],
                     ["WhatsApp API", "Interakt, WATI, or Gupshup", "Official BSP for WhatsApp Business API"],
+                    ["Voice AI Calling", "Twilio + LLM Voice Agent", "Instant 60-sec outbound qualification & appointment calls"],
                     ["Automation engine", "n8n (self-hosted) or Make.com", "Orchestrate workflows across all tools"],
                     ["AI qualification", "GPT-4o via API", "Classify and score lead conversations"],
                     ["Scheduling", "Cal.com or Calendly", "Self-serve site visit booking"],
@@ -259,6 +267,12 @@ export default function AiAutomationRealEstate() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link href="/services/ai-automation" className="inline-flex items-center gap-2 btn-primary">
                   AI Automation services <ArrowRight size={15} />
+                </Link>
+                <Link href="/services/voice-ai" className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+                  Explore Voice AI Calling <ArrowRight size={13} />
+                </Link>
+                <Link href="/gurgaon" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
+                  Gurgaon Real Estate AI <ArrowRight size={13} />
                 </Link>
                 <Link href="/contact" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
                   Book a free scoping call <ArrowRight size={13} />

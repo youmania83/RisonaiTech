@@ -482,6 +482,12 @@ export default function WebsiteDevelopmentPage() {
             <Link className="btn-outline text-sm" href="/panipat">
               Panipat
             </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna
+            </Link>
             <Link className="btn-outline text-sm" href="/contact">
               Get Free Website Audit
             </Link>

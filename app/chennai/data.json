@@ -1,0 +1,27 @@
+{
+  "city": "Chennai",
+  "country": "India",
+  "businessDistricts": [
+    "OMR",
+    "Guindy",
+    "Tidel Park",
+    "Siruseri",
+    "Nungambakkam",
+    "Adyar"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "Automotive & Mfg",
+    "Healthcare & Research",
+    "Real Estate & Dev",
+    "Retail & Consumer Goods",
+    "Logistics & Transport"
+  ],
+  "nearbyCities": [
+    "Tambaram",
+    "Ambattur",
+    "Velachery",
+    "Avadi"
+  ],
+  "language": "English"
+}

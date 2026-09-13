@@ -1,0 +1,27 @@
+{
+  "city": "Houston",
+  "country": "USA",
+  "businessDistricts": [
+    "Energy Corridor",
+    "Downtown",
+    "Galleria",
+    "Medical Center",
+    "Clear Lake",
+    "Sugar Land"
+  ],
+  "industries": [
+    "Energy & Utilities",
+    "Logistics & Transport",
+    "Healthcare & Research",
+    "Real Estate & Dev",
+    "Retail & Consumer",
+    "Manufacturing & Metals"
+  ],
+  "nearbyCities": [
+    "The Woodlands",
+    "Katy",
+    "Pearland",
+    "Pasadena"
+  ],
+  "language": "English"
+}

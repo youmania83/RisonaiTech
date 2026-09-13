@@ -238,6 +238,7 @@ const iconMap: Record<string, React.FC> = {
   "whatsapp-automation": WhatsAppIcon,
   "ai-agent": AIAgentIcon,
   "resume-screening": AIAutomationIcon,
+  "managed-ai-services": AIAgentIcon,
 };
 
 // Fallback — rotating ring + core for any future services

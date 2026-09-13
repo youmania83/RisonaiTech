@@ -70,7 +70,7 @@ const jsonLd = graph(
       "How to build a WhatsApp chatbot that qualifies leads, books appointments, and handles FAQs 24/7 for Indian businesses.",
     url: "/blog/whatsapp-chatbot-for-business-india",
     datePublished: "2025-05-05",
-    dateModified: "2026-05-12",
+    dateModified: "2026-07-07",
     wordCount: 1100,
   }),
   faqSchemaFromPairs(faqItems)

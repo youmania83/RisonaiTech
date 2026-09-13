@@ -9,9 +9,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation in Panipat | Practical AI for SMEs | RisonAI Tech" },
+  title: { absolute: "AI Automation Company in Panipat | AI Agents for Businesses" },
   description:
-    "RisonAI Tech is an AI automation company headquartered in Panipat, Haryana. We help Panipat SMEs and traditional businesses adopt practical AI — WhatsApp automation, CRM, dashboards. From ₹30,000.",
+    "Headquartered in Panipat, Haryana. RisonAI Tech delivers practical AI automation, WhatsApp workflows, and CRM systems for Panipat SMEs and manufacturers.",
   keywords: [
     "AI automation Panipat",
     "AI company Panipat Haryana",
@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/panipat#localbusiness",
   name: "RisonAI Tech — Panipat Headquarters",
   url: "https://risonaitech.com/panipat",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "RisonAI Tech is headquartered in Panipat, Haryana, providing AI automation, CRM, chatbot, and SaaS development for SMEs across Panipat and Haryana.",
@@ -169,15 +169,22 @@ export default function PanipatPage() {
               <MapPin className="mr-1" size={12} /> Panipat headquarters
             </span>
             <h1 className="font-display text-5xl font-extrabold tracking-tight text-brand-dark sm:text-6xl">
-              AI adoption for{" "}
-              <span className="grad-text">Panipat businesses</span>
+              AI Automation &amp; AI Agents for{" "}
+              <span className="grad-text">Panipat Businesses</span>
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-brand-gray">
               RisonAI Tech is headquartered in Panipat, Haryana. Panipat businesses are digitising
               operations quickly, but many teams still rely on manual follow-up and fragmented data.
               We build practical AI systems that improve speed, consistency, and profitability
-              without heavy process disruption — for textile exporters, clinics, coaching
-              institutes, distributors, and service SMEs across Panipat.
+              without heavy process disruption — deploying{" "}
+              <Link href="/blog/ai-automation-for-small-businesses" className="text-indigo-600 hover:underline">
+                practical AI workflows for SMEs
+              </Link>{" "}
+              and{" "}
+              <Link href="/services/crm-development" className="text-indigo-600 hover:underline">
+                custom CRM pipelines
+              </Link>{" "}
+              for textile exporters, clinics, coaching institutes, distributors, and service SMEs across Panipat.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link className="btn-primary" href="/contact">

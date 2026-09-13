@@ -15,18 +15,18 @@ export default function HomeAiAuditBanner() {
       id="ai-audit"
       aria-labelledby="ai-audit-heading"
       className="relative overflow-hidden py-16 sm:py-20"
-      style={{ backgroundColor: "#05070F", borderTop: "1px solid rgba(255,255,255,0.04)" }}
+      style={{ backgroundColor: "var(--bg)", borderTop: "1px solid var(--border)" }}
     >
       {/* Soft glow accents — match site visual language */}
       <div
         aria-hidden
         className="pointer-events-none absolute -left-32 -top-20 h-[360px] w-[360px] rounded-full blur-[80px] opacity-30"
-        style={{ background: "rgba(99,91,255,0.30)" }}
+        style={{ background: "rgba(79,70,229,0.10)" }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute -right-32 bottom-0 h-[320px] w-[320px] rounded-full blur-[80px] opacity-20"
-        style={{ background: "rgba(14,165,233,0.30)" }}
+        style={{ background: "rgba(37,99,235,0.08)" }}
       />
 
       <div className="container-site relative">
@@ -35,18 +35,18 @@ export default function HomeAiAuditBanner() {
             className="mx-auto max-w-4xl rounded-2xl p-6 sm:p-10"
             style={{
               background:
-                "linear-gradient(135deg, rgba(99,91,255,0.08) 0%, rgba(14,165,233,0.05) 100%)",
-              border: "1px solid rgba(99,91,255,0.22)",
+                "linear-gradient(135deg, rgba(79,70,229,0.03) 0%, rgba(37,99,235,0.02) 100%)",
+              border: "1px solid rgba(79,70,229,0.15)",
               boxShadow:
-                "0 0 80px rgba(99,91,255,0.08), inset 0 1px 0 rgba(255,255,255,0.04)",
+                "0 4px 20px rgba(15,23,42,0.02), inset 0 1px 0 rgba(255,255,255,0.8)",
             }}
           >
             <div className="flex flex-col items-start gap-2">
               <span
-                className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a78bfa]"
+                className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#4F46E5]"
                 style={{
-                  background: "rgba(99,91,255,0.10)",
-                  border: "1px solid rgba(99,91,255,0.22)",
+                  background: "rgba(79,70,229,0.05)",
+                  border: "1px solid rgba(79,70,229,0.15)",
                 }}
               >
                 <Sparkles size={12} />
@@ -54,11 +54,11 @@ export default function HomeAiAuditBanner() {
               </span>
               <h2
                 id="ai-audit-heading"
-                className="mt-3 font-display text-2xl font-bold text-white sm:text-3xl"
+                className="mt-3 font-display text-2xl font-bold text-slate-900 sm:text-3xl"
               >
                 AI Search Ranking Audit
               </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-650 sm:text-base">
                 Enter your website URL or business name — get your AI
                 visibility score in seconds. See how ChatGPT, Perplexity,
                 Claude and Gemini view your brand.
@@ -69,13 +69,13 @@ export default function HomeAiAuditBanner() {
               <AiAuditTool variant="inline" />
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/45">
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
               <span>✓ Free</span>
               <span>✓ No signup</span>
               <span>✓ Results in under 10 seconds</span>
               <Link
                 href="/tools/ai-search-audit"
-                className="ml-auto inline-flex items-center gap-1 text-[#a78bfa] transition-colors hover:text-[#c4b5fd]"
+                className="ml-auto inline-flex items-center gap-1 text-[#4F46E5] transition-colors hover:text-[#2563EB]"
               >
                 Full tool & guide
                 <ArrowRight size={12} />

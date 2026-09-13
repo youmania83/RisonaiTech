@@ -1,0 +1,27 @@
+{
+  "city": "Seattle",
+  "country": "USA",
+  "businessDistricts": [
+    "South Lake Union",
+    "Downtown",
+    "Bellevue",
+    "Redmond",
+    "Capitol Hill",
+    "Ballard"
+  ],
+  "industries": [
+    "Tech Enterprises & SaaS",
+    "Logistics & Supply Chain",
+    "Real Estate & Housing",
+    "Healthcare & Life Sciences",
+    "Retail & E-commerce",
+    "Finance & Professional"
+  ],
+  "nearbyCities": [
+    "Tacoma",
+    "Renton",
+    "Kirkland",
+    "Everett"
+  ],
+  "language": "English"
+}

@@ -1,0 +1,27 @@
+{
+  "city": "Noida",
+  "country": "India",
+  "businessDistricts": [
+    "Sector 62",
+    "Sector 132",
+    "Sector 18",
+    "Greater Noida",
+    "Sector 63",
+    "Noida Expressway"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "Media & News Labs",
+    "Real Estate & Corporate",
+    "Retail & E-commerce",
+    "Healthcare & Research",
+    "Logistics & Transport"
+  ],
+  "nearbyCities": [
+    "Delhi",
+    "Ghaziabad",
+    "Gurgaon",
+    "Faridabad"
+  ],
+  "language": "English"
+}

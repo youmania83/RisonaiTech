@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { MessageCircle, X, Bot } from 'lucide-react';
+import { MessageCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Message } from './types';
 import dynamic from 'next/dynamic';
@@ -176,7 +176,7 @@ export default function Chatbot() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleToggle}
-        className="fixed bottom-6 right-5 z-50 flex h-14 items-center gap-2.5 rounded-full bg-[#635BFF] px-6 text-white shadow-[0_0_24px_rgba(99,91,255,0.4)] transition-colors hover:bg-[#7C74FF]"
+        className="fixed bottom-6 right-5 z-50 flex h-14 items-center gap-2.5 rounded-full bg-[#FF7A00] px-6 text-white shadow-[0_0_24px_rgba(255,122,0,0.4)] transition-colors hover:bg-[#FF9533]"
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         <span className="sr-only">Toggle chat widget</span>

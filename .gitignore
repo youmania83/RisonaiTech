@@ -33,3 +33,13 @@ lighthouse-*.json
 
 # outreach scratch (cowork-generated lead trackers, not part of site)
 outreach/
+
+
+node_modules/
+.next/
+.vercel/
+.turbo/
+dist/
+build/
+coverage/
+.cache/

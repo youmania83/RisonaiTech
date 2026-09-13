@@ -19,39 +19,43 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech" },
+  title: { absolute: "AI Chatbot Development Services India | RAG, Voice AI & WhatsApp | RisonAI Tech" },
   description:
-    "RisonAI Tech builds AI chatbot and voice agent development systems for websites and WhatsApp — RAG bots trained on your data, conversational AI, multilingual (English + Hindi), CRM-integrated. From ₹20,000.",
+    "Custom AI chatbot development India — RAG chatbots, voice AI agents, conversational AI & WhatsApp bots trained on your data. Lead qualification, bookings, 24/7 support. From ₹20,000.",
   keywords: [
     "AI chatbot development India",
-    "AI chatbot and voice agent development",
+    "chatbot development services India",
+    "RAG chatbot development India",
     "conversational AI India",
-    "RAG chatbot India",
-    "voice AI agent India",
-    "WhatsApp chatbot development India",
-    "AI chatbot for website India",
-    "chatbot development company Delhi",
-    "AI customer support agent India",
-    "lead qualification chatbot India",
-    "appointment booking chatbot India",
-    "multilingual AI chatbot India",
+    "custom AI chatbot India",
+    "AI customer support India",
+    "enterprise chatbot development India",
     "AI virtual assistant India",
-    "LLM chatbot development India",
-    "GPT chatbot development India",
-    "chatbot API integration India",
+    "voice AI agent India",
+    "AI receptionist India",
+    "WhatsApp chatbot India",
+    "AI chatbot for business India",
+    "chatbot development Delhi NCR",
+    "NLP chatbot development India",
+    "AI customer service agent India",
+    "intelligent chatbot India",
+    "multilingual chatbot India Hindi English",
+    "website chatbot development India",
+    "WhatsApp bot India",
+    "agentic chatbot India",
   ],
   alternates: { canonical: "/services/chatbot-development" },
   openGraph: {
-    title: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech",
+    title: "AI Chatbot Development Services India | RAG, Voice AI & WhatsApp | RisonAI Tech",
     description:
-      "Context-aware AI chatbots — RAG bots on your data, voice AI agents, conversational AI for WhatsApp and websites. Lead qualification, booking, and customer support. From ₹20,000.",
+      "Custom RAG chatbots, voice AI agents, conversational AI and WhatsApp bots trained on your data. Lead qualification, bookings, 24/7 support. From ₹20,000.",
     url: "https://risonaitech.com/services/chatbot-development",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Chatbot Development India | RAG & WhatsApp Bots | RisonAI Tech",
-    description: "RAG chatbots, voice AI agents, WhatsApp bots. Lead qual, appointment booking, 24/7 support. From ₹20,000.",
+    title: "AI Chatbot Development Services India | RAG & Voice AI | RisonAI Tech",
+    description: "RAG chatbots, voice AI agents, conversational AI, WhatsApp bots. Hindi + English. 24/7 support. From ₹20,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -491,6 +495,12 @@ export default function ChatbotDevelopmentPage() {
             </Link>
             <Link className="btn-outline text-sm" href="/panipat">
               Panipat SME chatbot use cases
+            </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi chatbots
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna chatbots
             </Link>
             <Link className="btn-outline text-sm" href="/contact">
               Start Building

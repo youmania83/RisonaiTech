@@ -1,0 +1,27 @@
+{
+  "city": "Hyderabad",
+  "country": "India",
+  "businessDistricts": [
+    "Gachibowli",
+    "HITEC City",
+    "Madhapur",
+    "Kondapur",
+    "Jubilee Hills",
+    "Banjara Hills"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "Pharma & Biotech",
+    "Real Estate & Luxury",
+    "Retail & E-commerce",
+    "Healthcare & Research",
+    "Logistics & Supply Chain"
+  ],
+  "nearbyCities": [
+    "Secunderabad",
+    "Cyberabad",
+    "Kukatpally",
+    "Ghatkesar"
+  ],
+  "language": "English"
+}

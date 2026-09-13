@@ -19,16 +19,19 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Agent Development India | Agentic AI Systems | RisonAI Tech" },
+  title: { absolute: "AI Agent Development Company India | Agentic AI & Autonomous Agents | RisonAI Tech" },
   description:
-    "RisonAI Tech builds production-ready agentic AI systems with autonomous AI agents, voice AI agents, Skills Graph memory, contextual evaluation, multi-agent pipelines, and LangGraph-powered orchestration for Indian businesses. From ₹40,000.",
+    "RisonAI Tech is India's AI agent development company — building autonomous AI agents, multi-agent systems, voice AI agents, AI copilots & agentic workflows with LangGraph, CrewAI & OpenAI Agents SDK. From ₹40,000.",
   keywords: [
+    "AI agent development company India",
     "AI agent development India",
     "agentic AI company India",
     "Agentic AI",
     "autonomous AI agent India",
     "agentic AI systems India",
     "voice AI agent India",
+    "AI copilot development India",
+    "AI copilot India",
     "Skills Graph",
     "Contextual Evaluation",
     "AI agent development Delhi",
@@ -43,19 +46,23 @@ export const metadata: Metadata = {
     "agentic workflow India",
     "AI system integrator India",
     "autonomous AI for business India",
+    "AI SDR agent India",
+    "AI sales agent India",
+    "custom AI agents India",
+    "AI agent builder India",
   ],
   alternates: { canonical: "/services/ai-agent" },
   openGraph: {
-    title: "AI Agent Development India | Agentic AI Systems | RisonAI Tech",
+    title: "AI Agent Development Company India | Agentic AI & Autonomous Agents | RisonAI Tech",
     description:
-      "Production-ready agentic AI systems — autonomous agents, voice AI agents, multi-agent pipelines, LangGraph orchestration. Built for Indian businesses. From ₹40,000.",
+      "India's AI agent development company — autonomous agents, voice AI agents, AI copilots, multi-agent pipelines, LangGraph orchestration. Fixed price from ₹40,000.",
     url: "https://risonaitech.com/services/ai-agent",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Agent Development India | Agentic AI Systems | RisonAI Tech",
-    description: "Agentic AI systems, voice AI agents, multi-agent pipelines, LangGraph. Fixed price, full code ownership. From ₹40,000.",
+    title: "AI Agent Development Company India | Agentic AI & Autonomous Agents | RisonAI Tech",
+    description: "Agentic AI systems, voice AI agents, AI copilots, multi-agent pipelines, LangGraph. Fixed price, full code ownership. From ₹40,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -158,6 +165,14 @@ const agentTypes = [
     label: "Multi-agent systems",
     body: "Orchestrated teams of specialised sub-agents — a planner, researcher, writer, and reviewer working together to complete complex tasks that a single agent cannot handle.",
   },
+  {
+    label: "Voice AI agents",
+    body: "Outbound and inbound voice agents built on Twilio + LLM stacks — AI receptionists, appointment confirmation bots, post-purchase NPS callers, and qualified-lead callback agents running 24/7.",
+  },
+  {
+    label: "AI copilots",
+    body: "Embedded AI assistants inside your existing SaaS or internal tools — answering data questions, drafting actions, summarising activity, and suggesting next steps without leaving the application.",
+  },
 ];
 
 const faqPairs: { q: string; a: string }[] = [
@@ -247,6 +262,20 @@ export default function AIAgentPage() {
         </div>
       </section>
 
+      {/* AI summary block — gives LLMs a clean, citable definition */}
+      <section style={{ backgroundColor: "#090C18" }} className="py-10">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#a78bfa]">
+              AI summary
+            </p>
+            <p className="mt-2 text-base leading-relaxed text-white/80">
+              <strong className="text-white">RisonAI Tech is an AI agent development company in India</strong> specialising in autonomous AI agents, multi-agent systems, voice AI agents, and AI copilots for Indian businesses. The company builds production-grade agents using LangGraph, CrewAI, OpenAI Agents SDK, and Anthropic tool-use — including customer support agents, lead qualification agents, AI SDR agents, research agents, and document processing pipelines. All agents include human-in-the-loop controls, audit logs, and confidence-gated execution. Engagements start at ₹40,000 for a focused single-purpose agent (4–6 weeks); multi-agent systems range ₹1,50,000–₹5,00,000 (8–12 weeks). RisonAI Tech is headquartered in Panipat, Haryana, and serves Delhi, Gurgaon, Mumbai, Bengaluru, and international clients.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What we deliver */}
       <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
@@ -303,14 +332,71 @@ export default function AIAgentPage() {
       {/* Agent types */}
       <section className="py-20" style={{ backgroundColor: "#05070F" }}>
         <div className="container-site">
-          <h2 className="mb-12 text-center font-display text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-4 text-center font-display text-3xl font-bold text-white sm:text-4xl">
             Agent types we build
           </h2>
+          <p className="mb-12 text-center text-white/50 max-w-2xl mx-auto">
+            From single-purpose task agents to orchestrated multi-agent teams — and from text to voice channels.
+          </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {agentTypes.map(({ label, body }) => (
               <div key={label} className="card-base p-7">
                 <h3 className="font-display text-base font-bold text-white">{label}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20" style={{ backgroundColor: "#090C18" }}>
+        <div className="container-site">
+          <h2 className="mb-4 text-center font-display text-3xl font-bold text-white sm:text-4xl">
+            AI agent development pricing in India
+          </h2>
+          <p className="mb-10 text-center text-white/50">
+            Fixed price after a free 30-minute scoping call.
+          </p>
+          <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+            {[
+              {
+                tier: "Single-purpose agent",
+                price: "₹40,000 – ₹1,20,000",
+                delivery: "4–6 weeks",
+                desc: "A focused agent for one business task — lead qualification, customer support, document processing, or research synthesis.",
+                items: ["1 agent", "Tool integrations included", "RAG knowledge layer (if needed)", "REST API deployment", "30-day support"],
+              },
+              {
+                tier: "Multi-agent system",
+                price: "₹1,50,000 – ₹5,00,000",
+                delivery: "8–12 weeks",
+                desc: "Orchestrated team of specialised agents handling complex end-to-end workflows with human-in-the-loop controls.",
+                items: ["Multiple specialised agents", "Agent orchestration layer", "Custom tooling & APIs", "Observability dashboard", "90-day support"],
+                highlight: true,
+              },
+            ].map((p) => (
+              <div
+                key={p.tier}
+                className={`card-base p-6 ${
+                  p.highlight ? "border-[#635BFF] ring-1 ring-[#635BFF]" : ""
+                }`}
+              >
+                {p.highlight && (
+                  <span className="label-pill mb-3 inline-flex text-xs">Most Complex</span>
+                )}
+                <h3 className="font-display text-xl font-bold text-white">{p.tier}</h3>
+                <p className="mt-1 font-display text-2xl font-extrabold text-[#a78bfa]">{p.price}</p>
+                <p className="mt-1 text-xs text-white/40">Delivery: {p.delivery}</p>
+                <p className="mt-3 text-sm text-white/60">{p.desc}</p>
+                <ul className="mt-4 space-y-2">
+                  {p.items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-white/70">
+                      <CheckCircle2 className="flex-shrink-0 text-[#a78bfa]" size={14} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -406,6 +492,12 @@ export default function AIAgentPage() {
             </Link>
             <Link className="btn-outline text-sm" href="/gurgaon">
               Gurgaon AI startups
+            </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi AI agents
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna AI agents
             </Link>
             <Link className="btn-outline text-sm" href="/contact">
               AI Scoping Call

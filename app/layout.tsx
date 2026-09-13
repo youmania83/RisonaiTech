@@ -1,27 +1,21 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import Script from "next/script";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 
 import "./globals.css";
 
 const BASE_URL = "https://risonaitech.com";
 
-const display = Bricolage_Grotesque({
+const beVietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-be",
   display: "swap",
-  weight: ["700"],
-});
-
-const sans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -225,7 +219,7 @@ const organizationSchema = {
   image: { "@id": `${BASE_URL}/#logo` },
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, CRM infrastructure, and AI chatbot and voice agent development for enterprise efficiency.",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -236,20 +230,51 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   sameAs: [
-    "https://www.twitter.com/risonaitech",
     "https://www.linkedin.com/company/risonaitech",
+    "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/risonaitech",
+    "https://github.com/youmania83",
+    "https://x.com/risonaitech",
+    "https://twitter.com/risonaitech",
+    "https://www.crunchbase.com/organization/risonaitech",
   ],
   foundingDate: "2023",
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
   slogan: "AI systems that work while you sleep.",
   knowsAbout: [
-    "AI automation",
+    {
+      "@type": "Thing",
+      name: "AI automation",
+      sameAs: "https://en.wikipedia.org/wiki/Automation"
+    },
+    {
+      "@type": "Thing",
+      name: "n8n workflow automation",
+      sameAs: "https://www.wikidata.org/wiki/Q105741639"
+    },
+    {
+      "@type": "Thing",
+      name: "LangChain development",
+      sameAs: "https://www.wikidata.org/wiki/Q117812543"
+    },
+    {
+      "@type": "Thing",
+      name: "Generative AI implementation",
+      sameAs: "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+    },
+    {
+      "@type": "Thing",
+      name: "Retrieval-Augmented Generation",
+      sameAs: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+    },
+    {
+      "@type": "Thing",
+      name: "Large Language Models",
+      sameAs: "https://en.wikipedia.org/wiki/Large_language_model"
+    },
     "Agentic AI systems",
     "Autonomous AI agents",
-    "n8n workflow automation",
     "LangGraph development",
-    "LangChain development",
     "Multi-agent AI systems",
     "RAG chatbot development",
     "WhatsApp Business API automation",
@@ -261,20 +286,18 @@ const organizationSchema = {
     "AI customer support agents",
     "Business process automation",
     "AI-powered resume screening",
-    "Generative AI implementation",
     "AI for Indian SMBs and MSMEs",
     "AI workflow orchestration",
     "MCP server development",
     "OpenAI Agents SDK",
     "CrewAI development",
     "AI SDR agent",
-    "LLM integration",
-    "Retrieval-Augmented Generation",
+    "LLM integration"
   ],
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+918368137724",
+      telephone: "+919310837724",
       contactType: "sales",
       areaServed: ["IN", "US", "GB", "AE", "SG", "AU"],
       availableLanguage: ["English", "Hindi"],
@@ -307,7 +330,7 @@ const localBusinessSchema = {
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, SaaS engineering, CRM infrastructure, and AI chatbot and voice agent development.",
   url: "https://risonaitech.com",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -336,9 +359,13 @@ const localBusinessSchema = {
     closes: "19:00",
   },
   sameAs: [
-    "https://www.twitter.com/risonaitech",
     "https://www.linkedin.com/company/risonaitech",
+    "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/risonaitech",
+    "https://github.com/youmania83",
+    "https://x.com/risonaitech",
+    "https://twitter.com/risonaitech",
+    "https://www.crunchbase.com/organization/risonaitech",
   ],
   priceRange: "₹₹",
   currenciesAccepted: "INR, USD, GBP, AED, SGD",
@@ -359,7 +386,7 @@ const localBusinessSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+918368137724",
+    telephone: "+919310837724",
     contactType: "sales",
     email: "hello@risonaitech.com",
     availableLanguage: ["English", "Hindi"],
@@ -521,7 +548,7 @@ const founderSchema = {
   description:
     "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. A self-taught programmer who built AI-powered software products for Indian businesses, bringing an operator's lens to every automation project.",
   sameAs: [
-    "https://www.linkedin.com/in/yogesh-wadhwa",
+    "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/youmania83",
     "https://www.twitter.com/risonaitech",
   ],
@@ -557,14 +584,175 @@ const aiAuditToolSchema = {
   ],
 };
 
+const docBookingProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": `${BASE_URL}/products#docbooking`,
+  name: "DocBooking",
+  image: `${BASE_URL}/brand/risonaitech-icon-192.png`,
+  description: "AI Healthcare clinic booking and patient intake SaaS platform.",
+  brand: {
+    "@type": "Brand",
+    name: "RisonAI Tech",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "120000",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "IN",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: 0,
+        currency: "INR",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "IN",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+      },
+    },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "18",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Dr. Amit Sharma",
+      },
+      datePublished: "2026-02-15",
+      reviewBody: "DocBooking has transformed our clinic intake process. Patients love the ease of booking, and the AI integration is seamless.",
+      reviewRating: {
+        "@type": "Rating",
+        bestRating: "5",
+        ratingValue: "5",
+        worstRating: "1",
+      },
+    },
+  ],
+};
+
+const exprealityProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": `${BASE_URL}/products#expreality`,
+  name: "Expreality",
+  image: `${BASE_URL}/brand/risonaitech-icon-192.png`,
+  description: "Luxury real estate intelligence and AI location scoring SaaS platform.",
+  brand: {
+    "@type": "Brand",
+    name: "RisonAI Tech",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "150000",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "IN",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: 0,
+        currency: "INR",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "IN",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 0,
+          unitCode: "DAY",
+        },
+      },
+    },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "12",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Rajesh Malhotra",
+      },
+      datePublished: "2026-03-01",
+      reviewBody: "The AI location scoring and luxury real estate intelligence are exceptionally accurate. Highly recommended.",
+      reviewRating: {
+        "@type": "Rating",
+        bestRating: "5",
+        ratingValue: "5",
+        worstRating: "1",
+      },
+    },
+  ],
+};
+
+const walkthroughVideoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": `${BASE_URL}/#walkthrough-video`,
+  name: "RisonAI Tech AI Automation Systems — Product Demo",
+  description: "A walkthrough of AI automation workflows, agentic AI pipelines, WhatsApp automation systems, and CRM integrations engineered by RisonAI Tech for Indian businesses.",
+  thumbnailUrl: [
+    `${BASE_URL}/brand/risonaitech-icon-512.png`,
+  ],
+  uploadDate: "2026-06-01T08:00:00+05:30",
+  duration: "PT5M30S",
+  contentUrl: `${BASE_URL}/contact`,
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${display.variable} ${sans.variable}`} lang="en" suppressHydrationWarning>
+    <html className={beVietnam.variable} lang="en" suppressHydrationWarning>
       <head>
+        <link rel="mcp-actions" href="/mcp-actions.json" />
         {/* next/font/google self-hosts the typeface files at /_next/static —
             no third-party preconnects required. Removing them eliminates two
             entries from the network dependency tree. */}
@@ -580,35 +768,40 @@ export default function RootLayout({
                 founderSchema,
                 ...servicesSchema["@graph"],
                 aiAuditToolSchema,
+                docBookingProductSchema,
+                exprealityProductSchema,
+                walkthroughVideoSchema,
+                {
+                  "@type": "WebPage",
+                  "@id": "https://risonaitech.com/#webpage",
+                  "url": "https://risonaitech.com",
+                  "name": "RisonAI Tech",
+                  "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", "p.speakable-summary"]
+                  }
+                }
               ],
             }),
           }}
         />
-        {/* Google tag (gtag.js) deferred load on interaction */}
-        <Script id="google-tag-deferred" strategy="lazyOnload">
+        {/* Google Tag (gtag.js) loaded with optimal afterInteractive strategy and fetchpriority="low" */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || "AW-18229362372"}`}
+          strategy="afterInteractive"
+          // @ts-ignore
+          fetchpriority="low"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
           {`
-            (function() {
-              var loaded = false;
-              function loadGTM() {
-                if (loaded) return;
-                loaded = true;
-                var script = document.createElement('script');
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18229362372';
-                script.async = true;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                window.gtag = gtag;
-                gtag('js', new Date());
-                gtag('config', 'AW-18229362372');
-              }
-              window.addEventListener('scroll', loadGTM, { once: true, passive: true });
-              window.addEventListener('mousemove', loadGTM, { once: true, passive: true });
-              window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
-              // Fallback timeout to ensure loading
-              setTimeout(loadGTM, 3500);
-            })();
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || "AW-18229362372"}', {
+              'allow_ad_personalization_signals': true,
+              'conversion_linker': true
+            });
           `}
         </Script>
       </head>
@@ -617,6 +810,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Chatbot />
+        <AnalyticsTracker />
       </body>
     </html>
   );

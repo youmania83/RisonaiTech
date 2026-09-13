@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd(),
+  },
   compress: true,
   poweredByHeader: false,
 
@@ -12,10 +15,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: [
       "lucide-react",
       "framer-motion",
-      "@radix-ui/react-dialog",
-      "@radix-ui/react-label",
       "@radix-ui/react-slot",
-      "@radix-ui/react-toast",
     ],
   },
 
@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "launchbuff.com" },
     ],
   },
 
@@ -45,6 +46,17 @@ const nextConfig: NextConfig = {
         destination: "https://risonaitech.com/:path*",
         permanent: true,
       },
+      // legacy locations redirects
+      {
+        source: "/locations/delhi",
+        destination: "/delhi",
+        permanent: true,
+      },
+      {
+        source: "/locations/gurgaon",
+        destination: "/gurgaon",
+        permanent: true,
+      },
     ];
   },
 
@@ -61,10 +73,10 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com",
+              "img-src 'self' blob: data: https://images.unsplash.com https://www.googletagmanager.com https://launchbuff.com",
               "font-src 'self' data:",
               "connect-src 'self' https://www.googletagmanager.com",
-              "frame-src 'self' https://www.google.com",
+              "frame-src 'self' https://www.google.com https://calendly.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
@@ -102,6 +114,25 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Prevent search engine indexing of LLM metadata files
+      {
+        source: "/llms.txt",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/llms-full.txt",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
           },
         ],
       },

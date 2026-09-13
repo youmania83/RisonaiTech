@@ -1,0 +1,27 @@
+{
+  "city": "Melbourne",
+  "country": "Australia",
+  "businessDistricts": [
+    "CBD",
+    "Docklands",
+    "Southbank",
+    "Cremorne",
+    "Carlton",
+    "Collingwood"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "Hospitality & Dining",
+    "Creative Tech & Media",
+    "Real Estate & Leasing",
+    "Retail & E-commerce",
+    "Healthcare & Wellness"
+  ],
+  "nearbyCities": [
+    "Geelong",
+    "St Kilda",
+    "Richmond",
+    "Fitzroy"
+  ],
+  "language": "English"
+}

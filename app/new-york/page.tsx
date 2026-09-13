@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/new-york#service",
   name: "RisonAI Tech — New York Services",
   url: "https://risonaitech.com/new-york",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, and enterprise chatbot services for New York City startups and enterprises, delivered remotely by RisonAI Tech.",

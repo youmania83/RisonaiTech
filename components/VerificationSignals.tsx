@@ -27,7 +27,7 @@ const verificationItems = [
 
 export default function VerificationSignals() {
   return (
-    <section className="py-16 bg-grid" id="verification-signals" style={{ backgroundColor: "#090C18" }}>
+    <section className="py-16 bg-grid" id="verification-signals" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="container-site">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div>
@@ -36,7 +36,7 @@ export default function VerificationSignals() {
             >
               Verification signals for technical buyers
             </h2>
-            <p className="mt-3 text-white/50">
+            <p className="mt-3 text-slate-500">
               We structure trust through referenceable proof, not abstract claims. Share these links with your CTO, ops lead, or procurement team.
             </p>
           </div>
@@ -45,8 +45,8 @@ export default function VerificationSignals() {
             {verificationItems.map((item) => {
               const content = (
                 <>
-                  <p className="text-sm font-semibold text-white">{item.label}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/45">{item.note}</p>
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.note}</p>
                 </>
               );
 
@@ -60,7 +60,7 @@ export default function VerificationSignals() {
                     target="_blank"
                   >
                     {content}
-                    <ArrowUpRight className="absolute right-4 top-4 text-white/20 transition-all group-hover:text-[#a78bfa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5" size={14} />
+                    <ArrowUpRight className="absolute right-4 top-4 text-slate-350 transition-all group-hover:text-brand-purple group-hover:translate-x-0.5 group-hover:-translate-y-0.5" size={14} />
                   </a>
                 );
               }
@@ -68,7 +68,7 @@ export default function VerificationSignals() {
               return (
                 <Link className="card-base group block p-6" href={item.href} key={item.label}>
                   {content}
-                  <ArrowUpRight className="absolute right-4 top-4 text-white/20 transition-all group-hover:text-[#a78bfa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5" size={14} />
+                  <ArrowUpRight className="absolute right-4 top-4 text-slate-350 transition-all group-hover:text-brand-purple group-hover:translate-x-0.5 group-hover:-translate-y-0.5" size={14} />
                 </Link>
               );
             })}

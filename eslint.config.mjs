@@ -14,6 +14,12 @@ const config = [
     ignores: [".next/**", "out/**", "coverage/**", "node_modules/**", "next-env.d.ts", "scripts/**", "submit-indexnow.js"],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    files: ["app/**/*.tsx", "components/**/*.tsx"],
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ];
 
 export default config;

@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/ahmedabad#localbusiness",
   name: "RisonAI Tech — Ahmedabad Services",
   url: "https://risonaitech.com/ahmedabad",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Ahmedabad startups, GIFT City fintech companies, and Gujarat enterprises — delivered remotely from RisonAI Tech's Panipat headquarters.",

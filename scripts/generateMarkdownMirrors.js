@@ -46,8 +46,8 @@ Expreality — Luxury real estate intelligence platform with AI location scoring
 
 - Website: https://risonaitech.com
 - Email: hello@risonaitech.com
-- Phone: +91 83681 37724
-- WhatsApp: https://wa.me/918368137724
+- Phone: +91 93108 37724
+- WhatsApp: https://wa.me/919310837724
 - Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103`,
   },
 
@@ -135,6 +135,52 @@ RisonAI Tech builds production-grade AI agents that autonomously plan, call tool
 ### Pricing
 - Focused Single Agent: Rs 40,000 – Rs 1,20,000 (4–6 weeks)
 - Multi-Agent Orchestration Suite: Rs 1,50,000 – Rs 5,00,000 (8–12 weeks)
+
+Contact: https://risonaitech.com/contact`,
+  },
+
+  "/services/voice-ai": {
+    title: "Voice AI Agents India | AI Receptionist & Outbound Calling | RisonAI Tech",
+    description:
+      "RisonAI Tech builds voice AI agents for inbound and outbound calls — AI receptionists, appointment confirmation bots, lead callback agents & post-purchase NPS callers. Twilio + LLM. From Rs 1,50,000.",
+    body: `## Voice AI Agents
+
+RisonAI Tech builds voice AI agents on Twilio + LLM stacks for automated inbound reception and outbound customer campaigns.
+
+### What We Build
+- AI Receptionists for 24/7 inbound answering and routing
+- Outbound Lead Callbacks qualifying leads within 60 seconds
+- Appointment Confirmation bots to reduce no-shows
+- Post-Purchase NPS & CSAT feedback callers
+- Dual-channel English and Hindi support
+- Full CRM and calendar integrations
+
+### Pricing
+- Single-Flow Agent: Rs 1,50,000 – Rs 2,50,000 (4–6 weeks)
+- Multi-Flow System: Rs 3,50,000 – Rs 5,00,000 (8–10 weeks)
+- Enterprise Voice AI: Rs 5,00,000 – Rs 6,00,000+ (10–12 weeks)
+
+Contact: https://risonaitech.com/contact`,
+  },
+
+  "/services/ai-consulting": {
+    title: "AI Consulting Company India | AI Strategy & Implementation | RisonAI Tech",
+    description:
+      "RisonAI Tech is an AI consulting company in India — AI readiness audits, automation roadmaps, AI strategy for enterprise & SMEs, LLM evaluation, and implementation oversight. Fixed fee from Rs 75,000.",
+    body: `## AI Consulting Services
+
+RisonAI Tech is an independent AI consulting firm in India helping businesses scoping, design, and execute AI implementations.
+
+### What We Provide
+- AI Readiness Audits scoring opportunities by ROI and complexity
+- AI Automation Roadmaps (90-day, 6-month, and 12-month phases)
+- LLM & Agent framework selection advisory (GPT, Claude, Gemini, Llama)
+- AI Implementation Oversight, prompt governance, and performance benchmarking
+
+### Pricing
+- AI Readiness Audit: Rs 75,000 – Rs 1,25,000 (2–3 weeks)
+- AI Automation Roadmap: Rs 1,50,000 – Rs 2,50,000 (4–6 weeks)
+- Implementation Oversight: Rs 75,000 / month retainer
 
 Contact: https://risonaitech.com/contact`,
   },
@@ -337,7 +383,7 @@ We build AI automation systems, SaaS platforms, CRM solutions, AI chatbots, and 
 - Two-week sprint delivery model
 - Full code ownership transferred to clients
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/contact": {
@@ -347,8 +393,8 @@ Contact: hello@risonaitech.com | +91 83681 37724`,
     body: `## Contact RisonAI Tech
 
 Email: hello@risonaitech.com
-Phone: +91 83681 37724
-WhatsApp: https://wa.me/918368137724
+Phone: +91 93108 37724
+WhatsApp: https://wa.me/919310837724
 Website: https://risonaitech.com/contact
 
 Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India
@@ -376,7 +422,7 @@ Services in Delhi:
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/gurgaon": {
@@ -393,7 +439,7 @@ Services in Gurgaon:
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/panipat": {
@@ -410,7 +456,7 @@ Services in Panipat:
 - CRM Integrations: from Rs 40,000
 - WhatsApp Business API Automation: from Rs 25,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/indore": {
@@ -427,7 +473,7 @@ Services in Indore:
 - Custom CRM Systems: from Rs 40,000
 - SaaS MVP Engineering: from Rs 1,20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/ahmedabad": {
@@ -444,7 +490,7 @@ Services in Ahmedabad:
 - WhatsApp Commerce Bots: from Rs 25,000
 - SaaS MVP Engineering: from Rs 1,20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/jaipur": {
@@ -461,7 +507,41 @@ Services in Jaipur:
 - B2B/D2C Marketplace SaaS: from Rs 1,20,000
 - AI Automation pipelines: from Rs 30,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
+  },
+
+  "/ranchi": {
+    title: "AI Automation & SaaS Development in Ranchi — RisonAI Tech",
+    description:
+      "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM workflows for Ranchi businesses, Jharkhand startups, and government-adjacent enterprises.",
+    body: `## RisonAI Tech — Ranchi Services
+
+We help healthcare providers, social sector organizations, and growing industrial logistics companies in Ranchi and Jharkhand automate workflows and scale operations.
+
+Services in Ranchi:
+- Healthcare & Patient Intake Systems: from Rs 30,000
+- Custom CRM & Lead Triage: from Rs 40,000
+- Multi-Tenant SaaS MVPs: from Rs 1,20,000
+- WhatsApp AI Agents: from Rs 25,000
+
+Contact: hello@risonaitech.com | +91 93108 37724`,
+  },
+
+  "/patna": {
+    title: "AI Automation & SaaS Development in Patna — RisonAI Tech",
+    description:
+      "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM systems for Patna businesses, Bihar startups, and education-sector enterprises.",
+    body: `## RisonAI Tech — Patna Services
+
+We build custom LMS platforms, doubt-resolution bots, patient booking integrations, and agricultural marketplace portals for Patna, Bihar startups and coaching corridors.
+
+Services in Patna:
+- Coaching & LMS Platforms: from Rs 1,20,000
+- Patient Scheduling & WhatsApp triage: from Rs 25,000
+- Agricultural Supply-Chain SaaS: from Rs 1,50,000
+- Custom CRM & sales tracking: from Rs 40,000
+
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/chandigarh": {
@@ -478,7 +558,7 @@ Services in Chandigarh:
 - SaaS Platform Development: from Rs 1,20,000
 - WhatsApp Triage Chatbots: from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/new-york": {
@@ -495,7 +575,7 @@ Services in New York:
 - HubSpot/Salesforce AI Integrations: from $719
 - Custom CRM & Dashboard Builds: from $1,439
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/new-jersey": {
@@ -512,7 +592,7 @@ Services in New Jersey:
 - AI Chatbots & RAG Systems: from $359
 - AI Automation Workflows: from $539
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/london": {
@@ -529,7 +609,7 @@ Services in London:
 - AI Agents & n8n Workflows: from £450
 - Conversational RAG Chatbots: from £275
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   "/locations/india": {
@@ -544,7 +624,7 @@ All projects delivered remotely. Fixed INR pricing. Full source code ownership.
 
 Services: AI Automation, SaaS Development, CRM, AI Chatbots, Web Apps.
 
-Contact: hello@risonaitech.com | +91 83681 37724`,
+Contact: hello@risonaitech.com | +91 93108 37724`,
   },
 
   // ─── Blog Pages ─────────────────────────────────────────────────────────────
@@ -797,7 +877,55 @@ function buildFrontmatter(slug, title, description) {
   ].join("\n");
 }
 
+function loadDynamicCities() {
+  const appDir = path.join(ROOT, "app");
+  if (fs.existsSync(appDir)) {
+    const items = fs.readdirSync(appDir);
+    for (const item of items) {
+      const itemPath = path.join(appDir, item);
+      if (fs.statSync(itemPath).isDirectory()) {
+        const jsonPath = path.join(itemPath, "data.json");
+        if (fs.existsSync(jsonPath)) {
+          try {
+            const data = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+            const citySlug = `/${item}`;
+            
+            const body = [
+              `## AI Automation & Agent Systems in ${data.city}`,
+              `RisonAI Tech builds custom AI workflows, chatbots, and SaaS platforms for businesses in ${data.city}, ${data.country}.`,
+              ``,
+              `### Target Industries`,
+              ...data.industries.map((ind) => `- **${ind.name}**: ${ind.desc}`),
+              ``,
+              `### Local Coverage & Districts`,
+              `We serve clients across key districts including: ${data.businessDistricts.join(", ")}.`,
+              `Nearby cities served: ${data.nearbyCities.join(", ")}.`,
+              ``,
+              `### Services Offered`,
+              `- Custom AI Workflows & n8n/Make Automations`,
+              `- WhatsApp AI Systems & RAG Chatbots`,
+              `- Custom CRM Development & HubSpot/Zoho Syncs`,
+              `- Multi-Tenant SaaS Platform Engineering`,
+              ``,
+              `Contact hello@risonaitech.com or visit https://risonaitech.com/contact to start your project.`,
+            ].join("\n");
+
+            PAGE_CONTENT[citySlug] = {
+              title: `AI Automation Company in ${data.city} | Workflows & AI Agents`,
+              description: `RisonAI Tech is a leading AI automation company in ${data.city}. We build custom AI workflows, chatbots, WhatsApp automation, and SaaS platforms for local industries.`,
+              body: body,
+            };
+          } catch (err) {
+            console.error(`Error loading data.json for ${item}:`, err);
+          }
+        }
+      }
+    }
+  }
+}
+
 function generateMarkdownMirrors() {
+  loadDynamicCities();
   let created = 0;
 
   for (const [slug, content] of Object.entries(PAGE_CONTENT)) {

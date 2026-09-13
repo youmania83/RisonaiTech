@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/indore#localbusiness",
   name: "RisonAI Tech — Indore Services",
   url: "https://risonaitech.com/indore",
-  telephone: "+918368137724",
+  telephone: "+919310837724",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Indore startups and Madhya Pradesh businesses, delivered remotely from RisonAI Tech's Panipat headquarters.",

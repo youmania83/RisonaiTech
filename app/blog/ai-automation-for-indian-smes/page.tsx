@@ -70,7 +70,7 @@ const jsonLd = graph(
       "Most AI automation projects fail because businesses automate the wrong things first. Here's the prioritisation framework we use with 40+ Indian clients to get measurable ROI in under 90 days.",
     url: "/blog/ai-automation-for-indian-smes",
     datePublished: "2025-04-20",
-    dateModified: "2026-05-12",
+    dateModified: "2026-07-07",
     wordCount: 1200,
   }),
   faqSchemaFromPairs(faqItems)

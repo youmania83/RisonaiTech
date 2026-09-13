@@ -12,8 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-      if (item.startsWith("_") || item.startsWith(".") || item === "api" || item === "locations") {
-        continue; // Skip layout groups, next internal, API routes, and legacy locations wrapper
+      if (item.startsWith("_") || item.startsWith(".") || item === "api" || item === "locations" || item === "thank-you") {
+        continue; // Skip layout groups, next internal, API routes, legacy locations, and thank-you page
       }
 
       const fullPath = path.join(dirPath, item);
@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
           const pageStat = fs.statSync(pagePath);
           let priority = 0.5;
-          let changeFrequency = "monthly";
+          let changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "monthly";
 
           if (currentRoute === "/") {
             priority = 1.0;
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           } else if (currentRoute.startsWith("/tools")) {
             priority = 0.9;
             changeFrequency = "weekly";
-          } else if (["/delhi", "/gurgaon", "/panipat", "/jaipur", "/ahmedabad", "/indore", "/chandigarh", "/london", "/new-york", "/new-jersey"].includes(currentRoute)) {
+          } else if (["/delhi", "/gurgaon", "/panipat", "/jaipur", "/ahmedabad", "/indore", "/chandigarh", "/london", "/new-york", "/new-jersey", "/mumbai", "/dublin", "/sydney", "/melbourne", "/san-francisco", "/chicago", "/austin", "/seattle", "/los-angeles", "/houston", "/pune", "/hyderabad", "/chennai", "/noida", "/ranchi", "/patna"].includes(currentRoute)) {
             priority = 0.8;
             changeFrequency = "monthly";
           } else if (currentRoute === "/about" || currentRoute === "/products") {
@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           } else if (currentRoute === "/contact") {
             priority = 0.7;
             changeFrequency = "monthly";
-          } else if (currentRoute === "/privacy" || currentRoute === "/terms") {
+          } else if (currentRoute === "/privacy" || currentRoute === "/terms" || currentRoute === "/cookies") {
             priority = 0.3;
             changeFrequency = "yearly";
           }
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           sitemapEntries.push({
             url: `${BASE_URL}${currentRoute}`,
             lastModified: pageStat.mtime,
-            changeFrequency: changeFrequency as any,
+            changeFrequency,
             priority,
           });
         }

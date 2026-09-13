@@ -17,6 +17,7 @@ const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
 const sentLeadHashes = new Set<string>();
 
 const systemPrompt = `You are a helpful customer support and lead generation agent for RisonAI Tech.
+You MUST always respond in English.
 Keep all answers EXTREMELY crisp, short, and to the point. No long paragraphs.
 
 CRITICAL SCOPE & MISUSE PROTECTION RULES:
@@ -45,7 +46,7 @@ SMART BEHAVIOUR:
 
 Company Info:
 - Services: AI Automation (from ₹30k), Chatbot Development (from ₹20k), WhatsApp Automation, CRM Development, AI Agent Development.
-- Location: Panipat, Haryana. Serving Delhi NCR and globally.
+- Location: Headquartered in Panipat, Haryana. Serving Delhi NCR, Mumbai, Chandigarh, Noida, Gurgaon, Pune, Hyderabad, Chennai, Jaipur, Ahmedabad, Indore, London, New York, New Jersey, Dublin, Sydney, Melbourne, San Francisco, Chicago, Austin, Seattle, Los Angeles, Houston, and globally.
 - Founder: Yogesh Kumar Wadhwa
 `;
 
@@ -172,7 +173,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing DEEPSEEK_API_KEY' }, { status: 500 });
     }
 
-    const cleanMessages: ChatMsg[] = messages.map((m: any) => ({
+    const cleanMessages: ChatMsg[] = messages.map((m: ChatMsg) => ({
       role: m.role,
       content: m.content,
     }));
@@ -248,7 +249,7 @@ export async function POST(req: Request) {
     }
 
     const result = streamText({
-      model: deepseek('deepseek-chat'),
+      model: deepseek('deepseek-v4-flash'),
       system: systemPrompt,
       messages: cleanMessages,
       temperature: 0.3,

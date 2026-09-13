@@ -1,6 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
-import { LiquidButton } from "@/components/ui/liquid-glass-button";
-import HeroLottie from "@/components/HeroLottie";
+import { ArrowRight } from "lucide-react";
 
 const stats = [
   { title: "Business Systems Delivered", value: "40+" },
@@ -10,140 +8,99 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#05070F] pt-[68px]">
-      {/* Grid background */}
+    <section className="relative flex min-h-screen w-full items-start md:items-center justify-center overflow-hidden bg-white pt-[64px]">
+      {/* Very subtle dot grid — barely visible, editorial feel */}
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
+            "radial-gradient(circle, #E5E7EB 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
         }}
       />
 
-      {/* Static gradient background — no animation to avoid constant GPU repaint of blur-3xl */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-violet-950 to-fuchsia-950 opacity-50" />
-      </div>
-
-      {/* Primary + secondary glow — pure radial gradients, no CSS filter blur (avoids two
-          compositing layers and the expensive Gaussian blur during initial paint) */}
+      {/* Soft bottom fade to white so content below reads cleanly */}
       <div
         aria-hidden
-        className="glow-pulse pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48"
         style={{
-          background:
-            "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(99,91,255,0.18) 0%, rgba(14,165,233,0.06) 45%, transparent 70%), radial-gradient(ellipse 40% 40% at 85% 10%, rgba(14,165,233,0.18) 0%, transparent 60%)",
-        }}
-      />
-
-      {/* Lottie AI Flow — deferred background client component */}
-      <HeroLottie />
-
-      {/* Vignette — edge darkening */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(130% 90% at 50% 50%, transparent 50%, rgba(5,7,15,0.75) 100%)",
+          background: "linear-gradient(to bottom, transparent, #ffffff)",
         }}
       />
 
       {/* Content */}
-      <div className="container-site relative z-10 w-full py-24">
-        <div className="hero-fade-up mb-6 flex flex-wrap items-center gap-3" style={{ animationDelay: "0s" }}>
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/70">
-            Trusted by 40+ Businesses
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-300">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-            Only 3 Client Slots Available This Month
+      <div className="container-site relative z-10 w-full py-12 md:py-24 flex flex-col items-center text-center">
+        {/* Badge/Pill */}
+        <div
+          className="hero-fade-up mb-7 inline-flex items-center gap-2 rounded-full border border-orange-500/15 bg-orange-500/[0.02] px-4 py-1.5"
+          style={{ animationDelay: "0s" }}
+        >
+          <span className="h-2 w-2 rounded-full bg-[#FF7A00] animate-pulse" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
+            Engineering AI Operating Systems
           </span>
         </div>
 
-        {/* Removed hero-fade-up animation from H1 to eliminate LCP element render delay */}
-        <h1
-          className="font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl md:text-7xl max-w-4xl"
-        >
-          See How ChatGPT, Gemini & <br className="hidden md:inline" />
-          <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
-            Your Business
-          </span>{" "}
-          Your Business
+        {/* Headline */}
+        <h1 className="font-display text-5xl font-extrabold leading-[1.08] tracking-tight text-[#111111] sm:text-6xl md:text-7xl max-w-4xl">
+          AI Automation &amp; AI Agents <br />
+          <span className="text-slate-500/80">for Real Business Processes.</span>
         </h1>
 
+        {/* Description */}
         <p
-          className="hero-fade-up mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
-          style={{ animationDelay: "0.18s" }}
+          className="hero-fade-up mt-8 max-w-2xl text-base leading-relaxed text-[#555555] sm:text-lg"
+          style={{ animationDelay: "0.15s" }}
         >
-          Get a free AI Visibility Audit in under 10 seconds and discover how AI search engines rank your company, what they say about you, and where you&apos;re losing customers.
+          We engineer intelligent systems that automate your operations, eliminate
+          repetitive work, and scale your business without hiring more people. Build AI employees, not fragile prompts.
         </p>
 
+        {/* CTAs */}
         <div
-          className="hero-fade-up mt-9 flex flex-wrap items-center gap-4"
-          style={{ animationDelay: "0.3s" }}
+          className="hero-fade-up mt-10 flex flex-wrap items-center justify-center gap-4"
+          style={{ animationDelay: "0.28s" }}
         >
-          <LiquidButton size="xxl" asChild>
-            <a href="#ai-audit">
-              Get Free AI Visibility Report
-              <ArrowRight size={18} />
-            </a>
-          </LiquidButton>
+          <a
+            href="#contact"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[#FF7A00] px-8 text-sm font-semibold text-white transition-all duration-150 hover:bg-[#E06B00] shadow-[0_4px_20px_rgba(255,122,0,0.25)] border border-[#FF7A00]"
+          >
+            Book Free Consultation
+            <ArrowRight size={16} />
+          </a>
 
           <a
-            href="https://wa.me/918368137724?text=Hi%20RisonAI%20Tech%2C%20Please%20send%20me%20my%20AI%20Visibility%20Report."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
+            href="#case-studies"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-[#FF7A00]/25 bg-white px-8 text-sm font-semibold text-[#FF7A00] transition-all duration-150 hover:border-[#FF7A00] hover:bg-orange-500/[0.02]"
           >
-            <MessageCircle size={16} className="text-[#25D366] fill-[#25D366]" />
-            Chat on WhatsApp
+            See Case Studies
+            <ArrowRight size={16} className="text-[#FF7A00]/75" />
           </a>
         </div>
 
-        <div className="hero-fade-up mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/45" style={{ animationDelay: "0.38s" }}>
-          <span>✓ Free</span>
-          <span>✓ No Signup</span>
-          <span>✓ Results in 10 Seconds</span>
+        {/* Trust micro-copy */}
+        <div
+          className="hero-fade-up mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-[#999999]"
+          style={{ animationDelay: "0.38s" }}
+        >
+          <span>✓ Fixed Scope</span>
+          <span>✓ Full Code Ownership</span>
+          <span>✓ Free AI Search Audit Below</span>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3 w-full max-w-4xl">
           {stats.map((item, i) => (
             <div
               key={item.title}
-              className="hero-fade-up group relative overflow-hidden rounded-2xl p-6"
-              style={{
-                animationDelay: `${0.45 + i * 0.1}s`,
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
-              }}
+              className="hero-fade-up group rounded-2xl border border-[#E5E7EB] bg-white p-6 transition-[border-color,transform] duration-200 hover:border-[#FF7A00] hover:-translate-y-0.5 text-left"
+              style={{ animationDelay: `${0.45 + i * 0.1}s` }}
             >
-              {/* Hover glow */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style={{
-                  background:
-                    "radial-gradient(140% 100% at 0% 0%, rgba(99,91,255,0.22) 0%, transparent 65%)",
-                }}
-              />
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/45">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#999999]">
                 {item.title}
               </p>
-              <p
-                className="mt-3 font-display text-4xl font-bold tracking-tight"
-                style={{
-                  letterSpacing: "-0.025em",
-                  background: "linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  display: "inline-block"
-                }}
-              >
+              <p className="mt-3 font-display text-4xl font-extrabold tracking-tight text-[#111111]">
                 {item.value}
               </p>
             </div>
@@ -153,14 +110,10 @@ export default function Hero() {
 
       {/* Trust strip */}
       <div
-        className="absolute inset-x-0 bottom-0"
-        style={{
-          background: "rgba(5,7,15,0.75)",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
-        }}
+        className="absolute inset-x-0 bottom-0 border-t border-[#E5E7EB] bg-white"
       >
-        <div className="container-site flex flex-wrap items-center gap-x-8 gap-y-2 py-3.5">
-          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
+        <div className="container-site flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-3.5">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#999999]">
             Built for
           </span>
           {[
@@ -173,11 +126,9 @@ export default function Hero() {
           ].map((name, i) => (
             <span key={name} className="flex items-center gap-2">
               {i > 0 && (
-                <span className="hidden h-3 w-px bg-white/12 sm:block" />
+                <span className="hidden h-3 w-px bg-[#E5E7EB] sm:block" />
               )}
-              <span className="text-xs font-medium text-white/50 transition-colors duration-200 hover:text-white/85">
-                {name}
-              </span>
+              <span className="text-xs font-medium text-[#555555]">{name}</span>
             </span>
           ))}
         </div>

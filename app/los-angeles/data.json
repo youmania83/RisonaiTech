@@ -1,0 +1,27 @@
+{
+  "city": "Los Angeles",
+  "country": "USA",
+  "businessDistricts": [
+    "Silicon Beach",
+    "Downtown LA",
+    "Century City",
+    "Pasadena",
+    "Hollywood",
+    "Santa Monica"
+  ],
+  "industries": [
+    "Media & Entertainment",
+    "Hospitality & Stays",
+    "Tech Startups & SaaS",
+    "Real Estate & Luxury",
+    "Retail & E-commerce",
+    "Healthcare & Wellness"
+  ],
+  "nearbyCities": [
+    "Glendale",
+    "Long Beach",
+    "Burbank",
+    "Torrance"
+  ],
+  "language": "English"
+}

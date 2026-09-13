@@ -1,0 +1,27 @@
+{
+  "city": "San Francisco",
+  "country": "USA",
+  "businessDistricts": [
+    "SoMa",
+    "Financial District",
+    "Mission District",
+    "Silicon Valley",
+    "Marina",
+    "Oakland"
+  ],
+  "industries": [
+    "Tech Startups & SaaS",
+    "AI & Machine Learning",
+    "Finance & Venture Capital",
+    "Real Estate & Leasing",
+    "Healthcare & Life Sciences",
+    "Retail & E-commerce"
+  ],
+  "nearbyCities": [
+    "San Jose",
+    "Berkeley",
+    "Palo Alto",
+    "San Mateo"
+  ],
+  "language": "English"
+}

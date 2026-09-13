@@ -1,0 +1,27 @@
+{
+  "city": "Gurgaon",
+  "country": "India",
+  "businessDistricts": [
+    "Cyber City",
+    "Sohna Road",
+    "Golf Course Road",
+    "Sector 48",
+    "Sector 44",
+    "Udyog Vihar"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "FinTech & Banking",
+    "Real Estate & Luxury",
+    "Retail & E-commerce",
+    "Healthcare & Research",
+    "Logistics & Transport"
+  ],
+  "nearbyCities": [
+    "Delhi",
+    "Faridabad",
+    "Manesar",
+    "Noida"
+  ],
+  "language": "English"
+}

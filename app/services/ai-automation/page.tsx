@@ -19,16 +19,19 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation Agency India | Agentic AI & Workflows | RisonAI Tech" },
+  title: { absolute: "AI Automation Company India | Agentic AI Agents & Workflows | RisonAI Tech" },
   description:
-    "RisonAI Tech is a business process automation agency delivering custom AI automation services, AI integration services for business, autonomous AI agents, n8n workflows, and AI-powered resume screening for Indian businesses. Delhi NCR. From ₹30,000.",
+    "RisonAI Tech is India's AI automation company — building autonomous AI agents, agentic workflows, n8n pipelines, WhatsApp automation & AI consulting for Indian businesses. Fixed price from ₹30,000. Delhi NCR.",
   keywords: [
     // Core service terms
-    "AI automation agency India",
     "AI automation company India",
+    "AI automation agency India",
+    "AI automation services India",
     "AI workflow automation agency",
     "agentic AI solutions India",
     "AI workflow automation Delhi NCR",
+    "enterprise AI solutions India",
+    "AI consulting company India",
     // Trending 2025-2026 terms
     "AI agents for business India",
     "autonomous AI agents India",
@@ -40,16 +43,13 @@ export const metadata: Metadata = {
     "LangGraph development India",
     "AI copilot development India",
     "AI workers India",
-    "vibe automation India",
-    "ChatGPT automation business India",
-    "Claude AI automation India",
-    "GPT-5 automation India",
-    "AI agent builder India",
+    "AI workforce India",
+    "AI SDR agent India",
+    "voice AI agent India",
     // Workflow & stack terms
     "n8n automation India",
     "LLM automation system India",
     "hyperautomation India",
-    "AI SDR agent India",
     "business process automation AI India",
     "business process automation agency",
     "RPA services India",
@@ -58,30 +58,29 @@ export const metadata: Metadata = {
     "AI integration services for business",
     "custom AI automation services",
     "AI automation for startups India",
-    "AI automation services Panipat",
     "WhatsApp automation India",
     "autonomous AI workflow India",
     "AI implementation partner India",
     "AI-powered resume screening",
     "resume screening automation India",
     // GEO — natural-language phrases AI search engines cite
-    "best AI automation agency in India 2025",
+    "best AI automation company in India 2026",
     "affordable AI automation India small business",
     "who builds AI agents in India",
     "AI automation company Delhi Gurgaon",
   ],
   alternates: { canonical: "/services/ai-automation" },
   openGraph: {
-    title: "AI Automation Agency India | Agentic AI Systems | RisonAI Tech",
+    title: "AI Automation Company India | Agentic AI Systems | RisonAI Tech",
     description:
-      "India's AI automation agency — autonomous AI agents, multi-agent systems, AI copilots, MCP servers, n8n workflows, WhatsApp pipelines, CRM syncs, RPA. Built for Indian businesses. From ₹30,000.",
+      "India's AI automation company — autonomous AI agents, multi-agent systems, AI copilots, MCP servers, n8n workflows, WhatsApp pipelines, CRM syncs, voice AI. Fixed price from ₹30,000.",
     url: "https://risonaitech.com/services/ai-automation",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Agency India | AI Agents & n8n Workflows | RisonAI Tech",
-    description: "Autonomous AI agents, multi-agent systems, MCP servers, n8n workflows, LLM agents, WhatsApp automation, RPA for Indian businesses. From ₹30,000.",
+    title: "AI Automation Company India | AI Agents, n8n & Voice AI | RisonAI Tech",
+    description: "Autonomous AI agents, multi-agent systems, MCP servers, n8n workflows, voice AI, WhatsApp automation for Indian businesses. From ₹30,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
@@ -123,6 +122,11 @@ const useCases = [
     icon: BarChart3,
     title: "Executive Intelligence Reports",
     desc: "AI pulls data from your CRM, ops tools, and databases — generates weekly summaries with highlights, anomalies, and recommended actions. Delivered to your inbox every Monday.",
+  },
+  {
+    icon: Bot,
+    title: "Voice AI Agents",
+    desc: "Outbound and inbound voice AI agents built on Twilio + LLM stacks — appointment confirmation calls, post-purchase NPS collection, qualified-lead callbacks. Runs 24/7 without human intervention.",
   },
 ];
 
@@ -662,6 +666,12 @@ export default function AIAutomationPage() {
             <Link className="btn-outline text-sm" href="/services/saas-development">
               SaaS Development
             </Link>
+            <Link className="btn-outline text-sm" href="/services/resume-screening">
+              AI Resume Screening
+            </Link>
+            <Link className="btn-outline text-sm" href="/services/ai-agent">
+              AI Agent Development
+            </Link>
             <Link className="btn-outline text-sm" href="/#case-studies">
               Case Studies
             </Link>
@@ -671,8 +681,17 @@ export default function AIAutomationPage() {
             <Link className="btn-outline text-sm" href="/gurgaon">
               Gurgaon automation
             </Link>
+            <Link className="btn-outline text-sm" href="/mumbai">
+              Mumbai AI automation
+            </Link>
             <Link className="btn-outline text-sm" href="/panipat">
               Panipat SME automation
+            </Link>
+            <Link className="btn-outline text-sm" href="/ranchi">
+              Ranchi AI automation
+            </Link>
+            <Link className="btn-outline text-sm" href="/patna">
+              Patna AI automation
             </Link>
             <Link className="btn-outline text-sm" href="/contact">
               Book Free Consultation
@@ -727,7 +746,25 @@ export default function AIAutomationPage() {
                 href: "/services/chatbot-development",
                 tag: "Service",
                 title: "AI Chatbot Development",
-                desc: "RAG chatbots trained on your data for websites and WhatsApp. From \u20b920,000.",
+                desc: "RAG chatbots trained on your data for websites and WhatsApp. From ₹20,000.",
+              },
+              {
+                href: "/blog/make-vs-n8n-ai-automation",
+                tag: "Guide",
+                title: "Make vs n8n — Which Platform Wins?",
+                desc: "A head-to-head comparison of the two most popular workflow automation tools for Indian businesses in 2026.",
+              },
+              {
+                href: "/blog/ai-agents-for-business-automation",
+                tag: "Guide",
+                title: "AI Agents for Business Automation",
+                desc: "What AI agents are, what they cost, and how to deploy them in your operations stack.",
+              },
+              {
+                href: "/services/resume-screening",
+                tag: "Service",
+                title: "AI Resume Screening",
+                desc: "Automate CV review and candidate ranking with Skills Graph matching. Save 70–80% of screening time.",
               },
             ].map((item) => (
               <Link

@@ -1,0 +1,27 @@
+{
+  "city": "Austin",
+  "country": "USA",
+  "businessDistricts": [
+    "Downtown",
+    "Silicon Hills",
+    "The Domain",
+    "East Austin",
+    "West Lake Hills",
+    "South Congress"
+  ],
+  "industries": [
+    "Tech Startups & SaaS",
+    "Real Estate & Dev",
+    "Healthcare & Biotech",
+    "Retail & E-commerce",
+    "Finance & Wealth",
+    "Hospitality & Tourism"
+  ],
+  "nearbyCities": [
+    "Round Rock",
+    "Cedar Park",
+    "Georgetown",
+    "San Marcos"
+  ],
+  "language": "English"
+}

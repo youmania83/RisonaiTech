@@ -1,0 +1,27 @@
+{
+  "city": "Sydney",
+  "country": "Australia",
+  "businessDistricts": [
+    "Barangaroo",
+    "CBD",
+    "North Sydney",
+    "Macquarie Park",
+    "Surry Hills",
+    "Pyrmont"
+  ],
+  "industries": [
+    "Banking & Wealth Management",
+    "Real Estate & Construction",
+    "Logistics & Marine Supply",
+    "Retail & Consumer Goods",
+    "Hospitality & Tourism",
+    "IT & Tech Startups"
+  ],
+  "nearbyCities": [
+    "Parramatta",
+    "Manly",
+    "Chatswood",
+    "Cronulla"
+  ],
+  "language": "English"
+}

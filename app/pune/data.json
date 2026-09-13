@@ -1,0 +1,27 @@
+{
+  "city": "Pune",
+  "country": "India",
+  "businessDistricts": [
+    "Hinjawadi",
+    "Magarpatta",
+    "Baner",
+    "Viman Nagar",
+    "Koregaon Park",
+    "Senapati Bapat Road"
+  ],
+  "industries": [
+    "IT & SaaS Startups",
+    "Automotive & Mfg",
+    "Real Estate & Dev",
+    "Retail & E-commerce",
+    "Healthcare & Clinics",
+    "Logistics & Transport"
+  ],
+  "nearbyCities": [
+    "Pimpri-Chinchwad",
+    "Chakan",
+    "Hadapsar",
+    "Lonavala"
+  ],
+  "language": "English"
+}

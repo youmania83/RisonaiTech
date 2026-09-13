@@ -30,9 +30,10 @@ export async function GET() {
     });
 
     return NextResponse.json({ success: true, from: gmailUser, to: toAddress });
-  } catch (err: any) {
+  } catch (err) {
+    const errorMsg = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { success: false, error: err?.message || String(err) },
+      { success: false, error: errorMsg },
       { status: 500 }
     );
   }
