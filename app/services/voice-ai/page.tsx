@@ -11,9 +11,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Voice AI Agents India | AI Receptionist & Outbound Calling | RisonAI Tech" },
+  title: { absolute: "Voice AI Agents in India | AI Receptionist & Calling Automation" },
   description:
-    "RisonAI Tech builds voice AI agents for inbound and outbound calls — AI receptionists, appointment confirmation bots, lead callback agents & post-purchase NPS callers. Twilio + LLM. From ₹1,50,000.",
+    "Inbound & outbound voice AI agents for Indian businesses. AI receptionists, appointment confirmation & 60-second lead callback callers on Twilio + LLMs.",
   keywords: [
     "voice AI agent India",
     "AI receptionist India",
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/voice-ai" },
   openGraph: {
-    title: "Voice AI Agents India | AI Receptionist & Outbound Calling | RisonAI Tech",
+    title: "Voice AI Agents in India | AI Receptionist & Calling Automation",
     description:
-      "AI receptionists, outbound lead callback agents, appointment confirmation bots & NPS callers built on Twilio + LLM. From ₹1,50,000.",
+      "Inbound & outbound voice AI agents for Indian businesses. AI receptionists, appointment confirmation & 60-second lead callback callers on Twilio + LLMs.",
     url: "https://risonaitech.com/services/voice-ai",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voice AI Agents India | AI Receptionist & Outbound Calling | RisonAI Tech",
+    title: "Voice AI Agents in India | AI Receptionist & Calling Automation",
     description: "AI receptionists, outbound lead callback agents, appointment bots & NPS callers. Twilio + LLM. From ₹1,50,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
@@ -220,13 +220,16 @@ export default function VoiceAIPage() {
           <div className="mx-auto max-w-3xl">
             <span className="label-pill mb-5 inline-flex">Voice AI Agents</span>
             <h1 className="font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
-              Voice AI agents that{" "}
-              <span className="grad-text">answer, qualify, and convert</span>
+              Voice AI Agents in India:{" "}
+              <span className="grad-text">Answer, Qualify, and Convert</span>
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/60">
               RisonAI Tech builds inbound and outbound voice AI agents on Twilio + LLM stacks —
-              AI receptionists, appointment confirmation bots, lead callback agents, and NPS callers.
-              Always on. Hindi + English. From ₹1,50,000.
+              AI receptionists, appointment confirmation bots, lead callback agents (such as in our{" "}
+              <Link href="/blog/ai-automation-real-estate-india" className="text-indigo-400 hover:underline">
+                real estate lead workflows
+              </Link>
+              ), and NPS callers. Sub-second response latency (&lt;800ms) with TRAI compliance. Always on. Hindi + English. From ₹1,50,000.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link className="btn-primary" href="/contact">Book a free scoping call <ArrowRight size={15} /></Link>

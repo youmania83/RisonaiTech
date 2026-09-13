@@ -44,9 +44,8 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-display text-5xl font-extrabold leading-[1.08] tracking-tight text-[#111111] sm:text-6xl md:text-7xl max-w-4xl">
-          Build AI <br />
-          Employees. <br />
-          <span className="text-slate-500/80">Not AI Tools.</span>
+          AI Automation &amp; AI Agents <br />
+          <span className="text-slate-500/80">for Real Business Processes.</span>
         </h1>
 
         {/* Description */}
@@ -55,7 +54,7 @@ export default function Hero() {
           style={{ animationDelay: "0.15s" }}
         >
           We engineer intelligent systems that automate your operations, eliminate
-          repetitive work, and scale your business without hiring more people.
+          repetitive work, and scale your business without hiring more people. Build AI employees, not fragile prompts.
         </p>
 
         {/* CTAs */}

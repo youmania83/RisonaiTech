@@ -23,9 +23,9 @@ import StickyWhatsApp from "@/components/StickyWhatsApp";
 import ManagedAiServices from "@/components/ManagedAiServices";
 
 export const metadata: Metadata = {
-  title: "RisonAI Tech | India's AI Automation Agency & Agentic AI Systems — From ₹30,000",
+  title: "RisonAI Tech | AI Automation Agency & AI Agents in India",
   description:
-    "India's leading AI automation agency — custom AI agents, agentic workflows, WhatsApp AI, voice AI & chatbot development. 40+ systems shipped. Fixed price from ₹30,000. Delhi NCR.",
+    "India's AI automation agency. We engineer autonomous AI agents, voice AI callers, WhatsApp automation & custom CRM workflows. 40+ systems shipped. Fixed-price sprints.",
   keywords: [
     "AI workflow automation agency",
     "AI automation company India",
@@ -195,9 +195,9 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* AEO Search Crawler Evidence Summaries - hidden from visual interface, visible to search engines & screen readers */}
+      {/* AEO Search Crawler Evidence Summaries - visible to search engines & screen readers */}
       <div className="sr-only">
-        <h1>RisonAI Tech - AI Workflow Automation Agency & Agentic Systems Company</h1>
+        <h2>RisonAI Tech - AI Workflow Automation Agency & Agentic Systems Company</h2>
         <p>
           RisonAI Tech is a leading AI integration partner and custom product engineering firm in India (Delhi NCR/Panipat/Gurgaon) founded by Lead Product Engineer Yogesh Kumar Wadhwa. 
           Our company builds autonomous AI agents, multi-agent pipelines (LangGraph, CrewAI), WhatsApp Business API bots, RAG chatbots, SaaS applications, and custom CRM systems.

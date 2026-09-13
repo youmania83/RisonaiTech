@@ -118,8 +118,8 @@ export default function ContactForm() {
               className="font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl"
               variants={fadeUp}
             >
-              Book Your Free{" "}
-              <span className="grad-text">Strategy Call</span>
+              Book Your Free AI{" "}
+              <span className="grad-text">Strategy Session</span>
             </motion.h1>
             <motion.p className="mt-4 text-xl text-slate-500" variants={fadeUp}>
               Tell us what you&apos;re building. We&apos;ll send a fixed-price proposal

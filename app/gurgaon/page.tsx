@@ -43,9 +43,9 @@ import {
 
 // Metadata Configuration
 export const metadata: Metadata = {
-  title: "AI Automation Company in Gurgaon | Workflows & AI Agents",
+  title: "AI Automation Company in Gurgaon | AI Agents & Business Workflows",
   description:
-    "RisonAI Tech is a leading AI automation company in Gurgaon. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
+    "AI automation agency serving Gurgaon & Delhi NCR. We build custom AI agents, WhatsApp bots, voice calling agents & CRM workflows. Fixed-price delivery.",
   keywords: [
     "AI Automation Company in Gurgaon",
     "AI Chatbot Development Gurgaon",
@@ -139,31 +139,31 @@ const factualBenchmarks = [
 // Schema Definitions
 const localBusinessSchemaData = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://risonaitech.com/gurgaon#localbusiness",
-  name: "RisonAI Tech — AI Automation Gurgaon",
+  "@type": ["Service", "ProfessionalService"],
+  "@id": "https://risonaitech.com/gurgaon#service",
+  name: "AI Automation Services in Gurgaon",
   url: "https://risonaitech.com/gurgaon",
-  telephone: "+919310837724",
-  email: "hello@risonaitech.com",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://risonaitech.com/#organization",
+    name: "RisonAI Tech",
+    telephone: "+919310837724",
+    email: "hello@risonaitech.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "196, Ground Floor, New RK Puram",
+      addressLocality: "Panipat",
+      addressRegion: "Haryana",
+      postalCode: "132103",
+      addressCountry: "IN",
+    },
+  },
   description:
     "Custom AI chatbot development, n8n workflow automation, and voice AI calling agents for enterprises in Gurgaon, Delhi, Faridabad.",
   areaServed: [
     { "@type": "City", name: "Gurgaon" },
     ...nearbyCities.map(n => ({ "@type": "City", name: n }))
   ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Cyber City, Sohna Road, Golf Course Road",
-    addressLocality: "Gurgaon",
-    addressRegion: "State",
-    postalCode: "110001",
-    addressCountry: "IN"
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 28.4595,
-    longitude: 77.0266
-  }
 };
 
 const pageSchema = graph(
@@ -220,7 +220,19 @@ export default function GurgaonAIAutomationPage() {
               AI Automation Company in <span className="grad-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Gurgaon</span>
             </h1>
             <p className="mt-6 mx-auto max-w-3xl text-xl leading-relaxed text-slate-300">
-              Eliminate manual data loops and scale client conversions with custom-engineered workflow pipelines. RAG chatbots, voice AI calling agents, and automated CRM architectures designed for Gurgaon&apos;s leading tech, logistics, and real estate enterprises.
+              Eliminate manual data loops and scale client conversions with custom-engineered{" "}
+              <Link href="/services/ai-automation" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4">
+                workflow pipelines
+              </Link>
+              . Production-ready RAG chatbots,{" "}
+              <Link href="/services/voice-ai" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4">
+                voice AI calling agents
+              </Link>
+              , and{" "}
+              <Link href="/services/crm-development" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4">
+                automated CRM architectures
+              </Link>{" "}
+              designed for Gurgaon&apos;s leading tech, logistics, and real estate enterprises.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link className="btn-primary bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg shadow-indigo-600/20" href="/contact">
