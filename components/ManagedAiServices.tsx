@@ -162,7 +162,7 @@ export default function ManagedAiServices() {
     const text = encodeURIComponent(
       `Hi RisonAI Tech,\n\nI want to discuss our AI operations. I am interested in the ${planName} managed service contract. Please share details on onboarding.`
     );
-    return `https://wa.me/919310837724?text=${text}`;
+    return `https://wa.me/919050486448?text=${text}`;
   };
 
   // Structured Data Schema for Managed Services

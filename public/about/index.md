@@ -18,4 +18,4 @@ We build AI automation systems, SaaS platforms, CRM solutions, AI chatbots, and 
 - Two-week sprint delivery model
 - Full code ownership transferred to clients
 
-Contact: hello@risonaitech.com | +91 93108 37724
+Contact: hello@risonaitech.com | +91 90504 86448

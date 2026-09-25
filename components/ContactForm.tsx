@@ -194,7 +194,7 @@ export default function ContactForm() {
                         id="phone"
                         name="phone"
                         onChange={handleChange}
-                        placeholder="+919310837724"
+                        placeholder="+919050486448"
                         required
                         type="tel"
                         value={form.phone}

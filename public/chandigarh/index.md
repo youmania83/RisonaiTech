@@ -15,4 +15,4 @@ Services in Chandigarh:
 - SaaS Platform Development: from Rs 1,20,000
 - WhatsApp Triage Chatbots: from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724
+Contact: hello@risonaitech.com | +91 90504 86448

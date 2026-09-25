@@ -143,7 +143,7 @@ const localBusinessSchemaData = {
   "@id": "https://risonaitech.com/pune#localbusiness",
   name: "RisonAI Tech — AI Automation Pune",
   url: "https://risonaitech.com/pune",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "Custom AI chatbot development, n8n workflow automation, and voice AI calling agents for enterprises in Pune, Pimpri-Chinchwad, Chakan.",

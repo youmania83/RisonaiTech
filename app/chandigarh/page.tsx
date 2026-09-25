@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/chandigarh#localbusiness",
   name: "RisonAI Tech — Chandigarh Services",
   url: "https://risonaitech.com/chandigarh",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Chandigarh startups and Punjab–Haryana businesses, delivered remotely from RisonAI Tech's Panipat headquarters.",

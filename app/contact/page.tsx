@@ -39,7 +39,7 @@ const contactPageSchema = {
     "@type": "LocalBusiness",
     "@id": "https://risonaitech.com/#business",
     name: "RisonAI Tech",
-    telephone: "+919310837724",
+    telephone: "+919050486448",
     email: "hello@risonaitech.com",
     address: {
       "@type": "PostalAddress",
@@ -63,7 +63,7 @@ export default function ContactPage() {
       <div className="sr-only" aria-hidden="false">
         <address>
           RisonAI Tech — 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India.
-          Phone: +91 93108 37724. Email: hello@risonaitech.com. GSTIN: 06CDBPS8926D2ZE.
+          Phone: +91 90504 86448. Email: hello@risonaitech.com. GSTIN: 06CDBPS8926D2ZE.
         </address>
       </div>
       <ContactForm />

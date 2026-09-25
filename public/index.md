@@ -32,6 +32,6 @@ Expreality — Luxury real estate intelligence platform with AI location scoring
 
 - Website: https://risonaitech.com
 - Email: hello@risonaitech.com
-- Phone: +91 93108 37724
-- WhatsApp: https://wa.me/919310837724
+- Phone: +91 90504 86448
+- WhatsApp: https://wa.me/919050486448
 - Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103

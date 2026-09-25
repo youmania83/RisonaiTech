@@ -43,7 +43,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/jaipur#localbusiness",
   name: "RisonAI Tech — Jaipur Services",
   url: "https://risonaitech.com/jaipur",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Jaipur startups, tourism tech companies, and Rajasthan enterprises — delivered remotely from RisonAI Tech's Panipat headquarters.",

@@ -219,7 +219,7 @@ const organizationSchema = {
   image: { "@id": `${BASE_URL}/#logo` },
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, CRM infrastructure, and AI chatbot and voice agent development for enterprise efficiency.",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -297,7 +297,7 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+919310837724",
+      telephone: "+919050486448",
       contactType: "sales",
       areaServed: ["IN", "US", "GB", "AE", "SG", "AU"],
       availableLanguage: ["English", "Hindi"],
@@ -330,7 +330,7 @@ const localBusinessSchema = {
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, SaaS engineering, CRM infrastructure, and AI chatbot and voice agent development.",
   url: "https://risonaitech.com",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   address: {
     "@type": "PostalAddress",
@@ -386,7 +386,7 @@ const localBusinessSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+919310837724",
+    telephone: "+919050486448",
     contactType: "sales",
     email: "hello@risonaitech.com",
     availableLanguage: ["English", "Hindi"],

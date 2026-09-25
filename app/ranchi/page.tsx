@@ -46,7 +46,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/ranchi#localbusiness",
   name: "RisonAI Tech — Ranchi Services",
   url: "https://risonaitech.com/ranchi",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Ranchi businesses, healthcare providers, and Jharkhand enterprises — delivered remotely from RisonAI Tech's Panipat headquarters.",

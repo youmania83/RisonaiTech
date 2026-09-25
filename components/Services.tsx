@@ -89,7 +89,7 @@ export default function Services() {
 
                   <div className="mt-6 pt-4 border-t border-slate-100">
                     <a
-                      href={`https://wa.me/919310837724?text=${waMsg}`}
+                      href={`https://wa.me/919050486448?text=${waMsg}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-4 py-2 w-full text-xs font-semibold text-slate-700 transition-all hover:bg-[#25D366]/5 hover:border-[#25D366]/20 hover:text-emerald-700 shadow-sm"

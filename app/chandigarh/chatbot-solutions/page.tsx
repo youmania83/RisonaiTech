@@ -329,7 +329,7 @@ const localBusinessSchemaData = {
   "@id": "https://risonaitech.com/chandigarh/chatbot-solutions#localbusiness",
   name: "RisonAI Tech — Chatbot Solutions Chandigarh",
   url: "https://risonaitech.com/chandigarh/chatbot-solutions",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "Custom AI chatbot development, WhatsApp automation, and conversational AI solutions for businesses in Chandigarh, Mohali, Panchkula, and the Tricity region.",

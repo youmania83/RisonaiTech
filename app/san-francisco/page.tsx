@@ -143,7 +143,7 @@ const localBusinessSchemaData = {
   "@id": "https://risonaitech.com/san-francisco#localbusiness",
   name: "RisonAI Tech — AI Automation San Francisco",
   url: "https://risonaitech.com/san-francisco",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "Custom AI chatbot development, n8n workflow automation, and voice AI calling agents for enterprises in San Francisco, San Jose, Berkeley.",

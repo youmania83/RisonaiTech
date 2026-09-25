@@ -88,7 +88,7 @@ export default function LeadershipAuthority() {
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
               <a
-                href={`https://wa.me/919310837724?text=${whatsappMessage}`}
+                href={`https://wa.me/919050486448?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
