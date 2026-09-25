@@ -15,4 +15,4 @@ Services in Panipat:
 - CRM Integrations: from Rs 40,000
 - WhatsApp Business API Automation: from Rs 25,000
 
-Contact: hello@risonaitech.com | +91 93108 37724
+Contact: hello@risonaitech.com | +91 90504 86448

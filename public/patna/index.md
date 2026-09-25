@@ -15,4 +15,4 @@ Services in Patna:
 - Agricultural Supply-Chain SaaS: from Rs 1,50,000
 - Custom CRM & sales tracking: from Rs 40,000
 
-Contact: hello@risonaitech.com | +91 93108 37724
+Contact: hello@risonaitech.com | +91 90504 86448

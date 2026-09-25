@@ -126,7 +126,7 @@ export default function HumanVsAi() {
             <Reveal delay={0.25}>
               <div className="inline-flex flex-wrap items-center justify-center gap-4">
                 <a
-                  href={`https://wa.me/919310837724?text=${whatsappMsg}`}
+                  href={`https://wa.me/919050486448?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"

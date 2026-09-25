@@ -13,4 +13,4 @@ All projects delivered remotely. Fixed INR pricing. Full source code ownership.
 
 Services: AI Automation, SaaS Development, CRM, AI Chatbots, Web Apps.
 
-Contact: hello@risonaitech.com | +91 93108 37724
+Contact: hello@risonaitech.com | +91 90504 86448

@@ -32,7 +32,7 @@ export default function ThankYouPage() {
 
   // Formulate the WhatsApp URL
   const waMessage = `Hi Risonai Tech!\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
-  const whatsappUrl = `https://wa.me/919310837724?text=${encodeURIComponent(waMessage)}`;
+  const whatsappUrl = `https://wa.me/919050486448?text=${encodeURIComponent(waMessage)}`;
 
   useEffect(() => {
     if (!isMounted) return;

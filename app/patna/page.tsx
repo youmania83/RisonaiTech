@@ -48,7 +48,7 @@ const localSchema = {
   "@id": "https://risonaitech.com/patna#localbusiness",
   name: "RisonAI Tech — Patna Services",
   url: "https://risonaitech.com/patna",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "AI automation, SaaS development, CRM, and chatbot services for Patna businesses, coaching institutes, and Bihar enterprises — delivered remotely from RisonAI Tech's Panipat headquarters.",

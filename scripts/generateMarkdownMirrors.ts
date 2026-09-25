@@ -47,8 +47,8 @@ Expreality — Luxury real estate intelligence platform with AI location scoring
 
 - Website: https://risonaitech.com
 - Email: hello@risonaitech.com
-- Phone: +91 93108 37724
-- WhatsApp: https://wa.me/919310837724
+- Phone: +91 90504 86448
+- WhatsApp: https://wa.me/919050486448
 - Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103`,
   },
 
@@ -338,7 +338,7 @@ We build AI automation systems, SaaS platforms, CRM solutions, AI chatbots, and 
 - Two-week sprint delivery model
 - Full code ownership transferred to clients
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/contact": {
@@ -348,8 +348,8 @@ Contact: hello@risonaitech.com | +91 93108 37724`,
     body: `## Contact RisonAI Tech
 
 Email: hello@risonaitech.com
-Phone: +91 93108 37724
-WhatsApp: https://wa.me/919310837724
+Phone: +91 90504 86448
+WhatsApp: https://wa.me/919050486448
 Website: https://risonaitech.com/contact
 
 Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India
@@ -377,7 +377,7 @@ Services in Delhi:
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/gurgaon": {
@@ -394,7 +394,7 @@ Services in Gurgaon:
 - CRM Development from Rs 40,000
 - AI Chatbot from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/panipat": {
@@ -411,7 +411,7 @@ Services in Panipat:
 - CRM Integrations: from Rs 40,000
 - WhatsApp Business API Automation: from Rs 25,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/indore": {
@@ -428,7 +428,7 @@ Services in Indore:
 - Custom CRM Systems: from Rs 40,000
 - SaaS MVP Engineering: from Rs 1,20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/ahmedabad": {
@@ -445,7 +445,7 @@ Services in Ahmedabad:
 - WhatsApp Commerce Bots: from Rs 25,000
 - SaaS MVP Engineering: from Rs 1,20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/jaipur": {
@@ -462,7 +462,7 @@ Services in Jaipur:
 - B2B/D2C Marketplace SaaS: from Rs 1,20,000
 - AI Automation pipelines: from Rs 30,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/chandigarh": {
@@ -479,7 +479,7 @@ Services in Chandigarh:
 - SaaS Platform Development: from Rs 1,20,000
 - WhatsApp Triage Chatbots: from Rs 20,000
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/new-york": {
@@ -496,7 +496,7 @@ Services in New York:
 - HubSpot/Salesforce AI Integrations: from $719
 - Custom CRM & Dashboard Builds: from $1,439
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/new-jersey": {
@@ -513,7 +513,7 @@ Services in New Jersey:
 - AI Chatbots & RAG Systems: from $359
 - AI Automation Workflows: from $539
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/london": {
@@ -530,7 +530,7 @@ Services in London:
 - AI Agents & n8n Workflows: from £450
 - Conversational RAG Chatbots: from £275
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   "/locations/india": {
@@ -545,7 +545,7 @@ All projects delivered remotely. Fixed INR pricing. Full source code ownership.
 
 Services: AI Automation, SaaS Development, CRM, AI Chatbots, Web Apps.
 
-Contact: hello@risonaitech.com | +91 93108 37724`,
+Contact: hello@risonaitech.com | +91 90504 86448`,
   },
 
   // ─── Blog Pages ─────────────────────────────────────────────────────────────

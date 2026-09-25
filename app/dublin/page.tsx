@@ -143,7 +143,7 @@ const localBusinessSchemaData = {
   "@id": "https://risonaitech.com/dublin#localbusiness",
   name: "RisonAI Tech — AI Automation Dublin",
   url: "https://risonaitech.com/dublin",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "Custom AI chatbot development, n8n workflow automation, and voice AI calling agents for enterprises in Dublin, Howth, Dún Laoghaire.",

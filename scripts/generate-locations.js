@@ -650,7 +650,7 @@ const localBusinessSchemaData = {
   "@id": "https://risonaitech.com/${c.slug}#localbusiness",
   name: "RisonAI Tech — AI Automation ${c.city}",
   url: "https://risonaitech.com/${c.slug}",
-  telephone: "+919310837724",
+  telephone: "+919050486448",
   email: "hello@risonaitech.com",
   description:
     "Custom AI chatbot development, n8n workflow automation, and voice AI calling agents for enterprises in ${c.city}, ${c.nearby.slice(0, 2).join(', ')}.",

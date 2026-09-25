@@ -147,7 +147,7 @@ const localBusinessSchemaData = {
     "@type": "Organization",
     "@id": "https://risonaitech.com/#organization",
     name: "RisonAI Tech",
-    telephone: "+919310837724",
+    telephone: "+919050486448",
     email: "hello@risonaitech.com",
     address: {
       "@type": "PostalAddress",
