@@ -97,7 +97,7 @@ const ctaGradient = { start: "#a78bfa", middle: "#60a5fa", end: "#ec4899" };
 
 export default function CTA() {
   return (
-    <section className="section-pad" style={{ backgroundColor: "var(--bg)" }}>
+    <section id="contact" className="section-pad" style={{ backgroundColor: "var(--bg)" }}>
       <div className="container-site">
         <Reveal>
           <div

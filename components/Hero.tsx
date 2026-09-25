@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const stats = [
@@ -62,13 +63,13 @@ export default function Hero() {
           className="hero-fade-up mt-10 flex flex-wrap items-center justify-center gap-4"
           style={{ animationDelay: "0.28s" }}
         >
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[#FF7A00] px-8 text-sm font-semibold text-white transition-all duration-150 hover:bg-[#E06B00] shadow-[0_4px_20px_rgba(255,122,0,0.25)] border border-[#FF7A00]"
           >
             Book Free Consultation
             <ArrowRight size={16} />
-          </a>
+          </Link>
 
           <a
             href="#case-studies"
