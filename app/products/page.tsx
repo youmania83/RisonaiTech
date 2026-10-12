@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -120,18 +121,15 @@ export default function ProductsPage() {
                         ))}
                       </div>
                       <div className="mt-6 flex-1" />
-                      <button
-                        type="button"
+                      <Link
+                        href={`/case-studies#${product.id}`}
                         className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                        // Accessible name includes the product title so the
-                        // control is descriptive for assistive tech + crawlers.
-                        aria-label={`Learn more about ${product.title}`}
+                        aria-label={`View technical architecture and case study for ${product.title}`}
                         style={{ color: product.textLight || product.color }}
                       >
-                        <span aria-hidden="true">Learn more</span>
-                        <span className="sr-only">about {product.title}</span>
+                        <span>View Architecture &amp; Case Study</span>
                         <ArrowUpRight size={14} aria-hidden="true" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </Reveal>

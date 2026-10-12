@@ -14,7 +14,10 @@ const founderSchema = {
   name: "Yogesh Kumar Wadhwa",
   givenName: "Yogesh",
   familyName: "Wadhwa",
-  jobTitle: "Founder & CEO",
+  jobTitle: "Founder & Lead Product Engineer",
+  disambiguatingDescription:
+    "Yogesh Kumar Wadhwa is an Indian software engineer, self-taught programmer, and founder of RisonAI Tech and DocBooking, based in Delhi NCR / Panipat (Haryana), India.",
+  identifier: "https://github.com/youmania83",
   worksFor: {
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
@@ -26,6 +29,7 @@ const founderSchema = {
     "Yogesh Kumar Wadhwa is the founder of RisonAI Tech and DocBooking. A self-taught programmer who transitioned from business operations to building AI-powered software products for Indian businesses. He brings an operator's lens — not just an engineer's — to every automation project.",
   knowsAbout: [
     "AI automation",
+    "Agentic AI systems",
     "WhatsApp Business API",
     "SaaS development",
     "Web development",
@@ -34,11 +38,13 @@ const founderSchema = {
     "Healthcare technology",
     "CRM systems",
     "LangChain",
+    "LangGraph",
     "RAG architecture",
   ],
   sameAs: [
     "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/youmania83",
+    "https://github.com/risonaitech",
     "https://twitter.com/risonaitech",
   ],
   alumniOf: {
@@ -176,8 +182,13 @@ export default function AboutPage() {
                       Verified profiles
                     </p>
                     {[
-                      { label: "LinkedIn", href: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/" },
-                      { label: "GitHub", href: "https://github.com/youmania83" },
+                      { label: "LinkedIn Profile", href: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/" },
+                      { label: "Company LinkedIn", href: "https://www.linkedin.com/company/risonaitech" },
+                      { label: "GitHub (Founder)", href: "https://github.com/youmania83" },
+                      { label: "GitHub (Org)", href: "https://github.com/risonaitech" },
+                      { label: "IndiaMART Profile", href: "https://www.indiamart.com/risonai-tech/" },
+                      { label: "Justdial Profile", href: "https://www.justdial.com/Panipat/RisonAI-Tech/" },
+                      { label: "Clutch Profile", href: "https://clutch.co/profile/risonai-tech" },
                       { label: "Twitter / X", href: "https://twitter.com/risonaitech" },
                     ].map((link) => (
                       <a
@@ -287,9 +298,9 @@ export default function AboutPage() {
           </div>
           <Reveal delay={0.3}>
             <p className="mt-8 text-center text-sm text-brand-gray">
-              Full case studies and client outcomes →{" "}
-              <Link href="/products" className="font-semibold text-[#635BFF] hover:underline">
-                Products page
+              Full architectural whitepapers and client outcomes →{" "}
+              <Link href="/case-studies" className="font-semibold text-[#635BFF] hover:underline">
+                Technical Case Studies &amp; Architecture
               </Link>
             </p>
           </Reveal>

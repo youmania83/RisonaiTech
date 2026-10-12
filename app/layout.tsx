@@ -205,7 +205,13 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": `${BASE_URL}/#organization`,
   name: "RisonAI Tech",
-  alternateName: "Risonai Tech",
+  legalName: "RisonAI Tech",
+  alternateName: ["Risonai Tech", "RisonAI"],
+  taxID: "06CDBPS8926D2ZE",
+  vatID: "06CDBPS8926D2ZE",
+  iso6523Code: "0199:06CDBPS8926D2ZE",
+  disambiguatingDescription:
+    "RisonAI Tech is an Indian AI workflow automation agency and agentic AI systems engineering firm founded by Yogesh Kumar Wadhwa, operating out of Panipat, Haryana / Delhi NCR (GSTIN: 06CDBPS8926D2ZE). Not affiliated with Risona Technologies LLP (game/VR studio in Surat, Gujarat) or Rison AI (risonai.co.uk, United Kingdom).",
   url: BASE_URL,
   logo: {
     "@type": "ImageObject",
@@ -230,6 +236,9 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   sameAs: [
+    "https://www.indiamart.com/risonai-tech/",
+    "https://www.justdial.com/Panipat/RisonAI-Tech/",
+    "https://clutch.co/profile/risonai-tech",
     "https://www.linkedin.com/company/risonaitech",
     "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/risonaitech",
@@ -237,6 +246,8 @@ const organizationSchema = {
     "https://x.com/risonaitech",
     "https://twitter.com/risonaitech",
     "https://www.crunchbase.com/organization/risonaitech",
+    "https://dev.to/risonaitech",
+    "https://medium.com/@risonaitech",
   ],
   foundingDate: "2023",
   numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
@@ -326,7 +337,13 @@ const localBusinessSchema = {
   "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": "https://risonaitech.com/#business",
   name: "RisonAI Tech",
-  alternateName: "Risonai Tech",
+  legalName: "RisonAI Tech",
+  alternateName: ["Risonai Tech", "RisonAI"],
+  taxID: "06CDBPS8926D2ZE",
+  vatID: "06CDBPS8926D2ZE",
+  iso6523Code: "0199:06CDBPS8926D2ZE",
+  disambiguatingDescription:
+    "RisonAI Tech is an Indian AI workflow automation agency and agentic AI systems engineering firm founded by Yogesh Kumar Wadhwa, operating out of Panipat, Haryana / Delhi NCR (GSTIN: 06CDBPS8926D2ZE). Not affiliated with Risona Technologies LLP (game/VR studio in Surat, Gujarat) or Rison AI (risonai.co.uk, United Kingdom).",
   description:
     "RisonAI Tech is India's AI automation agency specialising in agentic AI systems, custom AI automation services, AI integration services for business, SaaS engineering, CRM infrastructure, and AI chatbot and voice agent development.",
   url: "https://risonaitech.com",
@@ -359,6 +376,9 @@ const localBusinessSchema = {
     closes: "19:00",
   },
   sameAs: [
+    "https://www.indiamart.com/risonai-tech/",
+    "https://www.justdial.com/Panipat/RisonAI-Tech/",
+    "https://clutch.co/profile/risonai-tech",
     "https://www.linkedin.com/company/risonaitech",
     "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/risonaitech",
@@ -366,6 +386,8 @@ const localBusinessSchema = {
     "https://x.com/risonaitech",
     "https://twitter.com/risonaitech",
     "https://www.crunchbase.com/organization/risonaitech",
+    "https://dev.to/risonaitech",
+    "https://medium.com/@risonaitech",
   ],
   priceRange: "₹₹",
   currenciesAccepted: "INR, USD, GBP, AED, SGD",
@@ -512,6 +534,50 @@ const servicesSchema = {
       },
       url: "https://risonaitech.com/services/resume-screening",
     },
+    {
+      "@type": "Service",
+      "@id": "https://risonaitech.com/services#managed-ai",
+      name: "Managed AI Services & AIOps Retainers",
+      serviceType: "AIOps & Retainer Automation Support",
+      description:
+        "Continuous 24/7 telemetry monitoring, prompt drift tuning, RAG vector database updates, and workflow scenario maintenance under strict SLAs.",
+      provider: { "@id": "https://risonaitech.com/#business" },
+      areaServed: "India",
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "INR",
+        lowPrice: "15000",
+        highPrice: "75000",
+        priceRange: "₹15,000 – ₹75,000 / month",
+        offers: [
+          {
+            "@type": "Offer",
+            name: "Starter AIOps Retainer",
+            price: "15000",
+            priceCurrency: "INR",
+            description: "Telemetry error logging, monthly prompt drift tuning, and basic n8n workflow maintenance.",
+            availability: "https://schema.org/InStock",
+          },
+          {
+            "@type": "Offer",
+            name: "Growth AIOps Retainer",
+            price: "35000",
+            priceCurrency: "INR",
+            description: "Weekly RAG vector re-indexing, multi-agent regression testing, and prioritized webhook bug fixes.",
+            availability: "https://schema.org/InStock",
+          },
+          {
+            "@type": "Offer",
+            name: "Enterprise AIOps Retainer",
+            price: "75000",
+            priceCurrency: "INR",
+            description: "Dedicated Slack channel, 99.9% uptime SLA, security compliance audits, and custom model fine-tuning.",
+            availability: "https://schema.org/InStock",
+          },
+        ],
+      },
+      url: "https://risonaitech.com/services",
+    },
   ],
 };
 
@@ -522,7 +588,12 @@ const founderSchema = {
   "@type": "Person",
   "@id": `${BASE_URL}/#founder`,
   name: "Yogesh Kumar Wadhwa",
-  jobTitle: "Founder & CEO",
+  givenName: "Yogesh",
+  familyName: "Wadhwa",
+  jobTitle: "Founder & Lead Product Engineer",
+  disambiguatingDescription:
+    "Yogesh Kumar Wadhwa is an Indian software engineer, self-taught programmer, and founder of RisonAI Tech and DocBooking, based in Delhi NCR / Panipat (Haryana), India.",
+  identifier: "https://github.com/youmania83",
   worksFor: { "@id": `${BASE_URL}/#organization` },
   url: `${BASE_URL}/about`,
   knowsAbout: [
@@ -550,7 +621,9 @@ const founderSchema = {
   sameAs: [
     "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
     "https://github.com/youmania83",
-    "https://www.twitter.com/risonaitech",
+    "https://github.com/risonaitech",
+    "https://x.com/risonaitech",
+    "https://twitter.com/risonaitech",
   ],
 };
 

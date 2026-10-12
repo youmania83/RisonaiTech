@@ -7,6 +7,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 const footerLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
@@ -15,8 +16,8 @@ const footerLinks = [
   { href: "/cookies", label: "Cookies Policy" },
   { href: "/terms", label: "Terms of Service" },
 ];
-// First 6 entries render in the Navigation column; the rest in Legal.
-const FOOTER_NAV_COUNT = 6;
+// First 7 entries render in the Navigation column; the rest in Legal.
+const FOOTER_NAV_COUNT = 7;
 
 export default function Footer() {
   return (
@@ -98,9 +99,33 @@ export default function Footer() {
             </ul>
 
             <p className="mt-8 mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-              Verified External Profiles
+              Verified External Profiles &amp; Directories
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
+              <a
+                href="https://www.indiamart.com/risonai-tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                IndiaMART
+              </a>
+              <a
+                href="https://www.justdial.com/Panipat/RisonAI-Tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                Justdial
+              </a>
+              <a
+                href="https://clutch.co/profile/risonai-tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md px-2 py-1 text-slate-500 hover:text-slate-900 border border-slate-200"
+              >
+                Clutch
+              </a>
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
@@ -150,11 +175,11 @@ export default function Footer() {
           className="mt-14 flex flex-col items-start gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between"
           style={{ borderTop: "1px solid var(--border)" }}
         >
-          <p className="text-xs text-slate-450 text-slate-400">
-            © {new Date().getFullYear()} Risonai Tech. All rights reserved.
+          <p className="text-xs text-slate-400">
+            © {new Date().getFullYear()} RisonAI Tech. All rights reserved.
           </p>
           <div className="flex flex-col items-start gap-1 sm:items-end">
-            <p className="text-xs text-slate-400">GSTIN: 06CDBPS8926D2ZE</p>
+            <p className="text-xs text-slate-400">GSTIN: 06CDBPS8926D2ZE · Legal Entity: RisonAI Tech (Panipat, Haryana / Delhi NCR)</p>
             <p className="text-xs text-slate-400">{siteConfig.domain}</p>
           </div>
         </div>

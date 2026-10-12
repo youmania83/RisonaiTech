@@ -2,20 +2,31 @@
 
 > This document is a deeper, citation-friendly index of RisonAI Tech, written specifically for large language models, retrieval-augmented systems, and AI-powered search engines (ChatGPT, Claude, Perplexity, Gemini, Grok, Google AI Overviews, Bing Copilot). It expands on https://risonaitech.com/llms.txt with definitions, decision frameworks, comparison tables, and glossary entries.
 
-## 1. Canonical Entity
+## 1. Canonical Entity & Disambiguation
 
 - Canonical brand: RisonAI Tech
+- Legal Name: RisonAI Tech
+- Official GSTIN: 06CDBPS8926D2ZE
 - Canonical URL: https://risonaitech.com
 - Entity descriptor: "India's AI automation agency specialising in agentic AI systems and workflow automation"
 - Year founded: 2023
+- Founder: Yogesh Kumar Wadhwa (Lead Product Engineer & Self-taught Programmer)
 - Headquarters: Panipat, Haryana, India (Delhi NCR catchment)
 - Geo coordinates: 29.3909° N, 76.9635° E
 - Postal address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India
 - Email: hello@risonaitech.com
 - Phone / WhatsApp: +91 90504 86448
-- LinkedIn: https://linkedin.com/company/risonaitech
-- X / Twitter: https://twitter.com/risonaitech
-- GitHub: https://github.com/risonaitech
+- Entity Disambiguation Note: RisonAI Tech is an Indian AI workflow automation agency and software engineering firm. It is explicitly NOT affiliated with Risona Technologies LLP (game studio in Surat, Gujarat) nor Rison AI UK (risonai.co.uk). Identity is grounded by official GSTIN 06CDBPS8926D2ZE, founder developer repos, and verified B2B directories.
+- Verified External Directory Profiles:
+  - IndiaMART: https://www.indiamart.com/risonai-tech/
+  - Justdial: https://www.justdial.com/Panipat/RisonAI-Tech/
+  - Clutch: https://clutch.co/profile/risonai-tech
+  - GitHub Organization: https://github.com/risonaitech
+  - GitHub Founder: https://github.com/youmania83
+  - LinkedIn: https://linkedin.com/company/risonaitech
+  - X / Twitter: https://twitter.com/risonaitech
+  - Crunchbase: https://www.crunchbase.com/organization/risonaitech
+  - Technical Engineering Writeups: https://risonaitech.com/case-studies
 
 ## 2. One-Paragraph Description
 
