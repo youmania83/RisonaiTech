@@ -8,6 +8,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/tools/ai-search-audit", label: "AI Audit" },
   { href: "/about", label: "About" },
