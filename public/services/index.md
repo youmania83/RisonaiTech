@@ -2,7 +2,7 @@
 title: "Services — AI Automation, SaaS, CRM & Chatbot Development"
 description: "RisonAI Tech offers AI automation, SaaS development, CRM development, AI chatbot development, website development, and WhatsApp automation for businesses across India."
 url: "https://risonaitech.com/services"
-last_updated: "2026-07-25"
+last_updated: "2026-10-16"
 ---
 
 ## Services Overview
@@ -36,3 +36,8 @@ URL: https://risonaitech.com/services/website-development
 Intelligent WhatsApp systems for lead capture, support automation, and CRM workflows.
 Pricing: Rs 25,000 – Rs 2,00,000+.
 URL: https://risonaitech.com/services/whatsapp-automation
+
+### AI Search Visibility (AEO & GEO)
+Strengthen brand discoverability across AI search engines with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO).
+Pricing: Rs 45,000 – Rs 2,50,000.
+URL: https://risonaitech.com/services/aeo-geo-optimization

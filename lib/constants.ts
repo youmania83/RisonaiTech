@@ -11,6 +11,7 @@ import {
   Users,
   Code2,
   Cpu,
+  Compass,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -194,6 +195,23 @@ export const services: Service[] = [
       "Prompt engineering drift calibration",
       "RAG vector database re-indexing & updates",
       "n8n / Make workflow scenario repairs",
+    ],
+  },
+  {
+    id: "aeo-geo-optimization",
+    icon: Compass,
+    title: "AI Search Visibility (AEO & GEO)",
+    short: "Help your business become discoverable, understood, and cited across AI search engines.",
+    description: "Structured data engineering, entity optimization, conversational intent mapping, and citation readiness across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    problem: "Traditional SEO misses conversational queries, generative summaries, and AI citation models, leaving your brand invisible in AI answers.",
+    solution: "We implement atomic Q&A architecture, rich JSON-LD schemas, brand entity verification, and authority signals that answer engines consume.",
+    outcome: "Measurable growth in AI engine citations, organic impressions, and qualified commercial discoverability.",
+    price: "From ₹45,000",
+    bullets: [
+      "AI Answer Readiness & GEO visibility audits",
+      "Comprehensive JSON-LD schemas & entity graphs",
+      "Conversational intent & atomic Q&A architecture",
+      "AI citation monitoring & competitive benchmarking",
     ],
   },
 ];

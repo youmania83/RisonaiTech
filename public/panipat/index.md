@@ -2,7 +2,7 @@
 title: "AI & SaaS Development in Panipat — RisonAI Tech"
 description: "RisonAI Tech is headquartered in Panipat, Haryana, delivering AI automation, custom CRM systems, and SaaS development to local industries and businesses."
 url: "https://risonaitech.com/panipat"
-last_updated: "2026-07-25"
+last_updated: "2026-10-16"
 ---
 
 ## RisonAI Tech — Panipat Headquarters

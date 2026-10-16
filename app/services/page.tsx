@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 import Reveal from "@/components/Reveal";
 import { services } from "@/lib/constants";
@@ -10,9 +11,12 @@ import { breadcrumbSchema, graph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: { absolute: "AI & Software Services for Indian Businesses | RisonAI Tech" },
   description:
-    "RisonAI Tech offers 7 core services for Indian businesses: AI automation, AI agent development, AI-powered resume screening, CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership. Starting ₹20,000.",
+    "RisonAI Tech offers enterprise AI services: AI automation, AI agent development, AI search visibility (AEO & GEO), CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership.",
   keywords: [
     "AI automation services India",
+    "AI search visibility India",
+    "AEO services India",
+    "GEO services India",
     "AI agent development India",
     "AI-powered resume screening India",
     "CRM development India",
@@ -113,6 +117,20 @@ export default function ServicesPage() {
                             </li>
                           ))}
                         </ul>
+
+                        <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                          {service.price && (
+                            <span className="text-xs font-semibold text-slate-500">
+                              {service.price}
+                            </span>
+                          )}
+                          <Link
+                            href={service.id === "managed-ai-services" ? "/#managed-ai" : `/services/${service.id}`}
+                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#2563EB] ml-auto"
+                          >
+                            Explore {service.title} <ArrowRight size={14} />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>

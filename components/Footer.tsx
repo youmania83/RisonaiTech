@@ -6,6 +6,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
+  { href: "/services/aeo-geo-optimization", label: "AEO & GEO Services" },
   { href: "/products", label: "Products" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
@@ -16,8 +17,8 @@ const footerLinks = [
   { href: "/cookies", label: "Cookies Policy" },
   { href: "/terms", label: "Terms of Service" },
 ];
-// First 7 entries render in the Navigation column; the rest in Legal.
-const FOOTER_NAV_COUNT = 7;
+// First 8 entries render in the Navigation column; the rest in Legal.
+const FOOTER_NAV_COUNT = 8;
 
 export default function Footer() {
   return (
