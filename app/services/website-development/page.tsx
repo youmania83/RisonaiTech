@@ -402,8 +402,10 @@ export default function WebsiteDevelopmentPage() {
           </h2>
           <p className="mt-2 max-w-2xl text-brand-gray">
             Generative engine optimization is the practice of structuring a site so AI search
-            engines can understand, cite, and recommend it. Every site we ship includes the
-            following.
+            engines can understand, cite, and recommend it. For comprehensive enterprise strategy, explore our dedicated{" "}
+            <Link href="/services/aeo-geo-optimization" className="font-semibold text-slate-900 underline hover:text-[#2563EB]">
+              AI Search Visibility (AEO &amp; GEO) Services
+            </Link>.
           </p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {aiSeoPlaybook.map((row) => (
@@ -461,6 +463,9 @@ export default function WebsiteDevelopmentPage() {
             Related services and locations
           </h2>
           <div className="mt-6 flex flex-wrap gap-3">
+            <Link className="btn-outline text-sm" href="/services/aeo-geo-optimization">
+              AI Search Visibility (AEO & GEO)
+            </Link>
             <Link className="btn-outline text-sm" href="/services/saas-development">
               SaaS Development
             </Link>

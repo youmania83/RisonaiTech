@@ -2,7 +2,7 @@
 title: "AI Automation & SaaS Development in Jaipur — RisonAI Tech"
 description: "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Jaipur startups, tourism tech companies, and Rajasthan enterprises."
 url: "https://risonaitech.com/jaipur"
-last_updated: "2026-07-25"
+last_updated: "2026-10-16"
 ---
 
 ## RisonAI Tech — Jaipur Services

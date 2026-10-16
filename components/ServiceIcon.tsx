@@ -228,6 +228,53 @@ function AIAgentIcon() {
   );
 }
 
+// AI Search Visibility (AEO & GEO) — neural knowledge graph + discovery lens
+function AEOGEOIcon() {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" className="h-14 w-14">
+      {/* Outer discovery orbit */}
+      <motion.circle
+        cx="32"
+        cy="32"
+        r="24"
+        stroke={ACCENT}
+        strokeWidth="1.2"
+        strokeDasharray="4 4"
+        fill="none"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
+        style={{ transformOrigin: "32px 32px" }}
+      />
+      {/* Knowledge graph constellation lines */}
+      <line x1="32" y1="16" x2="48" y2="28" stroke={STROKE} strokeWidth="1.5" />
+      <line x1="48" y1="28" x2="42" y2="48" stroke={STROKE} strokeWidth="1.5" />
+      <line x1="42" y1="48" x2="22" y2="48" stroke={STROKE} strokeWidth="1.5" />
+      <line x1="22" y1="48" x2="16" y2="28" stroke={STROKE} strokeWidth="1.5" />
+      <line x1="16" y1="28" x2="32" y2="16" stroke={STROKE} strokeWidth="1.5" />
+      <line x1="32" y1="32" x2="32" y2="16" stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />
+      <line x1="32" y1="32" x2="48" y2="28" stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />
+      <line x1="32" y1="32" x2="42" y2="48" stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />
+      <line x1="32" y1="32" x2="22" y2="48" stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />
+      <line x1="32" y1="32" x2="16" y2="28" stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />
+      {/* Satellite semantic entity nodes */}
+      <circle cx="32" cy="16" r="3.5" fill={ACCENT} />
+      <circle cx="48" cy="28" r="3" fill={ACCENT2} />
+      <circle cx="42" cy="48" r="3.5" fill={ACCENT3} />
+      <circle cx="22" cy="48" r="3" fill={ACCENT} />
+      <circle cx="16" cy="28" r="3.5" fill={ACCENT2} />
+      {/* Core Answer/Generative Beacon */}
+      <motion.circle
+        cx="32"
+        cy="32"
+        r="5"
+        fill={ACCENT}
+        animate={{ r: [5, 7, 5], opacity: [0.9, 0.4, 0.9] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </svg>
+  );
+}
+
 // ─── Map service id → icon component ─────────────────────────────────────────
 const iconMap: Record<string, React.FC> = {
   "web-app": WebAppIcon,
@@ -239,6 +286,8 @@ const iconMap: Record<string, React.FC> = {
   "ai-agent": AIAgentIcon,
   "resume-screening": AIAutomationIcon,
   "managed-ai-services": AIAgentIcon,
+  "aeo-geo-optimization": AEOGEOIcon,
+  "ai-search-visibility": AEOGEOIcon,
 };
 
 // Fallback — rotating ring + core for any future services

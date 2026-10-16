@@ -412,6 +412,7 @@ export default function AIConsultingPage() {
         <div className="container-site">
           <h2 className="font-display text-2xl font-bold text-white">Related services and locations</h2>
           <div className="mt-6 flex flex-wrap gap-3">
+            <Link className="btn-outline text-sm" href="/services/aeo-geo-optimization">AI Search Visibility (AEO & GEO)</Link>
             <Link className="btn-outline text-sm" href="/services/ai-automation">AI Automation</Link>
             <Link className="btn-outline text-sm" href="/services/ai-agent">AI Agent Development</Link>
             <Link className="btn-outline text-sm" href="/services/chatbot-development">AI Chatbot Development</Link>
