@@ -39,6 +39,42 @@ export const metadata: Metadata = {
 
 export const posts = [
   {
+    slug: "multi-agent-systems-in-production-guide",
+    title: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026)",
+    excerpt:
+      "Why single LLM prompts break at scale, how engineering teams build deterministic supervisor architectures with LangGraph, and what it really costs to run autonomous systems in enterprise production.",
+    date: "2026-10-27",
+    readTime: "11 min read",
+    category: "Agentic AI",
+  },
+  {
+    slug: "schema-markup-for-ai-search-geo",
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    excerpt:
+      "How LLMs read structured data during retrieval-augmented generation (RAG), how to build a unified entity knowledge graph, and the exact JSON-LD schemas that trigger citations in AI search.",
+    date: "2026-10-27",
+    readTime: "11 min read",
+    category: "AI Search",
+  },
+  {
+    slug: "whatsapp-ai-lead-nurturing-workflows",
+    title: "WhatsApp AI Lead Nurturing: 5 Drip Workflows That Close Deals (2026)",
+    excerpt:
+      "Why relying solely on email drips burns your marketing ad spend, how to design intelligent multi-day WhatsApp follow-ups, and how Indian businesses achieve 45%+ response rates.",
+    date: "2026-10-27",
+    readTime: "10 min read",
+    category: "WhatsApp Automation",
+  },
+  {
+    slug: "ai-voice-agents-vs-traditional-ivr",
+    title: "AI Voice Agents vs Traditional IVR: The 2026 Migration Guide",
+    excerpt:
+      "Why 68% of customers abandon legacy keypad phone trees, how modern sub-800ms speech-to-speech architectures work, and how Indian businesses replace IVR with conversational voice AI.",
+    date: "2026-10-27",
+    readTime: "10 min read",
+    category: "Voice AI",
+  },
+  {
     slug: "how-to-check-if-your-website-appears-in-chatgpt",
     title: "How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews",
     excerpt:
@@ -82,6 +118,15 @@ export const posts = [
     date: "2026-06-18",
     readTime: "9 min read",
     category: "HR Automation",
+  },
+  {
+    slug: "ai-lead-generation-systems",
+    title: "AI Lead Generation Automation: Build a System That Never Sleeps",
+    excerpt:
+      "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the architecture — and how to build it.",
+    date: "2026-06-09",
+    readTime: "10 min read",
+    category: "Lead Generation",
   },
   {
     slug: "ai-automation-real-estate-india",
