@@ -22,6 +22,12 @@
   - *NutriTrack SaaS* (Arjun Kapoor, Co-founder): Multi-tenant SaaS MVP delivered in 10 weeks with 100% full code ownership.
 - **Deep Technical Architecture Whitepapers & Documentation**:
   - Technical Case Studies & Architectural Diagrams: [https://risonaitech.com/case-studies]
+- **Data Protection & Regulatory Compliance (DPDP Act, 2023)**:
+  - Regulatory Alignment: India's Digital Personal Data Protection Act, 2023 & DPDP Rules, 2025.
+  - Data Fiduciary: RisonAI Tech (Panipat, Haryana / Delhi NCR, GSTIN: 06CDBPS8926D2ZE).
+  - Privacy Architecture: Affirmative consent mechanisms, Google Consent Mode v2, zero data selling, and statutory Data Principal rights handling (Access, Correction, Erasure, Nomination under Sections 11–14).
+  - Grievance Redressal Desk: Designated Contact Yogesh Kumar Wadhwa [hello@risonaitech.com]. Response SLA: 48 hours acknowledgment, 30 days resolution.
+  - Data Protection Documentation: [https://risonaitech.com/data-protection] and [https://risonaitech.com/privacy].
 - **AI-Native Products (Software Applications)**: DocBooking (AI clinic booking SaaS), Expreality (Luxury real estate location scoring platform).
 - **Freshness & Recent Insights (Published 2026)**:
   - *WhatsApp Chatbots for Business in India* (Published: June 15, 2026)

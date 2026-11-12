@@ -88,6 +88,14 @@ export default function ChatWindow({
         <div ref={messagesEndRef} className="h-1" />
       </div>
 
+      <div className="border-t border-slate-100 bg-slate-50/60 px-3 py-1.5 text-center text-[10px] text-slate-400">
+        Enquiries processed per our{" "}
+        <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 hover:text-blue-700">
+          Privacy Policy
+        </a>{" "}
+        &amp; DPDP Act.
+      </div>
+
       <ChatInput
         input={input}
         setInput={setInput}

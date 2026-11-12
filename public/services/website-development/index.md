@@ -2,7 +2,7 @@
 title: "Website Development — Fast, SEO-Optimized Websites for Growth"
 description: "RisonAI Tech builds high-performance websites for startups and SMBs in India. SEO-ready, conversion-focused, and engineered for speed."
 url: "https://risonaitech.com/services/website-development"
-last_updated: "2026-10-16"
+last_updated: "2026-11-12"
 ---
 
 ## Website Development

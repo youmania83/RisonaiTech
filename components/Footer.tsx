@@ -16,6 +16,7 @@ const footerLinks = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/cookies", label: "Cookies Policy" },
   { href: "/terms", label: "Terms of Service" },
+  { href: "/data-protection", label: "DPDP & Data Rights" },
 ];
 // First 8 entries render in the Navigation column; the rest in Legal.
 const FOOTER_NAV_COUNT = 8;

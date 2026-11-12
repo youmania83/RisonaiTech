@@ -444,6 +444,89 @@ Process:
 4. Project starts within 1 week of sign-off`,
   },
 
+  "/data-protection": {
+    title: "DPDP Compliance & Data Protection Rights | RisonAI Tech",
+    description:
+      "Understand your rights as a Data Principal under India's Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025. Submit access, correction, erasure, or grievance requests.",
+    body: `## DPDP Act, 2023 Compliance & Data Principal Rights
+
+Rison AI Tech is committed to transparent, lawful, and secure processing of digital personal data under India's Digital Personal Data Protection Act, 2023 (DPDP Act) and the Digital Personal Data Protection Rules, 2025.
+
+### Data Fiduciary Details
+- Entity: RisonAI Tech
+- Official GSTIN: 06CDBPS8926D2ZE
+- Address: 196, Ground Floor, New RK Puram, Panipat, Haryana 132103, India
+- Designated Contact: Yogesh Kumar Wadhwa (Founder & Lead Engineer)
+- Contact Email: hello@risonaitech.com | Phone: +91 90504 86448
+
+### Data Principal Rights (Sections 11–14)
+1. Right to Access Information about personal data being processed and third parties shared with.
+2. Right to Correction of inaccurate data, completion of incomplete records, and Erasure of data no longer necessary.
+3. Right of Grievance Redressal before escalating to the Data Protection Board of India.
+4. Right to Nominate an individual to exercise data protection rights in the event of death or incapacity.
+5. Right to Withdraw Consent at any time.
+
+### How to Submit a Request
+Email hello@risonaitech.com with subject "[DPDP Request] - [Right Type]". Requests are acknowledged within 48 hours and resolved within 30 days at zero statutory fee.`,
+  },
+
+  "/privacy": {
+    title: "Privacy Policy | Risonai Tech",
+    description:
+      "Privacy policy for Risonai Tech. Learn how we collect, use, store, and protect your personal data when you visit risonaitech.com or use our services.",
+    body: `## Rison AI Tech Privacy Policy
+
+Under India's Digital Personal Data Protection Act, 2023 (DPDP Act) and DPDP Rules, 2025, Rison AI Tech operates as the Data Fiduciary for personal data collected through risonaitech.com.
+
+### Data We Collect
+- Contact and Proposal inquiries (name, phone, project message)
+- Interactive AI Chatbot inquiries (name, email, phone, country)
+- Technical browsing telemetry (anonymized IP, browser type) subject to affirmative cookie consent
+
+### Lawful Grounds
+Processing is conducted strictly on lawful grounds under DPDP Act Sections 4, 5, 6, and 7:
+1. Affirmative Consent: Freely given, specific, informed, and unambiguous.
+2. Certain Legitimate Uses: Voluntary provision of personal data for specified business inquiries.
+
+### Grievance Redressal
+Designated Grievance Contact: Yogesh Kumar Wadhwa (Founder)
+Address: 196, Ground Floor, New RK Puram, Panipat 132103, Haryana, India
+Email: hello@risonaitech.com | Phone: +91 90504 86448
+Response SLA: 48 hours acknowledgment; 30 business days resolution. Unresolved grievances may be escalated to the Data Protection Board of India.`,
+  },
+
+  "/terms": {
+    title: "Terms of Service | RisonAI Tech",
+    description:
+      "Terms of service for RisonAI Tech. Read our conditions governing our enterprise AI solutions, automation services, consulting engagements, and website usage.",
+    body: `## Rison AI Tech Terms of Service
+
+### Enterprise Services
+Rison AI Tech provides Enterprise AI Solutions, AI Automation, Voice AI Agents, HR Automation, AI Recruitment, and Custom AI Software. All client engagements are governed by formal Master Services Agreements and Statements of Work.
+
+### Intellectual Property & Code Ownership
+Upon receipt of full payment, clients receive 100% full source code ownership of custom software and automation scripts developed specifically for their engagement.
+
+### Governing Law
+These terms are governed by the substantive laws of India, with exclusive jurisdiction in the courts of Panipat / High Court of Punjab & Haryana, India.`,
+  },
+
+  "/cookies": {
+    title: "Cookies Policy | Risonai Tech",
+    description:
+      "Cookies policy for Risonai Tech. Learn about the cookies, tracking technologies, and Google Consent Mode v2 controls on risonaitech.com.",
+    body: `## Rison AI Tech Cookies Policy
+
+We implement Google Consent Mode v2 across risonaitech.com. Non-essential cookies (Analytics and Marketing) are disabled by default until you grant affirmative consent via our Cookie Preference Center.
+
+### Categories
+1. Strictly Necessary: Essential for site security and remembering consent state (always active).
+2. Analytics: Google Analytics traffic measurement (active only upon affirmative consent).
+3. Marketing: Google Ads conversion measurement (active only upon affirmative consent).
+
+Manage preferences anytime at https://risonaitech.com/cookies.`,
+  },
+
   // ─── Geo / Location Landing Pages ──────────────────────────────────────────
 
   "/delhi": {

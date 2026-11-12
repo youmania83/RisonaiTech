@@ -1,52 +1,61 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Cookie, ShieldCheck, Settings2 } from "lucide-react";
+import CookieSettingsTrigger from "@/components/CookieSettingsTrigger";
 
 export const metadata: Metadata = {
   title: "Cookies Policy | Risonai Tech",
   description:
-    "Cookies policy for Risonai Tech. Learn about the cookies and tracking technologies we use on risonaitech.com and how to manage your preferences.",
+    "Cookies policy for Risonai Tech. Learn about the cookies, tracking technologies, and Google Consent Mode v2 controls on risonaitech.com and how to manage your preferences.",
   alternates: { canonical: "/cookies" },
 };
 
 const cookieTable = [
   {
+    name: "risonai_cookie_consent_v1",
+    provider: "RisonAI Tech",
+    purpose:
+      "Persists your affirmative consent preferences (Essential, Analytics, Marketing) under India's DPDP Act, 2023 so the banner does not re-appear on subsequent page loads.",
+    type: "Necessary",
+    duration: "1 year (localStorage)",
+  },
+  {
+    name: "__vercel_live_token",
+    provider: "Vercel",
+    purpose:
+      "Used by cloud infrastructure for deployment routing and preview authentication.",
+    type: "Functional",
+    duration: "Session",
+  },
+  {
     name: "_ga, _ga_*",
     provider: "Google Analytics",
     purpose:
-      "Tracks unique visitors, sessions, and page views to help us understand how users interact with our website.",
+      "Distinguishes unique visitors and sessions to measure site usage. Operated under Google Consent Mode v2 (denied by default until consent is granted).",
     type: "Analytics",
-    duration: "2 years",
+    duration: "14 months",
   },
   {
     name: "_gid",
     provider: "Google Analytics",
-    purpose: "Distinguishes users for analytics. Expires after 24 hours.",
+    purpose: "Distinguishes users across 24-hour analytics measurement windows.",
     type: "Analytics",
     duration: "24 hours",
   },
   {
     name: "_gat",
     provider: "Google Analytics",
-    purpose:
-      "Throttles request rate to prevent overloading Google Analytics servers.",
+    purpose: "Throttles request rate to prevent overloading Google Analytics servers.",
     type: "Analytics",
     duration: "1 minute",
   },
   {
-    name: "__vercel_live_token",
-    provider: "Vercel",
+    name: "_gcl_au, _gac_*",
+    provider: "Google Ads",
     purpose:
-      "Used by Vercel for preview deployment authentication. Only set on preview builds.",
-    type: "Functional",
-    duration: "Session",
-  },
-  {
-    name: "Cookie consent",
-    provider: "Risonai Tech",
-    purpose:
-      "Remembers your cookie consent preference so we don't show the banner on every visit.",
-    type: "Necessary",
-    duration: "1 year",
+      "Attribution cookies used to measure campaign effectiveness and conversions. Active strictly when marketing consent is affirmatively granted.",
+    type: "Marketing",
+    duration: "90 days",
   },
 ];
 
@@ -60,47 +69,55 @@ const categoryColors: Record<string, string> = {
 const sections = [
   {
     id: "what-are-cookies",
-    title: "1. What Are Cookies?",
+    title: "1. What Are Cookies & How We Use Them",
     content: (
       <p>
-        Cookies are small text files placed on your device (computer, tablet, or
-        smartphone) when you visit a website. They help websites remember your
-        preferences, understand how you use the site, and improve your
-        experience over time. Cookies can be &ldquo;session&rdquo; cookies (deleted when
-        you close your browser) or &ldquo;persistent&rdquo; cookies (stored for a set
-        duration).
+        Cookies and local storage tokens are small data items placed on your device when you browse <strong>risonaitech.com</strong>. They help our infrastructure recognize returning sessions, respect your privacy choices, and measure technical site reliability. In accordance with India&apos;s <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>, non-essential cookies are <strong>disabled by default</strong> and require your affirmative consent prior to activation.
       </p>
     ),
   },
   {
-    id: "cookies-we-use",
-    title: "2. Cookies We Use",
+    id: "manage-preferences",
+    title: "2. Manage Your Cookie Preferences Anytime",
+    content: (
+      <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+        <h4 className="font-semibold text-[#0F172A] text-base mb-2">Instant Preference Center</h4>
+        <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+          You can modify, grant, or withdraw your cookie consent at any moment. Changes take effect immediately across all subsequent page views without requiring a browser restart.
+        </p>
+        <CookieSettingsTrigger label="Open Cookie Settings" />
+      </div>
+    ),
+  },
+  {
+    id: "cookie-categories",
+    title: "3. Categories of Cookies We Use",
     content: (
       <>
         <p>
-          We use the following categories of cookies on <strong>risonaitech.com</strong>:
+          We classify cookies and tracking scripts into four transparent categories:
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {[
             {
               type: "Necessary",
               icon: "🔒",
-              desc: "Essential for the website to function correctly. These cannot be disabled.",
+              desc: "Essential for site security, session integrity, and remembering your consent state. These cannot be disabled.",
             },
             {
               type: "Analytics",
               icon: "📊",
-              desc: "Help us understand how visitors interact with our site so we can improve it.",
+              desc: "Allows Google Analytics to measure aggregated traffic patterns and page latency. Disabled by default until you opt in.",
             },
             {
               type: "Functional",
               icon: "⚙️",
-              desc: "Enable enhanced features and personalisation, such as remembering your preferences.",
+              desc: "Supports CDN edge routing and preview builds. Does not store personal identification profiles.",
             },
             {
               type: "Marketing",
               icon: "📣",
-              desc: "We currently do not use marketing or advertising cookies on this website.",
+              desc: "Measures Google Ads campaign effectiveness and conversion tracking. Operates only if you opt in to advertising cookies.",
             },
           ].map((cat) => (
             <div
@@ -109,7 +126,7 @@ const sections = [
             >
               <p className="text-lg">{cat.icon}</p>
               <p className="mt-2 font-semibold">{cat.type}</p>
-              <p className="mt-1 text-sm opacity-80">{cat.desc}</p>
+              <p className="mt-1 text-sm opacity-90">{cat.desc}</p>
             </div>
           ))}
         </div>
@@ -117,19 +134,35 @@ const sections = [
     ),
   },
   {
+    id: "consent-mode-v2",
+    title: "4. Google Consent Mode v2 Architecture",
+    content: (
+      <>
+        <p>
+          Our web architecture implements <strong>Google Consent Mode v2</strong>. When you load any page on risonaitech.com:
+        </p>
+        <ul className="mt-3 space-y-2 list-disc pl-5 text-sm text-slate-600">
+          <li>The default state for <code>ad_storage</code>, <code>ad_user_data</code>, <code>ad_personalization</code>, and <code>analytics_storage</code> is set to <strong>denied</strong>.</li>
+          <li>Google Tag runs in privacy-preserving mode without reading or writing ad tracking cookies.</li>
+          <li>If you click &ldquo;Accept All&rdquo; or enable specific categories in your preference settings, the state is dynamically updated to <strong>granted</strong>.</li>
+          <li>If you choose &ldquo;Essential Only&rdquo;, no marketing or analytical identifiers are transmitted.</li>
+        </ul>
+      </>
+    ),
+  },
+  {
     id: "cookie-list",
-    title: "3. Cookie List",
+    title: "5. Comprehensive Cookie Inventory",
     content: (
       <>
         <p className="mb-6">
-          The table below lists the specific cookies we set or allow third
-          parties to set on our website:
+          The table below lists all cookies and persistent tokens utilized on our website:
         </p>
         <div className="overflow-x-auto rounded-xl border border-slate-100">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-slate-50 text-left">
-                <th className="px-4 py-3 font-semibold text-[#0F172A]">Cookie Name</th>
+                <th className="px-4 py-3 font-semibold text-[#0F172A]">Cookie / Identifier</th>
                 <th className="px-4 py-3 font-semibold text-[#0F172A]">Provider</th>
                 <th className="px-4 py-3 font-semibold text-[#0F172A]">Purpose</th>
                 <th className="px-4 py-3 font-semibold text-[#0F172A]">Type</th>
@@ -164,162 +197,48 @@ const sections = [
     ),
   },
   {
-    id: "third-party-cookies",
-    title: "4. Third-Party Cookies",
+    id: "browser-controls",
+    title: "6. Managing Cookies in Your Browser",
     content: (
       <>
         <p>
-          Some cookies on our website are set by third-party services. We use:
+          In addition to our on-site Preference Center, all major web browsers allow you to block, inspect, or delete cookies via their settings:
         </p>
-        <ul className="mt-4 space-y-3 list-none">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {[
-            {
-              name: "Google Analytics",
-              desc: "We use Google Analytics to measure traffic and user behaviour. Google may use this data in accordance with their own privacy policy. You can opt out at",
-              link: {
-                href: "https://tools.google.com/dlpage/gaoptout",
-                label: "Google Analytics Opt-out Browser Add-on",
-              },
-            },
-            {
-              name: "Vercel",
-              desc: "Our website is hosted on Vercel. Vercel may set cookies for operational purposes such as deployment previews.",
-              link: null,
-            },
+            { label: "Google Chrome", href: "https://support.google.com/chrome/answer/95647" },
+            { label: "Mozilla Firefox", href: "https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox" },
+            { label: "Apple Safari", href: "https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" },
+            { label: "Microsoft Edge", href: "https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" },
           ].map((item) => (
-            <li key={item.name} className="flex gap-3">
-              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-indigo-50 text-xs font-bold text-[#4F46E5]">
-                →
-              </span>
-              <span>
-                <strong className="text-[#0F172A]">{item.name}:</strong>{" "}
-                {item.desc}{" "}
-                {item.link && (
-                  <a
-                    href={item.link.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-[#4F46E5] hover:underline"
-                  >
-                    {item.link.label}
-                  </a>
-                )}
-                .
-              </span>
-            </li>
-          ))}
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: "managing-cookies",
-    title: "5. Managing & Disabling Cookies",
-    content: (
-      <>
-        <p>
-          You have the right to accept or decline non-essential cookies. You can
-          control cookies in several ways:
-        </p>
-        <div className="mt-5 space-y-4">
-          {[
-            {
-              heading: "Browser settings",
-              desc: "Most browsers allow you to refuse or delete cookies through their settings. Note that disabling cookies may affect website functionality. Visit your browser&apos;s help section for guidance:",
-              links: [
-                { label: "Google Chrome", href: "https://support.google.com/chrome/answer/95647" },
-                { label: "Mozilla Firefox", href: "https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox" },
-                { label: "Apple Safari", href: "https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" },
-                { label: "Microsoft Edge", href: "https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" },
-              ],
-            },
-            {
-              heading: "Opt out of Google Analytics",
-              desc: "Install the Google Analytics Opt-out Browser Add-on to prevent your data from being used by Google Analytics.",
-              links: [
-                { label: "Download Add-on", href: "https://tools.google.com/dlpage/gaoptout" },
-              ],
-            },
-            {
-              heading: "Do Not Track (DNT)",
-              desc: "Some browsers send a Do Not Track (DNT) signal. We currently do not respond to DNT signals, but we honour your opt-out preferences via browser cookie settings.",
-              links: [],
-            },
-          ].map((item) => (
-            <div key={item.heading} className="rounded-xl border border-slate-100 bg-slate-50/60 p-5">
-              <p className="font-semibold text-[#0F172A]">{item.heading}</p>
-              <p className="mt-1 text-sm text-slate-600">
-                {item.desc.replace("&apos;", "'")}
-              </p>
-              {item.links.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {item.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-[#4F46E5] transition-colors hover:border-indigo-200 hover:bg-indigo-50"
-                    >
-                      {link.label} ↗
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-sm font-medium text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors"
+            >
+              <span>{item.label} Guidance</span>
+              <span className="text-slate-400">→</span>
+            </a>
           ))}
         </div>
       </>
     ),
   },
   {
-    id: "updates",
-    title: "6. Updates to This Policy",
-    content: (
-      <p>
-        We may update this Cookies Policy from time to time as technology or
-        regulations change. We will post the revised policy on this page with an
-        updated &ldquo;Last updated&rdquo; date. We encourage you to review this page
-        periodically.
-      </p>
-    ),
-  },
-  {
     id: "contact",
-    title: "7. Contact Us",
+    title: "7. Inquiries Regarding Cookie & Privacy Technologies",
     content: (
       <>
         <p>
-          If you have questions about our use of cookies or this policy, please
-          contact us:
+          For any questions concerning tracking technologies or our DPDP implementation, please email our privacy desk:
         </p>
-        <address className="mt-4 not-italic space-y-1 text-sm">
-          <p className="font-semibold text-[#0F172A]">Risonai Tech</p>
-          <p>196, Ground Floor, New RK Puram,</p>
-          <p>Panipat 132103, Haryana, India</p>
-          <p>
-            Email:{" "}
-            <a
-              className="text-[#4F46E5] hover:underline"
-              href="mailto:hello@risonaitech.com"
-            >
-              hello@risonaitech.com
-            </a>
-          </p>
-          <p>
-            Phone:{" "}
-            <a className="text-[#4F46E5] hover:underline" href="tel:+919050486448">
-              +91 90504 86448
-            </a>
-          </p>
-        </address>
-        <p className="mt-5 text-sm">
-          Also see our{" "}
-          <Link className="text-[#4F46E5] hover:underline" href="/privacy">
-            Privacy Policy
-          </Link>{" "}
-          for full details on how we handle your personal data.
-        </p>
+        <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+          <p className="font-semibold text-[#0F172A]">Rison AI Tech — Privacy &amp; Data Desk</p>
+          <p className="text-slate-600">Email: <a href="mailto:hello@risonaitech.com" className="text-[#2563EB] hover:underline font-medium">hello@risonaitech.com</a></p>
+          <p className="text-slate-600">196, Ground Floor, New RK Puram, Panipat 132103, Haryana, India</p>
+        </div>
       </>
     ),
   },
@@ -330,26 +249,28 @@ export default function CookiesPage() {
     <div
       style={{
         background:
-          "linear-gradient(160deg, rgba(79,70,229,0.03) 0%, #ffffff 40%)",
+          "linear-gradient(160deg, rgba(37,99,235,0.03) 0%, #ffffff 40%)",
       }}
     >
       {/* Hero header */}
-      <section className="border-b border-slate-100 py-20">
+      <section className="border-b border-slate-100 py-20 pt-32">
         <div className="container-site mx-auto max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-600">
-            Legal
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+            <Cookie size={14} className="text-blue-600" />
+            Google Consent Mode v2 &amp; Tracking Transparency
           </div>
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-[#0F172A] sm:text-5xl">
             Cookies Policy
           </h1>
           <p className="mt-4 text-base text-slate-500">
-            Last updated: <time dateTime="2026-06">June 2026</time>
+            Effective Date: <time dateTime="2026-11">November 2026</time> • Aligned with India&apos;s DPDP Act, 2023
           </p>
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            This policy explains what cookies are, which cookies we use on{" "}
-            <strong>risonaitech.com</strong>, why we use them, and how you can
-            control or delete them.
+            This policy outlines how Rison AI Tech employs cookies and tracking technologies on <strong>risonaitech.com</strong>, details our Google Consent Mode v2 integration, and explains how you can manage your preferences.
           </p>
+          <div className="mt-6">
+            <CookieSettingsTrigger label="Change My Cookie Settings" />
+          </div>
         </div>
       </section>
 
@@ -365,7 +286,7 @@ export default function CookiesPage() {
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
-                    className="text-sm text-slate-600 hover:text-[#4F46E5] transition-colors"
+                    className="text-sm text-slate-600 hover:text-[#2563EB] transition-colors"
                   >
                     {s.title}
                   </a>
@@ -378,7 +299,7 @@ export default function CookiesPage() {
 
       {/* Policy sections */}
       <section className="pb-28">
-        <div className="container-site mx-auto max-w-3xl space-y-14">
+        <div className="container-site mx-auto max-w-3xl space-y-12">
           {sections.map((s) => (
             <article
               key={s.id}
