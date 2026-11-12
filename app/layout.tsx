@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import CookieConsent from "@/components/CookieConsent";
 
 import "./globals.css";
 
@@ -858,6 +859,21 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Google Consent Mode v2 Default State (DPDP & Global Privacy Compliant) */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied',
+              'wait_for_update': 500
+            });
+          `}
+        </Script>
         {/* Google Tag (gtag.js) loaded with optimal afterInteractive strategy and fetchpriority="low" */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || "AW-18229362372"}`}
@@ -867,12 +883,8 @@ export default function RootLayout({
         />
         <Script id="google-ads-init" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || "AW-18229362372"}', {
-              'allow_ad_personalization_signals': true,
               'conversion_linker': true
             });
           `}
@@ -884,6 +896,7 @@ export default function RootLayout({
         <Footer />
         <Chatbot />
         <AnalyticsTracker />
+        <CookieConsent />
       </body>
     </html>
   );

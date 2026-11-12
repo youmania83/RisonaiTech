@@ -2,7 +2,7 @@
 title: "WhatsApp Chatbot for Business in India: The Complete 2025 Guide"
 description: "How to deploy official WhatsApp Business API bots for lead qualification, appointment booking, and customer support."
 url: "https://risonaitech.com/blog/whatsapp-chatbot-for-business-india"
-last_updated: "2026-10-16"
+last_updated: "2026-11-12"
 ---
 
 ## WhatsApp Chatbot Guide

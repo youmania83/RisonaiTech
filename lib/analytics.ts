@@ -18,6 +18,21 @@ const LEAD_FORM_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_FORM_LABEL || "4
 const WHATSAPP_CLICK_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CLICK_LABEL || "whatsapp_click_label_placeholder";
 
 /**
+ * Helper to check whether user has affirmatively granted marketing/advertising consent.
+ */
+function isMarketingConsentGranted(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const stored = localStorage.getItem("risonai_cookie_consent_v1");
+    if (!stored) return false;
+    const parsed = JSON.parse(stored);
+    return Boolean(parsed.marketing);
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Helper to hash a string to SHA-256 using the browser's native Crypto API.
  * Google Ads Enhanced Conversions requires lowercased, trimmed, and SHA-256 hashed values.
  */
@@ -95,8 +110,8 @@ export async function trackAdsEvent(
   }
 
   try {
-    // 1. Prepare and send Enhanced Conversions User Data if available
-    if (userData) {
+    // 1. Prepare and send Enhanced Conversions User Data only if marketing consent is affirmatively granted
+    if (userData && isMarketingConsentGranted()) {
       const userPayload: Record<string, any> = {};
 
       if (userData.phone) {

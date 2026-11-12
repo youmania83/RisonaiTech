@@ -64,6 +64,8 @@ const payload = {
     "https://risonaitech.com/noida",
     "https://risonaitech.com/chandigarh/chatbot-solutions",
     "https://risonaitech.com/privacy",
+    "https://risonaitech.com/cookies",
+    "https://risonaitech.com/data-protection",
     "https://risonaitech.com/terms",
     "https://risonaitech.com/services/voice-ai",
     "https://risonaitech.com/services/ai-consulting",

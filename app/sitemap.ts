@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           } else if (currentRoute === "/contact") {
             priority = 0.7;
             changeFrequency = "monthly";
-          } else if (currentRoute === "/privacy" || currentRoute === "/terms" || currentRoute === "/cookies") {
+          } else if (currentRoute === "/privacy" || currentRoute === "/terms" || currentRoute === "/cookies" || currentRoute === "/data-protection") {
             priority = 0.3;
             changeFrequency = "yearly";
           }

@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2 } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2, ShieldCheck } from "lucide-react";
 
 import { siteConfig } from "@/lib/constants";
 import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
+  const [consentGiven, setConsentGiven] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
@@ -59,10 +62,14 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!consentGiven) {
+      alert("Please confirm your consent for Rison AI Tech to process your enquiry.");
+      return;
+    }
     setSubmitting(true);
 
     try {
-      // Submit lead to the backend API first
+      // Submit lead to the backend API first with DPDP consent metadata
       await fetch("/api/inquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -70,7 +77,10 @@ export default function ContactForm() {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          type: "proposal"
+          type: "proposal",
+          consentGiven: true,
+          marketingConsent,
+          consentTimestamp: new Date().toISOString()
         })
       });
     } catch (err) {
@@ -218,10 +228,57 @@ export default function ContactForm() {
                     />
                   </div>
 
+                  {/* DPDP Act 2023 Purpose Notice & Consent Mechanisms */}
+                  <div className="rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 text-xs text-slate-600">
+                    <div className="flex items-center gap-1.5 font-semibold text-slate-800 mb-1.5">
+                      <ShieldCheck size={15} className="text-blue-600" />
+                      <span>Data Protection & Privacy Notice</span>
+                    </div>
+                    <p className="leading-relaxed text-slate-500">
+                      Rison AI Tech collects your name and phone number strictly to evaluate your requirements and provide a tailored enterprise AI proposal in accordance with the Digital Personal Data Protection Act, 2023.
+                    </p>
+
+                    <div className="mt-3 space-y-2 border-t border-slate-200/70 pt-2.5">
+                      <label className="flex items-start gap-2.5 cursor-pointer text-slate-700">
+                        <input
+                          id="dpdp-consent"
+                          type="checkbox"
+                          required
+                          checked={consentGiven}
+                          onChange={(e) => setConsentGiven(e.target.checked)}
+                          className="mt-0.5 h-4 w-4 rounded accent-blue-600 border-slate-300"
+                        />
+                        <span className="leading-tight">
+                          <strong className="text-slate-800">Required:</strong> I consent to Rison AI Tech processing my contact details to respond to this business enquiry as described in the{" "}
+                          <Link href="/privacy" className="text-blue-600 underline hover:text-blue-700">
+                            Privacy Policy
+                          </Link>{" "}
+                          and{" "}
+                          <Link href="/data-protection" className="text-blue-600 underline hover:text-blue-700">
+                            DPDP Rights Guide
+                          </Link>.
+                        </span>
+                      </label>
+
+                      <label className="flex items-start gap-2.5 cursor-pointer text-slate-500">
+                        <input
+                          id="marketing-consent"
+                          type="checkbox"
+                          checked={marketingConsent}
+                          onChange={(e) => setMarketingConsent(e.target.checked)}
+                          className="mt-0.5 h-4 w-4 rounded accent-blue-600 border-slate-300"
+                        />
+                        <span className="leading-tight">
+                          <span className="text-slate-600 font-medium">(Optional)</span> Send me periodic enterprise AI automation case studies and architecture guides.
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
                   <button 
-                    className="btn-primary mt-1 w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed" 
+                    className="btn-primary mt-1 w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed" 
                     type="submit"
-                    disabled={submitting}
+                    disabled={submitting || !consentGiven}
                   >
                     {submitting ? (
                       <>
