@@ -1,24 +1,22 @@
 ---
 title: "Products — DocBooking and Expreality SaaS Platforms"
-description: "RisonAI Tech has built DocBooking (AI healthcare SaaS) and Expreality (real estate intelligence SaaS). Available for white-label licensing."
+description: "RisonAI Tech has engineered DocBooking (in-house healthcare SaaS) and Expreality (in-house real estate intelligence platform). Live production products deployed with partner operations."
 url: "https://risonaitech.com/products"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
-## RisonAI Tech Products
+## RisonAI Tech Proprietary Products
 
 ### DocBooking
-AI-powered doctor appointment booking SaaS for clinics and hospitals in India.
+In-house AI-powered doctor appointment booking & clinical intake SaaS platform engineered by RisonAI Tech, deployed across partner clinics and hospitals in Panipat and Delhi NCR.
 
-Features: Smart scheduling, patient intake forms with AI parsing, WhatsApp reminders, clinic analytics dashboard, multi-doctor multi-location support.
-
-Industries: Healthcare, Telemedicine, Clinics
-Status: Live, available for white-label licensing.
+Features: Smart scheduling, LangGraph symptom triage, WhatsApp reminders, clinic analytics dashboard, multi-doctor multi-location support.
+Industries: Healthcare, Telemedicine, Private Clinics
+Status: Live production platform deployed with partner practices.
 
 ### Expreality
-Premium property intelligence platform for real estate buyers and agents.
+In-house luxury property intelligence platform engineered by RisonAI Tech, deployed with partner real estate brokerages across Delhi NCR.
 
-Features: Private inventory listings, AI-driven location scoring, neighbourhood analytics, CRM for real estate agents.
-
-Industries: Luxury Real Estate, Property Management
-Status: Live product.
+Features: Private inventory listings, geospatial location scoring, neighbourhood analytics, CrewAI multi-agent lead profiling, and automated WhatsApp nurturing.
+Industries: Luxury Real Estate, Property Management, Brokerages
+Status: Live production platform deployed with partner brokerages.

@@ -2,7 +2,7 @@
 title: "DPDP Compliance & Data Protection Rights | RisonAI Tech"
 description: "Understand your rights as a Data Principal under India's Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025. Submit access, correction, erasure, or grievance requests."
 url: "https://risonaitech.com/data-protection"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## DPDP Act, 2023 Compliance & Data Principal Rights

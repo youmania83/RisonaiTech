@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowRight, Loader2, Sparkles, TrendingUp, AlertTriangle, CheckCircle2, Bot, Shield, Globe2 } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Loader2, Sparkles, TrendingUp, AlertTriangle, CheckCircle2, Bot, Shield, Globe2, Printer, Mail } from "lucide-react";
 
 type AuditFactor = {
   name: string;
@@ -60,6 +61,84 @@ export default function AiAuditTool({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<AuditResult | null>(null);
+
+  // Optional lead capture & PDF action state
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadName, setLeadName] = useState("");
+  const [leadConsent, setLeadConsent] = useState(false);
+  const [leadMarketing, setLeadMarketing] = useState(false);
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
+  const [leadSent, setLeadSent] = useState(false);
+  const [leadError, setLeadError] = useState<string | null>(null);
+
+  async function handleLeadSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!result) return;
+    if (!leadEmail.trim()) {
+      setLeadError("Please provide your work email address.");
+      return;
+    }
+    if (!leadConsent) {
+      setLeadError("Please confirm your consent to receive this audit review.");
+      return;
+    }
+
+    setLeadSubmitting(true);
+    setLeadError(null);
+
+    const auditSummary = `
+Target Domain / Query: ${result.query} (${result.resolvedUrl || "No URL detected"})
+Overall Score: ${result.score}/100 (Grade ${result.grade})
+Verdict: ${result.summary}
+
+AI Crawler Readiness:
+- robots.txt: ${result.aiCrawlerReadiness.robotsTxt}
+- Schema.org: ${result.aiCrawlerReadiness.structuredData}
+- Factual Density: ${result.aiCrawlerReadiness.factualDensity}
+
+Scoring Factors:
+${result.factors.map((f) => `- ${f.name}: ${Math.round(f.score)}/100 (Weight: ${f.weight}) - ${f.notes}`).join("\n")}
+
+Strengths Observed:
+${result.strengths.map((s) => `- ${s}`).join("\n")}
+
+Key Gaps Identified:
+${result.gaps.map((g) => `- ${g}`).join("\n")}
+
+Prioritized Recommendations:
+${result.recommendations.map((r, i) => `${i + 1}. ${r}`).join("\n")}
+
+Generated Timestamp: ${result.generatedAt}
+    `.trim();
+
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: leadName.trim() || result.query,
+          email: leadEmail.trim(),
+          phone: "Via Audit Tool",
+          message: auditSummary,
+          type: "audit_report",
+          consentGiven: true,
+          marketingConsent: leadMarketing,
+          consentTimestamp: new Date().toISOString(),
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        setLeadError(data?.error || "Failed to submit request. Please try again.");
+      } else {
+        setLeadSent(true);
+      }
+    } catch {
+      setLeadError("Network error. Please try again.");
+    } finally {
+      setLeadSubmitting(false);
+    }
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -375,6 +454,120 @@ export default function AiAuditTool({
               </ol>
             </section>
           )}
+
+          {/* ─── Actions: Instant Browser PDF & Optional Email Report ─── */}
+          <div className="mt-8 pt-6 border-t border-slate-200/80 flex flex-col gap-5">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h4 className="font-display text-base font-bold text-slate-900">
+                  Save or Share These Audit Findings
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Export your full un-gated report directly to PDF, or optionally request a senior engineer review.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                className="btn-ghost text-xs py-2 px-3.5 border border-slate-300 hover:border-slate-400 text-slate-700 bg-white shadow-sm inline-flex items-center gap-1.5"
+              >
+                <Printer size={14} className="text-slate-600" />
+                <span>Save / Print as PDF</span>
+              </button>
+            </div>
+
+            {/* Optional Email Follow-Up Card */}
+            <div className="rounded-xl border border-indigo-100 bg-indigo-50/40 p-5 text-left">
+              <div className="flex items-center gap-2 mb-1.5">
+                <Mail size={16} className="text-indigo-600" />
+                <h4 className="font-display text-sm font-bold text-slate-900">
+                  Optional: Request Senior Engineering Review &amp; Checklist
+                </h4>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Submit your work email if you would like our technical team to manually review your website crawl signals, verify AI answer engine citations, and email you a prioritized 30-day GEO remediation checklist.
+              </p>
+
+              {leadSent ? (
+                <div className="mt-3.5 flex items-center gap-2 text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                  <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                  <span>
+                    Request logged! Our engineering team will review your domain signals and email your prioritized checklist to <strong>{leadEmail}</strong> within 1 business day.
+                  </span>
+                </div>
+              ) : (
+                <form onSubmit={handleLeadSubmit} className="mt-3.5 flex flex-col gap-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <input
+                      type="email"
+                      required
+                      value={leadEmail}
+                      onChange={(e) => setLeadEmail(e.target.value)}
+                      placeholder="name@company.com"
+                      className="rounded-lg px-3 py-2 text-xs text-slate-800 border border-slate-300 bg-white placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/10"
+                    />
+                    <input
+                      type="text"
+                      value={leadName}
+                      onChange={(e) => setLeadName(e.target.value)}
+                      placeholder="Your name or company (optional)"
+                      className="rounded-lg px-3 py-2 text-xs text-slate-800 border border-slate-300 bg-white placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/10"
+                    />
+                  </div>
+
+                  {/* DPDP Consent */}
+                  <div className="space-y-1.5 pt-1 text-[11px] text-slate-600">
+                    <label className="flex items-start gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={leadConsent}
+                        onChange={(e) => setLeadConsent(e.target.checked)}
+                        className="mt-0.5 h-3.5 w-3.5 rounded accent-indigo-600 border-slate-300"
+                      />
+                      <span>
+                        <strong className="text-slate-800">Required:</strong> I consent to Rison AI Tech processing my email to send me this audit review and technical recommendations in accordance with the{" "}
+                        <Link href="/privacy" className="text-indigo-600 underline hover:text-indigo-700">Privacy Policy</Link>.
+                      </span>
+                    </label>
+                    <label className="flex items-start gap-2 cursor-pointer text-slate-500">
+                      <input
+                        type="checkbox"
+                        checked={leadMarketing}
+                        onChange={(e) => setLeadMarketing(e.target.checked)}
+                        className="mt-0.5 h-3.5 w-3.5 rounded accent-indigo-600 border-slate-300"
+                      />
+                      <span>(Optional) Send me periodic AI search optimization guides and benchmark reports.</span>
+                    </label>
+                  </div>
+
+                  {leadError && (
+                    <p className="text-xs text-red-600 font-medium">{leadError}</p>
+                  )}
+
+                  <div className="pt-1">
+                    <button
+                      type="submit"
+                      disabled={leadSubmitting || !leadConsent || !leadEmail}
+                      className="btn-primary text-xs py-2 px-4 justify-center disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-1.5"
+                    >
+                      {leadSubmitting ? (
+                        <>
+                          <Loader2 size={13} className="animate-spin" />
+                          Submitting Request...
+                        </>
+                      ) : (
+                        <>
+                          Email Me the Engineering Review
+                          <ArrowRight size={13} />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
 
           <p className="mt-6 text-[10px] uppercase tracking-wider text-slate-400">
             Generated {new Date(result.generatedAt).toLocaleString("en-IN")}

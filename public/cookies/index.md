@@ -2,7 +2,7 @@
 title: "Cookies Policy | Risonai Tech"
 description: "Cookies policy for Risonai Tech. Learn about the cookies, tracking technologies, and Google Consent Mode v2 controls on risonaitech.com."
 url: "https://risonaitech.com/cookies"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## Rison AI Tech Cookies Policy

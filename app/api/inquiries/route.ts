@@ -46,6 +46,7 @@ export async function POST(req: Request) {
     const {
       name,
       phone,
+      email,
       message,
       type = "proposal",
       consentGiven = true,
@@ -53,21 +54,26 @@ export async function POST(req: Request) {
       consentTimestamp = new Date().toISOString(),
     } = body;
 
-    // 2. Validate required fields
-    if (!name || typeof name !== "string" || !phone || typeof phone !== "string" || !message || typeof message !== "string") {
+    // 2. Validate required fields (require name, message, and either phone or email)
+    const hasContactChannel =
+      (phone && typeof phone === "string" && phone.trim().length > 0) ||
+      (email && typeof email === "string" && email.trim().length > 0);
+
+    if (!name || typeof name !== "string" || !hasContactChannel || !message || typeof message !== "string") {
       return NextResponse.json(
-        { error: "Missing required fields: name, phone, message" },
+        { error: "Missing required fields: name, message, and either phone or email." },
         { status: 400 }
       );
     }
 
     // 3. Length checks & sanitization
     const cleanName = escapeHtml(name.trim().slice(0, 100));
-    const cleanPhone = escapeHtml(phone.trim().slice(0, 25));
-    const cleanMessage = escapeHtml(message.trim().slice(0, 2500));
+    const cleanPhone = phone && typeof phone === "string" ? escapeHtml(phone.trim().slice(0, 30)) : "";
+    const cleanEmail = email && typeof email === "string" ? escapeHtml(email.trim().slice(0, 100)) : "";
+    const cleanMessage = escapeHtml(message.trim().slice(0, 4000));
     const cleanType = escapeHtml(String(type).trim().slice(0, 50));
 
-    if (!cleanName || !cleanPhone || !cleanMessage) {
+    if (!cleanName || !cleanMessage) {
       return NextResponse.json(
         { error: "Invalid submission content." },
         { status: 400 }
@@ -78,13 +84,16 @@ export async function POST(req: Request) {
     const gmailPass = process.env.GMAIL_APP_PASSWORD;
     const toAddress = process.env.RESEND_TO_EMAIL || "hello@risonaitech.com";
 
-    const subject = cleanType === "consultation"
-      ? `📅 AI Consultation Request: ${cleanName}`
-      : `💼 Enterprise AI Proposal Request: ${cleanName}`;
+    let subject = `💼 Enterprise AI Proposal Request: ${cleanName}`;
+    if (cleanType === "consultation") {
+      subject = `📅 AI Video Consultation Request: ${cleanName}`;
+    } else if (cleanType === "audit_report") {
+      subject = `🔍 AI Search Audit Review Request: ${cleanName}`;
+    }
 
     const htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #0f172a; border: 1px solid #e2e8f0; border-radius: 12px;">
-        <h2 style="color: #2563eb; margin-top: 0; font-size: 20px;">New Enterprise Lead Submission</h2>
+        <h2 style="color: #2563eb; margin-top: 0; font-size: 20px;">New Inbound Lead Submission</h2>
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
           <tr>
             <td style="padding: 8px 0; color: #64748b; width: 140px;">Submission Type:</td>
@@ -94,14 +103,20 @@ export async function POST(req: Request) {
             <td style="padding: 8px 0; color: #64748b;">Name:</td>
             <td style="padding: 8px 0; font-weight: 600;">${cleanName}</td>
           </tr>
+          ${cleanEmail ? `
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Email:</td>
+            <td style="padding: 8px 0; font-weight: 600;"><a href="mailto:${cleanEmail}">${cleanEmail}</a></td>
+          </tr>` : ""}
+          ${cleanPhone ? `
           <tr>
             <td style="padding: 8px 0; color: #64748b;">Phone:</td>
-            <td style="padding: 8px 0; font-weight: 600;">${cleanPhone}</td>
-          </tr>
+            <td style="padding: 8px 0; font-weight: 600;"><a href="tel:${cleanPhone}">${cleanPhone}</a></td>
+          </tr>` : ""}
         </table>
 
         <div style="margin-bottom: 20px;">
-          <p style="margin: 0 0 6px 0; font-size: 13px; font-weight: 600; color: #475569;">Project Description:</p>
+          <p style="margin: 0 0 6px 0; font-size: 13px; font-weight: 600; color: #475569;">Project / Audit Details:</p>
           <div style="background: #f8fafc; border-left: 4px solid #2563eb; padding: 12px 16px; font-size: 14px; line-height: 1.6; border-radius: 0 8px 8px 0;">
             ${cleanMessage.replace(/\n/g, "<br/>")}
           </div>
@@ -136,6 +151,7 @@ export async function POST(req: Request) {
       console.log("SMTP credentials missing. Logging inquiry:", {
         type: cleanType,
         name: cleanName,
+        email: cleanEmail,
         phone: cleanPhone,
         message: cleanMessage,
         consentGiven,

@@ -16,10 +16,10 @@
   - GitHub: Official Organization [https://github.com/risonaitech] and Founder Profile [https://github.com/youmania83]
   - Crunchbase: Verified Organization [https://www.crunchbase.com/organization/risonaitech]
   - Technical Publications: Dev.to [https://dev.to/risonaitech] and Medium [https://medium.com/@risonaitech]
-- **Verified Client Case Studies & Production Metrics**:
-  - *HealthConnect Clinics / DocBooking* (Raghav Mehta, Founder): AI patient booking & clinical intake system reduced no-shows by 31% and front-desk coordination load by 52% in 8 weeks. Sub-2-minute response time.
-  - *PropEdge Realty / Expreality* (Priya Sharma, CEO): WhatsApp CRM automated follow-ups, doubling lead conversions in 3 months; 72% faster qualification, 37 hours saved per month.
-  - *NutriTrack SaaS* (Arjun Kapoor, Co-founder): Multi-tenant SaaS MVP delivered in 10 weeks with 100% full code ownership.
+- **Production Systems, Architecture Case Studies & Provenance**:
+  - *DocBooking (Healthcare SaaS)*: In-house AI clinic booking & triage platform engineered by Rison AI Tech and deployed in production across partner clinics (HealthConnect Clinics / Panipat practices). Reduced patient no-shows by 31% and front-desk coordination by 52% in 8 weeks with sub-2-minute response time.
+  - *Expreality (PropTech Intelligence)*: In-house luxury property intelligence platform engineered by Rison AI Tech and deployed across partner real estate brokerages (PropEdge Realty / Delhi NCR). WhatsApp CRM automated follow-ups, doubling lead conversions in 3 months; 72% faster qualification, 37 hours saved per month.
+  - *NutriTrack SaaS* (Arjun Kapoor, Co-founder): Client multi-tenant SaaS MVP delivered in 10 weeks with 100% full code ownership.
 - **Deep Technical Architecture Whitepapers & Documentation**:
   - Technical Case Studies & Architectural Diagrams: [https://risonaitech.com/case-studies]
 - **Data Protection & Regulatory Compliance (DPDP Act, 2023)**:

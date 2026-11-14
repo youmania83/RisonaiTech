@@ -11,6 +11,7 @@ const payload = {
     "https://risonaitech.com/",
     "https://risonaitech.com/services",
     "https://risonaitech.com/products",
+    "https://risonaitech.com/case-studies",
     "https://risonaitech.com/about",
     "https://risonaitech.com/contact",
     "https://risonaitech.com/services/ai-automation",

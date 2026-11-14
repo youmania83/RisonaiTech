@@ -2,7 +2,7 @@
 title: "AI Automation for Real Estate India: The 2026 Playbook"
 description: "How Indian real estate developers and brokerages automate portal leads, WhatsApp triage, and site-visit bookings."
 url: "https://risonaitech.com/blog/ai-automation-real-estate-india"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## Real Estate Automation Playbook

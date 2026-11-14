@@ -5,9 +5,15 @@ import { CheckCircle2, MessageCircle, ArrowRight } from "lucide-react";
 import { trackLeadSubmission } from "@/lib/analytics";
 
 export default function ThankYouPage() {
-  const [leadData, setLeadData] = useState({ name: "", phone: "", message: "" });
+  const [leadData, setLeadData] = useState<{ name: string; phone: string; message: string; type?: string }>({
+    name: "",
+    phone: "",
+    message: "",
+    type: "proposal",
+  });
   const [progress, setProgress] = useState(100);
   const [redirectStarted, setRedirectStarted] = useState(false);
+  const [redirectCancelled, setRedirectCancelled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   // Retrieve lead details on client load
@@ -28,49 +34,56 @@ export default function ThankYouPage() {
     }
   }, []);
 
-  const { name, phone, message } = leadData;
+  const { name, phone, message, type } = leadData;
+  const isConsultation = type === "consultation";
 
   // Formulate the WhatsApp URL
-  const waMessage = `Hi Risonai Tech!\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+  const waPrefix = isConsultation ? "Hi Risonai Tech, I've requested a 30-min strategy session!" : "Hi Risonai Tech!";
+  const waMessage = `${waPrefix}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
   const whatsappUrl = `https://wa.me/919050486448?text=${encodeURIComponent(waMessage)}`;
 
   useEffect(() => {
-    if (!isMounted) return;
+    if (!isMounted || redirectCancelled) return;
 
     console.log("Thank You page activated. Firing Lead Conversion event.");
 
     const handleRedirect = () => {
-      if (redirectStarted) return;
+      if (redirectStarted || redirectCancelled) return;
       setRedirectStarted(true);
       console.log("Redirecting to WhatsApp:", whatsappUrl);
       window.location.href = whatsappUrl;
     };
 
     // Fire the tracking events (both GA4 generate_lead and Google Ads conversion)
-    // Runs handleRedirect immediately when gtag calls back (callback-first)
-    trackLeadSubmission(name, phone, handleRedirect);
+    // Only auto-redirect if not explicitly cancelled and not a video consultation request
+    if (!isConsultation) {
+      trackLeadSubmission(name, phone, handleRedirect);
 
-    // 1.5s visual progress loader countdown as a safety backup
-    const duration = 1500;
-    const intervalTime = 30; // ms
-    const steps = duration / intervalTime;
-    const stepSize = 100 / steps;
+      // 1.5s visual progress loader countdown as a safety backup
+      const duration = 1500;
+      const intervalTime = 30; // ms
+      const steps = duration / intervalTime;
+      const stepSize = 100 / steps;
 
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev <= 0) {
-          clearInterval(timer);
-          handleRedirect();
-          return 0;
-        }
-        return prev - stepSize;
-      });
-    }, intervalTime);
+      const timer = setInterval(() => {
+        setProgress((prev) => {
+          if (prev <= 0) {
+            clearInterval(timer);
+            handleRedirect();
+            return 0;
+          }
+          return prev - stepSize;
+        });
+      }, intervalTime);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [isMounted, name, phone, whatsappUrl, redirectStarted]);
+      return () => {
+        clearInterval(timer);
+      };
+    } else {
+      // For consultations, record tracking without forced immediate redirection
+      trackLeadSubmission(name, phone, () => {});
+    }
+  }, [isMounted, name, phone, whatsappUrl, redirectStarted, redirectCancelled, isConsultation]);
 
   if (!isMounted) {
     return (
@@ -104,36 +117,54 @@ export default function ThankYouPage() {
 
         {/* Text Details */}
         <h1 className="font-display text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl">
-          Lead <span className="grad-text">Received!</span>
+          {isConsultation ? (
+            <>Session <span className="grad-text">Requested!</span></>
+          ) : (
+            <>Lead <span className="grad-text">Received!</span></>
+          )}
         </h1>
         <p className="text-slate-400 text-lg mb-8 leading-relaxed">
           Thanks for reaching out, <span className="text-slate-200 font-semibold">{name || "there"}</span>. Your project brief is successfully logged.
         </p>
 
-        {/* Redirect Progress Card */}
+        {/* Redirect / Status Card */}
         <div className="bg-[#111629]/90 border border-slate-800 rounded-3xl p-6 mb-8 backdrop-blur-md shadow-2xl relative">
           <div className="flex items-center gap-3 justify-center mb-4">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-xs font-semibold text-slate-300 uppercase tracking-widest">
-              Initiating Chat Setup
+              {isConsultation ? "Video Strategy Request Confirmed" : "Initiating Chat Setup"}
             </span>
           </div>
 
           <p className="text-sm text-slate-400 mb-6">
-            We are opening WhatsApp to connect you directly with founder Yogesh.
+            {isConsultation
+              ? "Our engineering team will review your requirements and coordinate your 30-minute Google Meet architecture session."
+              : redirectCancelled
+              ? "Auto-redirect paused. You can start a WhatsApp chat anytime below."
+              : "We are opening WhatsApp to connect you directly with founder Yogesh."}
           </p>
 
-          {/* Progress Bar Container */}
-          <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden mb-2">
-            <div 
-              className="h-full bg-gradient-to-r from-indigo-500 to-[#25D366] transition-all duration-75 ease-linear"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <div className="flex justify-between text-[11px] text-slate-500">
-            <span>Securing Conversion Link</span>
-            <span>Connecting...</span>
-          </div>
+          {!isConsultation && !redirectCancelled && (
+            <>
+              {/* Progress Bar Container */}
+              <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden mb-2">
+                <div 
+                  className="h-full bg-gradient-to-r from-indigo-500 to-[#25D366] transition-all duration-75 ease-linear"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+              <div className="flex justify-between items-center text-[11px] text-slate-500">
+                <span>Connecting to WhatsApp...</span>
+                <button
+                  type="button"
+                  onClick={() => setRedirectCancelled(true)}
+                  className="text-indigo-400 hover:text-indigo-300 underline font-medium"
+                >
+                  Stay on page
+                </button>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Action Buttons */}
@@ -143,12 +174,14 @@ export default function ThankYouPage() {
             className="group flex items-center justify-center gap-2.5 rounded-2xl w-full py-4 px-6 bg-[#25D366] hover:bg-[#20ba56] text-white font-bold text-base transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgba(37,211,102,0.2)]"
           >
             <MessageCircle size={20} className="fill-white" />
-            Start Chat on WhatsApp Now
+            {isConsultation ? "Connect on WhatsApp Now" : "Start Chat on WhatsApp Now"}
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
           
           <p className="text-xs text-slate-500">
-            Not redirecting automatically? Click the button above.
+            {isConsultation
+              ? "Need an immediate answer? Click above to talk to us on WhatsApp."
+              : "Not redirecting automatically? Click the button above."}
           </p>
         </div>
       </div>

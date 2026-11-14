@@ -2,7 +2,7 @@
 title: "AI and SaaS Development Across India — RisonAI Tech"
 description: "RisonAI Tech is a remote-first AI and SaaS development company serving clients across 18+ cities in India."
 url: "https://risonaitech.com/locations/india"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## RisonAI Tech — Across India

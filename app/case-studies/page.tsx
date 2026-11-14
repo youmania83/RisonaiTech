@@ -152,7 +152,7 @@ export default function CaseStudiesPage() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mx-auto mt-5 max-w-2xl text-xl text-brand-gray">
-                We don&apos;t publish vague marketing fluff. Here are the exact system architectures, prompt pipelines, guardrail layers, and database schemas behind our live production deployments.
+                We don&apos;t publish vague marketing fluff. Here are the exact system architectures, prompt pipelines, guardrail layers, and database schemas behind our in-house platforms (DocBooking, Expreality) deployed across live partner clinics and brokerages, alongside enterprise client AIOps.
               </p>
             </Reveal>
           </div>
@@ -190,7 +190,7 @@ export default function CaseStudiesPage() {
             <Reveal>
               <div className="flex items-center gap-2 mb-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-sky-50 text-sky-600 border border-sky-200">
-                  <HeartPulse size={14} /> Healthcare SaaS Architecture
+                  <HeartPulse size={14} /> In-House Healthcare SaaS · Partner Pilot Deployment
                 </span>
                 <span className="text-xs text-brand-subtle">Production Live · Panipat Clinics</span>
               </div>
@@ -198,7 +198,7 @@ export default function CaseStudiesPage() {
                 Case Study 1: DocBooking Clinical Intake &amp; Triage Engine
               </h2>
               <p className="mt-3 text-lg text-brand-gray leading-relaxed">
-                An end-to-end multi-agent clinical intake system operating on WhatsApp Cloud API and Next.js, serving private clinics and hospital practices with automated symptom triage, doctor slot allocation, and reminder loops.
+                An architectural breakdown of DocBooking, an in-house healthcare platform engineered by Rison AI Tech and deployed in production across partner clinics in Panipat and Delhi NCR — featuring an end-to-end multi-agent clinical intake system operating on WhatsApp Cloud API and Next.js, with automated symptom triage, doctor slot allocation, and reminder loops.
               </p>
             </Reveal>
 
@@ -346,7 +346,7 @@ export default function CaseStudiesPage() {
             <Reveal>
               <div className="flex items-center gap-2 mb-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
-                  <Building2 size={14} /> Luxury Real Estate Intelligence
+                  <Building2 size={14} /> In-House PropTech SaaS · Brokerage Partner Deployment
                 </span>
                 <span className="text-xs text-brand-subtle">Production Live · Delhi NCR &amp; Gurgaon</span>
               </div>
@@ -354,7 +354,7 @@ export default function CaseStudiesPage() {
                 Case Study 2: Expreality Spatial Location Scoring &amp; CRM Engine
               </h2>
               <p className="mt-3 text-lg text-brand-gray leading-relaxed">
-                An AI property intelligence engine connecting private high-net-worth real estate listings with algorithmic neighborhood scoring, multi-agent lead profiling, and automated WhatsApp nurturing.
+                An architectural breakdown of Expreality, a proprietary property intelligence platform engineered by Rison AI Tech and deployed with partner real estate operations across Delhi NCR — connecting private high-net-worth real estate listings with algorithmic neighborhood scoring, multi-agent lead profiling, and automated WhatsApp nurturing.
               </p>
             </Reveal>
 

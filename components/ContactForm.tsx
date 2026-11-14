@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2, ShieldCheck } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Loader2, ShieldCheck, Calendar, FileText } from "lucide-react";
 
 import { siteConfig } from "@/lib/constants";
 import { fadeUp, staggerContainer, viewportOptions } from "@/lib/animations";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
+  const [inquiryType, setInquiryType] = useState<"proposal" | "consultation">("proposal");
   const [consentGiven, setConsentGiven] = useState(false);
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [sent, setSent] = useState(false);
@@ -77,7 +78,7 @@ export default function ContactForm() {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          type: "proposal",
+          type: inquiryType,
           consentGiven: true,
           marketingConsent,
           consentTimestamp: new Date().toISOString()
@@ -98,6 +99,7 @@ export default function ContactForm() {
               name: form.name,
               phone: form.phone,
               message: form.message,
+              type: inquiryType,
             })
           );
         } catch (err) {
@@ -176,9 +178,56 @@ export default function ContactForm() {
                 </div>
               ) : (
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-                  <h2 className="font-display text-2xl font-bold text-slate-900">
-                    Send a message
-                  </h2>
+                  <div className="flex items-center justify-between">
+                    <h2 className="font-display text-2xl font-bold text-slate-900">
+                      Send a message
+                    </h2>
+                  </div>
+
+                  {/* Engagement Type Selector (Written Proposal vs Video Strategy Call) */}
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                      Select Your Engagement Preference
+                    </span>
+                    <div className="grid grid-cols-2 gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setInquiryType("proposal")}
+                        className={`flex flex-col items-start gap-1 p-3 rounded-xl border text-left transition-all ${
+                          inquiryType === "proposal"
+                            ? "border-blue-600 bg-blue-50/50 ring-2 ring-blue-600/10 text-slate-900"
+                            : "border-slate-200 bg-slate-50/40 hover:bg-slate-50 text-slate-600"
+                        }`}
+                      >
+                        <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm">
+                          <FileText size={15} className={inquiryType === "proposal" ? "text-blue-600" : "text-slate-400"} />
+                          <span>Written Proposal</span>
+                        </div>
+                        <span className="text-[11px] text-slate-500 leading-tight">
+                          Fixed-price spec &amp; timeline in 48h
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => setInquiryType("consultation")}
+                        className={`flex flex-col items-start gap-1 p-3 rounded-xl border text-left transition-all ${
+                          inquiryType === "consultation"
+                            ? "border-blue-600 bg-blue-50/50 ring-2 ring-blue-600/10 text-slate-900"
+                            : "border-slate-200 bg-slate-50/40 hover:bg-slate-50 text-slate-600"
+                        }`}
+                      >
+                        <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm">
+                          <Calendar size={15} className={inquiryType === "consultation" ? "text-blue-600" : "text-slate-400"} />
+                          <span>Video Strategy Call</span>
+                        </div>
+                        <span className="text-[11px] text-slate-500 leading-tight">
+                          30-min Google Meet session
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
                       <label className="text-sm font-medium text-slate-600" htmlFor="name">
@@ -221,7 +270,11 @@ export default function ContactForm() {
                       id="message"
                       name="message"
                       onChange={handleChange}
-                      placeholder="Tell us about your project — what you're building, the problem you're solving, and your timeline..."
+                      placeholder={
+                        inquiryType === "consultation"
+                          ? "Tell us about your project, your timezone, and preferred meeting times (e.g. Weekdays 2–5 PM IST or US mornings)..."
+                          : "Tell us about your project — what you're building, the problem you're solving, and your timeline..."
+                      }
                       required
                       rows={5}
                       value={form.message}
@@ -276,7 +329,7 @@ export default function ContactForm() {
                   </div>
 
                   <button 
-                    className="btn-primary mt-1 w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed" 
+                    className="btn-primary mt-1 w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2" 
                     type="submit"
                     disabled={submitting || !consentGiven}
                   >
@@ -284,6 +337,12 @@ export default function ContactForm() {
                       <>
                         <Loader2 className="animate-spin" size={15} />
                         Submitting...
+                      </>
+                    ) : inquiryType === "consultation" ? (
+                      <>
+                        <Calendar size={16} />
+                        Request Video Strategy Call
+                        <ArrowRight size={15} />
                       </>
                     ) : (
                       <>
@@ -318,6 +377,18 @@ export default function ContactForm() {
                   >
                     <MessageCircle className="flex-shrink-0 text-[#25D366]" size={18} />
                     WhatsApp Chat
+                  </a>
+                  <a
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition-all hover:text-slate-900 hover:bg-slate-50 border border-slate-200"
+                    href={
+                      process.env.NEXT_PUBLIC_CALENDAR_BOOKING_URL ||
+                      `mailto:${siteConfig.email}?subject=Schedule%2030-Min%20AI%20Strategy%20Session&body=Hi%20Rison%20AI%20Tech%2C%0A%0AI%20would%20like%20to%20schedule%20a%2030-minute%20video%20strategy%20session.%0A%0ACompany%3A%0APreferred%20Dates%2FTimes%3A%0ATimezone%3A%0ABrief%20Project%20Overview%3A`
+                    }
+                    rel={process.env.NEXT_PUBLIC_CALENDAR_BOOKING_URL ? "noopener noreferrer" : undefined}
+                    target={process.env.NEXT_PUBLIC_CALENDAR_BOOKING_URL ? "_blank" : undefined}
+                  >
+                    <Calendar className="flex-shrink-0 text-indigo-600" size={18} />
+                    Book Video Meeting
                   </a>
                   <a
                     className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition-all hover:text-slate-900 hover:bg-slate-50 border border-slate-200"

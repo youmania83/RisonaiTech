@@ -2,7 +2,7 @@
 title: "How to Use AI for Automation: A Step-by-Step Implementation Guide"
 description: "A step-by-step roadmap to auditing, scoping, building, and deploying your first AI automation workflow."
 url: "https://risonaitech.com/blog/how-to-use-ai-for-automation"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## AI Automation Implementation Guide

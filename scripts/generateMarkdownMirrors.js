@@ -384,24 +384,72 @@ Contact: https://risonaitech.com/contact`,
   "/products": {
     title: "Products — DocBooking and Expreality SaaS Platforms",
     description:
-      "RisonAI Tech has built DocBooking (AI healthcare SaaS) and Expreality (real estate intelligence SaaS). Available for white-label licensing.",
-    body: `## RisonAI Tech Products
+      "RisonAI Tech has engineered DocBooking (in-house healthcare SaaS) and Expreality (in-house real estate intelligence platform). Live production products deployed with partner operations.",
+    body: `## RisonAI Tech Proprietary Products
 
 ### DocBooking
-AI-powered doctor appointment booking SaaS for clinics and hospitals in India.
+In-house AI-powered doctor appointment booking & clinical intake SaaS platform engineered by RisonAI Tech, deployed across partner clinics and hospitals in Panipat and Delhi NCR.
 
-Features: Smart scheduling, patient intake forms with AI parsing, WhatsApp reminders, clinic analytics dashboard, multi-doctor multi-location support.
-
-Industries: Healthcare, Telemedicine, Clinics
-Status: Live, available for white-label licensing.
+Features: Smart scheduling, LangGraph symptom triage, WhatsApp reminders, clinic analytics dashboard, multi-doctor multi-location support.
+Industries: Healthcare, Telemedicine, Private Clinics
+Status: Live production platform deployed with partner practices.
 
 ### Expreality
-Premium property intelligence platform for real estate buyers and agents.
+In-house luxury property intelligence platform engineered by RisonAI Tech, deployed with partner real estate brokerages across Delhi NCR.
 
-Features: Private inventory listings, AI-driven location scoring, neighbourhood analytics, CRM for real estate agents.
+Features: Private inventory listings, geospatial location scoring, neighbourhood analytics, CrewAI multi-agent lead profiling, and automated WhatsApp nurturing.
+Industries: Luxury Real Estate, Property Management, Brokerages
+Status: Live production platform deployed with partner brokerages.`,
+  },
 
-Industries: Luxury Real Estate, Property Management
-Status: Live product.`,
+  "/case-studies": {
+    title: "AI Case Studies & Technical Architecture Whitepapers | RisonAI Tech",
+    description:
+      "Production engineering case studies detailing system architecture diagrams, LangGraph agent pipelines, prompt guardrails, and PostgreSQL schemas for DocBooking, Expreality, and enterprise AIOps.",
+    body: `## Technical Architecture & Production Case Studies
+
+RisonAI Tech publishes deep architectural documentation covering system designs, prompt pipelines, guardrail layers, and database schemas behind our in-house platforms (DocBooking, Expreality) deployed across live partner clinics and brokerages, alongside enterprise client AIOps.
+
+### Case Study 1: DocBooking Clinical Intake & Triage Engine
+- Category: In-House Healthcare SaaS · Partner Pilot Deployment (Panipat Clinics)
+- Architecture: LangGraph State Machine, Fastify Ingress Gateway, PII Sanitizer (Presidio + Regex), Pinecone ICD-10 RAG, Lock-Safe Calendar Slot Matrix in PostgreSQL (FOR UPDATE SKIP LOCKED).
+- Results: 31% reduction in patient no-shows, 52% front-desk staff coordination time saved, 99.8% scheduling uptime across 14,000+ completed clinic reservations.
+
+### Case Study 2: Expreality Spatial Location Scoring & CRM Engine
+- Category: In-House PropTech SaaS · Brokerage Partner Deployment (Delhi NCR & Gurgaon)
+- Architecture: Geospatial Scoring Engine (PostGIS), Isochrone Drive-Time Commute Analysis, CrewAI Autonomous Multi-Agent Pool (Profiling, Matching, Budget Verifier), Enterprise CRM Sync (Zoho/HubSpot), Sub-2-Minute WhatsApp PDF Brochure Delivery.
+- Results: 72% faster lead qualification, 37 hours saved monthly per sales manager, 2.1x higher site-visit booking rate.
+
+### Case Study 3: Production AIOps, Telemetry & Token Optimization
+- Category: Enterprise Multi-Agent Orchestration & LLM Operations
+- Architecture: Semantic Caching (43% query deflection reducing per-turn cost from $0.04 to $0.003), Automated Weekly Drift Detection against Synthetic Regressions, Sandboxed Model Context Protocol (MCP) Tool Execution.
+
+URL: https://risonaitech.com/case-studies`,
+  },
+
+  "/tools/ai-search-audit": {
+    title: "Free AI Search Ranking Audit | Check AI Visibility | RisonAI Tech",
+    description:
+      "Free AI search ranking audit by RisonAI Tech. Enter your website URL or business name and instantly see how visible your brand is to ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews.",
+    body: `## Free AI Search Ranking Audit
+
+The RisonAI Tech AI Search Ranking Audit is a free diagnostic tool that evaluates whether your website is discoverable, understandable, and citable across AI answer engines including ChatGPT Search, Perplexity, Claude, Google Gemini, and Google AI Overviews.
+
+### Core Evaluation Dimensions
+- Brand Authority & Entity Clarity: Identifies whether models recognize your registered entity, founder presence, and industry category.
+- Structured Data & JSON-LD Graph: Checks Schema.org types (Organization, LocalBusiness, Service, FAQPage, BreadcrumbList).
+- AI Crawler Accessibility: Inspects robots.txt directives for GPTBot, ClaudeBot, PerplexityBot, and Google-Extended, alongside llms.txt.
+- Factual Density: Evaluates whether pages provide concrete data (pricing, timelines, locations, use cases) rather than vague marketing copy.
+- Topical Clarity & Intent Mapping: Measures direct-answer suitability for conversational query synthesis.
+
+### Features
+- 0–100 AI Visibility Score & A–F Letter Grade.
+- Real-time observable crawler evidence.
+- Prioritized 30-day remediation recommendations.
+- Instant un-gated browser PDF export (Print / Save as PDF).
+- Optional senior engineering review and action checklist by email.
+
+URL: https://risonaitech.com/tools/ai-search-audit`,
   },
 
   "/about": {

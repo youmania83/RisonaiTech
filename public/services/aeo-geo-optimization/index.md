@@ -2,7 +2,7 @@
 title: "AI Search Visibility (AEO & GEO) Services | Rison AI Tech"
 description: "Strengthen your business discoverability across AI-powered search engines with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Enterprise AI search visibility strategies by Rison AI Tech."
 url: "https://risonaitech.com/services/aeo-geo-optimization"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## AI Search Visibility (AEO & GEO) Services

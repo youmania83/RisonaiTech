@@ -2,7 +2,7 @@
 title: "AI & SaaS Development in Ahmedabad — RisonAI Tech"
 description: "RisonAI Tech delivers AI automation, custom CRM solutions, and SaaS development for startups, textile exporters, and manufacturers in Ahmedabad, Gujarat."
 url: "https://risonaitech.com/ahmedabad"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## RisonAI Tech — Ahmedabad Services

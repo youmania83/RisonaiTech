@@ -2,7 +2,7 @@
 title: "Privacy Policy | Risonai Tech"
 description: "Privacy policy for Risonai Tech. Learn how we collect, use, store, and protect your personal data when you visit risonaitech.com or use our services."
 url: "https://risonaitech.com/privacy"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## Rison AI Tech Privacy Policy

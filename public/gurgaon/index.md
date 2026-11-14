@@ -2,7 +2,7 @@
 title: "AI Automation Company in Gurgaon | Workflows & AI Agents"
 description: "RisonAI Tech is a leading AI automation company in Gurgaon. We build custom AI workflows, chatbots, WhatsApp automation, and SaaS platforms for local industries."
 url: "https://risonaitech.com/gurgaon"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## AI Automation & Agent Systems in Gurgaon

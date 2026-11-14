@@ -2,7 +2,7 @@
 title: "AI Automation Company in Chicago | Workflows & AI Agents"
 description: "RisonAI Tech is a leading AI automation company in Chicago. We build custom AI workflows, chatbots, WhatsApp automation, and SaaS platforms for local industries."
 url: "https://risonaitech.com/chicago"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 ---
 
 ## AI Automation & Agent Systems in Chicago
