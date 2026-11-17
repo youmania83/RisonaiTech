@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation for Real Estate in India: 2026 Practical Guide | RisonAI Tech" },
+  title: { absolute: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)" },
   description:
-    "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
+    "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers.",
   keywords: [
     "ai automation for real estate",
     "real estate ai automation india",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/ai-automation-real-estate-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
+    title: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)",
     description:
-      "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
+      "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers.",
     url: "https://risonaitech.com/blog/ai-automation-real-estate-india",
     type: "article",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
+    title: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)",
     description:
       "AI automation use cases for Indian real estate agencies — lead qualification, WhatsApp follow-up, CRM sync, and site visit scheduling.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -73,12 +73,12 @@ const jsonLd = graph(
     { name: "AI Automation for Real Estate India", url: "/blog/ai-automation-real-estate-india" },
   ]),
   articleSchema({
-    title: "AI Automation for Real Estate in India: 2026 Practical Guide",
+    title: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)",
     description:
-      "How Indian real estate agencies use AI automation to qualify leads 24/7 on WhatsApp, schedule site visits, and reduce manual follow-up work by 70%.",
+      "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers.",
     url: "/blog/ai-automation-real-estate-india",
     datePublished: "2026-06-08",
-    dateModified: "2026-09-13",
+    dateModified: "2026-11-17",
     wordCount: 1950,
   }),
   faqSchemaFromPairs(faqItems)

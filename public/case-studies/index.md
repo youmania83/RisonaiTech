@@ -2,7 +2,7 @@
 title: "AI Case Studies & Technical Architecture Whitepapers | RisonAI Tech"
 description: "Production engineering case studies detailing system architecture diagrams, LangGraph agent pipelines, prompt guardrails, and PostgreSQL schemas for DocBooking, Expreality, and enterprise AIOps."
 url: "https://risonaitech.com/case-studies"
-last_updated: "2026-11-14"
+last_updated: "2026-11-17"
 ---
 
 ## Technical Architecture & Production Case Studies

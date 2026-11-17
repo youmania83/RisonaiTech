@@ -94,9 +94,9 @@ URL: https://risonaitech.com/services/aeo-geo-optimization`,
   },
 
   "/services/ai-automation": {
-    title: "AI Automation Systems — Replace Manual Work with AI Workflows",
+    title: "AI Automation Company India: Enterprise Agents & Workflows",
     description:
-      "RisonAI Tech builds AI automation systems — LLM intake agents, WhatsApp automation, CRM syncs, and agentic workflows. Pricing from Rs 30,000.",
+      "Enterprise AI automation services & autonomous agents in India. Fixed pricing from ₹30,000, 2-week sprint guarantee, and DPDP-compliant architecture.",
     body: `## AI Automation Systems
 
 RisonAI Tech builds end-to-end AI automation for Indian businesses.
@@ -843,8 +843,8 @@ If your website isn't showing up as a citation in answer engines, it's typically
   },
 
   "/blog/ai-automation-for-small-businesses": {
-    title: "How Small Businesses Can Use AI Automation in 2026 (Without a Tech Team)",
-    description: "A practical guide for small businesses to automate workflows, qualify leads, and save manual hours.",
+    title: "AI Automation for Small Business: 5 Proven Workflows (2026)",
+    description: "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses.",
     body: `## AI Automation for Small Business
 
 Small businesses with 5–50 employees get the fastest return on investment from AI workflows.
@@ -872,8 +872,8 @@ To maximize conversion, you must follow up with inbound leads immediately. An AI
   },
 
   "/blog/ai-automation-real-estate-india": {
-    title: "AI Automation for Real Estate India: The 2026 Playbook",
-    description: "How Indian real estate developers and brokerages automate portal leads, WhatsApp triage, and site-visit bookings.",
+    title: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)",
+    description: "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers.",
     body: `## Real Estate Automation Playbook
 
 Indian property teams manage high volumes of portal leads (MagicBricks, 99acres) and WhatsApp chats. 
@@ -936,8 +936,8 @@ Knowing which technology to apply prevents over-engineering and reduces project 
   },
 
   "/blog/ai-automation-tools": {
-    title: "Top AI Automation Tools in 2026: The No-Fluff Shortlist",
-    description: "A production-tested shortlist of tools for building and deploying AI workflows.",
+    title: "Top AI Automation Tools (2026): Ranked, Tested & Benchmarked",
+    description: "Compare n8n, Make, LangChain, and OpenAI. Discover real self-hosting costs, enterprise ROI, and the best AI automation stack for Indian businesses in 2026.",
     body: `## Production AI Automation Stack
 
 Skip the hype. These are the tools RisonAI Tech deploys for real-world business systems:
@@ -1023,6 +1023,74 @@ SaaS development economics depend on architectural choices, database isolation, 
 - **SaaS MVP (6–10 weeks)**: Rs 1,20,000 – Rs 2,50,000. Includes core features, email auth, single-tenant isolated DB, basic dashboards.
 - **Growth Multi-Tenant (12–16 weeks)**: Rs 3,00,000 – Rs 8,00,000. Includes tenant data isolation, subscription billing, custom domains.
 - **Enterprise AI SaaS (16–24 weeks)**: Rs 8,00,000+. Includes SSO, audit logs, vector databases, custom integrations, SLAs.`,
+  },
+
+  "/blog/ai-voice-agents-vs-traditional-ivr": {
+    title: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide",
+    description: "Migrate from legacy DTMF IVRs to sub-800ms conversational Voice AI. Compare PolyAI, Retell, and custom agents with real latency and cost benchmarks.",
+    body: `## Voice AI Agents vs Traditional IVR
+
+Static "Press 1 for Sales" phone trees create friction and lead leakage. Modern conversational voice AI agents provide sub-800ms speech-to-speech interaction.
+
+### Key Telephony Metrics
+- **Speech-to-Speech Latency**: Sub-800ms end-to-end response time.
+- **Telephony Stack**: Twilio Media Streams, Exotel SIP trunking, Deepgram Nova-3 ASR, Cartesia Sonic TTS.
+- **Deployment Costs in India**: Turnkey setups from Rs 1,50,000; runtime telephony compute Rs 2.50–Rs 6.00/minute.
+- **High-ROI Use Cases**: Inbound 24/7 receptionists, sub-60s outbound lead callbacks, appointment scheduling, and order verification.`,
+  },
+
+  "/blog/ai-resume-screening-india": {
+    title: "AI Resume Screening India: HR Shortlisting & Scoring Workflows",
+    description: "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening.",
+    body: `## AI Resume Screening for Indian HR
+
+High applicant volumes on LinkedIn, Naukri, and Indeed overwhelm recruitment teams. AI resume screening parses unstructured resumes, scores candidates against precise rubrics, and automates initial outreach.
+
+### Enterprise Benefits
+- **Speed**: Screen 500+ resumes in under 10 minutes.
+- **Compliance**: DPDP Act compliant local processing without storing unauthorized biometric candidate data.
+- **Integration**: Direct sync with ATS platforms like Keka, Darwinbox, and Zoho Recruit.`,
+  },
+
+  "/blog/multi-agent-systems-in-production-guide": {
+    title: "Multi-Agent Systems in Production: 2026 Architecture & Costs",
+    description: "Production guide on multi-agent AI systems: LangGraph vs CrewAI orchestration, supervisor patterns, memory state management, and real enterprise costs.",
+    body: `## Multi-Agent Systems in Production
+
+Moving beyond single prompt-completion chains to multi-agent architectures where specialized AI workers collaborate to execute complex enterprise workflows.
+
+### Architectural Patterns
+- **Supervisor Pattern**: A central routing agent delegates sub-tasks to specialized domain agents and synthesizes outputs.
+- **State & Memory Management**: Checkpointed state persistence using PostgreSQL and Redis.
+- **Human-in-the-Loop (HITL)**: Mandatory review steps for high-stakes operational decisions.`,
+  },
+
+  "/blog/schema-markup-for-ai-search-geo": {
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    description: "Master structured data for Generative Engine Optimization (GEO). How to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI extract for brand citations.",
+    body: `## Schema Markup for Generative Engine Optimization (GEO)
+
+AI search engines (Perplexity, ChatGPT Search, Google AI Overviews) rely on unambiguous structured data to cite entities and pricing.
+
+### Essential JSON-LD Schemas
+- **Organization & LocalBusiness**: Clear legal entity naming, founders, official contact points, and verified coordinates.
+- **Service & Product**: Defined pricing ranges (PriceSpecification), currency (INR), and verified deliverables.
+- **FAQPage & Article**: Atomic question-answer pairs and timestamped technical guides.`,
+  },
+
+  "/blog/whatsapp-ai-lead-nurturing-workflows": {
+    title: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)",
+    description: "Build automated WhatsApp lead nurturing drip sequences with AI conversation agents, CRM synchronization, Meta template compliance, and 45%+ reply rates.",
+    body: `## WhatsApp AI Lead Nurturing Workflows
+
+In India, WhatsApp delivers 80%+ open rates compared to sub-15% on commercial email. Automated AI drip sequences keep leads engaged through conversational qualification.
+
+### 5 Proven Workflows
+1. **Immediate Inbound Qualification**: Responding within 60 seconds with conversational BANT qualification.
+2. **Cold Lead Re-engagement**: Contextual check-ins 7 days post-inquiry.
+3. **Event & Site-Visit Reminders**: 24-hour and 2-hour automated calendar notifications.
+4. **Post-Quote Objection Handling**: Answering pricing and scope questions dynamically via RAG.
+5. **Customer Feedback & NPS Collection**: Structured survey capture synced directly to CRM.`,
   },
 };
 

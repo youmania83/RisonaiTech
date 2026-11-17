@@ -72,6 +72,14 @@ const payload = {
     "https://risonaitech.com/services/ai-consulting",
     "https://risonaitech.com/ranchi",
     "https://risonaitech.com/patna",
+    "https://risonaitech.com/blog/ai-voice-agents-vs-traditional-ivr",
+    "https://risonaitech.com/blog/ai-resume-screening-india",
+    "https://risonaitech.com/blog/multi-agent-systems-in-production-guide",
+    "https://risonaitech.com/blog/schema-markup-for-ai-search-geo",
+    "https://risonaitech.com/blog/whatsapp-ai-lead-nurturing-workflows",
+    "https://risonaitech.com/blog/how-to-check-if-your-website-appears-in-chatgpt",
+    "https://risonaitech.com/blog/free-ai-seo-audit-checklist",
+    "https://risonaitech.com/blog/why-your-website-is-not-showing-in-ai-search",
   ],
 };
 

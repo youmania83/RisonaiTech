@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation for Small Businesses in 2026 (Without a Tech Team) | RisonAI Tech" },
+  title: { absolute: "AI Automation for Small Business: 5 Proven Workflows (2026)" },
   description:
-    "A practical 2026 guide for Indian small businesses to deploy AI automation without a tech team. Workflows, real costs (₹25k–₹80k), and 90-day implementation.",
+    "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses.",
   keywords: [
     "ai automation for small businesses india",
     "ai automation small business 2026",
@@ -27,18 +27,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/ai-automation-for-small-businesses" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Automation for Small Businesses in 2026 (Without a Tech Team)",
+    title: "AI Automation for Small Business: 5 Proven Workflows (2026)",
     description:
-      "A practical 2026 guide for Indian small businesses to deploy AI automation without a tech team. Workflows, real costs (₹25k–₹80k), and 90-day implementation.",
+      "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses.",
     url: "https://risonaitech.com/blog/ai-automation-for-small-businesses",
     type: "article",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation for Small Businesses in 2026 (Without a Tech Team)",
+    title: "AI Automation for Small Business: 5 Proven Workflows (2026)",
     description:
-      "4 automation workflows every small business needs, cost breakdown (₹25,000–₹80,000), and a 90-day implementation roadmap for non-technical owners.",
+      "5 automation workflows every small business needs, cost breakdown (₹25,000–₹80,000), and a 90-day implementation roadmap for non-technical owners.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
 };
@@ -81,12 +81,12 @@ const jsonLd = graph(
     { name: "AI Automation for Small Businesses", url: "/blog/ai-automation-for-small-businesses" },
   ]),
   articleSchema({
-    title: "AI Automation for Small Businesses in 2026 (Without a Tech Team)",
+    title: "AI Automation for Small Business: 5 Proven Workflows (2026)",
     description:
-      "A practical 2026 guide for Indian small businesses to deploy AI automation without a tech team. Workflows, real costs (₹25k–₹80k), and 90-day implementation.",
+      "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses.",
     url: "/blog/ai-automation-for-small-businesses",
     datePublished: "2026-06-10",
-    dateModified: "2026-09-13",
+    dateModified: "2026-11-17",
     wordCount: 1950,
   }),
   faqSchemaFromPairs(faqItems)

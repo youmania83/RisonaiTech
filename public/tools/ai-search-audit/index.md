@@ -2,7 +2,7 @@
 title: "Free AI Search Ranking Audit | Check AI Visibility | RisonAI Tech"
 description: "Free AI search ranking audit by RisonAI Tech. Enter your website URL or business name and instantly see how visible your brand is to ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews."
 url: "https://risonaitech.com/tools/ai-search-audit"
-last_updated: "2026-11-14"
+last_updated: "2026-11-17"
 ---
 
 ## Free AI Search Ranking Audit

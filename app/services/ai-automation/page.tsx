@@ -19,9 +19,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Automation Company India | Agentic AI Agents & Workflows | RisonAI Tech" },
+  title: { absolute: "AI Automation Company India: Enterprise Agents & Workflows" },
   description:
-    "RisonAI Tech is India's AI automation company — building autonomous AI agents, agentic workflows, n8n pipelines, WhatsApp automation & AI consulting for Indian businesses. Fixed price from ₹30,000. Delhi NCR.",
+    "Enterprise AI automation services & autonomous agents in India. Fixed pricing from ₹30,000, 2-week sprint guarantee, and DPDP-compliant architecture.",
   keywords: [
     // Core service terms
     "AI automation company India",
@@ -71,15 +71,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/ai-automation" },
   openGraph: {
-    title: "AI Automation Company India | Agentic AI Systems | RisonAI Tech",
+    title: "AI Automation Company India: Enterprise Agents & Workflows",
     description:
-      "India's AI automation company — autonomous AI agents, multi-agent systems, AI copilots, MCP servers, n8n workflows, WhatsApp pipelines, CRM syncs, voice AI. Fixed price from ₹30,000.",
+      "Enterprise AI automation services & autonomous agents in India. Fixed pricing from ₹30,000, 2-week sprint guarantee, and DPDP-compliant architecture.",
     url: "https://risonaitech.com/services/ai-automation",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Company India | AI Agents, n8n & Voice AI | RisonAI Tech",
+    title: "AI Automation Company India: Enterprise Agents & Workflows",
     description: "Autonomous AI agents, multi-agent systems, MCP servers, n8n workflows, voice AI, WhatsApp automation for Indian businesses. From ₹30,000.",
     images: ["https://risonaitech.com/opengraph-image"],
   },

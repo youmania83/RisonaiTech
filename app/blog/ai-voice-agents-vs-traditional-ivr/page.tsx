@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle2, PhoneCall, Volume2, Clock, Zap, PhoneForwarde
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Voice Agents vs Traditional IVR: The 2026 Migration Guide | RisonAI Tech" },
+  title: { absolute: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide" },
   description:
-    "Compare AI voice agents with legacy IVR phone trees. Learn about telephony latency benchmarks, sub-800ms speech-to-speech architectures, and real deployment costs in India.",
+    "Migrate from legacy DTMF IVRs to sub-800ms conversational Voice AI. Compare PolyAI, Retell, and custom agents with real latency and cost benchmarks.",
   keywords: [
     "ai voice agents vs ivr",
     "conversational ivr replacement",
@@ -22,18 +22,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/ai-voice-agents-vs-traditional-ivr" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Voice Agents vs Traditional IVR: The 2026 Migration Guide",
+    title: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide",
     description:
-      "Why static 'Press 1 for Sales' phone trees destroy customer conversion, and how modern sub-800ms conversational voice AI agents replace legacy IVR systems.",
+      "Migrate from legacy DTMF IVRs to sub-800ms conversational Voice AI. Compare PolyAI, Retell, and custom agents with real latency and cost benchmarks.",
     url: "https://risonaitech.com/blog/ai-voice-agents-vs-traditional-ivr",
     type: "article",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Voice Agents vs Traditional IVR: The 2026 Migration Guide",
+    title: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide",
     description:
-      "A complete comparison of AI conversational voice agents versus legacy DTMF IVRs: latency, architecture, customer satisfaction, and ROI.",
+      "A complete comparison of conversational Voice AI agents vs legacy DTMF IVRs: latency, architecture, customer satisfaction, and ROI.",
     images: ["https://risonaitech.com/opengraph-image"],
   },
 };
@@ -68,12 +68,12 @@ const jsonLd = graph(
     { name: "AI Voice Agents vs Traditional IVR", url: "/blog/ai-voice-agents-vs-traditional-ivr" },
   ]),
   articleSchema({
-    title: "AI Voice Agents vs Traditional IVR: The 2026 Migration Guide",
+    title: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide",
     description:
       "A complete technical and business analysis comparing conversational AI voice agents with legacy DTMF phone trees.",
     url: "/blog/ai-voice-agents-vs-traditional-ivr",
     datePublished: "2026-10-27",
-    dateModified: "2026-10-27",
+    dateModified: "2026-11-17",
     wordCount: 1850,
   }),
   faqSchemaFromPairs(faqItems)
@@ -233,6 +233,14 @@ export default function VoiceAiVsIvrPost() {
             </p>
 
             <div className="my-10 rounded-2xl border border-indigo-500/20 bg-gradient-to-r from-indigo-950/40 to-slate-900/60 p-6 not-prose">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Turnkey Deployments from ₹1,50,000
+                </span>
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                  Sub-800ms Telephony SLA
+                </span>
+              </div>
               <h3 className="font-display text-lg font-bold text-white flex items-center gap-2">
                 <PhoneCall className="text-indigo-400" size={20} />
                 Deploy Production Voice AI For Your Organization
