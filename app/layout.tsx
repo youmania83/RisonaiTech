@@ -5,6 +5,7 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import StickyWhatsApp from "@/components/StickyWhatsApp";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -895,6 +896,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Chatbot />
+        <StickyWhatsApp />
         <AnalyticsTracker />
         <CookieConsent />
       </body>

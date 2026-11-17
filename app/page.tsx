@@ -19,7 +19,6 @@ import RoiCalculator from "@/components/RoiCalculator";
 import Pricing from "@/components/Pricing";
 import AiSearchProof from "@/components/AiSearchProof";
 import HumanVsAi from "@/components/HumanVsAi";
-import StickyWhatsApp from "@/components/StickyWhatsApp";
 import ManagedAiServices from "@/components/ManagedAiServices";
 
 export const metadata: Metadata = {
@@ -449,8 +448,6 @@ export default function HomePage() {
       </section>
 
       <CTA />
-
-      <StickyWhatsApp />
     </>
   );
 }

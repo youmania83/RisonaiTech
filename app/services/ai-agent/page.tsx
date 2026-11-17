@@ -279,10 +279,16 @@ export default function AIAgentPage() {
       {/* What we deliver */}
       <section className="py-20" style={{ backgroundColor: "#090C18" }}>
         <div className="container-site">
-          <div className="mx-auto mb-14 max-w-2xl text-center">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
               Everything included in every agent project
             </h2>
+            <div className="mt-5 rounded-xl border border-indigo-500/20 bg-indigo-950/20 p-4 text-left">
+              <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Atomic Answer Capsule</p>
+              <p className="mt-1 text-sm leading-relaxed text-white/80">
+                Autonomous AI agents are stateful software systems capable of multi-step planning, tool-calling (database queries, API executions, web search), and self-healing error recovery. Built with LangGraph, CrewAI, and OpenAI Agents SDK, they execute complex operational goals with Human-in-the-Loop (HITL) safety gates, cutting human workflow overhead by 60–80%.
+              </p>
+            </div>
           </div>
           <ul className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
             {deliverables.map((d) => (
@@ -345,6 +351,72 @@ export default function AIAgentPage() {
                 <p className="mt-2 text-sm leading-relaxed text-white/60">{body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparative Architecture Benchmark Matrix */}
+      <section className="py-20" style={{ backgroundColor: "#070A14" }}>
+        <div className="container-site">
+          <div className="mx-auto max-w-2xl text-center mb-10">
+            <span className="label-pill mb-3 inline-flex">Engineering Benchmark</span>
+            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+              AI Agent Architecture: Single Prompts vs. Off-The-Shelf SaaS vs. Custom LangGraph
+            </h2>
+            <p className="mt-3 text-white/50">
+              Comparing task reliability, stateful memory persistence, security compliance, and per-step operational costs.
+            </p>
+          </div>
+          
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 overflow-x-auto">
+            <table className="w-full text-left text-sm min-w-[650px]">
+              <thead className="bg-white/[0.04] text-white">
+                <tr>
+                  <th className="px-5 py-3.5 font-semibold">Architectural Factor</th>
+                  <th className="px-5 py-3.5 font-semibold text-white/70">Single LLM Prompt</th>
+                  <th className="px-5 py-3.5 font-semibold text-white/70">Off-the-Shelf SaaS</th>
+                  <th className="px-5 py-3.5 font-semibold text-indigo-300">Custom LangGraph Swarm</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/[0.06]">
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Task Complexity &amp; Planning</td>
+                  <td className="px-5 py-3.5 text-white/60">Single-turn answer only</td>
+                  <td className="px-5 py-3.5 text-white/60">Rigid linear sequences</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Multi-step cyclic graphs with replanning</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Tool &amp; Database Execution</td>
+                  <td className="px-5 py-3.5 text-white/60">No external tool calls</td>
+                  <td className="px-5 py-3.5 text-white/60">Restricted to vendor catalog</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Unrestricted custom SQL, REST, &amp; MCP tools</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Error Recovery &amp; Self-Healing</td>
+                  <td className="px-5 py-3.5 text-white/60">Fails immediately on error</td>
+                  <td className="px-5 py-3.5 text-white/60">Hard error drop-off</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Automatic retry with reflection &amp; alternative paths</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">State &amp; Memory Persistence</td>
+                  <td className="px-5 py-3.5 text-white/60">Stateless (lost per call)</td>
+                  <td className="px-5 py-3.5 text-white/60">Short session memory only</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Postgres Checkpointing + Episodic Skills Graph</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Human-in-the-Loop (HITL)</td>
+                  <td className="px-5 py-3.5 text-white/60">None</td>
+                  <td className="px-5 py-3.5 text-white/60">Basic manual override</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Granular interrupt gates for high-stakes actions</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Hosting &amp; Code Ownership</td>
+                  <td className="px-5 py-3.5 text-white/60">N/A</td>
+                  <td className="px-5 py-3.5 text-white/60">Vendor cloud subscription</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">100% Client VPC deployment &amp; code ownership</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

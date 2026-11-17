@@ -345,6 +345,12 @@ export default function NoidaAIAutomationPage() {
             <p className="mt-4 text-slate-600 text-lg">
               We design and deploy custom AI automation frameworks for the core commercial hubs in Noida.
             </p>
+            <div className="mx-auto mt-6 rounded-xl border border-indigo-100 bg-indigo-50/60 p-5 max-w-3xl text-left">
+              <p className="text-xs font-bold uppercase tracking-wider text-indigo-700">Noida Enterprise AI Blueprint</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                Rison AI Tech deploys enterprise AI systems across Noida and Greater Noida: IT &amp; BPO hubs in Sector 62 and Expressway (L1 helpdesk deflection, automated incident summarization, customer support bots) and supply chain / logistics parks along the Yamuna Expressway (warehouse inventory WhatsApp bots, automated bill-of-lading processing, and dispatch alerts).
+              </p>
+            </div>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {industriesList.map((ind) => {

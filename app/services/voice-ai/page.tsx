@@ -261,6 +261,14 @@ export default function VoiceAIPage() {
         <div className="container-site">
           <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">Voice AI agents we build</h2>
           <p className="mt-3 max-w-2xl text-white/50">From always-on inbound reception to high-speed outbound qualification — deployed on real phone numbers.</p>
+          
+          <div className="mt-5 rounded-xl border border-indigo-500/20 bg-indigo-950/20 p-4 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Atomic Answer Capsule</p>
+            <p className="mt-1 text-sm leading-relaxed text-white/80">
+              Voice AI agents replace rigid DTMF keypad trees with sub-800ms natural conversational speech. Powered by Deepgram ASR, streaming LLM reasoning, and Cartesia/ElevenLabs neural voice synthesis, they converse in English and Hindi, access real-time CRM data, qualify callers, and schedule appointments with 95%+ intent accuracy.
+            </p>
+          </div>
+
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {useCases.map((item) => {
               const Icon = item.icon;
@@ -310,6 +318,69 @@ export default function VoiceAIPage() {
                     <td className="px-5 py-3 text-white/55">{row.use}</td>
                   </tr>
                 ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20" style={{ backgroundColor: "#070A14" }}>
+        <div className="container-site">
+          <span className="label-pill mb-4 inline-flex">Architecture Benchmark</span>
+          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+            Voice AI Comparison: PolyAI vs. Retell AI vs. Rison AI Custom Stack
+          </h2>
+          <p className="mt-3 max-w-2xl text-white/50">
+            Evaluating enterprise conversational telephony across latency, Indian accent fidelity, CRM integration, and total cost of ownership.
+          </p>
+          
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 overflow-x-auto">
+            <table className="w-full text-left text-sm min-w-[650px]">
+              <thead className="bg-white/[0.04] text-white">
+                <tr>
+                  <th className="px-5 py-3.5 font-semibold">Evaluation Criteria</th>
+                  <th className="px-5 py-3.5 font-semibold text-white/70">PolyAI (SaaS)</th>
+                  <th className="px-5 py-3.5 font-semibold text-white/70">Retell AI (API)</th>
+                  <th className="px-5 py-3.5 font-semibold text-indigo-300">Rison AI Custom Stack</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/[0.06]">
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Telephony Latency (Speech-to-Speech)</td>
+                  <td className="px-5 py-3.5 text-white/60">1,200ms – 1,800ms</td>
+                  <td className="px-5 py-3.5 text-white/60">650ms – 950ms</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Sub-800ms (&lt;600ms optimized)</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Indian Accents &amp; Hinglish</td>
+                  <td className="px-5 py-3.5 text-white/60">Moderate (Global generic models)</td>
+                  <td className="px-5 py-3.5 text-white/60">Good (Standard Whisper)</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Native (Deepgram Nova-3 + Sarvam AI)</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Telephony Integration</td>
+                  <td className="px-5 py-3.5 text-white/60">Proprietary SIP trunking</td>
+                  <td className="px-5 py-3.5 text-white/60">Twilio / WebRTC only</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Twilio, Exotel, Airtel &amp; Local PBX SIP</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Data Residency &amp; DPDP 2023</td>
+                  <td className="px-5 py-3.5 text-white/60">US/UK cloud infrastructure</td>
+                  <td className="px-5 py-3.5 text-white/60">US multi-tenant cloud</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Dedicated Indian VPC / Local Gateway</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Pricing Model</td>
+                  <td className="px-5 py-3.5 text-white/60">High annual enterprise contract</td>
+                  <td className="px-5 py-3.5 text-white/60">$0.08–$0.15 / min usage fee</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">Fixed build (₹1.5L) + direct compute (₹2.50/min)</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3.5 font-medium text-white">Code &amp; Workflow Ownership</td>
+                  <td className="px-5 py-3.5 text-white/60">0% (Vendor-locked proprietary SaaS)</td>
+                  <td className="px-5 py-3.5 text-white/60">0% (Platform API locked)</td>
+                  <td className="px-5 py-3.5 text-emerald-400 font-semibold">100% Client code &amp; pipeline ownership</td>
+                </tr>
               </tbody>
             </table>
           </div>

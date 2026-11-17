@@ -353,6 +353,12 @@ export default function ChennaiAIAutomationPage() {
             <p className="mt-4 text-slate-600 text-lg">
               We design and deploy custom AI automation frameworks for the core commercial hubs in Chennai.
             </p>
+            <div className="mx-auto mt-6 rounded-xl border border-indigo-100 bg-indigo-50/60 p-5 max-w-3xl text-left">
+              <p className="text-xs font-bold uppercase tracking-wider text-indigo-700">Chennai Enterprise AI Blueprint</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                Rison AI Tech engineers custom AI automation systems for Chennai&apos;s dual economic engines: SaaS startups along the OMR &amp; Tidel Park corridor (ticket deflection, RAG documentation bots) and automotive/manufacturing enterprises across Guindy, Ambattur, and Sriperumbudur (ERP-to-WhatsApp dealer ordering, shipment alerts, and supply chain triage).
+              </p>
+            </div>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {industriesList.map((ind) => {

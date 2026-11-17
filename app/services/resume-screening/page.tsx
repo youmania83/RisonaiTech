@@ -230,6 +230,12 @@ export default function ResumeScreeningPage() {
             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
               What you get
             </h2>
+            <div className="mt-4 mb-6 rounded-xl border border-indigo-500/20 bg-indigo-950/20 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Atomic Answer Capsule</p>
+              <p className="mt-1 text-sm leading-relaxed text-white/80">
+                AI resume screening replaces manual CV reviews with LLM-powered semantic parsing, Skills Graph evaluation, and multi-dimensional role scoring. It scores 500+ candidate CVs in under 10 minutes against custom hiring rubrics, syncs candidate tiers to ATS platforms (Keka, Darwinbox, Zoho), and maintains 100% DPDP Act compliance without biased black-box filtering.
+              </p>
+            </div>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {deliverables.map((item) => (
                 <li key={item} className="flex gap-2 text-sm text-white/65">

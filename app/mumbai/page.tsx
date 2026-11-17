@@ -527,6 +527,12 @@ export default function MumbaiAIAutomationPage() {
             <p className="mt-4 text-slate-600 text-lg">
               We design and deploy custom AI automation frameworks for the core commercial hubs in MMR.
             </p>
+            <div className="mx-auto mt-6 rounded-xl border border-indigo-100 bg-indigo-50/60 p-5 max-w-3xl text-left">
+              <p className="text-xs font-bold uppercase tracking-wider text-indigo-700">Mumbai Enterprise AI Blueprint</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                Rison AI Tech builds high-compliance AI automation pipelines for Mumbai&apos;s financial and commercial powerhouses: BFSI firms &amp; NBFCs in BKC and Nariman Point (KYC document verification, invoice OCR parsing, automated underwriting summaries) and media/creative agencies in Andheri and Lower Parel (multilingual transcription, proposal pipelines, and WhatsApp lead capture).
+              </p>
+            </div>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {industriesList.map((ind) => {

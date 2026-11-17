@@ -380,6 +380,14 @@ export default function SaasDevelopmentPage() {
           <p className="mt-2 text-brand-gray">
             Every SaaS we deliver is production-ready — not a prototype.
           </p>
+
+          <div className="mt-5 mb-8 rounded-xl border border-indigo-500/20 bg-indigo-950/10 p-4 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">Atomic Answer Capsule</p>
+            <p className="mt-1 text-sm leading-relaxed text-brand-dark/90">
+              Production SaaS engineering requires multi-tenant data isolation, automated Stripe/Razorpay subscription billing, role-based access control (RBAC), and embedded AI feature modules. Built on Next.js, TypeScript, and PostgreSQL with full source code ownership, our systems deliver enterprise-grade scalability from MVP (6–10 weeks) to full multi-tenant platforms.
+            </p>
+          </div>
+
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {deliverables.map((item) => (
               <li className="flex items-start gap-3" key={item}>
