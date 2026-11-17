@@ -59,6 +59,11 @@ const nextConfig: NextConfig = {
       },
       // Malformed or duplicated path redirects (e.g. external scrapers or GSC anomalies)
       {
+        source: "/services/risonaitech.com/services/:path*",
+        destination: "/services/:path*",
+        permanent: true,
+      },
+      {
         source: "/services/risonaitech.com/:path*",
         destination: "/services/:path*",
         permanent: true,
