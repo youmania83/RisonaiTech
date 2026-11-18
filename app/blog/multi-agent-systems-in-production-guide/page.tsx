@@ -4,11 +4,12 @@ import { ArrowRight, CheckCircle2, Cpu, ShieldAlert, Network, Layers, GitBranch,
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026) | RisonAI Tech" },
+  title: { absolute: "Multi-Agent Systems in Production: 2026 Architecture & Costs" },
   description:
-    "A production guide on multi-agent AI systems: LangGraph vs CrewAI orchestration, supervisor patterns, memory state management, and real enterprise costs.",
+    "A production guide to multi-agent AI systems: LangGraph vs CrewAI orchestration, supervisor patterns, memory state management, and real enterprise costs.",
   keywords: [
     "multi agent systems in production",
+    "agency that ships multi-agent systems to production",
     "LangGraph production deployment",
     "hierarchical AI agent architecture",
     "agentic orchestration enterprise",
@@ -22,16 +23,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/multi-agent-systems-in-production-guide" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026)",
+    title: "Multi-Agent Systems in Production: 2026 Architecture & Costs",
     description:
-      "How engineering teams architect, monitor, and deploy multi-agent LLM systems in production without endless loops, state drift, or runaway API costs.",
+      "A production engineering guide on deploying hierarchical multi-agent systems, state management, cyclical graphs, and avoiding common enterprise pitfalls.",
     url: "https://risonaitech.com/blog/multi-agent-systems-in-production-guide",
     type: "article",
     images: [{ url: "https://risonaitech.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026)",
+    title: "Multi-Agent Systems in Production: 2026 Architecture & Costs",
     description:
       "A complete guide on deploying hierarchical multi-agent architectures using LangGraph and stateful memory in production.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -68,12 +69,12 @@ const jsonLd = graph(
     { name: "Multi-Agent Systems in Production", url: "/blog/multi-agent-systems-in-production-guide" },
   ]),
   articleSchema({
-    title: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026)",
+    title: "Multi-Agent Systems in Production: 2026 Architecture & Costs",
     description:
       "A production engineering guide on deploying hierarchical multi-agent systems, state management, cyclical graphs, and avoiding common enterprise pitfalls.",
     url: "/blog/multi-agent-systems-in-production-guide",
     datePublished: "2026-10-27",
-    dateModified: "2026-10-27",
+    dateModified: "2026-11-18",
     wordCount: 1950,
   }),
   faqSchemaFromPairs(faqItems)
@@ -230,18 +231,26 @@ export default function MultiAgentProductionPost() {
             </ul>
 
             <div className="my-10 rounded-2xl border border-indigo-500/20 bg-gradient-to-r from-indigo-950/40 to-slate-900/60 p-6 not-prose">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Fixed Pricing from ₹40,000
+                </span>
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                  LangGraph &amp; CrewAI Production Specialists
+                </span>
+              </div>
               <h3 className="font-display text-lg font-bold text-white flex items-center gap-2">
                 <Network className="text-indigo-400" size={20} />
-                Need Production Multi-Agent Systems For Your Enterprise?
+                Looking for an Agency that Ships Multi-Agent Systems to Production?
               </h3>
               <p className="mt-2 text-sm text-white/70 leading-relaxed">
-                Rison AI Tech architects and deploys custom multi-agent workflows with guaranteed latency bounds, strict state validation, and full source code ownership.
+                Rison AI Tech architects and deploys custom multi-agent workflows with state checkpointing, deterministic failure recovery, human-in-the-loop approvals, and full source code ownership.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Link href="/services/ai-agent" className="btn-primary text-xs py-2 px-4">
-                  Explore AI Agent Development <ArrowRight size={14} />
+                <Link href="/services/ai-agent" className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5">
+                  Explore Multi-Agent Engineering <ArrowRight size={14} />
                 </Link>
-                <Link href="/services/ai-consulting" className="btn-secondary text-xs py-2 px-4">
+                <Link href="/contact" className="btn-secondary text-xs py-2 px-4 inline-flex items-center gap-1.5">
                   Schedule Architecture Consultation
                 </Link>
               </div>

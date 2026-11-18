@@ -353,7 +353,7 @@ export default function AIAutomationPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              Pricing from <PriceTag service="ai-automation" /> · Delivery in 2–8 weeks · Headquartered in Panipat, serving Delhi NCR
+              Pricing from <PriceTag service="ai-automation" /> · Delivery in 2–8 weeks · Full code ownership · Serving India &amp; US (EST/PST timezone overlap)
             </p>
           </div>
         </div>

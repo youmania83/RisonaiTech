@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle2, FileCode2, Search, Database, Sparkles, Shield
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity | RisonAI Tech" },
+  title: { absolute: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)" },
   description:
-    "Master structured data for Generative Engine Optimization (GEO). Learn how to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI Overviews extract for brand citations.",
+    "Master structured data for Generative Engine Optimization (GEO). Learn how to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI cite.",
   keywords: [
     "schema markup for ai search",
     "json ld for perplexity citations",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/schema-markup-for-ai-search-geo" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)",
     description:
       "A developer and technical SEO guide to implementing JSON-LD schema that Large Language Models parse, verify, and cite in AI-generated answers.",
     url: "https://risonaitech.com/blog/schema-markup-for-ai-search-geo",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)",
     description:
       "How to use Schema.org graph structures, entity disambiguation, and verified attributes to win citations in Perplexity, Claude, and Google AI Overviews.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -68,12 +68,12 @@ const jsonLd = graph(
     { name: "Schema Markup for AI Search & GEO", url: "/blog/schema-markup-for-ai-search-geo" },
   ]),
   articleSchema({
-    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)",
     description:
       "A complete guide on configuring Schema.org JSON-LD to optimize brand visibility, entity disambiguation, and citations across Generative AI search engines.",
     url: "/blog/schema-markup-for-ai-search-geo",
     datePublished: "2026-10-27",
-    dateModified: "2026-10-27",
+    dateModified: "2026-11-18",
     wordCount: 1950,
   }),
   faqSchemaFromPairs(faqItems)

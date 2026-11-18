@@ -2,7 +2,7 @@
 title: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)"
 description: "Build automated WhatsApp lead nurturing drip sequences with AI conversation agents, CRM synchronization, Meta template compliance, and 45%+ reply rates."
 url: "https://risonaitech.com/blog/whatsapp-ai-lead-nurturing-workflows"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## WhatsApp AI Lead Nurturing Workflows

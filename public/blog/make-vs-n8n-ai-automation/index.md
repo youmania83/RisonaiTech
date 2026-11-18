@@ -1,8 +1,8 @@
 ---
-title: "Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?"
-description: "A complete comparison of Make.com and n8n for running AI workflow automations."
+title: "Make.com vs n8n: 2026 AI Automation Platform Comparison"
+description: "Make.com vs n8n compared head-to-head on pricing, AI capabilities, self-hosting costs, and Indian data compliance."
 url: "https://risonaitech.com/blog/make-vs-n8n-ai-automation"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Make vs n8n

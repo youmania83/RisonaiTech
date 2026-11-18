@@ -2,7 +2,7 @@
 title: "AI Automation Company India: Enterprise Agents & Workflows"
 description: "Enterprise AI automation services & autonomous agents in India. Fixed pricing from ₹30,000, 2-week sprint guarantee, and DPDP-compliant architecture."
 url: "https://risonaitech.com/services/ai-automation"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## AI Automation Systems

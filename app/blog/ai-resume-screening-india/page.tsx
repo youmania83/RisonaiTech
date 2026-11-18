@@ -5,10 +5,10 @@ import { articleSchema, breadcrumbSchema, faqSchemaFromPairs, graph } from "@/li
 
 export const metadata: Metadata = {
   title: {
-    absolute: "AI Resume Screening for HR Teams in India: Score CVs and Shortlist Candidates 90% Faster | RisonAI Tech",
+    absolute: "AI Resume Screening India: HR Shortlist Workflows (2026)",
   },
   description:
-    "AI-powered HR resume screening helps recruiters parse CVs, score candidate fit, and shortlist top applicants automatically. Save up to 90% of first-pass screening time without manually reviewing every resume.",
+    "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening. Save 90% of first-pass screening time.",
   keywords: [
     "AI resume screening India",
     "HR resume screening powered by AI",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/ai-resume-screening-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "AI Resume Screening for HR Teams in India",
+    title: "AI Resume Screening India: HR Shortlist Workflows (2026)",
     description:
       "No need to manually screen every CV. Use AI to score candidates, shortlist the best fits, and save up to 90% of screening time.",
     url: "https://risonaitech.com/blog/ai-resume-screening-india",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Resume Screening for HR Teams in India",
+    title: "AI Resume Screening India: HR Shortlist Workflows (2026)",
     description:
       "AI scores CVs, shortlists candidates, and saves up to 90% of first-pass recruiter screening time.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -64,12 +64,12 @@ const jsonLd = graph(
     { name: "AI Resume Screening India", url: "/blog/ai-resume-screening-india" },
   ]),
   articleSchema({
-    title: "AI Resume Screening for HR Teams in India: Score CVs and Shortlist Candidates 90% Faster",
+    title: "AI Resume Screening India: HR Shortlist Workflows (2026)",
     description:
-      "How AI-powered HR screening parses CVs, scores candidate fit, and prepares recruiter-ready shortlists automatically.",
+      "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening. Save 90% of first-pass screening time.",
     url: "/blog/ai-resume-screening-india",
     datePublished: "2026-06-09",
-    dateModified: "2026-06-18",
+    dateModified: "2026-11-18",
     wordCount: 1450,
   }),
   faqSchemaFromPairs(faqItems)

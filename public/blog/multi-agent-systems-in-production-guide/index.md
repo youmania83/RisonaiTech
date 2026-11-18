@@ -2,7 +2,7 @@
 title: "Multi-Agent Systems in Production: 2026 Architecture & Costs"
 description: "Production guide on multi-agent AI systems: LangGraph vs CrewAI orchestration, supervisor patterns, memory state management, and real enterprise costs."
 url: "https://risonaitech.com/blog/multi-agent-systems-in-production-guide"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Multi-Agent Systems in Production

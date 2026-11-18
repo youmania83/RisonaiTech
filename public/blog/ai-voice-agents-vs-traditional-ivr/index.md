@@ -2,7 +2,7 @@
 title: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide"
 description: "Migrate from legacy DTMF IVRs to sub-800ms conversational Voice AI. Compare PolyAI, Retell, and custom agents with real latency and cost benchmarks."
 url: "https://risonaitech.com/blog/ai-voice-agents-vs-traditional-ivr"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Voice AI Agents vs Traditional IVR

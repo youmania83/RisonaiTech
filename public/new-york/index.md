@@ -2,7 +2,7 @@
 title: "AI Agent & SaaS Development in New York (NYC) — RisonAI Tech"
 description: "RisonAI Tech serves US startups and agencies in New York with AI agent systems, multi-tenant SaaS engineering, and operational automation."
 url: "https://risonaitech.com/new-york"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## RisonAI Tech — New York Services

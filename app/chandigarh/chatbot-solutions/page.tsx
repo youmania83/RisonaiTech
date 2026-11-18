@@ -431,6 +431,36 @@ export default function ChandigarhChatbotSolutions() {
                 <CheckCircle2 className="text-indigo-400" size={14} /> Starts from <PriceTag service="chatbot" />
               </span>
             </div>
+
+            {/* Quick Action Consultation Card for #1 Search Rank Traffic */}
+            <div className="mt-8 rounded-2xl border border-indigo-500/30 bg-indigo-950/40 p-6 text-left shadow-2xl backdrop-blur-sm max-w-2xl mx-auto">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Tricity Live Scoping</span>
+                  </div>
+                  <h3 className="mt-1 font-display text-lg font-bold text-white">Deploy a Custom Chatbot in 14 Days</h3>
+                  <p className="text-xs text-slate-300 mt-1">Website widgets or official WhatsApp Business API with CRM synchronization.</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+                  <a
+                    href="https://wa.me/919050486448?text=Hi%20RisonAI%20Tech%2C%20I%20am%20looking%20for%20a%20chatbot%20solution%20in%20Chandigarh."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-xs py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold inline-flex items-center justify-center gap-1.5 rounded-lg"
+                  >
+                    WhatsApp Demo <ArrowRight size={13} />
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="btn-secondary text-xs py-2.5 px-4 inline-flex items-center justify-center rounded-lg border border-white/20 text-white hover:bg-white/10"
+                  >
+                    Get Fixed Quote
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

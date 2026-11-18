@@ -2,7 +2,7 @@
 title: "AI Automation for Small Business: 5 Proven Workflows (2026)"
 description: "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses."
 url: "https://risonaitech.com/blog/ai-automation-for-small-businesses"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## AI Automation for Small Business

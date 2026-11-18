@@ -308,7 +308,7 @@ export default function SaasDevelopmentPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-brand-gray">
-              MVP from <PriceTag service="saas" /> · Full SaaS from <PriceTag service="saas" variant="range" /> · Headquartered in Panipat, Delhi NCR
+              MVP from <PriceTag service="saas" /> · Full code ownership · Serving India &amp; US startups (EST/PST timezone overlap)
             </p>
           </div>
         </div>

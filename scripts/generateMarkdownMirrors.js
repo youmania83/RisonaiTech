@@ -886,8 +886,8 @@ Indian property teams manage high volumes of portal leads (MagicBricks, 99acres)
   },
 
   "/blog/make-vs-n8n-ai-automation": {
-    title: "Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?",
-    description: "A complete comparison of Make.com and n8n for running AI workflow automations.",
+    title: "Make.com vs n8n: 2026 AI Automation Platform Comparison",
+    description: "Make.com vs n8n compared head-to-head on pricing, AI capabilities, self-hosting costs, and Indian data compliance.",
     body: `## Make vs n8n
 
 Choosing the right automation orchestrator impacts hosting costs, data privacy, and AI integration capabilities.
@@ -1040,7 +1040,7 @@ Static "Press 1 for Sales" phone trees create friction and lead leakage. Modern 
   },
 
   "/blog/ai-resume-screening-india": {
-    title: "AI Resume Screening India: HR Shortlisting & Scoring Workflows",
+    title: "AI Resume Screening India: HR Shortlist Workflows (2026)",
     description: "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening.",
     body: `## AI Resume Screening for Indian HR
 
@@ -1066,7 +1066,7 @@ Moving beyond single prompt-completion chains to multi-agent architectures where
   },
 
   "/blog/schema-markup-for-ai-search-geo": {
-    title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity",
+    title: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)",
     description: "Master structured data for Generative Engine Optimization (GEO). How to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI extract for brand citations.",
     body: `## Schema Markup for Generative Engine Optimization (GEO)
 

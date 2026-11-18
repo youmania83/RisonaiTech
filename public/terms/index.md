@@ -2,7 +2,7 @@
 title: "Terms of Service | RisonAI Tech"
 description: "Terms of service for RisonAI Tech. Read our conditions governing our enterprise AI solutions, automation services, consulting engagements, and website usage."
 url: "https://risonaitech.com/terms"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Rison AI Tech Terms of Service

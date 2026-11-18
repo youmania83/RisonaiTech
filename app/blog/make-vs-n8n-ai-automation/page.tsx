@@ -4,12 +4,13 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Make.com vs n8n for AI Automation: Which to Use in 2026? | RisonAI Tech" },
+  title: { absolute: "Make.com vs n8n: 2026 AI Automation Platform Comparison" },
   description:
-    "Make.com vs n8n compared head-to-head: pricing, AI capabilities, self-hosting, India support, and which platform suits your business in 2026.",
+    "Make.com vs n8n compared head-to-head on pricing, AI capabilities, self-hosting costs, and Indian data compliance. Find the right automation stack in 2026.",
   keywords: [
     "make vs n8n",
     "make.com vs n8n ai automation",
+    "layer3labs alternatives",
     "n8n vs make comparison",
     "n8n self hosted",
     "make.com ai workflows",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/make-vs-n8n-ai-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "Make.com vs n8n for AI Automation: Which Should You Use in 2026?",
+    title: "Make.com vs n8n: 2026 AI Automation Platform Comparison",
     description:
       "Make.com vs n8n compared on pricing, AI capabilities, self-hosting, and India support. Know exactly which platform to choose before you build.",
     url: "https://risonaitech.com/blog/make-vs-n8n-ai-automation",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Make.com vs n8n for AI Automation: Which Should You Use in 2026?",
+    title: "Make.com vs n8n: 2026 AI Automation Platform Comparison",
     description:
       "Head-to-head comparison of Make.com and n8n for AI automation — pricing, self-hosting, India support, and recommendation matrix.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -78,12 +79,12 @@ const jsonLd = graph(
     { name: "Make.com vs n8n", url: "/blog/make-vs-n8n-ai-automation" },
   ]),
   articleSchema({
-    title: "Make.com vs n8n for AI Automation: Which Should You Use in 2026?",
+    title: "Make.com vs n8n: 2026 AI Automation Platform Comparison",
     description:
       "Make.com vs n8n compared head-to-head on pricing, AI capabilities, self-hosting, India support, and recommendation matrix.",
     url: "/blog/make-vs-n8n-ai-automation",
     datePublished: "2026-06-07",
-    dateModified: "2026-06-07",
+    dateModified: "2026-11-18",
     wordCount: 1900,
   }),
   faqSchemaFromPairs(faqItems)

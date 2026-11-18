@@ -1,8 +1,8 @@
 ---
-title: "AI Resume Screening India: HR Shortlisting & Scoring Workflows"
+title: "AI Resume Screening India: HR Shortlist Workflows (2026)"
 description: "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening."
 url: "https://risonaitech.com/blog/ai-resume-screening-india"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## AI Resume Screening for Indian HR

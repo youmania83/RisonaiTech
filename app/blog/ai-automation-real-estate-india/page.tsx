@@ -255,27 +255,31 @@ export default function AiAutomationRealEstate() {
             </div>
 
             <div
-              className="mt-12 rounded-2xl p-7 not-prose"
-              style={{ background: "rgba(99,91,255,0.07)", border: "1px solid rgba(99,91,255,0.18)" }}
+              className="mt-12 rounded-2xl p-7 not-prose border border-indigo-500/20 bg-gradient-to-r from-indigo-950/40 to-slate-900/60"
             >
-              <p className="font-semibold text-white">
-                Ready to automate your real estate agency?
-              </p>
-              <p className="mt-2 text-sm text-white/55">
-                We build end-to-end AI automation systems for Indian real estate agencies — WhatsApp lead qualification, CRM automation, and follow-up sequences. Fixed price, 4–6 week delivery.
+              <div className="flex items-center gap-2 mb-3">
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  PropTech Engineering
+                </span>
+                <span className="rounded-full px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                  Powered by Expreality Architecture
+                </span>
+              </div>
+              <h3 className="font-display text-xl font-bold text-white">
+                Ready to Automate Your Real Estate Lead Triage &amp; Site Visits?
+              </h3>
+              <p className="mt-2 text-sm text-white/70 leading-relaxed">
+                Rison AI Tech deploys end-to-end PropTech automation for Indian developers and brokerages — sub-60s WhatsApp qualification, automated calendar bookings, and CRM synchronization with Zoho or Salesforce.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/services/ai-automation" className="inline-flex items-center gap-2 btn-primary">
-                  AI Automation services <ArrowRight size={15} />
+                <Link href="/contact" className="inline-flex items-center gap-2 btn-primary text-xs py-2.5 px-4">
+                  Book Real Estate AI Scoping Call <ArrowRight size={14} />
                 </Link>
-                <Link href="/services/voice-ai" className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link href="/services/voice-ai" className="inline-flex items-center gap-2 text-xs py-2.5 px-4 btn-secondary">
                   Explore Voice AI Calling <ArrowRight size={13} />
                 </Link>
-                <Link href="/gurgaon" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
-                  Gurgaon Real Estate AI <ArrowRight size={13} />
-                </Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
-                  Book a free scoping call <ArrowRight size={13} />
+                <Link href="/services/ai-automation" className="inline-flex items-center gap-2 text-xs text-white/70 hover:text-white transition-colors py-2 px-3">
+                  AI Automation Services <ArrowRight size={13} />
                 </Link>
               </div>
             </div>

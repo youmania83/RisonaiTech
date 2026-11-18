@@ -185,6 +185,7 @@ export function articleSchema(args: {
   authorName?: string;
   imageUrl?: string;
   wordCount?: number;
+  speakableSelectors?: string[];
 }) {
   const fullUrl = args.url.startsWith("http") ? args.url : `${BASE_URL}${args.url}`;
   return {
@@ -213,6 +214,14 @@ export function articleSchema(args: {
     mainEntityOfPage: { "@type": "WebPage", "@id": fullUrl },
     ...(args.imageUrl ? { image: { "@type": "ImageObject", url: args.imageUrl } } : {}),
     ...(args.wordCount ? { wordCount: args.wordCount } : {}),
+    ...(args.speakableSelectors && args.speakableSelectors.length > 0
+      ? {
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: args.speakableSelectors,
+          },
+        }
+      : {}),
     inLanguage: "en-IN",
     isPartOf: { "@id": `${BASE_URL}/#website` },
   };

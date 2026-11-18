@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle2, MessageSquare, Zap, Send, ShieldCheck, Refres
 import { graph, breadcrumbSchema, articleSchema, faqSchemaFromPairs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "WhatsApp AI Lead Nurturing: 5 Drip Workflows That Close Deals (2026) | RisonAI Tech" },
+  title: { absolute: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)" },
   description:
-    "Learn how to build automated WhatsApp lead nurturing drip sequences with AI conversation agents, CRM synchronization, Meta template compliance, and 45%+ reply rates.",
+    "Build automated WhatsApp lead nurturing drip sequences with AI conversation agents, CRM sync, Meta template compliance, and 45%+ reply rates in India.",
   keywords: [
     "whatsapp ai lead nurturing",
     "automated whatsapp follow up sequence",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/whatsapp-ai-lead-nurturing-workflows" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
-    title: "WhatsApp AI Lead Nurturing: 5 Drip Workflows That Close Deals (2026)",
+    title: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)",
     description:
       "Stop losing inbound leads to slow email follow-ups. Build high-converting WhatsApp AI drip workflows that maintain 98% open rates and 45%+ response rates.",
     url: "https://risonaitech.com/blog/whatsapp-ai-lead-nurturing-workflows",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp AI Lead Nurturing: 5 Drip Workflows That Close Deals (2026)",
+    title: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)",
     description:
       "A complete guide to multi-day WhatsApp AI follow-up workflows: Meta-approved templates, CRM integration, and intelligent conversation handoffs.",
     images: ["https://risonaitech.com/opengraph-image"],
@@ -68,12 +68,12 @@ const jsonLd = graph(
     { name: "WhatsApp AI Lead Nurturing Workflows", url: "/blog/whatsapp-ai-lead-nurturing-workflows" },
   ]),
   articleSchema({
-    title: "WhatsApp AI Lead Nurturing: 5 Drip Workflows That Close Deals (2026)",
+    title: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)",
     description:
       "A step-by-step blueprint for building high-converting WhatsApp AI lead nurturing drip sequences with Meta compliance and automated CRM sync.",
     url: "/blog/whatsapp-ai-lead-nurturing-workflows",
     datePublished: "2026-10-27",
-    dateModified: "2026-10-27",
+    dateModified: "2026-11-18",
     wordCount: 1900,
   }),
   faqSchemaFromPairs(faqItems)

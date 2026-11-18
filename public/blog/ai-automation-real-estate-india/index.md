@@ -2,7 +2,7 @@
 title: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)"
 description: "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers."
 url: "https://risonaitech.com/blog/ai-automation-real-estate-india"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Real Estate Automation Playbook

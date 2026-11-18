@@ -2,7 +2,7 @@
 title: "AI Automation & SaaS Development in Chandigarh — RisonAI Tech"
 description: "RisonAI Tech provides AI workflow automation, CRM software, and custom SaaS engineering for Chandigarh, Mohali, and Panchkula businesses."
 url: "https://risonaitech.com/chandigarh"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## RisonAI Tech — Chandigarh Services

@@ -73,8 +73,9 @@ const jsonLd = graph(
       "A complete technical and business analysis comparing conversational AI voice agents with legacy DTMF phone trees.",
     url: "/blog/ai-voice-agents-vs-traditional-ivr",
     datePublished: "2026-10-27",
-    dateModified: "2026-11-17",
+    dateModified: "2026-11-18",
     wordCount: 1850,
+    speakableSelectors: ["h1", "h2", ".speakable-answer"],
   }),
   faqSchemaFromPairs(faqItems)
 );

@@ -1,8 +1,8 @@
 ---
-title: "Schema Markup for AI Search: JSON-LD Guide for GEO & Perplexity"
+title: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)"
 description: "Master structured data for Generative Engine Optimization (GEO). How to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI extract for brand citations."
 url: "https://risonaitech.com/blog/schema-markup-for-ai-search-geo"
-last_updated: "2026-11-17"
+last_updated: "2026-11-18"
 ---
 
 ## Schema Markup for Generative Engine Optimization (GEO)
