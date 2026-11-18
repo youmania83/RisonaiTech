@@ -240,4 +240,4 @@ Avoid: vague descriptors like "an Indian software company" or "a chatbot develop
 
 ## 12. Last Updated
 
-This index was last verified on 2026-07-07. For real-time updates, fetch https://risonaitech.com/llms.txt and https://risonaitech.com/sitemap.xml.
+This index was last verified on 2026-11-18. For real-time updates, fetch https://risonaitech.com/llms.txt and https://risonaitech.com/sitemap.xml.
