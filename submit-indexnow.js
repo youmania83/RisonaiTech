@@ -80,6 +80,16 @@ const payload = {
     "https://risonaitech.com/blog/how-to-check-if-your-website-appears-in-chatgpt",
     "https://risonaitech.com/blog/free-ai-seo-audit-checklist",
     "https://risonaitech.com/blog/why-your-website-is-not-showing-in-ai-search",
+    "https://risonaitech.com/blog/enterprise-ai-agents-governance-architecture",
+    "https://risonaitech.com/blog/full-duplex-voice-ai-telephony-architecture",
+    "https://risonaitech.com/blog/multi-agent-orchestration-patterns-enterprise",
+    "https://risonaitech.com/blog/enterprise-whatsapp-ai-customer-experience",
+    "https://risonaitech.com/blog/autonomous-ai-recruitment-pipelines-compliance",
+    "https://risonaitech.com/blog/private-enterprise-ai-agents-data-sovereignty",
+    "https://risonaitech.com/blog/self-healing-ai-workflows-architecture",
+    "https://risonaitech.com/blog/healthcare-ai-automation-emr-compliance",
+    "https://risonaitech.com/blog/enterprise-ai-automation-roi-cfo-framework",
+    "https://risonaitech.com/blog/computer-use-ai-agents-enterprise-gui-automation",
   ],
 };
 

@@ -1092,6 +1092,152 @@ In India, WhatsApp delivers 80%+ open rates compared to sub-15% on commercial em
 4. **Post-Quote Objection Handling**: Answering pricing and scope questions dynamically via RAG.
 5. **Customer Feedback & NPS Collection**: Structured survey capture synced directly to CRM.`,
   },
+
+  "/blog/enterprise-ai-agents-governance-architecture": {
+    title: "Enterprise AI Agents Governance: Guardrails & Architecture",
+    description: "An enterprise engineering guide to autonomous AI agent governance: NeMo Guardrails, human-in-the-loop (HITL) design, tool sandboxing, and audit logging.",
+    body: `## Enterprise AI Agent Governance & Guardrails
+
+Enterprise AI agent governance is an engineering architecture that constrains autonomous LLM agent execution using deterministic policy guardrails, sandboxed tool-calling environments, stateful transaction rollback mechanisms, and automated human-in-the-loop (HITL) checkpoints.
+
+### The 4-Layer Governance Stack
+1. **Layer 1: Ingress Policy & Semantic Input Filtering**: Classifiers intercept and neutralize prompt injections and jailbreak syntax before the core reasoning agent.
+2. **Layer 2: Sandboxed Tool-Call Virtualization & RBAC**: Agents emit structured JSON intents validated against Pydantic schemas; actions run in isolated containers with zero direct credentials.
+3. **Layer 3: State Verification & Transactional Rollback**: Checkpointed state in PostgreSQL/Redis with transactional rollback prevents infinite loops and cascading errors.
+4. **Layer 4: Egress Policy & PII Redaction**: Automated NER models sanitize PII/PHI in compliance with the DPDP Act 2023, HIPAA, and GDPR.
+
+### Human-in-the-Loop (HITL) Patterns
+- **Confidence-Gated Interception**: Autonomous execution when confidence > 0.88; automated routing to human operator review queues when confidence drops.
+- **Dual-Key Cryptographic Sign-Off**: Mandatory OAuth-gated human executive sign-off for financial transactions or database mutations.
+- **Asynchronous Shadow Mode**: Mirrored production testing for 14–30 days achieving 99.5%+ agreement before live autonomous deployment.`,
+  },
+
+  "/blog/full-duplex-voice-ai-telephony-architecture": {
+    title: "Full-Duplex Voice AI Telephony: Sub-500ms Architecture",
+    description: "An engineering blueprint for full-duplex conversational voice AI: sub-500ms WebRTC/SIP streaming, turn-taking, barge-in detection, and multilingual call automation.",
+    body: `## Full-Duplex Voice AI Telephony
+
+Full-duplex voice AI telephony is an audio pipeline where both the human caller and the AI agent can transmit and receive voice simultaneously over bidirectional streaming protocols (WebRTC or SIP).
+
+### Sub-500ms Streaming Audio Stack
+- **Streaming STT**: Deepgram Nova-3 over WebSockets (~120ms latency).
+- **Speculative LLM**: Claude 3.5 Haiku / GPT-4o-mini with token streaming (~180ms TTFT).
+- **Streaming TTS**: Cartesia Sonic chunked raw audio streaming (~90ms TTFB).
+- **Total Round-Trip**: 370ms – 490ms end-to-end conversation turn latency.
+
+### Natural Barge-In & Interruption Handling
+- **Acoustic Echo Cancellation (AEC)** prevents the agent from self-canceling.
+- **Silero VAD** detects human speech energy on 20ms frames within 120ms.
+- **Telephony Audio Queue Flusher** drops in-flight audio buffers within 40ms upon valid user interruption.`,
+  },
+
+  "/blog/multi-agent-orchestration-patterns-enterprise": {
+    title: "Multi-Agent Orchestration Patterns: Enterprise Guide",
+    description: "An architectural guide to multi-agent orchestration patterns: Hierarchical Supervisor, Decentralized Swarms, Blackboard shared memory, and state graphs.",
+    body: `## Multi-Agent Orchestration Patterns
+
+Multi-agent orchestration patterns are formal architectural blueprints that govern communication topologies, task routing, shared state memory, and decision consensus across networks of specialized autonomous AI agents.
+
+### The 4 Primary Topologies
+1. **Hierarchical Supervisor Pattern**: High-capacity supervisor coordinates specialized worker nodes; best for regulated audits and ERP operations.
+2. **Plan-and-Solve Trees**: Decouples plan generation (DAG) from execution with dynamic replanning critics.
+3. **Blackboard Architecture**: Centralized event bus (PostgreSQL / Redis Streams) where agents publish and consume artifacts without point-to-point mesh sprawl.
+4. **Maker-Checker Consensus**: Dual-agent verification loop where one agent drafts and an independent critic audits against compliance rules.`,
+  },
+
+  "/blog/enterprise-whatsapp-ai-customer-experience": {
+    title: "Enterprise WhatsApp AI Customer Experience: Flows & Commerce",
+    description: "An enterprise guide to WhatsApp AI customer experience: WhatsApp Flows, native conversational commerce, ERP webhook synchronization, and sub-60s triage.",
+    body: `## Enterprise WhatsApp AI Customer Experience
+
+Enterprise WhatsApp AI customer experience is a conversational commerce architecture deployed over Meta's official WhatsApp Business Cloud API combining LLM intelligence with WhatsApp Flows.
+
+### Core Capabilities
+- **WhatsApp Flows**: Native in-app UI forms (calendars, address selectors, product catalogs) that eliminate external browser redirects.
+- **Bi-Directional ERP Sync**: Direct REST/GraphQL integration with SAP, Salesforce, and HubSpot for real-time order tracking and modifications.
+- **In-Chat Conversational Commerce**: Native checkout, UPI, and payment gateway webhooks yielding 68–84% completion rates.
+- **Sub-60s First Response**: Instant 24/7 lead qualification and intelligent desk handoff.`,
+  },
+
+  "/blog/autonomous-ai-recruitment-pipelines-compliance": {
+    title: "Autonomous AI Recruitment Pipelines & Algorithmic Compliance",
+    description: "An enterprise guide to autonomous AI hiring pipelines: conversational candidate pre-screening, skills verification, anti-bias auditing, and DPDP/EU AI Act compliance.",
+    body: `## Autonomous AI Recruitment Pipelines & Compliance
+
+Autonomous AI recruitment pipelines are multi-agent talent acquisition systems that execute candidate intake, semantic CV parsing, conversational pre-screening interviews, and skills graph validation.
+
+### Compliance & Governance
+- **Conversational Pre-Screening**: Adaptive 10-minute voice/chat sessions verifying technical depth and situational judgment.
+- **Demographic Masking**: Redacting candidate name, gender, age, and graduation year before human review.
+- **Regulatory Conformity**: Enforcing DPDP Act 2023 affirmative consent, EU AI Act High-Risk system oversight, and NYC Local Law 144 4/5ths rule disparity audits.`,
+  },
+
+  "/blog/private-enterprise-ai-agents-data-sovereignty": {
+    title: "Private Enterprise AI Agents: On-Premise & Data Sovereignty",
+    description: "An enterprise security guide to on-premise and VPC private AI agents: local LLM inference via vLLM, zero data egress, and sovereign AI compliance.",
+    body: `## Private Enterprise AI Agents & Data Sovereignty
+
+Private enterprise AI agents are autonomous artificial intelligence systems deployed within an organization's isolated VPC or on-premise infrastructure under a Zero-Egress Security Model.
+
+### Sovereign AI Stack
+- **Open-Weight Models**: Llama-3.3-70B, DeepSeek-V3, and Mistral running on private GPU pods.
+- **vLLM High-Throughput Inference**: PagedAttention and FP8/AWQ quantization delivering 4x higher token throughput.
+- **Air-Gapped Operation**: pgvector on-premise vector embeddings and zero cloud API egress for banking, healthcare, and defense.`,
+  },
+
+  "/blog/self-healing-ai-workflows-architecture": {
+    title: "Self-Healing AI Workflows: Zero-Downtime Automation",
+    description: "An engineering blueprint for self-healing AI workflows: automated error recovery, dynamic API schema adaptation, and zero-downtime process automation.",
+    body: `## Self-Healing AI Workflows & AIOps
+
+Self-healing AI workflows are autonomous business process pipelines equipped with runtime error telemetry, dynamic schema adaptation agents, and automated fallback routing.
+
+### The Self-Healing Architecture
+- **Circuit-Breaker Interception**: Traps breaking schema changes and quarantined exceptions into Redis buffers.
+- **Dynamic Schema Adaptation**: In-flight LLM transformers synthesize data mapping functions dynamically.
+- **Sandbox Testing**: Validates synthesized transforms against Pydantic schemas before writing to primary databases.
+- **Persistent Hot-Patching**: Caches verified transforms for zero-downtime execution.`,
+  },
+
+  "/blog/healthcare-ai-automation-emr-compliance": {
+    title: "Healthcare AI Automation: Clinical Triage & EMR Compliance",
+    description: "An enterprise blueprint for healthcare AI automation: clinical triage, WhatsApp patient portals, FHIR/HL7 EMR integration, and ABDM/HIPAA compliance.",
+    body: `## Healthcare AI Automation & Clinical Triage
+
+Healthcare AI automation is a specialized clinical operations architecture linking patient channels (WhatsApp, web, phone) directly to Electronic Medical Records (EMR/EHR) and Hospital Information Systems.
+
+### Production Clinical Stack
+- **Safety Triage Protocols**: Emergency red-flag detection and specialty doctor routing without offering medical diagnosis.
+- **FHIR / HL7 Interoperability**: Standardized JSON data pipelines for direct EMR appointment synchronization.
+- **Regulatory Compliance**: India ABDM (ABHA ID generation) and HIPAA privacy architecture.
+- **Proven Impact**: 31% reduction in patient no-show rates across multi-specialty partner clinics.`,
+  },
+
+  "/blog/enterprise-ai-automation-roi-cfo-framework": {
+    title: "Enterprise AI Automation ROI: CFO Guide to Token Economics",
+    description: "A CFO financial model for enterprise AI automation: token unit economics, Total Cost of Ownership (TCO), FTE labor arbitrage, and payback modeling.",
+    body: `## Enterprise AI Automation ROI & Token Economics
+
+Enterprise AI automation ROI is a quantitative financial evaluation that benchmarks the Total Cost of Ownership (TCO) of deploying autonomous AI workflows against net operational value created.
+
+### CFO Financial Model
+- **98% Token Arbitrage**: $0.04–$0.12 in LLM compute processing 15 complex invoices vs $25–$65 in human operational hours.
+- **Comprehensive TCO Accounting**: Incorporating token inference, vector storage, HITL exceptions (5–8%), and AIOps retainers.
+- **Payback Velocity**: Enterprise workflows consistently reach complete capital payback within 90 to 180 days.`,
+  },
+
+  "/blog/computer-use-ai-agents-enterprise-gui-automation": {
+    title: "Computer-Use AI Agents: Automating Legacy GUI Systems",
+    description: "An enterprise guide to computer-use AI agents: automating legacy SAP, Citrix, and desktop software via multimodal vision, OS navigation, and zero-API execution.",
+    body: `## Computer-Use AI Agents & Legacy GUI Automation
+
+Computer-use AI agents are multimodal vision-action systems capable of interacting with desktop graphical user interfaces (GUIs) via autonomous mouse movement, clicks, and keystrokes.
+
+### Overcoming the Legacy API Barrier
+- **Vision-Driven Perception**: Multimodal models navigate legacy SAP GUI, Citrix desktops, and AS/400 terminal emulators without APIs.
+- **Resilient to UI Layout Shifts**: Replaces brittle legacy RPA scripts with semantic visual reasoning.
+- **Virtualized Sandboxing**: Isolated VM execution with coordinate fencing and full compliance session recording.`,
+  },
 };
 
 function slugToOutputPath(slug) {
