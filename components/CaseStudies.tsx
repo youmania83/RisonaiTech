@@ -42,7 +42,7 @@ export default function CaseStudies() {
                       {cs.metrics[0]}
                     </span>
                     <span className="text-[9px] text-emerald-600 font-bold uppercase tracking-wider bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/50">
-                      Verified
+                      Outcome
                     </span>
                   </div>
 

@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Los Angeles | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Los Angeles. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Los Angeles",
-    "AI Chatbot Development Los Angeles",
-    "Chatbot Solutions Los Angeles",
-    "Voice AI Los Angeles",
-    "Business Automation Los Angeles",
-    "AI Calling Agent Los Angeles",
-    "Workflow Automation Los Angeles",
-    "Customer Support Automation Los Angeles",
-    "WhatsApp Chatbot Los Angeles",
-    "AI Solutions Los Angeles",
-    "Conversational AI Los Angeles",
-  ],
   alternates: { canonical: "/los-angeles" },
   openGraph: {
     title: "AI Automation Company in Los Angeles | RisonAI Tech",

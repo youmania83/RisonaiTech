@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Automation Company in Panipat | AI Agents for Businesses" },
   description:
     "Headquartered in Panipat, Haryana. RisonAI Tech delivers practical AI automation, WhatsApp workflows, and CRM systems for Panipat SMEs and manufacturers.",
-  keywords: [
-    "AI automation Panipat",
-    "AI company Panipat Haryana",
-    "Panipat SME automation",
-    "WhatsApp automation Panipat",
-    "CRM Panipat",
-    "Panipat software company",
-    "Haryana AI development",
-  ],
   alternates: { canonical: "/panipat" },
   openGraph: {
     title: "AI Automation Company in Panipat | RisonAI Tech",

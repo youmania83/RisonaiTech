@@ -224,6 +224,10 @@ Generated Timestamp: ${result.generatedAt}
         Powered by DeepSeek via Anthropic-compatible SDK · Free · No signup
       </p>
 
+      <p className="mt-3 text-[11px] leading-relaxed text-slate-500">
+        Rison AI Tech&apos;s AI Readiness Assessment evaluates website and digital presence across multiple technical and content-quality dimensions, including structured data and schema implementation, brand entity clarity, content discoverability, topical authority, crawlability, indexing accessibility, and mobile performance. The assessment provides actionable recommendations to improve visibility, understanding, and citation potential across traditional search engines and AI-powered discovery platforms. Assessment scores are diagnostic indicators and do not guarantee rankings, AI recommendations, or citations.
+      </p>
+
       {/* ─── Example Report (Shown before submit to reduce uncertainty) ─── */}
       {!result && !loading && !error && (
         <div 

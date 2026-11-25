@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Enterprise AI Agents Governance: Guardrails & Architecture" },
   description:
     "An enterprise engineering guide to autonomous AI agent governance: NeMo Guardrails, human-in-the-loop (HITL) design, tool sandboxing, and audit logging.",
-  keywords: [
-    "enterprise ai agents governance",
-    "autonomous agent guardrails",
-    "human in the loop ai architecture",
-    "enterprise ai agent reliability",
-    "nemo guardrails enterprise",
-    "ai agent audit logging",
-    "preventing hallucination loops in enterprise ai agents",
-    "tool call sandboxing enterprise",
-    "enterprise ai agent compliance",
-    "autonomous workflow safety",
-  ],
   alternates: { canonical: "/blog/enterprise-ai-agents-governance-architecture" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

@@ -14,7 +14,7 @@ const founderSchema = {
   name: "Yogesh Kumar Wadhwa",
   givenName: "Yogesh",
   familyName: "Wadhwa",
-  jobTitle: "Founder & Lead Product Engineer",
+  jobTitle: "Founder & CEO",
   disambiguatingDescription:
     "Yogesh Kumar Wadhwa is an Indian software engineer, self-taught programmer, and founder of RisonAI Tech and DocBooking, based in Delhi NCR / Panipat (Haryana), India.",
   identifier: "https://github.com/youmania83",
@@ -61,15 +61,6 @@ export const metadata: Metadata = {
   title: { absolute: "About Yogesh Wadhwa & RisonAI Tech — 40+ Products Shipped" },
   description:
     "Yogesh Kumar Wadhwa is a self-taught programmer who founded RisonAI Tech. He built DocBooking (live clinic SaaS), Chazo Tea brand, and 40+ AI automation products. 100% client retention.",
-  keywords: [
-    "about RisonAI Tech",
-    "Yogesh Kumar Wadhwa founder",
-    "product engineering company India",
-    "AI development team India",
-    "DocBooking founder",
-    "software agency Delhi NCR",
-    "operator-led AI agency India",
-  ],
   authors: [{ name: "Yogesh Kumar Wadhwa", url: `${BASE_URL}/about` }],
   alternates: {
     canonical: "/about",
@@ -173,13 +164,13 @@ export default function AboutPage() {
                   </p>
                   <p>
                     RisonAI Tech has since shipped 40+ production systems across healthcare,
-                    real estate, e-commerce, and SaaS — with a 100% client retention rate.
+                    real estate, e-commerce, and SaaS — with milestone-based sprint delivery and referenceable clients.
                   </p>
                 </div>
                 <div className="space-y-3">
                   <div className="rounded-xl border border-slate-200 p-5 bg-slate-50/50">
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-gray mb-3">
-                      Verified profiles
+                      Official profiles
                     </p>
                     {[
                       { label: "LinkedIn Profile", href: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/" },
@@ -330,7 +321,7 @@ export default function AboutPage() {
                 Our clients are healthcare founders, real estate operators, and
                 growth-stage startups who need a technical partner — not a
                 vendor. We&apos;ve shipped DocBooking, Expreality, and 40+ other
-                production systems. Every client has stayed.
+                production systems. All clients are referenceable on request.
               </p>
             </div>
           </Reveal>

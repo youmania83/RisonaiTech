@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Hyderabad | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Hyderabad. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Hyderabad",
-    "AI Chatbot Development Hyderabad",
-    "Chatbot Solutions Hyderabad",
-    "Voice AI Hyderabad",
-    "Business Automation Hyderabad",
-    "AI Calling Agent Hyderabad",
-    "Workflow Automation Hyderabad",
-    "Customer Support Automation Hyderabad",
-    "WhatsApp Chatbot Hyderabad",
-    "AI Solutions Hyderabad",
-    "Conversational AI Hyderabad",
-  ],
   alternates: { canonical: "/hyderabad" },
   openGraph: {
     title: "AI Automation Company in Hyderabad | RisonAI Tech",

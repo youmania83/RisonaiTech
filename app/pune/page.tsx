@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Pune | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Pune. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Pune",
-    "AI Chatbot Development Pune",
-    "Chatbot Solutions Pune",
-    "Voice AI Pune",
-    "Business Automation Pune",
-    "AI Calling Agent Pune",
-    "Workflow Automation Pune",
-    "Customer Support Automation Pune",
-    "WhatsApp Chatbot Pune",
-    "AI Solutions Pune",
-    "Conversational AI Pune",
-  ],
   alternates: { canonical: "/pune" },
   openGraph: {
     title: "AI Automation Company in Pune | RisonAI Tech",

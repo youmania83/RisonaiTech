@@ -17,16 +17,16 @@ import type { LucideIcon } from "lucide-react";
 
 // ─── Site Config ────────────────────────────────────────────────────────────
 export const siteConfig = {
-  name: "Risonai Tech",
+  name: "Rison AI Tech",
   domain: "risonaitech.com",
   url: "https://risonaitech.com",
   description:
-    "Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.",
+    "Rison AI Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.",
   address: "196, Ground Floor, New RK Puram, Panipat 132103, India",
   email: "hello@risonaitech.com",
   phone: "+919050486448",
   whatsappUrl:
-    "https://wa.me/919050486448?text=Hi%20Risonai%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
+    "https://wa.me/919050486448?text=Hi%20Rison%20AI%20Tech%2C%20I%20want%20to%20discuss%20a%20project.",
   socials: {
     linkedin: "https://www.linkedin.com/company/risonaitech",
     founderLinkedin: "https://www.linkedin.com/in/yogesh-kumar-wadhwa-319187412/",
@@ -87,7 +87,7 @@ export const services: Service[] = [
     problem: "Operations teams are overwhelmed by high WhatsApp message volumes.",
     solution: "Official WhatsApp API bots that resolve FAQs and book meetings automatically.",
     outcome: "52% reduction in staff coordination time.",
-    price: "From ₹25,000",
+    price: "From ₹40,000",
     bullets: [
       "Official API setup & green tick guidance",
       "RAG chatbot trained on business data",
@@ -121,7 +121,7 @@ export const services: Service[] = [
     problem: "Complex operations require constant manual checks and decision-making.",
     solution: "Multi-step agentic pipelines that run tools and execute work autonomously.",
     outcome: "Up to 90% automation of repetitive reasoning tasks.",
-    price: "From ₹50,000",
+    price: "From ₹40,000",
     bullets: [
       "LangGraph / CrewAI multi-agent pipelines",
       "Custom tool-calling & database write capabilities",
@@ -138,7 +138,7 @@ export const services: Service[] = [
     problem: "Inbound support queues are slow and expensive, costing conversion.",
     solution: "Deploy AI chatbots and virtual assistants that answer from your data instantly.",
     outcome: "60-80% deflection of repetitive support tickets.",
-    price: "From ₹20,000",
+    price: "From ₹40,000",
     bullets: [
       "Website chat widget & embeds",
       "RAG-powered custom knowledge base",
@@ -155,7 +155,7 @@ export const services: Service[] = [
     problem: "HR teams lose days manually opening CVs, comparing candidates, and filtering weak applicants.",
     solution: "Our AI screens each CV, scores candidates against the role, and shortlists the best fits automatically.",
     outcome: "Save up to 90% of manual resume-screening time.",
-    price: "From ₹35,000",
+    price: "From ₹90,000",
     bullets: [
       "AI CV parsing and candidate scoring",
       "Role-based shortlist generation",
@@ -206,7 +206,7 @@ export const services: Service[] = [
     problem: "Traditional SEO misses conversational queries, generative summaries, and AI citation models, leaving your brand invisible in AI answers.",
     solution: "We implement atomic Q&A architecture, rich JSON-LD schemas, brand entity verification, and authority signals that answer engines consume.",
     outcome: "Measurable growth in AI engine citations, organic impressions, and qualified commercial discoverability.",
-    price: "From ₹45,000",
+    price: "From ₹30,000",
     bullets: [
       "AI Answer Readiness & GEO visibility audits",
       "Comprehensive JSON-LD schemas & entity graphs",

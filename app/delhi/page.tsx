@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Automation in Delhi | SaaS, CRM & Chatbot Dev | RisonAI Tech" },
   description:
     "RisonAI Tech is an AI automation company serving Delhi businesses with AI workflows, SaaS engineering, custom CRM systems, and WhatsApp chatbots. Built for high-volume operations and competitive markets.",
-  keywords: [
-    "AI automation company Delhi",
-    "AI development company Delhi NCR",
-    "SaaS development company Delhi",
-    "CRM development Delhi",
-    "AI chatbot development Delhi",
-    "WhatsApp automation Delhi",
-    "business automation Delhi",
-  ],
   alternates: { canonical: "/delhi" },
   openGraph: {
     title: "AI Automation Company in Delhi | RisonAI Tech",

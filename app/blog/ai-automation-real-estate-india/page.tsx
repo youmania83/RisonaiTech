@@ -7,19 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Real Estate AI Automation India: 24/7 Lead Workflows (2026)" },
   description:
     "Qualify real estate buyers 24/7 on WhatsApp, auto-book property site visits, and sync CRM records instantly. Proven workflows for Indian brokers & developers.",
-  keywords: [
-    "ai automation for real estate",
-    "real estate ai automation india",
-    "ai for real estate agents india",
-    "automate real estate lead follow up",
-    "whatsapp automation real estate india",
-    "real estate chatbot india",
-    "crm automation real estate india",
-    "ai real estate tools 2026",
-    "automate property inquiries",
-    "real estate workflow automation",
-    "ai lead qualification real estate",
-  ],
   alternates: { canonical: "/blog/ai-automation-real-estate-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

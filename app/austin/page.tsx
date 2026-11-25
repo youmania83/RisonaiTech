@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Austin | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Austin. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Austin",
-    "AI Chatbot Development Austin",
-    "Chatbot Solutions Austin",
-    "Voice AI Austin",
-    "Business Automation Austin",
-    "AI Calling Agent Austin",
-    "Workflow Automation Austin",
-    "Customer Support Automation Austin",
-    "WhatsApp Chatbot Austin",
-    "AI Solutions Austin",
-    "Conversational AI Austin",
-  ],
   alternates: { canonical: "/austin" },
   openGraph: {
     title: "AI Automation Company in Austin | RisonAI Tech",

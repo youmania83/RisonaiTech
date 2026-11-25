@@ -7,19 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "What Is AI Automation? Complete Business Guide 2026 | RisonAI Tech" },
   description:
     "AI automation uses artificial intelligence to perform tasks without human input. Learn how it works, key use cases, and how Indian businesses can implement it for ROI.",
-  keywords: [
-    "what is ai automation",
-    "ai automation definition",
-    "ai automation explained",
-    "artificial intelligence automation",
-    "ai automation for business",
-    "ai automation India",
-    "intelligent automation",
-    "ai workflow automation",
-    "ai process automation",
-    "what is automation in ai",
-    "ai automation 2026",
-  ],
   alternates: { canonical: "/blog/what-is-ai-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

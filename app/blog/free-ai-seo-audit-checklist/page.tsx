@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Free AI SEO Audit Checklist for 2026 | RisonAI Tech" },
   description:
     "Use this free AI SEO audit checklist to improve your website's visibility in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews before paying an agency.",
-  keywords: [
-    "free AI SEO audit checklist",
-    "free GEO audit checklist",
-    "AI visibility checklist",
-    "AEO checklist",
-    "AI search optimization checklist",
-    "ChatGPT SEO checklist",
-    "Google AI Overviews checklist",
-    "website audit for AI search",
-    "free AI audit for website",
-    "how to improve AI visibility",
-  ],
   alternates: { canonical: "/blog/free-ai-seo-audit-checklist" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

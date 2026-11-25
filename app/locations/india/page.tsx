@@ -11,18 +11,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development Company in India — RisonAI Tech",
   description:
     "RisonAI Tech is an AI automation and SaaS development company serving clients across India. Healthcare, real estate, startups, and SMBs. Remote delivery. Projects from ₹30,000.",
-  keywords: [
-    "AI automation company India",
-    "SaaS development company India",
-    "AI chatbot development India",
-    "agentic AI India",
-    "custom CRM development India",
-    "software development company India",
-    "AI company India",
-    "best AI development company India",
-    "AI automation for Indian businesses",
-    "AI integration company India",
-  ],
   alternates: { canonical: "/locations/india" },
   openGraph: {
     title: "AI Automation & SaaS Development Across India | RisonAI Tech",

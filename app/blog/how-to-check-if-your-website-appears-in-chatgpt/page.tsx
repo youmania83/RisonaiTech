@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "How to Check If Your Website Appears in ChatGPT and AI Search | RisonAI Tech" },
   description:
     "Learn how to check whether your website appears in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Includes a free AI visibility audit workflow.",
-  keywords: [
-    "how to check if website appears in ChatGPT",
-    "ChatGPT visibility checker",
-    "how to see if my website is in AI search",
-    "Perplexity visibility check",
-    "Google AI Overviews website audit",
-    "free AI visibility audit",
-    "AI search ranking audit",
-    "how to rank in AI search",
-    "website AI visibility score",
-    "AI SEO audit tool",
-  ],
   alternates: { canonical: "/blog/how-to-check-if-your-website-appears-in-chatgpt" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

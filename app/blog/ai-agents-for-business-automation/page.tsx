@@ -7,23 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Agents for Business Automation: Complete Guide for 2026 | RisonAI Tech" },
   description:
     "AI agents are autonomous programs that perceive, decide, and act without human input at every step. Learn how to deploy Agentic AI in your business with Skills Graph memory, Contextual Evaluation, real examples, and India pricing.",
-  keywords: [
-    "ai agents for business automation",
-    "ai agents business",
-    "agentic ai",
-    "skills graph",
-    "contextual evaluation",
-    "autonomous ai agents",
-    "ai agent vs chatbot",
-    "deploy ai agents",
-    "ai agent examples business",
-    "LangGraph agents",
-    "CrewAI business agents",
-    "openai agents sdk",
-    "ai agent cost India",
-    "business ai agents 2026",
-    "multi-agent systems",
-  ],
   alternates: { canonical: "/blog/ai-agents-for-business-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

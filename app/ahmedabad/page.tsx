@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Ahmedabad — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Ahmedabad startups, GIFT City fintechs, and Gujarat enterprises. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Ahmedabad",
-    "SaaS development Ahmedabad",
-    "GIFT City fintech development",
-    "AI development Gujarat",
-    "software company Ahmedabad",
-    "CRM development Ahmedabad",
-    "WhatsApp automation Ahmedabad",
-  ],
   alternates: { canonical: "/ahmedabad" },
   openGraph: {
     title: "AI Automation & SaaS Development in Ahmedabad | RisonAI Tech",

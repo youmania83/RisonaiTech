@@ -1,0 +1,146 @@
+AI Case Studies & Technical Architecture Whitepapers | RisonAI Tech
+Rison  AI  Tech Automate · Innovate · Accelerate
+Services Products Case Studies Blog AI Audit About Contact Us
+Services Products Case Studies Blog AI Audit About Contact Us
+Engineering Whitepapers
+Technical Architecture & Production Case Studies
+We don't publish vague marketing fluff. Here are the exact system architectures, prompt pipelines, guardrail layers, and database schemas behind our in-house platforms (DocBooking, Expreality) deployed across live partner clinics and brokerages, alongside enterprise client AIOps.
+31%
+Patient No-Show Reduction (DocBooking)
+52%
+Less Front-Desk Staff Time (DocBooking)
+72%
+Faster Lead Qualification (Expreality)
+< 2s
+P95 Inference & Webhook Latency
+In-House Healthcare SaaS · Partner Pilot Deployment Production Live · Panipat Clinics
+Case Study 1: DocBooking Clinical Intake & Triage Engine
+An architectural breakdown of DocBooking, an in-house healthcare platform engineered by Rison AI Tech and deployed in production across partner clinics in Panipat and Delhi NCR — featuring an end-to-end multi-agent clinical intake system operating on WhatsApp Cloud API and Next.js, with automated symptom triage, doctor slot allocation, and reminder loops.
+System Architecture Diagram (DocBooking Flow) LangGraph + PostgreSQL
+[ Patient WhatsApp / Web UI ]
+│
+▼ (Webhook HMAC-SHA256 Auth)
+[ Ingress Fastify Gateway ] ──► [ PII & Redaction Sanitizer (Regex + Presidio) ]
+│
+▼
+[ LangGraph Orchestrator ]
+┌────────────────────┴────────────────────┐
+▼ ▼
+[ Clinical Triage Node ] [ Appointment Booking Node ]
+(RAG: Pinecone + ICD-10 SOPs) (Lock-safe Calendar Slot Matrix)
+│ │
+▼ ▼
+[ Medical Guardrail Filter ] [ PostgreSQL Multi-Tenant DB ]
+(Red-flag emergency escalation) (Prisma ORM, Row-Level Security)
+│ │
+└────────────────────┬────────────────────┘
+▼
+[ Twilio / WhatsApp Emitter ]
+(Sub-2-minute patient delivery)
+1. LangGraph State Machine & Safety Guardrails
+The conversation operates on a stateful graph built with LangGraph. Each turn preserves session context while preventing hallucinated medical advice:
+State Schema: Carries patient history, provisional chief complaint, verified insurance tier, and selected doctor slot ID.
+Emergency Intercept Node: Deterministic regex + zero-shot classification checks for chest pain, acute dyspnea, or severe trauma. Any positive match triggers an immediate hospital emergency escalation prompt with human desk routing.
+Deterministic Slot Locking: Booking checks are atomic in PostgreSQL using row-level locking ( FOR UPDATE SKIP LOCKED ) to eliminate double-bookings during concurrent traffic spikes.
+2. Prompt Pipeline & Context Injection
+System prompts are version-controlled and enforced with strict output schema guarantees:
+// Triage System Prompt Template
+SYSTEM: You are the clinical intake assistant for [Clinic_Name].
+RULES:
+1. Never diagnose conditions or prescribe medications.
+2. Ask exactly ONE clarifying question per turn to identify primary specialty needed.
+3. Output your reasoning in <clinical_thought> tags and patient response in JSON:
+{ "specialty": "Dermatology", "urgency": "ROUTINE", "patient_message": "...", "suggested_slots": [...] }
+3. PostgreSQL Database Schema
+Normalized relational model supporting high-throughput scheduling with full audit logging:
+model Appointment {
+id String @id @default(uuid())
+clinicId String @db.VarChar(64)
+doctorId String @db.VarChar(64)
+patientPhone String @db.VarChar(20) // E.164 formatted
+scheduledTime DateTime
+status Status @default(CONFIRMED) // CONFIRMED, RESCHEDULED, COMPLETED, NO_SHOW
+intakeSummary Json? // Structured symptoms & chief complaint extracted by LLM
+whatsappThreadId String?
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+@@index([clinicId, scheduledTime])
+@@index([patientPhone])
+}
+Verified Production Impact
+31% Reduction in missed patient appointments via 24h & 2h WhatsApp reminders.
+52% Time Saved front-desk staff no longer handle phone bookings manually.
+99.8% Uptime zero double-bookings across 14,000+ completed clinic reservations.
+In-House PropTech SaaS · Brokerage Partner Deployment Production Live · Delhi NCR & Gurgaon
+Case Study 2: Expreality Spatial Location Scoring & CRM Engine
+An architectural breakdown of Expreality, a proprietary property intelligence platform engineered by Rison AI Tech and deployed with partner real estate operations across Delhi NCR — connecting private high-net-worth real estate listings with algorithmic neighborhood scoring, multi-agent lead profiling, and automated WhatsApp nurturing.
+System Architecture Diagram (Expreality Pipeline) Spatial AI + CrewAI
+[ Inbound Real Estate Lead (Portal / Ads / WhatsApp) ]
+│
+▼
+[ Ingestion Webhook Queue ]
+│
+▼
+[ CrewAI Autonomous Multi-Agent Pool ]
+┌────────────────────┼────────────────────┐
+▼ ▼ ▼
+[ Profiling Agent ] [ Matching Agent ] [ Budget Verifier ]
+(Analyzes intent) (Spatial index) (Capacity score)
+│ │ │
+└────────────────────┼────────────────────┘
+▼
+[ Geospatial Scoring Engine (PostGIS) ]
+(Transit distance + Civic index + ROI)
+│
+▼
+[ Sync to Enterprise CRM (Zoho / HubSpot) ]
+│
+▼
+[ Private WhatsApp Nurture Journey ]
+(Personalized PDF brochure dispatched in < 2 mins)
+1. Spatial Intelligence & Amenity Indexing
+Rather than relying on basic text search, Expreality combines PostGIS spatial queries with dense vector embeddings to calculate dynamic livability scores:
+Isochrone Drive-Time Analysis: Generates 15-minute commute polygons against Delhi NCR arterial expressways (NH-44, Dwarka Expressway, Golf Course Extension).
+Price Velocity Scoring: Compares quarterly registry records against asking prices to highlight genuine undervalued inventory.
+2. Operational Results & Quantitative Proof
+72%
+Faster Lead Qualification
+37 Hrs
+Saved Monthly Per Sales Manager
+2.1×
+Higher Site-Visit Booking Rate
+Enterprise AIOps & Multi-Agent Orchestration LangGraph · Model Context Protocol (MCP) · n8n
+Case Study 3: Production AIOps, Telemetry & Token Optimization
+How RisonAI Tech maintains enterprise LLM pipelines with OpenTelemetry tracking, semantic caching, prompt drift calibration, and zero unmonitored failures.
+Semantic Caching
+Embedding-based caching deflects 43% of identical user queries before reaching frontier LLMs, reducing per-turn token costs from $0.04 to $0.003.
+Drift Detection
+Automated weekly regression runs against synthetic test sets ensure prompt behavior remains deterministic across upstream OpenAI and Anthropic model revisions.
+MCP Tool Safety
+Model Context Protocol tools run in sandboxed Docker workers with read-only database connections and scoped bearer tokens for write actions.
+Verified Third-Party Footprint & Industry Consensus
+RisonAI Tech maintains verified external technical profiles and directory citations to eliminate knowledge graph ambiguity:
+IndiaMART Verified B2B Catalogue Justdial Verified Business Panipat GitHub Open-Source Code Repos Clutch Verified Agency Profile
+Rison  AI  Tech Automate · Innovate · Accelerate
+Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.
+196, Ground Floor, New RK Puram, Panipat 132103, India
+hello@risonaitech.com +919050486448
+Navigation
+Services
+AEO & GEO Services
+Products
+Case Studies
+Blog
+AI Audit
+About
+Contact
+Legal
+Privacy Policy
+Cookies Policy
+Terms of Service
+DPDP & Data Rights
+Verified External Profiles & Directories
+IndiaMART Justdial Clutch LinkedIn Founder Profile GitHub Twitter / X Crunchbase
+© 2026 RisonAI Tech. All rights reserved.
+GSTIN: 06CDBPS8926D2ZE · Legal Entity: RisonAI Tech (Panipat, Haryana / Delhi NCR)
+risonaitech.com

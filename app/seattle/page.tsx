@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Seattle | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Seattle. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Seattle",
-    "AI Chatbot Development Seattle",
-    "Chatbot Solutions Seattle",
-    "Voice AI Seattle",
-    "Business Automation Seattle",
-    "AI Calling Agent Seattle",
-    "Workflow Automation Seattle",
-    "Customer Support Automation Seattle",
-    "WhatsApp Chatbot Seattle",
-    "AI Solutions Seattle",
-    "Conversational AI Seattle",
-  ],
   alternates: { canonical: "/seattle" },
   openGraph: {
     title: "AI Automation Company in Seattle | RisonAI Tech",

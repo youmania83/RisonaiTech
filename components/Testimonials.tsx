@@ -76,7 +76,7 @@ export default function Testimonials() {
         {/* Social proof footnote */}
         <Reveal delay={0.35}>
           <p className="mt-10 text-center text-sm text-slate-400">
-            100% client retention rate since founding ·{" "}
+            Milestone-led sprint delivery ·{" "}
             <span className="font-medium text-slate-500">
               All clients are referenceable on request
             </span>

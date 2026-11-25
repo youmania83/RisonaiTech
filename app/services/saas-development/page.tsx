@@ -22,22 +22,6 @@ export const metadata: Metadata = {
   title: "AI SaaS Development Company India — AI-Native Multi-Tenant SaaS From ₹1,20,000",
   description:
     "RisonAI Tech builds AI-native multi-tenant SaaS platforms in India — billing, RBAC, admin dashboards, AI agent modules, and LLM-powered features. MVP in 6–10 weeks. From ₹1,20,000.",
-  keywords: [
-    "SaaS development company India",
-    "AI SaaS development India",
-    "AI-native SaaS India",
-    "multi-tenant SaaS India",
-    "SaaS development Delhi",
-    "SaaS product development Gurgaon",
-    "MVP SaaS development India",
-    "custom SaaS platform development India",
-    "Next.js SaaS development India",
-    "SaaS with AI features India",
-    "SaaS MVP development India",
-    "B2B SaaS development India",
-    "LLM SaaS integration India",
-    "product engineering company India",
-  ],
   alternates: { canonical: "/services/saas-development" },
   openGraph: {
     title: "AI SaaS Development Company India | AI-Native Multi-Tenant SaaS | RisonAI Tech",

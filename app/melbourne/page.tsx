@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Melbourne | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Melbourne. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Melbourne",
-    "AI Chatbot Development Melbourne",
-    "Chatbot Solutions Melbourne",
-    "Voice AI Melbourne",
-    "Business Automation Melbourne",
-    "AI Calling Agent Melbourne",
-    "Workflow Automation Melbourne",
-    "Customer Support Automation Melbourne",
-    "WhatsApp Chatbot Melbourne",
-    "AI Solutions Melbourne",
-    "Conversational AI Melbourne",
-  ],
   alternates: { canonical: "/melbourne" },
   openGraph: {
     title: "AI Automation Company in Melbourne | RisonAI Tech",

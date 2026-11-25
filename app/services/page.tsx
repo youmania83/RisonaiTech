@@ -12,20 +12,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI & Software Services for Indian Businesses | RisonAI Tech" },
   description:
     "RisonAI Tech offers enterprise AI services: AI automation, AI agent development, AI search visibility (AEO & GEO), CRM solutions, AI chatbots, website development, and WhatsApp automation. Fixed-price, full code ownership.",
-  keywords: [
-    "AI automation services India",
-    "AI search visibility India",
-    "AEO services India",
-    "GEO services India",
-    "AI agent development India",
-    "AI-powered resume screening India",
-    "CRM development India",
-    "AI chatbot services India",
-    "agentic AI India",
-    "software development services Delhi",
-    "WhatsApp automation India",
-    "AI workflow automation India",
-  ],
   alternates: { canonical: "/services" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

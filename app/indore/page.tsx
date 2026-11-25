@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Indore — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Indore startups and Madhya Pradesh businesses. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Indore",
-    "SaaS development Indore",
-    "Indore startup technology",
-    "AI development Madhya Pradesh",
-    "software company Indore",
-    "CRM development Indore",
-    "WhatsApp automation Indore",
-  ],
   alternates: { canonical: "/indore" },
   openGraph: {
     title: "AI Automation & SaaS Development in Indore | RisonAI Tech",

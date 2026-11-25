@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Chennai | AI Agents & Business Automation",
   description:
     "Custom AI automation services for Chennai enterprises & startups. We engineer AI agents, WhatsApp systems, voice AI bots & automated CRM workflows.",
-  keywords: [
-    "AI Automation Company in Chennai",
-    "AI Chatbot Development Chennai",
-    "Chatbot Solutions Chennai",
-    "Voice AI Chennai",
-    "Business Automation Chennai",
-    "AI Calling Agent Chennai",
-    "Workflow Automation Chennai",
-    "Customer Support Automation Chennai",
-    "WhatsApp Chatbot Chennai",
-    "AI Solutions Chennai",
-    "Conversational AI Chennai",
-  ],
   alternates: { canonical: "/chennai" },
   openGraph: {
     title: "AI Automation Company in Chennai | RisonAI Tech",

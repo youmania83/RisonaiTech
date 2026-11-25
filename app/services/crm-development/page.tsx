@@ -22,23 +22,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI CRM Development India | Custom CRM & WhatsApp | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI-powered custom CRM platforms and agentic HubSpot / Zoho extensions for healthcare, real estate, and service businesses in India. AI lead scoring, WhatsApp sync. From ₹40,000.",
-  keywords: [
-    "custom CRM development India",
-    "AI CRM development India",
-    "AI CRM automation India",
-    "CRM development company Delhi",
-    "CRM with WhatsApp integration India",
-    "AI lead scoring CRM India",
-    "agentic CRM India",
-    "healthcare CRM India",
-    "real estate CRM development India",
-    "HubSpot customisation India",
-    "Zoho CRM integration India",
-    "Salesforce integration India",
-    "CRM automation India",
-    "AI sales automation India",
-    "AI pipeline management India",
-  ],
   alternates: { canonical: "/services/crm-development" },
   openGraph: {
     title: "AI CRM Development India | Custom CRM & WhatsApp | RisonAI Tech",

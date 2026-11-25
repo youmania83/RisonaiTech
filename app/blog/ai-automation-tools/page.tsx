@@ -7,20 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Top AI Automation Tools (2026): Ranked, Tested & Benchmarked" },
   description:
     "Compare n8n, Make, LangChain, and OpenAI. Discover real self-hosting costs, enterprise ROI, and the best AI automation stack for Indian businesses in 2026.",
-  keywords: [
-    "ai automation tools",
-    "best ai automation tools 2026",
-    "n8n vs make.com",
-    "ai workflow tools",
-    "business automation software",
-    "no code ai automation",
-    "ai automation platforms India",
-    "langchain alternatives",
-    "make.com alternative",
-    "automation tools comparison",
-    "openai automation",
-    "ai tools for small business India",
-  ],
   alternates: { canonical: "/blog/ai-automation-tools" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

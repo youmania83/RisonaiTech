@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Noida | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Noida. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Noida",
-    "AI Chatbot Development Noida",
-    "Chatbot Solutions Noida",
-    "Voice AI Noida",
-    "Business Automation Noida",
-    "AI Calling Agent Noida",
-    "Workflow Automation Noida",
-    "Customer Support Automation Noida",
-    "WhatsApp Chatbot Noida",
-    "AI Solutions Noida",
-    "Conversational AI Noida",
-  ],
   alternates: { canonical: "/noida" },
   openGraph: {
     title: "AI Automation Company in Noida | RisonAI Tech",

@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI vs Automation: Key Differences Every Business Owner Should Know | RisonAI Tech" },
   description:
     "AI and automation are not the same thing. Here's a clear breakdown of AI vs automation — what each does, where they overlap, and which one your business needs right now.",
-  keywords: [
-    "ai vs automation",
-    "difference between ai and automation",
-    "ai vs traditional automation",
-    "what is automation",
-    "what is artificial intelligence",
-    "RPA vs AI",
-    "intelligent automation vs ai",
-    "business automation vs ai",
-    "ai automation difference",
-    "machine learning vs automation",
-  ],
   alternates: { canonical: "/blog/ai-vs-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

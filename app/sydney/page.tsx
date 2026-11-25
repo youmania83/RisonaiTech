@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Sydney | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Sydney. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Sydney",
-    "AI Chatbot Development Sydney",
-    "Chatbot Solutions Sydney",
-    "Voice AI Sydney",
-    "Business Automation Sydney",
-    "AI Calling Agent Sydney",
-    "Workflow Automation Sydney",
-    "Customer Support Automation Sydney",
-    "WhatsApp Chatbot Sydney",
-    "AI Solutions Sydney",
-    "Conversational AI Sydney",
-  ],
   alternates: { canonical: "/sydney" },
   openGraph: {
     title: "AI Automation Company in Sydney | RisonAI Tech",

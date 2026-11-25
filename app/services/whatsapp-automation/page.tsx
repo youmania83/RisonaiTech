@@ -22,26 +22,6 @@ export const metadata: Metadata = {
   title: { absolute: "WhatsApp AI Automation & Chatbot India | Business API & CRM Workflows | RisonAI Tech" },
   description:
     "India's WhatsApp AI automation experts — agentic lead bots, CRM sync, 24/7 support automation on the official WhatsApp Business API. Healthcare, real estate, e-commerce. From ₹25,000.",
-  keywords: [
-    "WhatsApp automation India",
-    "WhatsApp AI automation India",
-    "WhatsApp chatbot India",
-    "WhatsApp AI agent India",
-    "WhatsApp agentic bot India",
-    "WhatsApp Business API automation",
-    "WhatsApp chatbot development India",
-    "WhatsApp CRM integration India",
-    "lead capture automation WhatsApp India",
-    "WhatsApp commerce automation India",
-    "WhatsApp BSP integration India",
-    "AI WhatsApp bot India",
-    "WhatsApp drip campaign India",
-    "WhatsApp lead generation India",
-    "WhatsApp marketing automation India",
-    "WhatsApp automation for real estate India",
-    "WhatsApp automation for healthcare India",
-    "WhatsApp automation for ecommerce India",
-  ],
   alternates: { canonical: "/services/whatsapp-automation" },
   openGraph: {
     title: "WhatsApp AI Automation & Chatbot India | Business API & CRM Workflows | RisonAI Tech",
@@ -158,7 +138,7 @@ const useCaseTable = [
 const faqs = [
   {
     q: "How much does WhatsApp automation cost in India?",
-    a: "Starter WhatsApp automation setups usually begin around ₹25,000 to ₹60,000. Multi-flow systems with CRM integrations and advanced routing typically range from ₹80,000 to ₹2,00,000+. RisonAI Tech quotes fixed-price after a free scoping call.",
+    a: "Starter WhatsApp automation setups usually begin around ₹40,000 to ₹60,000. Multi-flow systems with CRM integrations and advanced routing typically range from ₹80,000 to ₹2,00,000+. RisonAI Tech quotes fixed-price after a free scoping call.",
   },
   {
     q: "Do I need the official WhatsApp Business API?",
@@ -178,7 +158,7 @@ const faqs = [
   },
   {
     q: "Is this useful for small businesses?",
-    a: "Yes. Even a single lead capture and follow-up flow can save multiple manual hours each week and improve response consistency for small teams. Starter setups at ₹25,000 are designed specifically for SMBs.",
+    a: "Yes. Even a single lead capture and follow-up flow can save multiple manual hours each week and improve response consistency for small teams. Starter setups at ₹40,000 are designed specifically for SMBs.",
   },
   {
     q: "What is a BSP and why do I need one?",
@@ -230,9 +210,9 @@ const pageSchema = graph(
     description:
       "Intelligent WhatsApp automation systems on the official WhatsApp Business API — lead capture, customer support, CRM workflows, and broadcast campaigns. Built by RisonAI Tech for Indian businesses.",
     url: "/services/whatsapp-automation",
-    priceRange: "₹25,000 – ₹2,00,000",
+    priceRange: "₹40,000 – ₹2,00,000",
     offers: [
-      { name: "Starter WhatsApp automation", description: "Single flow, BSP onboarding, template setup", price: "25000" },
+      { name: "Starter WhatsApp automation", description: "Single flow, BSP onboarding, template setup", price: "40000" },
       { name: "Multi-flow WhatsApp + CRM", description: "Multiple flows, CRM sync, routing, dashboards", price: "80000" },
     ],
   }),
@@ -295,7 +275,7 @@ export default function WhatsAppAutomationPage() {
               company builds on the official WhatsApp Business API via Meta-approved BSPs (Twilio,
               AiSensy, Gupshup, 360dialog), with structured lead capture, AI-driven qualification,
               CRM integration (HubSpot / Zoho / Salesforce / custom), broadcast campaigns,
-              appointment booking, and graceful agent handoff. Starter setups begin at ₹25,000;
+              appointment booking, and graceful agent handoff. Starter setups begin at ₹40,000;
               multi-flow systems with CRM range ₹80,000–₹2,00,000+. Typical rollout is 2–6 weeks.
             </p>
           </div>

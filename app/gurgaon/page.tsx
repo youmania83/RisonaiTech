@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Gurgaon | AI Agents & Business Workflows",
   description:
     "AI automation agency serving Gurgaon & Delhi NCR. We build custom AI agents, WhatsApp bots, voice calling agents & CRM workflows. Fixed-price delivery.",
-  keywords: [
-    "AI Automation Company in Gurgaon",
-    "AI Chatbot Development Gurgaon",
-    "Chatbot Solutions Gurgaon",
-    "Voice AI Gurgaon",
-    "Business Automation Gurgaon",
-    "AI Calling Agent Gurgaon",
-    "Workflow Automation Gurgaon",
-    "Customer Support Automation Gurgaon",
-    "WhatsApp Chatbot Gurgaon",
-    "AI Solutions Gurgaon",
-    "Conversational AI Gurgaon",
-  ],
   alternates: { canonical: "/gurgaon" },
   openGraph: {
     title: "AI Automation Company in Gurgaon | RisonAI Tech",

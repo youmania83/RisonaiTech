@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Healthcare AI Automation: Clinical Triage & EMR Compliance" },
   description:
     "An enterprise blueprint for healthcare AI automation: clinical triage, WhatsApp patient portals, FHIR/HL7 EMR integration, and ABDM/HIPAA compliance.",
-  keywords: [
-    "healthcare ai automation workflows",
-    "ai clinical triage automation",
-    "emr fhir ai integration",
-    "abdm compliant ai workflows india",
-    "ai patient intake automation",
-    "hipaa compliant ai agent healthcare",
-    "whatsapp doctor appointment automation",
-    "hospital information system ai integration",
-    "reducing patient no show rates ai",
-    "clinic front desk ai deflection",
-  ],
   alternates: { canonical: "/blog/healthcare-ai-automation-emr-compliance" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

@@ -7,19 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "SaaS Development Cost in India: 2026 Breakdown | RisonAI Tech" },
   description:
     "How much does it cost to build a SaaS product in India in 2026? From a ₹1,20,000 MVP to a ₹20,00,000 enterprise platform — with timelines, what's included, and hidden cost warnings.",
-  keywords: [
-    "SaaS development cost India 2026",
-    "AI SaaS development cost India",
-    "SaaS MVP cost India",
-    "how much does it cost to build a SaaS in India",
-    "SaaS development company India pricing",
-    "build AI SaaS India cost",
-    "custom software development cost India",
-    "SaaS product development India",
-    "MVP development cost India",
-    "product engineering cost India",
-    "AI-native SaaS cost India",
-  ],
   alternates: { canonical: "/blog/saas-development-cost-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

@@ -101,7 +101,7 @@ export default function Footer() {
             </ul>
 
             <p className="mt-8 mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-              Verified External Profiles &amp; Directories
+              External Profiles &amp; Directories
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
               <a

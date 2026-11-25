@@ -39,25 +39,6 @@ export const metadata: Metadata = {
   },
   description:
     "Strengthen your business discoverability across AI-powered search engines with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Enterprise AI search visibility strategies by Rison AI Tech.",
-  keywords: [
-    "AI search visibility",
-    "AEO services",
-    "GEO services",
-    "Answer Engine Optimization",
-    "Generative Engine Optimization",
-    "AI SEO services",
-    "ChatGPT optimization",
-    "Perplexity optimization",
-    "Google AI Overviews optimization",
-    "enterprise AI search",
-    "brand entity optimization",
-    "structured data for AI",
-    "AI citation readiness",
-    "conversational search optimization",
-    "topical authority strategy",
-    "AI search consulting India",
-    "Rison AI Tech",
-  ],
   alternates: { canonical: "/services/aeo-geo-optimization" },
   openGraph: {
     title: "AI Search Visibility (AEO & GEO) Services | Rison AI Tech",
@@ -348,13 +329,13 @@ const pageSchema = graph(
     description:
       "Enterprise AEO and GEO services by Rison AI Tech. Help your business become easier to discover, understand, and cite across AI-powered search engines through structured information, technical optimization, and authoritative content.",
     url: "/services/aeo-geo-optimization",
-    priceRange: "₹45,000 – ₹2,50,000",
+    priceRange: "₹30,000 – ₹2,50,000",
     offers: [
       {
         name: "AI Search Visibility Audit",
         description:
           "Comprehensive diagnostic of current brand representation across search engines, ChatGPT, Perplexity, Gemini, and Google AI Overviews with technical schema roadmap.",
-        price: "45000",
+        price: "30000",
       },
       {
         name: "Full AEO & GEO Implementation",

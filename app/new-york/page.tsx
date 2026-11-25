@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in New York — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, and enterprise chatbot systems for New York City startups and enterprises. Fixed-price delivery from $539.",
-  keywords: [
-    "AI automation company New York",
-    "SaaS development New York City",
-    "AI development NYC",
-    "enterprise AI New York",
-    "software development New York",
-    "AI startup New York",
-    "fintech AI New York",
-  ],
   alternates: { canonical: "/new-york" },
   openGraph: {
     title: "AI Automation & SaaS Development in New York | RisonAI Tech",

@@ -11,12 +11,6 @@ export const metadata: Metadata = {
   title: { absolute: "Our Products — DocBooking & Expreality | RisonAI Tech" },
   description:
     "RisonAI Tech has built DocBooking (AI clinic management SaaS for healthcare) and Expreality (property intelligence platform for real estate). In-house products shipped to production.",
-  keywords: [
-    "DocBooking AI clinic management",
-    "Expreality property intelligence",
-    "AI SaaS products India",
-    "in-house products RisonAI Tech",
-  ],
   alternates: { canonical: "/products" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

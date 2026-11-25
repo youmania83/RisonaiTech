@@ -7,21 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Make.com vs n8n: 2026 AI Automation Platform Comparison" },
   description:
     "Make.com vs n8n compared head-to-head on pricing, AI capabilities, self-hosting costs, and Indian data compliance. Find the right automation stack in 2026.",
-  keywords: [
-    "make vs n8n",
-    "make.com vs n8n ai automation",
-    "layer3labs alternatives",
-    "n8n vs make comparison",
-    "n8n self hosted",
-    "make.com ai workflows",
-    "best automation platform india 2026",
-    "n8n pricing india",
-    "make.com pricing india",
-    "zapier alternative india",
-    "n8n vs make for business",
-    "workflow automation comparison",
-    "ai automation platform comparison",
-  ],
   alternates: { canonical: "/blog/make-vs-n8n-ai-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

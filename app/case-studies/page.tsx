@@ -26,17 +26,6 @@ export const metadata: Metadata = {
   },
   description:
     "Production engineering case studies detailing system architecture diagrams, LangGraph agent pipelines, prompt guardrails, and PostgreSQL schemas for DocBooking, Expreality, and enterprise AIOps.",
-  keywords: [
-    "AI case studies",
-    "DocBooking architecture",
-    "Expreality real estate AI",
-    "LangGraph multi-agent architecture",
-    "RAG database schema",
-    "AI healthcare booking system architecture",
-    "AI prompt engineering pipelines",
-    "enterprise AIOps case study",
-    "production AI engineering India",
-  ],
   alternates: { canonical: "/case-studies" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
@@ -316,9 +305,9 @@ export default function CaseStudiesPage() {
                 </div>
               </Reveal>
 
-              {/* Verified Results */}
+              {/* Production Impact Results */}
               <div className="rounded-xl border border-sky-100 bg-sky-50/60 p-6">
-                <h4 className="font-semibold text-sky-950 text-base">Verified Production Impact</h4>
+                <h4 className="font-semibold text-sky-950 text-base">Production Impact</h4>
                 <div className="mt-3 grid sm:grid-cols-3 gap-4 text-sm text-sky-900">
                   <div>
                     <span className="block font-bold text-lg text-sky-700">31% Reduction</span>
@@ -487,13 +476,13 @@ export default function CaseStudiesPage() {
               </div>
             </div>
 
-            {/* Third-Party Footprint & Verification */}
+            {/* Third-Party Footprint & Directory Presence */}
             <div className="mt-16 rounded-2xl border border-slate-200 p-8 bg-slate-50/70">
               <h3 className="font-display text-2xl font-bold text-brand-dark">
-                Verified Third-Party Footprint &amp; Industry Consensus
+                External Footprint &amp; Industry Presence
               </h3>
               <p className="mt-2 text-sm text-brand-gray leading-relaxed">
-                RisonAI Tech maintains verified external technical profiles and directory citations to eliminate knowledge graph ambiguity:
+                RisonAI Tech maintains official external technical profiles and directory citations to eliminate knowledge graph ambiguity:
               </p>
               <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <a
@@ -503,7 +492,7 @@ export default function CaseStudiesPage() {
                   className="rounded-xl border border-slate-200 bg-white p-4 hover:border-slate-400 transition-all text-center block"
                 >
                   <span className="font-bold text-sm text-brand-dark block">IndiaMART</span>
-                  <span className="text-xs text-brand-gray mt-1 block">Verified B2B Catalogue</span>
+                  <span className="text-xs text-brand-gray mt-1 block">B2B Catalogue</span>
                 </a>
                 <a
                   href="https://www.justdial.com/Panipat/RisonAI-Tech/"
@@ -512,7 +501,7 @@ export default function CaseStudiesPage() {
                   className="rounded-xl border border-slate-200 bg-white p-4 hover:border-slate-400 transition-all text-center block"
                 >
                   <span className="font-bold text-sm text-brand-dark block">Justdial</span>
-                  <span className="text-xs text-brand-gray mt-1 block">Verified Business Panipat</span>
+                  <span className="text-xs text-brand-gray mt-1 block">Business Directory Panipat</span>
                 </a>
                 <a
                   href="https://github.com/risonaitech"
@@ -530,7 +519,7 @@ export default function CaseStudiesPage() {
                   className="rounded-xl border border-slate-200 bg-white p-4 hover:border-slate-400 transition-all text-center block"
                 >
                   <span className="font-bold text-sm text-brand-dark block">Clutch</span>
-                  <span className="text-xs text-brand-gray mt-1 block">Verified Agency Profile</span>
+                  <span className="text-xs text-brand-gray mt-1 block">Agency Profile</span>
                 </a>
               </div>
             </div>

@@ -12,20 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Patna — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM systems for Patna businesses, Bihar startups, and education-sector enterprises. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Patna",
-    "SaaS development Patna",
-    "AI development Bihar",
-    "software company Patna",
-    "WhatsApp automation Patna",
-    "CRM development Patna",
-    "chatbot development Patna",
-    "AI agent development Patna",
-    "digital transformation Bihar",
-    "IT company Patna",
-    "EdTech platform Bihar",
-    "AI automation Bihar",
-  ],
   alternates: { canonical: "/patna" },
   openGraph: {
     title: "AI Automation & SaaS Development in Patna | RisonAI Tech",

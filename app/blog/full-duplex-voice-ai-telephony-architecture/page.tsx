@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Full-Duplex Voice AI Telephony: Sub-500ms Architecture" },
   description:
     "An engineering blueprint for full-duplex conversational voice AI: sub-500ms WebRTC/SIP streaming, turn-taking, barge-in detection, and multilingual call automation.",
-  keywords: [
-    "full duplex voice ai architecture",
-    "conversational voice ai telephony",
-    "sub 500ms voice ai latency",
-    "streaming speech to speech pipeline",
-    "real time voice turn taking ai",
-    "webrtc vs sip trunking ai voice",
-    "barge in voice ai interrupt handling",
-    "deepgram cartesia voice pipeline",
-    "multilingual voice ai telephony india",
-    "enterprise contact center voice ai",
-  ],
   alternates: { canonical: "/blog/full-duplex-voice-ai-telephony-architecture" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

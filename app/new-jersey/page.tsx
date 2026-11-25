@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in New Jersey — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, healthcare tech, and enterprise chatbot systems for New Jersey startups and pharma/biotech companies. Fixed-price delivery from $539.",
-  keywords: [
-    "AI automation company New Jersey",
-    "SaaS development New Jersey",
-    "AI development NJ",
-    "healthcare AI New Jersey",
-    "pharma tech New Jersey",
-    "software development New Jersey",
-    "AI startup New Jersey",
-  ],
   alternates: { canonical: "/new-jersey" },
   openGraph: {
     title: "AI Automation & SaaS Development in New Jersey | RisonAI Tech",

@@ -7,23 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Automation for Small Business: 5 Proven Workflows (2026)" },
   description:
     "Deploy AI automation without an in-house tech team. Real costs (₹25k–₹80k), 5 plug-and-play workflows, and a 90-day ROI roadmap for Indian businesses.",
-  keywords: [
-    "ai automation for small businesses india",
-    "ai automation small business 2026",
-    "ai workflow automation agency",
-    "custom ai automation services",
-    "ai integration services for business",
-    "ai tools for small business india",
-    "affordable ai automation india",
-    "ai automation without tech team",
-    "small business automation india",
-    "ai for sme india",
-    "whatsapp automation small business",
-    "ai chatbot small business india",
-    "ai automation cost india small business",
-    "automate small business workflows india",
-    "ai automation playbook india",
-  ],
   alternates: { canonical: "/blog/ai-automation-for-small-businesses" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

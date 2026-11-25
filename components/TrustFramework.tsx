@@ -3,7 +3,7 @@ const trustSignals = [
     title: "Why trust us",
     points: [
       "40+ production systems shipped across SaaS, AI, web, and CRM",
-      "100% client retention since founding",
+      "Milestone-based sprint delivery & referenceable clients",
       "Median automation gain: 60-80% reduction in repetitive operations",
       "Fixed scope, milestone-linked delivery, and source-code transfer",
     ],

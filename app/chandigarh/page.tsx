@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Chandigarh — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Chandigarh startups and Punjab–Haryana businesses. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Chandigarh",
-    "SaaS development Chandigarh",
-    "Chandigarh startup technology",
-    "AI development Punjab",
-    "software company Chandigarh",
-    "CRM development Chandigarh",
-    "WhatsApp automation Chandigarh",
-  ],
   alternates: { canonical: "/chandigarh" },
   openGraph: {
     title: "AI Automation & SaaS Development in Chandigarh | RisonAI Tech",

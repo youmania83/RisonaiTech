@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in London — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, and enterprise chatbot systems for London startups and enterprises. Production-grade delivery from £449.",
-  keywords: [
-    "AI automation company London",
-    "SaaS development London",
-    "AI development UK",
-    "fintech AI London",
-    "enterprise AI London",
-    "software development London",
-    "AI startup London UK",
-  ],
   alternates: { canonical: "/london" },
   openGraph: {
     title: "AI Automation & SaaS Development in London | RisonAI Tech",

@@ -12,18 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Ranchi — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, WhatsApp chatbots, and CRM workflows for Ranchi businesses, Jharkhand startups, and government-adjacent enterprises. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Ranchi",
-    "SaaS development Ranchi",
-    "AI development Jharkhand",
-    "software company Ranchi",
-    "WhatsApp automation Ranchi",
-    "CRM development Ranchi",
-    "chatbot development Ranchi",
-    "AI agent development Ranchi",
-    "digital transformation Jharkhand",
-    "IT company Ranchi",
-  ],
   alternates: { canonical: "/ranchi" },
   openGraph: {
     title: "AI Automation & SaaS Development in Ranchi | RisonAI Tech",

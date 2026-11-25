@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Houston | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Houston. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Houston",
-    "AI Chatbot Development Houston",
-    "Chatbot Solutions Houston",
-    "Voice AI Houston",
-    "Business Automation Houston",
-    "AI Calling Agent Houston",
-    "Workflow Automation Houston",
-    "Customer Support Automation Houston",
-    "WhatsApp Chatbot Houston",
-    "AI Solutions Houston",
-    "Conversational AI Houston",
-  ],
   alternates: { canonical: "/houston" },
   openGraph: {
     title: "AI Automation Company in Houston | RisonAI Tech",

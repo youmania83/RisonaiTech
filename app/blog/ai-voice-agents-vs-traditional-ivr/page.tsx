@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Voice AI vs Traditional IVR: 2026 Enterprise Migration Guide" },
   description:
     "Migrate from legacy DTMF IVRs to sub-800ms conversational Voice AI. Compare PolyAI, Retell, and custom agents with real latency and cost benchmarks.",
-  keywords: [
-    "ai voice agents vs ivr",
-    "conversational ivr replacement",
-    "voice ai telephony latency",
-    "twilio llm voice agent cost",
-    "customer service voice automation",
-    "ai receptionist India",
-    "speech to speech AI latency",
-    "inbound call automation India",
-    "outbound lead callback voice AI",
-    "telephony automation for business",
-  ],
   alternates: { canonical: "/blog/ai-voice-agents-vs-traditional-ivr" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

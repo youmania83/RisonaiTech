@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Enterprise WhatsApp AI Customer Experience: Flows & Commerce" },
   description:
     "An enterprise guide to WhatsApp AI customer experience: WhatsApp Flows, native conversational commerce, ERP webhook synchronization, and sub-60s triage.",
-  keywords: [
-    "enterprise whatsapp ai customer experience",
-    "whatsapp flows ai automation",
-    "conversational commerce whatsapp api",
-    "whatsapp crm sync automation",
-    "automated whatsapp order management",
-    "whatsapp business cloud api enterprise",
-    "whatsapp ai support triage",
-    "whatsapp erp integration sap",
-    "conversational checkout whatsapp",
-    "meta approved bsp whatsapp automation",
-  ],
   alternates: { canonical: "/blog/enterprise-whatsapp-ai-customer-experience" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

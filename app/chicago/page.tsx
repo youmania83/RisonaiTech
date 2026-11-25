@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Chicago | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Chicago. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Chicago",
-    "AI Chatbot Development Chicago",
-    "Chatbot Solutions Chicago",
-    "Voice AI Chicago",
-    "Business Automation Chicago",
-    "AI Calling Agent Chicago",
-    "Workflow Automation Chicago",
-    "Customer Support Automation Chicago",
-    "WhatsApp Chatbot Chicago",
-    "AI Solutions Chicago",
-    "Conversational AI Chicago",
-  ],
   alternates: { canonical: "/chicago" },
   openGraph: {
     title: "AI Automation Company in Chicago | RisonAI Tech",

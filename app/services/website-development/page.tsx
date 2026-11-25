@@ -22,22 +22,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Website Development India | GEO & Core Web Vitals | RisonAI Tech" },
   description:
     "RisonAI Tech builds AI-search-ready Next.js websites for Indian startups and SMBs — GEO (Generative Engine Optimization), AEO, Core Web Vitals, conversion-focused. Rank on Google AND ChatGPT/Perplexity. From ₹35,000.",
-  keywords: [
-    "website development company India",
-    "AI-ready website development India",
-    "Next.js website development India",
-    "GEO generative engine optimization India",
-    "AEO answer engine optimization India",
-    "AI search optimization India",
-    "SEO website development Delhi",
-    "Core Web Vitals optimization India",
-    "conversion focused website development India",
-    "high performance website India",
-    "LLM-optimized website India",
-    "Perplexity optimization India",
-    "ChatGPT SEO India",
-    "AI visibility website India",
-  ],
   alternates: { canonical: "/services/website-development" },
   openGraph: {
     title: "AI Website Development India | GEO & Core Web Vitals | RisonAI Tech",

@@ -102,8 +102,8 @@ const timelineSteps = [
 // Managed Pricing Plans
 const PLANS = {
   starter: {
-    IN: { name: "Scale AIOps", price: "₹15,000", period: "/mo", desc: "Perfect for SMBs running 1-2 active AI agents or workflows." },
-    INTL: { name: "Scale AIOps", price: "$299", period: "/mo", desc: "Perfect for SMBs running 1-2 active AI agents or workflows." },
+    IN: { name: "Starter AIOps", price: "₹15,000", period: "/mo", desc: "Perfect for SMBs running 1-2 active AI agents or workflows." },
+    INTL: { name: "Starter AIOps", price: "$299", period: "/mo", desc: "Perfect for SMBs running 1-2 active AI agents or workflows." },
     features: [
       "24/7 automated telemetry monitoring",
       "Monthly RAG vector knowledge base sync",
@@ -112,13 +112,13 @@ const PLANS = {
       "Email & ticket developer support"
     ],
     recommended: false,
-    whatsappRef: "Scale AIOps Support Plan"
+    whatsappRef: "Starter AIOps Support Plan"
   },
   growth: {
     IN: { name: "Growth AIOps", price: "₹35,000", period: "/mo", desc: "Best for scaling startups and clinics with multi-step workflows." },
     INTL: { name: "Growth AIOps", price: "$699", period: "/mo", desc: "Best for scaling startups and clinics with multi-step workflows." },
     features: [
-      "Everything in Scale AIOps",
+      "Everything in Starter AIOps",
       "Weekly prompt calibration & cost optimization",
       "Monthly vector database indexing audit",
       "24-hour response SLA for updates",
@@ -130,8 +130,8 @@ const PLANS = {
     whatsappRef: "Growth AIOps Support Plan"
   },
   enterprise: {
-    IN: { name: "Enterprise AIOps", price: "₹75,000+", period: "/mo", desc: "For companies with mission-critical AI operations or custom SaaS." },
-    INTL: { name: "Enterprise AIOps", price: "$1,499+", period: "/mo", desc: "For companies with mission-critical AI operations or custom SaaS." },
+    IN: { name: "Enterprise AIOps", price: "₹75,000", period: "/mo", desc: "For companies with mission-critical AI operations or custom SaaS." },
+    INTL: { name: "Enterprise AIOps", price: "$1,499", period: "/mo", desc: "For companies with mission-critical AI operations or custom SaaS." },
     features: [
       "Everything in Growth AIOps",
       "Custom telemetry & analytics dashboard setup",

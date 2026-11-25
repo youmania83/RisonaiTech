@@ -7,19 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Automation Blog — 2026 Guides on AI Agents, Chatbots & Workflows | RisonAI Tech" },
   description:
     "Practical 2026 guides on AI automation, agentic AI agents, WhatsApp chatbots, voice AI, AI resume screening & GEO optimization for Indian businesses — written by engineers who ship production systems.",
-  keywords: [
-    "AI automation blog India",
-    "agentic AI guides India",
-    "WhatsApp chatbot tutorial India",
-    "AI automation guides 2026",
-    "AI agent development blog",
-    "GEO optimization India",
-    "AEO optimization India",
-    "CRM automation India",
-    "AI for small business India",
-    "product engineering blog",
-    "RisonAI Tech blog",
-  ],
   alternates: { canonical: "/blog" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
@@ -38,6 +25,16 @@ export const metadata: Metadata = {
 };
 
 export const posts = [
+  {
+    slug: "enterprise-ai-agent-evaluation-framework-2027",
+    title: "Enterprise AI Agent Evaluation Framework: Metrics, Benchmarks & Production Safety (2027)",
+    excerpt:
+      "A complete evaluation and regression testing framework for autonomous enterprise AI agents: trajectory scoring, tool safety, latency SLAs, and benchmark suites for 2027 operations.",
+    date: "2026-11-26",
+    readTime: "12 min read",
+    category: "Agentic AI",
+    draft: true,
+  },
   {
     slug: "multi-agent-systems-in-production-guide",
     title: "Multi-Agent Systems in Production: Architecture, Costs & Frameworks (2026)",
@@ -314,6 +311,11 @@ export default function BlogPage() {
                   >
                     {post.category}
                   </span>
+                  {"draft" in post && post.draft && (
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">
+                      Draft
+                    </span>
+                  )}
                   <span className="flex items-center gap-1.5 text-xs text-slate-400">
                     <Calendar size={11} />
                     {new Date(post.date).toLocaleDateString("en-IN", {

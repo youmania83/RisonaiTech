@@ -12,15 +12,6 @@ export const metadata: Metadata = {
   title: "AI Automation & SaaS Development in Jaipur — RisonAI Tech",
   description:
     "RisonAI Tech builds AI automation, SaaS products, CRM workflows, and chatbot systems for Jaipur startups, tourism tech companies, and Rajasthan enterprises. Fixed-price delivery from ₹30,000.",
-  keywords: [
-    "AI automation company Jaipur",
-    "SaaS development Jaipur",
-    "Jaipur startup technology",
-    "AI development Rajasthan",
-    "software company Jaipur",
-    "CRM development Jaipur",
-    "WhatsApp automation Jaipur",
-  ],
   alternates: { canonical: "/jaipur" },
   openGraph: {
     title: "AI Automation & SaaS Development in Jaipur | RisonAI Tech",

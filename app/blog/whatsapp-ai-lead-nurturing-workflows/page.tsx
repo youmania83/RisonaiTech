@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "WhatsApp AI Lead Nurturing: 5 Automated Drip Workflows (2026)" },
   description:
     "Build automated WhatsApp lead nurturing drip sequences with AI conversation agents, CRM sync, Meta template compliance, and 45%+ reply rates in India.",
-  keywords: [
-    "whatsapp ai lead nurturing",
-    "automated whatsapp follow up sequence",
-    "whatsapp crm sync workflows",
-    "whatsapp business api drip campaigns",
-    "lead re engagement automation",
-    "whatsapp sales automation India",
-    "meta template message approval",
-    "whatsapp bot for lead conversion",
-    "automated crm follow up whatsapp",
-    "b2b whatsapp automation workflows",
-  ],
   alternates: { canonical: "/blog/whatsapp-ai-lead-nurturing-workflows" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

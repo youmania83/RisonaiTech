@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Multi-Agent Orchestration Patterns: Enterprise Guide" },
   description:
     "An architectural guide to multi-agent orchestration patterns: Hierarchical Supervisor, Decentralized Swarms, Blackboard shared memory, and state graphs.",
-  keywords: [
-    "multi agent orchestration patterns",
-    "hierarchical multi agent architecture",
-    "agent swarms enterprise workflows",
-    "blackboard pattern ai agents",
-    "multi agent state memory management",
-    "supervisor worker agent pattern",
-    "consensus validation multi agent",
-    "langgraph orchestration patterns",
-    "enterprise multi agent system design",
-    "cyclical agent state graphs",
-  ],
   alternates: { canonical: "/blog/multi-agent-orchestration-patterns-enterprise" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

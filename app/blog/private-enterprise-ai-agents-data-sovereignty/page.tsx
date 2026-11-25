@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Private Enterprise AI Agents: On-Premise & Data Sovereignty" },
   description:
     "An enterprise security guide to on-premise and VPC private AI agents: local LLM inference via vLLM, zero data egress, and sovereign AI compliance.",
-  keywords: [
-    "private enterprise ai agents",
-    "on premise ai agent deployment",
-    "zero egress ai architecture",
-    "local llm enterprise data sovereignty",
-    "vllm enterprise inference",
-    "self hosted ai agents banking",
-    "private cloud ai agents healthcare",
-    "llama 3 vllm enterprise deployment",
-    "air gapped ai agents defense",
-    "enterprise sovereign ai stack",
-  ],
   alternates: { canonical: "/blog/private-enterprise-ai-agents-data-sovereignty" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

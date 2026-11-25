@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Mumbai | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Mumbai. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Mumbai",
-    "AI Chatbot Development Mumbai",
-    "Chatbot Solutions Mumbai",
-    "Voice AI Mumbai",
-    "Business Automation Mumbai",
-    "AI Calling Agent Mumbai",
-    "Workflow Automation Mumbai",
-    "Customer Support Automation Mumbai",
-    "WhatsApp Chatbot Mumbai",
-    "AI Solutions Mumbai",
-    "Conversational AI Mumbai",
-  ],
   alternates: { canonical: "/mumbai" },
   openGraph: {
     title: "AI Automation Company in Mumbai | RisonAI Tech",

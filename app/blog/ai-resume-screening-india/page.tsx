@@ -9,16 +9,6 @@ export const metadata: Metadata = {
   },
   description:
     "Automate CV parsing, role-fit scoring, and candidate triage for Indian HR teams with DPDP-compliant AI screening. Save 90% of first-pass screening time.",
-  keywords: [
-    "AI resume screening India",
-    "HR resume screening powered by AI",
-    "AI CV screening",
-    "candidate scoring AI",
-    "resume shortlist automation",
-    "AI hiring automation India",
-    "ATS resume screening",
-    "HR automation India",
-  ],
   alternates: { canonical: "/blog/ai-resume-screening-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

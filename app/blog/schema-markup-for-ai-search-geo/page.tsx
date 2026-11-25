@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Schema Markup for AI Search: JSON-LD Guide for GEO (2026)" },
   description:
     "Master structured data for Generative Engine Optimization (GEO). Learn how to write Schema.org JSON-LD that Perplexity, ChatGPT, and Google AI cite.",
-  keywords: [
-    "schema markup for ai search",
-    "json ld for perplexity citations",
-    "entity optimization ai overviews",
-    "knowledge graph structured data geo",
-    "llm fact extraction schema",
-    "generative engine optimization schema",
-    "aeo structured data guide",
-    "sameAs entity disambiguation",
-    "faq schema for chatgpt search",
-    "geo optimization India",
-  ],
   alternates: { canonical: "/blog/schema-markup-for-ai-search-geo" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

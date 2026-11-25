@@ -22,28 +22,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Chatbot Development Services India | RAG, Voice AI & WhatsApp | RisonAI Tech" },
   description:
     "Custom AI chatbot development India — RAG chatbots, voice AI agents, conversational AI & WhatsApp bots trained on your data. Lead qualification, bookings, 24/7 support. From ₹20,000.",
-  keywords: [
-    "AI chatbot development India",
-    "chatbot development services India",
-    "RAG chatbot development India",
-    "conversational AI India",
-    "custom AI chatbot India",
-    "AI customer support India",
-    "enterprise chatbot development India",
-    "AI virtual assistant India",
-    "voice AI agent India",
-    "AI receptionist India",
-    "WhatsApp chatbot India",
-    "AI chatbot for business India",
-    "chatbot development Delhi NCR",
-    "NLP chatbot development India",
-    "AI customer service agent India",
-    "intelligent chatbot India",
-    "multilingual chatbot India Hindi English",
-    "website chatbot development India",
-    "WhatsApp bot India",
-    "agentic chatbot India",
-  ],
   alternates: { canonical: "/services/chatbot-development" },
   openGraph: {
     title: "AI Chatbot Development Services India | RAG, Voice AI & WhatsApp | RisonAI Tech",
@@ -154,7 +132,7 @@ const channels = [
 const faqs = [
   {
     q: "How much does an AI chatbot cost in India?",
-    a: "AI chatbot projects in India usually start at ₹20,000 for basic FAQ coverage and move up based on integrations. A lead qualification or appointment bot typically costs ₹50,000-₹1,20,000, while a full RAG + WhatsApp + CRM stack runs ₹1,20,000-₹3,50,000.",
+    a: "AI chatbot projects in India usually start at ₹40,000 for basic FAQ coverage and move up based on integrations. A lead qualification or appointment bot typically costs ₹50,000-₹1,20,000, while a full RAG + WhatsApp + CRM stack runs ₹1,20,000-₹3,50,000.",
   },
   {
     q: "What is a RAG chatbot and why does it matter?",
@@ -226,9 +204,9 @@ const pageSchema = graph(
     description:
       "Context-aware AI chatbots for websites and WhatsApp — RAG bots trained on your data, multilingual (English + Hindi), CRM-integrated, with graceful human handoff. Built by RisonAI Tech.",
     url: "/services/chatbot-development",
-    priceRange: "₹20,000 – ₹3,50,000",
+    priceRange: "₹40,000 – ₹3,50,000",
     offers: [
-      { name: "Basic FAQ Bot", description: "Pre-defined Q&A chatbot for website with CRM lead capture", price: "20000" },
+      { name: "Basic FAQ Bot", description: "Pre-defined Q&A chatbot for website with CRM lead capture", price: "40000" },
       { name: "AI Lead Bot", description: "AI-powered chatbot for lead qualification and appointment booking", price: "50000" },
       { name: "RAG Chatbot", description: "Full AI chatbot trained on your docs, with WhatsApp, CRM, analytics", price: "120000" },
     ],
@@ -290,7 +268,7 @@ export default function ChatbotDevelopmentPage() {
             </p>
             <p className="mt-2 text-base leading-relaxed text-brand-dark">
               <strong>RisonAI Tech provides AI chatbot development services in India.</strong> The
-              company builds three classes of chatbot: rule-based FAQ bots (₹20,000–₹50,000), AI
+              company builds three classes of chatbot: rule-based FAQ bots (₹40,000–₹50,000), AI
               lead bots powered by GPT-4 / Claude / Gemini (₹50,000–₹1,20,000), and RAG chatbots
               trained on the client&apos;s documentation with WhatsApp + CRM integration
               (₹1,20,000–₹3,50,000). All bots support English and Hindi by default, log to HubSpot /
@@ -391,7 +369,7 @@ export default function ChatbotDevelopmentPage() {
             {[
               {
                 tier: "Basic FAQ Bot",
-                price: "₹20,000 – ₹50,000",
+                price: "₹40,000 – ₹50,000",
                 desc: "Pre-defined Q&A chatbot for website. Handles common questions without AI.",
                 items: ["Rule-based flows", "Website widget", "CRM lead capture", "2–3 week delivery"],
               },

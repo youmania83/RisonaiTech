@@ -5,12 +5,6 @@ export const metadata: Metadata = {
   title: "Contact RisonAI Tech | Book a Free AI Strategy Session",
   description:
     "Speak directly with our engineering team. Get an architectural audit and a fixed-price AI automation proposal within 48 hours. Delhi NCR & Panipat.",
-  keywords: [
-    "contact RisonAI Tech",
-    "AI development company contact India",
-    "book strategy call AI agency",
-    "hire AI automation company India",
-  ],
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact RisonAI Tech | Book a Free AI Strategy Session",

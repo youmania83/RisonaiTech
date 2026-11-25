@@ -7,22 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Lead Generation Automation: Build a System That Never Sleeps | RisonAI Tech" },
   description:
     "Businesses using AI for lead generation respond in under 60 seconds, qualify 100% of leads automatically, and close 30–40% more deals. Here is the system, including AI integration services for business and chatbot plus voice agent workflows.",
-  keywords: [
-    "ai lead generation automation",
-    "ai automated lead generation",
-    "ai integration services for business",
-    "ai chatbot and voice agent development",
-    "automated lead qualification system",
-    "ai lead generation india",
-    "24 7 lead qualification ai",
-    "whatsapp lead generation automation",
-    "ai lead gen system",
-    "crm lead automation india",
-    "lead nurturing automation ai",
-    "ai lead scoring india",
-    "automatic lead follow up india",
-    "b2b lead generation ai",
-  ],
   alternates: { canonical: "/blog/ai-lead-generation-systems" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

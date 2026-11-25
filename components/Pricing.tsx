@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 const packages = [
   {
     name: "AI Starter",
-    price: "₹20,000 – ₹40,000",
+    price: "From ₹20,000",
     description: "Perfect for local businesses and clinic chains looking to automate basic customer capture.",
     features: [
       "WhatsApp Business API Integration",
@@ -170,7 +170,7 @@ export default function Pricing() {
                 Get Fixed Quote in 48 Hours
               </a>
               <p className="text-xs text-slate-500">
-                100% money-back guarantee on delivery timelines · Direct reference calls available
+                Milestone-based sprint delivery · Direct reference calls available
               </p>
             </div>
           </Reveal>

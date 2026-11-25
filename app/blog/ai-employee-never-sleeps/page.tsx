@@ -24,20 +24,6 @@ export const metadata: Metadata = {
   title: { absolute: "How AI Saves Indian Business Owners Lakhs Every Year | RisonAI Tech" },
   description:
     "True stories of Indian business owners who replaced ₹5–15 lakh/year of manual work with an AI employee that never sleeps, never asks for a hike, never quits, and lets them finally take a real holiday.",
-  keywords: [
-    "AI employee India",
-    "AI automation save money India",
-    "AI replace employee India",
-    "AI for small business owner India",
-    "how AI saves time and money",
-    "AI vs human employee cost",
-    "AI automation ROI India",
-    "AI employee never sleeps",
-    "AI 24x7 business automation India",
-    "save salary cost with AI",
-    "AI no TDS no PF business",
-    "AI loyal employee story",
-  ],
   alternates: { canonical: "/blog/ai-employee-never-sleeps" },
   authors: [
     { name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" },

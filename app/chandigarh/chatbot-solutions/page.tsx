@@ -45,20 +45,6 @@ export const metadata: Metadata = {
   title: "Chatbot Solutions in Chandigarh | AI Bots by RisonAI Tech",
   description:
     "RisonAI Tech builds custom AI chatbot solutions in Chandigarh. Website & WhatsApp bots, CRM integration, and 24/7 support. Get a free demo!",
-  keywords: [
-    "Chatbot Solutions in Chandigarh",
-    "AI Chatbot Development Chandigarh",
-    "Chatbot Development Company Chandigarh",
-    "Website Chatbot Chandigarh",
-    "WhatsApp Chatbot Chandigarh",
-    "AI Automation Company Chandigarh",
-    "Business Automation Chandigarh",
-    "AI Customer Support Chandigarh",
-    "Conversational AI Chandigarh",
-    "GPT Chatbot Chandigarh",
-    "OpenAI Chatbot Chandigarh",
-    "AI Assistant Chandigarh",
-  ],
   alternates: { canonical: "/chandigarh/chatbot-solutions" },
   openGraph: {
     title: "Chatbot Solutions in Chandigarh | RisonAI Tech",

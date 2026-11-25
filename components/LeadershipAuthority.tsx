@@ -2,7 +2,7 @@ import { MessageCircle, ShieldCheck, Zap } from "lucide-react";
 
 const founder = {
   name: "Yogesh Kumar Wadhwa",
-  role: "Founder & Lead Product Engineer",
+  role: "Founder & CEO",
   experienceYears: 8,
   projectsShipped: 40,
   specialties: [

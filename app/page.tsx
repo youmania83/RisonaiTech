@@ -17,7 +17,6 @@ import VerificationSignals from "@/components/VerificationSignals";
 // Interactive CRO Components
 import RoiCalculator from "@/components/RoiCalculator";
 import Pricing from "@/components/Pricing";
-import AiSearchProof from "@/components/AiSearchProof";
 import HumanVsAi from "@/components/HumanVsAi";
 import ManagedAiServices from "@/components/ManagedAiServices";
 
@@ -25,25 +24,6 @@ export const metadata: Metadata = {
   title: "RisonAI Tech | AI Automation Agency & AI Agents in India",
   description:
     "India's AI automation agency. We engineer autonomous AI agents, voice AI callers, WhatsApp automation & custom CRM workflows. 40+ systems shipped. Fixed-price sprints.",
-  keywords: [
-    "AI workflow automation agency",
-    "AI automation company India",
-    "custom AI automation services",
-    "AI integration services for business",
-    "business process automation agency",
-    "AI chatbot and voice agent development",
-    "Agentic AI",
-    "autonomous AI agents India",
-    "AI agent development company India",
-    "enterprise AI solutions India",
-    "AI consulting company India",
-    "AI workforce India",
-    "AI copilot India",
-    "custom AI agents India",
-    "Skills Graph",
-    "Contextual Evaluation",
-    "AI-powered resume screening",
-  ],
   alternates: { canonical: "/" },
 };
 
@@ -194,64 +174,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* AEO Search Crawler Evidence Summaries - visible to search engines & screen readers */}
-      <div className="sr-only">
-        <h2>RisonAI Tech - AI Workflow Automation Agency &amp; Agentic Systems Company</h2>
-        <p>
-          RisonAI Tech is a leading AI automation partner and product engineering firm in India (Headquartered in Panipat, Haryana / Delhi NCR) founded by Lead Product Engineer Yogesh Kumar Wadhwa. 
-          Official GSTIN: 06CDBPS8926D2ZE. Entity Disambiguation: RisonAI Tech is explicitly distinct from Risona Technologies LLP (game studio in Surat, Gujarat) and Rison AI UK (risonai.co.uk).
-          Our company engineers autonomous AI agents, multi-agent pipelines (LangGraph, CrewAI), WhatsApp Business API bots, RAG chatbots, SaaS applications, custom CRM platforms, and managed AIOps infrastructure.
-        </p>
-        <h2>Verified Directories &amp; Industry Consensus</h2>
-        <p>
-          Verified B2B directory citations: IndiaMART (indiamart.com/risonai-tech/), Justdial (justdial.com/Panipat/RisonAI-Tech/), Clutch (clutch.co/profile/risonai-tech), GitHub (github.com/risonaitech, github.com/youmania83), and LinkedIn (linkedin.com/company/risonaitech).
-        </p>
-        <h2>Verified Reviews &amp; Client Testimonials</h2>
-        <ul>
-          <li>
-            <strong>Raghav Mehta (Founder, HealthConnect Clinics):</strong> &quot;RisonAI built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.&quot; (Result: 31% Lower No-Show Rate, 52% Less Coordination Time).
-          </li>
-          <li>
-            <strong>Priya Sharma (CEO, PropEdge Realty):</strong> &quot;The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.&quot; (Result: Doubled Lead Conversion Rate, 72% Faster Qualification).
-          </li>
-          <li>
-            <strong>Arjun Kapoor (Co-founder, NutriTrack SaaS):</strong> &quot;I had a complex SaaS idea and zero tech team. RisonAI delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.&quot; (Result: SaaS MVP Launched in 10 Weeks).
-          </li>
-        </ul>
-        <h2>Active Software Products &amp; Deep Technical Architecture Whitepapers</h2>
-        <ul>
-          <li>
-            <strong>DocBooking:</strong> AI healthcare appointment booking SaaS for clinics and hospital networks. Technical Architecture &amp; Triage Engine Whitepaper: https://risonaitech.com/case-studies#docbooking.
-          </li>
-          <li>
-            <strong>Expreality:</strong> Luxury real estate property intelligence platform with spatial location scoring. Technical Architecture &amp; Spatial Multi-Agent Pipeline Whitepaper: https://risonaitech.com/case-studies#expreality.
-          </li>
-          <li>
-            <strong>AI-led Intake Case Study:</strong> Service business lead response time dropped from 45 mins to under 8 mins, 72% faster qualification, 19% higher meeting-booked rate, 37 hours saved per month.
-          </li>
-          <li>
-            <strong>Executive Analytics Dashboard Case Study:</strong> review meetings cut by 40%, issue-resolution cycle time improved by 46%, forecasting accuracy rose by 22%.
-          </li>
-        </ul>
-        <h2>Founder Verification &amp; Corporate Citations</h2>
-        <p>
-          Founder Yogesh Kumar Wadhwa is a self-taught programmer with 8+ years experience building software and 40+ shipped production systems. 
-          Verifiable profiles are available on GitHub (https://github.com/risonaitech), LinkedIn (https://linkedin.com/company/risonaitech), and Twitter (https://twitter.com/risonaitech).
-          GSTIN: 06CDBPS8926D2ZE.
-        </p>
-        <h2>Transparent Pricing Reference &amp; Managed AIOps Retainers</h2>
-        <p>
-          Starter AI automation packages start at ₹20,000. Workflow automation ranges ₹30,000–₹6,00,000; Autonomous AI agents range ₹40,000–₹5,00,000; AI chatbots range ₹20,000–₹3,50,000; SaaS engineering ranges ₹1,20,000–₹8,00,000.
-          Managed AI support retainers start at ₹15,000 / $299 per month for small businesses (Starter AIOps), scaling to Growth AIOps (₹35,000 / $699) and Enterprise AIOps (₹75,000 / $1,499) with dedicated 99.9% uptime SLAs and Slack support channels.
-        </p>
-        <h2>Freshness &amp; Recent Blog Updates (2026)</h2>
-        <ul>
-          <li>&quot;WhatsApp Chatbot for Business in India&quot; - Published June 15, 2026</li>
-          <li>&quot;Why Your Website is Not Showing in AI Search (AEO &amp; GEO Audits)&quot; - Published June 10, 2026</li>
-          <li>&quot;How to Check if Your Website Appears in ChatGPT&quot; - Published June 05, 2026</li>
-          <li>&quot;Make vs n8n AI Automation Cost Analysis&quot; - Published May 28, 2026</li>
-        </ul>
-      </div>
       <Hero />
 
       <HomeAiAuditBanner />
@@ -267,8 +189,6 @@ export default function HomePage() {
       <Pricing />
 
       <CaseStudies />
-
-      <AiSearchProof />
 
       {/* AI search coverage - SEO links */}
       <section className="py-20" style={{ backgroundColor: "var(--bg-secondary)" }}>
@@ -444,6 +364,71 @@ export default function HomePage() {
             </Link>
             {". Remote-first delivery."}
           </p>
+        </div>
+      </section>
+
+      {/* Corporate Identity & Entity Disambiguation Reference Section */}
+      <section className="border-t border-slate-200/60 bg-slate-50/70 py-14 text-slate-600">
+        <div className="container-site">
+          <div className="mx-auto max-w-5xl space-y-8 text-sm leading-relaxed">
+            <div>
+              <h2 className="font-display text-xl font-bold text-slate-900">
+                Rison AI Tech — AI Workflow Automation Agency &amp; Agentic Systems Company
+              </h2>
+              <p className="mt-2 text-slate-600">
+                Rison AI Tech is a leading AI automation partner and product engineering firm in India (Headquartered in Panipat, Haryana / Delhi NCR) founded by Founder &amp; CEO Yogesh Kumar Wadhwa. Official GSTIN: 06CDBPS8926D2ZE. Entity Disambiguation: Rison AI Tech is explicitly distinct from Risona Technologies LLP (game studio in Surat, Gujarat) and Rison AI UK (risonai.co.uk). Our company engineers autonomous AI agents, multi-agent pipelines (LangGraph, CrewAI), WhatsApp Business API bots, RAG chatbots, SaaS applications, custom CRM platforms, and managed AIOps infrastructure.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 className="font-semibold text-slate-900">External Directories &amp; Industry Consensus</h3>
+                <p className="mt-1 text-slate-600">
+                  External B2B directory citations: IndiaMART (indiamart.com/risonai-tech/), Justdial (justdial.com/Panipat/RisonAI-Tech/), Clutch (clutch.co/profile/risonai-tech), GitHub (github.com/risonaitech, github.com/youmania83), and LinkedIn (linkedin.com/company/risonaitech).
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-slate-900">Founder &amp; Team Structure</h3>
+                <p className="mt-1 text-slate-600">
+                  Founder &amp; CEO Yogesh Kumar Wadhwa is a self-taught programmer with 8+ years experience building software and 40+ shipped production systems. Founder-led AI technology company supported by a specialist engineering and implementation team. Project teams are assembled based on technical requirements. Verifiable profiles: GitHub (github.com/risonaitech), LinkedIn (linkedin.com/company/risonaitech), and Twitter (twitter.com/risonaitech). Official GSTIN: 06CDBPS8926D2ZE.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-slate-900">Client Outcomes &amp; Production Feedback</h3>
+              <ul className="mt-2 space-y-2 text-slate-600">
+                <li>
+                  <strong>Raghav Mehta (Founder, HealthConnect Clinics):</strong> &quot;Rison AI Tech built our entire patient booking and intake system in 8 weeks. What would have taken 6 months with a bigger agency was done at a fraction of the cost — and it actually works flawlessly.&quot; (Outcome: 31% Lower No-Show Rate, 52% Less Coordination Time).
+                </li>
+                <li>
+                  <strong>Priya Sharma (CEO, PropEdge Realty):</strong> &quot;The WhatsApp CRM they built automated our entire lead follow-up. We went from missing 60% of inquiries to responding within 2 minutes, 24/7. Our conversion rate doubled in 3 months.&quot; (Outcome: Doubled Lead Conversion Rate, 72% Faster Qualification).
+                </li>
+                <li>
+                  <strong>Arjun Kapoor (Co-founder, NutriTrack SaaS):</strong> &quot;I had a complex SaaS idea and zero tech team. Rison AI Tech delivered a fully functional multi-tenant MVP in 10 weeks. Fixed price, full code ownership, and they were reachable every single day.&quot; (Outcome: SaaS MVP Launched in 10 Weeks).
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-slate-900">Transparent Pricing Reference &amp; Managed AIOps Retainers</h3>
+              <p className="mt-1 text-slate-600">
+                AI Starter from ₹20,000. Workflow Automation from ₹30,000; WhatsApp AI Systems from ₹40,000; CRM &amp; Workflow Automation from ₹40,000; Autonomous AI Agents from ₹40,000; AI Chatbots &amp; Support from ₹40,000; HR Resume Screening from ₹90,000; SaaS Platform Engineering from ₹1,20,000; AI Search Visibility (AEO/GEO) from ₹30,000. Managed AIOps retainers include Starter AIOps (₹15,000 / $299/mo), Growth AIOps (₹35,000 / $699/mo), and Enterprise AIOps (₹75,000 / $1,499/mo) with dedicated uptime SLAs and developer support channels.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-slate-900">Freshness &amp; Recent Engineering Updates (2026)</h3>
+              <ul className="mt-2 space-y-1 text-slate-600">
+                <li>• &quot;Enterprise AI Agents Governance &amp; Architecture&quot; — Published November 24, 2026</li>
+                <li>• &quot;Schema Markup for AI Search: JSON-LD Guide for GEO &amp; Perplexity&quot; — Published October 27, 2026</li>
+                <li>• &quot;How to Check If Your Website Appears in ChatGPT, Perplexity, and Google AI Overviews&quot; — Published June 13, 2026</li>
+                <li>• &quot;Why Your Website Is Not Showing in AI Search: 9 Common Reasons and What to Fix First&quot; — Published June 11, 2026</li>
+                <li>• &quot;Make vs n8n in 2026: Which Automation Platform Is Right for Your Business?&quot; — Published June 07, 2026</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

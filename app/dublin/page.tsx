@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in Dublin | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in Dublin. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in Dublin",
-    "AI Chatbot Development Dublin",
-    "Chatbot Solutions Dublin",
-    "Voice AI Dublin",
-    "Business Automation Dublin",
-    "AI Calling Agent Dublin",
-    "Workflow Automation Dublin",
-    "Customer Support Automation Dublin",
-    "WhatsApp Chatbot Dublin",
-    "AI Solutions Dublin",
-    "Conversational AI Dublin",
-  ],
   alternates: { canonical: "/dublin" },
   openGraph: {
     title: "AI Automation Company in Dublin | RisonAI Tech",

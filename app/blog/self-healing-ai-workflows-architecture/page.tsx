@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Self-Healing AI Workflows: Zero-Downtime Automation" },
   description:
     "An engineering blueprint for self-healing AI workflows: automated error recovery, dynamic API schema adaptation, and zero-downtime process automation.",
-  keywords: [
-    "self healing ai workflows",
-    "autonomous workflow error recovery",
-    "dynamic schema adaptation ai",
-    "zero downtime workflow automation",
-    "aiops workflow resilience",
-    "runtime api schema repair",
-    "automated webhook failure recovery",
-    "resilient n8n workflow architecture",
-    "self correcting enterprise pipelines",
-    "fault tolerant business automation",
-  ],
   alternates: { canonical: "/blog/self-healing-ai-workflows-architecture" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

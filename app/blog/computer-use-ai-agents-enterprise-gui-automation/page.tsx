@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Computer-Use AI Agents: Automating Legacy GUI Systems" },
   description:
     "An enterprise guide to computer-use AI agents: automating legacy SAP, Citrix, and desktop software via multimodal vision, OS navigation, and zero-API execution.",
-  keywords: [
-    "computer use ai agents enterprise",
-    "gui automation ai agents",
-    "vision based robotic process automation",
-    "automating legacy systems with vision ai",
-    "os level enterprise ai automation",
-    "anthropic computer use enterprise deployment",
-    "replacing legacy rpa with vision ai",
-    "automating sap citrix without apis",
-    "multimodal gui navigation agents",
-    "desktop application ai automation",
-  ],
   alternates: { canonical: "/blog/computer-use-ai-agents-enterprise-gui-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

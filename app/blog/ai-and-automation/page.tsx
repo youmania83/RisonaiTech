@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI and Automation: How They Work Together to Transform Business | RisonAI Tech" },
   description:
     "AI provides the intelligence. Automation provides the execution. Together they create systems that work 24/7 without human intervention. Here is the full architecture.",
-  keywords: [
-    "ai and automation",
-    "ai with automation",
-    "combining ai and automation",
-    "ai automation stack",
-    "intelligent automation architecture",
-    "ai workflow automation",
-    "business process automation AI",
-    "AI powered workflows India",
-    "automation with machine learning",
-    "ai integration with business automation",
-  ],
   alternates: { canonical: "/blog/ai-and-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

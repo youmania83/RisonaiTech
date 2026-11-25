@@ -46,19 +46,6 @@ export const metadata: Metadata = {
   title: "AI Automation Company in San Francisco | Workflows & AI Agents",
   description:
     "RisonAI Tech is a leading AI automation company in San Francisco. We build custom AI chatbots, WhatsApp bots, voice agents, and CRM workflows. Get a free demo!",
-  keywords: [
-    "AI Automation Company in San Francisco",
-    "AI Chatbot Development San Francisco",
-    "Chatbot Solutions San Francisco",
-    "Voice AI San Francisco",
-    "Business Automation San Francisco",
-    "AI Calling Agent San Francisco",
-    "Workflow Automation San Francisco",
-    "Customer Support Automation San Francisco",
-    "WhatsApp Chatbot San Francisco",
-    "AI Solutions San Francisco",
-    "Conversational AI San Francisco",
-  ],
   alternates: { canonical: "/san-francisco" },
   openGraph: {
     title: "AI Automation Company in San Francisco | RisonAI Tech",

@@ -1,0 +1,93 @@
+AI & Software Services for Indian Businesses | RisonAI Tech
+Rison  AI  Tech Automate · Innovate · Accelerate
+Services Products Case Studies Blog AI Audit About Contact Us
+Services Products Case Studies Blog AI Audit About Contact Us
+Services
+Everything you need to ship great products
+Seven core disciplines. One team. End-to-end ownership.
+AI Workflow Automation
+Custom AI automation systems that remove repetitive manual work across operations, support, reporting, and internal workflows.
+AI-driven SOP execution
+Automated approvals, routing, and follow-ups
+CRM, Sheets, email, and API integrations
+Human-in-the-loop checkpoints where needed
+From ₹30,000 Explore AI Workflow Automation
+WhatsApp AI Systems
+Integrate RAG chatbots and CRM workflows into the official WhatsApp Business API.
+Official API setup & green tick guidance
+RAG chatbot trained on business data
+Interactive templates & buttons
+Live agent chat handoff rules
+From ₹25,000 Explore WhatsApp AI Systems
+CRM & Workflow Automation
+Centralize data, automate pipelines, and connect tools with custom n8n/Make integrations.
+Custom HubSpot, Zoho & Salesforce setups
+Spreadsheet-to-CRM auto-migration
+Automated quote & invoice generation
+Real-time slack & email notifications
+From ₹40,000 Explore CRM & Workflow Automation
+Autonomous AI Agents
+Multi-step reasoning systems, tool-using LLM pipelines, and autonomous agents.
+LangGraph / CrewAI multi-agent pipelines
+Custom tool-calling & database write capabilities
+E-commerce & order tracking automation
+Human-in-the-loop validation checkpoints
+From ₹50,000 Explore Autonomous AI Agents
+AI Chatbots & Support
+AI customer support agents and website chatbots grounded in your SOPs and docs via RAG.
+Website chat widget & embeds
+RAG-powered custom knowledge base
+Multilingual (Hindi + English)
+Graceful human agent handoff
+From ₹20,000 Explore AI Chatbots & Support
+HR Resume Screening Powered by AI
+AI screening systems for HR teams that parse resumes, score candidate fit, and produce recruiter-ready shortlists automatically.
+AI CV parsing and candidate scoring
+Role-based shortlist generation
+ATS, email, and Google Sheets integrations
+Recruiter-ready candidate summaries
+From ₹35,000 Explore HR Resume Screening Powered by AI
+SaaS Platform Engineering
+Enterprise-grade SaaS products with billing, admin dashboards, and native AI.
+Multi-tenant auth & database design
+Stripe / Razorpay subscriptions
+Custom admin portals & analytics
+Full code ownership & deployment
+From ₹1,20,000 Explore SaaS Platform Engineering
+Managed AI Services (AIOps)
+Proactive monthly management to keep your LLMs, agentic pipelines, n8n automations, and vector databases running securely and efficiently.
+24/7 telemetry monitoring & error logging
+Prompt engineering drift calibration
+RAG vector database re-indexing & updates
+n8n / Make workflow scenario repairs
+From ₹15,000 / mo Explore Managed AI Services (AIOps)
+AI Search Visibility (AEO & GEO)
+Structured data engineering, entity optimization, conversational intent mapping, and citation readiness across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
+AI Answer Readiness & GEO visibility audits
+Comprehensive JSON-LD schemas & entity graphs
+Conversational intent & atomic Q&A architecture
+AI citation monitoring & competitive benchmarking
+From ₹45,000 Explore AI Search Visibility (AEO & GEO)
+Rison  AI  Tech Automate · Innovate · Accelerate
+Risonai Tech is India's AI automation agency building agentic AI systems, autonomous AI agents, n8n workflows, SaaS platforms, and operational infrastructure for businesses across India.
+196, Ground Floor, New RK Puram, Panipat 132103, India
+hello@risonaitech.com +919050486448
+Navigation
+Services
+AEO & GEO Services
+Products
+Case Studies
+Blog
+AI Audit
+About
+Contact
+Legal
+Privacy Policy
+Cookies Policy
+Terms of Service
+DPDP & Data Rights
+Verified External Profiles & Directories
+IndiaMART Justdial Clutch LinkedIn Founder Profile GitHub Twitter / X Crunchbase
+© 2026 RisonAI Tech. All rights reserved.
+GSTIN: 06CDBPS8926D2ZE · Legal Entity: RisonAI Tech (Panipat, Haryana / Delhi NCR)
+risonaitech.com

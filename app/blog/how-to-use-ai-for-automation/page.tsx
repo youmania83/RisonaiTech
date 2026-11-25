@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "How to Use AI for Automation in Your Business (2026 Guide) | RisonAI Tech" },
   description:
     "Step-by-step guide to implementing AI automation in your business — from identifying the right processes to deploying your first AI workflow and measuring ROI.",
-  keywords: [
-    "how to use ai for automation",
-    "how to implement ai automation",
-    "ai automation implementation guide",
-    "business process automation with ai",
-    "how to automate business with ai India",
-    "ai workflow implementation",
-    "getting started with ai automation",
-    "ai automation step by step",
-    "ai automation for business India",
-    "implement ai automation India",
-  ],
   alternates: { canonical: "/blog/how-to-use-ai-for-automation" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

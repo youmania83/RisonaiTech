@@ -7,20 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "WhatsApp Chatbot for Business India: 2026 Guide | RisonAI Tech" },
   description:
     "How to build a WhatsApp chatbot for your Indian business in 2026 — lead qualification, appointment booking, customer support, and 24/7 response. Costs, timelines, and real examples.",
-  keywords: [
-    "WhatsApp chatbot for business India",
-    "WhatsApp AI chatbot India 2026",
-    "WhatsApp agentic bot India",
-    "WhatsApp Business API India",
-    "WhatsApp automation India 2026",
-    "AI WhatsApp bot India",
-    "WhatsApp lead generation India",
-    "WhatsApp customer support automation India",
-    "WhatsApp chatbot development India",
-    "how to automate WhatsApp India",
-    "cheapest WhatsApp chatbot India",
-    "WhatsApp CRM integration India",
-  ],
   alternates: { canonical: "/blog/whatsapp-chatbot-for-business-india" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

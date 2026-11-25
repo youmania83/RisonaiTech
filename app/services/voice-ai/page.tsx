@@ -14,23 +14,6 @@ export const metadata: Metadata = {
   title: { absolute: "Voice AI Agents in India | AI Receptionist & Calling Automation" },
   description:
     "Inbound & outbound voice AI agents for Indian businesses. AI receptionists, appointment confirmation & 60-second lead callback callers on Twilio + LLMs.",
-  keywords: [
-    "voice AI agent India",
-    "AI receptionist India",
-    "outbound voice AI India",
-    "voice AI agent development India",
-    "AI calling agent India",
-    "voice bot India",
-    "AI phone agent India",
-    "conversational voice AI India",
-    "voice AI for healthcare India",
-    "voice AI for real estate India",
-    "Twilio AI agent India",
-    "LLM voice agent India",
-    "AI IVR replacement India",
-    "intelligent voice agent India",
-    "voice AI agency India",
-  ],
   alternates: { canonical: "/services/voice-ai" },
   openGraph: {
     title: "Voice AI Agents in India | AI Receptionist & Calling Automation",

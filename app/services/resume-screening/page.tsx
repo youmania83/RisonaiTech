@@ -22,25 +22,6 @@ export const metadata: Metadata = {
   title: { absolute: "AI Resume Screening & HR Automation India | Skills Graph Matching | RisonAI Tech" },
   description:
     "AI-powered resume screening for HR teams in India — Skills Graph matching, contextual evaluation, ATS integration & recruiter-in-the-loop controls. Cut first-pass screening time by 70–80%. From ₹35,000.",
-  keywords: [
-    "AI-powered resume screening",
-    "resume screening automation India",
-    "AI resume screening India",
-    "HR automation India",
-    "AI hiring automation India",
-    "AI recruiting India",
-    "AI hiring tool India",
-    "hiring automation agency India",
-    "automated resume screening software",
-    "candidate screening automation",
-    "Skills Graph hiring",
-    "Contextual Evaluation recruiting",
-    "ATS integration India",
-    "recruitment automation agency India",
-    "business process automation agency",
-    "custom AI automation services",
-    "AI integration services for business",
-  ],
   alternates: { canonical: "/services/resume-screening" },
   openGraph: {
     title: "AI Resume Screening & HR Automation India | Skills Graph Matching | RisonAI Tech",
@@ -156,12 +137,12 @@ const pageSchema = graph(
     description:
       "AI-powered resume screening systems with Skills Graph matching, contextual evaluation, ATS integration, and recruiter-in-the-loop controls that save 70-80% of first-pass screening time.",
     url: "/services/resume-screening",
-    priceRange: "₹35,000 – ₹2,50,000",
+    priceRange: "₹90,000 – ₹2,50,000",
     offers: [
       {
         name: "Starter screening workflow",
         description: "Single-role screening pipeline with resume parsing, scoring, and spreadsheet or email routing.",
-        price: "35000",
+        price: "90000",
       },
       {
         name: "ATS-integrated hiring workflow",
@@ -201,7 +182,7 @@ export default function ResumeScreeningPage() {
               <Link className="btn-primary" href="/contact">
                 Book a hiring workflow audit <ArrowRight size={16} />
               </Link>
-              <span className="text-sm font-medium text-[#a78bfa]">Starts at ₹35,000</span>
+              <span className="text-sm font-medium text-[#a78bfa]">Starts at ₹90,000</span>
             </div>
           </div>
         </div>
@@ -233,7 +214,7 @@ export default function ResumeScreeningPage() {
             <div className="mt-4 mb-6 rounded-xl border border-indigo-500/20 bg-indigo-950/20 p-4">
               <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Atomic Answer Capsule</p>
               <p className="mt-1 text-sm leading-relaxed text-white/80">
-                AI resume screening replaces manual CV reviews with LLM-powered semantic parsing, Skills Graph evaluation, and multi-dimensional role scoring. It scores 500+ candidate CVs in under 10 minutes against custom hiring rubrics, syncs candidate tiers to ATS platforms (Keka, Darwinbox, Zoho), and maintains 100% DPDP Act compliance without biased black-box filtering.
+                AI resume screening replaces manual CV reviews with LLM-powered semantic parsing, Skills Graph evaluation, and multi-dimensional role scoring. It scores 500+ candidate CVs in under 10 minutes against custom hiring rubrics, syncs candidate tiers to ATS platforms (Keka, Darwinbox, Zoho), and maintains full DPDP Act compliance without biased black-box filtering.
               </p>
             </div>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">

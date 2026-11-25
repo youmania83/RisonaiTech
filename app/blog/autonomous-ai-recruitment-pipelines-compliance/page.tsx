@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Autonomous AI Recruitment Pipelines & Algorithmic Compliance" },
   description:
     "An enterprise guide to autonomous AI hiring pipelines: conversational candidate pre-screening, skills verification, anti-bias auditing, and DPDP/EU AI Act compliance.",
-  keywords: [
-    "autonomous ai recruitment pipelines",
-    "conversational ai candidate screening",
-    "ai skills verification hiring",
-    "ai recruitment compliance dpdp",
-    "algorithmic bias mitigation hiring",
-    "nyc local law 144 ai hiring audit",
-    "eu ai act high risk recruitment ai",
-    "automated candidate shortlisting enterprise",
-    "conversational voice interview ai agent",
-    "enterprise ats ai integration",
-  ],
   alternates: { canonical: "/blog/autonomous-ai-recruitment-pipelines-compliance" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

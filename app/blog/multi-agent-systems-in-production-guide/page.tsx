@@ -7,19 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Multi-Agent Systems in Production: 2026 Architecture & Costs" },
   description:
     "A production guide to multi-agent AI systems: LangGraph vs CrewAI orchestration, supervisor patterns, memory state management, and real enterprise costs.",
-  keywords: [
-    "multi agent systems in production",
-    "agency that ships multi-agent systems to production",
-    "LangGraph production deployment",
-    "hierarchical AI agent architecture",
-    "agentic orchestration enterprise",
-    "multi-agent error handling",
-    "CrewAI vs LangGraph production",
-    "AI agent state management",
-    "autonomous agent workflows India",
-    "enterprise AI agents 2026",
-    "production LLM agent routing",
-  ],
   alternates: { canonical: "/blog/multi-agent-systems-in-production-guide" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {

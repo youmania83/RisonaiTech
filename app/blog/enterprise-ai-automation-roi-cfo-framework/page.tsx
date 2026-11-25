@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: { absolute: "Enterprise AI Automation ROI: CFO Guide to Token Economics" },
   description:
     "A CFO financial model for enterprise AI automation: token unit economics, Total Cost of Ownership (TCO), FTE labor arbitrage, and payback modeling.",
-  keywords: [
-    "enterprise ai automation roi",
-    "ai automation token economics",
-    "total cost of ownership ai agents",
-    "ai headcount arbitrage modeling",
-    "calculating enterprise ai payback period",
-    "cfo guide enterprise ai investment",
-    "token cost vs labor cost automation",
-    "measuring roi autonomous ai agents",
-    "enterprise ai financial model spreadsheet",
-    "capital expenditure ai vs opex",
-  ],
   alternates: { canonical: "/blog/enterprise-ai-automation-roi-cfo-framework" },
   authors: [{ name: "Yogesh Kumar Wadhwa", url: "https://risonaitech.com/about" }],
   openGraph: {
